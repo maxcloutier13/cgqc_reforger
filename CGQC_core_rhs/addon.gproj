@@ -1,0 +1,22 @@
+GameProject {
+ ID "CGQCcore"
+ GUID "66B216C0DCF0F59A"
+ TITLE "CGQC_core"
+ Dependencies {
+  "595F2BF2F44836FB" "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
