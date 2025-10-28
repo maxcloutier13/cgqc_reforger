@@ -1,0 +1,21 @@
+GameEntity : "{C3C66DFD34ADB415}Prefabs/Flag_Patches/USA_Flag_Color.et" {
+ ID "657B0C0A4C1F9EDE"
+ components {
+  InventoryItemComponent "{657B0C0AEEF49C10}" {
+   Attributes SCR_ItemAttributeCollection "{657B0C0AEEF49C16}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{657B0C0AEEF49F14}" {
+     Name "CGQC: Quebec Flag"
+     Description "Le fleur de lys "
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657B0C0AEEEB7D3C}" {
+   WornMaterialsOverride {
+    "{1F40469AA9E6C44E}Assets/Flag_Patches/Data/Flag_Patch_Quebec.emat"
+   }
+   ItemMaterialsOverride {
+    "{1F40469AA9E6C44E}Assets/Flag_Patches/Data/Flag_Patch_Quebec.emat"
+   }
+  }
+ }
+}

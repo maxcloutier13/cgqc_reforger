@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1F40469AA9E6C44E}Assets/Flag_Patches/Data/Flag_Patch_Quebec.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
