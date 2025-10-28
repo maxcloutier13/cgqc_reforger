@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcrhs"
+ GUID "66B433EBA52EC03A"
+ TITLE "cgqc_rhs"
+ Dependencies {
+  "66B2330254A8EED7" "595F2BF2F44836FB" "58D0FB3206B6F859"
+ }
+}

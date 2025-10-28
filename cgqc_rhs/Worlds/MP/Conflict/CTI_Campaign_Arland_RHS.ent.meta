@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0ECD3B5A3F4947E3}Worlds/MP/Conflict/CTI_Campaign_Arland_RHS.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+ }
+}

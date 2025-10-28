@@ -1,0 +1,8 @@
+SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  SCR_Faction "{66B642962DD130AE}" : "{FC76EA6983CAA3EE}Configs/Factions/CGQC_vanilla_blufor.conf" {
+   m_bIsPlayable 0
+  }
+ }
+}

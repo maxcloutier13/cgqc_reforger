@@ -1,0 +1,48 @@
+GenericEntity : "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{66B6039B488E5502}" {
+     SourceMaterial "AK74_Grip"
+     AssignedMaterial "{1660E7F91AC923F6}Assets/Weapons/Rifles/AK74/Data/CGQC_AK74_Grip.emat"
+    }
+    MaterialAssignClass "{66B6039B488E553B}" {
+     SourceMaterial "AK74_HandGuard"
+     AssignedMaterial "{E63AE1B2A5150A69}Assets/Weapons/Rifles/AK74/Data/CGQC_AK74_Handguard.emat"
+    }
+    MaterialAssignClass "{66B6039B488E5523}" {
+     SourceMaterial "AK74_Stock"
+     AssignedMaterial "{FEC02CA8CDADCED2}Assets/Weapons/Rifles/AK74/Data/CGQC_AK74_Stock.emat"
+    }
+   }
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "AK-74 (CGQC)"
+     Description "Heavily modified version of an AK-74 for special forces use behind enemy lines. Better rate of fire in full-auto and a 2-round burst mode with better reliability and accuracy."
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     FireModes {
+      BaseFireMode "{B80A64F4A8EF8333}" {
+       RoundsPerMinute 800
+      }
+      BaseFireMode "{619AB45C30091E43}" {
+       RoundsPerMinute 800
+      }
+      BaseFireMode "{66B6039A6F6FB96B}" {
+       MaxBurst 2
+       RoundsPerMinute 900
+       UIName "2rnd burst"
+      }
+     }
+    }
+   }
+  }
+ }
+}

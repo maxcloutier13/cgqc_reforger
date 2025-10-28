@@ -1,0 +1,6 @@
+MatPBRCamo : "{8A8C1198C43D83DC}Assets/Weapons/Rifles/AK74/Data/AK74_Handguard.emat" {
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ CamoNormalPower 1.985
+ CamoNormalOpacity 0.559
+ CamoMetalnessOpacity 0.809
+}

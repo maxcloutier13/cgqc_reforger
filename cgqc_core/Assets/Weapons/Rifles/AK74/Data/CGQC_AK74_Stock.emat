@@ -1,0 +1,4 @@
+MatPBRCamo : "{1ED637D476029579}Assets/Weapons/Rifles/AK74/Data/AK74_Stock.emat" {
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ CamoRoughnessOpacity 0.86
+}

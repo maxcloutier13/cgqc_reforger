@@ -3,6 +3,20 @@ GameProject {
  GUID "66B2330254A8EED7"
  TITLE "cgqc_core"
  Dependencies {
-  "58D0FB3206B6F859"
+  "58D0FB3206B6F859" "60C4C12DAE90727B" "6214CEA5DA92BFF3" "62F364B35E9B51B0" "646D52AF8BB3FF15"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
  }
 }
