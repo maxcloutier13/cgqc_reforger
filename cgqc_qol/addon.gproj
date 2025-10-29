@@ -1,8 +1,0 @@
-GameProject {
- ID "cgqcqol"
- GUID "66B246DD7FEE6ABA"
- TITLE "cgqc_qol"
- Dependencies {
-  "58D0FB3206B6F859"
- }
-}
