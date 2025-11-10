@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcace"
+ GUID "66CD63304921080F"
+ TITLE "cgqc_ace"
+ Dependencies {
+  "60C4E0B49618CC62" "58D0FB3206B6F859"
+ }
+}

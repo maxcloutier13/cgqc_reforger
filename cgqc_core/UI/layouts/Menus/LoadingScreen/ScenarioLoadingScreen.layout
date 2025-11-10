@@ -1,0 +1,47 @@
+FrameWidgetClass {
+ {
+  OverlayWidgetClass "{5DFF03E4AD9D1E88}" {
+   Prefab "{5DFF03E4AD9D1E88}"
+   {
+    ScaleWidgetClass "{5CFCF5E894AE6629}" {
+     Prefab "{5CFCF5E894AE6629}"
+     {
+      ImageWidgetClass "{5CFCF5E894AE6628}" {
+       Prefab "{5CFCF5E894AE6628}"
+       Texture "{614BAA239CB39237}UI/Textures/LoadingScreens/loading_screen.edds"
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{5E04A017BD489B2A}" {
+   Prefab "{5E04A017BD489B2A}"
+   {
+    OverlayWidgetClass "{5DFF03E4AD9D1E85}" {
+     Prefab "{5DFF03E4AD9D1E85}"
+     {
+      ImageWidgetClass "{5DFF03E4AD9D1EF2}" {
+       Prefab "{5DFF03E4AD9D1EF2}"
+       "Is Visible" 0
+       Texture "{A1238961CCB02542}UI/Textures/Flags/cgqc_faction_flag.edds"
+       Saturation 0
+      }
+      HorizontalLayoutWidgetClass "{5DFF03E4AD9D1ED0}" {
+       Prefab "{5DFF03E4AD9D1ED0}"
+       {
+        ImageWidgetClass "{5DFF03E4AD9D1ED7}" {
+         Prefab "{5DFF03E4AD9D1ED7}"
+         "Is Visible" 0
+        }
+        RichTextWidgetClass "{5DFF03E4AD9D1ED5}" {
+         Prefab "{5DFF03E4AD9D1ED5}"
+         "Is Visible" 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

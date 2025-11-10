@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcradiowip"
+ GUID "66C758524364DA1C"
+ TITLE "cgqc_radio_wip"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
