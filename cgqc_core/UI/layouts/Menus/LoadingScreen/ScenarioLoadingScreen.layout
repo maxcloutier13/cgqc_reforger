@@ -20,6 +20,61 @@ FrameWidgetClass {
     OverlayWidgetClass "{5DFF03E4AD9D1E85}" {
      Prefab "{5DFF03E4AD9D1E85}"
      {
+      HorizontalLayoutWidgetClass "{5DFF03E4AD9D1EFB}" {
+       Prefab "{5DFF03E4AD9D1EFB}"
+       Slot OverlayWidgetSlot "{5DFE96FF89AEB658}" {
+        VerticalAlign 2
+       }
+       {
+        FrameWidgetClass "{5DFF03E4AD9D1EF9}" {
+         Prefab "{5DFF03E4AD9D1EF9}"
+         {
+          OverlayWidgetClass "{5E04A00D30403301}" {
+           Prefab "{5E04A00D30403301}"
+           {
+            SmartPanelWidgetClass "{5E04A00D4794310D}" {
+             Prefab "{5E04A00D4794310D}"
+             "Is Visible" 0
+            }
+            HorizontalLayoutWidgetClass "{5D0C8953FFAEEDEB}" {
+             Prefab "{5D0C8953FFAEEDEB}"
+             "Is Visible" 0
+            }
+           }
+          }
+         }
+        }
+        FrameWidgetClass "{5DFF03E4AD9D1EFE}" {
+         Prefab "{5DFF03E4AD9D1EFE}"
+         {
+          OverlayWidgetClass "{5E04A00D30403301}" {
+           Prefab "{5E04A00D30403301}"
+           "Is Visible" 0
+           {
+            SmartPanelWidgetClass "{5E04A00D4794310D}" {
+             Prefab "{5E04A00D4794310D}"
+             "Is Visible" 0
+            }
+            HorizontalLayoutWidgetClass "{5D0C8953FFAEEDEB}" {
+             Prefab "{5D0C8953FFAEEDEB}"
+             {
+              TextWidgetClass "{5D0C8953F31DD7E3}" {
+               Prefab "{5D0C8953F31DD7E3}"
+               "Is Enabled" 0
+               "Is Visible" 0
+              }
+              ImageWidgetClass "{5D0C8953F456BDDF}" {
+               Prefab "{5D0C8953F456BDDF}"
+               "Is Visible" 0
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
       ImageWidgetClass "{5DFF03E4AD9D1EF2}" {
        Prefab "{5DFF03E4AD9D1EF2}"
        "Is Visible" 0
