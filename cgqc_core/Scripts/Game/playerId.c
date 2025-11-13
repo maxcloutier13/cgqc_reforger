@@ -56,7 +56,7 @@ modded class SCR_PlayerController : PlayerController
     {
 		// Cig time
 		GiveItemToPlayer(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
-		GiveItemToPlayer(playerEntity, "{494F9EF9C6700796}Prefabs/Items/Smokeables/Smokeable_Cigarette.et");
+		GiveItemToPlayer(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
         GiveItemToPlayer(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
         SCR_HintManagerComponent.GetInstance().ShowCustomHint("Admin mode activated", "System", 3.0);
 		string message = string.Format("Cloutier sti!");

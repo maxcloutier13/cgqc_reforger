@@ -1,0 +1,19 @@
+MatPBRMulti {
+ Color 1 0.76 0.392 1
+ MaskMap "{41D6383C2A58CFBE}Assets/Characters/Heads/Layers/Head_03_Mask.edds"
+ VFXMap "{5B475FA2FE0B746D}Assets/Characters/Heads/Layers/Head_base_VFX.edds"
+ GlobalNMOMap "{574FCF5763E7527E}Assets/Characters/Heads/Head_Cloutier/Data/face_NMO.edds"
+ MudBCRMap "{5444BC7A2FBF19A7}Assets/Characters/Heads/Layers/Camo/Head_Mud_BCR.edds"
+ MudNMOMap "{6C9C07E8F6C84B39}Assets/Characters/Heads/Layers/Camo/head_Mud_NMO.edds"
+ MudMaskMap "{5B475FA2FE0B746D}Assets/Characters/Heads/Layers/Head_base_VFX.edds"
+ DirtRoughness 1
+ DirtBCRMap "{6D4C910153730F58}Assets/Characters/Heads/Layers/Camo/Head_Dirt_BCR.edds"
+ DirtMaskMap "{5B475FA2FE0B746D}Assets/Characters/Heads/Layers/Head_base_VFX.edds"
+ BCR_3 "{A6222923AA3093C2}Assets/Characters/Heads/Layers/Camo/Head_Paint_06_BCR.edds"
+ NMO_3 "{2F4747A36E4DBAD5}Assets/Characters/Heads/Layers/Camo/head_Paint_NMO.edds"
+ Enabled_2 1
+ BCR_2 "{A6222923AA3093C2}Assets/Characters/Heads/Layers/Camo/Head_Paint_06_BCR.edds"
+ NMO_2 "{2F4747A36E4DBAD5}Assets/Characters/Heads/Layers/Camo/head_Paint_NMO.edds"
+ Color_1 1 0.881 0.753 1
+ BCR_1 "{6F9774C5BA9000E0}Assets/Characters/Heads/Head_Cloutier/Data/face_BCR.edds"
+}

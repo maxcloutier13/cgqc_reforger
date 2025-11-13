@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9C558756B68A3A57}Assets/Characters/Heads/Head_livonianHead_9/Data/Head_Cloutier_camo_wound_neck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

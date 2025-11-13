@@ -1,0 +1,12 @@
+MatPBRMulti {
+ Color 1 0.76 0.392 1
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ MaskMap "{B3BE5DA7E9B56605}Assets/Characters/Heads/Layers/Head_01_Mask.edds"
+ GlobalNMOMap "{574FCF5763E7527E}Assets/Characters/Heads/Head_Cloutier/Data/face_NMO.edds"
+ Enabled_4 1
+ BCR_4 "{B79DA7E114CFCC9E}Assets/Characters/Heads/Layers/Wound/head_wound_BCR.edds"
+ NMO_4 "{8F451C73CDB89E00}Assets/Characters/Heads/Layers/Wound/head_wound_NMO.edds"
+ Color_1 1 0.881 0.753 1
+ BCR_1 "{6F9774C5BA9000E0}Assets/Characters/Heads/Head_Cloutier/Data/face_BCR.edds"
+}

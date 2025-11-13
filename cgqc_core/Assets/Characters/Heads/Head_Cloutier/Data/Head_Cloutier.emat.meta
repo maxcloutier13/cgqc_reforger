@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9412BD06AF77B626}Assets/Characters/Heads/Head_livonianHead_9/Data/Head_Cloutier.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
