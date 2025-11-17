@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{554526E1FE343A0D}Assets/Weapons/Magazines/RPK74/Data/CGQC_Magazine_45rnd.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,44 @@
+GenericEntity : "{5F3661399CE6BEE6}Prefabs/Weapons/Rifles/AKS74U/Variants/Rifle_AKS74UN_PBS4.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{66DF14DF272826D6}" {
+     SourceMaterial "AK74_Grip"
+     AssignedMaterial "{1660E7F91AC923F6}Assets/Weapons/Rifles/AK74/Data/CGQC_AK74_Grip.emat"
+    }
+    MaterialAssignClass "{66DF14DF272826CB}" {
+     SourceMaterial "AKS74U_Handguard"
+     AssignedMaterial "{BE428852565FB785}Assets/Weapons/Rifles/AKS74U/Data/CGQC_AKS74U_Handguard.emat"
+    }
+   }
+  }
+  SCR_MeleeWeaponProperties "{55349E9229B55E31}" {
+   m_fDamage 25
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "AK74U Midnight Black"
+     Description "Blackened version of the AK74U meant for "
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     FireModes {
+      BaseFireMode "{B80A64F4A8EF8333}" {
+       RoundsPerMinute 750
+      }
+      BaseFireMode "{619AB45C30091E43}" {
+       RoundsPerMinute 750
+      }
+     }
+     MagazineTemplate "{AD8B3950DD0FA7E5}Prefabs/Weapons/Magazines/CGQC_Magazine_545x39_RPK_45rnd_Ball.et"
+    }
+   }
+  }
+ }
+ coords -0.409 -0.083 -0.004
+}

@@ -5,8 +5,10 @@ modded class SCR_PlayerController
 	{
 		super.OnControlledEntityChanged(from, to);
 		
-		// AUTO-ENABLE VON DIRECT TOGGLE
-		AutoEnableVONDirect();
+		// Auto-Enable voice after 5secs
+		GetGame().GetCallqueue().CallLater(AutoEnableVONDirect, 5000, false);
+		// Checks again after 30secs in case
+		GetGame().GetCallqueue().CallLater(AutoEnableVONDirect, 30000, false);
 	}
 
 	//------------------------------------------------------------------------------------------------

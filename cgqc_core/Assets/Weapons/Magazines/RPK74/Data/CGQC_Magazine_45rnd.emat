@@ -1,0 +1,4 @@
+MatPBRBasic : "{C8F456E6D9905A33}Assets/Weapons/Magazines/RPK74/Data/Magazine_45rnd.emat" {
+ Color 0.006 0.006 0.006 1
+ RoughnessScale 2.463
+}

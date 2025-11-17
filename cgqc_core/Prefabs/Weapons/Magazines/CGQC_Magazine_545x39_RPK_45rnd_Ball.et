@@ -1,0 +1,25 @@
+GenericEntity : "{BC74DAC891D48540}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_Ball.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "45rd 5.45mm black magazine"
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "45rd 5.45mm black magazine"
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{66DF14D8AD98B8D5}" {
+     SourceMaterial "Magazine_45rnd"
+     AssignedMaterial "{554526E1FE343A0D}Assets/Weapons/Magazines/RPK74/Data/CGQC_Magazine_45rnd.emat"
+    }
+   }
+  }
+ }
+}

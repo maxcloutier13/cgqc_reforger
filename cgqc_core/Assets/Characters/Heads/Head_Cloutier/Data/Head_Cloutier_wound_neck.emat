@@ -1,5 +1,4 @@
 MatPBRMulti {
- Color 1 0.76 0.392 1
  MaskMap "{B3BE5DA7E9B56605}Assets/Characters/Heads/Layers/Head_01_Mask.edds"
  GlobalNMOMap "{574FCF5763E7527E}Assets/Characters/Heads/Head_Cloutier/Data/face_NMO.edds"
  Enabled_4 1

@@ -1,5 +1,4 @@
 MatPBRMulti {
- Color 1 0.76 0.392 1
  AllowUserAlphaBias 1
  DisableUserAphaInShadow 1
  MaskMap "{41D6383C2A58CFBE}Assets/Characters/Heads/Layers/Head_03_Mask.edds"

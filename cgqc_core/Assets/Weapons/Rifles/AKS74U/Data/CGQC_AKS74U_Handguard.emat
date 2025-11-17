@@ -1,0 +1,5 @@
+MatPBRBasic : "{C0ABA1DB839DDD89}Assets/Weapons/Rifles/AKS74U/Data/AKS74U_Handguard.emat" {
+ Color 0.06 0.06 0.06 1
+ RoughnessScale 1.949
+ NormalPower 0.206
+}

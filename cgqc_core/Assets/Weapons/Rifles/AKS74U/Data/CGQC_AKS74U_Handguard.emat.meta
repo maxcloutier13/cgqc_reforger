@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BE428852565FB785}Assets/Weapons/Rifles/AKS74U/Data/CGQC_AKS74U_Handguard.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
