@@ -17,10 +17,11 @@ modded class SCR_PlayerController : PlayerController
     void CGQC_Addons_InitializePlayer(IEntity playerEntity)
     {
         Print("[CGQC_Addons_InitializePlayer] Starting ->");
-		// Armbands
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{7DE4A42F8782E8F2}Prefabs/Characters/Bandage/Bandage_1.et");
+	
+		
         Print("[CGQC_Addons_InitializePlayer] Done <-");
     }
+	
 }
 
 

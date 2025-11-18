@@ -17,9 +17,10 @@ modded class SCR_PlayerController : PlayerController
     void CGQC_InitializePlayer(IEntity playerEntity)
     {
         Print("[CGQC_InitializePlayer] Starting ->");
-        // Get player's Steam ID
+        // Get player's id
         int playerId = GetPlayerId();
-        string steamId = GetGame().GetBackendApi().GetPlayerIdentityId(playerId);
+		// Bohemia ID
+        string steamId = SCR_PlayerIdentityUtils.GetPlayerIdentityId(playerEntity);
         // Get player's name
         string playerName = GetPlayerName();
         PrintFormat("[CGQC_InitializePlayer] playerId: %1s - steamId: %2s playerName:%3 ", playerId, steamId, playerName);
@@ -42,9 +43,6 @@ modded class SCR_PlayerController : PlayerController
                 break;
             }
         }
-
-
-
         Print("[CGQC_InitializePlayer] Done <-");
     }
 
