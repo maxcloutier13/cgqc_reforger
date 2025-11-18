@@ -22,24 +22,28 @@ class CGQC_Scripts
 	// Give item if none is present
 	static void CheckAndGiveItem(IEntity playerEntity, ResourceName itemPrefab)
 	{
-		PrintFormat("[CGQC_CheckAndGiveItem] called for item: %1", itemPrefab);
+	    PrintFormat("[CGQC_CheckAndGiveItem] called for item: %1", itemPrefab);
 	    if (!playerEntity)
 	        return;
-	    
-	    // Get the character's inventory storage manager
+	
 	    SCR_InventoryStorageManagerComponent invManager = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));
 	    if (!invManager)
 	        return;
-	    
+	
+	    // Use CallLater to delay the check slightly so inventory updates
+	    GetGame().GetCallqueue().CallLater(CheckAndGiveItemDelayed, 50, false, playerEntity, invManager, itemPrefab);
+	}
+	
+	static void CheckAndGiveItemDelayed(IEntity playerEntity, SCR_InventoryStorageManagerComponent invManager, ResourceName itemPrefab)
+	{
 	    // Check if player already has this item
 	    if (HasItemInInventory(invManager, itemPrefab))
-		{
-			PrintFormat("[CGQC_CheckAndGiveItem] Player already has item: %1", itemPrefab);
-
-	        return; // Already has it, don't give
-		}
-	    // Player doesn't have it, give it
-		PrintFormat("[CGQC_CheckAndGiveItem] Player doesn't have item: %1 -> Giving", itemPrefab);
+	    {
+	        PrintFormat("[CGQC_CheckAndGiveItem] Player already has item: %1", itemPrefab);
+	        return;
+	    }
+	    
+	    PrintFormat("[CGQC_CheckAndGiveItem] Player doesn't have item: %1 -> Giving", itemPrefab);
 	    GiveItemToPlayer(playerEntity, itemPrefab);
 	}
 	
@@ -47,22 +51,41 @@ class CGQC_Scripts
 	{
 	    if (!invManager)
 	        return false;
+	
+	    PrintFormat("[HasItemInInventory] Searching for: %1", itemPrefab);
 	    
-	    array<IEntity> items = {};
-	    invManager.GetAllItems(items, null);
+	    // Get all storages first
+	    array<BaseInventoryStorageComponent> storages = {};
+	    invManager.GetStorages(storages);
 	    
-	    foreach (IEntity item : items)
+	    PrintFormat("[HasItemInInventory] Found %1 storages", storages.Count());
+	    
+	    // Check each storage
+	    foreach (BaseInventoryStorageComponent storage : storages)
 	    {
-	        if (!item)
+	        if (!storage)
 	            continue;
+	        
+	        array<IEntity> items = {};
+	        invManager.GetAllItems(items, storage);
+	        
+	        foreach (IEntity item : items)
+	        {
+	            if (!item)
+	                continue;
 	            
-	        EntityPrefabData prefabData = item.GetPrefabData();
-	        if (!prefabData)
-	            continue;
+	            EntityPrefabData prefabData = item.GetPrefabData();
+	            if (!prefabData)
+	                continue;
 	            
-	        // Compare prefab paths
-	        if (prefabData.GetPrefabName() == itemPrefab)
-	            return true;
+	            string itemPrefabName = prefabData.GetPrefabName();
+	            
+	            if (itemPrefabName == itemPrefab)
+	            {
+	                PrintFormat("[HasItemInInventory] MATCH FOUND!");
+	                return true;
+	            }
+	        }
 	    }
 	    
 	    return false;
