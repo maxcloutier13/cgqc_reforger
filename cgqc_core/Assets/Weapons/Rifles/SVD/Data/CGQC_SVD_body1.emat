@@ -1,0 +1,4 @@
+MatPBRBasic : "{58AAEA7B702F11E7}Assets/Weapons/Rifles/SVD/Data/SVD_body1.emat" {
+ Color 0.371 0.371 0.371 1
+ RoughnessScale 0.882
+}

@@ -1,0 +1,4 @@
+MatPBRBasic : "{1ED637D476029579}Assets/Weapons/Rifles/AK74/Data/AK74_Stock.emat" {
+ Color 0.058 0.058 0.058 1
+ RoughnessScale 2.096
+}

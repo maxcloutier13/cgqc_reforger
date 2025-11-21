@@ -1,0 +1,33 @@
+GenericEntity : "{6415B7923DE28C1B}Prefabs/Weapons/Rifles/SVD/Rifle_SVD_PSO.et" {
+ ID "525494E72B1E90FD"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{66EA292D7F0CC4B3}" {
+     SourceMaterial "SVD_body1"
+     AssignedMaterial "{28F506E53223DBF3}Assets/Weapons/Rifles/SVD/Data/CGQC_SVD_body1.emat"
+    }
+    MaterialAssignClass "{66EA292D7F0CC4A9}" {
+     SourceMaterial "SVD_body2"
+     AssignedMaterial "{761D2FA68DAE55FC}Assets/Weapons/Rifles/SVD/Data/CGQC_SVD_body2.emat"
+    }
+    MaterialAssignClass "{66EA292D7F0CC4AF}" {
+     SourceMaterial "SVD_body3"
+     AssignedMaterial "{28F506E53223DBF3}Assets/Weapons/Rifles/SVD/Data/CGQC_SVD_body1.emat"
+    }
+    MaterialAssignClass "{66EA292D7F0CC453}" {
+     SourceMaterial "SVD_body4"
+     AssignedMaterial "{761D2FA68DAE55FC}Assets/Weapons/Rifles/SVD/Data/CGQC_SVD_body2.emat"
+    }
+   }
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "SVD Midnight Black"
+     Description "Blackened gun meant for clandestine operations "
+    }
+   }
+  }
+ }
+}
