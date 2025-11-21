@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DC0AA26037A4631E}Assets/Weapons/Rifles/M14/Data/CGQC_Midnight_Body_Metal.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

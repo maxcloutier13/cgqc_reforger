@@ -1,0 +1,13 @@
+GenericEntity : "{6D18CC33708EE712}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{66E717F26132D8BD}" {
+     SourceMaterial "Body_Metal1"
+     AssignedMaterial "{DC0AA26037A4631E}Assets/Weapons/Rifles/M14/Data/CGQC_Midnight_Body_Metal.emat"
+    }
+   }
+  }
+ }
+}
