@@ -7,10 +7,10 @@ modded class SCR_PlayerController : PlayerController
         // Check if we're taking control of a new entity (player spawn)
         if (to)
         {
-			PrintFormat("[CGQC_TakingControl] Waiting %1s", 10);
-            // Wait 5 seconds before running initialization code
+			Print("[CGQC_FF_TakingControl] Waiting a bit");
 			int playerId = GetPlayerId();
             GetGame().GetCallqueue().CallLater(CGQC_Scripts.initializePlayer, 10000, false, to, playerId);
+            GetGame().GetCallqueue().CallLater(CGQC_Scripts.initializeFFPlayer, 6000, false, to);
         }
     }
 }

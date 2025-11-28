@@ -1,0 +1,105 @@
+CinematicEntity BTRAmbush {
+ coords 0 0 0
+ Scene CinematicScene "{66F8561B1F70123F}" {
+  Tracks {
+   CustomCinematicTrack "{66F8561B3D691F91}" {
+    TrackName "WeatherTrack"
+    ClassName "WeatherCinematicTrack"
+    ChildTracks {
+     FloatCinematicTrack "{66F8561B3D691B59}" {
+      TrackName "m_fTimeOfDay"
+      Keyframes {
+       FloatCinematicKeyframe "{66F8561850E5FBB5}" {
+        FrameNumber 0
+        Value 17.79
+        InterpMode 0
+       }
+      }
+     }
+     IntegerCinematicTrack "{66F8561B3D6918AB}" {
+      TrackName "m_iWeatherType"
+      Keyframes {
+       IntegerCinematicKeyframe "{66F8561858D94B25}" {
+        FrameNumber 0
+        Value 1
+        InterpMode 2
+       }
+      }
+     }
+     BooleanCinematicTrack "{66F8561B3D6919F5}" {
+      TrackName "setSpecifics"
+     }
+     FloatCinematicTrack "{66F8561B3D691918}" {
+      TrackName "m_fWindSpeed"
+      Keyframes {
+       FloatCinematicKeyframe "{66F8561B96CF442B}" {
+        FrameNumber 0
+        Value 9.65
+        InterpMode 0
+       }
+      }
+     }
+     FloatCinematicTrack "{66F8561B3D69668F}" {
+      TrackName "m_fWindDirection"
+     }
+     FloatCinematicTrack "{66F8561B3D6967D0}" {
+      TrackName "m_fWetness"
+      Keyframes {
+       FloatCinematicKeyframe "{66F8561877AAD272}" {
+        FrameNumber 0
+        Value 1
+        InterpMode 0
+       }
+      }
+     }
+     FloatCinematicTrack "{66F8561B3D696748}" {
+      TrackName "m_fPuddles"
+      Keyframes {
+       FloatCinematicKeyframe "{66F85618768680E9}" {
+        FrameNumber 0
+        Value 1
+        InterpMode 0
+       }
+      }
+     }
+     FloatCinematicTrack "{66F8561B3D6964F8}" {
+      TrackName "m_fFog"
+      Keyframes {
+       FloatCinematicKeyframe "{66F856186E3308A7}" {
+        FrameNumber 0
+        Value 0.42
+        InterpMode 0
+       }
+      }
+     }
+     FloatCinematicTrack "{66F8561B3D696464}" {
+      TrackName "m_fFogHeight"
+      Keyframes {
+       FloatCinematicKeyframe "{66F856186CFC1083}" {
+        FrameNumber 0
+        Value 0.59
+        InterpMode 0
+       }
+      }
+     }
+     BooleanCinematicTrack "{66F8561B3D6965EA}" {
+      TrackName "setDate"
+     }
+     IntegerCinematicTrack "{66F8561B3D69651E}" {
+      TrackName "m_iYear"
+     }
+     IntegerCinematicTrack "{66F8561B3D6962B0}" {
+      TrackName "m_iMonth"
+     }
+     IntegerCinematicTrack "{66F8561B3D69623C}" {
+      TrackName "m_iDay"
+     }
+    }
+   }
+  }
+ }
+}
+Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 6440.549 449.782 6420.736
+ angles 8.037 -2.704 0.509
+}
