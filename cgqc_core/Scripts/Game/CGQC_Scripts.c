@@ -1,23 +1,26 @@
 class CGQC_Scripts
 {
 	
-	
+	// Init for FreedomFighters
 	static void initializeFFPlayer(IEntity playerEntity)
     {
-        Print("[CGQC_InitializeFFPlayer] Giving radio to player");
+        Print("[CGQC_InitializeFFPlayer] Giving radio/armband to player");
         CGQC_Scripts.CheckAndGiveItem(playerEntity, "{540C08AD5F21A5FA}Prefabs/Items/Equipment/Radios/Radio_R148_FIA.et");
+		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{81A4D576093ED337}Prefabs/Characters/Bandeau/Brassard_Green.et");
     }
-	// Initialize player 
-    static void initializePlayer(IEntity playerEntity, int playerId)
+	
+	// Basic init for player 
+    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
     {
         Print("[CGQC_InitializePlayer] Starting ->");
-		// Bohemia ID
-        string playerIdentityId = SCR_PlayerIdentityUtils.GetPlayerIdentityId(playerId);
         // Get player's name
         string cgqc_playerName = GetPlayerName(playerId);
         PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, cgqc_playerName);
 		// CGQC flag
 		bool isCGQC = false;
+		// Identity
+		string cgqc_head = "";
+		string cgqc_body = "";
 
         // Check Steam ID and activate specific features for certain players
         switch (playerIdentityId)
@@ -26,6 +29,8 @@ class CGQC_Scripts
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier LOCAL detected - activating admin features");
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
+				cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
+				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";				
 				isCGQC = true;
                 break;
             }
@@ -33,6 +38,8 @@ class CGQC_Scripts
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
+				cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
+				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";
 				isCGQC = true;
                 break;
             }
@@ -72,14 +79,6 @@ class CGQC_Scripts
 				isCGQC = true;
                
             }
-            default:
-            {
-                PrintFormat("[CGQC_InitializePlayer] Unrecognized player %1 has spawned", cgqc_playerName);
-				// Display welcome message
-		        string message = string.Format("Salut, %1! Bienvenue sur le serveur CGQC. Rejoins-nous sur discord: cgqc.ca - Have fun!", cgqc_playerName);
-		        SCR_HintManagerComponent.GetInstance().ShowCustomHint(message, "Salut!", 10.0);
-                break;
-            }
         }
 		
 		/* Player id's of CGQC
@@ -97,10 +96,96 @@ class CGQC_Scripts
 		
 		if(isCGQC)
 		{
+			// Display CGQC message
 			GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateCGQCFeatures, 5000, false, playerEntity, cgqc_playerName);
+			// Apply identity if head and body are set
+			if (!cgqc_head.IsEmpty() && !cgqc_body.IsEmpty())
+			{
+				Print("[CGQC_InitializePlayer] Applying custom identity");
+				SetPlayerIdentity(playerEntity, cgqc_head, cgqc_body);
+			}
+		} else {
+            PrintFormat("[CGQC_InitializePlayer] Unrecognized player %1 has spawned", cgqc_playerName);
+			// Display welcome message
+	        string message = string.Format("Salut, %1! Bienvenue sur le serveur CGQC. Rejoins-nous sur discord: cgqc.ca - Have fun!", cgqc_playerName);
+	        SCR_HintManagerComponent.GetInstance().ShowCustomHint(message, "Salut!", 10.0);
+
 		}
         Print("[CGQC_InitializePlayer] Done <-");
     }
+	
+	// Set player identity (works on both client and server)
+	static void SetPlayerIdentity(IEntity playerEntity, string headPath, string bodyPath)
+	{
+		if (!playerEntity)
+		{
+			Print("[CGQC_SetPlayerIdentity] Invalid player entity", LogLevel.ERROR);
+			return;
+		}
+
+		SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
+		if (!playerCharacter)
+		{
+			Print("[CGQC_SetPlayerIdentity] Failed to cast to SCR_ChimeraCharacter", LogLevel.ERROR);
+			return;
+		}
+
+		// Find the identity selector component if it exists
+		MFN_IdentitySelectorCharacterComponent idSelector = MFN_IdentitySelectorCharacterComponent.Cast(
+			playerCharacter.FindComponent(MFN_IdentitySelectorCharacterComponent)
+		);
+
+		if (idSelector)
+		{
+			// Use the existing component's RPC system
+			PrintFormat("[CGQC_SetPlayerIdentity] Using identity selector component: %1 | %2", headPath, bodyPath);
+			idSelector.RemoteServerSetIdentity(headPath, bodyPath);
+		}
+		else
+		{
+			// Fallback: set identity directly on server
+			PrintFormat("[CGQC_SetPlayerIdentity] Setting identity directly: %1 | %2", headPath, bodyPath);
+			
+			if (Replication.IsServer())
+			{
+				SetIdentityDirect(playerCharacter, headPath, bodyPath);
+			}
+		}
+	}
+
+	// Direct identity setting (server-side only)
+	static void SetIdentityDirect(SCR_ChimeraCharacter playerCharacter, string headPath, string bodyPath)
+	{
+		CharacterIdentityComponent idComponent = CharacterIdentityComponent.Cast(
+			playerCharacter.FindComponent(CharacterIdentityComponent)
+		);
+		
+		if (!idComponent)
+		{
+			Print("[CGQC_SetIdentityDirect] CharacterIdentityComponent not found", LogLevel.ERROR);
+			return;
+		}
+
+		Identity playerID = idComponent.GetIdentity();
+		if (!playerID)
+		{
+			Print("[CGQC_SetIdentityDirect] Identity not found", LogLevel.ERROR);
+			return;
+		}
+
+		VisualIdentity newVisID = playerID.GetVisualIdentity();
+		if (!newVisID)
+		{
+			newVisID = new VisualIdentity();
+		}
+
+		newVisID.SetHead(headPath);
+		newVisID.SetBody(bodyPath);
+		playerID.SetVisualIdentity(newVisID);
+		idComponent.SetIdentity(playerID);
+
+		Print("[CGQC_SetIdentityDirect] Identity applied successfully");
+	}
 
     // Helper method to get player name
     static string GetPlayerName(int playerId)
@@ -113,20 +198,20 @@ class CGQC_Scripts
     {
 		Print("[CGQC_ActivateCGQCFeatures] Setup up for CGQC player");
 		// We have a group member
-		array<string> _welcome_list = {
+		array<string> i_welcome_list = {
 		    "What's good", "Howdy", "Hiya", "Wassup", "Yo", "R’gard", "Allo", "Hello", "Ooooh",
 			"Coucou", "Bonsoir", "Konnichiwa", "Hola", "Hallo", "Nǐ hǎo", "Hoi", "Merhaba", "Vitayu"
 		};
-		array<string> _message_list = {
+		array<string> i_message_list = {
 		   "what's up?", "what's up buddy?", "Time to fuck shit up",
 			"Asti que t'es beau", "Ça roule ma poule?", "As-tu couché ta blonde?",
 			"BAN dans 3,2,1...", "What's cookin'?", "Wassup homie?", "Greetings and salutations!"
 		};
 		
 		// Picks random greetings
-		string init_WelcomeTxt = string.Format("%1, %2", _welcome_list.GetRandomElement(), name);
-		string init_WelcomeMsg = _message_list.GetRandomElement();
-		
+		string init_WelcomeTxt = string.Format("%1, %2", i_welcome_list.GetRandomElement(), name);
+		string init_WelcomeMsg = i_message_list.GetRandomElement();
+		PrintFormat("[CGQC_ActivateCGQCFeatures] txt:%1/msg:%2 is the random msg", init_WelcomeTxt, init_WelcomeMsg);
 		// Show welcome
 		SCR_HintManagerComponent.GetInstance().ShowCustomHint(init_WelcomeMsg, init_WelcomeTxt, 10.0);
 	}
