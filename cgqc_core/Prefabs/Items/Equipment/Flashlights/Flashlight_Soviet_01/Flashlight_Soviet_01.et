@@ -1,0 +1,24 @@
+GameEntity : "{33EA038E98843FAE}Prefabs/Items/Equipment/Flashlights/Flashlight_Soviet_01/Flashlight_Soviet_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SCR_FlashlightComponent "{5D0CB95BC1CDFBA9}" {
+   m_aLenseArray {
+    SCR_LenseColor "{5D0CC0E516682B3C}" {
+     m_fLightValue 9
+    }
+    SCR_LenseColor "{6162BB73402D4361}" {
+     m_fLightValue 6
+    }
+    SCR_LenseColor "{6162BB7340FFFAED}" {
+     m_fLightValue 6
+    }
+    SCR_LenseColor "{6162BB735AB7B01E}" {
+     m_fLightValue 6
+    }
+    SCR_LenseColor "{6162BB728A582AF5}" {
+     m_fLightValue 6
+    }
+   }
+  }
+ }
+}

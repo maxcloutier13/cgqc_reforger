@@ -1,7 +1,7 @@
 MatPBRMulti {
  MaskMap "{41D6383C2A58CFBE}Assets/Characters/Heads/Layers/Head_03_Mask.edds"
  VFXMap "{5B475FA2FE0B746D}Assets/Characters/Heads/Layers/Head_base_VFX.edds"
- GlobalNMOMap "{574FCF5763E7527E}Assets/Characters/Heads/Head_Cloutier/Data/face_NMO.edds"
+ GlobalNMOMap "{EBAD2EA171789B1F}Assets/Characters/Heads/Head_Cloutier/Data/backup_nmo.edds"
  MudBCRMap "{5444BC7A2FBF19A7}Assets/Characters/Heads/Layers/Camo/Head_Mud_BCR.edds"
  MudNMOMap "{6C9C07E8F6C84B39}Assets/Characters/Heads/Layers/Camo/head_Mud_NMO.edds"
  MudMaskMap "{5B475FA2FE0B746D}Assets/Characters/Heads/Layers/Head_base_VFX.edds"

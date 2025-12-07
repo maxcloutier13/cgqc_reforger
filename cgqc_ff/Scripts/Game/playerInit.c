@@ -9,19 +9,21 @@ modded class SCR_PlayerController : PlayerController
 		
 		// Only run on server
 		if (!Replication.IsServer())
+		{
+			Print("[CGQC_OnControlledEntityChanged_FF] Not server: Skipping");
 			return;
-		
+		}
+				
 		// Check if the controlled entity is the player's main entity (not a possessed unit)
 		IEntity mainEntity = GetMainEntity();
 		if (to != mainEntity)
 		{
-			Print("[CGQC_OnControlledEntityChanged] Possessing another entity, skipping initialization");
+			Print("[CGQC_OnControlledEntityChanged_FF] Possessing another entity, skipping initialization");
 			return;
 		}
 			
-		Print("[CGQC_FF_TakingControl] Waiting a bit");
+		Print("[CGQC_OnControlledEntityChanged_FF] Waiting a bit");
 		int playerId = GetPlayerId();
-        GetGame().GetCallqueue().CallLater(CGQC_Scripts.initializeFFPlayer, 10000, false, to, playerId);
-        
+        GetGame().GetCallqueue().CallLater(CGQC_Scripts.initializeFFPlayer, 6000, false, to, playerId);
     }
 }

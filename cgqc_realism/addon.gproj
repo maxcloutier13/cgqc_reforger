@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcrealism"
+ GUID "670C1442629B8324"
+ TITLE "cgqc_realism"
+ Dependencies {
+  "58D0FB3206B6F859" "631CD0023FD58D35" "631C0CCC3F4506CB" "631D360C3F75E01D" "645D30E43E09B9D8" "631B7D6834D40F30" "" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

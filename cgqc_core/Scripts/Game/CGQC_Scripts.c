@@ -9,13 +9,96 @@ class CGQC_Scripts
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{81A4D576093ED337}Prefabs/Characters/Bandeau/Brassard_Green.et");
     }
 	
-	// Basic init for player 
+	static void welcomePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
+    {
+		Print("[CGQC_welcomePlayer] Starting ->");
+        // Get player's name
+        string playerName = GetPlayerName(playerId);
+        PrintFormat("[CGQC_welcomePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
+		// CGQC flag
+		bool isCGQC = false;
+		
+        // Check Steam name and activate specific features for certain players
+        switch (playerName)
+        {
+			case "silent1":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Cloutier detected - activating admin features");
+				isCGQC = true;
+                break;
+            }
+			case "ElButteur":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Genest detected");
+				isCGQC = true;
+                break;
+            }
+			case "Darkangel898":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Tremblay detected");
+				isCGQC = true;
+                break;
+            }
+			case "HellRik":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Valiquette detected");
+				isCGQC = true;
+                break;
+            }
+			case "Dubaille":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Dubé detected");
+				isCGQC = true;
+                break;
+            }
+			case "Pig'sPeels":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Comeau detected");
+				isCGQC = true;
+                break;
+            }
+			case "Psyck0u":
+            {
+                Print("[CGQC_welcomePlayer] CGQC Fournier detected");
+				isCGQC = true;               
+            }
+        }
+		
+		/* Player id's of CGQC
+		"d7e9113c-f075-41c5-a72a-9ee5187dc723": // Cloutier local
+		"120786ec-60cd-4a96-9e10-c846578745f2s" : ElButteur / Genest
+		"c3fcb72f-2f87-4937-8847-1fb62b39a40cs" : Darkangel898 / Tremblay
+		"d7e9113c-f075-41c5-a72a-9ee5187dc723s" : silent1 / Cloutier
+		"fdeca5b5-5cba-403a-8e3a-d598325dbcccs" : Dubaille / Dubé
+		"60e84a60-c12f-4b4a-91ed-c294bab6046es" : Pig'sPeels / Comeau
+		"e1c8cdf2-953a-4db0-be45-2cd8e79556f2s" : HellRik / Valiquette
+		"c6643f04-50cb-461a-b591-b6e6deb63ed9s" : Psyck0u / Fournier		
+		"78216978-6757-4e04-83c5-f05a7c1ed058s" :inmateQc / Winters
+		*/
+		
+		
+		if(isCGQC)
+		{
+			PrintFormat("[CGQC_welcomePlayer] CGQC player %1 has spawned", playerName);
+			// Display CGQC message
+			GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateCGQCFeatures, 5000, false, playerEntity, playerName);
+		}
+		else {
+            PrintFormat("[CGQC_welcomePlayer] Unrecognized player %1 has spawned", playerName);
+			// Display welcome message
+	        string message = string.Format("Salut, %1! Bienvenue sur le serveur CGQC. Rejoins-nous sur discord: cgqc.ca - Have fun!", playerName);
+	        SCR_HintManagerComponent.GetInstance().ShowCustomHint(message, "Salut!", 10.0);
+		}
+        Print("[CGQC_InitializePlayer] Done <-");
+	
+	}
+	// Server-side init for player 
     static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
     {
         Print("[CGQC_InitializePlayer] Starting ->");
         // Get player's name
-        string cgqc_playerName = GetPlayerName(playerId);
-        PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, cgqc_playerName);
+        string playerName = GetPlayerName(playerId);
+        PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
 		// CGQC flag
 		bool isCGQC = false;
 		// Identity
@@ -25,24 +108,16 @@ class CGQC_Scripts
         // Check Steam ID and activate specific features for certain players
         switch (playerIdentityId)
         {
-            case "d7e9113c-f075-41c5-a72a-9ee5187dc723": // Cloutier local
-            {
-                Print("[CGQC_InitializePlayer] CGQC Cloutier LOCAL detected - activating admin features");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
-				cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
-				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";				
-				isCGQC = true;
-                break;
-            }
-			case "d7e9113c-f075-41c5-a72a-9ee5187dc723s":
+            case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
-				cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
-				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";
+				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
+				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
+				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";				
 				isCGQC = true;
                 break;
-            }
+            }		
 			case "120786ec-60cd-4a96-9e10-c846578745f2s":
             {
                 Print("[CGQC_InitializePlayer] CGQC Genest detected");
@@ -96,22 +171,13 @@ class CGQC_Scripts
 		
 		if(isCGQC)
 		{
-			// Display CGQC message
-			GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateCGQCFeatures, 5000, false, playerEntity, cgqc_playerName);
 			// Apply identity if head and body are set
 			if (!cgqc_head.IsEmpty() && !cgqc_body.IsEmpty())
 			{
-				Print("[CGQC_InitializePlayer] Applying custom identity");
+				Print("[CGQC_InitializePlayer] Custom Identity found: Applying");
 				SetPlayerIdentity(playerEntity, cgqc_head, cgqc_body);
 			}
-		} else {
-            PrintFormat("[CGQC_InitializePlayer] Unrecognized player %1 has spawned", cgqc_playerName);
-			// Display welcome message
-	        string message = string.Format("Salut, %1! Bienvenue sur le serveur CGQC. Rejoins-nous sur discord: cgqc.ca - Have fun!", cgqc_playerName);
-	        SCR_HintManagerComponent.GetInstance().ShowCustomHint(message, "Salut!", 10.0);
-
-		}
-        Print("[CGQC_InitializePlayer] Done <-");
+		} 
     }
 	
 	// Set player identity (works on both client and server)
@@ -205,7 +271,8 @@ class CGQC_Scripts
 		array<string> i_message_list = {
 		   "what's up?", "what's up buddy?", "Time to fuck shit up",
 			"Asti que t'es beau", "Ça roule ma poule?", "As-tu couché ta blonde?",
-			"BAN dans 3,2,1...", "What's cookin'?", "Wassup homie?", "Greetings and salutations!"
+			"BAN dans 3,2,1...", "What's cookin'?", "Wassup homie?", "Greetings and salutations!",
+			"Comment qu'il va?"
 		};
 		
 		// Picks random greetings
