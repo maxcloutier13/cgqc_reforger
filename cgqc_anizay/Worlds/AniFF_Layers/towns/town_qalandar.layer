@@ -1,0 +1,81 @@
+JWK_CheckpointEntity JWK_CheckpointController_6638E9E2C57C52D4 : "{45DDC606D9A685AE}Prefabs/Controllers/Loadtime/JWK_CheckpointController.et" {
+ coords 3488.582 165.718 3103.147
+ m_eLinkType TOWN
+ {
+  SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+   coords -2.713 0 -8.577
+   angles 0 15.608 0
+   {
+    StaticModelEntity {
+     ID "62A693F2AC4FB612"
+     coords 0 1.001 0
+     angles -7.944 0 2.455
+    }
+   }
+  }
+ }
+}
+JWK_TownEntity JWK_TownController_6638E9E24D495AA8 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Qalandar"
+  }
+ }
+ coords 3567.766 168.813 2877.707
+ m_iTownRange 150
+ m_iPopulation 100
+ m_bAutomaticTownType 0
+ m_iTownType TOWN
+}
+$grp SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ {
+  coords 3606.008 0.156 2924.32
+  angles 0 151.697 0
+ }
+ {
+  coords 3509.549 0.217 630.992
+  angles 0 -115.495 0
+ }
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 3608.594 168.937 2911.444
+  angles 0 55.512 0
+ }
+ {
+  coords 3579.626 168.937 2895.7
+  angles 0 55.512 0
+ }
+ {
+  coords 3583.019 168.937 2890.762
+  angles 0 55.512 0
+ }
+ {
+  coords 3586.237 168.937 2886.077
+  angles 0 55.512 0
+ }
+ {
+  coords 3581.669 169.1 2936.047
+  angles 0 -34.127 0
+ }
+ {
+  coords 3666.41 168.908 2848.143
+  angles 0 52.927 0
+ }
+ {
+  coords 3522.953 168.594 2796.314
+  angles 0 51.227 0
+ }
+ {
+  coords 3465.513 169.242 2935.641
+  angles 0 63.042 0
+ }
+ {
+  coords 3551.911 167.784 2971.781
+  angles 0 26.858 0
+ }
+ {
+  coords 3537.232 167.135 2997.114
+  angles 0 -25.348 0
+ }
+}

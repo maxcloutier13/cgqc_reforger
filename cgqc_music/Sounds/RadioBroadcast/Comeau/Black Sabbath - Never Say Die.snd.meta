@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{CF74C88B809A41A8}Sounds/RadioBroadcast/Comeau/Black Sabbath - Never Say Die.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{5AF38C07D3BBAEF3}Sounds/RadioBroadcast/Comeau/Black Sabbath - Never Say Die.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

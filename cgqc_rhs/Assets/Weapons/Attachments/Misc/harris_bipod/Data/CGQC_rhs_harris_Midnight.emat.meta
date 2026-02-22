@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8D4C79DBA5667FE9}Assets/Weapons/Attachments/Misc/harris_bipod/Data/CGQC_rhs_harris_Midnight.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

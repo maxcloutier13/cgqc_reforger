@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{6D7881A8F4F15E0C}Sounds/RadioBroadcast/Comeau/KMFDM - Rip The System.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{F8FFC524A7D0B157}Sounds/RadioBroadcast/Comeau/KMFDM - Rip The System.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

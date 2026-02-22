@@ -1,0 +1,27 @@
+JWK_CheckpointEntity JWK_CheckpointController_6638E9E857B9D0B3 : "{45DDC606D9A685AE}Prefabs/Controllers/Loadtime/JWK_CheckpointController.et" {
+ coords 5214.181 215.07 1461.704
+ {
+  SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+   coords -3.937 0.636 -13.435
+   angles 0 134.905 0
+   {
+    StaticModelEntity {
+     ID "62A693F2AC4FB612"
+     coords 0 -0.042 0
+     angles -0.281 0 -4.681
+    }
+   }
+  }
+  SCR_SiteSlotEntity : "{AC155FBBC059807D}Prefabs/World/Slots/JWK_SlotSquareSmall.et" {
+   coords 2.322 0 9.588
+   angles 0 163.27 0
+   {
+    StaticModelEntity {
+     ID "62A693F2AC4FB612"
+     coords 0 -0.619 0
+     angles 5.971 0 -1.043
+    }
+   }
+  }
+ }
+}

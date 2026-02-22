@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{38146533DB96B20E}Sounds/RadioBroadcast/Comeau/Dokken - Mr. Scary.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{AD9321BF88B75D55}Sounds/RadioBroadcast/Comeau/Dokken - Mr. Scary.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

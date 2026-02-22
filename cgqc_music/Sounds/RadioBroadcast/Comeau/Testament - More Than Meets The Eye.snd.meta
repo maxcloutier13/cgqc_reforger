@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{2C27DD13A3186F44}Sounds/RadioBroadcast/Comeau/Testament - More Than Meets The Eye.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{B9A0999FF039801F}Sounds/RadioBroadcast/Comeau/Testament - More Than Meets The Eye.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

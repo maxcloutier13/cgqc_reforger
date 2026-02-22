@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{E8EACCD17E37070F}Sounds/RadioBroadcast/Comeau/Dark Fortress - Insomnia.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{7D6D885D2D16E854}Sounds/RadioBroadcast/Comeau/Dark Fortress - Insomnia.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

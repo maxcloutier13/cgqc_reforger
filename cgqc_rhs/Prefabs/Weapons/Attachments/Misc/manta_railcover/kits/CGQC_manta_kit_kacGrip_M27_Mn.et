@@ -1,0 +1,27 @@
+GenericEntity : "{B9E528A31A6F0A02}Prefabs/Weapons/Attachments/Misc/manta_railcover/kits/RHS_manta_kit_kacGrip_M27_3.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  SlotManagerComponent "{62A52E56EAB47677}" {
+   Slots {
+    EntitySlotInfo cover1 {
+     Enabled 0
+    }
+    EntitySlotInfo cover2 {
+     Enabled 0
+    }
+    EntitySlotInfo grip {
+     Prefab "{8B4757193319EC5D}Prefabs/Weapons/Attachments/Grips/Grip_KAC_Vertical/CGQC_KacVertical_Mn.et"
+    }
+    EntitySlotInfo cover3 {
+     Enabled 0
+    }
+    EntitySlotInfo cover4 {
+     Enabled 0
+    }
+    EntitySlotInfo gripcover {
+     Enabled 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+JWK_FactionManager JWK_FactionManager1 : "{64B2F8D8059C822F}Prefabs/GameMode/JWK_FactionManager.et" {
+ coords 4995.254 128.812 5267.539
+}
+JWK_GameMode JWK_FreedomFighters1 : "{64B2F8D8059C8B1B}Prefabs/GameMode/FreedomFighters_Base.et" {
+ components {
+  JWK_PersistenceManagerComponent "{5D7009B844876186}" {
+   m_JWK_DatabaseBaseSubdir "/AnizayVanilla"
+  }
+  JWK_RoadNetworkManagerComponent "{62E8ED08DB813AB6}" {
+   m_sFilePath "Assets/JWK/RoadNetworks/Anizay.json"
+  }
+  JWK_WorldSettingsComponent "{647AF28EDBAC9BE6}" {
+   m_vMapSize 10250 0 10250
+   m_sPlaceName "Anizay"
+   m_aCameraPositions {
+    JWK_CameraPosition "{66452ABCA87C9FC6}" {
+     m_vOrigin 5088.82 184.25 5113.08
+     m_vAngles -1.8 103.8 0
+    }
+    JWK_CameraPosition "{66452ABCF9A96396}" {
+     m_vOrigin 4070.9 172.46 6828.42
+     m_vAngles -2.7 -36.3 0
+    }
+    JWK_CameraPosition "{66452ABCD959B4F9}" {
+     m_vOrigin 3145.67 170.25 8281.619
+     m_vAngles -9.3 -20.4 0
+    }
+   }
+  }
+ }
+ coords 5018.886 128.415 5243.813
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8CCCA5984D8AAF5A}Assets/Weapons/Attachments/Grips/Grip_KACVertical/Data/att_grip_kacvertical_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

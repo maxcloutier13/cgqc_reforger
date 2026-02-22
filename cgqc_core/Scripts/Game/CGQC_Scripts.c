@@ -5,7 +5,7 @@ class CGQC_Scripts
 	static void initializeFFPlayer(IEntity playerEntity)
     {
         Print("[CGQC_InitializeFFPlayer] Giving radio/armband to player");
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{540C08AD5F21A5FA}Prefabs/Items/Equipment/Radios/Radio_R148_FIA.et");
+        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{A955A7E41BB4D5FC}Prefabs/Items/Equipment/Radios/CGQC_Radio_152_ion.et");
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{81A4D576093ED337}Prefabs/Characters/Bandeau/Brassard_Green.et");
     }
 	
@@ -57,26 +57,19 @@ class CGQC_Scripts
 				isCGQC = true;
                 break;
             }
+			case "poolerpol":
+            {
+                Print("[CGQC_welcomePlayer] CGQC JeuneComeau detected");
+				isCGQC = true;
+                break;
+            }			
 			case "Psyck0u":
             {
                 Print("[CGQC_welcomePlayer] CGQC Fournier detected");
 				isCGQC = true;               
             }
         }
-		
-		/* Player id's of CGQC
-		"d7e9113c-f075-41c5-a72a-9ee5187dc723": // Cloutier local
-		"120786ec-60cd-4a96-9e10-c846578745f2s" : ElButteur / Genest
-		"c3fcb72f-2f87-4937-8847-1fb62b39a40cs" : Darkangel898 / Tremblay
-		"d7e9113c-f075-41c5-a72a-9ee5187dc723s" : silent1 / Cloutier
-		"fdeca5b5-5cba-403a-8e3a-d598325dbcccs" : Dubaille / Dubé
-		"60e84a60-c12f-4b4a-91ed-c294bab6046es" : Pig'sPeels / Comeau
-		"e1c8cdf2-953a-4db0-be45-2cd8e79556f2s" : HellRik / Valiquette
-		"c6643f04-50cb-461a-b591-b6e6deb63ed9s" : Psyck0u / Fournier		
-		"78216978-6757-4e04-83c5-f05a7c1ed058s" :inmateQc / Winters
-		*/
-		
-		
+				
 		if(isCGQC)
 		{
 			PrintFormat("[CGQC_welcomePlayer] CGQC player %1 has spawned", playerName);
@@ -101,6 +94,7 @@ class CGQC_Scripts
         PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
 		// CGQC flag
 		bool isCGQC = false;
+		SCR_ECharacterRank desiredRank = SCR_ECharacterRank.PRIVATE;
 		// Identity
 		string cgqc_head = "";
 		string cgqc_body = "";
@@ -114,62 +108,61 @@ class CGQC_Scripts
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
 				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
-				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";				
+				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
+				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
                 break;
             }		
-			case "120786ec-60cd-4a96-9e10-c846578745f2s":
+			case "120786ec-60cd-4a96-9e10-c846578745f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Genest detected");
 				isCGQC = true;
                 break;
             }
-			case "c3fcb72f-2f87-4937-8847-1fb62b39a40cs":
+			case "c3fcb72f-2f87-4937-8847-1fb62b39a40c":
             {
                 Print("[CGQC_InitializePlayer] CGQC Tremblay detected");
+				cgqc_head = "{22EDFA2131C317E9}Prefabs/Characters/Heads/Head_WhiteHead_01.et";
+				cgqc_body = "{89C2788E9B1C96B0}Prefabs/Characters/Basebody/CharacterBasebody_01.et";
 				isCGQC = true;
                 break;
             }
-			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2s":
+			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
 				isCGQC = true;
                 break;
             }
-			case "fdeca5b5-5cba-403a-8e3a-d598325dbcccs":
+			case "fdeca5b5-5cba-403a-8e3a-d598325dbccc":
             {
                 Print("[CGQC_InitializePlayer] CGQC Dubé detected");
 				isCGQC = true;
                 break;
             }
-			case "60e84a60-c12f-4b4a-91ed-c294bab6046es":
+			case "60e84a60-c12f-4b4a-91ed-c294bab6046e":
             {
                 Print("[CGQC_InitializePlayer] CGQC Comeau detected");
+				cgqc_head = "{3B473755F8A85D65}Prefabs/Characters/Heads/Head_GreekHead_A3_04.et";
+				cgqc_body = "{5EE1CAC3D1D1AC46}Prefabs/Characters/Basebody/CharacterBasebody_Asian_03.et";
 				isCGQC = true;
                 break;
             }
-			case "c6643f04-50cb-461a-b591-b6e6deb63ed9s":
+			case "c40d4907-67a4-4a53-b7c0-49ae4f3d3121":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Jeune Comeau detected");
+				cgqc_head = "{CCF92B30D886C909}Prefabs/Characters/Heads/Head_WhiteHead_21.et";
+				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";
+				isCGQC = true;
+                break;
+            }
+			case "c6643f04-50cb-461a-b591-b6e6deb63ed9":
             {
                 Print("[CGQC_InitializePlayer] CGQC Fournier detected");
 				isCGQC = true;
                
             }
         }
-		
-		/* Player id's of CGQC
-		"d7e9113c-f075-41c5-a72a-9ee5187dc723": // Cloutier local
-		"120786ec-60cd-4a96-9e10-c846578745f2s" : ElButteur / Genest
-		"c3fcb72f-2f87-4937-8847-1fb62b39a40cs" : Darkangel898 / Tremblay
-		"d7e9113c-f075-41c5-a72a-9ee5187dc723s" : silent1 / Cloutier
-		"fdeca5b5-5cba-403a-8e3a-d598325dbcccs" : Dubaille / Dubé
-		"60e84a60-c12f-4b4a-91ed-c294bab6046es" : Pig'sPeels / Comeau
-		"e1c8cdf2-953a-4db0-be45-2cd8e79556f2s" : HellRik / Valiquette
-		"c6643f04-50cb-461a-b591-b6e6deb63ed9s" : Psyck0u / Fournier		
-		"78216978-6757-4e04-83c5-f05a7c1ed058s" :inmateQc / Winters
-		*/
-		
-		
-		if(isCGQC)
+		if (isCGQC)
 		{
 			// Apply identity if head and body are set
 			if (!cgqc_head.IsEmpty() && !cgqc_body.IsEmpty())
@@ -177,8 +170,55 @@ class CGQC_Scripts
 				Print("[CGQC_InitializePlayer] Custom Identity found: Applying");
 				SetPlayerIdentity(playerEntity, cgqc_head, cgqc_body);
 			}
-		} 
+			
+			// Assign Rank
+			SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
+	        if (!rankComp)
+	        {
+	            Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");	            
+	        }else{
+				rankComp.SetCharacterRank(desiredRank);
+	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+			}	
+		}
     }
+	
+
+		/*
+		{"d7e9113c-f075-41c5-a72a-9ee5187dc723", SCR_ECharacterRank.MAJOR}, // Cloutier
+		{"c3fcb72f-2f87-4937-8847-1fb62b39a40c", SCR_ECharacterRank.MAJOR}, // Darkangel898 / Tremblay
+		
+		{"6538de9f-32ce-41cc-bc6f-844a6a3b2ce8", SCR_ECharacterRank.CAPTAIN}, // InsanelyCisMale / Lafo
+		
+		{"e1c8cdf2-953a-4db0-be45-2cd8e79556f2", SCR_ECharacterRank.LIEUTENANT}, // HellRik / Valiquette	
+		{"120786ec-60cd-4a96-9e10-c846578745f2", SCR_ECharacterRank.LIEUTENANT}, // ElButteur / Genest
+		{"e98c24ac-31b8-4647-94f8-c4ffa5bec5fe", SCR_ECharacterRank.LIEUTENANT}, // cluelessCanadian / Trépanier
+		
+		{"dce42da0-351f-4d03-821b-e89e46b70002", SCR_ECharacterRank.SERGEANT}, // ServerError / Turcotte
+		{"fdeca5b5-5cba-403a-8e3a-d598325dbccc", SCR_ECharacterRank.SERGEANT}, // Dubaille / Dubé
+		{"789954f6-cdb6-4f69-8095-af635b9a78a1", SCR_ECharacterRank.SERGEANT}, // Lauzon / Lauzon
+		{"c6643f04-50cb-461a-b591-b6e6deb63ed9", SCR_ECharacterRank.SERGEANT}, // psykou / Fournier
+		{"dd7969a6-722f-4ae6-a9e7-898ee9e6fea5", SCR_ECharacterRank.SERGEANT}, // Epicdudejo / Pike
+		{"60e84a60-c12f-4b4a-91ed-c294bab6046e", SCR_ECharacterRank.SERGEANT}, // Pig'sPeels / Comeau
+		
+		{"c40d4907-67a4-4a53-b7c0-49ae4f3d3121", SCR_ECharacterRank.PRIVATE}, // poolerPol / JeuneComeau
+		{"daa9fb24-0729-45bb-b41f-324d22ca632b", SCR_ECharacterRank.PRIVATE}, // Technical / Forgues
+		{"f86ee5bc-39bd-4a59-98b7-9caf0ee061b6", SCR_ECharacterRank.PRIVATE}, // P-Hell / Audet
+		{"72c38387-e5fd-46f4-806e-ce1e7c0ce16e", SCR_ECharacterRank.PRIVATE} // Kevin Walker the 7th / Walker
+		*/
+        /* ex:
+		{"", SCR_ECharacterRank.PRIVATE}, // Discord / Actual
+		
+		Ranks possibles par défaut: 
+			PRIVATE,
+			CORPORAL,
+			SERGEANT,
+			LIEUTENANT,
+			CAPTAIN,
+			MAJOR,
+			COLONEL,
+			GENERAL,
+		*/
 	
 	// Set player identity (works on both client and server)
 	static void SetPlayerIdentity(IEntity playerEntity, string headPath, string bodyPath)

@@ -1,0 +1,8 @@
+GenericEntity : "{B1F3B0CAA6DB7239}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_343.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "coldBorscht"
+  }
+ }
+}

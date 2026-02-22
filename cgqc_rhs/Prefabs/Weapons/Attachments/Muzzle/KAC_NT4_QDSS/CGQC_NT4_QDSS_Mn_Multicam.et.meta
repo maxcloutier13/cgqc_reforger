@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{041657F6032B7104}Prefabs/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/CGQC_NT4_QDSS_Mn_Multicam.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

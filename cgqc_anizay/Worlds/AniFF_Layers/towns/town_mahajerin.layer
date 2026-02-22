@@ -1,0 +1,56 @@
+JWK_TownEntity JWK_TownController_6638E9D803652FF2 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Mahajerin"
+  }
+  JWK_TownCiviliansControllerComponent "{6296F54A892986E3}" {
+   m_fPopulationSpawnFactor 0.375
+  }
+ }
+ coords 814.34 143.805 8622.749
+ m_iTownRange 120
+ m_iPopulation 60
+ m_bAutomaticTownType 0
+ m_iTownType VILLAGE
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 812.327 144.492 8606.087
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 789.818 0.109 8573.68
+ angles 0 -109.092 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 799.793 143.862 8561.476
+  angles 0 -85.208 0
+ }
+ {
+  coords 800.205 143.862 8566.393
+  angles 0 -85.208 0
+ }
+ {
+  coords 790.024 143.862 8574.063
+  angles 0 -85.208 0
+ }
+ {
+  coords 800.378 143.862 8573.25
+  angles 0 -85.208 0
+ }
+ {
+  coords 816.336 143.862 8647.532
+  angles 0 -85.208 0
+ }
+ {
+  coords 819.109 143.862 8624.662
+  angles 0 -85.208 0
+ }
+ {
+  coords 784.826 145.189 8738.919
+  angles 0 81.7 0
+ }
+ {
+  coords 806.945 143.968 8476.642
+  angles 0 0 0
+ }
+}

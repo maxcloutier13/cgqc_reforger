@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{7C7172F788CDFB0A}Sounds/RadioBroadcast/Comeau/Dethklok-Murmaider.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{E9F6367BDBEC1451}Sounds/RadioBroadcast/Comeau/Dethklok-Murmaider.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

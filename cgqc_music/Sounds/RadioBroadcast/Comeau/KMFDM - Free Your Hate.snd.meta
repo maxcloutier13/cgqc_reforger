@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{3CFA1AC433C898E0}Sounds/RadioBroadcast/Comeau/KMFDM - Free Your Hate.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{A97D5E4860E977BB}Sounds/RadioBroadcast/Comeau/KMFDM - Free Your Hate.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

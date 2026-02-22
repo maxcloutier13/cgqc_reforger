@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{32C7A46AB659CF8E}Sounds/RadioBroadcast/Comeau/Motley Crue - Kickstart My Heart.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{A740E0E6E57820D5}Sounds/RadioBroadcast/Comeau/Motley Crue - Kickstart My Heart.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

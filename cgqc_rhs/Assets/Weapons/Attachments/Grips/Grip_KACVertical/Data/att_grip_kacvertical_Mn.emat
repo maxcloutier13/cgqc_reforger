@@ -1,0 +1,5 @@
+MatPBRBasic : "{5561E82FD01E16B2}Assets/Weapons/Attachments/Grips/Grip_KACVertical/Data/att_rhs_grip_kacvertical.emat" {
+ Color 0.058 0.058 0.058 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

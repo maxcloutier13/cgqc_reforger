@@ -1,0 +1,21 @@
+GenericEntity : "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "CGQC M40 AP Black Magz"
+     Description "M40 AP 5rnd Magazine"
+    }
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{670C2A13A70B09D3}" {
+     SourceMaterial "Default"
+     AssignedMaterial "{B94EEE4EF6D5C8A4}Assets/Weapons/Rifles/m40a5/data/rhs_m40a5_Midnight.emat"
+    }
+   }
+  }
+ }
+}

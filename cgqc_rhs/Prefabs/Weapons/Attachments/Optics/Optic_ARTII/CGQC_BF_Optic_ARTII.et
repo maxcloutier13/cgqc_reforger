@@ -1,0 +1,18 @@
+GameEntity : "{F7592BD37116D7C3}Prefabs/Weapons/Attachments/Optics/Optic_ARTII/Optic_ARTII_base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  AttachmentSlotComponent "{66E71E8BDB224757}" {
+   AttachmentSlot InventoryStorageSlot Camo {
+    Prefab "{8700CD09B7241DF4}Prefabs/Weapons/Attachments/Camouflage/Camouflage_M21/Camouflage_Wrap_ARTII_Gremblay.et"
+   }
+  }
+  MeshObject "{5D0CC83435B55858}" {
+   Materials {
+    MaterialAssignClass "{66E71E8B0D875E27}" {
+     SourceMaterial "Optic_ARTII"
+     AssignedMaterial "{7A8FD60C0092E390}Assets/Weapons/Attachments/Optics/ARTII/Data/CGQC_GR_BF_Optic_ARTII__OliveGreen_Sand_Stripes.emat"
+    }
+   }
+  }
+ }
+}

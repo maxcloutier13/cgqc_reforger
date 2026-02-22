@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{ED8E1DB1E9E20AF2}Sounds/RadioBroadcast/Comeau/Dimmu Borgir - Progenies of The Great Apocalypse.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{7809593DBAC3E5A9}Sounds/RadioBroadcast/Comeau/Dimmu Borgir - Progenies of The Great Apocalypse.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

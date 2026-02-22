@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FAF2B5B0E7DEA6A6}Assets/Weapons/Rifles/M14/Data/CGQC_Gr_Body_Metal_OliveGreen_Sand_Stripes.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

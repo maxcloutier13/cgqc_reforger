@@ -1,0 +1,34 @@
+GenericEntity : "{3FB5275A6505B323}Prefabs/Weapons/Rifles/M14/Rifle_M21_base.et" {
+ ID "5254ACCA959048B9"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{66E71DF30D456648}" {
+     SourceMaterial "Body_Metal"
+     AssignedMaterial "{FAF2B5B0E7DEA6A6}Assets/Weapons/Rifles/M14/Data/CGQC_Gr_Body_Metal_OliveGreen_Sand_Stripes.emat"
+    }
+    MaterialAssignClass "{66E71DF30D4565B9}" {
+     SourceMaterial "Body_Wood"
+     AssignedMaterial "{C0A860775AC518A9}Assets/Weapons/Rifles/M14/Data/CGQC_GR_Body_Wood_OliveGreen_Sand_Stripes.emat"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5472D21A19B61CDF}" {
+     AttachmentSlot InventoryStorageSlot Scope {
+      Prefab "{0AA7860129402E28}Prefabs/Weapons/Attachments/Optics/Optic_ARTII/CGQC_BF_Optic_ARTII.et"
+     }
+    }
+    AttachmentSlotComponent "{66E71E8CA85FC621}" {
+     AttachmentSlot InventoryStorageSlot Camonet {
+      Prefab "{448FB9AE8437B105}Prefabs/Weapons/Attachments/Camouflage/Camouflage_M21/Camouflage_Wrap_M21_Gremblay.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     MagazineTemplate "{7C969E7EF132CC21}Prefabs/Weapons/Magazines/CGQC_Midnight_Magazine_762x51_M14_20rnd_M61_AP.et"
+    }
+   }
+  }
+ }
+}

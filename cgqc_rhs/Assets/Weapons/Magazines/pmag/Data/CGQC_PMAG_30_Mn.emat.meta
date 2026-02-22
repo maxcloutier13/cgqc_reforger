@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{753C42DD9C27B66C}Assets/Weapons/Magazines/pmag/Data/CGQC_PMAG_30_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

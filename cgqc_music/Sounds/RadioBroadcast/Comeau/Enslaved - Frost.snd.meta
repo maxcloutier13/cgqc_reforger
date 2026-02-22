@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{C18B0E62FA751E97}Sounds/RadioBroadcast/Comeau/Enslaved - Frost.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{540C4AEEA954F1CC}Sounds/RadioBroadcast/Comeau/Enslaved - Frost.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

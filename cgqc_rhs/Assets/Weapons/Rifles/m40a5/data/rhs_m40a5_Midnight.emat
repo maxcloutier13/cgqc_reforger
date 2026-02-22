@@ -1,0 +1,5 @@
+MatPBRBasic : "{D6C7894532147526}Assets/Weapons/Rifles/m40a5/data/rhs_m40a5_01.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.49
+ MetalnessScale 0.933
+}

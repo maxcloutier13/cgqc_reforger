@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0DD149653EF140A6}Sounds/RadioBroadcast/Samples/3 Inches of Blood - Destroy The Orcs.snd"
+ Configurations {
+  SNDResourceClass PC {
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

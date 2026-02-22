@@ -1,0 +1,5 @@
+MatPBRBasic : "{538CEE8F2AB8DEE8}Assets/Weapons/Handguns/M9/Data/M9_Details.emat" {
+ Color 0 0.095 0.38 1
+ RoughnessScale 1.894
+ MetalnessScale 1.003
+}

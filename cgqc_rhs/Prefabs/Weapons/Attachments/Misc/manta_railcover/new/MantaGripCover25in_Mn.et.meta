@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{525EC9B691D7A324}Prefabs/Weapons/Attachments/Misc/manta_railcover/new/MantaGripCover25in_Mn.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

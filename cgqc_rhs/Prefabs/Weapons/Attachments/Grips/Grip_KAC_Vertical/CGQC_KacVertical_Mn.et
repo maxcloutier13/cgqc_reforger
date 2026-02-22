@@ -1,0 +1,21 @@
+GenericEntity : "{0F46DA93CB81F141}Prefabs/Weapons/Attachments/Grips/Grip_KAC_Vertical/RHS_KacVertical_base.et" {
+ ID "62A33D38B207C01C"
+ components {
+  AttachmentSlotComponent "{67105203605C28AC}" {
+   AttachmentSlot InventoryStorageSlot Railcover {
+    Offset 0 -0.052 0
+    Prefab "{525EC9B691D7A324}Prefabs/Weapons/Attachments/Misc/manta_railcover/new/MantaGripCover25in_Mn.et"
+   }
+  }
+  InventoryItemComponent "{67105207E92AE9A1}" {
+  }
+  MeshObject "{62A33D38A8A05940}" {
+   Materials {
+    MaterialAssignClass "{67105200E39D3095}" {
+     SourceMaterial "att_rhs_grip_kacvertical"
+     AssignedMaterial "{8CCCA5984D8AAF5A}Assets/Weapons/Attachments/Grips/Grip_KACVertical/Data/att_grip_kacvertical_Mn.emat"
+    }
+   }
+  }
+ }
+}

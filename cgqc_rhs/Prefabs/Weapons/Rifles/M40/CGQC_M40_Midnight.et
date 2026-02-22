@@ -1,0 +1,86 @@
+GenericEntity : "{E6D99D9CA2C7B7D1}Prefabs/Weapons/Rifles/M40/Rifle_M40_base.et" {
+ ID "5260C45AAAA407F4"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{670B4E259997E701}" {
+     SourceMaterial "Default"
+     AssignedMaterial "{B94EEE4EF6D5C8A4}Assets/Weapons/Rifles/m40a5/data/rhs_m40a5_Midnight.emat"
+    }
+   }
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "CGQC M40 Midnight"
+     Description "Full equip M40"
+    }
+    CustomAttributes {
+     AimingModifierAttributes "{566C7D15A071B88E}" {
+      DeploymentPoints {
+       PivotPointInfoItem "{5E0E3155DB81CDC5}" {
+        "Point info" DeploymentPointInfo deployment {
+         Offset 0 -0.14 0.33
+        }
+        StabilizationPoints {
+         DeploymentPointInfo Bipod_pos {
+          PivotID "snap_hand_left"
+          Offset 0 -0.132 0.61
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0E3155DB81CDD4}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Scope {
+      Prefab "{E2A9027064DD941F}Prefabs/Weapons/Attachments/Optics/m8541/CGQC_M8541_midnight.et"
+     }
+    }
+    AttachmentSlotComponent "{670B4E20238AEB83}" {
+     AttachmentSlot InventoryStorageSlot IR {
+      Offset 0.0385 0.0792 0.3417
+      Angles 0 0 90
+      Prefab "{6273D73882AA6251}Prefabs/Weapons/Attachments/Lasers/anpeq15/CGQC_ANPEQ15_Midnight.et"
+      InspectionWidgetOffset 0.0568 0.0866 0.3456
+     }
+     AttachmentType AttachmentRIS1913Short "{670B4E2378C89AF9}" {
+     }
+     ShowInInspection 1
+    }
+    AttachmentSlotComponent "{670B4E2D0A1C82AB}" {
+     AttachmentSlot InventoryStorageSlot Bipod {
+      Offset 0 0.0218 0.375
+      MergePhysics 1
+      Prefab "{2E73A4EA7BB3B386}Prefabs/Weapons/Attachments/Bipods/harris_bipod/CGQC_lt706_harris.et"
+      DisablePhysicsInteraction 1
+      InspectionWidgetOffset 0 0.0218 0.375
+     }
+    }
+    AttachmentSlotComponent "{670B4E2E2EB3C3A7}" {
+     AttachmentSlot InventoryStorageSlot underbarrail {
+      Offset 0 0.044 0.3665
+      Angles 0 0 180
+      Prefab "{CCA2C7A662439782}Prefabs/Weapons/Attachments/Rails/b18/b18.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{6264E565462F948E}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{48414BA60F3B0DFB}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_FA762SS.et"
+       }
+      }
+     }
+     MagazinePosition InventoryStorageSlot "{B80A64F4C834E9CB}" {
+     }
+     MagazineTemplate "{81A3A21C0A7C2552}Prefabs/Weapons/Magazines/CGQC_762x51_M40_5rnd_M61AP_Black.et"
+    }
+   }
+  }
+ }
+}

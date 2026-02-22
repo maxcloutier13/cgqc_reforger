@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1B573EB15F888D26}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_lt745_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

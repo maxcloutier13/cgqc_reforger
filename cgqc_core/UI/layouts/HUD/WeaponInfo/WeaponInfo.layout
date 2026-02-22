@@ -30,6 +30,11 @@ FrameWidgetClass {
       }
      }
     }
+    HorizontalLayoutWidgetClass "{59628161513F5EEE}" {
+     Prefab "{59628161513F5EEE}"
+     "Is Enabled" 0
+     "Is Visible" 0
+    }
    }
   }
  }

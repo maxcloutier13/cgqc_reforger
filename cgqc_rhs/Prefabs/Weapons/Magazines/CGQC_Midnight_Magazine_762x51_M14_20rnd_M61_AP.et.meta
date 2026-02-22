@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7C969E7EF132CC21}Prefabs/Weapons/Magazines/CGQC_Midnight_Magazine_762x51_M14_20rnd_M61_AP.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,3 +1,4 @@
+/*
 modded class SCR_PlayerController
 {
 	//------------------------------------------------------------------------------------------------
@@ -9,6 +10,8 @@ modded class SCR_PlayerController
 		GetGame().GetCallqueue().CallLater(AutoEnableVONDirect, 5000, false);
 		// Checks again after 30secs in case
 		GetGame().GetCallqueue().CallLater(AutoEnableVONDirect, 30000, false);
+		// Checks again after 60secs in case
+		GetGame().GetCallqueue().CallLater(AutoEnableVONDirect, 60000, false);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -21,4 +24,4 @@ modded class SCR_PlayerController
 		
 		vonController.ForceEnableVONDirectToggle();
 	}
-}
+}*/

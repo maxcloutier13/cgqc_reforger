@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{3D996F2F9FAE6746}Sounds/RadioBroadcast/Comeau/Judas Priest - Battle Hymn.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{A81E2BA3CC8F881D}Sounds/RadioBroadcast/Comeau/Judas Priest - Battle Hymn.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

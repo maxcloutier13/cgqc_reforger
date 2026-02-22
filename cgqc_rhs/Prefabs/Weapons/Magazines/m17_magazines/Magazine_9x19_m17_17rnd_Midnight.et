@@ -1,0 +1,21 @@
+GenericEntity : "{C50D6298F2125401}Prefabs/Weapons/Magazines/m17_magazines/Magazine_9x19_m17_17rnd_base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "CGQC M17 Mags black"
+     Description "Magazine 17rnd 9x19"
+    }
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{670C1A5F28AADDCF}" {
+     SourceMaterial "M17_Body"
+     AssignedMaterial "{43DE090BD7E8114A}Assets/Weapons/Handguns/m17/data/M17_Body_Midnight.emat"
+    }
+   }
+  }
+ }
+}

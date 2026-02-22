@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4B6C815DAACEAAD5}Assets/Weapons/Rifles/m4a1/Data/LP_BARREL_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

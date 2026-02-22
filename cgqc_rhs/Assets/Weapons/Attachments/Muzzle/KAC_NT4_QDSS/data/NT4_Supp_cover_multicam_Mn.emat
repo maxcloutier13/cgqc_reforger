@@ -1,0 +1,5 @@
+MatPBRBasic : "{BD4D863705202F2A}Assets/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/data/NT4_Supp_cover_multicam.emat" {
+ Color 0.093 0.093 0.093 1
+ RoughnessScale 1.2
+ MetalnessScale 0.8
+}

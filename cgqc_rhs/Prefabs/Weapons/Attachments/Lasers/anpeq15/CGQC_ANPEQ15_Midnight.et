@@ -1,0 +1,17 @@
+GameEntity : "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et" {
+ ID "557E85EEE1B603F4"
+ components {
+  MeshObject "{557E85EE39CED921}" {
+   Materials {
+    MaterialAssignClass "{5EA2EE31CACF94A6}" {
+     SourceMaterial "01__Default"
+     AssignedMaterial "{BFFCDB62D8E43469}Assets/Weapons/Attachments/Lasers/Laser_ANPEQ15/data/peq15_body_MIdnight.emat"
+    }
+    MaterialAssignClass "{670B4E229C969F1D}" {
+     SourceMaterial "02"
+     AssignedMaterial "{34797361CBD037AA}Assets/Weapons/Attachments/Lasers/Laser_ANPEQ15/data/peq15_tie_Midnight.emat"
+    }
+   }
+  }
+ }
+}

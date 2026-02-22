@@ -1,0 +1,127 @@
+$grp JWK_CheckpointEntity : "{45DDC606D9A685AE}Prefabs/Controllers/Loadtime/JWK_CheckpointController.et" {
+ JWK_CheckpointController_66397116BBD593C6 {
+  coords 8388.124 75.979 5427.507
+  m_eLinkType TOWN
+  {
+   SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+    coords -9.587 0 10.597
+    angles 0 36.745 0
+    {
+     StaticModelEntity {
+      ID "62A693F2AC4FB612"
+      coords 0 0.684 0
+      angles -3.415 0 4.183
+     }
+    }
+   }
+   SCR_SiteSlotEntity : "{AC155FBBC059807D}Prefabs/World/Slots/JWK_SlotSquareSmall.et" {
+    coords 6.644 0 -0.569
+    angles 0 9.105 0
+    {
+     StaticModelEntity {
+      ID "62A693F2AC4FB612"
+      coords 0 -0.175 0
+      angles 0.015 0 4.235
+     }
+    }
+   }
+  }
+ }
+ JWK_CheckpointController_66397116D6224A67 {
+  coords 8269.755 104.428 4833.419
+  m_eLinkType TOWN
+  {
+   SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+    coords 15.026 -4.077 23.811
+    angles 0 -156.445 0
+    {
+     StaticModelEntity {
+      ID "62A693F2AC4FB612"
+      coords 0 -0.665 0
+      angles 13.096 0 -1.893
+     }
+    }
+   }
+  }
+ }
+}
+JWK_TownEntity JWK_TownController_6639711468EDC671 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Naudeh"
+  }
+ }
+ coords 8426.242 77.698 5236.844
+ m_iTownRange 200
+ m_iPopulation 115
+ m_iTownType TOWN
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 8407.186 78.098 5185.783
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 8472.621 0.106 5200.559
+ angles 0 88.035 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 8453.795 77.498 5253.879
+  angles 0 0 0
+ }
+ {
+  coords 8410.251 77.577 5250.652
+  angles 0 0 0
+ }
+ {
+  coords 8377.58 77.293 5249.255
+  angles 0 0 0
+ }
+ {
+  coords 8341.335 77 5269.535
+  angles 0 -46.068 0
+ }
+ {
+  coords 8345.762 77 5274.13
+  angles 0 -46.068 0
+ }
+ {
+  coords 8350.269 77 5278.807
+  angles 0 -49.831 0
+ }
+ {
+  coords 8355.07 77 5284.495
+  angles 0 -49.831 0
+ }
+ {
+  coords 8359.216 77 5289.405
+  angles 0 -49.831 0
+ }
+ {
+  coords 8301.731 77.844 5176.019
+  angles 0 0 0
+ }
+ {
+  coords 8302.575 77.844 5197.882
+  angles 0 0 0
+ }
+ {
+  coords 8303.66 77.844 5187.398
+  angles 0 -92.891 0
+ }
+ {
+  coords 8362.488 77.875 5128.228
+  angles 0 0 0
+ }
+ {
+  coords 8411.876 77.875 5128.841
+  angles 0 0 0
+ }
+ {
+  coords 8469.816 77.884 5331.176
+  angles 0 80.4 0
+ }
+ {
+  coords 8299.796 77.844 5088.986
+  angles 0 -91.585 0
+ }
+}

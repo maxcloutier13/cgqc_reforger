@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{4CAB4465CDA48D7A}Sounds/RadioBroadcast/Comeau/Iced Earth - Pure Evil.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{D92C00E99E856221}Sounds/RadioBroadcast/Comeau/Iced Earth - Pure Evil.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

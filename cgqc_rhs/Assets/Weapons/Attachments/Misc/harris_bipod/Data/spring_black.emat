@@ -1,0 +1,5 @@
+MatPBRBasic : "{F8AF10A01B0219E7}Assets/Weapons/Attachments/Misc/harris_bipod/Data/spring.emat" {
+ Color 0.058 0.058 0.058 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

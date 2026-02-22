@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{0E118B36913ED132}Sounds/RadioBroadcast/Comeau/Skid Row - Youth Gone Wild.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{9B96CFBAC21F3E69}Sounds/RadioBroadcast/Comeau/Skid Row - Youth Gone Wild.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

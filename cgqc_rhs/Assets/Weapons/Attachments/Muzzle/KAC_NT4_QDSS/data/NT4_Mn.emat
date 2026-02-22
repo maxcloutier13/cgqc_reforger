@@ -1,0 +1,5 @@
+MatPBRBasic : "{071B4F17FC8F608F}Assets/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/data/NT4_BLACK.emat" {
+ Color 0.048 0.048 0.048 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

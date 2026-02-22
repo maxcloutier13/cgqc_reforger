@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{F8B26AE7961F0D1C}Sounds/RadioBroadcast/Comeau/Carcass - No Love Lost.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{6D352E6BC53EE247}Sounds/RadioBroadcast/Comeau/Carcass - No Love Lost.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

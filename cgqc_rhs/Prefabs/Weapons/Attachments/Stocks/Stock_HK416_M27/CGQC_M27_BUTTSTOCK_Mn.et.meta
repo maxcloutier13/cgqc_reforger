@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A610EBFA935AC623}Prefabs/Weapons/Attachments/Stocks/Stock_HK416_M27/CGQC_M27_BUTTSTOCK_Mn.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

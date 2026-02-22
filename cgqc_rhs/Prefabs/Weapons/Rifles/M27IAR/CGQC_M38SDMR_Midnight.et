@@ -1,0 +1,64 @@
+GenericEntity : "{F070CED9F1D44F30}Prefabs/Weapons/Rifles/M27IAR/Rifle_M38SDMR_manta_covers.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{670F4561CE8DF96A}" {
+     SourceMaterial "M_M27_IAR_Base"
+     AssignedMaterial "{453145996F014495}Assets/Weapons/Rifles/m27iar/data/CGQC_M27_rec_Mn.emat"
+    }
+    MaterialAssignClass "{670F4561CE8DF91E}" {
+     SourceMaterial "M_M27_IAR_Furniture"
+     AssignedMaterial "{E05E26131B4752FE}Assets/Weapons/Rifles/m27iar/data/CGQC_M27_Midnight.emat"
+    }
+   }
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "CGQC M38"
+     Description "CGQC M38 SD/Bipod and Grip"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5CC8E73BB698D287}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot optics {
+      Prefab "{2762E5ECAC6896E7}Prefabs/Weapons/Attachments/Optics/ts30a2/CGQC_ts30a2_base_Mn.et"
+     }
+    }
+    AttachmentSlotComponent "{5D873BE26346E4D7}" {
+     AttachmentSlot InventoryStorageSlot attachment_railcover {
+      Prefab "{B9E528A31A6F0A03}Prefabs/Weapons/Attachments/Misc/manta_railcover/kits/CGQC_manta_kit_kacGrip_M27_Mn.et"
+     }
+    }
+    AttachmentSlotComponent "{60A6AC64CDA3C786}" {
+     AttachmentSlot InventoryStorageSlot BUTTSTOCK {
+      Prefab "{A610EBFA935AC623}Prefabs/Weapons/Attachments/Stocks/Stock_HK416_M27/CGQC_M27_BUTTSTOCK_Mn.et"
+     }
+    }
+    AttachmentSlotComponent "{62995D48566EF6D2}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{62995D484DB4389A}" {
+      Prefab "{F109677AD1602C70}Prefabs/Weapons/Attachments/Lasers/anpeq16/CGQC_Laser_ANPEQ16_Mn.et"
+     }
+    }
+    AttachmentSlotComponent "{631F58122CD73C1F}" {
+     AttachmentSlot InventoryStorageSlot bipodSlot {
+      Prefab "{2E73A4EA7BB3B386}Prefabs/Weapons/Attachments/Bipods/harris_bipod/CGQC_lt706_harris.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626541D4146E1B36}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{041657F6032B7104}Prefabs/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/CGQC_NT4_QDSS_Mn_Multicam.et"
+       }
+      }
+     }
+     MagazineTemplate "{C2A9897A3FDBF490}Prefabs/Weapons/Magazines/Pmag/CGQC_Mn_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+    }
+   }
+  }
+ }
+}

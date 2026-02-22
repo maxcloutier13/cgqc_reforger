@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C4B99877180A2213}Sounds/RadioBroadcast/Samples/3 Inches of Blood - Deadly Sinners.snd"
+ Configurations {
+  SNDResourceClass PC {
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

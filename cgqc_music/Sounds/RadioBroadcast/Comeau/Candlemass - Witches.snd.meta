@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{5F569300211A469C}Sounds/RadioBroadcast/Comeau/Candlemass - Witches.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{CAD1D78C723BA9C7}Sounds/RadioBroadcast/Comeau/Candlemass - Witches.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,5 @@
+MatPBRBasic : "{4B90BCAF18D8E738}Assets/Weapons/Rifles/m27iar/data/rhs_M27_rail.emat" {
+ Color 0.061 0.061 0.061 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

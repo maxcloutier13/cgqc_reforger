@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{724FCC10C8AF6F56}Sounds/RadioBroadcast/Comeau/Manowar - The Dawn Of Battle.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{E7C8889C9B8E800D}Sounds/RadioBroadcast/Comeau/Manowar - The Dawn Of Battle.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

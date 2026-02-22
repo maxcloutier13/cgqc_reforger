@@ -1,0 +1,53 @@
+JWK_TownEntity JWK_TownController_66397119BB04E64B : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Rangrezan"
+  }
+  JWK_TownCiviliansControllerComponent "{6296F54A892986E3}" {
+   m_fPopulationSpawnFactor 0.5
+  }
+ }
+ coords 2939.628 146.298 9154.633
+ m_iTownRange 100
+ m_iPopulation 45
+ m_bAutomaticTownType 0
+ m_iTownType VILLAGE
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 2909.389 145.592 9153.682
+ angles 0 152.888 0
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 2938.057 0 9173.751
+ angles 0 -12.892 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 2952.805 146.321 9149.901
+  angles 0 -20.109 0
+ }
+ {
+  coords 2946.106 146.321 9147.448
+  angles 0 -20.109 0
+ }
+ {
+  coords 2899.535 146.06 9114.631
+  angles 0 -101.577 0
+ }
+ {
+  coords 2989.182 146.686 9197.731
+  angles 0 -24.399 0
+ }
+ {
+  coords 3120.615 147.681 9197.074
+  angles 0 95.044 0
+ }
+ {
+  coords 3023.324 146.611 9141.741
+  angles 0 75.247 0
+ }
+ {
+  coords 3030.396 146.567 9093.938
+  angles 0 0 0
+ }
+}
