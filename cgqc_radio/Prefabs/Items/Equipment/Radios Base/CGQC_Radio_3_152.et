@@ -1,0 +1,143 @@
+GenericEntity : "{5879D8E9C56E358D}Prefabs/Items/Core/Radio_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "chickenNuggets"
+   "Turned on" 1
+   Transceivers {
+    RelayTransceiver "{68AC3345B6C79269}" {
+     ChannelFrequency 38000
+     "Transmitting Range" 1300
+     "Min tunable frequency" 32000
+     "Max tunable frequency" 40000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+    RelayTransceiver "{68AC3345B6C79219}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 5000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 68000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "CGQC AN/PRC 152"
+     Description "Dual purpose SR/LR radio for command use"
+     Icon "{2FBD8DA665FB8AF1}UI/Textures/VON/ANPRC68-100px_UI.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 1.17
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 50
+     RestingUP Forward
+     RestingAdditiveOffsetLS 0 0 0.15
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{68AC3345B6C79206}" {
+     AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{68AC3345B6C79209}" {
+       AnimGraph "{402BB5FA2891D687}Assets/Items/Equipment/workspaces/Radio_ANPRC68.agr"
+       AnimInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68AC3345B6C7920C}" {
+      CameraPreset Front
+      CameraOrbitAngles 20 180 0
+      CameraDistanceToItem 1.5
+      CameraOffset 0 0 0
+      FOV 10
+     }
+     SCR_VONPreviewAttributes "{68AC3345B6C79231}" {
+      CameraOrbitAngles -30 180 45
+      CameraDistanceToItem 0.6
+      FOV 40
+     }
+    }
+    CommonItemType "RADIO"
+    m_SlotType SLOT_GADGETS_STORAGE
+    m_bStackable 0
+   }
+  }
+  MeshObject "{5A30BAE7673C63D1}" {
+   Object "{FF3E646CEB6599E1}Assets/Items/Equipment/Radios/ANPRC152/ANPRC152.xob"
+  }
+  RigidBody "{5A30BAE7673C63D3}" {
+   CenterOfMass 0 0.1 0
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  ProcAnimComponent "{68AC3345B6C79236}" {
+   Parameters {
+    ProcAnimParams "{68AC3345B6C7923C}" {
+     ResourceName "{F335B90D4353B9A4}Assets/Items/Equipment/Radios/Radio_ANPRC68/Radio_ANPRC68_01.pap"
+     BoneNames {
+      "i_power" "" "i_channel01"
+     }
+     SimulationDistance 20
+     SimulateOnDedicatedServer 0
+    }
+   }
+  }
+  SCR_RadioComponent "{5A30BAE7673C63D4}" {
+   m_eAnimVariable ANPRC68
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.1 0
+     }
+     Radius 0.115
+    }
+    UserActionContext "{68AC3345B6C79222}" {
+     ContextName "knob_channel"
+     Position PointInfo "{68AC3345B6C79224}" {
+      Offset 0.012 0.2 0.007
+     }
+     Radius 0.1
+    }
+    UserActionContext "{68AC3345B6C79226}" {
+     ContextName "knob_toggle"
+     Position PointInfo "{68AC3345B6C79227}" {
+      Offset 0 0.2 -0.01
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipItemAction "{553AEBE8F3B60801}" : "{068D8D646964D12A}Prefabs/Characters/Core/Actions/EquipGadgetAction.conf" {
+    }
+    SCR_RadioTuningUserAction "{68AC3345B6C7922C}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{68AC3345B6C793DD}" {
+     }
+    }
+    SCR_RadioTuningUserAction "{68AC3345B6C793DF}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{68AC3345B6C793C0}" {
+     }
+     m_bTuneUp 1
+    }
+    SCR_RadioToggleUserAction "{68AC3345B6C793C3}" {
+     ParentContextList {
+      "knob_toggle"
+     }
+    }
+   }
+  }
+ }
+}

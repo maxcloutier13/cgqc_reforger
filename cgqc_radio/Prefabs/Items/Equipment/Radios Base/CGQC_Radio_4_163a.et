@@ -1,0 +1,29 @@
+GenericEntity : "{94A3DCC6DD03EEF4}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   Transceivers {
+    RelayTransceiver "{68AC334A47CDFEE3}" {
+     ChannelFrequency 0
+     "Transmitting Range" 8000
+     "Min tunable frequency" 0
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "CGQC AN/PRC 163-A"
+     Description "Admin Radio"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 1
+     ItemVolume 50
+    }
+   }
+  }
+ }
+}
