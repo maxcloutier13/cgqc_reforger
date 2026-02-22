@@ -1,0 +1,20 @@
+GenericEntity ConflictMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ components {
+  SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+   m_bCanBeHQ 1
+  }
+ }
+ coords 4950.845 28.25 11924.177
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "ConflictMilitaryBase: "\
+   "At least two bases need \"Can be HQ\" param checked. Place bases and control points wherever you wish."
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
