@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{2F1EA0327733F783}Sounds/RadioBroadcast/Comeau/Motorhead - Back at the Funny Farm.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{BA99E4BE241218D8}Sounds/RadioBroadcast/Comeau/Motorhead - Back at the Funny Farm.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{952A90CA4FABB867}Prefabs/Weapons/Magazines/m17_magazines/Magazine_9x19_m17_17rnd_Midnight.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

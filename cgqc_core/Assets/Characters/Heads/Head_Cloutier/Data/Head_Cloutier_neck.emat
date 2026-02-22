@@ -1,5 +1,5 @@
-MatPBRSkinProfile {
- BCRMap "{6F9774C5BA9000E0}Assets/Characters/Heads/Head_Cloutier/Data/face_BCR.edds"
- OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
- NMOMap "{574FCF5763E7527E}Assets/Characters/Heads/Head_Cloutier/Data/face_NMO.edds"
+MatPBRMulti {
+ GlobalNMOMap "{EBAD2EA171789B1F}Assets/Characters/Heads/Head_Cloutier/Data/backup_nmo.edds"
+ Color_1 1 0.881 0.753 1
+ BCR_1 "{6F9774C5BA9000E0}Assets/Characters/Heads/Head_Cloutier/Data/face_BCR.edds"
 }

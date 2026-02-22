@@ -1,0 +1,20 @@
+GenericEntity : "{CB4D3F7152F83B15}Prefabs/Weapons/Handguns/M17/Handgun_M1718_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{670B4E3994E14338}" {
+     SourceMaterial "M17_Body"
+     AssignedMaterial "{43DE090BD7E8114A}Assets/Weapons/Handguns/m17/data/M17_Body_Midnight.emat"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    MuzzleComponent "{50F64C45E7271D47}" {
+     MagazineTemplate "{952A90CA4FABB867}Prefabs/Weapons/Magazines/m17_magazines/Magazine_9x19_m17_17rnd_Midnight.et"
+    }
+   }
+  }
+ }
+}

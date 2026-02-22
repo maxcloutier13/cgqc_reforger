@@ -1,0 +1,13 @@
+GameEntity : "{333A794F0B55C019}Prefabs/Weapons/Attachments/Optics/m8541/Optic_M8541.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  MeshObject "{5D0CC83435B55858}" {
+   Materials {
+    MaterialAssignClass "{670B4E275867D1ED}" {
+     SourceMaterial "M8541"
+     AssignedMaterial "{A171A0B10E83C1DE}Assets/Weapons/Attachments/Optics/m8541/data/M8541_Midnight.emat"
+    }
+   }
+  }
+ }
+}

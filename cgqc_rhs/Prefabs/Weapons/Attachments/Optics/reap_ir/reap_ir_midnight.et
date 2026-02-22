@@ -1,0 +1,17 @@
+GenericEntity : "{1A8E5E21EC65EE58}Prefabs/Weapons/Attachments/Optics/reap_ir/reap_ir.et" {
+ ID "60D937127D75937A"
+ components {
+  MeshObject "{60D93712672E6331}" {
+   Materials {
+    MaterialAssignClass "{670B4E20155C16BF}" {
+     SourceMaterial "DLOC"
+     AssignedMaterial "{F69553282CC73100}Assets/Weapons/Attachments/Optics/reapir/Data/DLOC_Midnight.emat"
+    }
+    MaterialAssignClass "{670B4E20155C16A1}" {
+     SourceMaterial "Reap_IR"
+     AssignedMaterial "{B3E182E803B627E8}Assets/Weapons/Attachments/Optics/reapir/Data/Reap_IR_Midnight.emat"
+    }
+   }
+  }
+ }
+}

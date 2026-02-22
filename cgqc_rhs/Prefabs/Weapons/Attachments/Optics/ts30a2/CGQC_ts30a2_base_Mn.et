@@ -1,0 +1,21 @@
+GameEntity : "{6DC0EE135013FC47}Prefabs/Weapons/Attachments/Optics/ts30a2/optic_ts30a2_base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  MeshObject "{5D0CC83435B55858}" {
+   Materials {
+    MaterialAssignClass "{670F456065692165}" {
+     SourceMaterial "mtl_att_generic_cover"
+     AssignedMaterial "{F6F844962E1E9F38}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_generic_cover_Mn.emat"
+    }
+    MaterialAssignClass "{670F456065692117}" {
+     SourceMaterial "mtl_att_lt745"
+     AssignedMaterial "{1B573EB15F888D26}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_lt745_Mn.emat"
+    }
+    MaterialAssignClass "{670F45606569210C}" {
+     SourceMaterial "mtl_att_ts30a2"
+     AssignedMaterial "{3F1F3A061253B58C}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_ts30a2_Mn.emat"
+    }
+   }
+  }
+ }
+}

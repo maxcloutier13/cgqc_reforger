@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B94EEE4EF6D5C8A4}Assets/Weapons/Rifles/m40a5/data/rhs_m40a5_Midnight.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

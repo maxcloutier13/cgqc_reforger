@@ -1,3 +1,4 @@
+/*
 modded class PREFIX_EarplugSystem extends WorldSystem {
     //------------------------------------------------------------------------------------------------
     override void OnInit() {
@@ -6,10 +7,11 @@ modded class PREFIX_EarplugSystem extends WorldSystem {
         // Force the earplug volume to 50% after it's loaded
         BaseContainer earplugSettings = GameUserSettings.GetModule("PREFIX_EarplugSettings");
         if (earplugSettings) {
-            earplugSettings.Set("EarplugsVolume", 50);
+            earplugSettings.Set("EarplugsVolume", 70);
         }
         
         // Refresh the value
         EarplugsVolume = FetchEarplugsVolume();
     }
 }
+*/

@@ -1,0 +1,5 @@
+MatPBRBasic : "{91BC33076E010D6D}Assets/Weapons/Rifles/m4a1/Data/LP_BARREL.emat" {
+ Color 0.056 0.056 0.056 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

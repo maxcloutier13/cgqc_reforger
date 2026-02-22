@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{ED9BBEDDCDD6A385}Sounds/RadioBroadcast/Comeau/Diamond Head - Am I Evil.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{781CFA519EF74CDE}Sounds/RadioBroadcast/Comeau/Diamond Head - Am I Evil.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

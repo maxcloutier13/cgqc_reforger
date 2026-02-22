@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{965C2C5C00459B82}Sounds/RadioBroadcast/Comeau/Ozzy Osbourne - Diary of a Madman.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{03DB68D0536474D9}Sounds/RadioBroadcast/Comeau/Ozzy Osbourne - Diary of a Madman.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

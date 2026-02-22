@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F69553282CC73100}Assets/Weapons/Attachments/Optics/reapir/Data/DLOC_Midnight.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

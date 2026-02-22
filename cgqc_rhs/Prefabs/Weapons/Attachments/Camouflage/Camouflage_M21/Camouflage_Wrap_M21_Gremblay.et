@@ -1,0 +1,17 @@
+GenericEntity : "{6060A767D637310F}Prefabs/Weapons/Attachments/Camouflage/Camouflage_M21/Camouflage_Wrap_M21.et" {
+ ID "65A2C665A8D09239"
+ components {
+  MeshObject "{65A2C665A8D09282}" {
+   Materials {
+    MaterialAssignClass "{66E6ED203A96D1C6}" {
+     SourceMaterial "Camouflage_M21_Alpha"
+     AssignedMaterial "{1482EC00A249EF2B}Assets/Weapons/Attachments/Camouflage/Camouflage_ARTII/Data/CGQC_GR_BF_Camouflage_ARTII_1.emat"
+    }
+    MaterialAssignClass "{66E6ED203A96D1EB}" {
+     SourceMaterial "Camouflage_M21_No_Alpha"
+     AssignedMaterial "{04008DA7C8C31BC8}Assets/Weapons/Attachments/Camouflage/Camouflage_ARTII/Data/CGQC_GR_BF2_Camouflage_ARTII.emat"
+    }
+   }
+  }
+ }
+}

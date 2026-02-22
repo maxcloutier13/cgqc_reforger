@@ -1,0 +1,7 @@
+MatPBRCamo : "{BB888337D7CDDB48}Assets/Weapons/Attachments/Optics/ARTII/Data/Optic_ARTII__OliveGreen_Sand_Stripes.emat" {
+ Color 0 0.15 0.003 1
+ SpecularMul 0.22
+ MetalnessScale 1.324
+ AOScale 0.846
+ DielectricReflectance 0.02
+}

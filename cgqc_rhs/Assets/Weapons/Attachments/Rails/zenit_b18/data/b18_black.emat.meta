@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0D9287BB0F6BC0C6}Assets/Weapons/Attachments/Rails/zenit_b18/data/b18_black.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

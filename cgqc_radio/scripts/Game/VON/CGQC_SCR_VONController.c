@@ -1,3 +1,4 @@
+/*
 modded class SCR_VONController
 {
 	////------------------------------------------------------------------------------------------------
@@ -22,3 +23,4 @@ modded class SCR_VONController
 		SetVONProximityToggle(true);
 	}
 }
+*/

@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{5994B4F4F90B29B3}Sounds/RadioBroadcast/Comeau/Omen - The Axeman.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{CC13F078AA2AC6E8}Sounds/RadioBroadcast/Comeau/Omen - The Axeman.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

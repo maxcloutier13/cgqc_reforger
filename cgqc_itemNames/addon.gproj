@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcitemNames"
+ GUID "6709074A53BD1FC2"
+ TITLE "cgqc_itemNames"
+ Dependencies {
+  "58D0FB3206B6F859" "64F869693699EEA7"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

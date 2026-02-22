@@ -1,0 +1,139 @@
+$grp JWK_CheckpointEntity : "{45DDC606D9A685AE}Prefabs/Controllers/Loadtime/JWK_CheckpointController.et" {
+ JWK_CheckpointController_66397119027A8641 {
+  coords 6288.511 162.985 4872.935
+  m_eLinkType TOWN
+  {
+   $grp SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+    {
+     coords -4.039 0 13.949
+     angles 0 59.969 0
+     {
+      StaticModelEntity {
+       ID "62A693F2AC4FB612"
+       coords 0 -1.567 0
+       angles -7.173 0 -3.969
+      }
+     }
+    }
+    {
+     coords 11.715 0 -6.387
+     angles 0 82.166 0
+     {
+      StaticModelEntity {
+       ID "62A693F2AC4FB612"
+       coords 0 -1.647 0
+       angles -6.937 0 0.132
+      }
+     }
+    }
+   }
+  }
+ }
+ JWK_CheckpointController_6639711962A4FB12 {
+  coords 6381.52 169.423 4435.992
+  m_eLinkType TOWN
+  {
+   SCR_SiteSlotEntity : "{1BF5578F1166BA0D}Prefabs/World/Slots/JWK_SlotSquareMedium.et" {
+    coords 7.594 0 19.631
+    angles 0 -176.717 0
+    {
+     StaticModelEntity {
+      ID "62A693F2AC4FB612"
+      coords 0 -2.622 0
+      angles 4.073 0 6.137
+     }
+    }
+   }
+   SCR_SiteSlotEntity : "{AC155FBBC059807D}Prefabs/World/Slots/JWK_SlotSquareSmall.et" {
+    coords 10.337 3.633 -17.027
+    angles 0 -176.289 0
+    {
+     StaticModelEntity {
+      ID "62A693F2AC4FB612"
+      coords 0 -0.952 0
+      angles 9.136 0 -0.073
+     }
+    }
+   }
+  }
+ }
+}
+JWK_TownEntity JWK_TownController_66397118FBB2478E : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Dola"
+  }
+ }
+ coords 6362.465 165.509 4683.361
+ m_iTownRange 150
+ m_iPopulation 70
+ m_iTownType TOWN
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 6357.948 165.513 4618.895
+ angles 0 -93.692 0
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 6367.468 0 4594.854
+ angles 0 77.829 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 6294.813 165.553 4758.975
+  angles 0 -32.035 0
+ }
+ {
+  coords 6343.377 165.59 4679.902
+  angles 0 76.744 0
+ }
+ {
+  coords 6346.438 165.59 4673.084
+  angles 0 76.744 0
+ }
+ {
+  coords 6358.343 165.59 4677.29
+  angles 0 68.775 0
+ }
+ {
+  coords 6358.444 165.59 4683.271
+  angles 0 68.775 0
+ }
+ {
+  coords 6369.943 165.59 4687.396
+  angles 0 68.775 0
+ }
+ {
+  coords 6371.01 165.59 4681.276
+  angles 0 68.775 0
+ }
+ {
+  coords 6364.977 165.593 4645.68
+  angles 0 71.304 0
+ }
+ {
+  coords 6374.121 165.594 4611.805
+  angles 0 70.582 0
+ }
+ {
+  coords 6431.273 165.594 4582.536
+  angles 0 -20.23 0
+ }
+ {
+  coords 6409.649 165.594 4575.805
+  angles 0 -21.707 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{CFE8511B2B7E8AAA}Prefabs/Modded/Structures/Commercial/Shops/ShopModern_E_01.et" {
+ coords 6390.67 0.238 4632.2
+ angles 0 165.824 0
+ {
+  GenericEntity {
+   ID "5B18C161629A79E2"
+   {
+    GenericEntity RadioSmall_01_black_672D40B7174449A5 {
+     ID "5B18C16058F22D34"
+    }
+   }
+  }
+ }
+}

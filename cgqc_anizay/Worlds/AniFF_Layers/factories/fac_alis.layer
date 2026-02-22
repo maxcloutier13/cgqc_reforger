@@ -1,0 +1,112 @@
+GenericEntity Factory_ResourceStorage_663971086E66E757 : "{34EE59A28125F95F}Prefabs/Compositions/Factory_ResourceStorage.et" {
+ coords 5510.542 123.135 5779.274
+ angles 0 -150.87 0
+ {
+  GenericEntity Factory_Storage_663971086E66E5C6 {
+   ID "64D5310E6D3945D6"
+  }
+ }
+}
+JWK_FactoryEntity JWK_FactoryController_66397108581BD959 : "{644F3F0AD98280B4}Prefabs/Controllers/Loadtime/JWK_FactoryController.et" {
+ components {
+  JWK_NamedLocationComponent "{64E512EE3D735264}" {
+   m_sName "Alis Oil"
+  }
+ }
+ coords 5505.27 123.219 5776.261
+ m_fBaseSuppliesProduction 175
+ {
+  $grp PolylineShapeEntity : "{90B1B9EF2FCD1016}Prefabs/World/JWK_PolylineWorldZone.et" {
+   facalis_poi {
+    components {
+     JWK_WorldZoneComponent "{64B512D3082EC63A}" {
+      m_aTags {
+       POI_AREA
+      }
+     }
+    }
+    coords 0 0 0
+    Points {
+     ShapePoint "{66397108BF359F09}" {
+      Position -82.539 0 56.274
+     }
+     ShapePoint "{66397108A02D409A}" {
+      Position 9.762 0 90.29
+     }
+     ShapePoint "{66397108A1AF0D04}" {
+      Position 55.341 0 100.342
+     }
+     ShapePoint "{66397108A13DFECC}" {
+      Position 63.756 0 44.88
+     }
+     ShapePoint "{66397108A2B2CEC8}" {
+      Position 78.45 0 -34.214
+     }
+     ShapePoint "{66397108A266DA9D}" {
+      Position 90.364 0 -99.913
+     }
+     ShapePoint "{66397108A49A70E8}" {
+      Position 99.094 0 -130.522
+     }
+     ShapePoint "{66397108A4455979}" {
+      Position -1.999 0 -149.558
+     }
+     ShapePoint "{66397108A51B9B01}" {
+      Position -23.068 0 -108.255
+     }
+     ShapePoint "{66397108A687A5E8}" {
+      Position -54.282 0 -37.442
+     }
+     ShapePoint "{66397108A61AC8B1}" {
+      Position -81.017 0 29.607
+     }
+    }
+   }
+   facalis_battle {
+    components {
+     JWK_WorldZoneComponent "{64B512D3082EC63A}" {
+      m_aTags {
+       BATTLE_AREA
+      }
+     }
+    }
+    coords 0 0 0
+    Points {
+     ShapePoint "{66397108BF359F09}" {
+      Position -82.539 0 56.274
+     }
+     ShapePoint "{66397108A02D409A}" {
+      Position 9.762 0 90.29
+     }
+     ShapePoint "{66397108A1AF0D04}" {
+      Position 55.341 0 100.342
+     }
+     ShapePoint "{66397108A13DFECC}" {
+      Position 63.756 0 44.88
+     }
+     ShapePoint "{66397108A2B2CEC8}" {
+      Position 78.45 0 -34.214
+     }
+     ShapePoint "{66397108A266DA9D}" {
+      Position 90.364 0 -99.913
+     }
+     ShapePoint "{66397108A49A70E8}" {
+      Position 99.094 0 -130.522
+     }
+     ShapePoint "{66397108A4455979}" {
+      Position -1.999 0 -149.558
+     }
+     ShapePoint "{66397108A51B9B01}" {
+      Position -23.068 0 -108.255
+     }
+     ShapePoint "{66397108A687A5E8}" {
+      Position -54.282 0 -37.442
+     }
+     ShapePoint "{66397108A61AC8B1}" {
+      Position -81.017 0 29.607
+     }
+    }
+   }
+  }
+ }
+}

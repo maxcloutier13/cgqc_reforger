@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{A2BB06C77CA75A6A}Sounds/RadioBroadcast/Comeau/Bishop of Hexen - A Serpentine Crave.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{373C424B2F86B531}Sounds/RadioBroadcast/Comeau/Bishop of Hexen - A Serpentine Crave.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

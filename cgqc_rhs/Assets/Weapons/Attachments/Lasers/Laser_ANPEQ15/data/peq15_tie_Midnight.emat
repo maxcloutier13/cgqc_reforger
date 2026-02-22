@@ -1,0 +1,5 @@
+MatPBRBasic : "{6D93E3DEE1AE1A3C}Assets/Weapons/Attachments/Lasers/Laser_ANPEQ15/data/peq15_tie.emat" {
+ Color 0.06 0.06 0.06 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

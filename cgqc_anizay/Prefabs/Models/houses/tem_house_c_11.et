@@ -1,0 +1,26 @@
+SCR_DestructibleBuildingEntity : "{E3EF3C8E8620B25F}Prefabs/Models/houses/tem_house_c_11.et" {
+ ID "648877C03C9F054F"
+ components {
+  JWK_PopulationComponent "{672D40B9909665F5}" {
+  }
+  JWK_SpawnPointsContainerComponent "{672D40B9909665E6}" {
+   m_aPoints {
+    JWK_SpawnPointInfo "{672D40B9909665EA}" {
+     Offset -1.7782 0.3626 -2.778
+    }
+    JWK_SpawnPointInfo "{672D40B9909665EC}" {
+     Offset 2.5725 0.3626 -3.0978
+    }
+    JWK_SpawnPointInfo "{672D40B9909665ED}" {
+     Offset 4.2059 0.3576 2.319
+    }
+    JWK_SpawnPointInfo "{672D40B9909665EF}" {
+     Offset 0.5471 3.41811 -3.1476
+    }
+    JWK_SpawnPointInfo "{672D40B990966590}" {
+     Offset 2.8734 3.4401 2.2796
+    }
+   }
+  }
+ }
+}

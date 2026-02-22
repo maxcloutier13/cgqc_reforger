@@ -1,0 +1,5 @@
+MatPBRBasic : "{1513362DD0E6F6A1}Assets/Weapons/Attachments/Misc/harris_bipod/Data/mtl_rhs_att_harris_lt706.emat" {
+ Color 0.058 0.058 0.058 1
+ RoughnessScale 1.6
+ MetalnessScale 0.8
+}

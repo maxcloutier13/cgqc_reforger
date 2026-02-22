@@ -1,0 +1,19 @@
+SCR_DestructibleBuildingEntity : "{8FBB086E3AE43D71}Prefabs/Models/houses/tem_house_c_12.et" {
+ ID "6488C5BE670399AF"
+ components {
+  JWK_ShopComponent "{672D40B9979B26A7}" {
+   m_InventoryConfig JWK_ShopInventoryConfig "{663D001FDE7D82F4}" : "{B8FDE9F57AF8C2A3}Configs/Shops/TownGeneral.conf" {
+   }
+  }
+  JWK_StaticMapIconComponent "{672D40B9979B2653}" {
+   m_sIconName "shop"
+  }
+ }
+ {
+  GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Modded/Props/Commercial/CashierShop_01.et" {
+   ID "672D40B9979B268A"
+   coords -3.154 1.232 0.299
+   angles 0 -73.928 0
+  }
+ }
+}

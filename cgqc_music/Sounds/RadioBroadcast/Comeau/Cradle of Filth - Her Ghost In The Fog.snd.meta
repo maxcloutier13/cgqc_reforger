@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{F1069B4277C26C6F}Sounds/RadioBroadcast/Comeau/Cradle of Filth - Her Ghost In The Fog.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{6481DFCE24E38334}Sounds/RadioBroadcast/Comeau/Cradle of Filth - Her Ghost In The Fog.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

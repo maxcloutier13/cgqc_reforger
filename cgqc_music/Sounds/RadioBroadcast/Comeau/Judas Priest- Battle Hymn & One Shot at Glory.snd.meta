@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{E7870E96C11B291A}Sounds/RadioBroadcast/Comeau/Judas Priest- Battle Hymn & One Shot at Glory.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{72004A1A923AC641}Sounds/RadioBroadcast/Comeau/Judas Priest- Battle Hymn & One Shot at Glory.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

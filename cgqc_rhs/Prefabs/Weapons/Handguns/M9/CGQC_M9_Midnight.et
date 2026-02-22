@@ -1,0 +1,17 @@
+GenericEntity : "{809488C4984AC087}Prefabs/Weapons/Handguns/M9/Handgun_M9_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{66E719A70A7B4638}" {
+     SourceMaterial "M9_Body"
+     AssignedMaterial "{1D8280905632C7A9}Assets/Weapons/Handguns/M9/Data/CGQC_MN_M9_Body.emat"
+    }
+    MaterialAssignClass "{66E719A70A7B4628}" {
+     SourceMaterial "M9_Details"
+     AssignedMaterial "{EE3C5B24CCDE6B7B}Assets/Weapons/Handguns/M9/Data/CGQC_MN_M9_Details.emat"
+    }
+   }
+  }
+ }
+}

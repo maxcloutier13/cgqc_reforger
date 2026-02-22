@@ -1,0 +1,26 @@
+SCR_DestructibleBuildingEntity : "{AC46905A19E9B719}Prefabs/Models/houses/tem_arab6.et" {
+ ID "630B05A627D94417"
+ components {
+  JWK_PopulationComponent "{672D40B99D9E4BD4}" {
+  }
+  JWK_SpawnPointsContainerComponent "{672D40B99D9E4BC0}" {
+   m_aPoints {
+    JWK_SpawnPointInfo "{672D40B99D9E4BC3}" {
+     Offset 2.484 0.2922 0.5456
+    }
+    JWK_SpawnPointInfo "{672D40B99D9E4BC6}" {
+     Offset -4.4997 0.2922 2.048
+    }
+    JWK_SpawnPointInfo "{672D40B99D9E4BC9}" {
+     Offset -5.741 3.91473 -3.9241
+    }
+    JWK_SpawnPointInfo "{672D40B99D9E4BCC}" {
+     Offset -5.8141 3.91473 2.9471
+    }
+    JWK_SpawnPointInfo "{672D40B99D9E4BCE}" {
+     Offset 2.7745 4.11706 0.419
+    }
+   }
+  }
+ }
+}

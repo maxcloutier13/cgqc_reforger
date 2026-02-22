@@ -1,4 +1,4 @@
-modded class SCR_PlayerController : PlayerController
+/*modded class SCR_PlayerController : PlayerController
 {
     override void OnControlledEntityChanged(IEntity from, IEntity to)
     {
@@ -23,7 +23,7 @@ modded class SCR_PlayerController : PlayerController
     }
 	
 }
-
+*/
 
 /*
 "d7e9113c-f075-41c5-a72a-9ee5187dc723": // Cloutier

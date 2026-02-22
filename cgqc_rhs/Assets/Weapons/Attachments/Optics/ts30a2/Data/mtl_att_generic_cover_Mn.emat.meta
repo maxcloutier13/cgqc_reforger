@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F6F844962E1E9F38}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_generic_cover_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2451AA751B335A33}Assets/Weapons/Attachments/Muzzle/surefire/Data/FA762SS_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

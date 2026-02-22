@@ -1,0 +1,13 @@
+GenericEntity : "{F86D2CAEA2E72FFC}Prefabs/Weapons/Attachments/Misc/manta_railcover/new/MantaGripCover25in_black.et" {
+ ID "62A33D38B207C01C"
+ components {
+  MeshObject "{62A33D38A8A05940}" {
+   Materials {
+    MaterialAssignClass "{631F698287916F78}" {
+     SourceMaterial "manta_railcover"
+     AssignedMaterial "{4056657653EFF04D}Assets/Weapons/Attachments/Misc/manta_railcover/Data/manta_railcover_Mn.emat"
+    }
+   }
+  }
+ }
+}

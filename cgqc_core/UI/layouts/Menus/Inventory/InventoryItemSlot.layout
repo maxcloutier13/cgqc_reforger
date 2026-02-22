@@ -1,0 +1,24 @@
+SizeLayoutWidgetClass {
+ {
+  OverlayWidgetClass "{613AB59EEB40DCCD}" {
+   Prefab "{613AB59EEB40DCCD}"
+   {
+    ButtonWidgetClass "{60D8C036C6415F2A}" {
+     Prefab "{60D8C036C6415F2A}"
+     {
+      OverlayWidgetClass "{60D8C036C6415F2D}" {
+       Prefab "{60D8C036C6415F2D}"
+       {
+        HorizontalLayoutWidgetClass "{60DE6BD53F45AB93}" {
+         Prefab "{60DE6BD53F45AB93}"
+         "Is Enabled" 0
+         "Is Visible" 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{430F5FF46B488BF8}Sounds/RadioBroadcast/Comeau/Motorhead - Marching Off to War.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{D6881B78386964A3}Sounds/RadioBroadcast/Comeau/Motorhead - Marching Off to War.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

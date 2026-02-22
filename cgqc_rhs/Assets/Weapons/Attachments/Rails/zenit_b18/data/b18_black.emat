@@ -1,0 +1,6 @@
+MatPBRBasic {
+ Color 0 0 0 1
+ RoughnessScale 1.643
+ BCRMap "{C062890BD8BF5EA4}Assets/Weapons/Attachments/Rails/zenit_b18/data/b18_BCR.edds"
+ NMOMap "{F8BA329901C80C3A}Assets/Weapons/Attachments/Rails/zenit_b18/data/b18_NMO.edds"
+}

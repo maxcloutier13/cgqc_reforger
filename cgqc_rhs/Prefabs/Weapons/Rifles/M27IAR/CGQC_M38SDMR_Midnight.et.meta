@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D1CC0DD80734EDBE}Prefabs/Weapons/Rifles/M27IAR/CGQC_M38SDMR_Midnight.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

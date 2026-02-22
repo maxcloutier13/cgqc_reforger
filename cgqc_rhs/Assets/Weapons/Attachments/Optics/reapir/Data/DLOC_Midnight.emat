@@ -1,0 +1,5 @@
+MatPBRBasic : "{8BFC974915E7C97F}Assets/Weapons/Attachments/Optics/reapir/Data/DLOC.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.518
+ MetalnessScale 0.836
+}

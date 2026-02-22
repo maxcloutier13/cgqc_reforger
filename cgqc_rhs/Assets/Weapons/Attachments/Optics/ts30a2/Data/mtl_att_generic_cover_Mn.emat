@@ -1,0 +1,5 @@
+MatPBRBasic : "{F9605DB7822401DD}Assets/Weapons/Attachments/Optics/ts30a2/Data/mtl_att_generic_cover.emat" {
+ Color 0.056 0.056 0.056 1
+ RoughnessScale 1.411
+ MetalnessScale 0.8
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{445C72B01CC7381D}Assets/Weapons/Attachments/Misc/harris_bipod/Data/spring_black.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

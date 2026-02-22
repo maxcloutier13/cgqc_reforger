@@ -1,0 +1,48 @@
+JWK_TownEntity JWK_TownController_66394745085D12C4 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Riqay"
+  }
+  JWK_TownCiviliansControllerComponent "{6296F54A892986E3}" {
+   m_fPopulationSpawnFactor 0.4
+  }
+ }
+ coords 3531.648 207.574 640.189
+ m_iTownRange 100
+ m_iPopulation 40
+ m_bAutomaticTownType 0
+ m_iTownType VILLAGE
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 3521.189 207.181 633.792
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 3606.809 207.725 651.922
+  angles 0 -30.407 0
+ }
+ {
+  coords 3596.703 207.725 645.991
+  angles 0 -30.407 0
+ }
+ {
+  coords 3570.417 208.531 615.886
+  angles 0 -82.728 0
+ }
+ {
+  coords 3571.091 208.531 621.165
+  angles 0 -82.728 0
+ }
+ {
+  coords 3557.706 208.531 641.945
+  angles 0 -88.309 0
+ }
+ {
+  coords 3445.205 201.989 656.844
+  angles 0 -82.83 0
+ }
+ {
+  coords 3348.323 200.263 734.066
+  angles 0 42.251 0
+ }
+}

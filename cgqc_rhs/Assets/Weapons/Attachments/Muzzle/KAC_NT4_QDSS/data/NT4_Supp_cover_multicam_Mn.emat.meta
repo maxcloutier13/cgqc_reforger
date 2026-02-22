@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E7EBE2C2492814D0}Assets/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/data/NT4_Supp_cover_multicam_Mn.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

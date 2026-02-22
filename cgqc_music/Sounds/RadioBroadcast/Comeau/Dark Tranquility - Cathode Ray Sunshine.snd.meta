@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{8D8AD7FD69C8BABB}Sounds/RadioBroadcast/Comeau/Dark Tranquility - Cathode Ray Sunshine.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{180D93713AE955E0}Sounds/RadioBroadcast/Comeau/Dark Tranquility - Cathode Ray Sunshine.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

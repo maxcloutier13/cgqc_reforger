@@ -1,0 +1,5 @@
+MatPBRBasic : "{69CE08999FCF87B0}Assets/Weapons/Attachments/Optics/reapir/Data/Reap_IR.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.309
+ MetalnessScale 0.905
+}

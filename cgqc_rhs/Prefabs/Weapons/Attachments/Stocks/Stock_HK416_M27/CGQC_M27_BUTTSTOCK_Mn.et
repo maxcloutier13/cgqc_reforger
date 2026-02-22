@@ -1,0 +1,13 @@
+GenericEntity : "{1DADAF4A88652DE1}Prefabs/Weapons/Attachments/Stocks/Stock_HK416_M27/RHS_M27_BUTTSTOCK_base.et" {
+ ID "5EA2A729858A2285"
+ components {
+  MeshObject "{5EA2A729858A2273}" {
+   Materials {
+    MaterialAssignClass "{670F45425E382D20}" {
+     SourceMaterial "M_M27_IAR_Furniture"
+     AssignedMaterial "{E05E26131B4752FE}Assets/Weapons/Rifles/m27iar/data/CGQC_M27_Midnight.emat"
+    }
+   }
+  }
+ }
+}

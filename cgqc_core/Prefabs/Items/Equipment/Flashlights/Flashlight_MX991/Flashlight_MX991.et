@@ -1,0 +1,20 @@
+GameEntity : "{61E466904E8D18D5}Prefabs/Items/Equipment/Flashlights/Flashlight_MX991/Flashlight_MX991_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SCR_FlashlightComponent "{5D0CB95BC1CDFBA9}" {
+   m_aLenseArray {
+    SCR_LenseColor "{5D0CC0E56B2DC5BA}" {
+     m_fLightValue 9
+    }
+    SCR_LenseColor "{6162BA2257E49CF6}" {
+     m_fLightValue 6
+    }
+    SCR_LenseColor "{670C3264CC3D8737}" {
+     m_sDescription "Low"
+     m_vLenseColor 0.22 0.171 0.133
+     m_fLightValue 6
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+GenericEntity : "{B591C94754DB4893}Prefabs/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/KAC_NT4_QDSS_Covered_Multicam.et" {
+ ID "5D34A750B349B40F"
+ components {
+  MeshObject "{5C46D45E03D7AD12}" {
+   Materials {
+    MaterialAssignClass "{670F45591F817F76}" {
+     SourceMaterial "LP_BARREL"
+     AssignedMaterial "{4B6C815DAACEAAD5}Assets/Weapons/Rifles/m4a1/Data/LP_BARREL_Mn.emat"
+    }
+    MaterialAssignClass "{670F45591F817F11}" {
+     SourceMaterial "NT4_BLACK"
+     AssignedMaterial "{323ADD9EF81A6D0F}Assets/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/data/NT4_Mn.emat"
+    }
+    MaterialAssignClass "{60FEE694E4EA1752}" {
+     SourceMaterial "NT4_Supp_cover"
+     AssignedMaterial "{E7EBE2C2492814D0}Assets/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/data/NT4_Supp_cover_multicam_Mn.emat"
+    }
+   }
+  }
+ }
+}

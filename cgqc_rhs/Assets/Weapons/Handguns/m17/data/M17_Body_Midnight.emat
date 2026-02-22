@@ -1,0 +1,5 @@
+MatPBRBasic : "{3E6B1F40357ACD18}Assets/Weapons/Handguns/m17/data/M17_Body.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.504
+ MetalnessScale 1.058
+}

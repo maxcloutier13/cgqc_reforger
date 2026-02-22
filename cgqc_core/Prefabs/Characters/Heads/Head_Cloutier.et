@@ -4,27 +4,27 @@ GameEntity : "{6F0C6CF6F10B4148}Prefabs/Characters/Core/CharacterHead_Base.et" {
   MeshObject "{529C8934211B4893}" {
    Object "{B4E9833A9CC14C97}Assets/Characters/Heads/Head_White_05/Head_White_05.xob"
    Materials {
-    MaterialAssignClass "{66DB3A6380682EE4}" {
+    MaterialAssignClass "{670B5C215F837A67}" {
      SourceMaterial "Eye"
      AssignedMaterial "{050531C2C14FAD7D}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue.emat"
     }
-    MaterialAssignClass "{66DB3A6380682E9E}" {
+    MaterialAssignClass "{670B5C215F837A04}" {
      SourceMaterial "Eye_wound"
      AssignedMaterial "{7C1A0FF673494271}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue_wound.emat"
     }
-    MaterialAssignClass "{66DB3A6380682E86}" {
+    MaterialAssignClass "{670B5C215F837A30}" {
      SourceMaterial "Head_White_05"
-     AssignedMaterial "{9412BD06AF77B626}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier.emat"
+     AssignedMaterial "{0F8D58154E808EAD}Assets/Characters/Heads/Head_Cloutier/Data/Head_livonianHead_9.emat"
     }
-    MaterialAssignClass "{66DB3A6380682E8F}" {
+    MaterialAssignClass "{670B5C215F837A35}" {
      SourceMaterial "Head_White_05_wound"
      AssignedMaterial "{092DE61E3A107093}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier_wound.emat"
     }
-    MaterialAssignClass "{66DB3A6380682EBB}" {
+    MaterialAssignClass "{670B5C215F837A3D}" {
      SourceMaterial "Neck"
      AssignedMaterial "{8EEF8D782D748507}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier_neck.emat"
     }
-    MaterialAssignClass "{66DB3A6380682EA6}" {
+    MaterialAssignClass "{670B5C215F837A26}" {
      SourceMaterial "Neck_wound"
      AssignedMaterial "{8907C43753145EF5}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier_wound_neck.emat"
     }

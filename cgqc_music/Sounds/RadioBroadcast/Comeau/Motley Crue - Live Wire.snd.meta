@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{6029CBF43378C49F}Sounds/RadioBroadcast/Comeau/Motley Crue - Live Wire.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{F5AE8F7860592BC4}Sounds/RadioBroadcast/Comeau/Motley Crue - Live Wire.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

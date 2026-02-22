@@ -1,0 +1,5 @@
+MatPBRCamo : "{60A791056A9C61D4}Assets/Weapons/Handguns/M9/Data/M9_Body.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.769
+ MetalnessScale 0.975
+}

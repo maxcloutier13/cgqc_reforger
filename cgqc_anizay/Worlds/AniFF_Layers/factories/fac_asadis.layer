@@ -1,0 +1,136 @@
+GenericEntity Factory_ResourceStorage_66397107E0884FD2 : "{34EE59A28125F95F}Prefabs/Compositions/Factory_ResourceStorage.et" {
+ coords 1713.813 160.641 1350.448
+ angles 1.285 32.106 1.563
+ {
+  GenericEntity Factory_Storage_66397107E0884C21 {
+   ID "64D5310E6D3945D6"
+  }
+ }
+}
+JWK_FactoryEntity JWK_FactoryController_663971075CB95557 : "{644F3F0AD98280B4}Prefabs/Controllers/Loadtime/JWK_FactoryController.et" {
+ components {
+  JWK_NamedLocationComponent "{64E512EE3D735264}" {
+   m_sName "Asadis Oil"
+  }
+ }
+ coords 1724.053 160.625 1352.378
+ m_fBaseSuppliesProduction 250
+ {
+  $grp PolylineShapeEntity : "{90B1B9EF2FCD1016}Prefabs/World/JWK_PolylineWorldZone.et" {
+   facasadis_poi {
+    components {
+     JWK_WorldZoneComponent "{64B512D3082EC63A}" {
+      m_aTags {
+       POI_AREA
+      }
+     }
+    }
+    coords 0 0 0
+    Points {
+     ShapePoint "{66397107BF85D19E}" {
+      Position 33.14 0 -29.409
+     }
+     ShapePoint "{66397107BF315152}" {
+      Position 8.986 0 -13.448
+     }
+     ShapePoint "{66397107A0B98717}" {
+      Position -6.533 0 -23.98
+     }
+     ShapePoint "{66397107A54A50CC}" {
+      Position -23.049 0 -22.078
+     }
+     ShapePoint "{66397107A6D2EE3A}" {
+      Position -35.333 0 -2.401
+     }
+     ShapePoint "{66397107A79FBC99}" {
+      Position -42.897 0 12.484
+     }
+     ShapePoint "{66397107A77A7C94}" {
+      Position -52.922 0 26.527
+     }
+     ShapePoint "{66397107A8F0B0F2}" {
+      Position -51.755 0 36.083
+     }
+     ShapePoint "{66397107AA96B455}" {
+      Position -46.659 0 50.411
+     }
+     ShapePoint "{66397107AA2783FB}" {
+      Position -38.274 0 67.354
+     }
+     ShapePoint "{66397107ABB1F850}" {
+      Position -29.793 0 83.818
+     }
+     ShapePoint "{66397107AC80BD8D}" {
+      Position -11.624 0 103.143
+     }
+     ShapePoint "{66397107AC253C90}" {
+      Position 2.096 0 113.997
+     }
+     ShapePoint "{66397107ADA37F7A}" {
+      Position 18.82 0 116.205
+     }
+     ShapePoint "{66397107AD226BBF}" {
+      Position 30.164 0 116.295
+     }
+     ShapePoint "{66397107AEDD32DE}" {
+      Position 35.789 0 103.079
+     }
+     ShapePoint "{66397107AE5BC63A}" {
+      Position 29.166 0 89.326
+     }
+     ShapePoint "{66397107AF24061C}" {
+      Position 19.909 0 73.455
+     }
+     ShapePoint "{6639710790874D58}" {
+      Position 6.139 0 52.67
+     }
+     ShapePoint "{663971079009CE1E}" {
+      Position 7.52 0 39.432
+     }
+     ShapePoint "{66397107907EF706}" {
+      Position 16.095 0 27.258
+     }
+     ShapePoint "{6639710791188C8F}" {
+      Position 25.995 0 10.494
+     }
+     ShapePoint "{66397107924D0128}" {
+      Position 35.872 0 1.851
+     }
+     ShapePoint "{6639710793BE580B}" {
+      Position 44.843 0 -4.176
+     }
+     ShapePoint "{663971079347DF70}" {
+      Position 46.053 0 -11.499
+     }
+    }
+   }
+   facasadis_battle {
+    components {
+     JWK_WorldZoneComponent "{64B512D3082EC63A}" {
+      m_aTags {
+       BATTLE_AREA
+      }
+     }
+    }
+    coords 0 0 0
+    Points {
+     ShapePoint "{6639710781505F29}" {
+      Position -44.07 0 22.323
+     }
+     ShapePoint "{66397107821B4BA3}" {
+      Position 20.363 0 108.894
+     }
+     ShapePoint "{6639710787F82E01}" {
+      Position 1.006 0 44.375
+     }
+     ShapePoint "{663971078770148E}" {
+      Position 35.488 0 -8.292
+     }
+     ShapePoint "{6639710788E6A1F0}" {
+      Position -13.375 0 -10.097
+     }
+    }
+   }
+  }
+ }
+}

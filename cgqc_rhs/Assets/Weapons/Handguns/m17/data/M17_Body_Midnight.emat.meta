@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{43DE090BD7E8114A}Assets/Weapons/Handguns/m17/data/M17_Body_Midnight.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

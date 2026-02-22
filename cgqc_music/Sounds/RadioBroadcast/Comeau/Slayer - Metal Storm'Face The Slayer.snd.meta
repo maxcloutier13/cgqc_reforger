@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{9881A4E42DB69D39}Sounds/RadioBroadcast/Comeau/Slayer - Metal Storm'Face The Slayer.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{0D06E0687E977262}Sounds/RadioBroadcast/Comeau/Slayer - Metal Storm'Face The Slayer.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

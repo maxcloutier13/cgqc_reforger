@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcscreenshot"
+ GUID "66F85576517A6525"
+ TITLE "cgqc_screenshot"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "" "" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

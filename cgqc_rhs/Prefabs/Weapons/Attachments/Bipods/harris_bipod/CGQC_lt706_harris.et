@@ -1,0 +1,17 @@
+GenericEntity : "{23D34FB66BBC8BEE}Prefabs/Weapons/Attachments/Bipods/harris_bipod/rhs_lt706_harris.et" {
+ ID "557E85EEE1B603F1"
+ components {
+  MeshObject "{557E85EE39CED921}" {
+   Materials {
+    MaterialAssignClass "{670C1A5D3D5ABA6C}" {
+     SourceMaterial "mtl_rhs_att_harris_lt706"
+     AssignedMaterial "{8D4C79DBA5667FE9}Assets/Weapons/Attachments/Misc/harris_bipod/Data/CGQC_rhs_harris_Midnight.emat"
+    }
+    MaterialAssignClass "{670C1A5D3D5ABA11}" {
+     SourceMaterial "spring"
+     AssignedMaterial "{445C72B01CC7381D}Assets/Weapons/Attachments/Misc/harris_bipod/Data/spring_black.emat"
+    }
+   }
+  }
+ }
+}

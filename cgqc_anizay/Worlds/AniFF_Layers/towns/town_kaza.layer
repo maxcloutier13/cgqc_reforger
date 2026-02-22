@@ -1,0 +1,40 @@
+JWK_TownEntity JWK_TownController_6638E9E0891D0A44 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Kaza"
+  }
+  JWK_TownCiviliansControllerComponent "{6296F54A892986E3}" {
+   m_fPopulationSpawnFactor 0.5
+  }
+ }
+ coords 1059.985 168.781 1189.58
+ m_iTownRange 125
+ m_iPopulation 40
+ m_iTownType VILLAGE
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 1108.496 0 1177.619
+ angles 0 36.282 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 1069.156 168.781 1182.74
+  angles 0 97.133 0
+ }
+ {
+  coords 1082.923 168.524 1254.69
+  angles 0 -37.185 0
+ }
+ {
+  coords 1103.965 168.752 1162.402
+  angles 0 28.52 0
+ }
+ {
+  coords 1037.197 168.589 1156.661
+  angles 0 -31.628 0
+ }
+ {
+  coords 1096.021 169.491 1215.477
+  angles 0 19.516 0
+ }
+}

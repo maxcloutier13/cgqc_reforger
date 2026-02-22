@@ -1,0 +1,5 @@
+MatPBRMulti : "{1B41AF7E6D76CC62}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1.emat" {
+ DiffuseIBL 0 0 0 1
+ Diffuse 0 0 0 1
+ Specular 0 0 0 1
+}

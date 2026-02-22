@@ -1,0 +1,13 @@
+GenericEntity : "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{670F455865529CF1}" {
+     SourceMaterial "PMAG_30_Body"
+     AssignedMaterial "{753C42DD9C27B66C}Assets/Weapons/Magazines/pmag/Data/CGQC_PMAG_30_Mn.emat"
+    }
+   }
+  }
+ }
+}

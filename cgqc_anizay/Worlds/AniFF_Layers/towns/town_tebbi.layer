@@ -1,0 +1,57 @@
+JWK_TownEntity JWK_TownController_6639711616078266 : "{64B2F8D8059C97CC}Prefabs/Controllers/Loadtime/JWK_TownController.et" {
+ components {
+  JWK_NamedLocationComponent "{65C35A2F385D762F}" {
+   m_sName "Tebbi"
+  }
+  JWK_TownCiviliansControllerComponent "{6296F54A892986E3}" {
+   m_fPopulationSpawnFactor 0.6
+  }
+ }
+ coords 6817.558 128.564 8348.559
+ m_iTownRange 125
+ m_iPopulation 50
+ m_bAutomaticTownType 0
+ m_iTownType VILLAGE
+}
+GenericEntity : "{7FCD4E7C25D886A8}Prefabs/Modded/Structures/Signs/Traffic/SignBusStop_01.et" {
+ coords 6802.626 129.493 8351.84
+ angles 0 57.637 0
+}
+SCR_DestructibleBuildingEntity : "{B5963E922C972A4A}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01.et" {
+ coords 6831.75 -0.011 8347.341
+ angles 0 54.398 0
+}
+$grp GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+ {
+  coords 6801.368 131.729 8389.251
+  angles 0 55.022 0
+ }
+ {
+  coords 6807.949 128.831 8336.697
+  angles 0 54.757 0
+ }
+ {
+  coords 6805.166 128.831 8340.636
+  angles 0 54.757 0
+ }
+ {
+  coords 6802.831 128.831 8343.939
+  angles 0 54.757 0
+ }
+ {
+  coords 6800.445 128.831 8347.314
+  angles 0 54.757 0
+ }
+ {
+  coords 6864.622 126.7 8366.558
+  angles 0 59.214 0
+ }
+ {
+  coords 6834.133 125.053 8314.912
+  angles 0 127.314 0
+ }
+ {
+  coords 6736.398 131.98 8466.208
+  angles 0 -56.058 0
+ }
+}

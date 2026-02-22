@@ -1,0 +1,5 @@
+MatPBRBasic : "{195267D0D2935796}Assets/Weapons/Rifles/m27iar/data/rhs_M27_rec.emat" {
+ Color 0.06 0.06 0.06 1
+ RoughnessScale 1.613
+ MetalnessScale 0.806
+}

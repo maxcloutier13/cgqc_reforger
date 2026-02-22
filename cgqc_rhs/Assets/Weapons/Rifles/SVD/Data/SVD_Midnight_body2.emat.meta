@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{AB2ADF1EC794507E}Assets/Weapons/Rifles/SVD/Data/SVD_Midnight_body2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

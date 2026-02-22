@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{64D5ECB1724ED390}Assets/Characters/Heads/Head_Cloutier/Data/m_livonianHead_3_NMO.edds"
+ Configurations {
+  DDSResourceClass PC : "{A968DA7F9A1E3A3E}Configs/System/ResourceTypes/PC/TextureNType.conf" {
+  }
+  DDSResourceClass XBOX_ONE : "{7F6A4D372443A88D}Configs/System/ResourceTypes/XBOX_ONE/TextureNType.conf" {
+  }
+  DDSResourceClass XBOX_SERIES : "{065D289C7FF8B20D}Configs/System/ResourceTypes/XBOX_SERIES/TextureNType.conf" {
+  }
+  DDSResourceClass PS4 : "{29DF4A6CBBABE916}Configs/System/ResourceTypes/PS4/TextureNType.conf" {
+  }
+  DDSResourceClass PS5 : "{DED3C8CA8494EA99}Configs/System/ResourceTypes/PS5/TextureNType.conf" {
+  }
+  DDSResourceClass HEADLESS : "{AFD658E4D0EB5FBC}Configs/System/ResourceTypes/HEADLESS/TextureNType.conf" {
+  }
+ }
+}

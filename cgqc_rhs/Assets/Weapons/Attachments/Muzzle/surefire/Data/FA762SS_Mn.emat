@@ -1,0 +1,5 @@
+MatPBRBasic : "{141728D93B31A540}Assets/Weapons/Attachments/Muzzle/surefire/Data/FA762SS.emat" {
+ Color 0 0 0 1
+ RoughnessScale 1.476
+ MetalnessScale 0.808
+}

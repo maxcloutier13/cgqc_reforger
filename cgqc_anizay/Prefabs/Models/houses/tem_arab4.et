@@ -1,0 +1,15 @@
+SCR_DestructibleBuildingEntity : "{258EE843A9C8AF5C}Prefabs/Models/houses/tem_arab4.et" {
+ ID "6309306E1D19E053"
+ {
+  GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
+   ID "672D40B9991979C8"
+   components {
+    JWK_AmbientParkingSpotComponent "{672D40B9991979E9}" {
+     m_fSpawnChanceOverride 0.75
+    }
+   }
+   coords -1.163 0 -7.03
+   angles 0 -90.598 0
+  }
+ }
+}

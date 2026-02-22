@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcrotaryopfor"
+ GUID "66F95CFA501A2A32"
+ TITLE "cgqc_rotary_opfor"
+ Dependencies {
+  "58D0FB3206B6F859" "609E138FE9005877" "667CF0391F8F996C" "628933A0D3A0D700" "" "" "" "" "" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
