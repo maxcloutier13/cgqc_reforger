@@ -5,9 +5,56 @@ class CGQC_Scripts
 	static void initializeFFPlayer(IEntity playerEntity)
     {
         Print("[CGQC_InitializeFFPlayer] Giving radio/armband to player");
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{A955A7E41BB4D5FC}Prefabs/Items/Equipment/Radios/CGQC_Radio_152_ion.et");
+        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et");
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{81A4D576093ED337}Prefabs/Characters/Bandeau/Brassard_Green.et");
     }
+	
+	static void swapRadios(IEntity playerEntity)
+	{
+		// Modcheck. If cgqc_radio missing: skip
+		ResourceName cgqcRadio = "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et";
+		Resource res = Resource.Load(cgqcRadio);
+		if (!res.IsValid())
+		{
+		    Print("[CGQC_swapRadios] CGQC radio mod not present, skipping swap");
+		    return;
+		}
+		
+	    SCR_InventoryStorageManagerComponent invManager = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));
+	    if (!invManager)
+	        return;
+	
+	    array<ResourceName> radiosToClear = {
+	        "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et",
+	        "{E1A5D4B878AA8980}Prefabs/Items/Equipment/Radios/Radio_R148.et",
+	        "{540C08AD5F21A5FA}Prefabs/Items/Equipment/Radios/Radio_R148_FIA.et",
+	        "{C55821E8E86C074E}Prefabs/Items/Equipment/Radios/Radio_ANPRC152.et",
+	        "{9CB82F893D614FF0}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A.et",
+	        "{D69684663E89D6EA}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_OLD.et",
+	        "{B343AB76B0725657}Prefabs/Items/Equipment/Radios/Radio_R187P1_OLD.et"
+	    };
+	
+	    array<IEntity> items = {};
+	    invManager.GetAllItems(items, null);
+	
+	    foreach (IEntity item : items)
+	    {
+	        EntityPrefabData prefabData = item.GetPrefabData();
+	        if (!prefabData)
+	            continue;
+	
+	        if (radiosToClear.Contains(prefabData.GetPrefabName()))
+	        {
+	            PrintFormat("[CGQC_swapRadios] Found radio: %1 -> Removing", prefabData.GetPrefabName());
+	            invManager.TryRemoveItemFromInventory(item);
+	            PrintFormat("[CGQC_swapRadios] Swapping to CGQC radio");
+	            CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et");
+	            return;
+	        }
+	    }
+	
+	    PrintFormat("[CGQC_swapRadios] No swappable radio found");
+	}
 	
 	static void welcomePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
     {
@@ -181,6 +228,8 @@ class CGQC_Scripts
 	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
 			}	
 		}
+		// Swap default radios for CGQC radios
+		CGQC_Scripts.swapRadios(playerEntity);
     }
 	
 
@@ -328,9 +377,10 @@ class CGQC_Scripts
     {
 		Print("[CGQC_InitializePlayer] Admin features running");
 		// Cloutier time
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
+		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
         CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
+		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");		
     }
 	
 	
