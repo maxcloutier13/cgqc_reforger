@@ -1,5 +1,6 @@
 modded class SCR_PlayerController : PlayerController
 {
+	protected bool m_bCGQC_Initialized = false;
 	
 	override void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
@@ -7,6 +8,16 @@ modded class SCR_PlayerController : PlayerController
 
 		if (!to)
 			return;
+		
+		// Skip if already initialized
+		PrintFormat("[CGQC_OnControlledEntityChanged] Initialised already? : %1", m_bCGQC_Initialized);
+        if (m_bCGQC_Initialized)
+        {
+            Print("[CGQC_OnControlledEntityChanged] Already initialized, skipping");
+            return;
+        }
+		m_bCGQC_Initialized = true;
+		PrintFormat("[CGQC_OnControlledEntityChanged] Init sanity check. Should be true: %1 - Proceeding with init", m_bCGQC_Initialized);
 		
 		// Check if the controlled entity is the player's main entity (not a possessed unit)
 		IEntity mainEntity = GetMainEntity();
