@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcfactionrhsace"
+ GUID "68AF51A54FA778AC"
+ TITLE "cgqc_faction_rhs_ace"
+ Dependencies {
+  "58D0FB3206B6F859" "688D0CCF80BFE6A4" "66BB20CA43330BC2" "670AF64751851FC2"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
