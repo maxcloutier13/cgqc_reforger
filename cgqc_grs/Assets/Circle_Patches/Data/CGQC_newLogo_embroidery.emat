@@ -1,0 +1,4 @@
+MatPBRBasic {
+ Color 0.474 0.474 0.474 1
+ BCRMap "{2597393A5DFBF77B}Assets/Circle_Patches/Data/newlogo_embroidery.edds"
+}
