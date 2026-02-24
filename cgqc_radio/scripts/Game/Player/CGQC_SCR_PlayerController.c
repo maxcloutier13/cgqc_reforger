@@ -1,4 +1,3 @@
-/*
 modded class SCR_PlayerController
 {
 	//------------------------------------------------------------------------------------------------
@@ -24,4 +23,4 @@ modded class SCR_PlayerController
 		
 		vonController.ForceEnableVONDirectToggle();
 	}
-}*/
+}

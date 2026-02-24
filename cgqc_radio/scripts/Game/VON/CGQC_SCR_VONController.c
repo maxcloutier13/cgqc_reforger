@@ -1,8 +1,9 @@
-/*
 modded class SCR_VONController
 {
 	////------------------------------------------------------------------------------------------------
 	// Check si le call est pour désactiver le VON. Si oui: ignore
+	
+	/* Skip. Unneeded?
 	override void SetVONProximityToggle (bool activate)
 	{
         if (!activate)
@@ -14,6 +15,7 @@ modded class SCR_VONController
         // If it's turning on, allow default behaviour
         super.SetVONProximityToggle(activate);
     }
+	*/
 
 	
 	//------------------------------------------------------------------------------------------------
@@ -23,4 +25,3 @@ modded class SCR_VONController
 		SetVONProximityToggle(true);
 	}
 }
-*/
