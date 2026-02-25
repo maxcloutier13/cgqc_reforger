@@ -1,0 +1,37 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_EditableSystemComponent "{5D6477349AB9FA5B}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-EditableEntity_Arsenal_01_US_Name"
+    Description "#AR-EditableEntity_ArsenalBox_Description"
+    Icon "{EA975C03DF5422AD}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal.edds"
+    m_Image "{50757F3888C7A35C}UI/Textures/EditorPreviews/Auto/Props/Military/Compositions/US/E_ArsenalBox_US.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     TRAIT_ARSENAL
+    }
+    m_aAutoLabels {
+     FACTION_US THEME_MILITARY ENTITYTYPE_SYSTEM SIZE_S TRAIT_REARMING
+    }
+   }
+   m_Flags 773
+  }
+  SCR_PreviewEntityComponent "{5D6477349AB699CC}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{68B16B306410E6EC}" {
+     m_iParentID -1
+     m_Mesh "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+}
