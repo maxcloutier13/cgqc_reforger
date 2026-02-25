@@ -133,7 +133,7 @@ class CGQC_Scripts
 	
 	}
 	// Server-side init for player 
-    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
+    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId, bool isInitialised)
     {
         Print("[CGQC_InitializePlayer] Starting ->");
         // Get player's name
@@ -152,7 +152,7 @@ class CGQC_Scripts
             case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised);
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
 				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
@@ -229,7 +229,7 @@ class CGQC_Scripts
 			}	
 		}
 		// Swap default radios for CGQC radios
-		CGQC_Scripts.swapRadios(playerEntity);
+		//CGQC_Scripts.swapRadios(playerEntity);
     }
 	
 
@@ -373,8 +373,16 @@ class CGQC_Scripts
 	}
 
     // Admin features activation
-    static void ActivateAdminFeatures(IEntity playerEntity)
+    static void ActivateAdminFeatures(IEntity playerEntity, bool isInitialised)
     {
+		// Skip if already initialized
+		PrintFormat("[CGQC_InitializePlayer] Initialised already? : %1", isInitialised);
+        if (isInitialised)
+        {
+            Print("[CGQC_InitializePlayer] Already initialized, skipping");
+            return;
+        }
+		PrintFormat("[CGQC_InitializePlayer] Init sanity check. Should be true: %1 - Proceeding with init", isInitialised);
 		Print("[CGQC_InitializePlayer] Admin features running");
 		// Cloutier time
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
