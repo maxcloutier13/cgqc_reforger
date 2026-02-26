@@ -152,14 +152,21 @@ class CGQC_Scripts
             case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised);
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "clou");
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
 				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
 				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
                 break;
-            }		
+            }					
+			case "6538de9f-32ce-41cc-bc6f-844a6a3b2ce8":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Lafo detected");
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "lafo");
+				isCGQC = true;
+                break;
+            }			
 			case "120786ec-60cd-4a96-9e10-c846578745f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Genest detected");
@@ -373,7 +380,7 @@ class CGQC_Scripts
 	}
 
     // Admin features activation
-    static void ActivateAdminFeatures(IEntity playerEntity, bool isInitialised)
+    static void ActivateAdminFeatures(IEntity playerEntity, bool isInitialised, string target)
     {
 		// Skip if already initialized
 		PrintFormat("[CGQC_InitializePlayer] Initialised already? : %1", isInitialised);
@@ -383,15 +390,30 @@ class CGQC_Scripts
             return;
         }
 		PrintFormat("[CGQC_InitializePlayer] Init sanity check. Should be true: %1 - Proceeding with init", isInitialised);
+				
+				
+				
 		Print("[CGQC_InitializePlayer] Admin features running");
-		// Cloutier time
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");		
+		switch (target)
+        {
+            case "clou":
+            {
+				// Cloutier time
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
+		        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
+				break;
+			}
+			case "lafo":
+            {
+				// Lafo time
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				break;
+			}
+		}
     }
-	
-	
 	// Give item to player. No checks. 
 	static void GiveItemToPlayer(IEntity playerEntity, string itemToAdd)
     {

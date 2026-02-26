@@ -1,0 +1,82 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{621EF3F1C9098B8B}" {
+     NavmeshFile "{395CA63E8E456BE7}World/Data/Zimnitrita.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{FA02CD1FDA9A7EE4}World/Data/BTRLikeZimnitrita.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{118D26584E97D8E6}World/Data/LowResZimnitrita.nmn"
+    }
+   }
+  }
+ }
+ coords 0 0 0
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 0 0 0
+}
+SCR_GameModeEditor GameMode_GameMaster_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ components {
+  SCR_EditorCameraDefaultsComponent "{530EB67957FF1565}" {
+   m_aPositions {
+    SCR_CameraCoordinates "{530EB67B0FD7776F}" {
+     m_vCameraPosition 3091.22 105.48 1532.69
+     m_vCameraAngles -2.4 303.88 0
+    }
+    SCR_CameraCoordinates "{530EB67BCC8CA498}" {
+     m_vCameraPosition 2853.84 97.94 2969.39
+     m_vCameraAngles -12.02 479.26 0
+    }
+    SCR_CameraCoordinates "{530EB67BB8FC1FEC}" {
+     m_vCameraPosition 1893.28 58.29 2899.16
+     m_vCameraAngles -5.12 615.16 0
+    }
+    SCR_CameraCoordinates "{530ECD979F9A89CD}" {
+     m_vCameraPosition 1337.48 39.182 1363.03
+     m_vCameraAngles -2.4 134.683 0
+    }
+    SCR_CameraCoordinates "{530ECD967B114EDF}" {
+     m_vCameraPosition 2587 177.148 2193.25
+     m_vCameraAngles -13.5 -48.317 0
+    }
+    SCR_CameraCoordinates "{530ECD96618A88C5}" {
+     m_vCameraPosition 2567.42 51.28 950.664
+     m_vCameraAngles -19.8 87.282 0
+    }
+    SCR_CameraCoordinates "{530ECD9641E9FF5E}" {
+     m_vCameraPosition 2497.76 139.155 1632.75
+     m_vCameraAngles -17.7 -157.517 0
+    }
+    SCR_CameraCoordinates "{530ECD962E3DC5CF}" {
+     m_vCameraPosition 3673.41 74.144 2643.3
+     m_vCameraAngles -6.3 -99.017 0
+    }
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D28B7ADCD4F95B9}" {
+   }
+  }
+  SCR_SaveLoadComponent "{58FA739CBE3E9FC5}" {
+   m_DebugHeaderResourceName "{9D2D546F1E889561}Missions/GM_Zimnitrita.conf"
+  }
+ }
+}
+SCR_MapLocator {
+ m_WorldDirections SCR_MapLocationQuadHint "{5AAA92CDBEAC91B2}" : "{C1534F222D0F74D2}Configs/Map/MapLocatorHints/LocationHintsArland.conf" {
+ }
+}
+MusicManager : "{359452CCDBDD03F5}Prefabs/Sounds/Music/MusicManager_Campaign.et" {
+}
