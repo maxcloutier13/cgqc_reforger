@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqctrainingcoldwar"
+ GUID "68C26C5E2EFEF24F"
+ TITLE "cgqc_training_coldwar"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
