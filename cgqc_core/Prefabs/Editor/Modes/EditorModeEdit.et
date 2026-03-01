@@ -1,0 +1,16 @@
+SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et" {
+ ID "54F0A77282A3AA3B"
+ components {
+  SCR_PlacingEditorComponent "{5145484399BAA2E7}" {
+   m_Registries {
+    SCR_PlaceableEntitiesRegistry "{68C2246F270A6DD9}" {
+     m_sAddon "CGQC"
+     m_sSourceDirectory "{1362D4E99BAD662D}Prefabs/Props/Military/Compositions/US"
+     m_Prefabs {
+      "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC.et"
+     }
+    }
+   }
+  }
+ }
+}
