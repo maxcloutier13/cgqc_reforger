@@ -17,6 +17,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
     }
    }
    m_VariantData SCR_EditableEntityVariantData "{68B908083C369530}" {
+    m_bRandomizeDefaultVariant 0
     m_aVariants {
      SCR_EditableEntityVariant "{68B908083C369522}" {
       m_sVariantPrefab "{EA158B6EB6A24B4B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman_Variant_1.et"
