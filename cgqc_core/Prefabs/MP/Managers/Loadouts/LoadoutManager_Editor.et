@@ -8,7 +8,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   }
   SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
    m_sLoadoutName "Team Leader"
-   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+   m_sLoadoutResource "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et"
    m_sAffiliatedFaction "CGQC"
   }
  }
