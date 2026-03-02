@@ -13,6 +13,7 @@ GenericEntity : "{B53B98CEA2D72735}Prefabs/Props/Military/Compositions/FIA/Arsen
 }
 SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
  coords 608.379 1.817 704.121
+ m_iPriority 1
 }
 GenericEntity : "{F542F974956C255F}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_CIV.et" {
  coords 605.53 1.812 699.133
