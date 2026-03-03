@@ -5,6 +5,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Rifleman"
     Description "Soldat de base de l'unité CGQC"
+    m_sFaction "CGQC"
    }
    m_VariantData SCR_EditableEntityVariantData "{68B908083C369530}" {
     m_bRandomizeDefaultVariant 0

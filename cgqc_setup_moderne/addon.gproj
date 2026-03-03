@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcsetupmoderne"
+ GUID "68C628334C58DEFD"
+ TITLE "cgqc_setup_moderne"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "670AF64751851FC2" "68C24D295E407853" "66BEFBF71FC73A14" "66BB276B523D505B" "68B12D355F654C54" "688D0CCF80BFE6A4" "670F38925E7F3717"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
