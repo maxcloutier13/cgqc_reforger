@@ -1,0 +1,11 @@
+GenericEntity : "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC.et" {
+ coords 658.492 1.891 754.223
+ angles 0 90 0
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 655.939 1.891 753.579
+ angles 0 -95.849 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Shooting Range"
+ }
+}
