@@ -23260,6 +23260,11 @@ $grp GenericEntity : "{8B3C8FC588BD4D30}Prefabs/Structures/BuildingParts/Graffit
 GenericEntity : "{8C73F42FBAB6D9D7}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_USSR_02.et" {
  coords 614.238 1.763 667.102
  angles 0 144.489 0
+ {
+  Turret Tripod_6T5_PKM_68C92A67BD44546A {
+   ID "59A297CB53D15C0E"
+  }
+ }
 }
 $grp GenericEntity : "{8C82BBBDEE9CBA3A}Prefabs/Props/Military/Camps/WeaponRackStand_01.et" {
  {
