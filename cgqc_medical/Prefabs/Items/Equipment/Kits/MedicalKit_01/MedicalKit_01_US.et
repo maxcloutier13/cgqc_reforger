@@ -6,6 +6,18 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
     MultiSlotConfiguration "{66E81CB8294EABB5}" {
      NumSlots 15
     }
+    MultiSlotConfiguration "{66E81CB9ACED528B}" {
+     NumSlots 10
+    }
+    MultiSlotConfiguration "{66E81CB9F5B0F5B5}" {
+     NumSlots 25
+    }
+    MultiSlotConfiguration "{66E81CBA65FAD3C2}" {
+     NumSlots 5
+    }
+    MultiSlotConfiguration "{66E83E2AD137C97B}" {
+     NumSlots 2
+    }
     MultiSlotConfiguration "{68B353AB20924DAF}" {
      SlotTemplate InventoryStorageSlot Morphine {
       Prefab "{498EBFCE4936F47B}Prefabs/Items/Medicine/KingLT/ACE_Medical_KingLT.et"
@@ -22,18 +34,6 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      SlotTemplate InventoryStorageSlot Morphine {
       Prefab "{79379D4E43B29B88}Prefabs/Items/Medicine/ChestSeal/ACE_Medical_ChestSeal.et"
      }
-    }
-    MultiSlotConfiguration "{66E81CB9ACED528B}" {
-     NumSlots 10
-    }
-    MultiSlotConfiguration "{66E81CB9F5B0F5B5}" {
-     NumSlots 25
-    }
-    MultiSlotConfiguration "{66E81CBA65FAD3C2}" {
-     NumSlots 5
-    }
-    MultiSlotConfiguration "{66E83E2AD137C97B}" {
-     NumSlots 2
     }
    }
   }

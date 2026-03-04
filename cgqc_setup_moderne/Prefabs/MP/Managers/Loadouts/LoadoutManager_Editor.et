@@ -13,8 +13,18 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{68C8388B3E4A37DB}" {
-   m_sLoadoutName "TEST"
-   m_sLoadoutResource "{9377F788533425AD}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Test.et"
+   m_sLoadoutName "LMG"
+   m_sLoadoutResource "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_LMG_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{68C83882FB5E2606}" {
+   m_sLoadoutName "MAT"
+   m_sLoadoutResource "{21F14EB1881D4C23}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MAT_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{68C85D46D4CE3C55}" {
+   m_sLoadoutName "Medic"
+   m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
  }
