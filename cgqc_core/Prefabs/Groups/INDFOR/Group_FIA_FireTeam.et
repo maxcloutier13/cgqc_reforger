@@ -3,12 +3,10 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
  components {
   SCR_EditableGroupComponent "{50D291F6C83FA532}" {
    m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
-    Name "CGQC Fireteam"
-    Description "Basic fireteam formation"
+    Name "#AR-Group_FireTeam"
     m_Image "{BC60DB5B677B2F91}UI/Textures/EditorPreviews/Groups/INDFOR/Group_FIA_FireTeam.edds"
-    m_sFaction "CGQC"
-    m_aAuthoredLabels {
-     ENTITYTYPE_GROUP FACTION_CGQC TRAIT_ARMORPIERCING
+    m_aAuthoredLabels + {
+     TRAIT_ARMORPIERCING
     }
     m_aAutoLabels {
      GROUPSIZE_MEDIUM
@@ -22,13 +20,13 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      }
     }
     m_EntityChildrenBudgetCost {
-     SCR_EntityBudgetValue "{68B908379E4F27C7}" {
+     SCR_EntityBudgetValue "{68C90C5A20453755}" {
       m_BudgetType AI
       m_Value 5
      }
     }
     m_bUseUIInfoName 1
-    m_MilitarySymbol SCR_MilitarySymbol "{68B908379E4F27B4}" {
+    m_MilitarySymbol SCR_MilitarySymbol "{68C90C5A2045375F}" {
      m_Identity INDFOR
      m_Dimension LAND
      m_Icons INFANTRY
@@ -45,7 +43,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
   SCR_PreviewEntityComponent "{56FCFA56AF8F68E9}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
    m_bRuntime 0
    m_aEntries {
-    SCR_BasePreviewEntry "{68B908379E4F27AC}" {
+    SCR_BasePreviewEntry "{68C90C5A20453748}" {
      m_iParentID -1
      m_Mesh ""
      m_Flags 3
@@ -55,7 +53,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{68B908379E4F27AB}" {
+    SCR_BasePreviewEntry "{68C90C5A20453749}" {
      m_iParentID 0
      m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
      m_Flags 0
@@ -65,7 +63,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{68B908379E4F27A9}" {
+    SCR_BasePreviewEntry "{68C90C5A2045374B}" {
      m_iParentID 0
      m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
      m_Flags 0
@@ -75,7 +73,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      m_vPosition 3 0 -3
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{68B908379E4F27A6}" {
+    SCR_BasePreviewEntry "{68C90C5A2045374D}" {
      m_iParentID 0
      m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
      m_Flags 0
@@ -85,7 +83,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      m_vPosition -3 0 -3
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{68B908379E4F27A7}" {
+    SCR_BasePreviewEntry "{68C90C5A2045374F}" {
      m_iParentID 0
      m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
      m_Flags 0
@@ -95,7 +93,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
      m_vPosition 6 0 -6
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{68B908379E4F27A5}" {
+    SCR_BasePreviewEntry "{68C90C5A20453770}" {
      m_iParentID 0
      m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
      m_Flags 0
@@ -108,9 +106,7 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
    }
   }
  }
- m_faction "CGQC"
  m_aUnitPrefabSlots {
-  "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et" "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et" "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et" "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et" "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+  "{677B515F119222C2}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL.et" "{D25BC9815A9F9E8D}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AT.et" "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et" "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et" "{C77DFB8546B3F2A2}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_LAT.et"
  }
- m_iMaxMembers 12
 }
