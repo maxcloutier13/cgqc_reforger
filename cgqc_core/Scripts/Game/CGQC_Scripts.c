@@ -399,9 +399,10 @@ class CGQC_Scripts
             case "clou":
             {
 				// Cloutier time
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
 		        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
 				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
 				break;
@@ -410,6 +411,12 @@ class CGQC_Scripts
             {
 				// Lafo time
 				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				break;
+			}
+			case "vali":
+            {
+				// Vali time
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
 				break;
 			}
 		}
