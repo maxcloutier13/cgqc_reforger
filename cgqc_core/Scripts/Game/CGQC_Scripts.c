@@ -184,6 +184,7 @@ class CGQC_Scripts
 			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "vali");
 				isCGQC = true;
                 break;
             }
@@ -402,7 +403,7 @@ class CGQC_Scripts
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
 		        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
 				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
 				break;
