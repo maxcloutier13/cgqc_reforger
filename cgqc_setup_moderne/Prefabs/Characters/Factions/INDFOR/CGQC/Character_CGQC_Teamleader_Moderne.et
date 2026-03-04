@@ -3,8 +3,11 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Team Leader"
+    Name "TL 2026"
     Description "Leader de fireteam"
+    m_aAutoLabels {
+     SIZE_M ROLE_LEADER
+    }
    }
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
