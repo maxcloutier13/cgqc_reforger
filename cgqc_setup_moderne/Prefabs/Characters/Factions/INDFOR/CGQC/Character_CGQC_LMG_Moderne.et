@@ -34,13 +34,13 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68B908099C22257E}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/m2401/Pouch_PCGEN3_MG.et"
      PrefabsToSpawn {
-      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" ""
+      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
      }
     }
     ItemsInitConfigurationItem "{68B908083C369512}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/M2402/Pouch_PCGEN3_MG.et"
      PrefabsToSpawn {
-      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" ""
+      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
      }
     }
     ItemsInitConfigurationItem "{68C5090B32028647}" {
@@ -61,9 +61,6 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68C6297E0D132FB5}" {
      Enabled 0
     }
-    ItemsInitConfigurationItem "{68C6297EF833AF34}" {
-     Enabled 0
-    }
     ItemsInitConfigurationItem "{68C6297E9331202D}" {
      Enabled 0
     }
@@ -73,10 +70,13 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68C6297F5F39F7E0}" {
      Enabled 0
     }
+    ItemsInitConfigurationItem "{68C6297EF833AF34}" {
+     Enabled 0
+    }
     ItemsInitConfigurationItem "{68C92A677CAAE366}" {
      TargetStorage "Back/Backpack_511_rush12_od.et"
      PrefabsToSpawn {
-      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
+      "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
      }
     }
    }
