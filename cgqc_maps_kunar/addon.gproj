@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmapskunar"
+ GUID "68CADEDAFF033B4D"
+ TITLE "cgqc_maps_kunar"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "5C9691EA7FD7A79F"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
