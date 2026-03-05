@@ -1,0 +1,6 @@
+MatPBRBasic {
+ Color 0.546 0.531 0.481 1
+ Diffuse 0.418 0.418 0.418 1
+ BCRMap "{21A10C9D237D5182}Assets/Flag_Patches/Data/patch_flag_qc_camo.edds"
+ NMOMap "{DAB3F6DF31E2DEEA}Assets/Flag_Patches/Data/patch_flag_qc_nmo.edds"
+}

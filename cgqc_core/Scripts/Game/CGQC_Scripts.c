@@ -5,9 +5,56 @@ class CGQC_Scripts
 	static void initializeFFPlayer(IEntity playerEntity)
     {
         Print("[CGQC_InitializeFFPlayer] Giving radio/armband to player");
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{A955A7E41BB4D5FC}Prefabs/Items/Equipment/Radios/CGQC_Radio_152_ion.et");
+        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et");
 		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{81A4D576093ED337}Prefabs/Characters/Bandeau/Brassard_Green.et");
     }
+	
+	static void swapRadios(IEntity playerEntity)
+	{
+		// Modcheck. If cgqc_radio missing: skip
+		ResourceName cgqcRadio = "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et";
+		Resource res = Resource.Load(cgqcRadio);
+		if (!res.IsValid())
+		{
+		    Print("[CGQC_swapRadios] CGQC radio mod not present, skipping swap");
+		    return;
+		}
+		
+	    SCR_InventoryStorageManagerComponent invManager = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));
+	    if (!invManager)
+	        return;
+	
+	    array<ResourceName> radiosToClear = {
+	        "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et",
+	        "{E1A5D4B878AA8980}Prefabs/Items/Equipment/Radios/Radio_R148.et",
+	        "{540C08AD5F21A5FA}Prefabs/Items/Equipment/Radios/Radio_R148_FIA.et",
+	        "{C55821E8E86C074E}Prefabs/Items/Equipment/Radios/Radio_ANPRC152.et",
+	        "{9CB82F893D614FF0}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A.et",
+	        "{D69684663E89D6EA}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_OLD.et",
+	        "{B343AB76B0725657}Prefabs/Items/Equipment/Radios/Radio_R187P1_OLD.et"
+	    };
+	
+	    array<IEntity> items = {};
+	    invManager.GetAllItems(items, null);
+	
+	    foreach (IEntity item : items)
+	    {
+	        EntityPrefabData prefabData = item.GetPrefabData();
+	        if (!prefabData)
+	            continue;
+	
+	        if (radiosToClear.Contains(prefabData.GetPrefabName()))
+	        {
+	            PrintFormat("[CGQC_swapRadios] Found radio: %1 -> Removing", prefabData.GetPrefabName());
+	            invManager.TryRemoveItemFromInventory(item);
+	            PrintFormat("[CGQC_swapRadios] Swapping to CGQC radio");
+	            CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et");
+	            return;
+	        }
+	    }
+	
+	    PrintFormat("[CGQC_swapRadios] No swappable radio found");
+	}
 	
 	static void welcomePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
     {
@@ -86,7 +133,7 @@ class CGQC_Scripts
 	
 	}
 	// Server-side init for player 
-    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId)
+    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId, bool isInitialised)
     {
         Print("[CGQC_InitializePlayer] Starting ->");
         // Get player's name
@@ -105,14 +152,21 @@ class CGQC_Scripts
             case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity);
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "clou");
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
 				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
 				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
                 break;
-            }		
+            }					
+			case "6538de9f-32ce-41cc-bc6f-844a6a3b2ce8":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Lafo detected");
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "lafo");
+				isCGQC = true;
+                break;
+            }			
 			case "120786ec-60cd-4a96-9e10-c846578745f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Genest detected");
@@ -130,6 +184,7 @@ class CGQC_Scripts
 			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "vali");
 				isCGQC = true;
                 break;
             }
@@ -181,6 +236,8 @@ class CGQC_Scripts
 	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
 			}	
 		}
+		// Swap default radios for CGQC radios
+		//CGQC_Scripts.swapRadios(playerEntity);
     }
 	
 
@@ -324,16 +381,47 @@ class CGQC_Scripts
 	}
 
     // Admin features activation
-    static void ActivateAdminFeatures(IEntity playerEntity)
+    static void ActivateAdminFeatures(IEntity playerEntity, bool isInitialised, string target)
     {
+		// Skip if already initialized
+		PrintFormat("[CGQC_InitializePlayer] Initialised already? : %1", isInitialised);
+        if (isInitialised)
+        {
+            Print("[CGQC_InitializePlayer] Already initialized, skipping");
+            return;
+        }
+		PrintFormat("[CGQC_InitializePlayer] Init sanity check. Should be true: %1 - Proceeding with init", isInitialised);
+				
+				
+				
 		Print("[CGQC_InitializePlayer] Admin features running");
-		// Cloutier time
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
-		CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
-        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
+		switch (target)
+        {
+            case "clou":
+            {
+				// Cloutier time
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
+		        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
+				break;
+			}
+			case "lafo":
+            {
+				// Lafo time
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et");
+				break;
+			}
+			case "vali":
+            {
+				// Vali time
+				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
+				break;
+			}
+		}
     }
-	
-	
 	// Give item to player. No checks. 
 	static void GiveItemToPlayer(IEntity playerEntity, string itemToAdd)
     {

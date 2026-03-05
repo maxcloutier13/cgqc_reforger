@@ -1,0 +1,12 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bEnableTeamKillPunishment 0
+   m_eNametagControllerFilters 0
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+  }
+ }
+}

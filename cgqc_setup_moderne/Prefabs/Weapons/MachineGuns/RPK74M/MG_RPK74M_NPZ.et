@@ -1,0 +1,33 @@
+GenericEntity : "{B440ADCCF966E05B}Prefabs/Weapons/MachineGuns/RPK74M/MG_RPK74M_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  RHS_WeaponRplComponent "{68C838856F795A2A}" {
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E8D0272AFBB0187}" {
+     AttachmentSlot InventoryStorageSlot Dovetail {
+      Offset -0.0056 0.0033 0.0004
+      Prefab "{39CB6FD1854B44B6}Prefabs/Weapons/Attachments/Rails/npz_valdai_rail/npz_valdai_rail.et"
+     }
+     AttachmentType AttachmentHandGuard "{5E8D0272878AE6BA}" {
+     }
+     ShowInInspection 0
+    }
+    AttachmentSlotComponent "{68C838856F795BDD}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot RIS {
+      PivotID "eye"
+      Offset 0.001 -0.001 0.1593
+      ChildPivotID "snap_weapon"
+      Prefab "{BCA2E16F34C3F9E8}Scopes/Leupold HAMR/Prefabs/Optic_HAMR.et"
+      m_fMaximumPositiveSlideOffset 0.08
+      m_fMaximumNegativeSlideOffset -0.08
+     }
+     AttachmentType AttachmentOpticsRIS1913Medium "{68C838856F795BC3}" {
+     }
+     AttachmentObstructs 1
+    }
+   }
+  }
+ }
+}

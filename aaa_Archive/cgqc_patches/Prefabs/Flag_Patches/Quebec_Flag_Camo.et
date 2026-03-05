@@ -1,0 +1,21 @@
+GameEntity : "{C3C66DFD34ADB415}Prefabs/Flag_Patches/USA_Flag_Color.et" {
+ ID "657B0C0A4C1F9EDE"
+ components {
+  InventoryItemComponent "{657B0C0AEEF49C10}" {
+   Attributes SCR_ItemAttributeCollection "{657B0C0AEEF49C16}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{657B0C0AEEF49F14}" {
+     Name "CGQC: Quebec flag camo"
+     Description "GRS: Patch Canada Flag"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657B0C0AEEEB7D3C}" {
+   WornMaterialsOverride {
+    "{FB96840179D4F5BD}Assets/Flag_Patches/Data/Flag_Patch_Quebec_camo.emat"
+   }
+   ItemMaterialsOverride {
+    "{FB96840179D4F5BD}Assets/Flag_Patches/Data/Flag_Patch_Quebec_camo.emat"
+   }
+  }
+ }
+}

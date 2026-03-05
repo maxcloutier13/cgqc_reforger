@@ -1,0 +1,34 @@
+SCR_AIWorld : "{65DEC16960498027}Prefabs/AI/SCR_AIWorld_Ruha.et" {
+ coords 5640.727 58.374 3917.525
+}
+SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ coords 5840.817 53.165 5513.099
+}
+SCR_MapLocator {
+ coords 4076.904 55.342 4789.958
+ m_WorldDirections SCR_MapLocationQuadHint "{5AAA92CDBEAC91B2}" : "{C1534F222D0F74D2}Configs/Map/MapLocatorHints/LocationHintsArland.conf" {
+  m_aQuadHints {
+   "Southwest of Ruha"
+   "South of Ruha"
+   "SouthEast of Ruha"
+   "West of Ruha"
+   "Central of Ruha"
+   "East of Ruha"
+   "NorthWest of Ruha"
+   "North of Ruha"
+   "NorthEast of Ruha"
+  }
+ }
+}
+MusicManager : "{359452CCDBDD03F5}Prefabs/Sounds/Music/MusicManager_Campaign.et" {
+ coords 5509.282 63.28 3300.635
+}
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 809.001 76.945 1861.628
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 806.357 76.961 1859.079
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Hidden Spot"
+ }
+}

@@ -1,0 +1,4 @@
+MatPBRBasic {
+ Color 0.474 0.474 0.474 1
+ BCRMap "{E66431327122D72A}Assets/Circle_Patches/Data/newlogo_felt.edds"
+}

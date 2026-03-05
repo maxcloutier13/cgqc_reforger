@@ -1,0 +1,20 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ coords 611.29 1.812 699.133
+}
+GenericEntity : "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC.et" {
+ coords 614.259 1.813 702.561
+ angles 0 90 0
+}
+GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et" {
+ coords 609.413 1.812 699.133
+}
+GenericEntity : "{B53B98CEA2D72735}Prefabs/Props/Military/Compositions/FIA/ArsenalBox_FIA.et" {
+ coords 607.486 1.812 699.133
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 608.379 1.817 704.121
+ m_iPriority 1
+}
+GenericEntity : "{F542F974956C255F}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_CIV.et" {
+ coords 605.53 1.812 699.133
+}

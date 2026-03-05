@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctraining"
+ GUID "68C44C286A29EECC"
+ TITLE "cgqc_training"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "66D4117974B3F12F" "660D3BCC5B99BBEF"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

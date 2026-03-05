@@ -1,0 +1,64 @@
+GenericEntity : "{751107CE717C4C9B}Prefabs/Items/Equipment/Accessories/IFAK/IFAK_Tan.et" {
+ ID "521AC0491712FB3A"
+ components {
+  SCR_UniversalInventoryStorageComponent "{54848ED08E74CFC4}" {
+   Attributes SCR_ItemAttributeCollection "{54848ED08E74CFCE}" {
+    ItemDisplayName UIInfo "{54848ED08E74CFCD}" {
+     Name "Trauma FAK"
+     Description "IFAK, for medically trained personnel"
+    }
+   }
+   MaxCumulativeVolume 5000
+   MultiSlots {
+    MultiSlotConfiguration "{65907738C0A87B76}" {
+     NumSlots 15
+    }
+    MultiSlotConfiguration "{659357336BCDC09C}" {
+     SlotTemplate EquipmentStorageSlot C {
+      Prefab "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et"
+     }
+     NumSlots 2
+    }
+    MultiSlotConfiguration "{685043611373DD05}" {
+    }
+    MultiSlotConfiguration "{68B353ADF230AEBD}" {
+     SlotTemplate EquipmentStorageSlot d {
+      Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
+     }
+     NumSlots 5
+    }
+    MultiSlotConfiguration "{68B353ADF230AEA9}" {
+     SlotTemplate EquipmentStorageSlot f {
+      Prefab "{5B2FD067D70C1E8F}Prefabs/Items/Medicine/EpinephrineInjection/ACE_Medical_EpinephrineInjection.et"
+     }
+     NumSlots 5
+    }
+    MultiSlotConfiguration "{68B353ADF230AE50}" {
+     SlotTemplate EquipmentStorageSlot e {
+      Prefab "{02DD34077F51F65E}Prefabs/Items/Medicine/NaloxoneInjection/ACE_Medical_NaloxoneInjection.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{68B353ADBF00CB87}" {
+     SlotTemplate EquipmentStorageSlot e {
+      Prefab "{661744F5F88B401C}Prefabs/Items/Medicine/NCDKit/ACE_Medical_NCDKit.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{68B353ADB0C8E4E2}" {
+     SlotTemplate EquipmentStorageSlot e {
+      Prefab "{498EBFCE4936F47B}Prefabs/Items/Medicine/KingLT/ACE_Medical_KingLT.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{68B353ADF230AE55}" {
+     SlotTemplate EquipmentStorageSlot i {
+      Prefab "{58CF3AB87C441295}Prefabs/Items/Medicine/AmmoniumCarbonatePackage/ACE_Medical_AmmoniumCarbonatePackage.et"
+     }
+     NumSlots 4
+    }
+   }
+  }
+ }
+ coords 0 0 0
+}

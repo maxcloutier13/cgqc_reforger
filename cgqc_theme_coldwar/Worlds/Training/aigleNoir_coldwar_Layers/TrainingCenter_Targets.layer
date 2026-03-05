@@ -1,0 +1,3044 @@
+$grp SCR_FiringRangeTarget : "{379D34B0D41DA810}Prefabs/Props/Military/Training/TargetInfantry_01.et" {
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 731.675
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 737.774
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 614.4 1.891 745.868
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 741.817
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 623.66 1.812 604.992
+  angleY 23.224
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 627.912 1.812 605.039
+  angleY -15.215
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 614.907 1.891 733.661
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 620.18 1.891 735.706
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 632.239 1.812 604.638
+  angleY 91.956
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 614.268 1.891 749.976
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 625.7 1.891 747.96
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 621.452 1.891 739.841
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 626.621 1.891 743.853
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 752.004
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 639.09 1.812 608.323
+  angleY -159.999
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 595.99 1.812 693.385
+  angleY 179.811
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 608.079 1.812 659.207
+  angleY 5.252
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 597.379 1.812 693.529
+  angleY 174.939
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 615.687 1.812 665.92
+  angleY -78.816
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 615.447 1.812 667.961
+  angleY -120.184
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 602.387 1.812 691.178
+  angleY -176.879
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 617.467 1.812 659.065
+  angleY -89.411
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 597.035 1.812 664.797
+  angleY 71.004
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 597.249 1.812 669.179
+  angleY 125.344
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 597.636 1.851 654.819
+  angleY 83.03
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 597.304 1.846 659.313
+  angleY 72.483
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 641.218 1.812 644.301
+  angleY -94.702
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 635.753 1.812 648.555
+  angleY 117.851
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 637.479 1.812 636.385
+  angleY 25.404
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 633.129 1.812 639.282
+  angleY 102.399
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+   SCR_PreviewEntityComponent "{663531338416A676}" {
+    m_aEntries {
+     SCR_BasePreviewEntry "{6635313399EB5A81}" {
+      m_Mesh "{74A9218974C65D05}Assets/Props/Military/Training/TargetInfantry_01/TargetInfantry_01.xob"
+      m_Shape MESH
+     }
+    }
+   }
+  }
+  coords 643.451 1.812 631.174
+  angleY -38.368
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 624.541 1.891 725.624
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 723.633
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 624.541 1.891 729.615
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.2
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.906 1.891 727.693
+  angleY 90
+  m_fTimeInFoldedPosition 10
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 630.076 1.812 647.874
+  angleY -174.039
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 627.748 1.852 621.117
+  angleY -24.257
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 630.397 1.812 613.952
+  angleY 82.207
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 634.121 1.895 631.203
+  angleY 96.164
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 632.426 1.918 629.777
+  angleY 100.481
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 630.343 1.812 615.359
+  angleY 96.611
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 637.321 1.867 615.874
+  angleY 7.2
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 643.694 1.812 622.581
+  angleY -30.944
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 635.85 1.812 679.249
+  angleY -158.882
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 631.359 1.812 683.155
+  angleY 171.58
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 643.716 1.812 664.882
+  angleY -26.244
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 631.723 1.812 660.198
+  angleY 94.396
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 622.482 1.87 696.983
+  angleY 91.215
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 622.319 1.873 694.004
+  angleY 78.69
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 611.564 1.812 683.784
+  angleY -167.988
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 622.424 1.882 690.699
+  angleY 73.326
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 640.52 1.812 697.775
+  angleY -167.812
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 643.927 1.812 681.156
+  angleY -82.792
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 642.582 1.812 683.618
+  angleY -111.826
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 639.458 1.812 679.92
+  angleY 150.435
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 642.388 1.812 660.063
+  angleY -9.882
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 643.911 1.812 679.947
+  angleY -150.913
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 613.299 1.957 694.844
+  angleY -102.83
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 610.337 1.812 688.897
+  angleY 102.314
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 630.655 1.812 657.286
+  angleY 111.032
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 606.326 1.812 686.139
+  angleY 81.351
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 626.092 1.85 675.822
+  angleY -3.241
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 607.924 1.812 682.69
+  angleY 135.699
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 596.082 1.812 674.792
+  angleY 98.417
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 635.701 1.812 669.514
+  angleY -105.517
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 623.564 1.812 666.117
+  angleY 73.29
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 625.055 1.856 675.842
+  angleY 20.447
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 622.81 1.813 687.544
+  angleY 73.326
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 630.677 1.812 670.056
+  angleY 175.617
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 623.197 1.812 632.648
+  angleY 177.557
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 624.95 1.812 635.611
+  angleY -175.158
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 627.229 1.812 633.35
+  angleY -167.627
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 623.537 1.812 643.034
+  angleY 120.28
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 614.045 1.812 644.648
+  angleY -42.344
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 615.281 1.812 647.891
+  angleY -94.272
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 605.023 1.835 645.635
+  angleY -106.522
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.014 1.812 638.969
+  angleY -77.614
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 600.528 1.845 629.122
+  angleY -26.035
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 605.916 1.812 628.73
+  angleY -86.96
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 605.861 1.812 633.112
+  angleY -95.429
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 612.078 1.812 631
+  angleY -88.358
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 607.091 1.812 623.09
+  angleY 75.712
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 601.543 1.837 620.345
+  angleY 81.784
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 601.758 1.812 617.158
+  angleY 89.583
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 605.483 1.851 604.723
+  angleY -73.914
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 605.375 1.852 606.198
+  angleY -82.997
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 601.33 1.812 612.47
+  angleY 93.761
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+  }
+  coords 610.893 1.812 604.393
+  angleY -0.733
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+ {
+  components {
+   MeshObject "{51A0AB02D8CB61BC}" {
+    PixelSizeScale 0.1
+   }
+   SCR_EditableVehicleComponent "{663531332CEF6D8B}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{6635313340251F5F}" {
+     Name "#AR-EditableEntity_Tripod_6T5_PKM"
+     Icon "{200AC469B3BABB18}UI/Textures/Notifications/Notification_Ping_Target_Entity.edds"
+     m_Image "{889351A24B2CF1CF}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_TargetInfantry_01.edds"
+     m_aAuthoredLabels {
+      3 10 21 34
+     }
+     m_aAutoLabels {
+      121 55
+     }
+     m_aOccupantFillCompartmentTypes {
+      1
+     }
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{5A5EA70BDB60AAE6}" {
+       m_BudgetType AI
+       m_Value 1
+      }
+     }
+    }
+    m_bAutoRegister ALWAYS
+   }
+   SCR_PreviewEntityComponent "{66353133F205CA54}" {
+    m_aEntries {
+     SCR_BasePreviewEntry "{663531302EF08067}" {
+      m_Mesh "{74A9218974C65D05}Assets/Props/Military/Training/TargetInfantry_01/TargetInfantry_01.xob"
+      m_Shape MESH
+     }
+    }
+   }
+  }
+  coords 615.291 1.812 604.327
+  angleY -44.51
+  m_fTimeInFoldedPosition 30
+  m_fTimeInErectedPosition 0.5
+ }
+}

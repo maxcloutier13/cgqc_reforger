@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcaudio"
+ GUID "68B306565FED48D9"
+ TITLE "cgqc_audio"
+ Dependencies {
+  "58D0FB3206B6F859" "64DE57C0A1601D14" "650F545AB9B7E3CD" "66EE3582A17A8FB7" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

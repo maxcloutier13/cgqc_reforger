@@ -1,0 +1,12 @@
+GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
+ ID "511E9C6ADE70F798"
+ components {
+  CGQC_ProtectedBackpackComponent "{68C242386CC869D7}" {
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB03A40528FA}" {
+   MaxCumulativeVolume 80000
+   MaxItemSize 50 50 50
+   m_fMaxWeight 70
+  }
+ }
+}

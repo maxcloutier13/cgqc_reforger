@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4E833EA1296BBF56}PrefabsEditable/Auto/Props/Military/Compositions/US/E_ArsenalBox_Gl1tch.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

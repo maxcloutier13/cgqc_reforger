@@ -1,0 +1,8 @@
+SCR_SpawnPoint : "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et" {
+ ID "544EB04DCBFBD126"
+ m_sFaction "CGQC"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Arsenal Room"
+  Icon "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
+ }
+}

@@ -1,0 +1,6 @@
+GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+ coords 669.292 18.852 706.925
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 663.652 1.812 715.544
+}
