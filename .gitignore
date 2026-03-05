@@ -1,1 +1,4 @@
 *.rdb
+cgqc_ace_dev/resourceDatabase.rdb
+cgqc_addons_1.6/resourceDatabase.rdb
+cgqc_core/resourceDatabase.rdb
