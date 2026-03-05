@@ -16,7 +16,6 @@ $grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes
 }
 SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
  coords 633.831 1.812 594.152
- m_iPriority 1
  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
   Name "Medical Training"
  }
