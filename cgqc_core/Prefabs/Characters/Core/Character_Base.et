@@ -14,7 +14,7 @@ SCR_ChimeraCharacter {
    StaminaDrainSprint -0.018
    DefaultCharacterMass 80
    EncumbranceMassMin 100
-   EncumbranceMassMax 145
+   EncumbranceMassMax 155
    EncumbranceDrainMax -0.15
    BreathExhaustedFrequency 1.4
    BreathExhaustedMagnitude 3
