@@ -3,9 +3,9 @@ GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/Arse
  components {
   SCR_EditableEntityComponent "{68CC702630017B5E}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "CGQC Equipment Box"
-    Icon "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
-    m_Image "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
+    Name "Equipment Arsenal"
+    Icon "{C44DAC10032A8E26}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Equipment.edds"
+    m_Image "{7F0506916B520AC2}UI/Textures/EditorPreviews/cgqc_gm_preview.edds"
     m_sFaction "CGQC"
     m_aAuthoredLabels {
     }

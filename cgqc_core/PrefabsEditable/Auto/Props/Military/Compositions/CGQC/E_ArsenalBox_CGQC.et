@@ -6,9 +6,9 @@ GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/Arse
   }
   SCR_EditableEntityComponent "{68C2246DC6978ACB}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "CGQC Arsenal Complet"
-    Icon "{C44DAC10032A8E26}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Equipment.edds"
-    m_Image "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
+    Name "Arsenal Complet"
+    Icon "{EA975C03DF5422AD}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal.edds"
+    m_Image "{7F0506916B520AC2}UI/Textures/EditorPreviews/cgqc_gm_preview.edds"
     m_sFaction "CGQC"
     m_aAuthoredLabels {
     }
