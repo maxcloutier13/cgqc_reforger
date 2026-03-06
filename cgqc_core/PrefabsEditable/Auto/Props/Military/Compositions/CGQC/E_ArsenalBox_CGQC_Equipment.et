@@ -1,9 +1,9 @@
-GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
  ID "56F2C6D6F7C6DAFA"
  components {
-  SCR_EditableEntityComponent "{68CC6CCB9FAD35A7}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
-   m_UIInfo SCR_EditableEntityUIInfo "{5298E609431D192D}" {
-    Name "CGQC Weapon Box"
+  SCR_EditableEntityComponent "{68CC702630017B5E}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Equipment Box"
     Icon "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
     m_Image "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
     m_sFaction "CGQC"
@@ -14,10 +14,10 @@ GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/Arse
     }
    }
   }
-  SCR_PreviewEntityComponent "{68CC6CCB9F724009}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+  SCR_PreviewEntityComponent "{68CC7026301B06B1}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
    m_bRuntime 1
    m_aEntries {
-    SCR_BasePreviewEntry "{68CC6CCB9F725293}" {
+    SCR_BasePreviewEntry "{68CC7026301B0C76}" {
      m_iParentID -1
      m_Mesh "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
      m_Flags EDITABLE

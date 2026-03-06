@@ -1,0 +1,32 @@
+GenericEntity : "{87C4FF38ECA2D0EC}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/AmmoBoxArsenal_Equipment_CGQC_Radios.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_EditableEntityComponent "{68CC7025A4EC827D}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Radio Box"
+    m_Image "{7B7A5F0D2E0E6D8D}UI/Textures/Factions/cgqc_faction_newLogo_black_128.edds"
+    m_sFaction "CGQC"
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     ENTITYTYPE_OBJECT SIZE_S TRAIT_REARMING FACTION_CGQC
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{68CC7025A4E1F27F}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{68CC7025A4E1D4EF}" {
+     m_iParentID -1
+     m_Mesh "{62A30D148D0D93B0}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/EquipmentBoxWooden_Equipment_01.xob"
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+}

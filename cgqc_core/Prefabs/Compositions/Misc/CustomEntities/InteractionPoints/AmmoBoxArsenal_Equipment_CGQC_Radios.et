@@ -1,0 +1,31 @@
+GenericEntity : "{0FC1D6E9B592F75D}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_US.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ResponseIndex "SmallDestructible"
+  }
+  SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+   Enabled 0
+   m_eSupportedArsenalItemTypes RADIO_BACKPACK
+  }
+  SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+   "faction affiliation" "CGQC"
+  }
+  UniversalInventoryStorageComponent "{58A17A341AB8F069}" {
+   Attributes SCR_ItemAttributeCollection "{58A17A346E386320}" {
+    ItemDisplayName SCR_InventoryUIInfo "{58A17A3474A3430E}" {
+     Name "CGQC Radio Box"
+     Description "Just radios"
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{68CC7025F48ADF3E}" {
+     SlotTemplate InventoryStorageSlot radio_343 {
+      Prefab "{3238FC0BDB67AA78}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01_base.et"
+     }
+     NumSlots 5
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D2E719DAAB25CCE9}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC_Equipment.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
