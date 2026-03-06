@@ -3,12 +3,7 @@ SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et
  components {
   SCR_PlacingEditorComponent "{5145484399BAA2E7}" {
    m_Registries {
-    SCR_PlaceableEntitiesRegistry "{68C2246F270A6DD9}" {
-     m_sAddon "CGQC"
-     m_sSourceDirectory "{4CF717A31DA0C84F}PrefabsEditable/Auto/Props/Military/Compositions/CGQC"
-     m_Prefabs {
-      "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC.et"
-     }
+    SCR_PlaceableEntitiesRegistry "{68CC70277BFB4941}" : "{C9807EF43F676C66}Configs/Arsenal/CGQC_Arsenal_Vanilla.conf" {
     }
    }
   }
