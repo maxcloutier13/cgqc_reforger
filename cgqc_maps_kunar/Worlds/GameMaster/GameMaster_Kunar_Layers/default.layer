@@ -42,3 +42,9 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
  coords 1843.281 233.951 1495.201
 }
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 2355.038 163.354 1834.778
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "COP Korengal"
+ }
+}
