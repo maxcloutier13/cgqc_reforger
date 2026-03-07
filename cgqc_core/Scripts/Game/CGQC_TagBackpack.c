@@ -4,7 +4,7 @@ class CGQC_BackpackNametagClass : ScriptComponentClass {}
 class CGQC_BackpackNametag : ScriptComponent
 {
     // Store the last known owner name so we don't lose it
-    protected string m_sLastOwnerName;
+    string m_sLastOwnerName;
 
     override void OnPostInit(IEntity owner)
     {
@@ -87,8 +87,42 @@ class CGQC_BackpackNametag : ScriptComponent
         UIInfo uiInfo = invItem.GetUIInfo();
         if (!uiInfo)
             return;
-
-        uiInfo.SetName(m_sLastOwnerName + "'s Bag");
+		
+		string m_oldName = uiInfo.GetName();
+        uiInfo.SetName(m_sLastOwnerName + "'s " + m_oldName);
         
     }
+}
+
+[ComponentEditorProps(category: "CGQC", description: "Shows owner name as action label")]
+
+class CGQC_BackpackNameAction : ScriptedUserAction
+{
+    override bool GetActionNameScript(out string outName)
+    {
+         InventoryItemComponent invItem = InventoryItemComponent.Cast(
+        GetOwner().FindComponent(InventoryItemComponent)
+   		 );
+	    if (!invItem)
+	        return false;
+	
+	    UIInfo uiInfo = invItem.GetUIInfo();
+	    if (!uiInfo)
+	        return false;
+	
+	    outName = uiInfo.GetName();
+	    return true;
+    }
+
+    override bool CanBeShownScript(IEntity user)
+    {
+        CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+            GetOwner().FindComponent(CGQC_BackpackNametag)
+        );
+        // Only show the action if the bag has been named
+        return nametag && !nametag.m_sLastOwnerName.IsEmpty();
+    }
+
+    override bool CanBePerformedScript(IEntity user) { return true; }
+    override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity) {}
 }

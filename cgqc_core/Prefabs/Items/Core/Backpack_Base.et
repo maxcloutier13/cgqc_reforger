@@ -5,5 +5,18 @@ GenericEntity {
   }
   CGQC_ProtectedBackpackComponent "{68CF0CB622C0A94D}" {
   }
+  ActionsManagerComponent "{511E9C6ADE70F786}" {
+   additionalActions {
+    CGQC_BackpackNameAction "{68CF258A2E10EC09}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68CF258A8827BB90}" {
+      Name "Owner"
+     }
+     "Sort Priority" -1
+    }
+   }
+  }
  }
 }
