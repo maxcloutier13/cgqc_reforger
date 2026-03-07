@@ -1,10 +1,11 @@
 SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
- ID "520EC961A090B1EE"
+ ID "520EC961A090B1E2"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "MAT"
     Description "Medium AT"
+    IconSetName "EditableEntity_Character_Anti_Tank"
     m_aAutoLabels {
      SIZE_M ROLE_ANTITANK
     }
@@ -31,8 +32,8 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{68B908083C369512}" {
-     PrefabsToSpawn {
-      "{9749CCE07F466A68}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M995.et" "{9749CCE07F466A68}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M995.et" ""
+     PrefabsToSpawn + {
+      ""
      }
     }
     ItemsInitConfigurationItem "{68C6297EBDE04DA2}" {

@@ -27,6 +27,7 @@ GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/Arsena
   }
   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
    m_eSupportedArsenalItemTypes 654464
+   m_eArsenalSaveType NO_RESTRICTIONS
   }
   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
    "faction affiliation" "CGQC"

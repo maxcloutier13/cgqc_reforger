@@ -1,0 +1,11 @@
+SCR_AIGroup : "{82D1BF8C4D7CB21B}Prefabs/Groups/INDFOR/Group_CGQC_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "CGQC Fireteam Playable"
+   }
+  }
+ }
+ m_bPlayable 1
+}

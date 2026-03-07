@@ -1,10 +1,11 @@
 SCR_ChimeraCharacter : "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et" {
- ID "520EC961A090B1EE"
+ ID "520EC961A090B14E"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "SL"
     Description "SL de Spartan"
+    IconSetName "EditableEntity_Character_Leader_Squad"
     m_aAutoLabels +{
     }
    }
