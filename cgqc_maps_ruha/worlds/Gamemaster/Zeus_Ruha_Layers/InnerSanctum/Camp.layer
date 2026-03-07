@@ -1,0 +1,115 @@
+$grp GenericEntity : "{0438A6F1C5C1CA8A}Prefabs/Systems/DeployableRadios/DeployableItemTent.et" {
+ {
+  coords 683.994 71.51 1791.898
+ }
+ {
+  coords 678.473 73.181 1783.099
+ }
+}
+GenericEntity : "{69D6BDFC872F8BE4}Prefabs/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_floor.et" {
+ coords 678.399 71.249 1796.022
+ angles -5.036 -30.658 -3.235
+}
+GenericEntity : "{6A30882656A63268}Prefabs/Structures/Military/CamoNets/US/CamoNet_Tent_US.et" {
+ coords 678.665 71.349 1795.508
+ angles 0 -29.652 0
+}
+GenericEntity : "{785F322AC3DFD4B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_US_01.et" {
+ coords 676.378 71.105 1799.561
+ angles 0 0 0
+}
+GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_US_01.et" {
+ coords 689.243 75.383 1763.638
+ angles 0 -43.422 0
+ {
+  GenericEntity {
+   ID "5D088D25EF4020F0"
+   coords -0.006 0.134 2.063
+   angles 0 34.761 0
+   {
+    DecalEntity {
+     ID "56E0B29E01E2AC90"
+     coords 0 0 0
+     angles -89.972 180 -180
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25EF402104"
+   coords -0.567 -0.155 -3.254
+   angles 0 -161.536 0
+  }
+  GenericEntity {
+   ID "5D088D25EF40208B"
+   coords -3.23 0.167 4.056
+  }
+  GenericEntity {
+   ID "5D088D25EF402114"
+   coords -3.668 0.091 2.472
+   angles 0 64.577 0
+  }
+  GenericEntity {
+   ID "5EA88D65C2A5898A"
+   coords -3.007 0.061 1.32
+   angles 0 61.473 0
+  }
+  GenericEntity {
+   ID "5DCAAA1816D09E42"
+   coords -2.583 -0.014 -2.04
+   angles 0 14.578 0
+  }
+  GenericEntity {
+   ID "5DCAAA1816D09E6E"
+   coords 2.855 -0.167 -0.099
+   angles 0 -36.778 0
+  }
+  GenericEntity {
+   ID "5D088D25EF4020D1"
+   coords -5.78 -0.122 -1.598
+   angles 0 -36.565 0
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0 0 0
+     angles -90 180 -180
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D088D25EF402134"
+   coords -4.078 -0.021 -0.987
+   angles 0 14.107 0
+   {
+    DecalEntity {
+     ID "56DF08929A14FB98"
+     coords 0.001 0 0
+     angles -90 180 -180
+    }
+   }
+  }
+  GenericEntity {
+   ID "5EA88D65C2A58996"
+   coords -1.516 0.068 6.154
+   angles 0 -81.559 0
+  }
+  GenericEntity {
+   ID "5EA88D65C2A589AD"
+   coords 1.548 -0.127 6.737
+   angles 0 -95.154 0
+  }
+ }
+}
+GenericEntity : "{B8BADFA9530C38F4}Prefabs/Compositions/Misc/SubCompositions/Foundation_Mortar_US.et" {
+ coords 652.101 74.199 1782.004
+ angles 0 78.637 0
+}
+GenericEntity : "{F2174A927C3229F2}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_05.et" {
+ coords 680.248 71.437 1797.48
+ angles 0 -125.562 0
+ {
+  GameEntity {
+   ID "5CB0F589F6F73C99"
+   coords -0.212 0.908 -0.253
+  }
+ }
+}

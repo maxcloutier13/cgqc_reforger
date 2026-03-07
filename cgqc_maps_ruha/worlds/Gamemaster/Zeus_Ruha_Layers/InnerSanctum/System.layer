@@ -1,0 +1,14 @@
+GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ coords 675.171 71.114 1797.929
+ angles 0 115.93 0
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 678.068 71.088 1800.344
+ angles 0 172.597 0
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 685.339 72.981 1782.701
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Hidden Spot"
+ }
+}

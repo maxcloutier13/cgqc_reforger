@@ -23,12 +23,3 @@ SCR_MapLocator {
 MusicManager : "{359452CCDBDD03F5}Prefabs/Sounds/Music/MusicManager_Campaign.et" {
  coords 5509.282 63.28 3300.635
 }
-GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- coords 809.001 76.945 1861.628
-}
-SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 806.357 76.961 1859.079
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Hidden Spot"
- }
-}
