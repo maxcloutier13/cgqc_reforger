@@ -6,8 +6,8 @@ GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/Arse
  coords 678.068 71.088 1800.344
  angles 0 172.597 0
 }
-SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 685.339 72.981 1782.701
+SCR_SpawnPoint : "{9FDC165DE3771D3C}PrefabsEditable/Auto/MP/Spawning/E_SpawnPoint_CGQC.et" {
+ coords 686.063 73.528 1781.599
  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
   Name "Hidden Spot"
  }
