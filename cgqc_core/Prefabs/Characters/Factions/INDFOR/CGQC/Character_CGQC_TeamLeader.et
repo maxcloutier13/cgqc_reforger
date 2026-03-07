@@ -5,6 +5,8 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "TeamLeader"
     Description "TL de fireteam"
+    IconSetName "EditableEntity_Character_Leader_Team"
+    m_Image "{34E9DBD5693E1B7F}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_TL.edds"
     m_aAutoLabels {
      SIZE_M ROLE_LEADER
     }

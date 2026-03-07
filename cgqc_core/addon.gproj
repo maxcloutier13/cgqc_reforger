@@ -7,6 +7,13 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{68CD0C0868186560}" {
+      StringTableSource "{4F33A2694FC1AC52}CGQC_Strings.st"
+     }
+    }
+   }
   }
   GameProjectConfig XBOX_ONE {
   }

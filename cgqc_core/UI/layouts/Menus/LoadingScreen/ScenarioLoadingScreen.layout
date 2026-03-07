@@ -81,6 +81,25 @@ FrameWidgetClass {
        Texture "{A1238961CCB02542}UI/Textures/Flags/cgqc_faction_flag.edds"
        Saturation 0
       }
+      VerticalLayoutWidgetClass "{5DFF03E4AD9D1EE1}" {
+       Prefab "{5DFF03E4AD9D1EE1}"
+       {
+        TextWidgetClass "{5DFF03E4AD9D1EE5}" {
+         Prefab "{5DFF03E4AD9D1EE5}"
+         Offset 0 -47.8
+        }
+        TextWidgetClass "{5DFF03E4AD9D1EDB}" {
+         Prefab "{5DFF03E4AD9D1EDB}"
+         Color 0 0.0467 0.3763 1
+         FontProperties FontProperties "{546AF489DFD25402}" {
+         }
+        }
+        RichTextWidgetClass "{5DFF03E4AD9D1ED9}" {
+         Prefab "{5DFF03E4AD9D1ED9}"
+         Offset 0 9.5
+        }
+       }
+      }
       HorizontalLayoutWidgetClass "{5DFF03E4AD9D1ED0}" {
        Prefab "{5DFF03E4AD9D1ED0}"
        {

@@ -1,0 +1,34 @@
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_EditableEntityComponent "{68CC702630017B5E}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Equipment Arsenal"
+    Icon "{C44DAC10032A8E26}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Equipment.edds"
+    m_Image "{7F0506916B520AC2}UI/Textures/EditorPreviews/cgqc_gm_preview.edds"
+    m_sFaction "CGQC"
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     THEME_MILITARY ENTITYTYPE_OBJECT SIZE_S TRAIT_REARMING FACTION_CGQC
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{68CC7026301B06B1}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{68CC7026301B0C76}" {
+     m_iParentID -1
+     m_Mesh "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+ angles 0 0 0
+}
