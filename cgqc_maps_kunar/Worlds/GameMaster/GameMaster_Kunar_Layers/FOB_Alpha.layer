@@ -1,21 +1,22 @@
+$grp GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ {
+  coords 2355.338 163.5 1812.532
+  angles 0 0 0
+ }
+ {
+  coords 2342.279 163.5 1870.844
+  angles 0 96.089 0
+ }
+}
 Vehicle S105_lightgreen1 : "{321016E0F9361A22}Prefabs/Vehicles/Wheeled/S105/S105_lightgreen.et" {
  coords 2383.009 163.5 1856.469
 }
 Vehicle S1203_transport_randomized1 : "{49C909AFD66E90A1}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_randomized.et" {
  coords 2375.309 163.5 1856.295
 }
-$grp GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- {
-  coords 2359.996 163.5 1812.355
- }
- {
-  coords 2343.348 163.5 1827.572
-  angles 0 -95.459 0
- }
-}
-Vehicle UH1H1 : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
- coords 2361.142 163.591 1880.094
- angles 0 -91.514 0
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 2343.348 163.5 1827.572
+ angles 0 -95.459 0
 }
 $grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
  {
@@ -24,6 +25,10 @@ $grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
  {
   coords 2368.86 163.5 1822.269
  }
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 2360.074 163.5 1812.397
+ angles 0 0 0
 }
 $grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
  M151A2_transport_MERDC1 {
@@ -65,6 +70,10 @@ $grp Vehicle : "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB
   coords 2345.485 163.5 1831.998
   angles 0 82.727 0
  }
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ coords 2360.525 163.591 1880.102
+ angles 0 90.952 0
 }
 $grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_US.et" {
  {
