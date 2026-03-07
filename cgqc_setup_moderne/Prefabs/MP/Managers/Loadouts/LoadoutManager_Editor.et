@@ -5,27 +5,24 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
-   m_sLoadoutResource "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et"
-  }
-  SCR_FactionPlayerLoadout "{68C83889C5D151F1}" {
-   m_sLoadoutName "Squad Leader"
-   m_sLoadoutResource "{275D1C3FE4EC157B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
-  }
-  SCR_FactionPlayerLoadout "{68C8388B3E4A37DB}" {
    m_sLoadoutName "LMG"
    m_sLoadoutResource "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_LMG_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
   }
-  SCR_FactionPlayerLoadout "{68C83882FB5E2606}" {
+  SCR_FactionPlayerLoadout "{68CE3ED68D1C129D}" {
    m_sLoadoutName "MAT"
    m_sLoadoutResource "{21F14EB1881D4C23}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MAT_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
   }
-  SCR_FactionPlayerLoadout "{68C85D46D4CE3C55}" {
+  SCR_FactionPlayerLoadout "{68CE3ED6844FA777}" {
    m_sLoadoutName "Medic"
    m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{68CE3ED6BA82F0EE}" {
+   m_sLoadoutName "Team Leader"
+   m_sLoadoutResource "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{68CE3ED6BC43B7B5}" {
+   m_sLoadoutName "Squad Leader"
+   m_sLoadoutResource "{275D1C3FE4EC157B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader_Moderne.et"
   }
  }
 }
