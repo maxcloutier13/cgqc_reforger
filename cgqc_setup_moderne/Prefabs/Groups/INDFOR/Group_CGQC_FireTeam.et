@@ -1,0 +1,12 @@
+SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
+ ID "0000000000000001"
+ components {
+  SCR_AIConfigComponent "{512CC1759AE69D6D}" {
+   m_Skill 0.74
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et" "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_LMG_Moderne.et" "{21F14EB1881D4C23}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MAT_Moderne.et" "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic_Moderne.et" "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"
+ }
+ m_fMemberSpawnDelay 10
+}
