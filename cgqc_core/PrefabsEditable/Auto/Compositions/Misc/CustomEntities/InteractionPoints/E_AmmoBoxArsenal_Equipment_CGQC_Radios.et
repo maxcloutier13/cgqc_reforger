@@ -3,7 +3,7 @@ GenericEntity : "{87C4FF38ECA2D0EC}Prefabs/Compositions/Misc/CustomEntities/Inte
  components {
   SCR_EditableEntityComponent "{68CC7025A4EC827D}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Radio Box"
+    Name "Radio Box (Broken)"
     Icon "{4B4A98921A5C3583}UI/Textures/Editor/Attributes/Arsenal/Attribute_Arsenal_Radio.edds"
     m_Image "{7F0506916B520AC2}UI/Textures/EditorPreviews/cgqc_gm_preview.edds"
     m_sFaction "CGQC"
