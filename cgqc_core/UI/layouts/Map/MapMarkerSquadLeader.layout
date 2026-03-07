@@ -1,0 +1,16 @@
+FrameWidgetClass {
+ "Is Enabled" 0
+ "Is Visible" 0
+ {
+  TextWidgetClass "{5E108070C79877C6}" {
+   Prefab "{5E108070C79877C6}"
+   "Is Enabled" 0
+   "Is Visible" 0
+  }
+  ImageWidgetClass "{5E108070C79877C2}" {
+   Prefab "{5E108070C79877C2}"
+   "Is Enabled" 0
+   "Is Visible" 0
+  }
+ }
+}
