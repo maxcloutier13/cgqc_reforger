@@ -1,0 +1,9 @@
+GenericEntity {
+ ID "511E9C6ADE70F798"
+ components {
+  CGQC_BackpackNametag "{68CF0CB63A9AC80F}" {
+  }
+  CGQC_ProtectedBackpackComponent "{68CF0CB622C0A94D}" {
+  }
+ }
+}
