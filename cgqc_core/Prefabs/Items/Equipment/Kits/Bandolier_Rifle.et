@@ -55,7 +55,6 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
      }
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.3
      ItemVolume 1500
     }
    }

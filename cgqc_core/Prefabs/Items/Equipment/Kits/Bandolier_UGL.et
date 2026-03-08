@@ -1,8 +1,8 @@
 GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_base.et" {
  ID "508AB2013EEE1E00"
  components {
-  CGQC_BandolierAutoFill "{68D0291B341AB418}" {
-   m_eBandolierType MG
+  CGQC_BandolierAutoFill "{68D029276C5DB697}" {
+   m_eBandolierType UGL
   }
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
@@ -14,9 +14,9 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
   MeshObject "{5CCCC0EC0625E45E}" {
    Object "{5D2891BB3B02BE80}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_US.xob"
    Materials {
-    MaterialAssignClass "{68D02926B114B96F}" {
+    MaterialAssignClass "{68D02927018B696C}" {
      SourceMaterial "RearmingKit_01_US"
-     AssignedMaterial "{E9A012077DB7A946}Assets/Items/Equipment/Kits/RearmingKit_01/Data/Bandolier_MG.emat"
+     AssignedMaterial "{256301755B860193}Assets/Items/Equipment/Kits/RearmingKit_01/Data/Bandolier_UGL.emat"
     }
    }
   }
@@ -38,8 +38,8 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
   SCR_UniversalInventoryStorageComponent "{5E4E8A7AD05A2F1D}" {
    Attributes SCR_ItemAttributeCollection "{5E4E8A7B47FC0CE7}" {
     ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
-     Name "Bandolier (MG)"
-     Description "Contains 2 beltfed box"
+     Name "Bandolier (UGL)"
+     Description "Bandolier of 6x 40mm potatoes"
      m_aItemHints {
       SCR_SupplyAvailableItemHintUIInfo "{5EA892822741BB8A}" {
        Name "Bandolier"
@@ -62,13 +62,14 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
      }
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 6
+     Weight 1.38
+     ItemVolume 1000
     }
    }
-   MaxCumulativeVolume 3500
-   MaxItemSize 15 15 15
+   MaxCumulativeVolume 1500
+   MaxItemSize 10 10 10
    MultiSlots {
-    MultiSlotConfiguration "{68D0291B341A3369}" {
+    MultiSlotConfiguration "{68D029276C5DB6A3}" {
      SlotTemplate EquipmentStorageSlot Mags {
      }
      NumSlots 2
@@ -87,11 +88,11 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
     SCR_OpenStorageAction "{5E509292E7CDBC79}" {
      "Sort Priority" 1
     }
-    CGQC_BandolierOpenAction "{68D0291B341A3334}" {
+    CGQC_BandolierOpenAction "{68D029276C5DB6AE}" {
      ParentContextList {
       "default"
      }
-     UIInfo SCR_ActionUIInfo "{68D0291B341A3339}" {
+     UIInfo SCR_ActionUIInfo "{68D029276C5DB650}" {
       Name "Unpack Ammo"
       Description "Unpack the mags inside"
      }

@@ -1,8 +1,8 @@
 GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_base.et" {
  ID "508AB2013EEE1E00"
  components {
-  CGQC_BandolierAutoFill "{68D0291B341AB418}" {
-   m_eBandolierType MG
+  CGQC_BandolierAutoFill "{68D02920DC56F82A}" {
+   m_eBandolierType MIXED
   }
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
@@ -14,9 +14,9 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
   MeshObject "{5CCCC0EC0625E45E}" {
    Object "{5D2891BB3B02BE80}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_US.xob"
    Materials {
-    MaterialAssignClass "{68D02926B114B96F}" {
+    MaterialAssignClass "{68D02920FF489B8A}" {
      SourceMaterial "RearmingKit_01_US"
-     AssignedMaterial "{E9A012077DB7A946}Assets/Items/Equipment/Kits/RearmingKit_01/Data/Bandolier_MG.emat"
+     AssignedMaterial "{297AEA385C9DE24F}Assets/Items/Equipment/Kits/RearmingKit_01/Data/Bandolier_Full.emat"
     }
    }
   }
@@ -38,8 +38,8 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
   SCR_UniversalInventoryStorageComponent "{5E4E8A7AD05A2F1D}" {
    Attributes SCR_ItemAttributeCollection "{5E4E8A7B47FC0CE7}" {
     ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
-     Name "Bandolier (MG)"
-     Description "Contains 2 beltfed box"
+     Name "Bandolier (Full)"
+     Description "Ressupply main, handgun, frags and smokes"
      m_aItemHints {
       SCR_SupplyAvailableItemHintUIInfo "{5EA892822741BB8A}" {
        Name "Bandolier"
@@ -62,13 +62,14 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
      }
     }
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 6
+     Weight 4
+     ItemVolume 2000
     }
    }
-   MaxCumulativeVolume 3500
-   MaxItemSize 15 15 15
+   MaxCumulativeVolume 2000
+   MaxItemSize 10 10 10
    MultiSlots {
-    MultiSlotConfiguration "{68D0291B341A3369}" {
+    MultiSlotConfiguration "{68D02920DC56F9C9}" {
      SlotTemplate EquipmentStorageSlot Mags {
      }
      NumSlots 2
@@ -87,11 +88,11 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
     SCR_OpenStorageAction "{5E509292E7CDBC79}" {
      "Sort Priority" 1
     }
-    CGQC_BandolierOpenAction "{68D0291B341A3334}" {
+    CGQC_BandolierOpenAction "{68D02920DC56F9F3}" {
      ParentContextList {
       "default"
      }
-     UIInfo SCR_ActionUIInfo "{68D0291B341A3339}" {
+     UIInfo SCR_ActionUIInfo "{68D02920DC56F9F5}" {
       Name "Unpack Ammo"
       Description "Unpack the mags inside"
      }
