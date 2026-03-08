@@ -3,7 +3,7 @@ GenericEntity : "{0DCE9A9A4F31BE1C}Prefabs/Weapons/Core/SmokeGrenade_Base.et" {
  components {
   InventoryItemComponent "{51FAA3E3CF6F087A}" {
    Attributes SCR_ItemAttributeCollection "{51FAA3E3C2D19BD4}" {
-    ItemPhysAttributes ItemPhysicalAttributes "{56CA90F8B6FB45EA}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{56CA8ED28A1DBB6F}" {
      Weight 0.35
     }
    }
