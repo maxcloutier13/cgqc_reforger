@@ -76,6 +76,7 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
   ActionsManagerComponent "{508AB5952B584B2E}" {
    additionalActions {
     SCR_PickUpItemAction "{51EC842E3A187379}" {
+     "Sort Priority" 2
     }
     SCR_OpenStorageAction "{5E509292E7CDBC79}" {
      "Sort Priority" 1
@@ -90,6 +91,7 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
      }
      ActionTitle "Unpack Ammo"
      Duration 5
+     "Sort Priority" -1
     }
    }
   }
