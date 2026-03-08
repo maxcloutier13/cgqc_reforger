@@ -12,15 +12,61 @@ class CGQC_BandolierAutoFillClass : ScriptComponentClass {}
 class CGQC_BandolierAutoFill : ScriptComponent
 {
 	static const int          MAG_COUNT  = 6;
-	static const ResourceName MAG_PREFAB = "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et";
-
 	bool m_bFilled = false;
+	
+	//------------------------------------------------------------------
+	protected ResourceName GetMagPrefabFromPlayer(IEntity userEntity)
+	{
+		BaseWeaponManagerComponent weaponMgr = BaseWeaponManagerComponent.Cast(
+			userEntity.FindComponent(BaseWeaponManagerComponent)
+		);
+		if (!weaponMgr)
+			return ResourceName.Empty;
+
+		BaseWeaponComponent weapon = weaponMgr.GetCurrentWeapon();
+		if (!weapon)
+			return ResourceName.Empty;
+
+		BaseMuzzleComponent muzzle = weapon.GetCurrentMuzzle();
+		if (!muzzle)
+			return ResourceName.Empty;
+
+		// Try the currently loaded mag first
+		BaseMagazineComponent mag = muzzle.GetMagazine();
+		if (mag)
+		{
+			IEntity magEnt = mag.GetOwner();
+			if (magEnt)
+			{
+				EntityPrefabData prefabData = magEnt.GetPrefabData();
+				if (prefabData)
+					return prefabData.GetPrefabName();
+			}
+		}
+
+		// Fallback: get the weapon's default mag directly from the muzzle
+		ResourceName defaultMag = muzzle.GetDefaultMagazineOrProjectileName();
+		if (!defaultMag.IsEmpty())
+		{
+			PrintFormat("[CGQC_Bandolier] No loaded mag, using muzzle default: %1", defaultMag);
+			return defaultMag;
+		}
+		return ResourceName.Empty;
+	}
 
 	//------------------------------------------------------------------
 	void FillAndOpen(IEntity userEntity)
 	{
 		if (!m_bFilled)
 		{
+			ResourceName MAG_PREFAB = GetMagPrefabFromPlayer(userEntity);
+			if (MAG_PREFAB == ResourceName.Empty)
+			{
+				PrintFormat("[CGQC_Bandolier] No mag found in player's current weapon, aborting fill.");
+				return;
+			}
+			PrintFormat("[CGQC_Bandolier] Using mag prefab: %1", MAG_PREFAB);
+			
 			SCR_UniversalInventoryStorageComponent uStorage = SCR_UniversalInventoryStorageComponent.Cast(
 				GetOwner().FindComponent(SCR_UniversalInventoryStorageComponent)
 			);
