@@ -11,7 +11,7 @@ class CGQC_BandolierAutoFillClass : ScriptComponentClass {}
 
 class CGQC_BandolierAutoFill : ScriptComponent
 {
-	static const int          MAG_COUNT  = 6;
+	static const int RND_COUNT  = 180;
 	bool m_bFilled = false;
 	
 	//------------------------------------------------------------------
@@ -53,6 +53,23 @@ class CGQC_BandolierAutoFill : ScriptComponent
 		}
 		return ResourceName.Empty;
 	}
+	
+	//------------------------------------------------------------------
+	void NotifyPlayer(IEntity userEntity, string message)
+	{
+		int playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(userEntity);
+		Rpc(RpcDo_Notify, playerID, message);
+	}
+
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	protected void RpcDo_Notify(int playerID, string message)
+	{
+		SCR_PlayerController pc = SCR_PlayerController.Cast(GetGame().GetPlayerController());
+		if (!pc || pc.GetPlayerId() != playerID)
+			return;
+
+		SCR_PopUpNotification.GetInstance().PopupMsg(message);
+	}
 
 	//------------------------------------------------------------------
 	void FillAndOpen(IEntity userEntity)
@@ -62,10 +79,41 @@ class CGQC_BandolierAutoFill : ScriptComponent
 			ResourceName MAG_PREFAB = GetMagPrefabFromPlayer(userEntity);
 			if (MAG_PREFAB == ResourceName.Empty)
 			{
+				NotifyPlayer(userEntity, "Bandolier: No compatible mag found. Do you have a gun?");
 				PrintFormat("[CGQC_Bandolier] No mag found in player's current weapon, aborting fill.");
 				return;
 			}
 			PrintFormat("[CGQC_Bandolier] Using mag prefab: %1", MAG_PREFAB);
+			
+			// Spawn a temp entity to read ammo count, then delete it
+			int MAG_COUNT = 6; // fallback
+			Resource magRes = Resource.Load(MAG_PREFAB);
+			if (magRes && magRes.IsValid())
+			{
+				EntitySpawnParams tempParams = new EntitySpawnParams();
+				tempParams.TransformMode = ETransformMode.WORLD;
+				Math3D.MatrixIdentity4(tempParams.Transform);
+				IEntity tempMag = GetGame().SpawnEntityPrefab(magRes, null, tempParams);
+				if (tempMag)
+				{
+					BaseMagazineComponent tempMagComp = BaseMagazineComponent.Cast(tempMag.FindComponent(BaseMagazineComponent));
+					if (tempMagComp)
+					{
+						int roundsPerMag = tempMagComp.GetAmmoCount();
+						if (roundsPerMag > 46)
+						{
+							NotifyPlayer(userEntity, "Bandolier: Get a MG bandolier bro!");
+							PrintFormat("[CGQC_Bandolier] Mag has %1 rounds (>46), Not a rifle! Skipping fill.", roundsPerMag);
+							SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
+							return;
+						}
+						if (roundsPerMag > 0)
+							MAG_COUNT = RND_COUNT / roundsPerMag;
+						PrintFormat("[CGQC_Bandolier] Rounds per mag=%1 -> MAG_COUNT=%2", roundsPerMag, MAG_COUNT);
+					}
+					SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
+				}
+			}
 			
 			SCR_UniversalInventoryStorageComponent uStorage = SCR_UniversalInventoryStorageComponent.Cast(
 				GetOwner().FindComponent(SCR_UniversalInventoryStorageComponent)
