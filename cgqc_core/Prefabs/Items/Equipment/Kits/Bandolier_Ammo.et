@@ -1,0 +1,66 @@
+GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Item_RearmingKit_US_Name"
+    }
+   }
+  }
+  MeshObject "{5CCCC0EC0625E45E}" {
+   Object "{5D2891BB3B02BE80}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_US.xob"
+  }
+  SCR_ArsenalComponent "{5E2A83C89613DAE4}" {
+   Enabled 0
+  }
+  SCR_FactionAffiliationComponent "{5E249DCD907881F8}" {
+   "faction affiliation" "CGQC"
+  }
+  SCR_ResourceComponent "{5E4A9BE79A890A49}" {
+   Enabled 0
+  }
+  SCR_ResupplySupportStationComponent "{5E2CE1BACBF53C75}" {
+   Enabled 0
+  }
+  SCR_SupportStationGadgetComponent "{5DF4D9A1ECD549CC}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{5E4E8A7AD05A2F1D}" {
+   Attributes SCR_ItemAttributeCollection "{5E4E8A7B47FC0CE7}" {
+    ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
+     Name "Bandolier"
+     Description "Bandolier filled with ammo"
+     m_aItemHints {
+      SCR_SupplyAvailableItemHintUIInfo "{5EA892822741BB8A}" {
+      }
+      SCR_InventoryItemHintUIInfo "{5E2080E7EF9A2351}" {
+       m_bHideInArsenal 1
+      }
+      SCR_InventoryItemHintUIInfo "{5E2080E7E241B918}" {
+       m_bHideInArsenal 1
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.5
+     ItemVolume 2000
+    }
+   }
+   MaxCumulativeVolume 3000
+   MaxItemSize 10 10 10
+   MultiSlots {
+    MultiSlotConfiguration "{68D02A40CC505BB3}" {
+     SlotTemplate EquipmentStorageSlot Mags {
+      Prefab "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et"
+     }
+     NumSlots 8
+    }
+   }
+   m_fMaxWeight 25000
+  }
+  SCR_ArsenalInventoryStorageManagerComponent "{5E2A7D4F08598463}" {
+   Enabled 0
+  }
+ }
+}
