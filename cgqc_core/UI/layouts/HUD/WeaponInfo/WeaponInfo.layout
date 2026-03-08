@@ -3,6 +3,21 @@ FrameWidgetClass {
   VerticalLayoutWidgetClass "{5876BC8CDCDF5238}" {
    Prefab "{5876BC8CDCDF5238}"
    {
+    HorizontalLayoutWidgetClass "{5876BC8CDCDF523F}" {
+     Prefab "{5876BC8CDCDF523F}"
+     "Is Enabled" 0
+     "Is Visible" 0
+    }
+    HorizontalLayoutWidgetClass "{5876BC8CDCDF5222}" {
+     Prefab "{5876BC8CDCDF5222}"
+     {
+      OverlayWidgetClass "{5876BC8CDCC0ED23}" {
+       Prefab "{5876BC8CDCC0ED23}"
+       "Is Enabled" 0
+       "Is Visible" 0
+      }
+     }
+    }
     HorizontalLayoutWidgetClass "{5876BC8CDCC0ED20}" {
      Prefab "{5876BC8CDCC0ED20}"
      "Is Enabled" 0
