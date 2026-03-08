@@ -1,6 +1,8 @@
 GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_base.et" {
  ID "508AB2013EEE1E00"
  components {
+  CGQC_BandolierAutoFill "{68D029161D5F5782}" {
+  }
   InventoryItemComponent "{5222EB4D0C73006B}" {
    Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
     ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
@@ -62,7 +64,6 @@ GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/R
    MultiSlots {
     MultiSlotConfiguration "{68D02A40CC505BB3}" {
      SlotTemplate EquipmentStorageSlot Mags {
-      Prefab "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
      }
      NumSlots 2
     }
