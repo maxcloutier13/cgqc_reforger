@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmapskorengal"
+ GUID "68D01420458F75E0"
+ TITLE "cgqc_maps_korengal"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "5C9691EA7FD7A79F"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
