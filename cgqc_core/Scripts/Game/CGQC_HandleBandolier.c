@@ -1,19 +1,23 @@
-/*
-	CGQC_BandolierAutoFill.c
+enum CGQC_EBandolierType
+{
+	RIFLE,	// max 46 rounds per mag, ~180 rounds total
+	MG		// no round limit, fixed 1 mag
+}
 
-	Fills the bandolier with 6x STANAG mags on first use, then opens inventory.
-	Add CGQC_BandolierAutoFill (ScriptComponent) and CGQC_BandolierOpenAction
-	(ScriptedUserAction) to Bandolier_Ammo.et.
-*/
 
-[ComponentEditorProps(category: "CGQC", description: "Auto-fills bandolier with STANAG mags on first open")]
+[ComponentEditorProps(category: "CGQC", description: "Auto-fills bandolier with player's mag type on first open")]
 class CGQC_BandolierAutoFillClass : ScriptComponentClass {}
 
 class CGQC_BandolierAutoFill : ScriptComponent
 {
-	static const int RND_COUNT  = 180;
-	bool m_bFilled = false;
+	[Attribute(defvalue: "0", uiwidget: UIWidgets.ComboBox, desc: "Bandolier type", enums: ParamEnumArray.FromEnum(CGQC_EBandolierType))]
+	CGQC_EBandolierType m_eBandolierType;
 	
+	// Setting: target round for Rifle setups
+	static const int TARGET_ROUNDS = 180;
+	
+	bool m_bFilled = false;
+
 	//------------------------------------------------------------------
 	protected ResourceName GetMagPrefabFromPlayer(IEntity userEntity)
 	{
@@ -31,7 +35,6 @@ class CGQC_BandolierAutoFill : ScriptComponent
 		if (!muzzle)
 			return ResourceName.Empty;
 
-		// Try the currently loaded mag first
 		BaseMagazineComponent mag = muzzle.GetMagazine();
 		if (mag)
 		{
@@ -44,109 +47,66 @@ class CGQC_BandolierAutoFill : ScriptComponent
 			}
 		}
 
-		// Fallback: get the weapon's default mag directly from the muzzle
 		ResourceName defaultMag = muzzle.GetDefaultMagazineOrProjectileName();
 		if (!defaultMag.IsEmpty())
-		{
-			PrintFormat("[CGQC_Bandolier] No loaded mag, using muzzle default: %1", defaultMag);
 			return defaultMag;
-		}
+
 		return ResourceName.Empty;
 	}
-	
-	//------------------------------------------------------------------
-	void NotifyPlayer(IEntity userEntity, string message)
-	{
-		int playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(userEntity);
-		Rpc(RpcDo_Notify, playerID, message);
-	}
-
-	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	protected void RpcDo_Notify(int playerID, string message)
-	{
-		SCR_PlayerController pc = SCR_PlayerController.Cast(GetGame().GetPlayerController());
-		if (!pc || pc.GetPlayerId() != playerID)
-			return;
-
-		SCR_PopUpNotification.GetInstance().PopupMsg(message);
-	}
 
 	//------------------------------------------------------------------
-	void FillAndOpen(IEntity userEntity)
+	// Called server-side — fills the bandolier, sets result flags
+	void Fill(IEntity userEntity)
 	{
-		if (!m_bFilled)
+		ResourceName magPrefab = GetMagPrefabFromPlayer(userEntity);
+		if (magPrefab == ResourceName.Empty)
 		{
-			ResourceName MAG_PREFAB = GetMagPrefabFromPlayer(userEntity);
-			if (MAG_PREFAB == ResourceName.Empty)
+			PrintFormat("[CGQC_Bandolier] No mag found.");
+			return;
+		}
+
+		int magCount = 6;
+		Resource magRes = Resource.Load(magPrefab);
+		if (magRes && magRes.IsValid())
+		{
+			EntitySpawnParams p = new EntitySpawnParams();
+			p.TransformMode = ETransformMode.WORLD;
+			Math3D.MatrixIdentity4(p.Transform);
+			IEntity tempMag = GetGame().SpawnEntityPrefab(magRes, null, p);
+			if (tempMag)
 			{
-				NotifyPlayer(userEntity, "Bandolier: No compatible mag found. Do you have a gun?");
-				PrintFormat("[CGQC_Bandolier] No mag found in player's current weapon, aborting fill.");
-				return;
-			}
-			PrintFormat("[CGQC_Bandolier] Using mag prefab: %1", MAG_PREFAB);
-			
-			// Spawn a temp entity to read ammo count, then delete it
-			int MAG_COUNT = 6; // fallback
-			Resource magRes = Resource.Load(MAG_PREFAB);
-			if (magRes && magRes.IsValid())
-			{
-				EntitySpawnParams tempParams = new EntitySpawnParams();
-				tempParams.TransformMode = ETransformMode.WORLD;
-				Math3D.MatrixIdentity4(tempParams.Transform);
-				IEntity tempMag = GetGame().SpawnEntityPrefab(magRes, null, tempParams);
-				if (tempMag)
+				BaseMagazineComponent mc = BaseMagazineComponent.Cast(tempMag.FindComponent(BaseMagazineComponent));
+				if (mc)
 				{
-					BaseMagazineComponent tempMagComp = BaseMagazineComponent.Cast(tempMag.FindComponent(BaseMagazineComponent));
-					if (tempMagComp)
+					int rnd = mc.GetAmmoCount();
+					if (rnd > 46)
 					{
-						int roundsPerMag = tempMagComp.GetAmmoCount();
-						if (roundsPerMag > 46)
-						{
-							NotifyPlayer(userEntity, "Bandolier: Get a MG bandolier bro!");
-							PrintFormat("[CGQC_Bandolier] Mag has %1 rounds (>46), Not a rifle! Skipping fill.", roundsPerMag);
-							SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
-							return;
-						}
-						if (roundsPerMag > 0)
-							MAG_COUNT = RND_COUNT / roundsPerMag;
-						PrintFormat("[CGQC_Bandolier] Rounds per mag=%1 -> MAG_COUNT=%2", roundsPerMag, MAG_COUNT);
+						SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
+						return;
 					}
-					SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
+					if (rnd > 0)
+						magCount = TARGET_ROUNDS / rnd;
 				}
-			}
-			
-			SCR_UniversalInventoryStorageComponent uStorage = SCR_UniversalInventoryStorageComponent.Cast(
-				GetOwner().FindComponent(SCR_UniversalInventoryStorageComponent)
-			);
-
-			SCR_InventoryStorageManagerComponent invMgr = SCR_InventoryStorageManagerComponent.Cast(
-				userEntity.FindComponent(SCR_InventoryStorageManagerComponent)
-			);
-
-			if (uStorage && invMgr)
-			{
-				for (int i = 0; i < MAG_COUNT; i++)
-				{
-					if (!invMgr.TrySpawnPrefabToStorage(MAG_PREFAB, uStorage))
-						break;
-				}
-				m_bFilled = true;
+				SCR_EntityHelper.DeleteEntityAndChildren(tempMag);
 			}
 		}
 
-		int playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(userEntity);
-		Rpc(RpcDo_OpenInventory, playerID);
-	}
+		SCR_UniversalInventoryStorageComponent uStorage = SCR_UniversalInventoryStorageComponent.Cast(
+			GetOwner().FindComponent(SCR_UniversalInventoryStorageComponent)
+		);
+		SCR_InventoryStorageManagerComponent invMgr = SCR_InventoryStorageManagerComponent.Cast(
+			userEntity.FindComponent(SCR_InventoryStorageManagerComponent)
+		);
 
-	//------------------------------------------------------------------
-	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	protected void RpcDo_OpenInventory(int playerID)
-	{
-		SCR_PlayerController pc = SCR_PlayerController.Cast(GetGame().GetPlayerController());
-		if (!pc || pc.GetPlayerId() != playerID)
-			return;
-
-		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.Inventory20Menu);
+		if (uStorage && invMgr)
+		{
+			for (int i = 0; i < magCount; i++)
+			{
+				if (!invMgr.TrySpawnPrefabToStorage(magPrefab, uStorage))
+					break;
+			}
+			m_bFilled = true;
+		}
 	}
 }
 
@@ -155,14 +115,14 @@ class CGQC_BandolierOpenAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		if (!Replication.IsServer())
-			return;
-
 		CGQC_BandolierAutoFill filler = CGQC_BandolierAutoFill.Cast(
 			pOwnerEntity.FindComponent(CGQC_BandolierAutoFill)
 		);
-		if (filler)
-			filler.FillAndOpen(pUserEntity);
+		if (!filler)
+			return;
+
+		if (Replication.IsServer())
+			filler.Fill(pUserEntity);
 	}
 
 	override bool CanBeShownScript(IEntity user)

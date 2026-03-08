@@ -1,0 +1,99 @@
+GenericEntity : "{7738517A4B046266}Prefabs/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  CGQC_BandolierAutoFill "{68D0291B341AB418}" {
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Item_RearmingKit_US_Name"
+    }
+   }
+  }
+  MeshObject "{5CCCC0EC0625E45E}" {
+   Object "{5D2891BB3B02BE80}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_US.xob"
+  }
+  SCR_ArsenalComponent "{5E2A83C89613DAE4}" {
+   Enabled 0
+  }
+  SCR_FactionAffiliationComponent "{5E249DCD907881F8}" {
+   "faction affiliation" "CGQC"
+  }
+  SCR_ResourceComponent "{5E4A9BE79A890A49}" {
+   Enabled 0
+  }
+  SCR_ResupplySupportStationComponent "{5E2CE1BACBF53C75}" {
+   Enabled 0
+  }
+  SCR_SupportStationGadgetComponent "{5DF4D9A1ECD549CC}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{5E4E8A7AD05A2F1D}" {
+   Attributes SCR_ItemAttributeCollection "{5E4E8A7B47FC0CE7}" {
+    ItemDisplayName SCR_InventoryUIInfo "{5222EB4D07D865FA}" {
+     Name "Bandolier (Rifle)"
+     Description "Bandolier with 180 rifle rounds"
+     m_aItemHints {
+      SCR_SupplyAvailableItemHintUIInfo "{5EA892822741BB8A}" {
+       Name "Bandolier"
+       Description "Unpack to retrieve the ammo"
+       Icon ""
+       m_bHideInArsenal 0
+      }
+      SCR_InventoryItemHintUIInfo "{5E2080E7EF9A2351}" {
+       Name ""
+       Icon ""
+       IconSetName ""
+       m_bHideInArsenal 1
+      }
+      SCR_InventoryItemHintUIInfo "{5E2080E7E241B918}" {
+       Name ""
+       Icon ""
+       IconSetName ""
+       m_bHideInArsenal 1
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.3
+     ItemVolume 1500
+    }
+   }
+   MaxCumulativeVolume 1500
+   MaxItemSize 10 10 10
+   MultiSlots {
+    MultiSlotConfiguration "{68D0291B341A3369}" {
+     SlotTemplate EquipmentStorageSlot Mags {
+     }
+     NumSlots 2
+    }
+   }
+   m_fMaxWeight 25000
+  }
+  SCR_ArsenalInventoryStorageManagerComponent "{5E2A7D4F08598463}" {
+   Enabled 0
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   additionalActions {
+    SCR_PickUpItemAction "{51EC842E3A187379}" {
+     "Sort Priority" 2
+    }
+    SCR_OpenStorageAction "{5E509292E7CDBC79}" {
+     "Sort Priority" 1
+    }
+    CGQC_BandolierOpenAction "{68D0291B341A3334}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68D0291B341A3339}" {
+      Name "Unpack Ammo"
+      Description "Unpack the mags inside"
+     }
+     ActionTitle "Unpack Ammo"
+     Duration 5
+     "Sort Priority" -1
+    }
+   }
+  }
+ }
+}
