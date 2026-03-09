@@ -1,0 +1,19 @@
+GenericEntity : "{3D5594CC62AAFB88}Prefabs/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_UniversalInventoryStorageComponent "{68D20C27862BFF94}" {
+   Attributes SCR_ItemAttributeCollection "{68D2164BD5366115}" {
+    ItemDisplayName SCR_InventoryUIInfo "{68D2164BCD33C07E}" {
+     Name "Ammo Box 81mm Mortar 3rnd Smoke"
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{68D20C26ADAA1281}" {
+     SlotTemplate InventoryStorageSlot Rounds {
+      Prefab "{F7807293E94D3C88}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_Smoke_M819.et"
+     }
+    }
+   }
+  }
+ }
+}

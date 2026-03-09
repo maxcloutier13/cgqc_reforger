@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E9A012077DB7A946}Assets/Items/Equipment/Kits/RearmingKit_01/Data/Bandolier_MG.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

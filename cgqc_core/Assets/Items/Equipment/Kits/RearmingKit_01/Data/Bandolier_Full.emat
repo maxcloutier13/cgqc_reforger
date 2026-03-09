@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.162 0.162 0.162 1
+ BCRMap "{53A51A17D073EE75}Assets/Items/Equipment/Kits/RearmingKit_01/Data/RearmingKit_01_US_BCR.edds"
+ NMOMap "{6B7DA1850904BCEB}Assets/Items/Equipment/Kits/RearmingKit_01/Data/RearmingKit_01_US_NMO.edds"
+}

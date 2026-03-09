@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{AD2709F5F6F0D871}Prefabs/Weapons/Grenades/M18/Smoke_M18_Base.et"
+ Name "{13532B61AC4FB1A0}Prefabs/Items/Equipment/Kits/Bandolier_Beltfed.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

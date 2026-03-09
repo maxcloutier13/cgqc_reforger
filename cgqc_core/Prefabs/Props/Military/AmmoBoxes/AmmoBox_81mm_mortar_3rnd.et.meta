@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{AD2709F5F6F0D871}Prefabs/Weapons/Grenades/M18/Smoke_M18_Base.et"
+ Name "{3D5594CC62AAFB88}Prefabs/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
