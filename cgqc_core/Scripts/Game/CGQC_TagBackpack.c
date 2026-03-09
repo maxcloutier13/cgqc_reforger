@@ -141,3 +141,56 @@ class CGQC_BackpackNameAction : ScriptedUserAction
 	override bool CanBePerformedScript(IEntity user) { return true; }
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity) {}
 }
+
+//----------------------------------------------------------------------
+// override to inject tagged name
+modded class SCR_InventoryMenuUI
+{
+    override protected void SetFocusedSlotEffects()
+    {
+        if (!m_pFocusedSlotUI)
+            return;
+
+        InventoryItemComponent invItemComp = m_pFocusedSlotUI.GetInventoryItemComponent();
+        if (!invItemComp)
+        {
+            super.SetFocusedSlotEffects();
+            return;
+        }
+
+        CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+            invItemComp.GetOwner().FindComponent(CGQC_BackpackNametag)
+        );
+
+        if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+        {
+            super.SetFocusedSlotEffects();
+            return;
+        }
+
+        // Has a nametag — build custom tooltip
+        SCR_ItemAttributeCollection attribs = SCR_ItemAttributeCollection.Cast(invItemComp.GetAttributes());
+        if (!attribs)
+        {
+            super.SetFocusedSlotEffects();
+            return;
+        }
+
+        UIInfo itemInfo = attribs.GetUIInfo();
+        if (!itemInfo)
+        {
+            super.SetFocusedSlotEffects();
+            return;
+        }
+
+        SCR_InventoryUIInfo inventoryInfo = SCR_InventoryUIInfo.Cast(itemInfo);
+        string desc;
+		if (inventoryInfo)
+		    desc = inventoryInfo.GetInventoryItemDescription(invItemComp);
+		else
+		    desc = itemInfo.GetDescription();
+
+        ShowItemInfo(nametag.GetTaggedName(), desc, invItemComp.GetTotalWeight(), inventoryInfo);
+        NavigationBarUpdate();
+    }
+}
