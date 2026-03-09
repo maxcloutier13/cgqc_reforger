@@ -3,8 +3,8 @@
 
 	Fills the bandolier based on type set in Workbench:
 	  RIFLE  — mags from current weapon, ~180 rounds, max 46 rounds/mag
-	  MG     — 4x belt from current weapon (no round limit)
-	  UGL    — 40mm grenades detected from weapon's UGL muzzle
+	  MG     — 2x belt from current weapon (no round limit)
+	  UGL    — 6x40mm grenades detected from weapon's UGL muzzle
 	  MIXED  — 180 rifle rounds + 2 pistol mags + 2 frags + 2 smokes
 */
 
