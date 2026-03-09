@@ -5,20 +5,25 @@ class CGQC_BackpackNametag : ScriptComponent
 {
     // Store the last known owner name so we don't lose it
     string m_sLastOwnerName;
+	string m_sOriginalName;
 
     override void OnPostInit(IEntity owner)
-    {
-        super.OnPostInit(owner);
+	{
+		super.OnPostInit(owner);
 
-        InventoryItemComponent invItem = InventoryItemComponent.Cast(
-            owner.FindComponent(InventoryItemComponent)
-        );
+		// Store the original name once on init, before any renaming
+		InventoryItemComponent invItem = InventoryItemComponent.Cast(
+			owner.FindComponent(InventoryItemComponent)
+		);
+		if (invItem)
+		{
+			UIInfo uiInfo = invItem.GetUIInfo();
+			if (uiInfo)
+				m_sOriginalName = uiInfo.GetName();
+		}
 
-        if (!invItem)
-            return;
-
-        invItem.m_OnParentSlotChangedInvoker.Insert(OnParentSlotChanged);
-    }
+		invItem.m_OnParentSlotChangedInvoker.Insert(OnParentSlotChanged);
+	}
 	
 	// Get name from mod CustomName
 	string GetCustomPlayerName(int playerID)
@@ -42,6 +47,10 @@ class CGQC_BackpackNametag : ScriptComponent
 		// Skip if already named
 		if (!m_sLastOwnerName.IsEmpty())
         	return;
+		
+		// Only fire when item is dropped to the world (newSlot = null)
+		if (newSlot)
+			return;
 		 
         // We care about who HAD it — that's the dropper
         if (!oldSlot)
@@ -70,12 +79,13 @@ class CGQC_BackpackNametag : ScriptComponent
         if (playerID == 0)
             return; // Not a player (could be AI, vehicle, etc.)
 
-        //string playerName = pm.GetPlayerName(playerID);
-		string playerName = GetCustomPlayerName(playerID);
+        string playerName = GetCustomPlayerName(playerID);
         if (playerName.IsEmpty())
             return;
 
         m_sLastOwnerName = playerName;
+		
+		/* Bad. Causes issue
 
         // Now rename the bag
         InventoryItemComponent invItem = InventoryItemComponent.Cast(
@@ -90,39 +100,44 @@ class CGQC_BackpackNametag : ScriptComponent
 		
 		string m_oldName = uiInfo.GetName();
         uiInfo.SetName(m_sLastOwnerName + "'s " + m_oldName);
-        
+        */
     }
+	
+	// Returns the tagged display name for use in the action
+	string GetTaggedName()
+	{
+		if (m_sLastOwnerName.IsEmpty())
+			return m_sOriginalName;
+
+		return m_sLastOwnerName + "'s " + m_sOriginalName;
+	}
 }
 
-[ComponentEditorProps(category: "CGQC", description: "Shows owner name as action label")]
 
+// Custom action with name included
+[ComponentEditorProps(category: "CGQC", description: "Shows owner name as action label")]
 class CGQC_BackpackNameAction : ScriptedUserAction
 {
-    override bool GetActionNameScript(out string outName)
-    {
-         InventoryItemComponent invItem = InventoryItemComponent.Cast(
-        GetOwner().FindComponent(InventoryItemComponent)
-   		 );
-	    if (!invItem)
-	        return false;
-	
-	    UIInfo uiInfo = invItem.GetUIInfo();
-	    if (!uiInfo)
-	        return false;
-	
-	    outName = uiInfo.GetName();
-	    return true;
-    }
+	override bool GetActionNameScript(out string outName)
+	{
+		CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+			GetOwner().FindComponent(CGQC_BackpackNametag)
+		);
+		if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+			return false;
 
-    override bool CanBeShownScript(IEntity user)
-    {
-        CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
-            GetOwner().FindComponent(CGQC_BackpackNametag)
-        );
-        // Only show the action if the bag has been named
-        return nametag && !nametag.m_sLastOwnerName.IsEmpty();
-    }
+		outName = nametag.GetTaggedName();
+		return true;
+	}
 
-    override bool CanBePerformedScript(IEntity user) { return true; }
-    override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity) {}
+	override bool CanBeShownScript(IEntity user)
+	{
+		CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+			GetOwner().FindComponent(CGQC_BackpackNametag)
+		);
+		return nametag && !nametag.m_sLastOwnerName.IsEmpty();
+	}
+
+	override bool CanBePerformedScript(IEntity user) { return true; }
+	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity) {}
 }
