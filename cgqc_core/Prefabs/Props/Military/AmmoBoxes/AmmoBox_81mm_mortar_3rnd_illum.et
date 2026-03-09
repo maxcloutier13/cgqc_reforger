@@ -1,0 +1,19 @@
+GenericEntity : "{3D5594CC62AAFB88}Prefabs/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_UniversalInventoryStorageComponent "{68D20C27862BFF94}" {
+   Attributes SCR_ItemAttributeCollection "{68D2164BD5366115}" {
+    ItemDisplayName SCR_InventoryUIInfo "{68D2164BCD33C07E}" {
+     Name "Ammo Box 81mm Mortar 3rnd Illum"
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{68D20C26ADAA1281}" {
+     SlotTemplate InventoryStorageSlot Rounds {
+      Prefab "{DD2065AE34D8DFA9}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_Illum_M853A1.et"
+     }
+    }
+   }
+  }
+ }
+}

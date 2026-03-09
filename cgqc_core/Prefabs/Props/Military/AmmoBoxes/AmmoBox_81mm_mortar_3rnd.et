@@ -1,0 +1,50 @@
+GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_FilteredInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{68D20C27862BFF94}" {
+   Attributes SCR_ItemAttributeCollection "{68D2164BD5366115}" {
+    ItemDisplayName SCR_InventoryUIInfo "{68D2164BCD33C07E}" {
+     Name "Ammo Box 81mm Mortar 3rnd HE"
+     Description "#AR-Ammobox_81mm_Mortar_3rnd_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{68D2164BF9F34AF2}" {
+     Weight 0.9
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 2500
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68D2164BBBE418EB}" {
+      CameraOrbitAngles -10 10 0
+      CameraDistanceToItem 0.65
+      LodModel 1
+     }
+     CharacterModifierAttributes "{68D2164BA86C0AFE}" {
+      StanceLimits 0.025 1
+      SpeedLimit 1.7
+      ADSSpeedLimit 1.7
+      SpeedLimitItemPrimaryAction 0
+      SpeedLimitHighready 1.7
+      CanBeEquippedInVehicle 0
+      AllowJumping 0
+     }
+    }
+   }
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 6300
+   MaxItemSize 8 8 20
+   MultiSlots {
+    MultiSlotConfiguration "{68D20C26ADAA1281}" {
+     SlotTemplate InventoryStorageSlot Rounds {
+      Prefab "{38BAE094333E31BF}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_HE_M821.et"
+     }
+     NumSlots 3
+    }
+   }
+   m_fMaxWeight 17
+  }
+ }
+}
