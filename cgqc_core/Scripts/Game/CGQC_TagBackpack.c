@@ -194,3 +194,66 @@ modded class SCR_InventoryMenuUI
         NavigationBarUpdate();
     }
 }
+
+
+// Highlight the player's items
+modded class SCR_InventorySlotStorageUI
+{
+    override protected void Init()
+    {
+        super.Init();
+        ApplyNametagHighlight();
+    }
+
+    protected void ApplyNametagHighlight()
+    {
+		PrintFormat("CGQC: ApplyNametagHighlight called, m_pItem=%1", m_pItem);
+		
+        if (!m_pItem)
+            return;
+
+        IEntity item = m_pItem.GetOwner();
+		
+		PrintFormat("CGQC: item=%1", item);
+		
+        if (!item)
+            return;
+
+        CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+            item.FindComponent(CGQC_BackpackNametag));
+		
+        PrintFormat("CGQC slot item: %1 | nametag: %2", item, nametag);
+		if (nametag){
+		    PrintFormat("CGQC lastOwnerName: [%1]", nametag.m_sLastOwnerName);
+		}
+		else{
+			Print("CGQC lastOwnerName: Unset")
+		}
+			
+		if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+		    return;
+
+        PlayerController pc = GetGame().GetPlayerController();
+        if (!pc)
+            return;
+
+        string localName = nametag.GetCustomPlayerName(pc.GetPlayerId());
+        if (nametag.m_sLastOwnerName != localName)
+            return;
+
+        if (!m_widget)
+            return;
+
+        Widget highlight = m_widget.FindAnyWidget("BackgroundColor");
+		PrintFormat("CGQC: highlight widget = %1", highlight);
+		if (highlight)
+		{
+		    highlight.SetVisible(true);
+		    highlight.SetEnabled(true);
+		    highlight.SetOpacity(1.0);
+		    ImageWidget img = ImageWidget.Cast(highlight);
+		    if (img)
+		        img.SetColor(new Color(0/255.0, 61/255.0, 165/255.0, 0.8));
+		}
+    }
+}
