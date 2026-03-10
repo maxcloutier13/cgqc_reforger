@@ -197,30 +197,41 @@ modded class SCR_InventoryMenuUI
 
 
 // Highlight the player's items
-class CGQC_NametagHighlightHelper
+modded class SCR_InventorySlotStorageUI
 {
-    static void ApplyHighlight(InventoryItemComponent pItem, SCR_InventoryStorageBaseUI pStorageUI, Widget widget)
+    override protected void Init()
     {
-		PrintFormat("CGQC: storageUI type = %1", pStorageUI.Type());
+        super.Init();
+        ApplyNametagHighlight();
+    }
+
+    protected void ApplyNametagHighlight()
+    {
+		PrintFormat("CGQC: ApplyNametagHighlight called, m_pItem=%1", m_pItem);
 		
-        if (!pStorageUI)
+        if (!m_pItem)
             return;
 
-        if (pStorageUI.IsInherited(SCR_InventoryStoragesListUI))
-            return;
-
-        if (!pItem)
-            return;
-
-        IEntity item = pItem.GetOwner();
+        IEntity item = m_pItem.GetOwner();
+		
+		PrintFormat("CGQC: item=%1", item);
+		
         if (!item)
             return;
 
         CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
             item.FindComponent(CGQC_BackpackNametag));
-
-        if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
-            return;
+		
+        PrintFormat("CGQC slot item: %1 | nametag: %2", item, nametag);
+		if (nametag){
+		    PrintFormat("CGQC lastOwnerName: [%1]", nametag.m_sLastOwnerName);
+		}
+		else{
+			Print("CGQC lastOwnerName: Unset")
+		}
+			
+		if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+		    return;
 
         PlayerController pc = GetGame().GetPlayerController();
         if (!pc)
@@ -230,29 +241,19 @@ class CGQC_NametagHighlightHelper
         if (nametag.m_sLastOwnerName != localName)
             return;
 
-        if (!widget)
+        if (!m_widget)
             return;
 
-        ImageWidget img = ImageWidget.Cast(widget.FindAnyWidget("BackgroundColor"));
-        if (img)
-            img.SetColor(new Color(12/255.0, 96/255.0, 255/255.0, 0.1));
-    }
-}
-
-modded class SCR_InventorySlotUI
-{
-    override void Refresh()
-    {
-        super.Refresh();
-        CGQC_NametagHighlightHelper.ApplyHighlight(m_pItem, m_pStorageUI, m_widget);
-    }
-}
-
-modded class SCR_InventorySlotStorageUI
-{
-    override protected void Init()
-    {
-        super.Init();
-        CGQC_NametagHighlightHelper.ApplyHighlight(m_pItem, m_pStorageUI, m_widget);
+        Widget highlight = m_widget.FindAnyWidget("BackgroundColor");
+		PrintFormat("CGQC: highlight widget = %1", highlight);
+		if (highlight)
+		{
+		    highlight.SetVisible(true);
+		    highlight.SetEnabled(true);
+		    highlight.SetOpacity(1.0);
+		    ImageWidget img = ImageWidget.Cast(highlight);
+		    if (img)
+		        img.SetColor(new Color(0/255.0, 61/255.0, 165/255.0, 0.8));
+		}
     }
 }
