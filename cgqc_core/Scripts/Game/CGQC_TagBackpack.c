@@ -197,41 +197,28 @@ modded class SCR_InventoryMenuUI
 
 
 // Highlight the player's items
-modded class SCR_InventorySlotStorageUI
+class CGQC_NametagHighlightHelper
 {
-    override protected void Init()
+    static void ApplyHighlight(InventoryItemComponent pItem, SCR_InventoryStorageBaseUI pStorageUI, Widget widget)
     {
-        super.Init();
-        ApplyNametagHighlight();
-    }
-
-    protected void ApplyNametagHighlight()
-    {
-		PrintFormat("CGQC: ApplyNametagHighlight called, m_pItem=%1", m_pItem);
-		
-        if (!m_pItem)
+        if (!pStorageUI)
             return;
 
-        IEntity item = m_pItem.GetOwner();
-		
-		PrintFormat("CGQC: item=%1", item);
-		
+        if (pStorageUI.IsInherited(SCR_InventoryStoragesListUI))
+            return;
+
+        if (!pItem)
+            return;
+
+        IEntity item = pItem.GetOwner();
         if (!item)
             return;
 
         CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
             item.FindComponent(CGQC_BackpackNametag));
-		
-        PrintFormat("CGQC slot item: %1 | nametag: %2", item, nametag);
-		if (nametag){
-		    PrintFormat("CGQC lastOwnerName: [%1]", nametag.m_sLastOwnerName);
-		}
-		else{
-			Print("CGQC lastOwnerName: Unset")
-		}
-			
-		if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
-		    return;
+
+        if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+            return;
 
         PlayerController pc = GetGame().GetPlayerController();
         if (!pc)
@@ -241,19 +228,20 @@ modded class SCR_InventorySlotStorageUI
         if (nametag.m_sLastOwnerName != localName)
             return;
 
-        if (!m_widget)
+        if (!widget)
             return;
 
-        Widget highlight = m_widget.FindAnyWidget("BackgroundColor");
-		PrintFormat("CGQC: highlight widget = %1", highlight);
-		if (highlight)
-		{
-		    highlight.SetVisible(true);
-		    highlight.SetEnabled(true);
-		    highlight.SetOpacity(1.0);
-		    ImageWidget img = ImageWidget.Cast(highlight);
-		    if (img)
-		        img.SetColor(new Color(0/255.0, 61/255.0, 165/255.0, 0.8));
-		}
+        ImageWidget img = ImageWidget.Cast(widget.FindAnyWidget("BackgroundColor"));
+        if (img)
+            img.SetColor(new Color(12/255.0, 96/255.0, 255/255.0, 0.1));
+    }
+}
+
+modded class SCR_InventorySlotUI
+{
+     override protected void Init()
+    {
+        super.Init();
+        CGQC_NametagHighlightHelper.ApplyHighlight(m_pItem, m_pStorageUI, m_widget);
     }
 }
