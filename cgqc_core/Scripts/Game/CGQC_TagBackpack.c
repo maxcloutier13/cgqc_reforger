@@ -233,7 +233,7 @@ class CGQC_NametagHighlightHelper
 
         ImageWidget img = ImageWidget.Cast(widget.FindAnyWidget("BackgroundColor"));
         if (img)
-            img.SetColor(new Color(12/255.0, 96/255.0, 255/255.0, 0.1));
+            img.SetColor(new Color(12/255.0, 96/255.0, 255/255.0, 0.25));
     }
 }
 
