@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqcmedical"
- GUID "68C24D295E407853"
- TITLE "cgqc_medical"
+ ID "cgqcmedfix"
+ GUID "68D64DE25E44D6C6"
+ TITLE "cgqc_med_fix"
  Dependencies {
-  "58D0FB3206B6F859" "66BB20CA43330BC2" "671F73D99978B4F2" "68D64DE25E44D6C6" "655A5A1D962B3E77" ""
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "684B2E4B5C7A1ECA"
  }
  Configurations {
   GameProjectConfig PC {

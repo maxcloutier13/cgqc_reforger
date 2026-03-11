@@ -1,0 +1,11 @@
+GenericEntity : "{0AD8F5CBED139651}Prefabs/Props/Military/Arsenal/AmmoBoxes/AmmoBoxArsenal_Medical_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  AF_MASCASSpawnerComponent "{684B2E612DA48392}" {
+   m_CasualtyPrefab "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+  }
+  AF_SingleCasualtySpawnerComponent "{684B2E6123D1DD09}" {
+   m_CasualtyPrefab "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+  }
+ }
+}
