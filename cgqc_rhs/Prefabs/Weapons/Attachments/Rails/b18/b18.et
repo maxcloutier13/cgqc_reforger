@@ -1,4 +1,4 @@
-GenericEntity : "{CCA2C7A662439781}Prefabs/Weapons/Attachments/Rails/b18/b18.et" {
+GameEntity : "{CCA2C7A662439781}Prefabs/Weapons/Attachments/Rails/b18/b18.et" {
  ID "4BA426CBAED42A14"
  components {
   MeshObject "{5DA5388D2B6E1B91}" {

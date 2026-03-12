@@ -38,9 +38,6 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
       "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
      }
     }
-    ItemsInitConfigurationItem "{68D50BECE3392A81}" {
-     TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/radio/Pouch_AVS_MBITR_Radio_Coy.et"
-    }
     ItemsInitConfigurationItem "{68B908083C369512}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/M2402/Pouch_PCGEN3_MG.et"
      PrefabsToSpawn {
@@ -55,6 +52,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{68C5090BDA509DED}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/pistol2/Pouch_Highspeed_Pistol.et"
+    }
+    ItemsInitConfigurationItem "{68D50BECE3392A81}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_MG.et/radio/Pouch_AVS_MBITR_Radio_Coy.et"
     }
     ItemsInitConfigurationItem "{68C63817613AB3A0}" {
      Enabled 0

@@ -39,14 +39,41 @@ SCR_AIWorld SCR_AIWorld_Kunar : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 1843.281 234.204 1496.201
 }
-SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
- coords 1843.281 233.951 1495.201
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 2347.346 163.5 1823.239
+ m_bAutoPlayerRespawn 1
+ m_bAdminMode 0
+ m_bRemoveRedundantUnits 1
+ m_bRemoveSquadMarkers 1
+ m_bDisableChat 1
+ m_bDisableGarbageSystem 1
+ m_bDisableArmaVision 0
 }
 GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
  coords 2368.313 163.5 1808.942
 }
 GenericEntity : "{158D4D0B77B38B1E}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC_Weapons.et" {
  coords 2355.07 163.5 1812.359
+}
+SCR_AIGroup : "{29BF20373DBD5E65}Prefabs/Groups/INDFOR/Group_CGQC_Spartan_Alpha.et" {
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "FireTeam"
+   "Min Distance to Raytrace an Offset" 0.1
+   "Projection distance" 0.5
+  }
+ }
+ coords 2361.914 163.379 1814.858
+ angles 0 -177.366 0
+ m_bPlayable 1
+ m_sCustomNameSet "Spartan"
+ m_bSetPlayable 1
+}
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 2355.75 163.5 1814.309
+ m_sTitle "Kunar Valley"
+ m_sTextData "Bievenue dans la vallée de Kunar. Not really. Welcome to hell. La zone est tranquille pourl l'instant mais la saison du jihad approche à grands pas. Inshallah."
+ m_bShowForAnyFaction 1
 }
 GenericEntity : "{45D8A2F729A26A25}PrefabsEditable/Auto/Structures/Signs/Military/E_Sign_FieldHospital_US_01.et" {
  coords 2368.208 163.514 1807.799
@@ -74,6 +101,9 @@ $grp Vehicle : "{5555DCAFADB8CE2A}Prefabs/Vehicles/Wheeled/S105/S105_rally.et" {
   angles 0 179.684 0
  }
 }
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 2358.814 163.5 1815.073
+}
 $grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
  Mortar_M252_68D235176B992E50 {
   coords 2368.814 163.5 1822.718
@@ -99,14 +129,32 @@ GenericEntity : "{A13F6A7F82DF031C}Prefabs/Compositions/Slotted/SlotFlatLarge/He
  coords 2360.075 163.591 1882.358
  angles 0 -90.259 0
 }
+PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ coords 2357.542 163.5 1815.027
+ m_sTitle "Training"
+ m_sTextData "Profitez de l'accalmie pour pratiquer vos talents côté médical, mortier, pilote. À vous de jouer. "
+ m_bShowForAnyFaction 1
+ m_sFactionKey "CGQC"
+}
 Vehicle LAV25_MERDC1 : "{B7A8BAA37CB0AC2B}Prefabs/Vehicles/Wheeled/LAV25/LAV25_MERDC.et" {
  coords 2355.887 163.5 1827.703
 }
 SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 2357.46 163.5 1814.358
+ coords 2357.43 163.5 1816.422
  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
   Name "COP Korengal"
  }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 2354.624 163.5 1814.082
+ angles 0 0 0
+ m_MarkerColor 0.071 0.192 0.561 1
+ m_sQuadName "flag-2"
+ m_sDescription "COP Korengal"
+ m_aVisibleForFactions {
+  "CGQC"
+ }
+ m_bShowForAnyFaction 1
 }
 GenericEntity : "{D2E719DAAB25CCE9}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC_Equipment.et" {
  coords 2359.946 163.5 1812.429

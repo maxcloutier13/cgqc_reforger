@@ -1,4 +1,4 @@
-GenericEntity : "{48414BA60F3B0DFA}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_FA762SS.et" {
+GameEntity : "{48414BA60F3B0DFA}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_FA762SS.et" {
  ID "6158E27763908B9F"
  components {
   MeshObject "{5C46D45E03D7AD12}" {
