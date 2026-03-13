@@ -1,0 +1,73 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090B1EF"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Pilot"
+    Description "Helicopter Pilot"
+    m_aAutoLabels {
+     SIZE_M ROLE_RADIOOPERATOR
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{613BF23BE61C4185}Prefabs/Weapons/Rifles/M4A1/Variants/ION/Variants/Rifle_Mk18_Pilot.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   Enabled 0
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{11546318459958B3}Prefabs/Characters/HeadGear/Helmet_SPH4_01/SPH-5 (Black).et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{D7F363876C6A8A6B}Prefabs/Characters/Uniforms/Long Sleeve/Long Sleeve (Black).et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{68CF844B606428D9}Prefabs/Characters/Vests/Vest_PCGen_III/Vest_PCGen_III_light.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{24F6795DC36C79D7}Prefabs/Characters/Footwear/Boots_Luma/Footwear_Luma.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{2605C36FB0F7641A}Prefabs/Characters/Vests/Vest_PCGen_III/Variants/Vest_PCGen_III_Pilot.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{ABB779CFC2E11E89}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Covert.et"
+    }
+    LoadoutSlotInfo Neck {
+     Prefab "{651F0CCA02166DB8}Prefabs/Characters/Masks/GRS_shemagh_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     TargetStorage "Jacket/Long Sleeve (Black).et"
+     PrefabsToSpawn {
+      "{EC9BDA3D9DDD8795}Prefabs/Weapons/Flares/FlareStarParachute_M127A1_white.et" "{EC9BDA3D9DDD8795}Prefabs/Weapons/Flares/FlareStarParachute_M127A1_white.et" "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et"
+     }
+    }
+    ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
+     TargetStorage "Jacket/Long Sleeve (Black).et"
+    }
+    ItemsInitConfigurationItem "{68B908099C22257E}" {
+     TargetStorage "Vest/Vest_PCGen_III_Pilot.et/Placard/Pouch_Placard.et"
+     PrefabsToSpawn + {
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68C5090BDA509DED}" {
+     TargetStorage "Vest/Vest_PCGen_III_Pilot.et/pistol2/Pouch_Highspeed_Pistol_MCBlk.et"
+    }
+    ItemsInitConfigurationItem "{68D50BECE3392A81}" {
+     TargetStorage "Vest/Vest_PCGen_III_Pilot.et/flex/Pouch_Shaw_Raid_MCBlk.et"
+    }
+   }
+  }
+ }
+}

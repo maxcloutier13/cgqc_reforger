@@ -11,6 +11,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
    }
   }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{D3431533F2C9FF51}Prefabs/Weapons/Rifles/Rifle_AR15_145_base.et"
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
    WeaponTemplate ""
   }
@@ -20,7 +23,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{A36613EAD646961D}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_XP_MC_AMP.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{99B347D92F16A6D3}Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_od.et"
+     Prefab "{51A134742344FF34}Prefabs/Items/Equipment/Backpacks/AVS Zipon/AVS_Zipon_Backpack_MC.et"
     }
    }
   }
@@ -40,7 +43,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{68C85D44EB046B8E}" {
-     TargetStorage "Back/Backpack_511_rush12_od.et"
+     TargetStorage "Back/AVS_Zipon_Backpack_MC.et"
      PrefabsToSpawn {
       "{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et"
      }

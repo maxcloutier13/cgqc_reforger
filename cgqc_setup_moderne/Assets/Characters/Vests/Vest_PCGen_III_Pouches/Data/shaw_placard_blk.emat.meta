@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{383223AADA403B0D}Assets/Characters/Vests/Vest_PCGen_III_Pouches/Data/shaw_placard_blk.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

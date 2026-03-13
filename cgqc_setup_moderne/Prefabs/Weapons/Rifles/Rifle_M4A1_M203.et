@@ -1,0 +1,39 @@
+GenericEntity : "{00D6DCF68C664480}Prefabs/Weapons/Rifles/M4A1/Rifle_M4A1_M203_BLOCK_II.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
+      Prefab "{BCA2E16F34C3F9E8}Scopes/Leupold HAMR/Prefabs/Optic_HAMR.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Prefab "{9A185BC14F1166B4}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_tan.et"
+     }
+    }
+    AttachmentSlotComponent "{609EE5047488AAA1}" {
+     AttachmentSlot InventoryStorageSlot REAR_IRONSIGHT {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+      Enabled 0
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626713EF43D3CC9E}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{7C4C82A5CC86129B}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_WARDEN.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 74.613 1 146.55
+}

@@ -15,6 +15,9 @@ SCR_ChimeraCharacter : "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Hat {
      Prefab "{87C7A9E8D5A3FB49}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/ION/Helmet_OPSCORE_SF_BLK_Peltor_ION5.et"
     }
+    LoadoutSlotInfo Back {
+     Prefab "{1EB174F529600A06}Prefabs/Items/Equipment/Backpacks/Radio_Backpack/Radio_Backpack.et"
+    }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {

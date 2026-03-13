@@ -11,6 +11,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
    }
   }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{040637109D616F8B}Prefabs/Weapons/Rifles/Rifle_M4A1_M203.et"
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
    WeaponTemplate ""
   }
@@ -31,6 +34,13 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68D50BECE3392A81}" {
      PrefabsToSpawn {
       "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et" ""
+     }
+    }
+    ItemsInitConfigurationItem "{68C6297EBDE04DA2}" {
+     Enabled 1
+     TargetStorage "Vest/Vest_JPC_okinawa_MC.et/raid/Pouch_Shaw_Raid_MC.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
      }
     }
    }

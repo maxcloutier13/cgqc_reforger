@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{613BF23BE61C4185}Prefabs/Weapons/Rifles/M4A1/Variants/ION/Variants/Rifle_Mk18_Pilot.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

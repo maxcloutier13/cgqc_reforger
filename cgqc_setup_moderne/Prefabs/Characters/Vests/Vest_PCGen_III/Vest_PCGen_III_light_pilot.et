@@ -1,0 +1,24 @@
+GenericEntity : "{EC26CF977BD3B07B}Prefabs/Characters/Vests/Vest_PCGen_III/Vest_PCGen_III_light_base.et" {
+ ID "50D8C49B3558F152"
+ components {
+  RHS_ClothNodeStorageComponent "{5E8ECC6318C07954}" {
+   Attributes SCR_ItemAttributeCollection "{5E8ECC63152ECC55}" {
+    ItemDisplayName UIInfo "{5E8ECC6310D5F5D3}" {
+     Name "#RHS-PC_Gen_III_Light_Name Black"
+    }
+   }
+  }
+  SCR_ItemOutfitFactionComponent "{64D170D31B27039B}" {
+   m_OutfitDataHolder SCR_OutfitFactionDataHolder "{64D170D31ACC5389}" {
+    m_aOutfitFactionData {
+     SCR_OutfitFactionData "{64D170D315AEE057}" {
+      m_AffiliatedFactionKey "CGQC"
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   WornModel "{43C2326909DD97A8}Assets/Characters/Vests/Vest_PCGen_III/Vest_PCGen_III_light.xob"
+  }
+ }
+}

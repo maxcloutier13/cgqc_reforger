@@ -6,7 +6,7 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{E156A64CCF507E74}Prefabs/Weapons/Rifles/M4A1/Variants/ION/Variants/Rifle_AR15_GA_UD115_BLK_ION1.et"
+   WeaponTemplate "{9C97B50CC5DEBE40}Prefabs/Weapons/Rifles/Rifle_AR15_115_base.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
    WeaponTemplate "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
@@ -57,7 +57,7 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68B908099C22257E}" {
      TargetStorage "Vest/Vest_JPC_okinawa_MC.et/Pouch1/Pouch_jpc_placard_MC.et"
      PrefabsToSpawn {
-      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" ""
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{68B908083C369512}" {
@@ -69,7 +69,6 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{68C5090B32028647}" {
      TargetStorage "Vest/Vest_JPC_okinawa_MC.et/Tako/Pouch_Shaw_Flex_MC.et"
      PrefabsToSpawn {
-      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{68C5090BDA509DED}" {
@@ -85,6 +84,7 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{68C63817613AB3A0}" {
+     Enabled 0
      TargetStorage "Vest/Vest_JPC_okinawa_MC.et/tako/Pouch_PCGEN3_takoPouch_MC.et"
      PrefabsToSpawn {
       "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
@@ -104,11 +104,9 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{68C6297E9331202D}" {
      TargetStorage "Vest/Vest_JPC_okinawa_MC.et/flex/Pouch_Shaw_Flex_MC.et"
-     PrefabsToSpawn {
-      "{9749CCE07F466A68}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M995.et"
-     }
     }
     ItemsInitConfigurationItem "{68C6297EBDE04DA2}" {
+     Enabled 0
      TargetStorage "Vest/Vest_JPC_okinawa_MC.et/Tako/Pouch_Shaw_Flex_MC.et"
      PrefabsToSpawn {
       "{9749CCE07F466A68}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M995.et"
