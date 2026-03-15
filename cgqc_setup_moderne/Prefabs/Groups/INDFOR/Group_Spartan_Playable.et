@@ -1,0 +1,32 @@
+SCR_AIGroup : "{82D1BF8C4D7CB21B}Prefabs/Groups/INDFOR/Group_CGQC_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   "Min Distance to Raytrace an Offset" 0.3
+  }
+  SCR_AIConfigComponent "{512CC1759AE69D6D}" {
+   m_Skill 0.74
+  }
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "Spartan"
+    Description "Full CGQC Squad"
+    m_aAutoLabels {
+     GROUPSIZE_LARGE
+    }
+    m_MilitarySymbol SCR_MilitarySymbol "{68B908379E4F27B4}" {
+     m_Amplifier SQUAD
+    }
+   }
+  }
+  SCR_GroupIdentityComponent "{56366C5C50AD3CF2}" {
+   m_MilitarySymbol SCR_MilitarySymbol "{56366C5C4E32A359}" {
+    m_Amplifier SQUAD
+   }
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{A08E9945FA795A0F}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_SquadLeader_Moderne_P.et" "{856EF91D518A554E}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Medic_Moderne_P.et" "{87E166E1A468D041}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Teamleader_Moderne_P.et" "{4B85B0DC9BF34439}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Rifleman_Moderne_P.et" "{91FE2709DD8D79D5}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_LMG_Moderne_P.et" "{4B85B0DC9BF34439}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Rifleman_Moderne_P.et" "{87E166E1A468D041}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Teamleader_Moderne_P.et" "{4B85B0DC9BF34439}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Rifleman_Moderne_P.et" "{91FE2709DD8D79D5}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_LMG_Moderne_P.et" "{4B85B0DC9BF34439}Prefabs/Characters/Factions/INDFOR/CGQC/Playable/Character_CGQC_Rifleman_Moderne_P.et"
+ }
+ m_fMemberSpawnDelay 10
+}

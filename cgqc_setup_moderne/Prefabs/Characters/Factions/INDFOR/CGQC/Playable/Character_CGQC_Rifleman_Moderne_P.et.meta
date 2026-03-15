@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4B85B0DC9BF34439}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne_P.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
