@@ -5,6 +5,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Pilot"
     Description "Helicopter Pilot"
+    IconSetName "EditableEntity_Character_Helicopter_Pilot"
     m_aAutoLabels {
      SIZE_M ROLE_RADIOOPERATOR
     }
