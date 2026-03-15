@@ -32,5 +32,10 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{C5215479921A74F2}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Pilot_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
+  SCR_FactionPlayerLoadout "{68DE3388F224A608}" {
+   m_sLoadoutName "Sniper"
+   m_sLoadoutResource "{C8CB273EFB0E2140}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
  }
 }

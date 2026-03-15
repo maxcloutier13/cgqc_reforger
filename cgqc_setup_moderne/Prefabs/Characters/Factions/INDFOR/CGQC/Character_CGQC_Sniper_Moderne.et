@@ -1,0 +1,67 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090B1EF"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Sniper"
+    Description "Unité spécialisée dans le tir à longue portée"
+    IconSetName "EditableEntity_Character_Sharpshooter"
+    m_aAutoLabels {
+     SIZE_M ROLE_SHARPSHOOTER
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{01146792833C0877}Prefabs/Weapons/Rifles/M700/Rifle_M700_FDE.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate ""
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Vest {
+     Prefab "{38D600B4D232D9D9}Prefabs/Characters/Vests/Vest_JPC/variants/Vest_JPC_okinawa_Coy_sniper.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     PrefabsToSpawn + {
+      "{B70756E9489B011A}Prefabs/Items/Equipment/WeatherMeter/WeatherMeter_Kestrel4500/WeatherMeter_Kestrel4500.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68B908099C22257E}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et"
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68B908083C369512}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/Pouch1/Pouch_AVS_front_molle_Coy.et"
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68C5090B32028647}" {
+     TargetStorage ""
+    }
+    ItemsInitConfigurationItem "{68C5090BDA509DED}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/pistol/Pouch_Highspeed_Pistol.et"
+    }
+    ItemsInitConfigurationItem "{68D50BECE3392A81}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/radio/Pouch_AVS_MBITR_Radio_Coy.et"
+     PrefabsToSpawn {
+      "{94A3DCC6DD03EEF4}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163.et" ""
+     }
+    }
+    ItemsInitConfigurationItem "{68C6297E9331202D}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/takobelt2/Pouch_PCGEN3_util.et"
+     PrefabsToSpawn {
+      "{F20D1122BC5CD9F2}Prefabs/Weapons/Magazines/glock_magazine/Magazine_9x19_Glock_17rnd.et" "{F20D1122BC5CD9F2}Prefabs/Weapons/Magazines/glock_magazine/Magazine_9x19_Glock_17rnd.et"
+     }
+    }
+   }
+  }
+ }
+}
