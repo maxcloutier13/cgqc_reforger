@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcaimilsim"
+ GUID "68DE15A04B518582"
+ TITLE "cgqc_ai_milsim"
+ Dependencies {
+  "58D0FB3206B6F859" "5F268647F8A1A1F4" "631CD0023FD58D35"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
