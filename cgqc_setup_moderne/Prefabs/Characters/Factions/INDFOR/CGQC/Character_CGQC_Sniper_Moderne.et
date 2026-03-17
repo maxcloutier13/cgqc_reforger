@@ -19,6 +19,11 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
+    LoadoutSlotInfo Boots {
+     Prefab "{BB54DDF97F8B46B3}Prefabs/Clothing/MC Lowa Boots.et"
+    }
+    LoadoutSlotInfo Back {
+    }
     LoadoutSlotInfo Vest {
      Prefab "{38D600B4D232D9D9}Prefabs/Characters/Vests/Vest_JPC/variants/Vest_JPC_okinawa_Coy_sniper.et"
     }
@@ -48,6 +53,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{68C5090BDA509DED}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/pistol/Pouch_Highspeed_Pistol.et"
+     PrefabsToSpawn + {
+      "{F20D1122BC5CD9F2}Prefabs/Weapons/Magazines/glock_magazine/Magazine_9x19_Glock_17rnd.et"
+     }
     }
     ItemsInitConfigurationItem "{68D50BECE3392A81}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/radio/Pouch_AVS_MBITR_Radio_Coy.et"
@@ -55,11 +63,17 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
       "{94A3DCC6DD03EEF4}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163.et" ""
      }
     }
+    ItemsInitConfigurationItem "{68C6297E1FA2C517}" {
+     TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/pistol2/Pouch_Highspeed_Pistol.et"
+    }
     ItemsInitConfigurationItem "{68C6297E9331202D}" {
      TargetStorage "Vest/Vest_JPC_okinawa_Coy_sniper.et/takobelt2/Pouch_PCGEN3_util.et"
      PrefabsToSpawn {
       "{F20D1122BC5CD9F2}Prefabs/Weapons/Magazines/glock_magazine/Magazine_9x19_Glock_17rnd.et" "{F20D1122BC5CD9F2}Prefabs/Weapons/Magazines/glock_magazine/Magazine_9x19_Glock_17rnd.et"
      }
+    }
+    ItemsInitConfigurationItem "{68C6297F5F39F7E0}" {
+     TargetStorage ""
     }
    }
   }
