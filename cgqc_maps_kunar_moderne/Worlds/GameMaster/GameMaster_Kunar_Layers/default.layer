@@ -339,6 +339,62 @@ $grp SCR_FiringRangeTarget : "{379D34B0D41DA810}Prefabs/Props/Military/Training/
   coords 4030.889 240.981 2307.901
   angles 0 -88.616 0
  }
+ {
+  coords 1806.874 172.323 3030.378
+  angles 0 73.41 0
+ }
+ {
+  coords 1814.994 169.604 3078.167
+  angles 0 73.41 0
+ }
+ {
+  coords 1817.7 175.433 3096.627
+  angles 0 73.41 0
+ }
+ {
+  coords 1826.668 167.586 3088.804
+  angles 0 73.41 0
+ }
+ {
+  coords 1831.628 154.985 3041.36
+  angles 0 73.41 0
+ }
+ {
+  coords 1827.288 174.141 3125.842
+  angles 0 73.41 0
+ }
+ {
+  coords 1830.016 167.216 3159.029
+  angles 0 73.41 0
+ }
+ {
+  coords 1840.239 161.378 3197.942
+  angles 0 73.41 0
+ }
+ {
+  coords 1841.356 163.406 3227.025
+  angles 0 73.41 0
+ }
+ {
+  coords 1847.277 168.948 3273.145
+  angles 0 73.41 0
+ }
+ {
+  coords 1909.764 104.899 3220.702
+  angles 0 73.41 0
+ }
+ {
+  coords 1880.469 118.775 3187.137
+  angles 0 73.41 0
+ }
+ {
+  coords 1847.352 147.507 3073.171
+  angles 0 73.41 0
+ }
+ {
+  coords 1850.387 141.849 3030.525
+  angles 0 73.41 0
+ }
 }
 Vehicle TWQ_1_Desert1 : "{3B0637FF78D75279}Prefabs/Vehicles/Wheeled/M998/TWQ-1_Desert.et" {
  coords 2626.404 10 3190.409
@@ -482,6 +538,7 @@ $grp Vehicle : "{B83B4C8BE05C9554}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_U
 $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
  {
   coords 2667.242 8 3108.311
+  m_iPriority 3
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "Barracks"
   }
@@ -507,7 +564,7 @@ $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et"
   angles 0 -57.137 0
   m_iPriority 2
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "CQB Training"
+   Name "CQB"
   }
  }
  {
@@ -555,7 +612,7 @@ $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et"
   angles 0 -58.605 0
   m_iPriority 2
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Sniping Training"
+   Name "Sniping"
   }
  }
 }
