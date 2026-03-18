@@ -52,5 +52,10 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{F03DE84EEA47BAAC}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_DroneOp_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
+  SCR_FactionPlayerLoadout "{68E4289CEE0C054B}" {
+   m_sLoadoutName "DroneOp FPV"
+   m_sLoadoutResource "{B980DC6789D231D4}Prefabs/Characters/Factions/INDFOR/2026/Character_CGQC_Student_2026.et"
+   m_sAffiliatedFaction "CGQC"
+  }
  }
 }

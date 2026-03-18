@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{43A199F09C1F7B0A}Configs/EntityCatalog/CGQC/Pool_Base_Student_Hat.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,3 +1,19 @@
 SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
  ID "520EC961A090B1EF"
+ components {
+  RandomGearComponent "{68AAF221635F9889}" {
+   m_HeadConfig SCR_GearPoolConfig "{68E44AEBBCA54618}" {
+    m_aGearPool {
+    }
+   }
+   m_TopsConfig SCR_GearPoolConfig "{68E44AEAD6DDDD21}" {
+    m_aGearPool {
+    }
+   }
+   m_BootsConfig SCR_GearPoolConfig "{68E44AEACA1D16CF}" {
+    m_aGearPool {
+    }
+   }
+  }
+ }
 }
