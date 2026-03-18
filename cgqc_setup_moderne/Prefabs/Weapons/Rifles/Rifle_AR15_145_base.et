@@ -53,10 +53,16 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
       Prefab "{BCA2E16F34C3F9E8}Scopes/Leupold HAMR/Prefabs/Optic_HAMR.et"
      }
     }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+      Offset 0 0.1114 0.3914
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
     AttachmentSlotComponent "{629ADD528EE856C1}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
       Offset 0.0301 0.0819 0.4119
-      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+      Prefab "{17A5656F850F6FB8}Prefabs/Weapons/Attachments/Lights/Light_m300c_base.et"
      }
     }
     MuzzleComponent "{CA6BE4D6B867541F}" {

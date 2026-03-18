@@ -48,10 +48,21 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
       Prefab "{083930626BBB5C4D}Scopes/Sig Sauer Romeo 5/Prefabs/Optic_ROMEO5_MAG3.et"
      }
     }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+      Offset 0 0.1114 0.4025
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    AttachmentSlotComponent "{629ADD50107BFFEA}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD500DE777C8}" {
+      Enabled 1
+     }
+    }
     AttachmentSlotComponent "{629ADD528EE856C1}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
       Offset 0.0292 0.0819 0.4125
-      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+      Prefab "{C32EC74B4B0C8CA1}Prefabs/Weapons/Attachments/Lights/Light_m300c_blk.et"
      }
     }
     MuzzleComponent "{CA6BE4D6B867541F}" {

@@ -3,7 +3,7 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
  components {
   MeshObject "{CFBAA4B701F95D69}" {
    Materials {
-    MaterialAssignClass "{68DA0D72D83619EF}" {
+    MaterialAssignClass "{68E4158C93EBB59D}" {
      SourceMaterial "LP_LOWER_ASSEMBLY"
      AssignedMaterial "{256E3EAD8337F156}Assets/Weapons/Rifles/m4a1/Data/GA_SUPERDUTY/LP_LOWER_ASSEMBLY_BLK.emat"
     }
@@ -15,8 +15,8 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
   SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
    Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
     ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
-     Name "CGQC AR 11.5\" v2"
-     Description "EOTech Variant"
+     Name "CGQC Recce 14.5\""
+     Description "Longer barrel to reach a bit further"
     }
    }
   }
@@ -29,7 +29,12 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
     }
     AttachmentSlotComponent "{5E0EEDA47E3F452D}" {
      AttachmentSlot InventoryStorageSlot Handguard {
-      Prefab "{DC5F233CE971E9F1}Prefabs/Weapons/Attachments/Handguards/Handguard_AR15_MK16_URGI/RHS_M4A1_MK16_105_BLK_RIS.et"
+      Prefab "{64C3155B05300C57}Prefabs/Weapons/Attachments/Handguards/Handguard_AR15_MK16_URGI/RHS_M4A1_MK16_135_QD_BLK_RIS.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA70372C8BA}" {
+     AttachmentSlot InventoryStorageSlot Barrel {
+      Prefab "{DEC892915E0A0259}Prefabs/Weapons/Rifles/M4A1/base_parts/RHS_M4_DD_14_5.et"
      }
     }
     AttachmentSlotComponent "{5E0EEDA7F53DE1B1}" {
@@ -45,20 +50,27 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
     AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
       Offset 0 0 0.03
-      Prefab "{EF8DE3EBC58AA0D2}Scopes/EoTech EXPS3/Prefabs/Optic_EXPS3_G33.et"
+      Prefab "{DD3199C6AC493E57}Scopes/Vortex Razor GenIII 1-10x24/Prefabs/Optic_VORTEX110_black.et"
+     }
+    }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+      Offset 0 0.1114 0.3914
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
      }
     }
     AttachmentSlotComponent "{629ADD528EE856C1}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
-      Offset 0.03 0.0819 0.3353
-      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+      Offset 0.0301 0.0819 0.4119
+      Prefab "{17A5656F850F6FB8}Prefabs/Weapons/Attachments/Lights/Light_m300c_base.et"
      }
     }
     MuzzleComponent "{CA6BE4D6B867541F}" {
      components {
       AttachmentSlotComponent "{626713EF43D3CC9E}" {
        AttachmentSlot InventoryStorageSlot Muzzle {
-        Prefab "{7C4C82A5CC86129B}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_WARDEN.et"
+        Offset 0 0 -0.0077
+        Prefab "{CB2ED665F4671DDA}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_RC3.et"
        }
       }
      }
@@ -70,5 +82,5 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
    }
   }
  }
- coords 0 0 0.048
+ coords 0 0 0.022
 }
