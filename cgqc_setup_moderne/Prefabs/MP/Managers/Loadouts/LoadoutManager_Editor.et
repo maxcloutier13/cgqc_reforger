@@ -37,5 +37,20 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{C8CB273EFB0E2140}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
+  SCR_FactionPlayerLoadout "{68E42894ED969286}" {
+   m_sLoadoutName "Spotter"
+   m_sLoadoutResource "{6C8BB177A78F7BEB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Spotter_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{68E4289490AD43C5}" {
+   m_sLoadoutName "DroneOp"
+   m_sLoadoutResource "{F03DE84EEA47BAAC}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_DroneOp_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{68E428949330F9C2}" {
+   m_sLoadoutName "DroneOp FPV"
+   m_sLoadoutResource "{F03DE84EEA47BAAC}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_DroneOp_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
  }
 }

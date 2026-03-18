@@ -20,7 +20,6 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{A36613EAD646961D}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_XP_MC_AMP.et"
     }
     LoadoutSlotInfo Back {
      Prefab "{51A134742344FF34}Prefabs/Items/Equipment/Backpacks/AVS Zipon/AVS_Zipon_Backpack_MC.et"

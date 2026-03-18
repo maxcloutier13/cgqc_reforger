@@ -1,0 +1,56 @@
+GenericEntity : "{E25FB3103F3E3AE4}Prefabs/Weapons/Rifles/M27IAR/Rifle_M38SDMR_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5CC8E73BB698D287}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot optics {
+      Offset 0 0.0031 0.0269
+      Prefab "{DD3199C6AC493E57}Scopes/Vortex Razor GenIII 1-10x24/Prefabs/Optic_VORTEX110_black.et"
+     }
+    }
+    AttachmentSlotComponent "{5CF88C80AF78DA73}" {
+     AttachmentSlot InventoryStorageSlot PicattinyRailTop {
+     }
+    }
+    AttachmentSlotComponent "{62995D48566EF6D2}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{62995D484DB4389A}" {
+      Prefab "{17A5656F850F6FB8}Prefabs/Weapons/Attachments/Lights/Light_m300c_base.et"
+      m_fCurrentSlideOffset -0.221
+     }
+    }
+    AttachmentSlotComponent "{62995D492878682F}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{62995D4921F33D80}" {
+      Offset -0.0018 0.123 0.2808
+      Angles 0 0 0
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    AttachmentSlotComponent "{631F58122CD73C1F}" {
+     AttachmentSlot InventoryStorageSlot bipodSlot {
+      Prefab "{23D34FB66BBC8BEE}Prefabs/Weapons/Attachments/Bipods/harris_bipod/rhs_lt706_harris.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626541D4146E1B36}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{B9C41AAC90570E50}Prefabs/Weapons/Attachments/Muzzle/KAC_NT4_QDSS/KAC_NT4_QDSS.et"
+       }
+      }
+     }
+    }
+   }
+  }
+  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
+   additionalActions {
+    RHS_FlipSightUserAction "{5CD11496CCF82C24}" {
+     m_bShouldBeFoldedByDefault 1
+    }
+    RHS_FlipSightUserAction "{5CD11C9D06036A25}" {
+     m_bShouldBeFoldedByDefault 1
+    }
+   }
+  }
+ }
+}
