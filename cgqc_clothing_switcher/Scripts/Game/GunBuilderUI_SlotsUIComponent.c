@@ -2,15 +2,26 @@ modded class GunBuilderUI_SlotsUIComponent
 {
     override void OnClicked(GunBuilderUI_MultifunctionSlotUIComponent comp, int button)
     {
-        Bacon_GunBuilderUI_SlotChoice choice = Bacon_GunBuilderUI_SlotChoice.Cast(comp.GetData());
-        if (choice && 
-            (choice.slotType == Bacon_GunBuilderUI_SlotType.CHARACTER_LOADOUT ||
-             choice.slotType == Bacon_GunBuilderUI_SlotType.REMOVE) &&
-            !choice.prefab.IsEmpty())
+        Bacon_GunBuilderUI ui = Bacon_GunBuilderUI.GetInstance();
+        
+        if (ui && ui.m_CharacterEntity)
         {
-            Bacon_GunBuilderUI ui = Bacon_GunBuilderUI.GetInstance();
-            if (ui && ui.m_CharacterEntity)
-                CGQC_ClothingStash.TrySaveAndWatch(ui.m_CharacterEntity, choice.prefab);
+            Bacon_GunBuilderUI_SlotInfo slotInfo = Bacon_GunBuilderUI_SlotInfo.Cast(comp.GetData());
+            if (slotInfo && slotInfo.slotType == Bacon_GunBuilderUI_SlotType.CHARACTER_LOADOUT)
+            {
+                CGQC_ClothingStash.OnLeftItemPicker(ui.m_CharacterEntity);
+            }
+            else
+            {
+                Bacon_GunBuilderUI_SlotChoice choice = Bacon_GunBuilderUI_SlotChoice.Cast(comp.GetData());
+                if (choice && 
+                    (choice.slotType == Bacon_GunBuilderUI_SlotType.CHARACTER_LOADOUT ||
+                     choice.slotType == Bacon_GunBuilderUI_SlotType.REMOVE) &&
+                    !choice.prefab.IsEmpty())
+                {
+                    CGQC_ClothingStash.TrySave(ui.m_CharacterEntity, choice.prefab);
+                }
+            }
         }
         
         super.OnClicked(comp, button);
@@ -21,9 +32,12 @@ class CGQC_ClothingStash
 {
     static ref map<string, ref array<ResourceName>> s_SavedContents = new map<string, ref array<ResourceName>>();
     static ref map<string, EntityID> s_OldEntityIDs = new map<string, EntityID>();
+    static ref map<EntityID, ref array<ResourceName>> s_PendingRestores = new map<EntityID, ref array<ResourceName>>();
     static IEntity s_Character;
+    static bool s_bWatching = false;
+    static bool s_bPendingSave = false;
 
-    static void TrySaveAndWatch(IEntity character, ResourceName newPrefab)
+    static void TrySave(IEntity character, ResourceName newPrefab)
     {
         s_Character = character;
         
@@ -44,7 +58,6 @@ class CGQC_ClothingStash
         string areaKey = targetArea.ToString();
         SCR_EntityHelper.DeleteEntityAndChildren(tempEnt);
         
-        // Already watching this area, skip
         if (s_OldEntityIDs.Contains(areaKey)) return;
         
         EquipedLoadoutStorageComponent loadout = EquipedLoadoutStorageComponent.Cast(
@@ -54,7 +67,6 @@ class CGQC_ClothingStash
         IEntity wornItem = loadout.GetClothFromArea(targetArea);
         if (!wornItem) return;
         
-        // Save contents of current item
         array<ResourceName> prefabs = {};
         SaveClothItemContents(wornItem, prefabs);
         
@@ -63,9 +75,74 @@ class CGQC_ClothingStash
         if (!prefabs.IsEmpty())
             s_SavedContents.Set(areaKey, prefabs);
         else
-            s_SavedContents.Set(areaKey, null); // nothing to restore but still watch
+            s_SavedContents.Set(areaKey, null);
         
-        GetGame().GetCallqueue().CallLater(CheckSwapComplete, 100, true);
+        s_bPendingSave = true;
+        
+        if (!s_bWatching)
+        {
+            s_bWatching = true;
+            GetGame().GetCallqueue().Remove(WatchForBLEClose);
+            GetGame().GetCallqueue().CallLater(WatchForBLEClose, 100, true);
+        }
+    }
+    
+    static void OnLeftItemPicker(IEntity character)
+    {
+        if (!s_bPendingSave) return;
+        s_Character = character;
+        s_bPendingSave = false;
+        
+        GetGame().GetCallqueue().Remove(WatchForBLEClose);
+        s_bWatching = false;
+        
+        EquipedLoadoutStorageComponent loadout = EquipedLoadoutStorageComponent.Cast(
+            character.FindComponent(EquipedLoadoutStorageComponent));
+        if (!loadout) return;
+        
+        array<string> completedAreas = {};
+        foreach (string areaKey, EntityID oldID : s_OldEntityIDs)
+        {
+            typename areaType = areaKey.ToType();
+            IEntity current = loadout.GetClothFromArea(areaType);
+            if (!current || current.GetID() != oldID)
+                completedAreas.Insert(areaKey);
+        }
+        
+        if (!completedAreas.IsEmpty())
+        {
+            foreach (string areaKey : completedAreas)
+            {
+                typename areaType = areaKey.ToType();
+                IEntity newCloth = loadout.GetClothFromArea(areaType);
+                array<ResourceName> prefabs = s_SavedContents.Get(areaKey);
+                if (prefabs && newCloth)
+                    RestoreToCloth(newCloth, prefabs);
+                s_OldEntityIDs.Remove(areaKey);
+                s_SavedContents.Remove(areaKey);
+            }
+            s_Character = null;
+        }
+        else
+        {
+            GetGame().GetCallqueue().Remove(CheckSwapComplete);
+            GetGame().GetCallqueue().CallLater(CheckSwapComplete, 100, true);
+        }
+    }
+    
+    static void WatchForBLEClose()
+    {
+        if (Bacon_GunBuilderUI.GetInstance()) return;
+        
+        GetGame().GetCallqueue().Remove(WatchForBLEClose);
+        s_bWatching = false;
+        
+        if (s_bPendingSave && s_Character)
+        {
+            s_bPendingSave = false;
+            GetGame().GetCallqueue().Remove(CheckSwapComplete);
+            GetGame().GetCallqueue().CallLater(CheckSwapComplete, 100, true);
+        }
     }
     
     static void CheckSwapComplete()
@@ -75,6 +152,9 @@ class CGQC_ClothingStash
             GetGame().GetCallqueue().Remove(CheckSwapComplete);
             s_SavedContents.Clear();
             s_OldEntityIDs.Clear();
+            s_PendingRestores.Clear();
+            s_bWatching = false;
+            s_bPendingSave = false;
             return;
         }
         
@@ -85,30 +165,31 @@ class CGQC_ClothingStash
             GetGame().GetCallqueue().Remove(CheckSwapComplete);
             s_SavedContents.Clear();
             s_OldEntityIDs.Clear();
+            s_PendingRestores.Clear();
+            s_bWatching = false;
+            s_bPendingSave = false;
             return;
         }
         
-        ref array<string> completedAreas = new array<string>();
+        array<string> completedAreas = {};
         
         foreach (string areaKey, EntityID oldID : s_OldEntityIDs)
         {
             typename areaType = areaKey.ToType();
             IEntity current = loadout.GetClothFromArea(areaType);
-            
-            // Swap complete when entity is gone or replaced
             if (!current || current.GetID() != oldID)
                 completedAreas.Insert(areaKey);
         }
+        
+        if (completedAreas.IsEmpty()) return;
         
         foreach (string areaKey : completedAreas)
         {
             typename areaType = areaKey.ToType();
             IEntity newCloth = loadout.GetClothFromArea(areaType);
-            
             array<ResourceName> prefabs = s_SavedContents.Get(areaKey);
             if (prefabs && newCloth)
                 RestoreToCloth(newCloth, prefabs);
-            
             s_OldEntityIDs.Remove(areaKey);
             s_SavedContents.Remove(areaKey);
         }
@@ -117,6 +198,7 @@ class CGQC_ClothingStash
         {
             GetGame().GetCallqueue().Remove(CheckSwapComplete);
             s_Character = null;
+            s_bWatching = false;
         }
     }
     
