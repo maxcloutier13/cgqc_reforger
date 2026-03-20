@@ -1,0 +1,33 @@
+GenericEntity {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  CGQC_ArsenalStashManagerComponent "{68E53EAEA606ABFA}" {
+  }
+  ActionsManagerComponent "{56F2C6D1431ADB12}" {
+   additionalActions {
+    CGQC_ArsenalStashAction "{68E535363C8DC270}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{68E53537264187B9}" {
+      Name "Stash your items"
+      Description "Dumps the content of your uniform and backpack"
+     }
+     ActionTitle "Stash your items"
+     "Sort Priority" 5
+    }
+    CGQC_ArsenalGrabAction "{68E535362DF71FAD}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{68E535378F459B6B}" {
+      Name "Grab your items"
+      Description "Grab your previously stashed shit"
+     }
+     ActionTitle "Grab your items"
+     "Sort Priority" -1
+    }
+   }
+  }
+ }
+}
