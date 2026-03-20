@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcclothingswitcher"
+ GUID "68E63D3275184F25"
+ TITLE "cgqc_clothing_switcher"
+ Dependencies {
+  "58D0FB3206B6F859" "606B100247F5C709" "68E535355672C543"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
