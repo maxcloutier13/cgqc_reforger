@@ -32,13 +32,15 @@ class CGQC_ClothingStash
 {
     static ref map<string, ref array<ResourceName>> s_SavedContents = new map<string, ref array<ResourceName>>();
     static ref map<string, EntityID> s_OldEntityIDs = new map<string, EntityID>();
-    static ref map<EntityID, ref array<ResourceName>> s_PendingRestores = new map<EntityID, ref array<ResourceName>>();
+    static ref map<string, ref array<ResourceName>> s_PendingRestores = new map<string, ref array<ResourceName>>();
     static ref array<ResourceName> s_SpawnQueue = new array<ResourceName>();
     static ref array<EntityID> s_SpawnTargetQueue = new array<EntityID>();
     static IEntity s_Character;
     static bool s_bWatching = false;
     static bool s_bPendingSave = false;
-    static int s_iMovedCount = 0;
+    static bool s_bBLEClosed = false;
+    static int s_iMovedToOriginal = 0;
+    static int s_iMovedToOther = 0;
     static int s_iDroppedCount = 0;
 
     static void TrySave(IEntity character, ResourceName newPrefab)
@@ -62,10 +64,8 @@ class CGQC_ClothingStash
         string areaKey = targetArea.ToString();
         SCR_EntityHelper.DeleteEntityAndChildren(tempEnt);
         
-        // Skip armor slot — plates are part of the prefab, restoring causes duplication
         if (areaKey == "LoadoutArmoredVestSlotArea") return;
-		if (areaKey == "LoadoutHeadCoverArea") return;
-        
+        if (areaKey == "LoadoutHeadCoverArea") return;
         if (s_OldEntityIDs.Contains(areaKey)) return;
         
         EquipedLoadoutStorageComponent loadout = EquipedLoadoutStorageComponent.Cast(
@@ -90,6 +90,7 @@ class CGQC_ClothingStash
         if (!s_bWatching)
         {
             s_bWatching = true;
+            s_bBLEClosed = false;
             GetGame().GetCallqueue().Remove(WatchForBLEClose);
             GetGame().GetCallqueue().CallLater(WatchForBLEClose, 100, true);
         }
@@ -100,9 +101,6 @@ class CGQC_ClothingStash
         if (!s_bPendingSave) return;
         s_Character = character;
         s_bPendingSave = false;
-        
-        GetGame().GetCallqueue().Remove(WatchForBLEClose);
-        s_bWatching = false;
         
         EquipedLoadoutStorageComponent loadout = EquipedLoadoutStorageComponent.Cast(
             character.FindComponent(EquipedLoadoutStorageComponent));
@@ -121,11 +119,9 @@ class CGQC_ClothingStash
         {
             foreach (string areaKey : completedAreas)
             {
-                typename areaType = areaKey.ToType();
-                IEntity newCloth = loadout.GetClothFromArea(areaType);
                 array<ResourceName> prefabs = s_SavedContents.Get(areaKey);
-                if (prefabs && newCloth)
-                    s_PendingRestores.Set(newCloth.GetID(), prefabs);
+                if (prefabs)
+                    s_PendingRestores.Set(areaKey, prefabs);
                 s_OldEntityIDs.Remove(areaKey);
                 s_SavedContents.Remove(areaKey);
             }
@@ -146,12 +142,17 @@ class CGQC_ClothingStash
         
         GetGame().GetCallqueue().Remove(WatchForBLEClose);
         s_bWatching = false;
+        s_bBLEClosed = true;
         
         if (s_bPendingSave && s_Character)
         {
             s_bPendingSave = false;
             GetGame().GetCallqueue().Remove(CheckSwapComplete);
             GetGame().GetCallqueue().CallLater(CheckSwapComplete, 100, true);
+        }
+        else if (s_SpawnQueue.IsEmpty())
+        {
+            ShowFinalHint();
         }
     }
     
@@ -195,11 +196,9 @@ class CGQC_ClothingStash
         
         foreach (string areaKey : completedAreas)
         {
-            typename areaType = areaKey.ToType();
-            IEntity newCloth = loadout.GetClothFromArea(areaType);
             array<ResourceName> prefabs = s_SavedContents.Get(areaKey);
-            if (prefabs && newCloth)
-                s_PendingRestores.Set(newCloth.GetID(), prefabs);
+            if (prefabs)
+                s_PendingRestores.Set(areaKey, prefabs);
             s_OldEntityIDs.Remove(areaKey);
             s_SavedContents.Remove(areaKey);
         }
@@ -220,15 +219,68 @@ class CGQC_ClothingStash
             return;
         }
         
-        foreach (EntityID id, array<ResourceName> prefabs : s_PendingRestores)
+        EquipedLoadoutStorageComponent loadout = EquipedLoadoutStorageComponent.Cast(
+            s_Character.FindComponent(EquipedLoadoutStorageComponent));
+        
+        SCR_InventoryStorageManagerComponent invManager = SCR_InventoryStorageManagerComponent.Cast(
+            s_Character.FindComponent(SCR_InventoryStorageManagerComponent));
+        
+        foreach (string areaKey, array<ResourceName> prefabs : s_PendingRestores)
         {
-            IEntity cloth = GetGame().GetWorld().FindEntityByID(id);
+            if (!loadout || !invManager) continue;
+            
+            typename areaType = areaKey.ToType();
+            IEntity cloth = loadout.GetClothFromArea(areaType);
             if (!cloth) continue;
+            
+            BaseInventoryStorageComponent clothStorage = BaseInventoryStorageComponent.Cast(
+                cloth.FindComponent(BaseInventoryStorageComponent));
+            if (!clothStorage) continue;
+            
+            bool isVest = (areaKey == "LoadoutVestArea");
+            
+            if (isVest)
+            {
+                // Clear pouch contents, not the pouches themselves
+                array<IEntity> topItems = {};
+                clothStorage.GetAll(topItems);
+                foreach (IEntity topItem : topItems)
+                {
+                    BaseInventoryStorageComponent pouchStorage = BaseInventoryStorageComponent.Cast(
+                        topItem.FindComponent(BaseInventoryStorageComponent));
+                    InventoryItemComponent invItem = InventoryItemComponent.Cast(
+                        topItem.FindComponent(InventoryItemComponent));
+                    BaseLoadoutClothComponent clothComp = BaseLoadoutClothComponent.Cast(
+                        topItem.FindComponent(BaseLoadoutClothComponent));
+                    
+                    if (pouchStorage && (!invItem || clothComp))
+                    {
+                        // Structural pouch — clear its contents only
+                        array<IEntity> pouchItems = {};
+                        pouchStorage.GetAll(pouchItems);
+                        foreach (IEntity pouchItem : pouchItems)
+                            invManager.TryDeleteItem(pouchItem);
+                    }
+                    else
+                    {
+                        // Carriable item — delete it
+                        invManager.TryDeleteItem(topItem);
+                    }
+                }
+            }
+            else
+            {
+                // Non-vest: clear all direct contents
+                array<IEntity> existing = {};
+                clothStorage.GetAll(existing);
+                foreach (IEntity existingItem : existing)
+                    invManager.TryDeleteItem(existingItem);
+            }
             
             foreach (ResourceName prefab : prefabs)
             {
                 s_SpawnQueue.Insert(prefab);
-                s_SpawnTargetQueue.Insert(id);
+                s_SpawnTargetQueue.Insert(cloth.GetID());
             }
         }
         
@@ -236,13 +288,13 @@ class CGQC_ClothingStash
         
         if (!s_SpawnQueue.IsEmpty())
         {
-            s_iMovedCount = 0;
-            s_iDroppedCount = 0;
             GetGame().GetCallqueue().Remove(SpawnNextItem);
             GetGame().GetCallqueue().CallLater(SpawnNextItem, 100, true);
         }
         else
         {
+            if (s_bBLEClosed)
+                ShowFinalHint();
             s_Character = null;
         }
     }
@@ -255,16 +307,9 @@ class CGQC_ClothingStash
             s_SpawnQueue.Clear();
             s_SpawnTargetQueue.Clear();
             
-            if (s_iMovedCount > 0 || s_iDroppedCount > 0)
-            {
-                string hint = string.Format("%1 item(s) moved to new clothing.", s_iMovedCount);
-                if (s_iDroppedCount > 0)
-                    hint = hint + string.Format(" %1 item(s) didn't fit and were dropped nearby.", s_iDroppedCount);
-                SCR_HintManagerComponent.GetInstance().ShowCustomHint(hint, "Clothing Swap", 4.0);
-            }
+            if (s_bBLEClosed)
+                ShowFinalHint();
             
-            s_iMovedCount = 0;
-            s_iDroppedCount = 0;
             s_Character = null;
             return;
         }
@@ -289,14 +334,13 @@ class CGQC_ClothingStash
             clothStorage = BaseInventoryStorageComponent.Cast(
                 clothItem.FindComponent(BaseInventoryStorageComponent));
         
-        bool inserted = false;
-        
         if (clothStorage && invManager.TrySpawnPrefabToStorage(prefab, clothStorage))
         {
-            s_iMovedCount++;
+            s_iMovedToOriginal++;
             return;
         }
         
+        bool inserted = false;
         if (clothStorage)
         {
             array<BaseInventoryStorageComponent> subStorages = {};
@@ -310,7 +354,7 @@ class CGQC_ClothingStash
                 }
             }
         }
-        if (inserted) { s_iMovedCount++; return; }
+        if (inserted) { s_iMovedToOriginal++; return; }
         
         if (charStorage)
         {
@@ -345,7 +389,7 @@ class CGQC_ClothingStash
                 if (inserted) break;
             }
         }
-        if (inserted) { s_iMovedCount++; return; }
+        if (inserted) { s_iMovedToOther++; return; }
         
         EntitySpawnParams params = new EntitySpawnParams();
         params.TransformMode = ETransformMode.WORLD;
@@ -353,6 +397,37 @@ class CGQC_ClothingStash
         params.Transform[3] = s_Character.GetOrigin() + Vector(Math.RandomFloat(-0.5, 0.5), 0.1, Math.RandomFloat(-0.5, 0.5));
         GetGame().SpawnEntityPrefab(Resource.Load(prefab), GetGame().GetWorld(), params);
         s_iDroppedCount++;
+    }
+    
+    static void ShowFinalHint()
+    {
+        if (s_iMovedToOriginal == 0 && s_iMovedToOther == 0 && s_iDroppedCount == 0)
+        {
+            ResetCounts();
+            return;
+        }
+        
+        string hint = "";
+        
+        if (s_iMovedToOriginal > 0)
+            hint = hint + string.Format("%1 item(s) transfered. ", s_iMovedToOriginal);
+        
+        if (s_iMovedToOther > 0)
+            hint = hint + string.Format("%1 item(s) moved to alternate slot. ", s_iMovedToOther);
+        
+        if (s_iDroppedCount > 0)
+            hint = hint + string.Format("%1 item(s) dropped on the ground.", s_iDroppedCount);
+        
+        SCR_HintManagerComponent.GetInstance().ShowCustomHint(hint, "Clothing Swap", 6.0);
+        ResetCounts();
+    }
+    
+    static void ResetCounts()
+    {
+        s_iMovedToOriginal = 0;
+        s_iMovedToOther = 0;
+        s_iDroppedCount = 0;
+        s_bBLEClosed = false;
     }
     
     static void SaveClothItemContents(IEntity clothItem, string areaKey, out array<ResourceName> prefabs)
@@ -381,14 +456,12 @@ class CGQC_ClothingStash
                 
                 if (isVest && invItem && !clothComp)
                 {
-                    // Vest: carriable container (IFAK, cig pack) — save as-is
                     ResourceName prefab;
                     if (Bacon_GunBuilderUI_Helpers.GetResourceNameFromEntity(item, prefab))
                         prefabs.Insert(prefab);
                 }
                 else if (isVest)
                 {
-                    // Vest: structural pouch — recurse into contents
                     array<IEntity> subItems = {};
                     itemStorage.GetAll(subItems);
                     foreach (IEntity subItem : subItems)
@@ -400,7 +473,6 @@ class CGQC_ClothingStash
                 }
                 else
                 {
-                    // Non-vest: always save container as-is
                     ResourceName prefab;
                     if (Bacon_GunBuilderUI_Helpers.GetResourceNameFromEntity(item, prefab))
                         prefabs.Insert(prefab);
@@ -408,7 +480,6 @@ class CGQC_ClothingStash
                 continue;
             }
             
-            // Plain item
             ResourceName prefab;
             if (Bacon_GunBuilderUI_Helpers.GetResourceNameFromEntity(item, prefab))
                 prefabs.Insert(prefab);
