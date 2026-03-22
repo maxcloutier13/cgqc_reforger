@@ -1,0 +1,7 @@
+GenericEntity {
+ ID "685D3B7B37726ABF"
+ components {
+  Persistence "{68EB516EED488D0E}" {
+  }
+ }
+}
