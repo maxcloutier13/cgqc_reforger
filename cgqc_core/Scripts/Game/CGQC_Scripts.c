@@ -184,7 +184,7 @@ class CGQC_Scripts
 			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
-				cgqc_head = "{22EDFA2131C317E9}Prefabs/Characters/Heads/Head_WhiteHead_01.et";
+				cgqc_head = "{22EDFA2131C317E9}Prefabs/Characters/Heads/Head_WhiteHead_04.et";
 				cgqc_body = "{89C2788E9B1C96B0}Prefabs/Characters/Basebody/CharacterBasebody_01.et";
 				isCGQC = true;
                 break;
