@@ -2,6 +2,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
  ID "520EC961A090B1EE"
  components {
   RandomGearComponent "{68AAF221635F9889}" {
+   Enabled 0
    m_HeadConfig SCR_GearPoolConfig "{68E44AEBBCA54618}" : "{8B6B1CFEA0BDD3AE}Configs/EntityCatalog/CGQC/Pool_Base_Rifleman_Hat.conf" {
    }
    m_TopsConfig SCR_GearPoolConfig "{68E44AEAD6DDDD21}" : "{25973D3DF6608204}Configs/EntityCatalog/CGQC/Pool_Base_Rifleman_Shirt.conf" {
