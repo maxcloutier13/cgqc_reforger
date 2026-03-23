@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcfixrespawnSound"
+ GUID "68EEEA4E5E58FB02"
+ TITLE "cgqc_fix_respawnSound"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
