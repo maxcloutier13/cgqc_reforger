@@ -17,8 +17,10 @@ modded class SCR_PlayerController : PlayerController
 			return;
 		}
 		int playerId = GetPlayerId();
-		string playerIdentityId = SCR_PlayerIdentityUtils.GetPlayerIdentityId(playerId);
 		
+		//string playerIdentityId = SCR_PlayerIdentityUtils.GetPlayerIdentityId(playerId);
+		BackendApi backendApi = GetGame().GetBackendApi();
+		string playerIdentityId = backendApi.GetPlayerIdentityId(playerId);
 		// Check where code is running
 		if (Replication.IsServer())
 		{
