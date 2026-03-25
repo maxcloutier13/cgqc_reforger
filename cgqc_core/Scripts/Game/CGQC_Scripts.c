@@ -154,7 +154,7 @@ class CGQC_Scripts
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "clou");
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
-				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
+				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
 				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
