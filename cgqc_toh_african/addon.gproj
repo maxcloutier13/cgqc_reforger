@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctohafrican"
+ GUID "68F21D425E299439"
+ TITLE "cgqc_toh_african"
+ Dependencies {
+  "58D0FB3206B6F859" "65FB50F7FA33DECA"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

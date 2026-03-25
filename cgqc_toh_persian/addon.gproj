@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqctohpersian"
+ GUID "68F23091528B70FC"
+ TITLE "cgqc_toh_persian"
+ Dependencies {
+  "65FB762EB503CCF9" "58D0FB3206B6F859"
+ }
+}

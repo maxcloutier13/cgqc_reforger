@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctohcamos"
+ GUID "68F219995182E14D"
+ TITLE "cgqc_toh_camos"
+ Dependencies {
+  "58D0FB3206B6F859" "596330D9AF34AF38" "64F869693699EEA7" "68EAA4B96976D557"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

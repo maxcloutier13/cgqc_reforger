@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqctohlivonian"
+ GUID "68F22B3A54C9B690"
+ TITLE "cgqc_toh_livonian"
+ Dependencies {
+  "65FB5234B4A8E20B" "58D0FB3206B6F859"
+ }
+}
