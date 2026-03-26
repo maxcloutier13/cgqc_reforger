@@ -281,74 +281,24 @@ class CGQC_Scripts
 	// Set player identity (works on both client and server)
 	static void SetPlayerIdentity(IEntity playerEntity, string headPath, string bodyPath)
 	{
-		if (!playerEntity)
-		{
-			Print("[CGQC_SetPlayerIdentity] Invalid player entity", LogLevel.ERROR);
-			return;
-		}
-
-		SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
-		if (!playerCharacter)
-		{
-			Print("[CGQC_SetPlayerIdentity] Failed to cast to SCR_ChimeraCharacter", LogLevel.ERROR);
-			return;
-		}
-
-		// Find the identity selector component if it exists
-		MFN_IdentitySelectorCharacterComponent idSelector = MFN_IdentitySelectorCharacterComponent.Cast(
-			playerCharacter.FindComponent(MFN_IdentitySelectorCharacterComponent)
-		);
-
-		if (idSelector)
-		{
-			// Use the existing component's RPC system
-			PrintFormat("[CGQC_SetPlayerIdentity] Using identity selector component: %1 | %2", headPath, bodyPath);
-			idSelector.RemoteServerSetIdentity(headPath, bodyPath);
-		}
-		else
-		{
-			// Fallback: set identity directly on server
-			PrintFormat("[CGQC_SetPlayerIdentity] Setting identity directly: %1 | %2", headPath, bodyPath);
-			
-			if (Replication.IsServer())
-			{
-				SetIdentityDirect(playerCharacter, headPath, bodyPath);
-			}
-		}
-	}
-
-	// Direct identity setting (server-side only)
-	static void SetIdentityDirect(SCR_ChimeraCharacter playerCharacter, string headPath, string bodyPath)
-	{
-		CharacterIdentityComponent idComponent = CharacterIdentityComponent.Cast(
-			playerCharacter.FindComponent(CharacterIdentityComponent)
-		);
-		
-		if (!idComponent)
-		{
-			Print("[CGQC_SetIdentityDirect] CharacterIdentityComponent not found", LogLevel.ERROR);
-			return;
-		}
-
-		Identity playerID = idComponent.GetIdentity();
-		if (!playerID)
-		{
-			Print("[CGQC_SetIdentityDirect] Identity not found", LogLevel.ERROR);
-			return;
-		}
-
-		VisualIdentity newVisID = playerID.GetVisualIdentity();
-		if (!newVisID)
-		{
-			newVisID = new VisualIdentity();
-		}
-
-		newVisID.SetHead(headPath);
-		newVisID.SetBody(bodyPath);
-		playerID.SetVisualIdentity(newVisID);
-		idComponent.SetIdentity(playerID);
-
-		Print("[CGQC_SetIdentityDirect] Identity applied successfully");
+	    if (!playerEntity)
+	        return;
+	
+	    SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
+	    if (!playerCharacter)
+	        return;
+	
+	    CharacterIdentityComponent idComp = CharacterIdentityComponent.Cast(playerCharacter.FindComponent(CharacterIdentityComponent));
+	    if (!idComp)
+	        return;
+	
+	    Identity playerID = idComp.GetIdentity();
+	    VisualIdentity newVisID = playerID.GetVisualIdentity();
+	    newVisID.SetHead(headPath);
+	    newVisID.SetBody(bodyPath);
+	    playerID.SetVisualIdentity(newVisID);
+	    idComp.CommitChanges();
+	    idComp.SetIdentity(playerID);
 	}
 
     // Helper method to get player name
