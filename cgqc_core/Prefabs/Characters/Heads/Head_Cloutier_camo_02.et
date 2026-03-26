@@ -21,11 +21,11 @@ GameEntity : "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et" {
     }
     MaterialAssignClass "{670B5C215F837A3D}" {
      SourceMaterial "Neck"
-     AssignedMaterial "{6C80A3168F7D70F2}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier_neck.emat"
+     AssignedMaterial "{FD7AD633F7B81EBC}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_02_neck.emat"
     }
     MaterialAssignClass "{670B5C215F837A26}" {
      SourceMaterial "Neck_wound"
-     AssignedMaterial "{8A1D2523BFE813B3}Assets/Characters/Heads/Head_Cloutier/Data/Head_Cloutier_wound_neck.emat"
+     AssignedMaterial "{0CD641C553ED7E9A}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_02_neck_wound.emat"
     }
    }
   }
