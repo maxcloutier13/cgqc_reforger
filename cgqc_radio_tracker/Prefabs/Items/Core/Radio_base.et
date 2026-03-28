@@ -1,0 +1,19 @@
+GenericEntity : "{C95E11C60810F432}Prefabs/Items/Core/Item_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   additionalActions {
+    CGQC_RadioCheckAction "{68F6F635DF216D8C}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68F6F634495F1793}" {
+      Name "Check Receivers"
+     }
+     ActionTitle "Check receivers"
+     m_bLoopAction 0
+    }
+   }
+  }
+ }
+}
