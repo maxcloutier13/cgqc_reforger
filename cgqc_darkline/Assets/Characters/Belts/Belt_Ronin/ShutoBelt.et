@@ -5,5 +5,15 @@ GenericEntity {
   }
   SCR_AntiPersonnelMineCollisionHandlerComponent "{68EB516E33C1D220}" {
   }
+  BaseLoadoutClothComponent "{6693323D9BC47D38}" {
+   Slots {
+    LoadoutSlotInfo Slot3 {
+     Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
+    }
+    LoadoutSlotInfo Slot4 {
+     Prefab "{4275B1445B7C5162}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_330D_Pistol.et"
+    }
+   }
+  }
  }
 }
