@@ -1,0 +1,60 @@
+Tank M2A3_BUSK_MERDC1 : "{12C35C0A24EDA6D0}Prefabs/Vehicles/Tracked/BFV/M2A3_BUSK_MERDC.et" {
+ coords 3533.885 494.625 2860.082
+ angles 0 135.397 0
+}
+Vehicle JLTV_CROWSII_Javelin1 : "{9B906EE7402FDA06}Prefabs/Vehicles/Wheeled/JLTV/CROWS_2/Javelin/JLTV_CROWSII_Javelin.et" {
+ coords 3564.961 495.064 2868.291
+ angles 0 -132.914 0
+}
+Vehicle JLTV_CROWS1 : "{A19889DD96914B75}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M2HB/JLTV_CROWS.et" {
+ coords 3555.533 495.064 2879.102
+ angles 0 -131.834 0
+}
+Tank M2A3_MERDC1 : "{A2FDCCF036B73602}Prefabs/Vehicles/Tracked/BFV/M2A3_MERDC.et" {
+ coords 3527.998 494.625 2855.576
+ angles 0 136.203 0
+}
+$grp Vehicle : "{A4533B5AC50A57E6}Vehicles/ZAG650/ZAG650132p_ZDF.et" {
+ ZAG650132p_ZDF1 {
+  coords 3575.392 494.293 2779.572
+  angles 0 -41.938 0
+ }
+ ZAG650132p_ZDF2 {
+  coords 3574.218 494.293 2778.507
+  angles 0 -41.938 0
+ }
+}
+Vehicle MRZRD4_Unarmed_Camo1 : "{AC8918B033DB356D}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed_Camo.et" {
+ coords 3579.077 494.293 2784.423
+ angles 0 -42.996 0
+}
+Vehicle JLTV_CROWS_M1 : "{B01D12F49572C4B8}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M134/JLTV_CROWS_M134.et" {
+ coords 3558.612 495.064 2875.495
+ angles 0 -131.376 0
+}
+$grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ Motorbike_US1 {
+  coords 3584.771 494.293 2788.416
+ }
+ Motorbike_US2 {
+  coords 3583.726 494.293 2787.993
+ }
+ Motorbike_US3 {
+  coords 3582.784 494.293 2788.123
+ }
+ Motorbike_US4 {
+  coords 3581.733 494.293 2788.528
+ }
+}
+Vehicle JLTV_CROWS_M2 : "{B852D03E85D1F66D}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M240/JLTV_CROWS_M240.et" {
+ coords 3561.694 495.064 2871.846
+ angles 0 -133.405 0
+}
+Vehicle MRZRD4_Unarmed_Black1 : "{D768882A4BA33526}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed_Black.et" {
+ coords 3581.039 494.293 2786.048
+ angles 0 -42.193 0
+}
+Vehicle MRZRD4_Unarmed1 : "{DA7CF11F1BD23125}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed.et" {
+ coords 3577.148 494.293 2782.242
+ angles 0 -40.054 0
+}

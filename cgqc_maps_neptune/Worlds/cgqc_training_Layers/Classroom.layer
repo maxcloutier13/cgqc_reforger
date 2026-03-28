@@ -1,0 +1,357 @@
+GenericEntity : "{03B44EA7652D0D17}Prefabs/Props/Military/Radios/RadioStation_R123M_01.et" {
+ coords 3192.254 483.787 2881.622
+ angles 0 94.52 0
+}
+GenericEntity : "{1529A55491BA9090}Prefabs/GM_Props/Wall_TV2_GM.et" {
+ coords 3559.698 495.991 2773.341
+ angles 0 -132.229 0
+}
+GenericEntity : "{178B066B70D7BE99}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_04.et" {
+ coords 3566.268 494.293 2768.843
+ angles 0 -41.309 0
+ {
+  GenericEntity {
+   ID "5CB0F58A1F654E85"
+   coords 0.063 0.9 0.242
+  }
+ }
+}
+GenericEntity : "{2E15CDF3132BB714}Prefabs/Props/PropsHeine/MilitaryNotebook.et" {
+ coords 3563.984 495.193 2770.96
+ angles 0 136.598 0
+}
+$grp GenericEntity : "{313CC1F195E06A6E}Prefabs/Props/Furniture/TVSet_01.et" {
+ {
+  coords 3566.822 495.193 2769.072
+  angles 0 -40.789 0
+ }
+ {
+  coords 3569.553 495.193 2771.616
+  angles 0 -40.789 0
+ }
+}
+$grp GenericEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+ {
+  coords 3568.314 494.293 2771.237
+  angles 0 137.344 0
+ }
+ {
+  coords 3569.362 494.293 2772.149
+  angles 0 137.344 0
+ }
+ {
+  coords 3566.001 494.293 2769.268
+  angles 0 137.344 0
+ }
+ {
+  coords 3561.368 494.293 2780.388
+  angles 0 -132.43 0
+ }
+ {
+  coords 3563.418 494.293 2782.412
+  angles 0 -132.43 0
+ }
+ {
+  coords 3561.984 494.293 2779.698
+  angles 0 -132.43 0
+ }
+ {
+  coords 3566.386 494.293 2774.919
+  angles 0 -132.43 0
+ }
+ {
+  coords 3563.377 494.293 2778.226
+  angles 0 -132.43 0
+ }
+ {
+  coords 3568.434 494.293 2776.942
+  angles 0 -132.43 0
+ }
+ {
+  coords 3566.427 494.293 2779.105
+  angles 0 -132.43 0
+ }
+ {
+  coords 3567.91 494.28 2779.266
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.034 494.293 2781.722
+  angles 0 -132.43 0
+ }
+ {
+  coords 3567.042 494.293 2778.416
+  angles 0 -132.43 0
+ }
+ {
+  coords 3565.758 494.293 2775.591
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.378 494.293 2777.081
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.994 494.293 2776.393
+  angles 0 -132.43 0
+ }
+ {
+  coords 3567.366 494.293 2775.971
+  angles 0 -132.43 0
+ }
+ {
+  coords 3566.74 494.293 2776.644
+  angles 0 -132.43 0
+ }
+ {
+  coords 3562.35 494.293 2781.44
+  angles 0 -132.43 0
+ }
+ {
+  coords 3565.976 494.293 2777.445
+  angles 0 -132.43 0
+ }
+ {
+  coords 3563.728 494.293 2779.952
+  angles 0 -132.43 0
+ }
+ {
+  coords 3562.967 494.293 2780.753
+  angles 0 -132.43 0
+ }
+ {
+  coords 3567.807 494.293 2777.615
+  angles 0 -132.43 0
+ }
+ {
+  coords 3565.664 494.293 2781.771
+  angles 0 -132.43 0
+ }
+ {
+  coords 3565.427 494.293 2780.251
+  angles 0 -132.43 0
+ }
+ {
+  coords 3562.748 494.293 2778.899
+  angles 0 -132.43 0
+ }
+ {
+  coords 3568.674 494.274 2778.464
+  angles 0 -132.43 0
+ }
+ {
+  coords 3567.293 494.29 2779.954
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.356 494.293 2779.28
+  angles 0 -132.43 0
+ }
+ {
+  coords 3565.357 494.293 2778.134
+  angles 0 -132.43 0
+ }
+ {
+  coords 3569.302 494.275 2777.793
+  angles 0 -132.43 0
+ }
+ {
+  coords 3566.294 494.293 2781.1
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.284 494.293 2783.26
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.9 494.293 2782.574
+  angles 0 -132.43 0
+ }
+ {
+  coords 3564.797 494.293 2780.922
+  angles 0 -132.43 0
+ }
+}
+GenericEntity : "{46334C881751B699}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Workbench1.et" {
+ coords 3570.773 494.293 2772.826
+ angles 0 137.608 0
+}
+GenericEntity : "{4AC034517E87747E}Prefabs/GM_Props/Office_chair_GM.et" {
+ coords 3565.814 494.293 2771.768
+ angles 0 -41.05 0
+}
+GenericEntity : "{58B227C19640BC67}Prefabs/GM_Props/tablet1_GM.et" {
+ coords 3565.517 495.199 2772.466
+ angles 0 144.944 0
+}
+GenericEntity : "{65B6E58379AC6DD3}Prefabs/GM_Props/investigationboard.et" {
+ coords 3557.218 494.293 2776.983
+ angles 0 47.08 0
+}
+GenericEntity : "{6825A110444C7951}Prefabs/Items/Misc/Tablet/Tablet_Getac.et" {
+ coords 3564.351 495.193 2771.252
+ angles 0 0 0
+}
+GenericEntity : "{68FAE36C8EB96E14}Prefabs/BBOC-MissionProps/Projetor_Portatil.et" {
+ coords 3563.97 495.193 2771.45
+ angles 0 -42.026 0
+}
+GenericEntity : "{6A8B7BD2A7BF0B93}Prefabs/Structures/BuildingParts/Lights/LightIndustrial_03.et" {
+ coords 3208.403 562.157 2873.142
+}
+GenericEntity : "{6AD4E9BD9557F9AB}Prefabs/GM_Props/RadioStation_GM.et" {
+ coords 3566.201 495.193 2768.525
+ angles 0 -40.394 0
+}
+GenericEntity : "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et" {
+ coords 3565.199 495.199 2772.152
+}
+GenericEntity : "{6EDB04BBE080E345}Prefabs/GM_Props/WaterCooler_GM.et" {
+ coords 3562.341 494.293 2771.069
+ angles 0 -135.033 0
+}
+GenericEntity : "{7EC501BE30FB78D1}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/RadioStation_FIA_NoAffiliation.et" {
+ coords 3190.341 483.785 2881.256
+ angles 0 80.478 0
+}
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  coords 3572.356 494.293 2777.743
+  angles 0 47.473 0
+ }
+ {
+  coords 3550.959 494.293 2784.388
+  angles 0 -42.792 0
+ }
+ {
+  coords 3553.754 494.293 2786.948
+  angles 0 -42.792 0
+ }
+ {
+  coords 3556.548 494.293 2789.535
+  angles 0 -42.792 0
+ }
+}
+GenericEntity : "{7FFBB7FD89E1A9D6}Prefabs/BBOC-MissionProps/Server1.et" {
+ coords 3565.482 494.293 2768.198
+ angles 0 -40.457 0
+}
+SCR_DestructibleEntity : "{895C12D7154D9CE6}Prefabs/Structures/Walls/Pipe/PipeRailing_02/PipeRailing_02_6m_Old.et" {
+ Flags 0 0x80000
+ coords 3613.7 544.228 2804.902
+ angles 0 -41.971 0
+}
+GenericEntity : "{8CB5CD11CF17D9D3}Prefabs/Items/Misc/Flat_Screen/Flat_screen2.et" {
+ coords 3556.676 495.808 2776.821
+ angles 0 -41.764 0
+}
+GenericEntity : "{9CCDFC3D400F1240}Prefabs/nogm/cheytac_m200_nogm.et" {
+ coords 3568.146 495.201 2770.304
+ angles 0 51.966 0
+}
+GenericEntity : "{BBBC235B9B053092}Prefabs/Props/Furniture/Armchair_02.et" {
+ coords 3564.464 494.293 2769.964
+}
+GenericEntity : "{BDC0B74B1350B129}Prefabs/BriefingRoom/quadrobranco1.et" {
+ coords 3567.457 496.097 2769.035
+ angles 0 137.249 0
+}
+GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_02.et" {
+ coords 3569.575 494.293 2771.698
+ angles 0 -41.309 0
+ {
+  GameEntity {
+   ID "5CB0F58470103A03"
+   coords -0.542 0.9 -0.172
+   angles 0 9.044 0
+  }
+  GenericEntity {
+   ID "5CB0F58470103A05"
+   coords 0.472 0.971 -0.05
+   angles 0 169.779 0
+  }
+  GenericEntity {
+   ID "5CB0F58470103A07"
+   coords 0.467 0.9 -0.042
+   angles 0 165 0
+  }
+ }
+}
+GenericEntity : "{D3AF08F8ACE946C0}Prefabs/Props/PropsHeine/BodyBag_2.et" {
+ coords 3564.111 494.281 2766.795
+ angles 0 -139.295 0
+}
+GenericEntity : "{D8690BF192F96E30}Prefabs/Props/Military/Arsenal/ArsenalBoxes/Full Locker Room.BLE.et" {
+ components {
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "CGQC"
+  }
+ }
+ coords 3547.429 494.293 2787.229
+ angles 0 -132.491 0
+}
+GenericEntity : "{DDE6B922080437A6}Prefabs/Items/Misc/Post_it/Post_it_PREVIEW.et" {
+ coords 3563.415 495.193 2770.978
+ angles 0 0 0
+}
+GenericEntity : "{EB3C29F433BA004D}Prefabs/Items/Misc/Post_it/Post_it.et" {
+ coords 3563.503 495.193 2771.016
+ angles 0 0 0
+}
+$grp GenericEntity : "{F2174A927C3229F2}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_05.et" {
+ {
+  coords 3567.874 494.293 2770.232
+  angles 0 -41.309 0
+  {
+   GameEntity {
+    ID "5CB0F589F6F73C99"
+    coords -0.21 0 -0.251
+    angles 0 51.625 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C9C"
+    coords -0.887 0.907 0.111
+    angles 0 13.635 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73CE5"
+    coords -0.53 0.001 0.011
+    angles 0 0 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C97"
+    coords -0.546 0.909 -0.135
+    angles 0 77.131 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C9B"
+    coords 0.927 0 -0.027
+    angles 0 2.109 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C96"
+    coords 0.963 0.9 0.063
+    angles 0 -3.323 0
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C91"
+    coords 0.128 0 -0.103
+    angles 0 -29.158 0
+   }
+  }
+ }
+ {
+  coords 3564.539 494.293 2771.757
+  angles 0 135.92 0
+  {
+   GenericEntity {
+    ID "5CB0F589F6F73C96"
+    coords 1.2 0.9 -0.196
+   }
+   GenericEntity {
+    ID "5CB0F589F6F73C9C"
+    coords -0.958 0.906 -0.206
+   }
+  }
+ }
+}

@@ -1,0 +1,11 @@
+GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ coords 3559.826 494.293 2774.343
+ angles 0 41.504 0
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 3561.366 494.293 2772.772
+ angles 0 42.181 0
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 3556.982 494.293 2793.329
+}
