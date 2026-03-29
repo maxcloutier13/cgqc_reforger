@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F3F6FAF14CE4C5B1}Prefabs/Items/Equipment/Backpacks/Backpack_MissionBag_Black_civ.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

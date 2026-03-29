@@ -1,0 +1,33 @@
+GameEntity : "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et" {
+ ID "529C89342C390093"
+ components {
+  MeshObject "{529C8934211B4893}" {
+   Materials {
+    MaterialAssignClass "{670B5C215F837A67}" {
+     SourceMaterial "Eye"
+     AssignedMaterial "{050531C2C14FAD7D}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue.emat"
+    }
+    MaterialAssignClass "{670B5C215F837A04}" {
+     SourceMaterial "Eye_wound"
+     AssignedMaterial "{7C1A0FF673494271}Assets/Characters/Heads/Eyes/Colors/Head_Eyes_Blue_wound.emat"
+    }
+    MaterialAssignClass "{670B5C215F837A30}" {
+     SourceMaterial "Head_White_05"
+     AssignedMaterial "{0E63A389D853FE0C}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_01.emat"
+    }
+    MaterialAssignClass "{670B5C215F837A35}" {
+     SourceMaterial "Head_White_05_wound"
+     AssignedMaterial "{D4FF59B9D70FAF7E}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_01_wound.emat"
+    }
+    MaterialAssignClass "{670B5C215F837A3D}" {
+     SourceMaterial "Neck"
+     AssignedMaterial "{D75EF19001567893}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_01_neck.emat"
+    }
+    MaterialAssignClass "{670B5C215F837A26}" {
+     SourceMaterial "Neck_wound"
+     AssignedMaterial "{DF1D082D2514E288}Assets/Characters/Heads/Head_Cloutier/Data/Facepaint/Head_05_Facepaint_US_01_neck_wound.emat"
+    }
+   }
+  }
+ }
+}

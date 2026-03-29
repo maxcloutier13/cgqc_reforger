@@ -1,0 +1,21 @@
+GenericEntity {
+ ID "6693323D9BC47CE5"
+ components {
+  Persistence "{68EB517A29CE2EB2}" {
+  }
+  SCR_AntiPersonnelMineCollisionHandlerComponent "{68EB516E33C1D220}" {
+  }
+  BaseLoadoutClothComponent "{6693323D9BC47D38}" {
+   Slots {
+    LoadoutSlotInfo Slot3 {
+     Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
+    }
+    LoadoutSlotInfo Slot4 {
+    }
+    LoadoutSlotInfo Slot8 {
+     Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcghillie"
+ GUID "68E02ACD4ECC08F4"
+ TITLE "cgqc_ghillie"
+ Dependencies {
+  "58D0FB3206B6F859" "644E18136B1057A3" "64D4E4ACDE3EBEDB" "687D0ACCB444EE69" "68C574F8B18CDE22" "687D0ACCB444EE69" "68B60865B7332DD6" "686807A775E34C06" "61DD377AE51CB4BD" "68C32C484006BA86" "648EDB626C3EAF24" "619751237281AA7F" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

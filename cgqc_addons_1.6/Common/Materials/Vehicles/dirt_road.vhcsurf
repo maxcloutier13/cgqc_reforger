@@ -1,0 +1,7 @@
+ContactSurface : "{FF3139F60AAA1CCD}Common/Materials/Vehicles/dirt_road.vhcsurf" {
+ NoiseSteer 0.1
+ NoiseFrequency 0.01
+ Roughness 0.03
+ FrictionNonTread 0.7
+ FrictionTread 0.9
+}

@@ -1,0 +1,20 @@
+SCR_ChimeraCharacter : "{F03DE84EEA47BAAC}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_DroneOp_Moderne.et" {
+ ID "520EC961A090B1EF"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Drone Operator FPV"
+    Description "Opérateur de drones offensifs"
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68E42896AEAF5915}" {
+     PrefabsToSpawn {
+      "{8951045BFE8BC8E4}Prefabs/Characters/HeadGear/FPV_Goggles.et" "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et" "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et" "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et" "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et" ""
+     }
+    }
+   }
+  }
+ }
+}

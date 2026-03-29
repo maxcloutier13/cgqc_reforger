@@ -1,0 +1,13 @@
+GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
+ ID "511E9C6ADE70F798"
+ components {
+  BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
+   BlockedSlots {
+    LoadoutArmoredVestSlotArea "{68EEFEC856F18C39}" {
+    }
+    LoadoutVestArea "{68EEFEC84B8ACEB5}" {
+    }
+   }
+  }
+ }
+}

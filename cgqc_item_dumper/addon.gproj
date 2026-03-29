@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcitemdumper"
+ GUID "68E535355672C543"
+ TITLE "cgqc_item_dumper"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

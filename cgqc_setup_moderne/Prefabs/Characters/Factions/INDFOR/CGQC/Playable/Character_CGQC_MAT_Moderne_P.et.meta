@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8B51351CBDAAE373}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MAT_Moderne_P.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

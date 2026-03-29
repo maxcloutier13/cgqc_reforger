@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctohtanoan"
+ GUID "68F22E035E10AC3A"
+ TITLE "cgqc_toh_tanoan"
+ Dependencies {
+  "58D0FB3206B6F859" "65FB52DAABB24B05"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

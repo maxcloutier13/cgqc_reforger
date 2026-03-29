@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqctohrussian"
+ GUID "68F22CDC5411E1A6"
+ TITLE "cgqc_toh_russian"
+ Dependencies {
+  "65FB5265B4F72F4B" "58D0FB3206B6F859"
+ }
+}

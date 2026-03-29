@@ -1,5 +1,20 @@
 class CGQC_Scripts
 {
+	// Get name from mod CustomName
+	static string GetCustomPlayerName(int playerID)
+	{
+	    // Try CustomNamesManager first
+	    CustomNamesManager cnm = CustomNamesManager.GetInstance();
+	    if (cnm)
+	    {
+	        string customName = cnm.GetCustomName(playerID);
+	        if (!customName.IsEmpty())
+	            return customName;
+	    }
+	    
+	    // Fallback to Steam name
+	    return GetGame().GetPlayerManager().GetPlayerName(playerID);
+	}
 	
 	// Init for FreedomFighters
 	static void initializeFFPlayer(IEntity playerEntity)
@@ -154,7 +169,7 @@ class CGQC_Scripts
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
 				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "clou");
 				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
-				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et6";
+				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
 				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
@@ -184,7 +199,8 @@ class CGQC_Scripts
 			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "vali");
+				cgqc_head = "{F5808273F0A0F3AC}Prefabs/Characters/Heads/Head_RussianHead_1.et";
+				cgqc_body = "{E5964C6E27D8199E}Prefabs/Characters/Basebody/CharacterBasebody_02.et";
 				isCGQC = true;
                 break;
             }
@@ -280,74 +296,24 @@ class CGQC_Scripts
 	// Set player identity (works on both client and server)
 	static void SetPlayerIdentity(IEntity playerEntity, string headPath, string bodyPath)
 	{
-		if (!playerEntity)
-		{
-			Print("[CGQC_SetPlayerIdentity] Invalid player entity", LogLevel.ERROR);
-			return;
-		}
-
-		SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
-		if (!playerCharacter)
-		{
-			Print("[CGQC_SetPlayerIdentity] Failed to cast to SCR_ChimeraCharacter", LogLevel.ERROR);
-			return;
-		}
-
-		// Find the identity selector component if it exists
-		MFN_IdentitySelectorCharacterComponent idSelector = MFN_IdentitySelectorCharacterComponent.Cast(
-			playerCharacter.FindComponent(MFN_IdentitySelectorCharacterComponent)
-		);
-
-		if (idSelector)
-		{
-			// Use the existing component's RPC system
-			PrintFormat("[CGQC_SetPlayerIdentity] Using identity selector component: %1 | %2", headPath, bodyPath);
-			idSelector.RemoteServerSetIdentity(headPath, bodyPath);
-		}
-		else
-		{
-			// Fallback: set identity directly on server
-			PrintFormat("[CGQC_SetPlayerIdentity] Setting identity directly: %1 | %2", headPath, bodyPath);
-			
-			if (Replication.IsServer())
-			{
-				SetIdentityDirect(playerCharacter, headPath, bodyPath);
-			}
-		}
-	}
-
-	// Direct identity setting (server-side only)
-	static void SetIdentityDirect(SCR_ChimeraCharacter playerCharacter, string headPath, string bodyPath)
-	{
-		CharacterIdentityComponent idComponent = CharacterIdentityComponent.Cast(
-			playerCharacter.FindComponent(CharacterIdentityComponent)
-		);
-		
-		if (!idComponent)
-		{
-			Print("[CGQC_SetIdentityDirect] CharacterIdentityComponent not found", LogLevel.ERROR);
-			return;
-		}
-
-		Identity playerID = idComponent.GetIdentity();
-		if (!playerID)
-		{
-			Print("[CGQC_SetIdentityDirect] Identity not found", LogLevel.ERROR);
-			return;
-		}
-
-		VisualIdentity newVisID = playerID.GetVisualIdentity();
-		if (!newVisID)
-		{
-			newVisID = new VisualIdentity();
-		}
-
-		newVisID.SetHead(headPath);
-		newVisID.SetBody(bodyPath);
-		playerID.SetVisualIdentity(newVisID);
-		idComponent.SetIdentity(playerID);
-
-		Print("[CGQC_SetIdentityDirect] Identity applied successfully");
+	    if (!playerEntity)
+	        return;
+	
+	    SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
+	    if (!playerCharacter)
+	        return;
+	
+	    CharacterIdentityComponent idComp = CharacterIdentityComponent.Cast(playerCharacter.FindComponent(CharacterIdentityComponent));
+	    if (!idComp)
+	        return;
+	
+	    Identity playerID = idComp.GetIdentity();
+	    VisualIdentity newVisID = playerID.GetVisualIdentity();
+	    newVisID.SetHead(headPath);
+	    newVisID.SetBody(bodyPath);
+	    playerID.SetVisualIdentity(newVisID);
+	    idComp.CommitChanges();
+	    idComp.SetIdentity(playerID);
 	}
 
     // Helper method to get player name
@@ -417,7 +383,7 @@ class CGQC_Scripts
 			case "vali":
             {
 				// Vali time
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
 				break;
 			}
 		}

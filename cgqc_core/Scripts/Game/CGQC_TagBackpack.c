@@ -24,22 +24,6 @@ class CGQC_BackpackNametag : ScriptComponent
 
 		invItem.m_OnParentSlotChangedInvoker.Insert(OnParentSlotChanged);
 	}
-	
-	// Get name from mod CustomName
-	string GetCustomPlayerName(int playerID)
-	{
-	    // Try CustomNamesManager first
-	    CustomNamesManager cnm = CustomNamesManager.GetInstance();
-	    if (cnm)
-	    {
-	        string customName = cnm.GetCustomName(playerID);
-	        if (!customName.IsEmpty())
-	            return customName;
-	    }
-	    
-	    // Fallback to Steam name
-	    return GetGame().GetPlayerManager().GetPlayerName(playerID);
-	}
 
     protected void OnParentSlotChanged(InventoryStorageSlot oldSlot, InventoryStorageSlot newSlot)
     {
@@ -79,7 +63,7 @@ class CGQC_BackpackNametag : ScriptComponent
         if (playerID == 0)
             return; // Not a player (could be AI, vehicle, etc.)
 
-        string playerName = GetCustomPlayerName(playerID);
+        string playerName = CGQC_Scripts.GetCustomPlayerName(playerID);
         if (playerName.IsEmpty())
             return;
 
@@ -192,5 +176,56 @@ modded class SCR_InventoryMenuUI
 
         ShowItemInfo(nametag.GetTaggedName(), desc, invItemComp.GetTotalWeight(), inventoryInfo);
         NavigationBarUpdate();
+    }
+}
+
+
+// Highlight the player's items
+class CGQC_NametagHighlightHelper
+{
+    static void ApplyHighlight(InventoryItemComponent pItem, SCR_InventoryStorageBaseUI pStorageUI, Widget widget)
+    {
+        if (!pStorageUI)
+            return;
+
+        if (pStorageUI.IsInherited(SCR_InventoryStoragesListUI))
+            return;
+
+        if (!pItem)
+            return;
+
+        IEntity item = pItem.GetOwner();
+        if (!item)
+            return;
+
+        CGQC_BackpackNametag nametag = CGQC_BackpackNametag.Cast(
+            item.FindComponent(CGQC_BackpackNametag));
+
+        if (!nametag || nametag.m_sLastOwnerName.IsEmpty())
+            return;
+
+        PlayerController pc = GetGame().GetPlayerController();
+        if (!pc)
+            return;
+
+        string localName = CGQC_Scripts.GetCustomPlayerName(pc.GetPlayerId());
+        if (nametag.m_sLastOwnerName != localName)
+            return;
+
+        if (!widget)
+            return;
+
+        ImageWidget img = ImageWidget.Cast(widget.FindAnyWidget("BackgroundColor"));
+        if (img)
+            img.SetColor(new Color(12/255.0, 96/255.0, 255/255.0, 0.25));
+    }
+}
+
+modded class SCR_InventorySlotUI
+{
+     override protected void Init()
+    {
+        super.Init();
+        CGQC_NametagHighlightHelper.ApplyHighlight(m_pItem, m_pStorageUI, m_widget);
     }
 }

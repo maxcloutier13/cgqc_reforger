@@ -1,0 +1,43 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090B1EF"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Drone Operator"
+    Description "Opérateur de drone de reconnaissance"
+    IconSetName "EditableEntity_Character_Radio_Operator"
+    m_aAutoLabels {
+     SIZE_M ROLE_SCOUT
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3498A9E90E97DC24}Prefabs/Weapons/Rifles/Rifle_AR15_145_recce.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{E2434ED1318D8476}Prefabs/Characters/Items/DroneController.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     Prefab "{C5E7592C94DC6D4C}Prefabs/Items/Equipment/Backpacks/backpack_Wartech_BB102/Backpack_Wartech_BB102_MC.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68D50BECE3392A81}" {
+     PrefabsToSpawn {
+      "{94A3DCC6DD03EEF4}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163.et" ""
+     }
+    }
+    ItemsInitConfigurationItem "{68E42896AEAF5915}" {
+     TargetStorage "Back/Backpack_Wartech_BB102_MC.et"
+     PrefabsToSpawn {
+      "{8951045BFE8BC8E4}Prefabs/Characters/HeadGear/FPV_Goggles.et" "{EF1E4AA6DCD2D982}Prefabs/Drones/DJIBase/DJIBattery.et" "{FDA92D590B9C633B}Prefabs/Drones/DJIBase/DJIBase.et" "{FDA92D590B9C633B}Prefabs/Drones/DJIBase/DJIBase.et" "" ""
+     }
+    }
+   }
+  }
+ }
+}

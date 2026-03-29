@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmedfix"
+ GUID "68D64DE25E44D6C6"
+ TITLE "cgqc_med_fix"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "684B2E4B5C7A1ECA"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

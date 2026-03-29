@@ -1,4 +1,4 @@
-GenericEntity : "{B9E528A31A6F0A02}Prefabs/Weapons/Attachments/Misc/manta_railcover/kits/RHS_manta_kit_kacGrip_M27_3.et" {
+GameEntity : "{B9E528A31A6F0A02}Prefabs/Weapons/Attachments/Misc/manta_railcover/kits/RHS_manta_kit_kacGrip_M27_3.et" {
  ID "4BA426CBAED42A14"
  components {
   SlotManagerComponent "{62A52E56EAB47677}" {

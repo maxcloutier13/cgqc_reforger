@@ -1,0 +1,56 @@
+GenericEntity : "{CBDA076D5A4FC8E0}Prefabs/Characters/Vests/Vest_PCGen_III_Pouches/Pouch_Blueforce_Tri.et" {
+ ID "50E0B40D7407B664"
+ components {
+  MeshObject "{51EE72201CEF8651}" {
+   Object "{E88FE75BCA788C1F}Assets/Characters/Vests/Vest_PCGen_III_Pouches/shaw_placard_v3.xob"
+   Materials {
+    MaterialAssignClass "{68DA25CA44F8E0EB}" {
+     SourceMaterial "shaw_placard"
+     AssignedMaterial "{383223AADA403B0D}Assets/Characters/Vests/Vest_PCGen_III_Pouches/Data/shaw_placard_blk.emat"
+    }
+   }
+  }
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB03CBA95936}" {
+    CustomAttributes {
+     PreviewRenderAttributes "{52BCBDD25D8B867D}" {
+      PreviewModel "{E88FE75BCA788C1F}Assets/Characters/Vests/Vest_PCGen_III_Pouches/shaw_placard_v3.xob"
+     }
+    }
+   }
+   InitialStorageSlots {
+    RHS_MorphedEquipmentStorageSlot pouch0 {
+     Offset 0.0785 0.0231 0.1454
+     Angles 5.9998 -72.59639 178.65771
+    }
+    RHS_MorphedEquipmentStorageSlot pouch1 {
+     Offset 0.0066 0.0254 0.1541
+     Angles 3.5704 -85.7067 177.06
+    }
+    RHS_MorphedEquipmentStorageSlot pouch2 {
+     Offset -0.0647 0.0237 0.1477
+     Angles 2.9983 -95.8317 176.47839
+    }
+    RHS_MorphedEquipmentStorageSlot pouch3 {
+     Offset -0.132 0.0201 0.1282
+     Angles 2.3359 -105.9049 176.0085
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO"
+     }
+     m_aCompatibleItemTypes {
+      "RHS_RIFLE_AMMO"
+     }
+     m_sMorphStateName "pouch4"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5242D72632990471}" {
+   WornModel "{E88FE75BCA788C1F}Assets/Characters/Vests/Vest_PCGen_III_Pouches/shaw_placard_v3.xob"
+   ItemModel "{E88FE75BCA788C1F}Assets/Characters/Vests/Vest_PCGen_III_Pouches/shaw_placard_v3.xob"
+  }
+ }
+ coords 0.364 -0.211 -0.247
+}

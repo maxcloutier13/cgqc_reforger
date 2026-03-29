@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmapsneptune"
+ GUID "68F77CC65670942D"
+ TITLE "cgqc_maps_neptune"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "61EF4AA4D043BE00" "66EB0C9543D1D4AF" "66EB4A3B15619C69" "68B538DB540596CA"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

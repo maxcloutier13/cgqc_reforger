@@ -33,6 +33,7 @@ class CGQC_BandolierAutoFill : ScriptComponent
 	static const ResourceName FRAG_PREFAB  = "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et";
 	static const ResourceName SMOKE_PREFAB = "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et";
 
+	[RplProp()]
 	bool   m_bFilled      = false;
 	bool   m_bFillFailed  = false;
 	string m_sFailMessage = string.Empty;
@@ -341,8 +342,7 @@ class CGQC_BandolierOpenAction : ScriptedUserAction
 					hintMgr.ShowCustomHint(filler.m_sFailMessage, "Bandolier", 5.0);
 				return;
 			}
-
-			GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.Inventory20Menu);
+			// GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.Inventory20Menu);
 		}
 	}
 

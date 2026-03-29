@@ -1,0 +1,7 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  CGQC_RadioFrequencyPersistComponent "{68E51084B77B022A}" {
+  }
+ }
+}

@@ -1,0 +1,9 @@
+GenericEntity : "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et" {
+ ID "6693323D9BC47CE5"
+ components {
+  Persistence "{68F813921DCA39C1}" {
+  }
+  SCR_AntiPersonnelMineCollisionHandlerComponent "{68F813921DCA39CD}" {
+  }
+ }
+}

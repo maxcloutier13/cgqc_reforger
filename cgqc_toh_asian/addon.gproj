@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqctohasian"
+ GUID "68F228984BFFFE51"
+ TITLE "cgqc_toh_asian"
+ Dependencies {
+  "65FB5184A09FE8A1" "58D0FB3206B6F859"
+ }
+}

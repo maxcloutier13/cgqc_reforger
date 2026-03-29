@@ -42,99 +42,718 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
  coords 1843.281 233.951 1495.201
 }
-GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
- coords 2368.313 163.5 1808.942
+Vehicle TWQ_1_Desert1 {
+ coords 2626.404 10 3190.409
+ angles 0 26.795 0
 }
-GenericEntity : "{158D4D0B77B38B1E}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC_Weapons.et" {
- coords 2355.07 163.5 1812.359
+Vehicle MH47G_Block1 : "{03300A0463827C4B}Prefabs/Vehicles/Helicopters/H47/MH47G_Block2.et" {
+ coords 2831.428 10.025 3042.877
+ angles 0 31.6 0
 }
-GenericEntity : "{45D8A2F729A26A25}PrefabsEditable/Auto/Structures/Signs/Military/E_Sign_FieldHospital_US_01.et" {
- coords 2368.208 163.514 1807.799
- angles 0 1.196 0
-}
-Vehicle S1203_transport_randomized1 : "{49C909AFD66E90A1}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_randomized.et" {
- coords 2377.254 163.5 1855.121
-}
-$grp Vehicle : "{5168FEA3054D6D15}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB_MERDC.et" {
- M151A2_M2HB_MERDC1 {
-  coords 2344.04 163.5 1839.881
-  angles 0 81.915 0
+$grp GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ {
+  coords 2664.833 8 3112.679
+  angles 0 122.067 0
  }
- M151A2_M2HB_MERDC2 {
-  coords 2343.788 163.5 1836.608
-  angles 0 92.4 0
+ {
+  coords 2747.285 8.681 2990.933
+  angles 0 30.938 0
+ }
+ {
+  coords 2714.888 8.152 3014.443
+  angles 0 32.774 0
+ }
+ {
+  coords 2719.707 8.102 3066.997
+  angles 0 119.894 0
+ }
+ {
+  coords 2780.444 10 3176.075
+  angles 0 32.774 0
+ }
+ {
+  coords 2753.16 10 3193.779
+  angles 0 32.774 0
+ }
+ {
+  coords 2639.385 15.255 3036.953
+  angles 0 32.774 0
  }
 }
-$grp Vehicle : "{5555DCAFADB8CE2A}Prefabs/Vehicles/Wheeled/S105/S105_rally.et" {
- S105_rally1 {
-  coords 2383.767 163.5 1855.483
+$grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
+ {
+  coords 2710.044 8.129 3018.492
+  angles 0 34.29 0
  }
- S105_rally2 {
-  coords 2380.707 163.5 1855.47
-  angles 0 179.684 0
+ {
+  coords 2706.555 8.125 3020.907
+  angles 0 34.29 0
  }
+ {
+  coords 2698.639 8.101 3026.004
+  angles 0 34.29 0
+ }
+ {
+  coords 2695.15 8.097 3028.419
+  angles 0 34.29 0
+ }
+ {
+  coords 2688.967 8.05 3032.286
+  angles 0 34.29 0
+ }
+ {
+  coords 2685.478 8.046 3034.701
+  angles 0 34.29 0
+ }
+ {
+  coords 2724.601 8.102 3067.474
+  angles 0 34.29 0
+ }
+}
+GenericEntity : "{1912B56391E4D05D}Prefabs/Props/Military/Compositions/US/ArsenalCubby2_US.et" {
+ coords 2725.802 8.102 3063.656
+ angles 0 -147.154 0
+}
+Vehicle APC_K17_Epoch_tan1 : "{295A6AAFBE74C040}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch_tan.et" {
+ coords 2643.884 10 3236.879
+ angles 0 -148.908 0
+}
+$grp SCR_FiringRangeTarget : "{379D34B0D41DA810}Prefabs/Props/Military/Training/TargetInfantry_01.et" {
+ {
+  coords 2863.114 59.327 3421.379
+  angles 0 -146.111 0
+ }
+ {
+  coords 2875.347 60.115 3415.976
+  angles 0 -146.111 0
+ }
+ {
+  coords 2847.349 58.514 3428.417
+  angles 0 -146.111 0
+ }
+ {
+  coords 2841.182 58.456 3431.146
+  angles 0 -146.111 0
+ }
+ {
+  coords 2807.591 56.63 3431.46
+  angles 0 -163.967 0
+ }
+ {
+  coords 2827.331 51.935 3415.567
+  angles 0 -146.111 0
+ }
+ {
+  coords 2842.844 48.721 3400.081
+  angles 0 -146.111 0
+ }
+ {
+  coords 2817.75 44.648 3406.771
+  angles 0 -146.111 0
+ }
+ {
+  coords 2862.263 56.065 3403.64
+  angles 0 -146.111 0
+ }
+ {
+  coords 2846.491 40.415 3380.582
+  angles 0 -146.111 0
+ }
+ {
+  coords 2804.258 34.955 3396.78
+  angles 0 -146.111 0
+ }
+ {
+  coords 1840.365 237.505 2825.172
+  angles 0 73.41 0
+ }
+ {
+  coords 1838.876 232.195 2840.251
+  angles 0 73.41 0
+ }
+ {
+  coords 1865.33 191.697 2896.26
+  angles 0 73.41 0
+ }
+ {
+  coords 1875.928 189.376 2886.94
+  angles 0 73.41 0
+ }
+ {
+  coords 1782.204 216.833 2919.518
+  angles 0 73.41 0
+ }
+ {
+  coords 1791.984 220.458 2888.929
+  angles 0 73.41 0
+ }
+ {
+  coords 1805.496 226.242 2865.116
+  angles 0 73.41 0
+ }
+ {
+  coords 1777.373 242.478 2858.734
+  angles 0 73.41 0
+ }
+ {
+  coords 1766.691 239.52 2881.786
+  angles 0 73.41 0
+ }
+ {
+  coords 1845.571 235.06 2808.869
+  angles 0 73.41 0
+ }
+ {
+  coords 1892.158 174.867 2761.657
+  angles 0 73.41 0
+ }
+ {
+  coords 1916.548 149.366 2783.846
+  angles 0 73.41 0
+ }
+ {
+  coords 1893 183.198 2806.051
+  angles 0 73.41 0
+ }
+ {
+  coords 1925.032 150.7 2864.434
+  angles 0 73.41 0
+ }
+ {
+  coords 1900.469 178.927 2833.85
+  angles 0 73.41 0
+ }
+ {
+  coords 1880.359 154.146 2955.404
+  angles 0 73.41 0
+ }
+ {
+  coords 1893.058 125.834 3003.5
+  angles 0 73.41 0
+ }
+ {
+  coords 1882.109 117.349 3063.391
+  angles 0 73.41 0
+ }
+ {
+  coords 1558.678 102.522 3950.895
+  angles 0 127.738 0
+ }
+ {
+  coords 1563.612 102.803 3955.338
+  angles 0 127.738 0
+ }
+ {
+  coords 1551.905 104.092 3948.032
+  angles 0 127.738 0
+ }
+ {
+  coords 1598.73 81.968 3973.403
+  angles 0 127.738 0
+ }
+ {
+  coords 1617.331 88.016 3993.029
+  angles 0 127.738 0
+ }
+ {
+  coords 1599.644 110.897 4003.28
+  angles 0 127.738 0
+ }
+ {
+  coords 1627.851 94.976 4001.929
+  angles 0 127.738 0
+ }
+ {
+  coords 1544.116 90.601 3930.524
+  angles 0 127.738 0
+ }
+ {
+  coords 1561.751 77.931 3925.911
+  angles 0 127.738 0
+ }
+ {
+  coords 1639.23 93.098 4001.119
+  angles 0 127.738 0
+ }
+ {
+  coords 1631.836 110.897 4018.916
+  angles 0 127.738 0
+ }
+ {
+  coords 1652.688 97.186 4003.091
+  angles 0 127.738 0
+ }
+ {
+  coords 1559.266 95.081 3943.683
+  angles 0 127.738 0
+ }
+ {
+  coords 1639.88 69.941 3984.616
+  angles 0 127.738 0
+ }
+ {
+  coords 1606.643 59.422 3928.029
+  angles 0 127.738 0
+ }
+ {
+  coords 4015.923 209.631 2368.638
+  angles 0 -88.616 0
+ }
+ {
+  coords 4019.958 220.132 2321.103
+  angles 0 -88.616 0
+ }
+ {
+  coords 4015.933 213.7 2302.491
+  angles 0 -88.616 0
+ }
+ {
+  coords 4010.234 204.005 2343.788
+  angles 0 -88.616 0
+ }
+ {
+  coords 4008.253 206.181 2378.908
+  angles 0 -88.616 0
+ }
+ {
+  coords 4042.339 233.485 2365.651
+  angles 0 -88.616 0
+ }
+ {
+  coords 4034.471 239.369 2332.214
+  angles 0 -88.616 0
+ }
+ {
+  coords 4003.827 195.248 2298.99
+  angles 0 -88.616 0
+ }
+ {
+  coords 3998.889 197.054 2371.093
+  angles 0 -88.616 0
+ }
+ {
+  coords 3991.533 178.189 2341.574
+  angles 0 -88.616 0
+ }
+ {
+  coords 3983.263 163.204 2337.394
+  angles 0 -88.616 0
+ }
+ {
+  coords 4012.347 192.919 2259.765
+  angles 0 -88.616 0
+ }
+ {
+  coords 4034.688 239.192 2283.042
+  angles 0 -88.616 0
+ }
+ {
+  coords 4030.889 240.981 2307.901
+  angles 0 -88.616 0
+ }
+ {
+  coords 1806.874 172.323 3030.378
+  angles 0 73.41 0
+ }
+ {
+  coords 1814.994 169.604 3078.167
+  angles 0 73.41 0
+ }
+ {
+  coords 1817.7 175.433 3096.627
+  angles 0 73.41 0
+ }
+ {
+  coords 1826.668 167.586 3088.804
+  angles 0 73.41 0
+ }
+ {
+  coords 1831.628 154.985 3041.36
+  angles 0 73.41 0
+ }
+ {
+  coords 1827.288 174.141 3125.842
+  angles 0 73.41 0
+ }
+ {
+  coords 1830.016 167.216 3159.029
+  angles 0 73.41 0
+ }
+ {
+  coords 1840.239 161.378 3197.942
+  angles 0 73.41 0
+ }
+ {
+  coords 1841.356 163.406 3227.025
+  angles 0 73.41 0
+ }
+ {
+  coords 1847.277 168.948 3273.145
+  angles 0 73.41 0
+ }
+ {
+  coords 1909.764 104.899 3220.702
+  angles 0 73.41 0
+ }
+ {
+  coords 1880.469 118.775 3187.137
+  angles 0 73.41 0
+ }
+ {
+  coords 1847.352 147.507 3073.171
+  angles 0 73.41 0
+ }
+ {
+  coords 1850.387 141.849 3030.525
+  angles 0 73.41 0
+ }
+}
+$grp GenericEntity : "{3E053870BECBCE50}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_02_V1_CGQC.et" {
+ {
+  coords 2662.929 8 3111.279
+ }
+ {
+  coords 2715.579 8.163 3013.312
+  angles 0 -55.038 0
+ }
+}
+Vehicle UH1Y_Somehow_working1 : "{4044EA2205AEADF0}Prefabs/Vehicles/Helicopters/UH1Y/UH1Y_Somehow_working.et" {
+ coords 3060.152 10 2978.181
+ angles 0 -56.346 0
+}
+Vehicle Stryker_CROWS_Cage_Tan1 : "{46A5E64726FCE76B}Prefabs/Vehicles/Wheeled/Stryker/M1126/CROWS/Stryker_CROWS_Cage_Tan.et" {
+ coords 2608.277 10 3210.042
+ angles 0 33.146 0
+}
+$grp Turret : "{49425C10B169D32A}Prefabs/Weapons/Howitzers/M777/M777_Howitzer_Desert.et" {
+ {
+  coords 2775.929 9.999 3181.075
+  angles 0 -148.942 0
+ }
+ {
+  coords 2748.706 10 3196.983
+  angles 0 -145.436 0
+ }
+}
+Vehicle S105_rally1 : "{5555DCAFADB8CE2A}Prefabs/Vehicles/Wheeled/S105/S105_rally.et" {
+ coords 2787.886 8.5 2985.305
+ angles 0 -51.766 0
+}
+Tank M2A2_BUSK_Desert1 : "{71E416DCB2BE86D7}Prefabs/Vehicles/Tracked/BFV/M2A2_BUSK_Desert.et" {
+ coords 2602.605 10 3213.245
+ angles 0 34.541 0
+}
+Vehicle AH6M_M1 : "{72C04A6EABC12143}Prefabs/Vehicles/Helicopters/AH6M/AH6M_M134.et" {
+ coords 2973.595 10 3055.365
+ angles 0 35.224 0
+}
+Vehicle Cougar4x4_Tan_OPGK1 : "{772A5979B233C85A}Prefabs/Vehicles/Wheeled/Cougar4x4/Cougar4x4_Tan_OPGK.et" {
+ coords 2661.037 8 3025.915
+ angles 0 33.485 0
 }
 $grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
- Mortar_M252_68D235176B992E50 {
-  coords 2368.814 163.5 1822.718
+ Mortar_M252_68DF0D0E24CB156A {
+  coords 2919.504 10 3087.091
+  angles 0 33.946 0
  }
- Mortar_M252_68D235176B992F26 {
-  coords 2369.412 163.5 1829.047
+ Mortar_M252_68DF0D0E262C5006 {
+  coords 2921.019 10 3090.817
+  angles 0 32.956 0
  }
+}
+Vehicle Mi8MT_armed_black1 : "{80C975F8482DEE97}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_black.et" {
+ coords 3047.783 10.061 2962.587
+ angles 0 -60.361 0
+}
+$grp GameEntity : "{82A575F7D83C3231}Prefabs/Props/Military/Compositions/US/HeliWeapons_ArsenalBox_HeliPad_US.et" {
+ {
+  coords 3008.437 10 3028.129
+  angles 0 -150.289 0
+ }
+ {
+  coords 2865.348 10 3016.973
+  angles 0 -145.643 0
+ }
+}
+Vehicle Cougar6x6_Tan_OPGK1 : "{833AC7ECD038AAD8}Prefabs/Vehicles/Wheeled/Cougar6x6/Cougar6x6_Tan_OPGK.et" {
+ coords 2664.664 8 3023.977
+ angles 0 31.606 0
+}
+$grp GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ {
+  coords 2662.221 8 3108.653
+  angles 0 119.04 0
+ }
+ {
+  coords 2717.198 8.155 3012.84
+  angles 0 37.364 0
+ }
+ {
+  coords 2718.545 8.102 3065.051
+  angles 0 119.301 0
+ }
+}
+$grp Vehicle : "{8D59697F5C0A6DFC}Prefabs/Vehicles/Wheeled/MRZR/M2HB/MRZRD4_M2HB_Tan.et" {
+ MRZRD4_M2HB_Tan1 {
+  coords 2682.171 8 2997.634
+  angles 0 33.809 0
+ }
+ MRZRD4_M2HB_Tan2 {
+  coords 2682.067 8 3001.305
+  angles 0 33.809 0
+ }
+}
+RHS_Tank Tank_T14_camo1 : "{9057DDA3E3FAA03B}Prefabs/Vehicles/Tracked/T14/Tank_T14_camo.et" {
+ coords 2633.669 10 3243.999
+ angles 0 -148.756 0
+}
+Vehicle K4386_Tan1 : "{93953D1ABAEE7D85}Prefabs/Vehicles/Wheeled/K4386/K4386_Tan.et" {
+ coords 2662.516 8 3014.131
+ angles 0 34.461 0
+}
+Vehicle APC_K17_Berezok_tan1 : "{944D59BF5EC046D6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok_tan.et" {
+ coords 2639.025 10 3240.662
+ angles 0 -149.13 0
 }
 $grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
  M151A2_transport_MERDC1 {
-  coords 2344.151 163.5 1832.722
-  angles 0 87.002 0
+  coords 2781.275 8.5 2976.851
+  angles 0 133.089 0
  }
  M151A2_transport_MERDC2 {
-  coords 2344.288 163.5 1828.632
-  angles 0 -91.441 0
+  coords 2670.187 8 3117.465
+  angles 0 132.128 0
  }
 }
-Vehicle Ural4320_transport_covered_closed1 : "{9DD4FD3527CB46C8}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_closed.et" {
- coords 2356.794 163.5 1856.143
+GenericEntity : "{97964262C00B4154}Prefabs/Props/Military/Compositions/US/ArsenalCage_US.et" {
+ coords 2723.296 8.102 3059.54
+ angles 0 32.489 0
 }
-GenericEntity : "{A13F6A7F82DF031C}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_Conflict_US_01.et" {
- coords 2360.075 163.591 1882.358
- angles 0 -90.259 0
+Tank M1A2_TUSKII_Tan1 : "{9FCB847F17AA2D7E}Prefabs/Vehicles/Tracked/M1A2/M1A2_TUSKII_Tan.et" {
+ coords 2597.779 10 3217.148
+ angles 0 33.091 0
+}
+GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_US_01.et" {
+ coords 2949.332 10 3071.466
+ angles 0 32.694 0
+}
+Vehicle AH6M_GAU1 : "{A317D959A4248173}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19.et" {
+ coords 3001.294 10 3036.419
+ angles 0 32.618 0
+}
+Vehicle MH6M1 : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ coords 2988.073 10 3045.47
+ angles 0 34.371 0
+}
+GenericEntity : "{B00B2BE99A08AC51}Prefabs/Props/Military/Compositions/US/ArsenalCubby_US.et" {
+ coords 2726.537 8.102 3063.192
+ angles 0 -147.154 0
+}
+$grp Vehicle : "{B01D12F49572C4B8}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M134/JLTV_CROWS_M134.et" {
+ JLTV_CROWS_M1 {
+  coords 2674.323 8 3005.709
+  angles 0 36.461 0
+ }
+ JLTV_CROWS_M2 {
+  coords 2670.571 8 3008.173
+  angles 0 36.461 0
+ }
+}
+$grp GenericEntity : "{B5FDCA49E8753CDF}Prefabs/Structures/Decal/HeliPad_military.et" {
+ {
+  coords 3001.428 11.612 3036.968
+  angles 0 32.298 0
+ }
+ {
+  coords 2988.256 10 3044.872
+  angles 0 32.298 0
+ }
+ {
+  coords 2973.819 10 3054.373
+  angles 0 32.298 0
+ }
+ {
+  coords 3059.888 10 2978.409
+  angles 0 -55.517 0
+ }
+ {
+  coords 3047.955 10 2961.774
+  angles 0 -55.517 0
+ }
 }
 Vehicle LAV25_MERDC1 : "{B7A8BAA37CB0AC2B}Prefabs/Vehicles/Wheeled/LAV25/LAV25_MERDC.et" {
- coords 2355.887 163.5 1827.703
+ coords 2613.49 10 3205.981
+ angles 0 32.88 0
 }
-SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 2357.46 163.5 1814.358
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "COP Korengal"
+$grp Vehicle : "{B83B4C8BE05C9554}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed_Tan.et" {
+ MRZRD4_Unarmed_Tan1 {
+  coords 2677.642 8 3000.396
+  angles 0 36.586 0
+ }
+ MRZRD4_Unarmed_Tan2 {
+  coords 2677.785 8 3004.028
+  angles 0 36.586 0
+ }
+ MRZRD4_Unarmed_Tan3 {
+  coords 2658.697 8 3101.159
+  angles 0 124.871 0
+ }
+ MRZRD4_Unarmed_Tan4 {
+  coords 2660.257 8 3103.165
+  angles 0 124.871 0
  }
 }
-GenericEntity : "{D2E719DAAB25CCE9}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC_Equipment.et" {
- coords 2359.946 163.5 1812.429
+$grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ {
+  coords 2667.242 8 3108.311
+  m_iPriority 3
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Barracks"
+  }
+ }
+ {
+  coords 2748.617 8.68 2991.996
+  angles 0 -57.137 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Small Range"
+  }
+ }
+ {
+  coords 2677.175 8 3011.88
+  angles 0 -57.137 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Garage"
+  }
+ }
+ {
+  coords 2655.154 8.104 3081.305
+  angles 0 -57.137 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "CQB"
+  }
+ }
+ {
+  coords 2720.647 8.136 3013.82
+  angles 0 -58.605 0
+  m_iPriority 1
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Medical and Basics"
+  }
+ }
+ {
+  coords 2923.573 10 3093.755
+  angles 0 -58.605 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Mortar Training"
+  }
+ }
+ {
+  coords 2615.889 10 3216.742
+  angles 0 -57.137 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Armor Garage"
+  }
+ }
+ {
+  coords 2860.004 10 3061.177
+  angles 0 -58.605 0
+  m_iPriority 1
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Helicopter"
+  }
+ }
+ {
+  coords 2730.428 8.102 3072.309
+  angles 0 -57.137 0
+  m_iPriority -1
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "HQ"
+  }
+ }
+ {
+  coords 2638.586 15.261 3040.572
+  angles 0 -58.605 0
+  m_iPriority 2
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "Sniping"
+  }
+ }
 }
-$grp Vehicle : "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et" {
- M1025_armed_M2HB_MERDC1 {
-  coords 2372.013 163.5 1839.381
- }
- M1025_armed_M2HB_MERDC2 {
-  coords 2368.226 163.5 1839.591
- }
- M1025_armed_M2HB_MERDC3 {
-  coords 2363.863 163.5 1839.694
- }
+GenericEntity : "{C6238BBF47B66FEA}Prefabs/Props/Military/Compositions/US/ArsenalCage2_US.et" {
+ coords 2720.792 8.102 3061.135
+ angles 0 32.489 0
 }
 Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
- coords 2359.515 164.145 1881.27
- angles 0 90.3 0
+ coords 2665.353 8.026 3063.603
+ angles 0 -54.329 0
 }
 $grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_US.et" {
  {
-  coords 2370.938 163.5 1828.937
+  coords 2878.672 10 3110.624
+  angles 0 -55.623 0
  }
  {
-  coords 2370.357 163.5 1822.816
+  coords 2917.372 10 3088.818
+  angles 0 33.34 0
+ }
+ {
+  coords 2922.927 10 3089.875
+  angles 0 33.34 0
  }
 }
-GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
- coords 2343.078 163.5 1864.641
- angles 0 89.105 0
+$grp Vehicle : "{E6E5E1E5DC66DD8C}Prefabs/Vehicles/Wheeled/Motorbike/motorbike_green.et" {
+ motorbike_green1 {
+  coords 2682.119 8.018 3116.985
+  angles 0 130.695 0
+ }
+ motorbike_green2 {
+  coords 2778.776 8.503 2968.635
+  angles 0 -53.092 0
+ }
+ motorbike_green4 {
+  coords 2655.375 8 3022.673
+  angles 0 33.503 0
+ }
+ motorbike_green5 {
+  coords 2656.256 8 3022.059
+  angles 0 33.503 0
+ }
+ motorbike_green7 {
+  coords 2674.427 8 3120.91
+  angles 0 -173.777 0
+ }
+ motorbike_green8 {
+  coords 2675.577 8 3120.264
+  angles 0 -173.777 0
+ }
+ motorbike_green9 {
+  coords 2676.678 8 3119.596
+  angles 0 -173.777 0
+ }
+}
+Vehicle K4386_Armed_Tan1 : "{E836092AB606CE4A}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Tan.et" {
+ coords 2666.826 8 3011.011
+ angles 0 35.471 0
+}
+$grp GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
+ {
+  coords 2641.354 10 3195.767
+ }
+ {
+  coords 2696.021 8.198 2988.464
+  angles 0 34.756 0
+ }
+}
+Vehicle AH64D1 : "{F2C8E85F145934F4}Prefabs/Vehicles/Helicopters/AH64/AH64D.et" {
+ coords 2859.676 10.025 3024.092
+ angles 0 33.922 0
+}
+GenericEntity : "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et" {
+ coords 2572.906 10 3232.74
+ angles 0 103.133 0
 }

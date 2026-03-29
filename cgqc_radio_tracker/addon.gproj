@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcradiotracker"
+ GUID "68F6F633516D447A"
+ TITLE "cgqc_radio_tracker"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

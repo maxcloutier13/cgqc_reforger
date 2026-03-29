@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctohcore"
+ GUID "68F2215E5C11A7B8"
+ TITLE "cgqc_toh_core"
+ Dependencies {
+  "58D0FB3206B6F859" "64C912EF952E1075"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
