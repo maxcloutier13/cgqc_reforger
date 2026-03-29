@@ -7,6 +7,12 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
    m_sLoadoutResource "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et"
   }
+  SCR_FactionPlayerLoadout "{68F8F75DEAC97B0D}" {
+   m_sLoadoutResource "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_Student_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{68F8F75DED70B77A}" {
+   m_sLoadoutResource "{A42CDE97BAFD4444}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_Instructor_2026.et"
+  }
   SCR_FactionPlayerLoadout "{68C83889C5D151F1}" {
    m_sLoadoutName "Squad Leader"
    m_sLoadoutResource "{275D1C3FE4EC157B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader_Moderne.et"
@@ -50,11 +56,6 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   SCR_FactionPlayerLoadout "{68E428949330F9C2}" {
    m_sLoadoutName "DroneOp FPV"
    m_sLoadoutResource "{F03DE84EEA47BAAC}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_DroneOp_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
-  }
-  SCR_FactionPlayerLoadout "{68E4289CEE0C054B}" {
-   m_sLoadoutName "DroneOp FPV"
-   m_sLoadoutResource "{B980DC6789D231D4}Prefabs/Characters/Factions/INDFOR/2026/Character_CGQC_Student_2026.et"
    m_sAffiliatedFaction "CGQC"
   }
  }

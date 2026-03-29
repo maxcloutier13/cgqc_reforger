@@ -1,16 +1,14 @@
 SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et" {
  ID "520EC961A090B1EF"
  components {
-  RandomGearComponent "{68AAF221635F9889}" {
-   Enabled 0
-   m_TopsConfig SCR_GearPoolConfig "{68E44AEAD6DDDD21}" {
-    m_aGearPool {
-     "" ""
-    }
-   }
-   m_BootsConfig SCR_GearPoolConfig "{68E44AEACA1D16CF}" {
-    m_aGearPool {
-     "" ""
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot WristwatchSlot {
+       Prefab "{57C7E2D1FB25A85E}Prefabs/Items/Equipment/Watches/Watch_GarminTactixBravo_green.et"
+      }
+     }
     }
    }
   }
@@ -64,7 +62,7 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "Jacket/Jacket_Crye_Combat_Shirt_Rolled_mcblack.et"
      TargetPurpose 1
      PrefabsToSpawn {
-      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et"
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/PaperMap_01_folded_US.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et"
      }
     }
     ItemsInitConfigurationItem "{68B908099C22257E}" {
