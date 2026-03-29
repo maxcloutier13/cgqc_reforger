@@ -24,22 +24,6 @@ class CGQC_BackpackNametag : ScriptComponent
 
 		invItem.m_OnParentSlotChangedInvoker.Insert(OnParentSlotChanged);
 	}
-	
-	// Get name from mod CustomName
-	string GetCustomPlayerName(int playerID)
-	{
-	    // Try CustomNamesManager first
-	    CustomNamesManager cnm = CustomNamesManager.GetInstance();
-	    if (cnm)
-	    {
-	        string customName = cnm.GetCustomName(playerID);
-	        if (!customName.IsEmpty())
-	            return customName;
-	    }
-	    
-	    // Fallback to Steam name
-	    return GetGame().GetPlayerManager().GetPlayerName(playerID);
-	}
 
     protected void OnParentSlotChanged(InventoryStorageSlot oldSlot, InventoryStorageSlot newSlot)
     {
@@ -79,7 +63,7 @@ class CGQC_BackpackNametag : ScriptComponent
         if (playerID == 0)
             return; // Not a player (could be AI, vehicle, etc.)
 
-        string playerName = GetCustomPlayerName(playerID);
+        string playerName = CGQC_Scripts.GetCustomPlayerName(playerID);
         if (playerName.IsEmpty())
             return;
 
@@ -224,7 +208,7 @@ class CGQC_NametagHighlightHelper
         if (!pc)
             return;
 
-        string localName = nametag.GetCustomPlayerName(pc.GetPlayerId());
+        string localName = CGQC_Scripts.GetCustomPlayerName(pc.GetPlayerId());
         if (nametag.m_sLastOwnerName != localName)
             return;
 

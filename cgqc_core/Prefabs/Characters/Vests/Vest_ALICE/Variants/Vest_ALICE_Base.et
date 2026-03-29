@@ -1,0 +1,83 @@
+GenericEntity : "{FD0890CE5C6D26CB}Prefabs/Characters/Vests/Vest_ALICE/Vest_ALICE_assembled_base.et" {
+ ID "526492DCB8322C65"
+ components {
+  ClothNodeStorageComponent "{6478F237506572A8}" {
+   Attributes SCR_ItemAttributeCollection "{68F8F75CA548B04E}" {
+    ItemDisplayName UIInfo "{68F8F75CA548B064}" {
+     Name "#AR-LBS_ALICE_Officer_Name"
+     Description "#AR-LBS_ALICE_Officer_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{68F8F75CA548B069}" {
+     Weight 1
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 2500
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68F8F75CA548B06E}" {
+      CameraDistanceToItem 4
+      FOV 10
+     }
+    }
+    m_Size SLOT_2x2
+   }
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 150
+   MaxItemSize 5 5 5
+  }
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   Slots {
+    LoadoutSlotInfo Suspenders {
+     Prefab ""
+     EnableDeflatedOffset 0
+    }
+    LoadoutSlotInfo MagPouch {
+     PivotID "Spine3"
+     Offset -0.1539 0.0322 0.0598
+     Angles 0 -150.26599 -6.6994
+     Prefab "{7E9C22C159E879A2}Prefabs/Items/Equipment/Accessories/Holster_M12/Holster_M12_magpouch.et"
+     DeflatedOffset -0.1868 0.0664 0.0785
+     DeflatedAngles 0.2052 -153.5993 3.5186
+    }
+    LoadoutSlotInfo MagPouch2 {
+    }
+    LoadoutSlotInfo Etool {
+     PivotID "Spine3"
+     Offset 0.1235 0.0174 -0.0729
+     Angles -0.4922 130.9847 0.0439
+     DeflatedOffset 0.1504 0.0638 -0.0963
+     DeflatedAngles -0.4934 132.9371 0.0271
+    }
+    LoadoutSlotInfo Buttpack {
+    }
+    LoadoutSlotInfo Cateen {
+     PivotID "Spine3"
+     Offset -0.1349 -0.08 -0.1282
+     Angles 0 26.433 0
+     DeflatedOffset -0.155 -0.0366 -0.1664
+     DeflatedAngles 3.2002 20.3217 0
+    }
+    LoadoutSlotInfo Bayonet {
+     PivotID "Spine3"
+     Offset 0.1315 0.033 -0.0722
+     Angles 1.9128 123.7726 -0.7688
+     Prefab "{EE7FBAD35CA9D0F2}Prefabs/Items/Equipment/Accessories/Scabbard_Bayonet_M9/Scabbard_Bayonet_M9.et"
+     DeflatedOffset 0.166 0.0744 -0.0827
+     DeflatedAngles 1.6568 120.3616 -2.8491
+    }
+    LoadoutSlotInfo PistolHolster {
+     PivotID "Spine3"
+     Offset 0.1684 0.0302 0.0331
+     Angles 5.0589 68.2578 0
+     Prefab "{6B9646EC0757693C}Prefabs/Items/Equipment/Accessories/Holster_M12/Holster_M12.et"
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.2013 0.0654 0.0515
+     DeflatedAngles -3.4287 64.7492 0.2101
+    }
+   }
+  }
+ }
+}
