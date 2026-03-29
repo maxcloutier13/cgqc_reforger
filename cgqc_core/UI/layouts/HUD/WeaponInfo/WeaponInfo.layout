@@ -5,7 +5,6 @@ FrameWidgetClass {
    {
     HorizontalLayoutWidgetClass "{5876BC8CDCDF523F}" {
      Prefab "{5876BC8CDCDF523F}"
-     "Is Enabled" 0
      "Is Visible" 0
     }
     HorizontalLayoutWidgetClass "{5876BC8CDCDF5222}" {
@@ -13,98 +12,80 @@ FrameWidgetClass {
      {
       OverlayWidgetClass "{5876BC8CDCC0ED23}" {
        Prefab "{5876BC8CDCC0ED23}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
      }
     }
     HorizontalLayoutWidgetClass "{5876BC8CDCC0ED20}" {
      Prefab "{5876BC8CDCC0ED20}"
-     "Is Enabled" 0
      "Is Visible" 0
      {
       RichTextWidgetClass "{5876BC8CDCC02D52}" {
        Prefab "{5876BC8CDCC02D52}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC02D5D}" {
        Prefab "{5876BC8CDCC02D5D}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC02D5E}" {
        Prefab "{5876BC8CDCC02D5E}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC02D5B}" {
        Prefab "{5876BC8CDCC02D5B}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC02D24}" {
        Prefab "{5876BC8CDCC02D24}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC02D21}" {
        Prefab "{5876BC8CDCC02D21}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC00FC1}" {
        Prefab "{5876BC8CDCC00FC1}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC0494D}" {
        Prefab "{5876BC8CDCC0494D}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC1825D}" {
        Prefab "{5876BC8CDCC1825D}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC1825E}" {
        Prefab "{5876BC8CDCC1825E}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{612072A0E7E849C6}" {
        Prefab "{612072A0E7E849C6}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
      }
     }
     HorizontalLayoutWidgetClass "{5876BC8CDCC18243}" {
      Prefab "{5876BC8CDCC18243}"
-     "Is Enabled" 0
      "Is Visible" 0
      {
       OverlayWidgetClass "{5876BC8CDCC18242}" {
        Prefab "{5876BC8CDCC18242}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       OverlayWidgetClass "{5876BC8CDCC18247}" {
        Prefab "{5876BC8CDCC18247}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
       SizeLayoutWidgetClass "{58ACBDDE14E9B671}" {
        Prefab "{58ACBDDE14E9B671}"
-       "Is Enabled" 0
        "Is Visible" 0
       }
      }
     }
     HorizontalLayoutWidgetClass "{59628161513F5EEE}" {
      Prefab "{59628161513F5EEE}"
-     "Is Enabled" 0
      "Is Visible" 0
      {
       RichTextWidgetClass "{59628160DE6A5FCE}" {
