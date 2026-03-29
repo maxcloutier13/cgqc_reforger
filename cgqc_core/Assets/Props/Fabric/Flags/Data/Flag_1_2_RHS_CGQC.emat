@@ -1,6 +1,6 @@
 MatPBRBasic {
  Cull none
- BCRMap "{86F48B6B5B4E1823}UI/Textures/Factions/cgqc_faction_flag_newLogo.edds"
+ BCRMap "{17C724990F8088D5}UI/Textures/Factions/FlagPoleFlag.edds"
  NormalPower 1.2
  NMOMap "{C39D234EF0D4B94D}Assets/Props/Fabric/Flags/Data/Flag_1_2_N.edds"
  GlobalMapsUVTransform MatUVTransform "{589E89E460291744}" {
