@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcvicsmoderne"
+ GUID "68FC23575F569B2D"
+ TITLE "cgqc_vics_moderne"
+ Dependencies {
+  "58D0FB3206B6F859" "66EB0C9543D1D4AF" "5D5A20A8AE33C21E" "5C721177A220B42F" "64900A5A31F5DCB5" "5B02128D896F7DE8" "686AC479236F235D"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

@@ -1,0 +1,29 @@
+$grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
+ {
+  coords 628.105 1.891 599
+ }
+ {
+  coords 632.363 1.891 599
+ }
+ {
+  coords 635.747 1.891 599
+ }
+ {
+  coords 640.005 1.891 599
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 633.46 0 596.088
+ m_iPriority 1
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Medical training"
+ }
+ {
+  SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+   coords 1.386 -0.004 0.055
+   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+    Name "Medical training"
+   }
+  }
+ }
+}

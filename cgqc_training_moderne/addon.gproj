@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctrainingmoderne"
+ GUID "68FC341D5E50CEA4"
+ TITLE "cgqc_training_moderne"
+ Dependencies {
+  "58D0FB3206B6F859" "68FC062054BB6D8B" "68C628334C58DEFD"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
