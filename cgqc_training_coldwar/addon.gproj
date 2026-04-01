@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqctesting"
- GUID "68E32CC955A41224"
- TITLE "cgqc_testing"
+ ID "cgqctrainingcoldwar"
+ GUID "68FC1AAC49686686"
+ TITLE "cgqc_training_coldwar"
  Dependencies {
-  "58D0FB3206B6F859" "606B100247F5C709" "6614B1FAE9694F8B"
+  "58D0FB3206B6F859" "68FC062054BB6D8B" "68C61DEE53D353EF"
  }
  Configurations {
   GameProjectConfig PC {
