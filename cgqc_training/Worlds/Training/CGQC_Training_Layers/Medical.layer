@@ -1,0 +1,12 @@
+GenericEntity : "{04385750E1EFE6D5}Prefabs/Structures/Signs/SignLarge_02/MARCHPAWS.et" {
+ coords 627.136 1.812 602.116
+ angles 0 180 0
+}
+GenericEntity : "{4D739103C9B946EC}Prefabs/Structures/Signs/SignLarge_02/TCCC Overview.et" {
+ coords 637.727 2.658 602.116
+ angles 0 -180 0
+}
+GenericEntity : "{E8A768A02385F5D2}Prefabs/Structures/Signs/SignLarge_02/FLOWCHART.et" {
+ coords 630.454 1.813 602.116
+ angles 0 180 0
+}

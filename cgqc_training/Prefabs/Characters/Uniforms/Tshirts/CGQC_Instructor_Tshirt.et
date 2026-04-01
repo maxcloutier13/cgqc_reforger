@@ -1,0 +1,108 @@
+GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
+ ID "5104869D194C6243"
+ components {
+  MeshObject "{5104869D194C6262}" {
+   Object "{66AF096B6E4442E5}Assets/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01_item.xob"
+  }
+  SCR_ItemOutfitFactionComponent "{68F903067D57759C}" {
+   m_OutfitDataHolder SCR_OutfitFactionDataHolder "{68F903067D5775BD}" {
+    m_aOutfitFactionData {
+     SCR_OutfitFactionData "{68F903067D5775A2}" {
+      m_AffiliatedFactionKey "CIV"
+      m_iOutfitFactionValue 40
+     }
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   components {
+    SCR_EquipmentStorageComponent "{68F903067D5775A8}" {
+     Priority 1
+     StoragePurpose 0x40 0x1
+     UseVirtualInventoryReplication 0
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot FlashlightSlot {
+       PivotID "Spine5"
+       Offset -0.1 0.0141 0.1249
+       Enabled 0
+       Prefab "{3A421547BC29F679}Prefabs/Items/Equipment/Flashlights/Flashlight_MX991/Flashlight_MX991.et"
+       AllowedItemTypes {
+        "FLASHLIGHT"
+       }
+       AnimatedMeshRefference "{6F223F9465D881DF}Assets/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01.xob"
+      }
+     }
+    }
+   }
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "DELTA_SHIRT"
+     Description "DELTA_SHIRT"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.8
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 2000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{555292467DA11B7C}" {
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 4.5
+      FOV 10
+      PreviewWornModel 1
+      PreviewModel "{6F223F9465D881DF}Assets/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01.xob"
+     }
+    }
+    m_SlotType SLOT_LOADOUT_STORAGE
+   }
+   Priority 2
+   UseCapacityCoefficient 0
+   CapacityCoefficient 1
+   MaxCumulativeVolume 600
+   MaxItemSize 10 10 10
+   m_fMaxWeight 5
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   AreaType LoadoutJacketArea "{68F903067D57755B}" {
+   }
+   Slots {
+    LoadoutSlotInfo DummyBelt {
+    }
+   }
+   WornModel "{ED69D2E92A3212CF}Data/CHAMPS_TEST_SHIRT.xob"
+   WornMaterialsOverride {
+    "{890E50602AE57428}Data/TSHIRT.emat"
+   }
+   ItemModel "{ED69D2E92A3212CF}Data/CHAMPS_TEST_SHIRT.xob"
+   ItemMaterialsOverride {
+    "{890E50602AE57428}Data/TSHIRT.emat"
+   }
+   SoundInt 320
+   OverrideMeshesToHide {
+    "Torso" "ArmUpper_L" "ArmUpper_R" "" ""
+   }
+   AreaOcludders {
+    "ChestLeftBottomFront"
+   }
+   DeflatedModel "{ED69D2E92A3212CF}Data/CHAMPS_TEST_SHIRT.xob"
+   AreaTypeWhenModelChange {
+    LoadoutArmoredVestSlotArea "{68F903067D577544}" {
+    }
+    LoadoutVestArea "{68F903067D577546}" {
+    }
+    LoadoutBackpackArea "{68F903067D577549}" {
+    }
+   }
+  }
+  ActionsManagerComponent "{5104869D194C6245}" {
+   ActionContexts {
+    UserActionContext "{5104869D194C624D}" {
+     Position PointInfo "{5104869D194C6273}" {
+      Offset 0 0.05 0
+     }
+    }
+   }
+  }
+ }
+}

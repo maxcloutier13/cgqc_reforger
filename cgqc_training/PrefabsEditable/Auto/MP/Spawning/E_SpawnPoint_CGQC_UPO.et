@@ -1,0 +1,36 @@
+SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+ ID "544EB04DCBFBD126"
+ components {
+  SCR_EditableEntityComponent "{68FC1E6403851F20}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "(SpawnPoint_CGQC_UPO)"
+    m_Image ""
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     ENTITYTYPE_OBJECT SIZE_XL
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{68FC1E6405712BD3}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{68FC1E6405713713}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+ m_sFaction "CGQC_UPO"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Spawn"
+  Icon "{571CB87D306C0A64}UI/Textures/Factions/cgqc_faction_newLogo_UPO_128.edds"
+ }
+}
