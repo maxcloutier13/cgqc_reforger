@@ -8,7 +8,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{68F8F75DEAC97B0D}" {
-   m_sLoadoutResource "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_Student_Moderne.et"
+   m_sLoadoutResource "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_UPO_moderne_base.et"
   }
   SCR_FactionPlayerLoadout "{68F8F75DED70B77A}" {
    m_sLoadoutResource "{A42CDE97BAFD4444}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_Instructor_2026.et"
