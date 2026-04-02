@@ -1,6 +1,8 @@
 GenericEntity : "{9ADA1544A675E0D8}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank.et" {
  ID "66E3250B8B9DAFC2"
  components {
+  CGQC_TargetHitComponent "{6904256FAD906982}" {
+  }
   CGQC_TargetMoverComponent "{69032051E5386D52}" {
    m_sRespawnPrefab "{B83661928BE0CF42}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank_CGQC.et"
   }

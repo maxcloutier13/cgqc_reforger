@@ -1,12 +1,7 @@
 // CGQC_ShootingRange.c
-// Place the target in Workbench at the 3m position.
-//
-// CGQC_TargetMoverComponent  — attach to the CQB_TargetBlank entity
-// CGQC_TargetCycleAction     — distance switch > ActionsManagerComponent > Additional Actions
-// CGQC_TargetCheckAction     — check switch > ActionsManagerComponent > Additional Actions
-// CGQC_TargetResetAction     — also on check switch > Additional Actions
+// Place CQB_TargetBlank_CGQC.et in Workbench at the 3m position.
+// Set "Respawn Prefab" on CGQC_TargetMoverComponent to CQB_TargetBlank_CGQC.et
 
-//------------------------------------------------------------------------------------------------
 class CGQC_TargetMoverComponentClass : ScriptComponentClass {}
 
 class CGQC_TargetMoverComponent : ScriptComponent
@@ -15,66 +10,204 @@ class CGQC_TargetMoverComponent : ScriptComponent
 	protected static const float DIST_1 = 5.0;
 	protected static const float DIST_2 = 10.0;
 	protected static const float DIST_3 = 15.0;
-	protected static const float DIST_4 = 25.0;
+	protected static const float DIST_4 = 20.0;
+	protected static const float DIST_5 = 25.0;
+	protected static const float DIST_6 = 30.0;
 	protected static const float CHECK_DISTANCE = 1.2;
-	protected static const int DIST_COUNT = 5;
+	protected static const int DIST_COUNT = 7;
+	protected static const float MOVE_SPEED = 4.0; // metres per second
 
-	[RplProp()]
+	[RplProp(onRplName: "OnStateReplicated")]
 	protected int m_iDistanceIndex = 0;
 
-	[RplProp()]
+	[RplProp(onRplName: "OnStateReplicated")]
 	protected bool m_bCheckMode = false;
 
-	protected float m_fBaseX = 0;
+	// True while sliding — locks controls
+	[RplProp(onRplName: "OnMovingReplicated")]
+	protected bool m_bMoving = false;
 
-	// Set to the source prefab path of this target (e.g. CQB_TargetBlank.et)
-	// Used by Reset to respawn a fresh copy. Set once in Workbench per target entity.
-	[Attribute(defvalue: "", desc: "Prefab to spawn on reset", params: "et")]
+	protected float m_fBaseX = 0;
+	protected float m_fTargetX = 0; // world X we are sliding toward
+
+	[Attribute(defvalue: "", desc: "Prefab to spawn on reset (CQB_TargetBlank_CGQC.et)", params: "et")]
 	protected ResourceName m_sRespawnPrefab;
+
+	//------------------------------------------------------------------------------------------------
+	void CGQC_TargetMoverComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		SetEventMask(ent, EntityEvent.FRAME);
+		ent.SetFlags(EntityFlags.ACTIVE, true);
+	}
 
 	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
 		super.OnPostInit(owner);
 
-		if (!Replication.IsServer())
+		m_fBaseX = owner.GetOrigin()[0];
+		m_fTargetX = m_fBaseX;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override void EOnFrame(IEntity owner, float timeSlice)
+	{
+		if (!m_bMoving)
 			return;
 
-		m_fBaseX = owner.GetOrigin()[0];
+		vector pos = owner.GetOrigin();
+		float currentX = pos[0];
+		float diff = m_fTargetX - currentX;
+		float step = MOVE_SPEED * timeSlice;
+
+		if (Math.AbsFloat(diff) <= step)
+		{
+			// Arrived
+			pos[0] = m_fTargetX;
+			owner.SetOrigin(pos);
+
+			Physics phys = owner.GetPhysics();
+			if (phys)
+				phys.SetVelocity(vector.Zero);
+
+			if (Replication.IsServer())
+			{
+				m_bMoving = false;
+				Replication.BumpMe();
+			}
+		}
+		else
+		{
+			if (diff > 0)
+				pos[0] = currentX + step;
+			else
+				pos[0] = currentX - step;
+			owner.SetOrigin(pos);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// Called on clients when RplProps arrive
+	protected void OnStateReplicated()
+	{
+		if (Replication.IsServer())
+			return;
+
+		// Compute target X from new state so clients slide too
+		m_fTargetX = ComputeTargetX();
+		m_bMoving = true;
+	}
+
+	protected void OnMovingReplicated()
+	{
+		// When server signals movement done, snap to exact position on client
+		if (!m_bMoving)
+		{
+			IEntity owner = GetOwner();
+			if (!owner)
+				return;
+			vector pos = owner.GetOrigin();
+			pos[0] = m_fTargetX;
+			owner.SetOrigin(pos);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
 	bool IsCheckMode() { return m_bCheckMode; }
-
-	void SetBaseX(float val) { m_fBaseX = val; }
-	void SetDistanceIndex(int val) { m_iDistanceIndex = val; }
-	void SetCheckMode(bool val) { m_bCheckMode = val; }
-
-	ResourceName GetPrefabName() { return m_sRespawnPrefab; }
-	void SetRespawnPrefab(ResourceName val) { m_sRespawnPrefab = val; }
+	bool IsMoving() { return m_bMoving; }
 	float GetBaseX() { return m_fBaseX; }
 	int GetDistanceIndex() { return m_iDistanceIndex; }
+	ResourceName GetPrefabName() { return m_sRespawnPrefab; }
+
+	void SetBaseX(float val) { m_fBaseX = val; m_fTargetX = val; }
+	void SetRespawnPrefab(ResourceName val) { m_sRespawnPrefab = val; }
+
+	//------------------------------------------------------------------------------------------------
+	protected float ComputeTargetX()
+	{
+		float dist;
+		if (m_bCheckMode)
+			dist = CHECK_DISTANCE;
+		else
+			dist = GetDistanceAtIndex(m_iDistanceIndex);
+		return m_fBaseX - (dist - DIST_0);
+	}
 
 	//------------------------------------------------------------------------------------------------
 	void CycleDistance()
 	{
-		if (!Replication.IsServer() || m_bCheckMode)
+		if (!Replication.IsServer() || m_bCheckMode || m_bMoving)
 			return;
 
 		m_iDistanceIndex = (m_iDistanceIndex + 1) % DIST_COUNT;
+		m_fTargetX = ComputeTargetX();
+		m_bMoving = true;
 		Replication.BumpMe();
-		ApplyPosition();
 	}
 
 	//------------------------------------------------------------------------------------------------
 	void ToggleCheck()
 	{
-		if (!Replication.IsServer())
+		if (!Replication.IsServer() || m_bMoving)
 			return;
 
 		m_bCheckMode = !m_bCheckMode;
+		m_fTargetX = ComputeTargetX();
+		m_bMoving = true;
 		Replication.BumpMe();
-		ApplyPosition();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	void Reset()
+	{
+		if (!Replication.IsServer())
+			return;
+
+		IEntity owner = GetOwner();
+		if (!owner || m_sRespawnPrefab.IsEmpty())
+		{
+			Print("[CGQC_Reset] No owner or respawn prefab not set.", LogLevel.WARNING);
+			return;
+		}
+
+		Resource res = Resource.Load(m_sRespawnPrefab);
+		if (!res.IsValid())
+		{
+			Print("[CGQC_Reset] Resource.Load failed: " + m_sRespawnPrefab, LogLevel.WARNING);
+			return;
+		}
+
+		string entName      = owner.GetName();
+		float baseX         = m_fBaseX;
+		ResourceName prefab = m_sRespawnPrefab;
+
+		vector transform[4];
+		owner.GetTransform(transform);
+		transform[3][0] = baseX;
+
+		EntitySpawnParams params = new EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		params.Transform = transform;
+
+		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
+		if (!newEnt)
+		{
+			Print("[CGQC_Reset] SpawnEntityPrefab failed.", LogLevel.ERROR);
+			return;
+		}
+
+		newEnt.SetName(entName);
+
+		CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
+			newEnt.FindComponent(CGQC_TargetMoverComponent)
+		);
+		if (newMover)
+		{
+			newMover.SetBaseX(baseX);
+			newMover.SetRespawnPrefab(prefab);
+		}
+
+		SCR_EntityHelper.DeleteEntityAndChildren(owner);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -91,26 +224,21 @@ class CGQC_TargetMoverComponent : ScriptComponent
 		if (idx == 1) return DIST_1;
 		if (idx == 2) return DIST_2;
 		if (idx == 3) return DIST_3;
-		return DIST_4;
+		if (idx == 4) return DIST_4;
+		if (idx == 5) return DIST_5;
+		return DIST_6;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void ApplyPosition()
+	// Snap to position immediately (used after reset)
+	void SnapToPosition()
 	{
 		IEntity owner = GetOwner();
 		if (!owner)
 			return;
 
-		float dist;
-		if (m_bCheckMode)
-			dist = CHECK_DISTANCE;
-		else
-			dist = GetDistanceAtIndex(m_iDistanceIndex);
-
-		float newX = m_fBaseX - (dist - DIST_0);
-
 		vector pos = owner.GetOrigin();
-		pos[0] = newX;
+		pos[0] = m_fTargetX;
 		owner.SetOrigin(pos);
 
 		Physics phys = owner.GetPhysics();
@@ -124,7 +252,7 @@ static CGQC_TargetMoverComponent CGQC_FindMover(string entityName, string tag)
 {
 	if (entityName.IsEmpty())
 	{
-		Print("[" + tag + "] m_sTargetEntityName not set.", LogLevel.WARNING);
+		Print("[" + tag + "] Target entity name not set.", LogLevel.WARNING);
 		return null;
 	}
 
@@ -145,17 +273,23 @@ static CGQC_TargetMoverComponent CGQC_FindMover(string entityName, string tag)
 	return mover;
 }
 
-static void CGQC_Notify(string msg)
+// Silent version for CanBePerformedScript — no log spam
+static CGQC_TargetMoverComponent CGQC_FindMoverSilent(string entityName)
 {
-	SCR_PopUpNotification notif = SCR_PopUpNotification.GetInstance();
-	if (!notif)
-		return;
+	if (entityName.IsEmpty())
+		return null;
 
-	notif.ClearMsg();
-	notif.PopupMsg(msg);
+	IEntity targetEnt = GetGame().GetWorld().FindEntityByName(entityName);
+	if (!targetEnt)
+		return null;
+
+	return CGQC_TargetMoverComponent.Cast(targetEnt.FindComponent(CGQC_TargetMoverComponent));
 }
 
 //------------------------------------------------------------------------------------------------
+// Distance cycle
+//------------------------------------------------------------------------------------------------
+
 class CGQC_TargetCycleAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of this bay's target entity")]
@@ -169,23 +303,29 @@ class CGQC_TargetCycleAction : ScriptedUserAction
 
 		string label = mover.GetNextCycleLabel();
 		mover.CycleDistance();
-		CGQC_Notify("Distance — " + label);
+
+		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
+		if (hintMgr)
+			hintMgr.ShowCustomHint("Distance — " + label, "", 2.0);
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
 
 	override bool CanBePerformedScript(IEntity user)
 	{
-		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetCycleAction");
+		CGQC_TargetMoverComponent mover = CGQC_FindMoverSilent(m_sTargetEntityName);
 		if (!mover)
-			return true; // don't lock if entity temporarily missing (e.g. post-reset)
-		return !mover.IsCheckMode();
+			return true;
+		return !mover.IsCheckMode() && !mover.IsMoving();
 	}
 
 	override bool HasLocalEffectOnlyScript() { return false; }
 }
 
 //------------------------------------------------------------------------------------------------
+// Check toggle
+//------------------------------------------------------------------------------------------------
+
 class CGQC_TargetCheckAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of this bay's target entity")]
@@ -194,16 +334,31 @@ class CGQC_TargetCheckAction : ScriptedUserAction
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
 		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetCheckAction");
-		if (mover)
-			mover.ToggleCheck();
+		if (!mover)
+			return;
+
+		mover.ToggleCheck();
+
+		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
+		if (hintMgr)
+			hintMgr.ShowCustomHint("Vérification de la cible", "", 2.0);
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
-	override bool CanBePerformedScript(IEntity user) { return true; }
+	override bool CanBePerformedScript(IEntity user)
+	{
+		CGQC_TargetMoverComponent mover = CGQC_FindMoverSilent(m_sTargetEntityName);
+		if (!mover)
+			return true;
+		return !mover.IsMoving();
+	}
 	override bool HasLocalEffectOnlyScript() { return false; }
 }
 
 //------------------------------------------------------------------------------------------------
+// Reset
+//------------------------------------------------------------------------------------------------
+
 class CGQC_TargetResetAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of this bay's target entity")]
@@ -211,73 +366,18 @@ class CGQC_TargetResetAction : ScriptedUserAction
 
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		if (!Replication.IsServer())
-			return;
-
-		IEntity targetEnt = GetGame().GetWorld().FindEntityByName(m_sTargetEntityName);
-		if (!targetEnt)
-		{
-			Print("[CGQC_Reset] Cannot find entity: " + m_sTargetEntityName, LogLevel.WARNING);
-			return;
-		}
-
-		CGQC_TargetMoverComponent mover = CGQC_TargetMoverComponent.Cast(
-			targetEnt.FindComponent(CGQC_TargetMoverComponent)
-		);
+		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetResetAction");
 		if (!mover)
 			return;
 
-		ResourceName prefab = mover.GetPrefabName();
-		if (prefab.IsEmpty())
-		{
-			Print("[CGQC_Reset] Respawn prefab not set on mover component.", LogLevel.WARNING);
-			return;
-		}
+		mover.Reset();
 
-		Resource res = Resource.Load(prefab);
-		if (!res.IsValid())
-		{
-			Print("[CGQC_Reset] Resource.Load failed: " + prefab, LogLevel.WARNING);
-			return;
-		}
-
-		string entName  = targetEnt.GetName();
-		float baseX     = mover.GetBaseX();
-		ResourceName rp = prefab;
-
-		// Build spawn transform from current rotation/position but force X to 3m baseline
-		vector transform[4];
-		targetEnt.GetTransform(transform);
-		transform[3][0] = baseX; // Move to 3m position along X
-
-		EntitySpawnParams params = new EntitySpawnParams();
-		params.TransformMode = ETransformMode.WORLD;
-		params.Transform = transform;
-
-		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
-		if (!newEnt)
-		{
-			Print("[CGQC_Reset] SpawnEntityPrefab failed.", LogLevel.ERROR);
-			return;
-		}
-
-		newEnt.SetName(entName);
-
-		// OnPostInit records baseX from spawn position (which is already baseX).
-		// Explicitly set it anyway to be safe, and copy respawn prefab for future resets.
-		CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
-			newEnt.FindComponent(CGQC_TargetMoverComponent)
-		);
-		if (newMover)
-		{
-			newMover.SetBaseX(baseX);
-			newMover.SetRespawnPrefab(rp);
-		}
-
-		SCR_EntityHelper.DeleteEntityAndChildren(targetEnt);
+		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
+		if (hintMgr)
+			hintMgr.ShowCustomHint("Reset de toute la patente", "", 2.0);
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
-	override bool CanBePerformedScript(IEntity user) { return CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetResetAction") != null; }
+	override bool CanBePerformedScript(IEntity user) { return true; }
 	override bool HasLocalEffectOnlyScript() { return false; }
 }
