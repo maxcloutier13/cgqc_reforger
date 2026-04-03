@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{E16AC61F4A2DE568}Configs/PlaceableRegistry/CGQC_UPO_Spawn.conf"
+ Name "{111CE7BF1EA11FF8}Configs/EntityCatalog/US/Characters_EntityCatalog_CGQC.conf"
  Configurations {
   CONFResourceClass PC {
   }
