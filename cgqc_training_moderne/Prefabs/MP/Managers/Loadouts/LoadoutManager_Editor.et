@@ -1,0 +1,10 @@
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ ID "56B2B47708C4F23A"
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{690627ACDF097EA5}" {
+   m_sLoadoutName "Soldat"
+   m_sLoadoutResource "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_UPO_moderne_base.et"
+   m_sAffiliatedFaction "CGQC_UPO"
+  }
+ }
+}

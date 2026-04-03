@@ -1,0 +1,53 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090B1EF"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+      }
+     }
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate ""
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{86D723F5BF011F95}Prefabs/Characters/HeadGear/Hat_BallCap/variants/Hat_ballcap_OD_backwards_crossbow.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A87950ABC7487F4B}Prefabs/Characters/Uniforms/Shirt_Turtleneck_01/Champs_ButtonUPShirt_Checked.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{AB50BBCB1AAA0F31}Prefabs/Characters/Uniforms/CCUE_JEANS_TACPANTS/Champs_Jeans.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{446960BED57E6802}Prefabs/Characters/Footwear/JungleBoots_01/AF1s_Blackout.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Waist {
+    }
+    LoadoutSlotInfo Belt {
+     Prefab "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
+    }
+    LoadoutSlotInfo Sling {
+    }
+   }
+  }
+ }
+}
