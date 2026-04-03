@@ -1,0 +1,14 @@
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 5673.463 259.626 2395.307
+ angles 0 48.529 0
+}
+$grp SCR_DestructibleBuildingEntity : "{FDB73CBC36C9FE21}PrefabLibrary/DefaultLibrary/Infrastructure/Bridges/ConcreteBridge_01_Pillar.et" {
+ {
+  coords 5678.29 252.581 2398.437
+  angles 0 50.122 0
+ }
+ {
+  coords 5688.012 252.581 2406.552
+  angles 0 50.122 0
+ }
+}

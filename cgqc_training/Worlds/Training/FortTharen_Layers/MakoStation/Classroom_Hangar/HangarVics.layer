@@ -1,0 +1,30 @@
+$grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
+ M151A2_transport_MERDC1 {
+  coords 6927.802 41.123 3936.265
+  angles 0 124.137 0
+ }
+ M151A2_transport_MERDC2 {
+  coords 6926.258 41.122 3933.969
+  angles 0 124.137 0
+ }
+}
+$grp Vehicle : "{A4533B5AC50A57E6}Vehicles/ZAG650/ZAG650132p_ZDF.et" {
+ ZAG650132p_ZDF2 {
+  coords 6930.866 41.122 3941.778
+  angles 0 124.137 0
+ }
+ ZAG650132p_ZDF1 {
+  coords 6930.191 41.122 3940.768
+  angles 0 124.137 0
+ }
+}
+$grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ Motorbike_US4 {
+  coords 6929.439 41.122 3939.659
+  angles 0 124.137 0
+ }
+ Motorbike_US2 {
+  coords 6928.682 41.122 3938.666
+  angles 0 124.137 0
+ }
+}

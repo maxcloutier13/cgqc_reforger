@@ -1,4 +1,4 @@
-// CGQC_ShootingRange.c
+// CGQC_targetMoverComponent.c
 // Place CQB_TargetBlank_CGQC.et in Workbench at the 3m position.
 // Set "Respawn Prefab" on CGQC_TargetMoverComponent to CQB_TargetBlank_CGQC.et
 
