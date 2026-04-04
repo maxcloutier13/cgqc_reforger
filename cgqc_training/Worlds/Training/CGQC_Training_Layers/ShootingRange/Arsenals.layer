@@ -1,0 +1,40 @@
+$grp GenericEntity : "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Compositions/CGQC/E_ArsenalBox_CGQC.et" {
+ {
+  coords 658.492 1.891 754.223
+  angles 0 90 0
+ }
+ {
+  coords 658.332 1.91 730.15
+  angles 0 90 0
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 655.939 1.891 753.579
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Shooting Range"
+ }
+}
+$grp GenericEntity : "{D2B0F72599E0491B}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_Large_CGQC.et" {
+ {
+  coords 633.566 1.812 720.444
+  angles 0 178.277 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{660EA51E64E91031}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     m_sFaction "CGQC"
+     m_aAuthoredLabels {
+      ENTITYTYPE_COMPOSITION
+      CONTENT_MODDED
+      ARY_CONTENT_ARMARY
+      ARY_LOCKERS
+      FACTION_CGQC
+     }
+    }
+   }
+  }
+  coords 658.56 1.929 734.883
+  angles 0 -90 0
+ }
+}

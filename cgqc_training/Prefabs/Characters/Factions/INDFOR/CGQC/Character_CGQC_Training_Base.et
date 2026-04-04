@@ -1,0 +1,12 @@
+SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CGQC_TrainingUnitComponent "{6908089845668C66}" {
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    IconSetName "EditableEntity_Character_Unnarmed"
+   }
+  }
+ }
+}

@@ -5522,16 +5522,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -5660,16 +5650,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -5802,16 +5782,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -5940,16 +5910,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -6082,16 +6042,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -6220,16 +6170,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -6362,16 +6302,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -6500,16 +6430,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -6642,16 +6562,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -6780,16 +6690,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -6922,16 +6822,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -7060,16 +6950,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
@@ -7202,16 +7082,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      scale 0.504
     }
    }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
-    }
-   }
   }
  }
  {
@@ -7340,16 +7210,6 @@ $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/Ai
      coords 0.94 0.937 -0.33
      angles 0 180 90
      scale 0.504
-    }
-   }
-   $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
-    {
-     coords 0.879 1.363 0.332
-     angles 0 -90 0
-    }
-    {
-     coords 0.879 1.363 0.45
-     angles 0 -90 0
     }
    }
   }
