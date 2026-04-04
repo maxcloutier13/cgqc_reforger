@@ -9,7 +9,7 @@ $grp GenericEntity : "{4E858AF024DDDE9B}PrefabsEditable/Auto/Props/Military/Comp
  }
  {
   coords 658.332 1.91 730.15
-  angles 0 90 0
+  angles 0 -90 0
  }
 }
 GenericEntity : "{705E76F0A1C6DCDC}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_Locker_Large_Rack_Large_USSR.et" {
@@ -17,7 +17,7 @@ GenericEntity : "{705E76F0A1C6DCDC}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
  angles 0 -90 0
 }
 SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 655.939 1.891 724.86
+ coords 655.939 1.891 727.481
  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
   Name "Shooting Range"
  }

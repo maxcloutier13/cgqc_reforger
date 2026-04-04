@@ -533,7 +533,7 @@ $grp DecalEntity : "{925553528D276E6D}Prefabs/Decals/Asphalt/Decal_Asphalt_Crack
   scale 5.76
  }
  {
-  coords 626.291 0 628.41
+  coords 611.792 4.71 736.065
   angles -90 0 -60.598
   scale 5.76
  }
