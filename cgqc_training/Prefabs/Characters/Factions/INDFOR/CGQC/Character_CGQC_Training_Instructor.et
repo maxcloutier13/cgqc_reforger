@@ -4,7 +4,7 @@ SCR_ChimeraCharacter : "{8C3AECE1C16EEA80}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Instructeur"
-    IconSetName "EditableEntity_Character_Unnarmed"
+    IconSetName "EditableEntity_Character_Officer"
     m_aAutoLabels {
      SIZE_M ROLE_LEADER
     }
@@ -31,6 +31,12 @@ SCR_ChimeraCharacter : "{8C3AECE1C16EEA80}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     TargetStorage "Pants/ARY_Pants_US_M65_black.et"
+    }
+    ItemsInitConfigurationItem "{68B908099C22257E}" {
+     TargetStorage "Jacket/ARY_Jacket_US_BDU_rolledup_02_black.et"
+    }
     ItemsInitConfigurationItem "{68B908083C369512}" {
      PrefabsToSpawn {
       "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et" "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et" "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"

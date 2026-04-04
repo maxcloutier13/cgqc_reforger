@@ -2,8 +2,48 @@
 // Place CQB_TargetBlank_CGQC.et in Workbench at the 3m position.
 // Set "Respawn Prefab" on CGQC_TargetMoverComponent to CQB_TargetBlank_CGQC.et
 
-class CGQC_TargetMoverComponentClass : ScriptComponentClass {}
+class CGQC_ResetHelper
+{
+    static string s_sName;
+    static float s_fBaseX;
+    static ResourceName s_sPrefab;
+    static vector s_vTransform[4];
 
+    static void DoReset()
+    {
+        Resource res = Resource.Load(s_sPrefab);
+        if (!res.IsValid())
+        {
+            Print("[CGQC_ResetHelper] Resource.Load failed: " + s_sPrefab, LogLevel.WARNING);
+            return;
+        }
+
+        EntitySpawnParams params = new EntitySpawnParams();
+        params.TransformMode = ETransformMode.WORLD;
+        params.Transform = s_vTransform;
+
+        IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
+        if (!newEnt)
+        {
+            Print("[CGQC_ResetHelper] SpawnEntityPrefab failed.", LogLevel.ERROR);
+            return;
+        }
+
+        newEnt.SetName(s_sName);
+
+        CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
+            newEnt.FindComponent(CGQC_TargetMoverComponent)
+        );
+        if (newMover)
+        {
+            newMover.SetBaseX(s_fBaseX);
+            newMover.SetRespawnPrefab(s_sPrefab);
+        }
+    }
+}
+
+
+class CGQC_TargetMoverComponentClass : ScriptComponentClass {}
 class CGQC_TargetMoverComponent : ScriptComponent
 {
 	protected static const float DIST_0 = 3.0;
@@ -157,58 +197,27 @@ class CGQC_TargetMoverComponent : ScriptComponent
 		Replication.BumpMe();
 	}
 
-	//------------------------------------------------------------------------------------------------
 	void Reset()
 	{
-		if (!Replication.IsServer())
-			return;
-
-		IEntity owner = GetOwner();
-		if (!owner || m_sRespawnPrefab.IsEmpty())
-		{
-			Print("[CGQC_Reset] No owner or respawn prefab not set.", LogLevel.WARNING);
-			return;
-		}
-
-		Resource res = Resource.Load(m_sRespawnPrefab);
-		if (!res.IsValid())
-		{
-			Print("[CGQC_Reset] Resource.Load failed: " + m_sRespawnPrefab, LogLevel.WARNING);
-			return;
-		}
-
-		string entName      = owner.GetName();
-		float baseX         = m_fBaseX;
-		ResourceName prefab = m_sRespawnPrefab;
-
-		vector transform[4];
-		owner.GetTransform(transform);
-		transform[3][0] = baseX;
-
-		EntitySpawnParams params = new EntitySpawnParams();
-		params.TransformMode = ETransformMode.WORLD;
-		params.Transform = transform;
-
-		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
-		if (!newEnt)
-		{
-			Print("[CGQC_Reset] SpawnEntityPrefab failed.", LogLevel.ERROR);
-			return;
-		}
-
-		newEnt.SetName(entName);
-
-		CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
-			newEnt.FindComponent(CGQC_TargetMoverComponent)
-		);
-		if (newMover)
-		{
-			newMover.SetBaseX(baseX);
-			newMover.SetRespawnPrefab(prefab);
-		}
-
-		SCR_EntityHelper.DeleteEntityAndChildren(owner);
-	}
+	    if (!Replication.IsServer())
+	        return;
+	
+	    IEntity owner = GetOwner();
+	    if (!owner || m_sRespawnPrefab.IsEmpty())
+	    {
+	        Print("[CGQC_Reset] No owner or respawn prefab not set.", LogLevel.WARNING);
+	        return;
+	    }
+	
+	    CGQC_ResetHelper.s_sName = owner.GetName();
+	    CGQC_ResetHelper.s_fBaseX = m_fBaseX;
+	    CGQC_ResetHelper.s_sPrefab = m_sRespawnPrefab;
+	    owner.GetTransform(CGQC_ResetHelper.s_vTransform);
+	    CGQC_ResetHelper.s_vTransform[3][0] = m_fBaseX;
+	
+	    SCR_EntityHelper.DeleteEntityAndChildren(owner);
+	    GetGame().GetCallqueue().CallLater(CGQC_ResetHelper.DoReset, 100, false);
+	}		
 
 	//------------------------------------------------------------------------------------------------
 	string GetNextCycleLabel()

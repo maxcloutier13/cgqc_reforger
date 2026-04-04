@@ -54,6 +54,36 @@ SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 620.419 1.812 569.95
 }
+TimeAndWeatherManagerEntity : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
+ coords 622.447 1.812 571.13
+ "Automatic Time Advancement" 0
+ "UTC TimeZone" -5
+ "Initial Day Time" 24
+ Year 1981
+ "Month of the Year" 8
+ "Day of the Month" 13
+ Latitude 45.5
+ Longitude 73.6
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+ "Temperature Override" 1
+ "Temperature Air Min" 16.044
+ "Temperature Air Max" 20
+}
 SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
  coords 620.419 1.812 568.95
+}
+$grp SCR_DestructibleBuildingEntity : "{11153900FAAA2D5E}Prefabs/Structures/Industrial/Houses/FactoryHallWIP_01/FactoryHallWIP_01_wall.et" {
+ {
+  coords 567.89 0 696.377
+  angles 0 90 0
+ }
+ {
+  coords 673.163 0 605.535
+  angles 0 90 0
+ }
+ {
+  coords 588.409 0 579.838
+ }
 }

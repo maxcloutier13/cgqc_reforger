@@ -27765,6 +27765,27 @@ $grp GenericEntity : "{F04A3E2709A994AE}Prefabs/Structures/Infrastructure/Roads/
   scale 0.094
  }
 }
+GenericEntity : "{F095B404904B738E}Prefabs/Structures/BuildingParts/Doors/DoorSet_House_Town_E_2l02_E_A_EXT_M1.et" {
+ coords 649.511 1.878 756.921
+ {
+  GenericEntity {
+   ID "5682790FCAFC172C"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     FakeDoor 1
+    }
+   }
+  }
+  GenericEntity {
+   ID "5682790FCAFC1712"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     FakeDoor 1
+    }
+   }
+  }
+ }
+}
 $grp GenericEntity : "{F0EC223F2A1094C0}Prefabs/Props/Military/Sandbags/Sandbag_01_bunker_burlap.et" {
  {
   components {
