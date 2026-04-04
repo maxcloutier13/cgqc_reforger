@@ -7,9 +7,9 @@ GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/Arse
  angles 0 -152.883 0
 }
 SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 6937.119 41.093 3935.134
+ coords 6937.119 41.122 3935.134
  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Mako Station"
+  Name "Base Camp"
   Description "Site principal"
  }
 }
