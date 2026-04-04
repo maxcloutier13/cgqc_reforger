@@ -8,6 +8,19 @@ $grp GenericEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMi
   angles 0 47.842 0
  }
 }
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 5213.25 291.463 1819.803
+ m_sTaskID "Tir Longue Portée"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAFD8836EAA}" {
+  Name "Tir Longue-Portée"
+  Description "Apprend à tirer de loin"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription ""
+ m_TextType CUSTOM
+}
 Vehicle M151A2_transport9 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 5170.631 290.208 1776.597
  angles 0 37.627 0

@@ -1,3 +1,15 @@
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 6895.394 13.405 3710.84
+ m_sTaskID "Blindés"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC056DB43E}" {
+  Name "Blindés"
+  Description "Apprend à conduire et tirer"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription "Apprend à conduire et tirer"
+}
 Vehicle M151A2_transport5 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6886.359 13.406 3715.341
  angles 0 175.18 0
@@ -13,4 +25,8 @@ GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02
 Vehicle Motorbike_US7 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 6888.749 13.406 3716
  angles 0 169.49 0
+}
+GenericEntity : "{FB18EFE9C1A81E2A}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_Conflict_US_01.et" {
+ coords 6919.578 13.406 3721.505
+ angles 0 -174.572 0
 }

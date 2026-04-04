@@ -1,0 +1,8 @@
+GenericEntity : "{5753634EAFFBA2F6}Prefabs/Props/Military/Compositions/US/VehicleService_US.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+   m_bSuppliesConsumptionEnabled 0
+  }
+ }
+}

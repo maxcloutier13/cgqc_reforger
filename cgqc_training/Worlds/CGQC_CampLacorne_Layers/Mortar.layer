@@ -1,3 +1,15 @@
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 5729.189 135 3046.364
+ m_sTaskID "Mortiers"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC33039F13}" {
+  Name "Mortiers"
+  Description "Apprend à dropper du mortier"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription "Apprend à dropper du mortier"
+}
 Vehicle M151A2_transport4 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 5751.262 135 3034.451
  angles 0 -38.604 0
@@ -21,4 +33,8 @@ $grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes
  {
   coords 5713.299 135 3045.403
  }
+}
+GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
+ coords 5767.657 135 3074.692
+ angles 0 169.866 0
 }

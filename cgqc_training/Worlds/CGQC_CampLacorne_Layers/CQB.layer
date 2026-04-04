@@ -1,16 +1,32 @@
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 6560.268 14.375 4626.774
+ m_sTaskID "CQB et MOUT"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC3A2AE09A}" {
+  Name "CQB et MOUT"
+  Description "Apprend à ataquer de proche"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription "Apprend à ataquer "
+}
 Vehicle M151A2_transport6 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6566.277 14.375 4651.188
  angles 0 -91.241 0
 }
 GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- coords 6566.82 14.375 4642.317
+ coords 6562.362 14.375 4634.85
  angles 0 -95.207 0
 }
 GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
- coords 6566.906 14.375 4640.468
+ coords 6562.448 14.375 4633
  angles 0 0.855 0
 }
 Vehicle Motorbike_US8 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 6566.785 14.375 4648.762
  angles 0 -96.93 0
+}
+GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
+ coords 6563.853 14.375 4641.695
+ angles 0 -88.828 0
 }

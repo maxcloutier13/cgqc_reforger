@@ -1,3 +1,19 @@
+GenericEntity : "{160664C8E54A8DE3}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_Conflict_CGQC.et" {
+ coords 3798.186 2.625 3086.822
+ angles 0 19.668 0
+}
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 3702.552 2.625 3145.558
+ m_sTaskID "Port"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC21A47121}" {
+  Name "Port"
+  Description "Apprend à faire des patentes dans l'eau"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription "Apprend à faire des patentes dans l'eau"
+}
 Vehicle M151A2_transport7 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 3705.489 2.625 3155.247
  angles 0 -163.82 0
@@ -13,4 +29,8 @@ GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02
 Vehicle Motorbike_US10 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 6797.286 14.376 4169.369
  angles 0 -95.526 0
+}
+GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
+ coords 3687.234 2.625 3160.323
+ angles 0 179.883 0
 }

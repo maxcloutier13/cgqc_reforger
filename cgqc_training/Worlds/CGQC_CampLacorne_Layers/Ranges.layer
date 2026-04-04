@@ -1,3 +1,15 @@
+SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ coords 6789.995 14.375 4176.64
+ m_sTaskID "Champs de Tir"
+ m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC2730F104}" {
+  Name "Champs de Tir"
+  Description "Apprend à tirer"
+ }
+ m_aOwnerFactionKeys {
+  "CGQC"
+ }
+ m_sCustomSubtaskDescription "Apprend à tirer"
+}
 Vehicle M151A2_transport8 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6796.474 14.376 4171.931
  angles 0 -89.836 0
@@ -13,4 +25,8 @@ GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02
 Vehicle Motorbike_US9 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 3707.612 2.625 3155.009
  angles 0 -169.51 0
+}
+GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
+ coords 6813.782 14.375 4182.964
+ angles 0 -88.817 0
 }
