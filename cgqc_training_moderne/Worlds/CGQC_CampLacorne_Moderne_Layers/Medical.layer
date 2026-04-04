@@ -1,0 +1,64 @@
+$grp GenericEntity : "{04385750E1EFE6D5}Prefabs/Structures/Signs/SignLarge_02/MARCHPAWS.et" {
+ {
+  coords 6541.164 59.656 3934.214
+  angles 0 1.812 0
+ }
+ {
+  coords 6524.656 59.656 3934.706
+  angles 0 1.812 0
+ }
+}
+$grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
+ {
+  coords 6543.386 59.656 3948.142
+  angles 0 18.877 0
+ }
+ {
+  coords 6544.329 59.656 3951.421
+  angles 0 18.877 0
+ }
+ {
+  coords 6545.22 59.656 3954.4
+  angles 0 18.877 0
+ }
+ {
+  coords 6528.446 59.656 3952.097
+  angles 0 18.877 0
+ }
+ {
+  coords 6529.239 59.656 3955.1
+  angles 0 18.877 0
+ }
+ {
+  coords 6530.237 59.656 3958.345
+  angles 0 18.877 0
+ }
+}
+$grp GenericEntity : "{4D739103C9B946EC}Prefabs/Structures/Signs/SignLarge_02/TCCC Overview.et" {
+ {
+  coords 6536.671 59.656 3960.299
+  angles 0 -166.29 0
+ }
+ {
+  coords 6531.582 59.656 3934.527
+  angles 0 1.812 0
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 6535.274 59.656 3954.832
+ angles 0 -171.064 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Medical"
+  Description "Medical Training"
+ }
+}
+$grp GenericEntity : "{E8A768A02385F5D2}Prefabs/Structures/Signs/SignLarge_02/FLOWCHART.et" {
+ {
+  coords 6538.339 59.656 3934.297
+  angles 0 1.812 0
+ }
+ {
+  coords 6521.831 59.656 3934.789
+  angles 0 1.812 0
+ }
+}

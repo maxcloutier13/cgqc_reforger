@@ -1,0 +1,24 @@
+Vehicle M151A2_transport4 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 5751.262 135 3034.451
+ angles 0 -38.604 0
+}
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 5740.328 135 3036.172
+ angles 0 -42.571 0
+}
+GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
+ coords 5738.911 135 3034.982
+ angles 0 53.492 0
+}
+Vehicle Motorbike_US6 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ coords 5749.642 135 3032.573
+ angles 0 -44.294 0
+}
+$grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_US.et" {
+ {
+  coords 5705.429 135 3037.134
+ }
+ {
+  coords 5713.299 135 3045.403
+ }
+}

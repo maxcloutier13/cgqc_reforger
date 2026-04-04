@@ -1,0 +1,32 @@
+SCR_ChimeraCharacter : "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Base.et" {
+ ID "520EC961A090B1EF"
+ components {
+  RandomGearComponent "{68AAF221635F9889}" {
+   m_HeadConfig SCR_GearPoolConfig "{6908E269DBE97B56}" : "{43A199F09C1F7B0A}Configs/EntityCatalog/CGQC/Pool_Base_Student_Hat.conf" {
+   }
+   m_TopsConfig SCR_GearPoolConfig "{6908E269DA465AC2}" : "{54F88D37BB1A4F08}Configs/EntityCatalog/CGQC/Pool_Base_Student_Jacket.conf" {
+   }
+   m_PantsConfig SCR_GearPoolConfig "{6908E269DC5EC017}" : "{7FE9A079EAB51CCB}Configs/EntityCatalog/CGQC/Pool_Base_Student_Pants.conf" {
+   }
+   m_BootsConfig SCR_GearPoolConfig "{6908E269221905A3}" : "{6086E543003C7C58}Configs/EntityCatalog/CGQC/Pool_Base_Student_Boots.conf" {
+   }
+   m_GlovesConfig SCR_GearPoolConfig "{6908E269D9A0F69A}" : "{E245C6A547C52456}Configs/EntityCatalog/CGQC/Pool_Base_Student_Gloves.conf" {
+   }
+   m_EyesConfig SCR_GearPoolConfig "{6908E26924D17EB0}" : "{5144C626EBFD65EB}Configs/EntityCatalog/CGQC/Pool_Base_Student_Eyewear.conf" {
+   }
+   m_EarsConfig SCR_GearPoolConfig "{6908E269B0162E88}" : "{B644E27E23FF1364}Configs/EntityCatalog/CGQC/Pool_Base_Student_Ears.conf" {
+   }
+   m_WaistConfig SCR_GearPoolConfig "{6908E26AA170B34B}" {
+    m_aGearPool +{
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Belt {
+     Prefab ""
+    }
+   }
+  }
+ }
+}
