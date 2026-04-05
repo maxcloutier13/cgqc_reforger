@@ -18,8 +18,11 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
    }
   }
+  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
+   WeaponTemplate "{535342DF43FD23C6}Prefabs/Weapons/Grenades/Grenade_MultiStun_HalfTime.et"
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate ""
+   WeaponTemplate "{E156A64CCF507E74}Prefabs/Weapons/Rifles/Rifle_AR15_GA_UD115_BLK_ION1.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
    WeaponTemplate ""
@@ -58,13 +61,18 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     Enabled 0
      TargetStorage "Pants/Champs_Jeans.et"
      PrefabsToSpawn {
-      "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{42232FFE6E7AC415}Prefabs/Items/Core/Wirecutters/wirecutters.et" "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et"
+      "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et"
      }
     }
     ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
+     Enabled 0
      TargetStorage "Jacket/Champs_ButtonUPShirt_Checked.et"
+    }
+    ItemsInitConfigurationItem "{68B908099C22257E}" {
+     Enabled 0
     }
    }
   }

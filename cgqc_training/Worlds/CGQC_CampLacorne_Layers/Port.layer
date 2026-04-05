@@ -8,6 +8,8 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC21A47121}" {
   Name "Port"
   Description "Apprend à faire des patentes dans l'eau"
+  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+  IconSetName "Icon_M_Task_Move"
  }
  m_aOwnerFactionKeys {
   "CGQC"

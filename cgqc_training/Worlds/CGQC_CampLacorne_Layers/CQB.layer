@@ -4,6 +4,8 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC3A2AE09A}" {
   Name "CQB et MOUT"
   Description "Apprend à ataquer de proche"
+  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+  IconSetName "Icon_M_Task_Ambush"
  }
  m_aOwnerFactionKeys {
   "CGQC"

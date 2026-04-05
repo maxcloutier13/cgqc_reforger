@@ -16,10 +16,6 @@ SCR_ChimeraCharacter : "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQ
    }
    m_EarsConfig SCR_GearPoolConfig "{6908E269B0162E88}" : "{B644E27E23FF1364}Configs/EntityCatalog/CGQC/Pool_Base_Student_Ears.conf" {
    }
-   m_WaistConfig SCR_GearPoolConfig "{6908E26AA170B34B}" {
-    m_aGearPool +{
-    }
-   }
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {

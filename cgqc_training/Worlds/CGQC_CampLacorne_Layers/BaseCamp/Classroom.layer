@@ -197,6 +197,8 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC67E8E1BE}" {
   Name "Camp de Base"
   Description "Salle de Classe et autres"
+  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+  IconSetName "Icon_M_Task_Establish_Base"
  }
  m_aOwnerFactionKeys {
   "CGQC"
@@ -209,6 +211,8 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
    m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC12E39DEB}" {
     Name "Training Médical"
     Description "Apprend à sauver des vies"
+    Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    IconSetName "Icon_M_Task_First_Aid"
    }
    m_aOwnerFactionKeys {
     "CGQC"

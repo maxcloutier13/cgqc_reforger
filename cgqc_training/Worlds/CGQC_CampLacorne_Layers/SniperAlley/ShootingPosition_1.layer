@@ -14,6 +14,8 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  m_TaskUIInfo SCR_TaskUIInfo "{6908FEAFD8836EAA}" {
   Name "Tir Longue-Portée"
   Description "Apprend à tirer de loin"
+  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+  IconSetName "Icon_M_Task_Request_Attack"
  }
  m_aOwnerFactionKeys {
   "CGQC"
