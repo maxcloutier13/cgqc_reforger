@@ -1,4 +1,4 @@
-GenericEntity {
+GenericEntity : "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et" {
  ID "6693323D9BC47CE5"
  components {
   Persistence "{68EB517A29CE2EB2}" {
@@ -8,15 +8,26 @@ GenericEntity {
   BaseLoadoutClothComponent "{6693323D9BC47D38}" {
    Slots {
     LoadoutSlotInfo Slot3 {
-     Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
+     Prefab "{46CFCFBA6A77C887}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17.et"
     }
     LoadoutSlotInfo Slot4 {
+     Offset -0.1872 0.0538 -0.0703
+     Angles 13.5056 -120.7566 2.8233
+     Prefab "{83FDD2AFA633B74C}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC.et"
+    }
+    LoadoutSlotInfo Slot5 {
+     Offset -0.1298 0.0455 -0.1279
+     Angles 11.1605 -162.0192 -0.6161
+     Prefab "{83FDD2AFA633B74C}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC.et"
+    }
+    LoadoutSlotInfo Slot6 {
+     Prefab "{18E40EA7E09B4A50}Prefabs/Modular/Placards/Pouch_BlowoutIFAK_MC_CGQC.et"
     }
     LoadoutSlotInfo Slot8 {
-     Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
+     Prefab "{46CFCFBA6A77C887}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17.et"
     }
     LoadoutSlotInfo Holster {
-     Prefab "{0D105EB2B8488B32}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS.et"
+     Prefab "{6AFF1096B516E73E}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS_M17.et"
     }
    }
   }

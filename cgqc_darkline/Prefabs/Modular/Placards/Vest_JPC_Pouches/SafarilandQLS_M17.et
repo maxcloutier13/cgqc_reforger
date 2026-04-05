@@ -1,20 +1,20 @@
 GenericEntity {
- ID "69094A1C64D5031A"
+ ID "69095031196188E2"
  components {
-  SignalsManagerComponent "{69094A1C64D50307}" {
+  SignalsManagerComponent "{69095031196188EB}" {
   }
-  SoundComponent "{69094A1C64D5009F}" {
+  SoundComponent "{6909503119618851}" {
    Filenames {
     "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
    }
   }
-  GRS_EquipmentStorageComponent "{69094A1C64D50084}" {
-   Attributes SCR_ItemAttributeCollection "{69094A1C64D5008A}" {
-    ItemDisplayName UIInfo "{69094A1C64D500A0}" {
+  GRS_EquipmentStorageComponent "{6909503119618855}" {
+   Attributes SCR_ItemAttributeCollection "{6909503119618858}" {
+    ItemDisplayName UIInfo "{690950311961885A}" {
      Name "Safariland 6354 Mid-Ride w/ QLS"
      Description "Safariland 6354 Mid-Ride w/ QLS"
     }
-    ItemPhysAttributes ItemPhysicalAttributes "{69094A1C64D500A5}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{690950311961885D}" {
      Weight 0.2
      SizeSetupStrategy Manual
      ItemDimensions 10 10 10
@@ -24,14 +24,14 @@ GenericEntity {
      RestingAdditiveOffsetLS 0 0 0
     }
     CustomAttributes {
-     PreviewRenderAttributes "{69094A1C64D500AA}" {
+     PreviewRenderAttributes "{6909503119618841}" {
       CameraOrbitAngles -15 15 0
       FOV 60
       AspectRatio 1
       PreviewWornModel 1
       PreviewModel "{322E57263E7B11BB}Assets/Characters/Vests/Vest_Taktika_Pouches/taktika_holster.xob"
      }
-     RHS_CustomAttributes "{69094A1C64D500AF}" {
+     RHS_CustomAttributes "{6909503119618845}" {
       m_sCompatibleSlotNames {
        "Holster"
       }
@@ -50,7 +50,7 @@ GenericEntity {
     GRS_HolsterStorageSlot M320 {
      Offset -0.0517 -0.0774 0.0662
      Angles -76.0611 21.6865 172.7012
-     Prefab "{8983A91174EE3799}Prefabs/Weapons/Handguns/Glock/Handgun_Glock45.et"
+     Prefab "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
      AllowedItemTypes {
       "RHS_PISTOL"
      }
@@ -58,55 +58,55 @@ GenericEntity {
     }
    }
   }
-  MeshObject "{69094A1C64D50059}" {
+  MeshObject "{690950311961884D}" {
    Object "{04415309AF94BA7F}Assets/Characters/Pouches/Data/WeaponCatch.xob"
    InheritVisibility 1
   }
-  SCR_SoundDataComponent "{69094A1C64D5005C}" {
+  SCR_SoundDataComponent "{690950311961884F}" {
    m_aAudioSourceConfiguration {
-    SCR_AudioSourceConfiguration "{69094A1C64D50042}" {
+    SCR_AudioSourceConfiguration "{6909503119618875}" {
      m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
      m_sSoundEventName "SOUND_PICK_UP"
     }
-    SCR_AudioSourceConfiguration "{69094A1C64D50044}" {
+    SCR_AudioSourceConfiguration "{6909503119618877}" {
      m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
      m_sSoundEventName "SOUND_EQUIP"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69094A1C64D50047}" {
+    SCR_AudioSourceConfiguration "{6909503119618879}" {
      m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
      m_sSoundEventName "SOUND_DROP"
     }
    }
   }
-  BaseLoadoutClothComponent "{69094A1C642A885E}" {
-   AreaType CDD_SlotArea_BeltHolster "{69094A1C642A884D}" {
+  BaseLoadoutClothComponent "{6909503119618818}" {
+   AreaType CDD_SlotArea_BeltHolster "{690950311961881B}" {
    }
    WornModel "{7FCD35C6934956FC}Assets/Characters/Pouches/Data/SafarilandHolster.xob"
    ItemModel "{7FCD35C6934956FC}Assets/Characters/Pouches/Data/SafarilandHolster.xob"
   }
-  ActionsManagerComponent "{69094A1C642A8872}" {
+  ActionsManagerComponent "{690950311961881E}" {
    ActionContexts {
-    UserActionContext "{69094A1C642A887B}" {
+    UserActionContext "{6909503119618800}" {
      ContextName "default"
-     Position PointInfo "{69094A1C642A8861}" {
+     Position PointInfo "{6909503119618803}" {
      }
      Height 0
     }
    }
    additionalActions {
-    SCR_PickUpItemAction "{69094A1C642A8867}" {
+    SCR_PickUpItemAction "{6909503119618807}" {
      ParentContextList {
       "default"
      }
     }
    }
   }
-  RplComponent "{69094A1C642A886F}" {
+  RplComponent "{690950311961880A}" {
    "Rpl State Override" Runtime
    "Parent Node From Parent Entity" 0
   }
-  Hierarchy "{69094A1C642A8816}" {
+  Hierarchy "{690950311961880D}" {
   }
  }
  coords 117.659 1 105.202
