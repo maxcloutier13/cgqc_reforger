@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4BC8271F74614BC6}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_CP_DoubleM4_Dangler.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

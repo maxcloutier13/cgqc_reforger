@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{299D91BBA6CC4BC3}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_SEARM4_MC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

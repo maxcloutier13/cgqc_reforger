@@ -1,0 +1,69 @@
+GenericEntity : "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "poutine"
+   Transceivers {
+    RelayTransceiver "{5A6C8885A4D45664}" {
+     ChannelFrequency 38000
+     "Transmitting Range" 1300
+     "Min tunable frequency" 30000
+     "Max tunable frequency" 40000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+    RelayTransceiver "{5A8E721FD75D0F5F}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 8000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+    }
+    RelayTransceiver "{66B43B3C036B2469}" {
+     ChannelFrequency 49000
+     "Transmitting Range" 8000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+    RelayTransceiver "{66B43B3CFF3A32DB}" {
+     ChannelFrequency 50000
+     "Transmitting Range" 8000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+     "Any frequency" 0
+    }
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "CGQC AN/PRC 163"
+     Description "4 channel radio for command purposes"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 1.25
+     ItemDimensions 5 5 5
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5A6C68D9F96BC9BE}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{5A6C68D9E9C72006}" {
+      }
+     }
+    }
+   }
+  }
+  MeshObject "{5A30BAE7673C63D1}" {
+   Object "{B3FFF322AEC1D7DC}Assets/Characters/Vests/PRC163.xob"
+  }
+  ProcAnimComponent "{5A30BAE7673C63A9}" {
+   Parameters {
+    ProcAnimParams "{51A29A7B89687884}" {
+     ResourceName "{DE57211A364C1700}Assets/Items/Equipment/Radios/Radio_R148/Radio_R148_01.pap"
+    }
+   }
+  }
+ }
+}

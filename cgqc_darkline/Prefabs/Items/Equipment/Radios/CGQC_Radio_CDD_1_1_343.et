@@ -1,0 +1,132 @@
+GenericEntity : "{5879D8E9C56E358D}Prefabs/Items/Core/Radio_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "poutine"
+   "Turned on" 1
+   Transceivers {
+    RelayTransceiver "{690B079DFA4B015B}" {
+     ChannelFrequency 38000
+     "Transmitting Range" 800
+     "Min tunable frequency" 34000
+     "Max tunable frequency" 40000
+    }
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "CGQC AN/PRC-343 Antenna"
+     Description "Short-range radio for team use"
+     Icon "{2FBD8DA665FB8AF1}UI/Textures/VON/ANPRC68-100px_UI.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.867
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 300
+     RestingUP Forward
+     RestingAdditiveOffsetLS 0 0 0.15
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{690B079DFA4B0173}" {
+     AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{690B079DFA4B0177}" {
+       AnimGraph "{F01C00FF64F0A357}Assets/Items/Equipment/Radios/Radio_ANPRC152A/Workspace/Radio_ANPRC152A.agr"
+       AnimInstance "{0EEE8F0913EA9639}Assets/Items/Equipment/Radios/Radio_ANPRC152A/Workspace/Radio_ANPRC152A_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{690B079DFA4B017C}" {
+      CameraPreset Top
+      CameraOrbitAngles 20 0 0
+      CameraDistanceToItem 1
+      CameraOffset 0 -0.015 0
+      FOV 10
+     }
+     SCR_VONPreviewAttributes "{690B079DFA4B017E}" {
+      CameraOrbitAngles -30 180 45
+      CameraDistanceToItem 0.6
+      FOV 40
+     }
+    }
+    CommonItemType "ARMA_RADIO"
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+  }
+  MeshObject "{5A30BAE7673C63D1}" {
+   Object "{FF43421B5E5F2002}Assets/Characters/Vests/PRC148.xob"
+  }
+  RigidBody "{5A30BAE7673C63D3}" {
+   CenterOfMass 0 0.1 0
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  ProcAnimComponent "{690B079DFA4B0165}" {
+   Parameters {
+    ProcAnimParams "{690B079DFA4B0168}" {
+     ResourceName "{DE57211A364C1700}Assets/Items/Equipment/Radios/Radio_R148/Radio_R148_01.pap"
+     BoneNames {
+      "i_channel01" "i_power" "i_volume"
+     }
+     SimulationDistance 20
+     SimulateOnDedicatedServer 0
+    }
+   }
+  }
+  SCR_RadioComponent "{5A30BAE7673C63D4}" {
+   m_eAnimVariable ANPRC68
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.1 0
+     }
+     Radius 0.115
+    }
+    UserActionContext "{690B079DFA4B0110}" {
+     ContextName "knob_channel"
+     Position PointInfo "{690B079DFA4B0114}" {
+      Offset 0.012 0.2 0.007
+     }
+     Radius 0.1
+    }
+    UserActionContext "{690B079DFA4B0116}" {
+     ContextName "knob_toggle"
+     Position PointInfo "{690B079DFA4B0118}" {
+      Offset 0 0.2 -0.01
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipItemAction "{553AEBE8F3B60801}" : "{068D8D646964D12A}Prefabs/Characters/Core/Actions/EquipGadgetAction.conf" {
+    }
+    SCR_RadioTuningUserAction "{690B079DFA4B011D}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{690B079DFA4B0130}" {
+     }
+    }
+    SCR_RadioTuningUserAction "{690B079DFA4B0132}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{690B079DFA4B0134}" {
+     }
+     m_bTuneUp 1
+    }
+    SCR_RadioToggleUserAction "{690B079DFA4B0136}" {
+     ParentContextList {
+      "knob_toggle"
+     }
+    }
+   }
+  }
+ }
+}

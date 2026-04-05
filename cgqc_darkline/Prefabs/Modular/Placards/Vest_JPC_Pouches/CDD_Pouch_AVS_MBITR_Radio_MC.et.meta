@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{298BB6D214ECD87C}Prefabs/Modular/Placards/Vest_JPC_Pouches/CDD_Pouch_AVS_MBITR_Radio_MC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

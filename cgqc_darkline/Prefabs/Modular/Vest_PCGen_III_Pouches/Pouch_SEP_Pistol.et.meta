@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F5AF37801F58316B}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_SEP_Pistol.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
