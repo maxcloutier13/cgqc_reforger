@@ -22,6 +22,9 @@ GenericEntity : "{751107CE717C4C9B}Prefabs/Items/Equipment/Accessories/IFAK/IFAK
     MultiSlotConfiguration "{685043611373DD05}" {
     }
     MultiSlotConfiguration "{68504367871CAC98}" {
+     SlotTemplate EquipmentStorageSlot ChestSeal {
+      Enabled 0
+     }
      NumSlots 0
     }
     MultiSlotConfiguration "{68B353ADF230AEBD}" {
