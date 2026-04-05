@@ -6,8 +6,15 @@ GenericEntity {
     LoadoutSlotInfo Slot3 {
      Prefab "{46CFCFBA6A77C887}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17.et"
     }
+    LoadoutSlotInfo Slot4 {
+     Offset -0.1872 0.0538 -0.0703
+     Angles 13.5056 -120.7566 2.8233
+     Prefab "{83FDD2AFA633B74C}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC.et"
+    }
     LoadoutSlotInfo Slot5 {
-     Prefab "{5624C78BD3B2C0EC}Prefabs/Modular/Placards/Pouch_SS_Util_MC_CGQC.et"
+     Offset -0.1298 0.0455 -0.1279
+     Angles 11.1605 -162.0192 -0.6161
+     Prefab "{83FDD2AFA633B74C}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC.et"
     }
     LoadoutSlotInfo Slot6 {
      Prefab "{18E40EA7E09B4A50}Prefabs/Modular/Placards/Pouch_BlowoutIFAK_MC_CGQC.et"

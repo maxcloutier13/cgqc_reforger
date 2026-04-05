@@ -1,3 +1,4 @@
+/*
 modded class RandomGearComponent : ScriptComponent
 {
     override void RandomizeGear(IEntity owner)
@@ -20,3 +21,4 @@ modded class RandomGearComponent : ScriptComponent
         return cfg && cfg.m_aGearPool.IsEmpty() && cfg.m_aAdvancedPool.IsEmpty() && cfg.m_aGlobalItems.IsEmpty();
     }
 }
+*/
