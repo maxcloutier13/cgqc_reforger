@@ -1,0 +1,113 @@
+GenericEntity {
+ ID "69095031196188E2"
+ components {
+  SignalsManagerComponent "{69095031196188EB}" {
+  }
+  SoundComponent "{6909503119618851}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+  }
+  GRS_EquipmentStorageComponent "{6909503119618855}" {
+   Attributes SCR_ItemAttributeCollection "{6909503119618858}" {
+    ItemDisplayName UIInfo "{690950311961885A}" {
+     Name "Safariland 6354 Mid-Ride w/ QLS"
+     Description "Safariland 6354 Mid-Ride w/ QLS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{690950311961885D}" {
+     Weight 0.2
+     SizeSetupStrategy Manual
+     ItemDimensions 10 10 10
+     ItemVolume 800
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6909503119618841}" {
+      CameraOrbitAngles -15 15 0
+      FOV 60
+      AspectRatio 1
+      PreviewWornModel 1
+      PreviewModel "{322E57263E7B11BB}Assets/Characters/Vests/Vest_Taktika_Pouches/taktika_holster.xob"
+     }
+     RHS_CustomAttributes "{6909503119618845}" {
+      m_sCompatibleSlotNames {
+       "Holster"
+      }
+     }
+    }
+    m_bDraggable 1
+    m_bVisible 1
+    m_bRefundable 1
+   }
+   Priority 100
+   StoragePurpose 0x41 0
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 700
+   UseVirtualInventoryReplication 1
+   InitialStorageSlots {
+    GRS_HolsterStorageSlot M320 {
+     Offset -0.0517 -0.0774 0.0662
+     Angles -76.0611 21.6865 172.7012
+     Prefab "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
+     AllowedItemTypes {
+      "RHS_PISTOL"
+     }
+     m_sAllowedWeaponType "WT_HANDGUN"
+    }
+   }
+  }
+  MeshObject "{690950311961884D}" {
+   Object "{04415309AF94BA7F}Assets/Characters/Pouches/Data/WeaponCatch.xob"
+   InheritVisibility 1
+  }
+  SCR_SoundDataComponent "{690950311961884F}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6909503119618875}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6909503119618877}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6909503119618879}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6909503119618818}" {
+   AreaType CDD_SlotArea_BeltHolster "{690950311961881B}" {
+   }
+   WornModel "{7FCD35C6934956FC}Assets/Characters/Pouches/Data/SafarilandHolster.xob"
+   ItemModel "{7FCD35C6934956FC}Assets/Characters/Pouches/Data/SafarilandHolster.xob"
+  }
+  ActionsManagerComponent "{690950311961881E}" {
+   ActionContexts {
+    UserActionContext "{6909503119618800}" {
+     ContextName "default"
+     Position PointInfo "{6909503119618803}" {
+     }
+     Height 0
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{6909503119618807}" {
+     ParentContextList {
+      "default"
+     }
+    }
+   }
+  }
+  RplComponent "{690950311961880A}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{690950311961880D}" {
+  }
+ }
+ coords 117.659 1 105.202
+}

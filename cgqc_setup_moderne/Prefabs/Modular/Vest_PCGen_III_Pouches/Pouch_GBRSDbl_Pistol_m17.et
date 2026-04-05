@@ -1,0 +1,64 @@
+GenericEntity : "{DF2807C3DC82F9F8}Prefabs/Characters/Vests/Vest_Taktika_Pouches/Pouch_Taktika_base.et" {
+ ID "50E0B40D7407B664"
+ components {
+  MeshObject "{51EE72201CEF8651}" {
+   Object "{C82AFE2E44FDC29C}Assets/Characters/Vests/Vest_PCGen_III_Pouches/highspeed_pistol_pouch.xob"
+  }
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB03CBA95936}" {
+    ItemDisplayName UIInfo "{5222CB03C0C44D6C}" {
+     Name "GBRS Double Pistol Pouch | MC"
+     Description "GBRS Double Pistol Pouch | MC"
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{52BCBDD25D8B867D}" {
+      PreviewWornModel 1
+      PreviewModel "{C82AFE2E44FDC29C}Assets/Characters/Vests/Vest_PCGen_III_Pouches/highspeed_pistol_pouch.xob"
+     }
+    }
+    CommonItemType "RHS_PISTOL_AMMO"
+    m_bDraggable 0
+    m_bVisible 0
+    m_bStackable 0
+   }
+   Priority 100
+   StoragePurpose 0x41 0
+   UseVirtualInventoryReplication 0
+   InitialStorageSlots {
+    RHS_EquipmentStorageSlot PouchStorage {
+     Offset -0.0139 0.0957 -0.0091
+     Angles -12.559 96.6721 179.5972
+     ChildPivotID "snap_weapon"
+     Prefab "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
+     AllowedItemTypes {
+      "" "RHS_PISTOL_AMMO" "ARMA_PISTOL_AMMO"
+     }
+     m_aCompatibleItemTypes {
+      "" "RHS_PISTOL_AMMO" "ARMA_PISTOL_AMMO"
+     }
+    }
+    RHS_EquipmentStorageSlot Mag2 {
+     Offset 0.0368 0.092 -0.0179
+     Angles -14.284 124.776 178.3476
+     Prefab "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
+     AllowedItemTypes {
+      "" "RHS_PISTOL_AMMO" "ARMA_PISTOL_AMMO"
+     }
+     m_aCompatibleItemTypes {
+      "" "RHS_PISTOL_AMMO" "ARMA_PISTOL_AMMO"
+     }
+    }
+   }
+  }
+  RigidBody "{51ECC3F9B51DDE22}" {
+   Enabled 0
+  }
+  BaseLoadoutClothComponent "{5242D72632990471}" {
+   AreaType CDD_SlotArea_BeltPouch "{69095031872CA6D6}" {
+   }
+   WornModel "{F3AF518E8F963A5A}Assets/Characters/Pouches/Data/GBRSDblPistol.xob"
+   ItemModel "{F3AF518E8F963A5A}Assets/Characters/Pouches/Data/GBRSDblPistol.xob"
+  }
+ }
+ coords -0.007 0 0
+}

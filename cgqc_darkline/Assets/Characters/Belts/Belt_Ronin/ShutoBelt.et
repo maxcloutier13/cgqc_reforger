@@ -15,6 +15,9 @@ GenericEntity {
     LoadoutSlotInfo Slot8 {
      Prefab "{0F3BDC519B087607}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol.et"
     }
+    LoadoutSlotInfo Holster {
+     Prefab "{0D105EB2B8488B32}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS.et"
+    }
    }
   }
  }
