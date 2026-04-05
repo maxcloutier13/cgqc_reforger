@@ -1,3 +1,12 @@
 GenericEntity {
  ID "65F47BF8A8940A11"
+ components {
+  GRS_EquipmentStorageComponent "{65F47BF8827C5520}" {
+   InitialStorageSlots {
+    GRS_HolsterStorageSlot M320 {
+     Prefab ""
+    }
+   }
+  }
+ }
 }

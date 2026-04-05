@@ -1,3 +1,15 @@
 GenericEntity {
  ID "66A043AD610CBBCD"
+ components {
+  RHS_EquipmentStorageComponent "{66A043AD610CBCBE}" {
+   InitialStorageSlots {
+    RHS_EquipmentStorageSlot Pouch0 {
+     Prefab ""
+    }
+    RHS_EquipmentStorageSlot Pouch1 {
+     Prefab ""
+    }
+   }
+  }
+ }
 }

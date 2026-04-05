@@ -1,3 +1,24 @@
 GenericEntity : "{AD9E927493ECE730}Prefabs/Characters/Vests/Vest_Taktika_Pouches/Pouch_Taktika_universalpouch_base.et" {
  ID "50E0B40D7407B664"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB03D1147687}" {
+   MultiSlots {
+    MultiSlotConfiguration "{66CE66551FE5499B}" {
+     SlotTemplate InventoryStorageSlot Dagr {
+      Prefab ""
+     }
+    }
+    MultiSlotConfiguration "{66CE66551FE54997}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab ""
+     }
+    }
+    MultiSlotConfiguration "{66CE66551FE54990}" {
+     SlotTemplate InventoryStorageSlot Saline {
+      Prefab ""
+     }
+    }
+   }
+  }
+ }
 }

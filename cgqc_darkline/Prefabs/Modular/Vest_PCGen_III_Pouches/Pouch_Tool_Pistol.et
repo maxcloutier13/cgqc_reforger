@@ -1,3 +1,14 @@
 GenericEntity : "{DF2807C3DC82F9F8}Prefabs/Characters/Vests/Vest_Taktika_Pouches/Pouch_Taktika_base.et" {
  ID "50E0B40D7407B664"
+ components {
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   InitialStorageSlots {
+    RHS_EquipmentStorageSlot PouchStorage {
+    }
+    RHS_EquipmentStorageSlot Mag2 {
+     Prefab ""
+    }
+   }
+  }
+ }
 }
