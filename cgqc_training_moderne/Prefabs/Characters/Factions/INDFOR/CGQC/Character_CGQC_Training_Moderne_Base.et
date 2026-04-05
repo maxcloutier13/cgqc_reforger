@@ -12,11 +12,6 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
    }
   }
   RandomGearComponent "{68AAF221635F9889}" {
-   m_WaistConfig SCR_GearPoolConfig "{6908E2690D049BB8}" {
-    m_aGearPool {
-     "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
-    }
-   }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
    WeaponTemplate "{535342DF43FD23C6}Prefabs/Weapons/Grenades/Grenade_MultiStun_HalfTime.et"
@@ -33,24 +28,33 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{86D723F5BF011F95}Prefabs/Characters/HeadGear/Hat_BallCap/variants/Hat_ballcap_OD_backwards_crossbow.et"
+     Prefab "{8D75122D5BF561FB}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_olive.et"
     }
     LoadoutSlotInfo Jacket {
-     Prefab "{A87950ABC7487F4B}Prefabs/Characters/Uniforms/Shirt_Turtleneck_01/Champs_ButtonUPShirt_Checked.et"
+     Prefab "{5978572E8E04AA6A}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC.et"
     }
     LoadoutSlotInfo ArmoredVest {
      Prefab ""
     }
     LoadoutSlotInfo Pants {
-     Prefab "{AB50BBCB1AAA0F31}Prefabs/Characters/Uniforms/CCUE_JEANS_TACPANTS/Champs_Jeans.et"
+     Prefab "{92F7862AA023E569}Prefabs/Characters/Uniforms/Bottoms/Vergy_Pants/Vergy_Crye_Trousers_RG.et"
     }
     LoadoutSlotInfo Boots {
-     Prefab "{446960BED57E6802}Prefabs/Characters/Footwear/JungleBoots_01/AF1s_Blackout.et"
     }
     LoadoutSlotInfo Vest {
      Prefab ""
     }
+    LoadoutSlotInfo HandWear {
+     Prefab "{4E37FE174E8C266C}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Coyote.et"
+    }
+    LoadoutSlotInfo Eyes {
+     Prefab "{E2AEE09BA445A688}Prefabs/Characters/Eyewear/npp_kondor/Eyewear_npp_kondor.et"
+    }
+    LoadoutSlotInfo Ears {
+     Prefab "{F85339DBC07A1156}Prefabs/Clothing/CDD_Comtac7G.et"
+    }
     LoadoutSlotInfo Waist {
+     Prefab "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
     }
     LoadoutSlotInfo Belt {
     }
@@ -61,15 +65,13 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
-     Enabled 0
-     TargetStorage "Pants/Champs_Jeans.et"
+     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
      PrefabsToSpawn {
       "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et"
      }
     }
     ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
-     Enabled 0
-     TargetStorage "Jacket/Champs_ButtonUPShirt_Checked.et"
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC.et"
     }
     ItemsInitConfigurationItem "{68B908099C22257E}" {
      Enabled 0
