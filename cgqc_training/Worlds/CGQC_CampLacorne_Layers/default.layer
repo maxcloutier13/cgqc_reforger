@@ -1,3 +1,37 @@
 SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ components {
+  SCR_WelcomeScreenComponent "{5D7290AC8A3E657E}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{5D7290AC92D25160}" {
+    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{5D7290ABF7423AA2}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5D7290ABCBFE3176}" {
+       m_sContentImage "{674FAD5A511EDDD1}UI/Textures/DeployMenu/DeploymentImages__0002_Classroom.edds"
+       m_sContentTitleText "Camp Saint-Luc de La Corne"
+       m_sContentDescriptionText "Bienvenue au centre d'entraînement de l'Unité de Préparation Opérationelle de CGQC. Ce site isolé sert de base d'entrainement pour les opérateurs avant leur déploiement sur le terrain."
+      }
+     }
+    }
+    m_MiddleColumn SCR_WelcomeScreenIntroductionContent "{5D7290ABF8B7756B}" {
+     m_bIsInteractible 1
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5D729EC0A67A9D46}" {
+       m_sContentImage "{EE0C333E777E0F10}UI/Textures/DeployMenu/DeploymentImages__0000_Range.edds"
+       m_sContentTitleText "Infrastructures d'entraînement"
+       m_sContentDescriptionText "Le camp dispose de plusieurs champs de tir, de zone de mouvement tactique, d'installations pour le CQB, la conduite de véhicule terrestres et aériens ainsi que des positions de tireur d'élite. Chaque station est conçue pour reproduire les conditions réelles d'engagement. "
+      }
+     }
+    }
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{5D7290ABFF9DBADC}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5D729EC0BC408CC1}" {
+       m_sContentImage "{5C6E08B8776595CF}UI/Textures/DeployMenu/DeploymentImages__0001_Rocket.edds"
+       m_sContentTitleText "Entraînement individuel"
+       m_sContentDescriptionText "Le camp peut être utilisé sous la supervision d'un instructeur de l'Unité de Préparation Opérationelle ou de manière autonome par les soldats. Chaque station est conçue pour permettre une pratique individuelle efficace, à son propre rythme. "
+      }
+     }
+    }
+   }
+  }
+ }
  coords 5354.086 2.108 5095.316
 }
