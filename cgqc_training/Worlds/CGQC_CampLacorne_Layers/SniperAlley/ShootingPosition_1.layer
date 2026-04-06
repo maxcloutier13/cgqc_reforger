@@ -44,19 +44,13 @@ GenericEntity : "{9B07B09B860A6B9B}Prefabs/nogm/RadioStation.et" {
  angles 0 78.691 0
 }
 Vehicle Motorbike_US11 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
- coords 5168.423 290.424 1777.725
+ coords 5169.164 290.424 1778.914
  angles 0 31.937 0
 }
 GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
  coords 5191.095 291.405 1802.995
 }
-$grp SCR_DestructibleBuildingEntity : "{FDB73CBC36C9FE21}PrefabLibrary/DefaultLibrary/Infrastructure/Bridges/ConcreteBridge_01_Pillar.et" {
- {
-  coords 5205.255 284.418 1810.545
-  angles 0 45.507 0
- }
- {
-  coords 5214.292 284.418 1819.416
-  angles 0 45.507 0
- }
+SCR_DestructibleBuildingEntity : "{FDB73CBC36C9FE21}PrefabLibrary/DefaultLibrary/Infrastructure/Bridges/ConcreteBridge_01_Pillar.et" {
+ coords 5205.255 284.418 1810.545
+ angles 0 45.507 0
 }

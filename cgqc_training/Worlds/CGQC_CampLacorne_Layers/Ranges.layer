@@ -16,13 +16,81 @@ Vehicle M151A2_transport8 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
  coords 6796.474 14.376 4171.931
  angles 0 -89.836 0
 }
-GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- coords 6796.808 14.376 4166.59
- angles 0 -93.802 0
+$grp GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ {
+  coords 6796.808 14.376 4166.59
+  angles 0 -93.802 0
+ }
+ {
+  coords 6640.046 14.375 4227.29
+  angles 0 -179.158 0
+ }
+ {
+  coords 6739.949 14.375 4194.917
+  angles 0 176.075 0
+ }
+ {
+  coords 6779.525 14.375 4194.787
+  angles 0 176.075 0
+ }
+ {
+  coords 6855.229 14.764 4174.925
+  angles 0 -120.51 0
+ }
+ {
+  coords 6884.625 14.375 4096.749
+  angles 0 -100.983 0
+ }
+ {
+  coords 6846.873 14.375 4094.13
+  angles 0 -6.159 0
+ }
+ {
+  coords 6807.992 14.375 4093.925
+  angles 0 -6.159 0
+ }
+ {
+  coords 6725.103 14.375 4149.235
+  angles 0 -4.597 0
+ }
 }
-GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
- coords 6796.849 14.376 4164.741
- angles 0 2.26 0
+$grp GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
+ {
+  coords 6796.849 14.376 4164.741
+  angles 0 2.26 0
+ }
+ {
+  coords 6641.893 14.375 4227.18
+  angles 0 -83.095 0
+ }
+ {
+  coords 6741.375 14.375 4195.118
+  angles 0 -87.862 0
+ }
+ {
+  coords 6780.951 14.375 4194.988
+  angles 0 -87.862 0
+ }
+ {
+  coords 6856.046 14.764 4173.74
+  angles 0 -24.447 0
+ }
+ {
+  coords 6885 14.375 4095.358
+  angles 0 -4.92 0
+ }
+ {
+  coords 6845.456 14.375 4093.873
+  angles 0 89.904 0
+ }
+ {
+  coords 6806.575 14.375 4093.668
+  angles 0 89.904 0
+ }
+ {
+  coords 6723.679 14.375 4149.018
+  angles 0 91.466 0
+ }
 }
 Vehicle Motorbike_US9 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 3707.612 2.625 3155.009

@@ -1,6 +1,6 @@
 GenericEntity : "{160664C8E54A8DE3}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_Conflict_CGQC.et" {
- coords 6360.619 68.934 4340.546
- angles 0 67.729 0
+ coords 6381.9 68.934 4335.651
+ angles 0 68.454 0
 }
 SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  coords 6386.031 68.938 4328.382
@@ -15,22 +15,22 @@ SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
  m_sCustomSubtaskDescription "Apprend à voler"
 }
 Vehicle M151A2_transport3 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
- coords 6392.196 68.937 4320.623
- angles 0 -60.903 0
+ coords 6239.815 68.937 4280.146
+ angles 0 70.329 0
 }
 GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- coords 6388.184 68.937 4312.692
- angles 0 -64.87 0
+ coords 6236.87 68.937 4291.382
+ angles 0 66.363 0
 }
 GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
- coords 6387.325 68.937 4311.053
- angles 0 31.193 0
+ coords 6236.205 68.937 4293.108
+ angles 0 162.426 0
 }
 Vehicle Motorbike_US5 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
- coords 6391.409 68.937 4318.272
- angles 0 -66.593 0
+ coords 6238.17 68.937 4282.368
+ angles 0 64.64 0
 }
 GenericEntity : "{FB18EFE9C1A81E2A}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_Conflict_US_01.et" {
- coords 6380.389 68.937 4295.809
- angles 0 159.852 0
+ coords 6261.63 68.937 4255.45
+ angles 0 68.09 0
 }

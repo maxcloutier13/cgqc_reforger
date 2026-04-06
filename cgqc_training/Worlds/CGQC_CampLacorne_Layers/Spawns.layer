@@ -40,8 +40,8 @@ $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et"
   }
  }
  s_airfield {
-  coords 6391.229 68.938 4314.307
-  angles 0 -64.783 0
+  coords 6237.096 68.938 4285.098
+  angles 0 66.45 0
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "Aéroport"
    Description "Air stuff"

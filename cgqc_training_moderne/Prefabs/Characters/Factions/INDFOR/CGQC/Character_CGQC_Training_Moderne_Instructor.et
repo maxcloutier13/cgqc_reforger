@@ -22,5 +22,12 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
     }
    }
   }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/CGQC_Instructor_Tshirt.et"
+    }
+   }
+  }
  }
 }
