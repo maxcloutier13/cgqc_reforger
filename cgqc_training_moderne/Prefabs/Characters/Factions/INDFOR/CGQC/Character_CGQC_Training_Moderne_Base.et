@@ -13,25 +13,15 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   RandomGearComponent "{68AAF221635F9889}" {
    Enabled 1
-   m_HatConfig SCR_GearPoolConfig "{690C232E295A9503}" {
-    m_aGearPool {
-     "{8D75122D5BF561FB}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_olive.et" "{E12126CDE731EED5}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_01.et" "{9654C7424367D673}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_MC.et" "{CEB4C2CB3B4858DF}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/GL_Hat_Boonie_OD.et" "{BE19A15F1073E7BD}Prefabs/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01_black.et" "{B9687B8829272E14}Prefabs/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01_brown.et" "{F545C1BE7C99954A}Prefabs/Characters/HeadGear/Hat_Patrol_US_01/Hat_Patrol_US_01.et" "{9911F55EC05D1A64}Prefabs/Characters/HeadGear/Hat_Patrol_US_01/Hat_Patrol_US_02.et"
-    }
-   }
-   m_EyesConfig SCR_GearPoolConfig "{690C232E0B808056}" {
-    m_aGearPool {
-     "{E2AEE09BA445A688}Prefabs/Characters/Eyewear/npp_kondor/Eyewear_npp_kondor.et" "{712F76DA44136525}Prefabs/Characters/Eyewear/npp_kondor/Eyewear_npp_kondor_olive.et" "{31C47FFE2E732C4D}Prefabs/Characters/Eyewear/npp_kondor/Eyewear_npp_kondor_tan.et" "{F3672F802360D2E4}Prefabs/Characters/Eyewear/crossbow/Eyewear_ess_crossbow_blk_clr.et" "{D4ABE8F396146587}Prefabs/Characters/Eyewear/crossbow/Eyewear_ess_crossbow_clr.et"
-    }
-   }
-   m_EarsConfig SCR_GearPoolConfig "{690C232E9CDD83A0}" {
-    m_aGearPool {
-     "{94070D3B7CBE9E78}Prefabs/Clothing/CDD_Comtac4.et" "{1DCF7522CC9F863D}Prefabs/Clothing/CDD_Comtac6.et" "{27372B335BF26533}Prefabs/Clothing/CDD_Comtac6G.et" "{F85339DBC07A1156}Prefabs/Clothing/CDD_Comtac7G.et" "{3B19D1D39CDE2B9A}Prefabs/Clothing/CDD_Comtac7T.et"
-    }
-   }
    m_WaistConfig SCR_GearPoolConfig "{690C232E72CA3D3F}" {
     m_aGearPool {
      "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
     }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    IconSetName "EditableEntity_Character_Unnarmed"
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
