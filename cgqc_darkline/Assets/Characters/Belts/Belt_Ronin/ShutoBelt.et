@@ -1,4 +1,4 @@
-GenericEntity : "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et" {
+GenericEntity {
  ID "6693323D9BC47CE5"
  components {
   Persistence "{68EB517A29CE2EB2}" {
@@ -27,7 +27,7 @@ GenericEntity : "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.
      Prefab "{46CFCFBA6A77C887}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17.et"
     }
     LoadoutSlotInfo Holster {
-     Prefab "{6AFF1096B516E73E}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS_M17.et"
+     Prefab "{0D105EB2B8488B32}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS.et"
     }
    }
   }

@@ -11,9 +11,23 @@ GenericEntity : "{A77F06B892FA378B}Prefabs/Weapons/Handguns/BaconM17/Handgun_Bac
   }
   WeaponComponent "{CFBAA4B706BA66E8}" {
    components {
+    AttachmentSlotComponent "{5CA72768717BD842}" {
+     AttachmentSlot InventoryStorageSlot ris {
+      Enabled 1
+     }
+    }
+    AttachmentSlotComponent "{B502E4DC8A9E835E}" {
+     AttachmentSlot InventoryStorageSlot optics {
+      Enabled 1
+     }
+    }
     MuzzleComponent "{50F64C45E7271D47}" {
      MagazineTemplate "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
     }
+   }
+   UIInfo WeaponUIInfo "{CC3BA6A2C42F09F4}" {
+    Name "M17 CGQC"
+    Description "Ready to roll"
    }
   }
  }
