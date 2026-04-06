@@ -1,10 +1,10 @@
-SCR_ChimeraCharacter : "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Base.et" {
- ID "520EC961A090B1EF"
+SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Base_Moderne.et" {
+ ID "520EC961A090BBD5"
  components {
-  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
-   Slots {
-    LoadoutSlotInfo Belt {
-    }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Soldat"
+    Description "Soldat en formation"
    }
   }
  }

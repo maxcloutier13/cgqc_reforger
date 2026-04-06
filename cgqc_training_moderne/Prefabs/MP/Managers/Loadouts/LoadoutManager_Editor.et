@@ -2,10 +2,10 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
-   m_sLoadoutResource "{53A6AB58CC155C85}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Student.et"
+   m_sLoadoutResource "{53A6AB58CC155C86}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Student.et"
   }
   SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
-   m_sLoadoutResource "{2896A3035CB85D10}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Instructor.et"
+   m_sLoadoutResource "{2896A3035CB85D11}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Instructor.et"
   }
   SCR_FactionPlayerLoadout "{690732B1FBE65356}" {
    m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"

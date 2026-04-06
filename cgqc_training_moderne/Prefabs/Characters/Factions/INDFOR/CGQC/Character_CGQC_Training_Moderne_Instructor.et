@@ -1,10 +1,11 @@
-SCR_ChimeraCharacter : "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Base.et" {
- ID "520EC961A090B1EF"
+SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Base_Moderne.et" {
+ ID "520EC961A090BBD5"
  components {
-  RandomGearComponent "{68AAF221635F9889}" {
-   m_HatConfig SCR_GearPoolConfig "{690C232E295A9503}" {
-    m_aGearPool {
-     "{BC2FAF35A4DA094E}Prefabs/Characters/HeadGear/Hat_M70_01/ARY_Hat_M70_01_black.et"
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Instructeur"
+    Description "Giving instructions"
+    m_aAuthoredLabels +{
     }
    }
   }
@@ -16,15 +17,8 @@ SCR_ChimeraCharacter : "{A84E5C7F3AF3789C}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Jacket {
      Prefab "{A722676E7175F8E0}Prefabs/Characters/Uniforms/Tshirts/CGQC_Instructor_Tshirt.et"
     }
-   }
-  }
-  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
-   InitialInventoryItems {
-    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
-     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
-    }
-    ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
-     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
+    LoadoutSlotInfo HandWear {
+     Prefab "{17DAAF4DC71B2AC3}Prefabs/Characters/Handwear/Gloves_MechanixMpact/GRS_Gun_Gloves_Black.et"
     }
    }
   }

@@ -3,7 +3,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_PlayerArsenalLoadout "{68CA51CFAD8D489E}" {
    m_sLoadoutName "CGQC Saved Loadout"
-   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
+   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
