@@ -1,6 +1,9 @@
 SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et" {
  ID "520EC961A090B1EE"
  components {
+  RandomGearComponent "{68AAF221635F9889}" {
+   Enabled 0
+  }
   SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
    "faction affiliation" "CGQC"
   }
