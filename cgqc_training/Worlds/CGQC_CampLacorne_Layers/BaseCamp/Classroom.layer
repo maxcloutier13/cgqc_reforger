@@ -311,6 +311,10 @@ GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Fur
   }
  }
 }
+GenericEntity : "{D2B0F72599E0491B}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_Large_CGQC.et" {
+ coords 6942.606 41.122 3935.762
+ angles 0 35.855 0
+}
 GenericEntity : "{D3AF08F8ACE946C0}Prefabs/Props/PropsHeine/BodyBag_2.et" {
  coords 6938.545 41.11 3955.126
  angles 0 29.604 0

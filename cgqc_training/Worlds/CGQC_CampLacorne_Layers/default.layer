@@ -1,7 +1,7 @@
 SCR_MapEntity MapEntity1 : "{731564B66F91B107}Prefabs/World/Game/MapEntity.et" {
  coords 3716.122 2.624 3130.755
  "Map Geometry Data" "{F6A3802ACDD18F9A}Meshes/Island_Rebuild_GM.topo"
- "Satellite background image" "{0276C1C166927920}Textures/CampLacorne copy.edds"
+ "Satellite background image" "{1895A588A1AD7A64}Textures/CampLacorne.edds"
 }
 TimeAndWeatherManagerEntity : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
  coords 5355.59 2.024 5096.904
@@ -58,91 +58,4 @@ SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Ed
  coords 5354.086 2.108 5095.316
  m_aDisabledResourceTypes {
  }
-}
-Vehicle RiverRunner1 : "{5CB6FA74D12645ED}Vehicles/RiverRunner/RiverRunner.et" {
- coords 7162.962 0 3856.218
- angles 0 92.794 0
-}
-Vehicle RHIB_Transport1 : "{90FB4A19890F9E5C}Prefabs/Vehicles/Naval/RHIB/RHIB_Transport.et" {
- coords 7159.598 0 3865.151
-}
-SCR_DestructibleBuildingEntity : "{DB3F36604A282237}Prefabs/Structures/Infrastructure/Naval/Piers/PierConcrete_01_20m.et" {
- coords 7148.18 -3.543 3865.355
- {
-  GenericEntity {
-   ID "5B10D871FC38C509"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C517"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C539"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C5D1"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C565"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C573"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C58D"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C5C2"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C5E9"
-   coords 0 0 0
-  }
-  GenericEntity {
-   ID "5B10D871FC38C5F7"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C48D"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C49F"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C4AD"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C4BD"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C4CF"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C4EF"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C4FE"
-   coords 0 0 0
-  }
-  SCR_DestructibleBuildingEntity {
-   ID "5B10D871FC38C55F"
-   coords 0 0 0
-  }
- }
-}
-Vehicle RHIB_Gunboat1 : "{DDE009B6A29873EE}Prefabs/Vehicles/Naval/RHIB/RHIB_Gunboat.et" {
- coords 7163.635 0 3864.384
 }

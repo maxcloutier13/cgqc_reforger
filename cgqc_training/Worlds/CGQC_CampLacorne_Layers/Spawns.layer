@@ -1,6 +1,7 @@
 $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
  s_BaseCamp {
-  coords 6937.119 41.122 3935.134
+  coords 6937.119 41.122 3930.621
+  angles 0 62.694 0
   m_iPriority 10
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "Base Camp"
@@ -32,8 +33,8 @@ $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et"
   }
  }
  s_CQB {
-  coords 6561.571 14.376 4642.251
-  angles 0 -147.459 0
+  coords 6553.693 14.376 4637.191
+  angles 0 122.395 0
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "CQB"
    Description "Close quarters, MOUT, tranchées"
@@ -41,15 +42,15 @@ $grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et"
  }
  s_airfield {
   coords 6237.096 68.938 4285.098
-  angles 0 66.45 0
+  angles 0 95.759 0
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "Aéroport"
    Description "Air stuff"
   }
  }
  s_Mortar {
-  coords 5737.454 135 3037.455
-  angles 0 -60.202 0
+  coords 5738.875 135 3037.982
+  angles 0 -88.036 0
   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
    Name "Mortiers"
    Description "Station de mortiers"
