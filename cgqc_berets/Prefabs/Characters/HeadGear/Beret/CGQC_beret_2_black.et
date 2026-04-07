@@ -1,0 +1,138 @@
+GameEntity : "{8A2B2A544F3ED831}Prefabs/Characters/HeadGear/Helmet_PASGT_01/Helmet_PASGT_01_base.et" {
+ ID "50D485E1435D6C72"
+ components {
+  InventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 1
+   Attributes SCR_ItemAttributeCollection "{690EE6B51BC46A27}" {
+    ItemDisplayName UIInfo "{690EE6B51BC46BCD}" {
+     Name "CGQC Beret Caporal"
+     Description "CGQC Beret Soldat"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{690EE6B51BC46BF2}" {
+     Weight 0.15
+     SizeSetupStrategy Manual
+     ItemDimensions 10 10 10
+     ItemVolume 280
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{690EE6B51BC46BF7}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 1
+      FOV 10
+      AspectRatio 1
+      PreviewWornModel 1
+      LodModel 0
+     }
+    }
+    m_Size SLOT_1x1
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{4842E2BBE7C4AB61}Assets/Characters/Headgears/Beret/Beret.xob"
+   Materials {
+    MaterialAssignClass "{690EE8EBAF84D04F}" {
+     SourceMaterial "Velvet"
+     AssignedMaterial "{BD9AE0B22BCC749F}Assets/Characters/Headgears/Beret/Data/Velvet_Black.emat"
+    }
+   }
+  }
+  ParametricMaterialInstanceComponent "{5854DCD8F168E46E}" {
+   AcceptHierarchyProperties 0x80 0
+  }
+  RHS_ClothNodeStorageComponent "{5DB13C5777E6E695}" {
+   Enabled 1
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "Béret Noir"
+     Description "Béret Noir"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{690EE6B51BC46BE8}" {
+     Weight 0.1
+     SizeSetupStrategy Manual
+     ItemDimensions 20 20 20
+     ItemVolume 2500
+    }
+    CustomAttributes {
+     RHS_CustomAttributes "{5DB8F5B9ACB547EA}" {
+      m_sShortName "beret"
+     }
+    }
+    m_Size SLOT_1x1
+   }
+   UseCapacityCoefficient 0
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo Goggles {
+     Enabled 0
+    }
+    LoadoutSlotInfo MeshCover {
+     Enabled 0
+     AreaType RHS_LoadoutECHCoverSlotArea "{690EE6B51BC46B98}" {
+     }
+    }
+    LoadoutSlotInfo Masks {
+     Enabled 0
+    }
+    LoadoutSlotInfo BackVelcro {
+     ChildPivotID ""
+     AreaType RHS_LoadoutMediumVelcroSlotArea "{690EE6B51BC46B9C}" {
+     }
+    }
+    LoadoutSlotInfo NVG {
+    }
+    LoadoutSlotInfo Headset {
+     Enabled 0
+    }
+    LoadoutSlotInfo Rail_Right {
+     Angles 0 0 0
+    }
+    LoadoutSlotInfo Rail_Left {
+     AutoTransform 0
+    }
+    LoadoutSlotInfo TopVelcro {
+     PivotID "Head"
+     Offset 0 0.204 0.0103
+     Angles 90 0 0
+    }
+    LoadoutSlotInfo LeftVelcro {
+     MergePhysics 1
+     Enabled 0
+     InspectionWidgetOffset -0.09 1.79 0
+     AreaType RHS_LoadoutMediumVelcroSlotArea "{690EE6B51BC46B86}" {
+     }
+    }
+    RHS_LoadoutSlotInfo RightVelcro {
+     PivotID "Head"
+     Offset -0.057 0.1327 -0.0755
+     Angles -3.7313 -115.9709 -3.2445
+     MergePhysics 1
+     InspectionWidgetOffset 0.09 1.79 0
+     AreaType RHS_LoadoutMediumVelcroSlotArea "{690EE6B51BC46B89}" {
+     }
+     m_bShouldUseCMorphedMesh 1
+     m_fMorphValue 0.5
+     m_sInspectIconTexture "{72869FB002B6ABC2}UI/Textures/InventoryIcons/Inspection-gizmo-patch-slot-M-alt-UI.edds"
+    }
+   }
+   WornModel "{4842E2BBE7C4AB61}Assets/Characters/Headgears/Beret/Beret.xob"
+   WornMaterialsOverride {
+    "{BD9AE0B22BCC749F}Assets/Characters/Headgears/Beret/Data/Velvet_Black.emat"
+   }
+   ItemModel "{6A70CA853F168E90}Assets/Characters/Headgears/Beret/Beret_Ground.xob"
+   ItemMaterialsOverride {
+    "{BD9AE0B22BCC749F}Assets/Characters/Headgears/Beret/Data/Velvet_Black.emat"
+   }
+  }
+  ActionsManagerComponent "{5112706CD4157AC9}" {
+   ActionContexts {
+    UserActionContext "{5112706CD4157AF3}" {
+    }
+   }
+  }
+ }
+ coords 133.776 1 133.422
+}
