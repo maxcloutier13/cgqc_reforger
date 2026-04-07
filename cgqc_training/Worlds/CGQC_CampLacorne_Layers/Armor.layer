@@ -1,17 +1,3 @@
-SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
- coords 6895.394 13.405 3710.84
- m_sTaskID "Blindés"
- m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC056DB43E}" {
-  Name "Blindés"
-  Description "Apprend à conduire et tirer"
-  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
-  IconSetName "Icon_M_Task_Defend"
- }
- m_aOwnerFactionKeys {
-  "CGQC"
- }
- m_sCustomSubtaskDescription "Apprend à conduire et tirer"
-}
 Vehicle M151A2_transport5 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6886.359 13.406 3715.341
  angles 0 175.18 0

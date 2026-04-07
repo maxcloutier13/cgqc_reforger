@@ -1,17 +1,3 @@
-SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
- coords 5729.189 135 3046.364
- m_sTaskID "Mortiers"
- m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC33039F13}" {
-  Name "Mortiers"
-  Description "Apprend à dropper du mortier"
-  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
-  IconSetName "Icon_Task_Fire_Support"
- }
- m_aOwnerFactionKeys {
-  "CGQC"
- }
- m_sCustomSubtaskDescription "Apprend à dropper du mortier"
-}
 Vehicle M151A2_transport4 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 5751.262 135 3034.451
  angles 0 -38.604 0

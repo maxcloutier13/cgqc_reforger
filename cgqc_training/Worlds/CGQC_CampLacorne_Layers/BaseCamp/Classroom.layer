@@ -191,36 +191,6 @@ $grp GenericEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMi
   angles 0 36.469 0
  }
 }
-SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
- coords 6905.276 41.094 3904.61
- m_sTaskID "Camp de Base"
- m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC67E8E1BE}" {
-  Name "Camp de Base"
-  Description "Salle de Classe et autres"
-  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
-  IconSetName "Icon_M_Task_Establish_Base"
- }
- m_aOwnerFactionKeys {
-  "CGQC"
- }
- m_sCustomSubtaskDescription "Salle de Classe"
- {
-  SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
-   coords -357.138 18.562 36.074
-   m_sTaskID "Training Médical"
-   m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC12E39DEB}" {
-    Name "Training Médical"
-    Description "Apprend à sauver des vies"
-    Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
-    IconSetName "Icon_M_Task_First_Aid"
-   }
-   m_aOwnerFactionKeys {
-    "CGQC"
-   }
-   m_sCustomSubtaskDescription "Apprend à sauver des vies"
-  }
- }
-}
 GenericEntity : "{46334C881751B699}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Workbench1.et" {
  coords 6933.203 41.122 3947.897
  angles 0 -53.493 0

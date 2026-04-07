@@ -2,20 +2,6 @@ GenericEntity : "{160664C8E54A8DE3}Prefabs/Compositions/Slotted/SlotFlatLarge/He
  coords 3798.186 2.625 3086.822
  angles 0 19.668 0
 }
-SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
- coords 3702.552 2.625 3145.558
- m_sTaskID "Port"
- m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC21A47121}" {
-  Name "Port"
-  Description "Apprend à faire des patentes dans l'eau"
-  Icon "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
-  IconSetName "Icon_M_Task_Move"
- }
- m_aOwnerFactionKeys {
-  "CGQC"
- }
- m_sCustomSubtaskDescription "Apprend à faire des patentes dans l'eau"
-}
 Vehicle M151A2_transport7 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 3705.489 2.625 3155.247
  angles 0 -163.82 0

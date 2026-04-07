@@ -2,18 +2,6 @@ GenericEntity : "{160664C8E54A8DE3}Prefabs/Compositions/Slotted/SlotFlatLarge/He
  coords 6381.9 68.934 4335.651
  angles 0 68.454 0
 }
-SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
- coords 6386.031 68.938 4328.382
- m_sTaskID "Airport"
- m_TaskUIInfo SCR_TaskUIInfo "{6908FEAC0F8D08CE}" {
-  Name "Aéroport"
-  Description "Apprend à voler"
- }
- m_aOwnerFactionKeys {
-  "CGQC"
- }
- m_sCustomSubtaskDescription "Apprend à voler"
-}
 Vehicle M151A2_transport3 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6239.815 68.937 4280.146
  angles 0 70.329 0
