@@ -1,0 +1,42 @@
+GenericEntity : "{209B3789589C13CB}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_Locker_Large_Rack_Large_CIV.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_EditableEntityComponent "{660EA51E64ED9B2D}" : "{8B8F72167C615EAA}Prefabs/Editor/Components/Compositions_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Rack MG"
+    Icon "{D5EBF515EE77251A}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Weapons.edds"
+    m_Image "{163C64D0B8843AA1}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_ARY_Locker_Large-Rack_Large_UI.edds"
+    m_aAuthoredLabels + {
+     CONTENT_MODDED ARY_CONTENT_ARMARY ARY_LOCKERS FACTION_CGQC
+    }
+    m_aAutoLabels {
+     SIZE_S
+    }
+   }
+   m_Flags 131331
+  }
+ }
+ {
+  GenericEntity {
+   ID "660D2CA1D1DCE67A"
+   components {
+    SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
+     m_eSupportedArsenalItemTypes MACHINE_GUN
+    }
+    SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+   {
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F81743"
+     m_eSupportedItemTypes SNIPER_RIFLE
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F84879"
+     m_eSupportedItemTypes 306
+    }
+   }
+  }
+ }
+}

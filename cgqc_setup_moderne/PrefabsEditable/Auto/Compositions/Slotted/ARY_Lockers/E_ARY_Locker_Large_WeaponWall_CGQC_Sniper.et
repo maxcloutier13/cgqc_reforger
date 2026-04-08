@@ -1,0 +1,38 @@
+GenericEntity : "{BD3B536501CCB540}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_Locker_Large_WeaponWall_CIV.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_EditableEntityComponent "{660EA51E6704ECE0}" : "{8B8F72167C615EAA}Prefabs/Editor/Components/Compositions_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Display Snipers"
+    Icon "{D5EBF515EE77251A}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Weapons.edds"
+    m_Image "{BF3A5E92BEDC4371}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_ARY_Locker_Large-WeaponWall_UI.edds"
+    m_aAuthoredLabels + {
+     CONTENT_MODDED ARY_CONTENT_ARMARY ARY_LOCKERS FACTION_CGQC
+    }
+    m_aAutoLabels {
+     SIZE_S
+    }
+   }
+   m_Flags 131331
+  }
+ }
+ {
+  GenericEntity {
+   ID "660CBB41E376F193"
+   components {
+    SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
+     m_eSupportedArsenalItemTypes SNIPER_RIFLE
+    }
+    SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+   {
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F81743"
+     m_eSupportedItemTypes 306
+    }
+   }
+  }
+ }
+}
