@@ -1,0 +1,23 @@
+GenericEntity : "{35D83A472A26BB67}Prefabs/Weapons/Rifles/MK13MOD7/MK13_MOD7_Black_base.et" {
+ ID "5260C45AAAA407F4"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{64F30BC938B65B17}" {
+     AttachmentSlot InventoryStorageSlot RisAttachmentRight {
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{64F16AF29D6E4F45}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{8B7FDFF03680150E}Prefabs/Weapons/Attachments/Muzzle/Supressor_M200/Suppressor_M200_BLK.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

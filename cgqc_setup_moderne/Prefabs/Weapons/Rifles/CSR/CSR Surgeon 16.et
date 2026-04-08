@@ -1,0 +1,37 @@
+GenericEntity : "{F9E6107C47C1B088}Prefabs/Weapons/Core/LongRangeRifle_Base.et" {
+ ID "5260C45AAAA407F4"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{668EA3A9A5F6ED00}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot frontatach2 {
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    AttachmentSlotComponent "{668EA3A9A5F6ED10}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot sadad {
+     }
+    }
+    AttachmentSlotComponent "{668EA3A9A5F6ED15}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Scope {
+      Prefab "{E9E4B001C12E71F8}Prefabs/Weapons/Attachments/Optics/Scopes/Optic_SchmidtBender_PMII_5-25x/Optic_SchmidtBender_PMII_5-25x_base.et"
+     }
+    }
+    AttachmentSlotComponent "{669C186149D9FFE0}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot DivingBoard {
+      Prefab ""
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{668EA3A9A5F6ECEE}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{48414BA60F3B0DFA}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_FA762SS.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
