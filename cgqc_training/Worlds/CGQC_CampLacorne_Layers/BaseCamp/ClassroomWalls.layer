@@ -1,0 +1,161 @@
+GenericEntity : "{613BBCF9770B84F6}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/ImprovisedArsenal_closed.et" {
+ coords 7040.164 28.687 3849.356
+}
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  coords 6936.95 41.122 3939.168
+  angles 0 35.767 0
+ }
+ {
+  coords 6949.478 41.122 3942.096
+  angles 0 -54.233 0
+ }
+ {
+  components {
+   RigidBody "{66D4256676938EAF}" {
+    Gravity 0
+   }
+  }
+  coords 6930.773 41.122 3943.611
+  angles 0 35.767 0
+ }
+ {
+  coords 6933.856 41.122 3941.395
+  angles 0 35.767 0
+ }
+ {
+  coords 6944.434 41.122 3935.084
+  angles 0 -54.233 0
+ }
+ {
+  coords 6948.881 41.122 3941.266
+  angles 0 -54.233 0
+ }
+ {
+  coords 6946.658 41.122 3938.173
+  angles 0 -54.233 0
+ }
+}
+GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_WallDoor.et" {
+ components {
+  Persistence "{66D4F718A38253FD}" {
+  }
+  RigidBody "{66D4F71F58444467}" {
+   ResponseIndex "MediumDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  WorldSubsceneComponent "{66D4F71F0C06AA4A}" {
+  }
+  RplComponent "{66D4F71F10213EB9}" {
+  }
+  Hierarchy "{66D4F71F7A825849}" {
+  }
+ }
+ coords 6940.035 41.122 3936.947
+ angles 0 35.767 0
+ {
+  GenericEntity : "{E9980CBF3A4C51AD}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Door.et" {
+   components {
+    Persistence "{66D51263AAEA91ED}" {
+     Flags 0 0x1
+    }
+    DoorComponent "{66D512627EE14B2D}" {
+     DoorAction SCR_DoorUserAction "{66D51262F424462A}" {
+      ParentContextList {
+       "SCR_DoorUserAction"
+      }
+      UIInfo SCR_ActionUIInfo "{66D51262EE1FF072}" {
+       m_sIconName "open-door"
+      }
+     }
+     SoundFilename "{20BF71F689270E57}Sounds/Structures/_ShaderData/Doors/Structures_Door_Wooden_Handle.acp"
+     SoundPoints {
+      SoundPointEventInfo "{66D512629A03C916}" {
+       Offset 1.1831 1.022 0
+      }
+      SoundPointEventInfo "{66D512629A7CC6F1}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_OPEN_FINISH
+      }
+      SoundPointEventInfo "{66D512629A9A457D}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_CLOSE_START
+      }
+      SoundPointEventInfo "{66D512629AB4B3B2}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_CLOSE_FINISH
+      }
+      SoundPointEventInfo "{66D512629AAB933F}" {
+       Offset 0 0.9999 0
+       Event SOUND_MOVEMENT
+      }
+     }
+    }
+    NavmeshCustomLinkComponent "{66D512625495B972}" {
+     LinkType NavmeshDoorLink "{66D5126255FEA856}" {
+      "Navmesh setting presets" {
+       NavmeshCustomLinkSetting "{66D512624E1D7FA6}" {
+        ProjectPresets {
+         NavmeshCustomLinkPreset "{5C90F7CD768EA01F}" {
+          ProjectName "Soldiers"
+          AreaType "Door"
+         }
+        }
+        BeginPoint 0.75 0 -1.5
+        EndPoint 0.75 0 1.5
+        Radius 0.5
+        QueueDelay 0.5
+        SnapDistance 1
+       }
+      }
+     }
+    }
+    RigidBody "{66D512620C82C452}" {
+     ModelGeometry 1
+     Static 1
+     Kinematic 1
+    }
+    SCR_AISmartActionComponent "{66D51262D7103640}" {
+     AIBehaviorTree "{49E6280CE3FAAF4F}AI/BehaviorTrees/SmartActions/SA_OpenGate.bt"
+     Tags {
+      "OpenGate"
+     }
+    }
+    ActionsManagerComponent "{66D512620F42F04D}" {
+     ActionContexts {
+      UserActionContext "{66D51262051006C9}" {
+       UIInfo SCR_ActionUIInfo "{66D5126239657A9F}" {
+        m_sIconName "open-door"
+       }
+       ContextName "SCR_DoorUserAction"
+       Position PointInfo "{50888D37F0EB77E0}" {
+        Offset 1.0977 1.1378 0
+       }
+       Radius 0.65
+      }
+     }
+    }
+    RplComponent "{66D5126222E193A2}" {
+     RuntimeOnly 1
+    }
+    Hierarchy "{66D51262DC90C5FC}" {
+    }
+   }
+   coords -0.61 0 -0.045
+  }
+  GenericEntity : "{F771F656A03D0AE2}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Frame.et" {
+   coords 0 0 0
+  }
+ }
+}
+$grp GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ {
+  coords 6941.583 41.122 3935.831
+  angles 0 35.767 0
+ }
+ {
+  coords 6943.127 41.122 3934.722
+  angles 0 35.767 0
+ }
+}

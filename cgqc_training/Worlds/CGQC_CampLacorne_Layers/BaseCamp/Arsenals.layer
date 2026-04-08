@@ -1,8 +1,8 @@
 GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
- coords 6959.539 41.094 3937.434
- angles 0 -148.606 0
+ coords 6943.985 41.094 3948.065
+ angles 0 -139.585 0
 }
 GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
- coords 6956.448 41.094 3939.654
- angles 0 -152.883 0
+ coords 6941.866 41.094 3949.719
+ angles 0 -143.213 0
 }

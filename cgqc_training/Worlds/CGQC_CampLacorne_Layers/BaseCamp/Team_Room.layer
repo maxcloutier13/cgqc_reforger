@@ -1,0 +1,248 @@
+GenericEntity : "{0607FC1461EB56D1}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_LR.et" {
+ coords 6945.326 41.122 3935.597
+ angles 0 125.247 0
+}
+GenericEntity : "{119783F0F2E70035}Prefabs/nogm/onlyfantas_nogm.et" {
+ coords 6950.483 41.122 3930.022
+ angles 0 -145.642 0
+}
+GenericEntity : "{21C8DF66A6D837AD}Prefabs/nogm/WaterCooler_nogm.et" {
+ coords 6949.795 41.122 3930.318
+ angles 0 -145.642 0
+ scale 0.8
+}
+GenericEntity : "{28765E0DB82CDCB1}Prefabs/Props/Furniture/Sofa_01.et" {
+ coords 6948.648 41.122 3931.553
+ angles 0 33.862 0
+}
+GenericEntity : "{2A677868AB9539B7}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Workbench2.et" {
+ coords 6954.566 41.122 3933.895
+ angles 0 126.128 0
+}
+GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_LockerClosed_1.et" {
+ coords 6949.163 41.122 3940.721
+ angles 0 305.247 0
+ {
+  GenericEntity {
+   ID "65C6DE0A9D65C7EE"
+   coords -0.174 0 0
+  }
+ }
+}
+$grp GenericEntity : "{6E75DEA5094771F9}Prefabs/Props/Military/Compositions/US/ArsenalCubby2_CGQC.et" {
+ {
+  coords 6949.028 41.122 3938.779
+  angles 0 125.247 0
+ }
+ {
+  coords 6945.188 41.122 3933.511
+  angles 0 125.247 0
+ }
+ {
+  coords 6950.448 41.122 3940.797
+  angles 0 125.247 0
+ }
+ {
+  coords 6950.94 41.122 3941.503
+  angles 0 125.247 0
+ }
+ {
+  coords 6951.408 41.122 3942.208
+  angles 0 125.247 0
+ }
+}
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  components {
+   RigidBody "{66D4256676938EAF}" {
+    Gravity 0
+   }
+  }
+  coords 6951.037 41.122 3929.02
+  angles 0 35.767 0
+ }
+ {
+  coords 6947.753 41.122 3931.39
+  angles 0 35.767 0
+ }
+ {
+  coords 6950.847 41.122 3929.164
+  angles 0 35.767 0
+ }
+ {
+  coords 6953.885 41.122 3928.283
+  angles 0 -54.233 0
+ }
+ {
+  coords 6956.108 41.122 3931.372
+  angles 0 -54.233 0
+ }
+ {
+  coords 6958.928 41.122 3935.295
+  angles 0 -54.233 0
+ }
+ {
+  coords 6958.329 41.122 3934.465
+  angles 0 -54.233 0
+ }
+}
+GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_WallDoor.et" {
+ components {
+  Persistence "{66D4F718A38253FD}" {
+  }
+  RigidBody "{66D4F71F58444467}" {
+   ResponseIndex "MediumDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  WorldSubsceneComponent "{66D4F71F0C06AA4A}" {
+  }
+  RplComponent "{66D4F71F10213EB9}" {
+  }
+  Hierarchy "{66D4F71F7A825849}" {
+  }
+ }
+ coords 6946.217 41.122 3932.501
+ angles 0 35.767 0
+ {
+  GenericEntity : "{E9980CBF3A4C51AD}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Door.et" {
+   components {
+    Persistence "{66D51263AAEA91ED}" {
+     Flags 0 0x1
+    }
+    DoorComponent "{66D512627EE14B2D}" {
+     DoorAction SCR_DoorUserAction "{66D51262F424462A}" {
+      ParentContextList {
+       "SCR_DoorUserAction"
+      }
+      UIInfo SCR_ActionUIInfo "{66D51262EE1FF072}" {
+       m_sIconName "open-door"
+      }
+     }
+     SoundFilename "{20BF71F689270E57}Sounds/Structures/_ShaderData/Doors/Structures_Door_Wooden_Handle.acp"
+     SoundPoints {
+      SoundPointEventInfo "{66D512629A03C916}" {
+       Offset 1.1831 1.022 0
+      }
+      SoundPointEventInfo "{66D512629A7CC6F1}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_OPEN_FINISH
+      }
+      SoundPointEventInfo "{66D512629A9A457D}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_CLOSE_START
+      }
+      SoundPointEventInfo "{66D512629AB4B3B2}" {
+       Offset 1.1831 1.022 0
+       Event SOUND_CLOSE_FINISH
+      }
+      SoundPointEventInfo "{66D512629AAB933F}" {
+       Offset 0 0.9999 0
+       Event SOUND_MOVEMENT
+      }
+     }
+    }
+    NavmeshCustomLinkComponent "{66D512625495B972}" {
+     LinkType NavmeshDoorLink "{66D5126255FEA856}" {
+      "Navmesh setting presets" {
+       NavmeshCustomLinkSetting "{66D512624E1D7FA6}" {
+        ProjectPresets {
+         NavmeshCustomLinkPreset "{5C90F7CD768EA01F}" {
+          ProjectName "Soldiers"
+          AreaType "Door"
+         }
+        }
+        BeginPoint 0.75 0 -1.5
+        EndPoint 0.75 0 1.5
+        Radius 0.5
+        QueueDelay 0.5
+        SnapDistance 1
+       }
+      }
+     }
+    }
+    RigidBody "{66D512620C82C452}" {
+     ModelGeometry 1
+     Static 1
+     Kinematic 1
+    }
+    SCR_AISmartActionComponent "{66D51262D7103640}" {
+     AIBehaviorTree "{49E6280CE3FAAF4F}AI/BehaviorTrees/SmartActions/SA_OpenGate.bt"
+     Tags {
+      "OpenGate"
+     }
+    }
+    ActionsManagerComponent "{66D512620F42F04D}" {
+     ActionContexts {
+      UserActionContext "{66D51262051006C9}" {
+       UIInfo SCR_ActionUIInfo "{66D5126239657A9F}" {
+        m_sIconName "open-door"
+       }
+       ContextName "SCR_DoorUserAction"
+       Position PointInfo "{50888D37F0EB77E0}" {
+        Offset 1.0977 1.1378 0
+       }
+       Radius 0.65
+      }
+     }
+    }
+    RplComponent "{66D5126222E193A2}" {
+     RuntimeOnly 1
+    }
+    Hierarchy "{66D51262DC90C5FC}" {
+    }
+   }
+   coords -0.61 0 -0.045
+  }
+  GenericEntity : "{F771F656A03D0AE2}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Frame.et" {
+   coords 0 0 0
+  }
+ }
+}
+GenericEntity : "{8DF4483E43B507D5}Prefabs/Props/Military/Arsenal/ArsenalBoxes/US/Wall Locker.et" {
+ coords 6954.594 41.122 3941.642
+ angles 0 35.499 0
+}
+GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
+ coords 6958.542 41.122 3938.831
+ angles 0 -140.954 0
+}
+$grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
+ {
+  coords 6951.244 41.122 3940.56
+  angles 0 305.247 0
+ }
+ {
+  coords 6950.092 41.122 3938.922
+  angles 0 305.247 0
+ }
+ {
+  coords 6956.355 41.122 3936.224
+  angles 0 305.247 0
+ }
+}
+GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
+ coords 6953.152 41.122 3929.456
+ angles 0 -54.493 0
+ {
+  $grp GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
+   {
+    coords 2.948 0 -0.035
+   }
+   {
+    coords 5.897 0 -0.042
+   }
+   {
+    coords 8.864 0 -0.033
+   }
+  }
+ }
+}
+GenericEntity : "{EEFA430FD6488D4E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/M200_Repair_Table.et" {
+ coords 6947.088 41.122 3937.778
+ angles 0 305.247 0
+}
+GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ coords 6944.672 41.122 3933.615
+ angles 0 35.767 0
+}

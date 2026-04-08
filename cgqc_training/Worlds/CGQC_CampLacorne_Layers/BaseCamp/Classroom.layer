@@ -22,8 +22,8 @@ $grp GenericEntity {
  }
 }
 GenericEntity : "{1529A55491BA9090}Prefabs/GM_Props/Wall_TV2_GM.et" {
- coords 6944.067 42.82 3949.461
- angles 0 36.67 0
+ coords 6939.745 42.82 3952.635
+ angles 0 35.359 0
 }
 GenericEntity : "{178B066B70D7BE99}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_04.et" {
  coords 6936.822 41.122 3952.7
@@ -260,19 +260,6 @@ GenericEntity : "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/In
 GenericEntity : "{6EDB04BBE080E345}Prefabs/GM_Props/WaterCooler_GM.et" {
  coords 6941.035 41.122 3951.181
  angles 0 33.866 0
-}
-GenericEntity : "{7D08A4C60A9F1D17}Prefabs/Props/VRTCQBShootHouse/CQB_ShootHouseMedFrame.et" {
- coords 6937.1 41.122 3939.062
- angles 0 35.111 0
- {
-  GenericEntity {
-   ID "66E34D36507C405C"
-   coords 8.453 0 9.699
-  }
-  GenericEntity : "{7F7FC9E63EA0E96B}Prefabs/Props/VRTCQBShootHouse/CQB_WallDoor.et" {
-   coords 3.802 0 0
-  }
- }
 }
 GenericEntity : "{7FFBB7FD89E1A9D6}Prefabs/BBOC-MissionProps/Server1.et" {
  coords 6937.508 41.122 3953.535

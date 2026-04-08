@@ -1,0 +1,82 @@
+GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  Persistence "{69103923810D9029}" {
+  }
+  ClimbingDataComponent "{69103923810D91D7}" {
+   CanClimbOver 1
+  }
+  MeshObject "{56F2C6D1431AD85A}" {
+   Object "{41D76E81F94AECD6}Assets/Items/Equipment/Arsenal/GearCubby.xob"
+   Materials {
+    MaterialAssignClass "{69103923810D91DC}" {
+     SourceMaterial "330dM4"
+     AssignedMaterial "{15E68F1AB06BEAD1}Assets/Characters/Pouches/Data/Data/CryeM4_MC.emat"
+    }
+    MaterialAssignClass "{69103923810D91DF}" {
+     SourceMaterial "Cbund"
+     AssignedMaterial "{421F32CA49F93B31}Assets/Characters/Vests/Data/CbundMC.emat"
+    }
+    MaterialAssignClass "{69103923810D91C0}" {
+     SourceMaterial "FILBEHydrationPouch_Brown"
+     AssignedMaterial "{AB38BD3D1691D3AD}Assets/Characters/Pouches/Data/Data/LBTHydro_MC.emat"
+    }
+    MaterialAssignClass "{69103923810D91C2}" {
+     SourceMaterial "SF"
+     AssignedMaterial "{FDABB82282B29168}Assets/Items/Equipment/Data/SF.emat"
+    }
+    MaterialAssignClass "{69103923810D91C3}" {
+     SourceMaterial "Velcro"
+     AssignedMaterial "{64DF9129DA877811}Assets/Characters/Vests/Data/Velcro_MC.emat"
+    }
+    MaterialAssignClass "{69103923810D91C5}" {
+     SourceMaterial "Vest"
+     AssignedMaterial "{12783A5E65B79662}Assets/Characters/Vests/Data/VestMC.emat"
+    }
+   }
+  }
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_eArsenalSaveType NO_RESTRICTIONS
+  }
+  SCR_EditableEntityComponent "{69103923810D91C9}" {
+   m_EntityType GENERIC
+   m_UIInfo SCR_EditableEntityUIInfo "{69103923810D91CE}" {
+    Name "CGQC Gear Cubby"
+    Description "All the arsenalzzz"
+    Icon "{84448DEABC3CCC89}Prefabs/Props/Military/Compositions/US/Screenshot 2025-10-10 104927.edds"
+    m_Image "{84448DEABC3CCC89}Prefabs/Props/Military/Compositions/US/Screenshot 2025-10-10 104927.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     CONTENT_MODDED
+    }
+    m_aAutoLabels {
+     FACTION_CGQC THEME_MILITARY ENTITYTYPE_SYSTEM SIZE_S TRAIT_REARMING
+    }
+   }
+  }
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "CGQC"
+  }
+  UniversalInventoryStorageComponent "{56F2C6D15FE6C4CE}" {
+   Attributes SCR_ItemAttributeCollection "{56F2C6D6A36680FB}" {
+    ItemDisplayName SCR_InventoryUIInfo "{56F2C6D6A229E091}" {
+     Name "CGQC Gear Cubby"
+     Description "All the arsnal stuffs"
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{593AC3A96E70FEA7}" {
+      PreviewWornModel 1
+     }
+    }
+   }
+  }
+ }
+ coords 139.792 1 96.929
+ {
+  GenericEntity : "{1EED9998CE209B1C}Prefabs/SP01/Radio_ANPRC152AProp.et" {
+   ID "69103923810D903E"
+   coords -0.691 0.458 -0.993
+   angles 0 40.285 0
+  }
+ }
+}
