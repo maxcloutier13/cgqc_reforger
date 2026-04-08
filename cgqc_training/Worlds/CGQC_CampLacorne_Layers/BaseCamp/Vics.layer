@@ -36,8 +36,8 @@ GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/Ve
    "faction affiliation" "CGQC"
   }
  }
- coords 6938.167 41.094 3922.162
- angles 0 -144.341 0
+ coords 6966.133 41.094 3885.017
+ angles 0 -86.13 0
  {
   GenericEntity {
    ID "6306825580CCD8B0"
