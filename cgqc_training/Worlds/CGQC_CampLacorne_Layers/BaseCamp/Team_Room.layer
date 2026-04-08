@@ -1,6 +1,49 @@
-GenericEntity : "{0607FC1461EB56D1}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_LR.et" {
- coords 6945.326 41.122 3935.597
- angles 0 125.247 0
+$grp GenericEntity {
+ {
+  coords 6945.326 41.122 3935.597
+  angles 0 125.247 0
+ }
+ {
+  coords 6949.028 41.122 3938.779
+  angles 0 125.247 0
+ }
+ {
+  coords 6945.188 41.122 3933.511
+  angles 0 125.247 0
+ }
+ {
+  coords 6950.448 41.122 3940.797
+  angles 0 125.247 0
+ }
+ {
+  coords 6950.94 41.122 3941.503
+  angles 0 125.247 0
+ }
+ {
+  coords 6951.408 41.122 3942.208
+  angles 0 125.247 0
+ }
+ {
+  coords 6954.594 41.122 3941.642
+  angles 0 35.499 0
+ }
+ {
+  coords 6953.152 41.122 3929.456
+  angles 0 -54.493 0
+  {
+   $grp GenericEntity {
+    {
+     coords 2.948 0 -0.035
+    }
+    {
+     coords 5.897 0 -0.042
+    }
+    {
+     coords 8.864 0 -0.033
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{119783F0F2E70035}Prefabs/nogm/onlyfantas_nogm.et" {
  coords 6950.483 41.122 3930.022
@@ -27,28 +70,6 @@ GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/Comp
    ID "65C6DE0A9D65C7EE"
    coords -0.174 0 0
   }
- }
-}
-$grp GenericEntity : "{6E75DEA5094771F9}Prefabs/Props/Military/Compositions/US/ArsenalCubby2_CGQC.et" {
- {
-  coords 6949.028 41.122 3938.779
-  angles 0 125.247 0
- }
- {
-  coords 6945.188 41.122 3933.511
-  angles 0 125.247 0
- }
- {
-  coords 6950.448 41.122 3940.797
-  angles 0 125.247 0
- }
- {
-  coords 6950.94 41.122 3941.503
-  angles 0 125.247 0
- }
- {
-  coords 6951.408 41.122 3942.208
-  angles 0 125.247 0
  }
 }
 $grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
@@ -199,10 +220,6 @@ GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Wall
   }
  }
 }
-GenericEntity : "{8DF4483E43B507D5}Prefabs/Props/Military/Arsenal/ArsenalBoxes/US/Wall Locker.et" {
- coords 6954.594 41.122 3941.642
- angles 0 35.499 0
-}
 GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
  coords 6958.542 41.122 3938.831
  angles 0 -140.954 0
@@ -219,23 +236,6 @@ $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial
  {
   coords 6956.355 41.122 3936.224
   angles 0 305.247 0
- }
-}
-GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
- coords 6953.152 41.122 3929.456
- angles 0 -54.493 0
- {
-  $grp GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
-   {
-    coords 2.948 0 -0.035
-   }
-   {
-    coords 5.897 0 -0.042
-   }
-   {
-    coords 8.864 0 -0.033
-   }
-  }
  }
 }
 GenericEntity : "{EEFA430FD6488D4E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/M200_Repair_Table.et" {

@@ -31,6 +31,24 @@ $grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_U
  }
 }
 GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
- coords 6964.106 41.094 3894.338
- angles 0 -84.779 0
+ components {
+  FactionAffiliationComponent "{6306825580CCB98D}" {
+   "faction affiliation" "CGQC"
+  }
+ }
+ coords 6938.167 41.094 3922.162
+ angles 0 -144.341 0
+ {
+  GenericEntity {
+   ID "6306825580CCD8B0"
+   components {
+    SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+     m_bAnyFactionCanUse 1
+    }
+    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+  }
+ }
 }
