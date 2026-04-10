@@ -1,0 +1,37 @@
+GenericEntity : "{1DECD651DA416862}Prefabs/TeleportPoint.et" {
+ ID "5E047E6807CD4EE2"
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-EditableEntity_TeleportPoint_Name"
+    Description "A teleport destination point"
+    Icon "{7F9EAE4D0D008396}UI/Textures/Editor/Attributes/Categories/Attribute_Category_Objectives.edds"
+    m_Image "{8BFE7C56C4C34056}UI/Textures/EditorPreviews/TeleportPointIcon.edds"
+    m_aAuthoredLabels {
+     ENTITYTYPE_SYSTEM CONTENT_MODDED
+    }
+    m_aAutoLabels {
+     SIZE_XL
+    }
+   }
+   m_Flags 833
+  }
+  SCR_PreviewEntityComponent "{68612E146229A2B5}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{69153246A1EA648B}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+  RplComponent "{68612E145DE9779E}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+ }
+}

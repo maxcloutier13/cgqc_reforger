@@ -2,85 +2,175 @@ Vehicle M151A2_transport8 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
  coords 6796.474 14.376 4171.931
  angles 0 -89.836 0
 }
-$grp GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+$grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
  {
-  coords 6796.808 14.376 4166.59
-  angles 0 -93.802 0
+  coords 6854.903 13.804 4171.543
+  angles 0 -13.603 0
  }
  {
-  coords 6640.046 14.375 4227.29
-  angles 0 -179.158 0
+  coords 6781.207 13.366 4195.105
+  angles 0 -131.705 0
  }
  {
-  coords 6739.949 14.375 4194.917
-  angles 0 176.075 0
+  coords 6643.937 13.366 4217.404
+  angles 0 -115.763 0
  }
  {
-  coords 6779.525 14.375 4194.787
-  angles 0 176.075 0
+  coords 6845.139 13.366 4093.325
+  angles 0 -13.603 0
  }
  {
-  coords 6855.229 14.764 4174.925
-  angles 0 -120.51 0
+  coords 6885.899 13.366 4094.705
+  angles 0 -178.618 0
  }
  {
-  coords 6884.625 14.375 4096.749
-  angles 0 -100.983 0
+  coords 6722.35 13.366 4150.611
+  angles 0 -13.603 0
  }
  {
-  coords 6846.873 14.375 4094.13
-  angles 0 -6.159 0
+  coords 6347.386 60.781 4526.066
+  angles 0 -178.924 0
  }
  {
-  coords 6807.992 14.375 4093.925
-  angles 0 -6.159 0
+  coords 6571.473 14.519 4782.83
+  angles 0 134.54 0
  }
  {
-  coords 6725.103 14.375 4149.235
-  angles 0 -4.597 0
- }
-}
-$grp GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
- {
-  coords 6796.849 14.376 4164.741
-  angles 0 2.26 0
- }
- {
-  coords 6641.893 14.375 4227.18
-  angles 0 -83.095 0
- }
- {
-  coords 6741.375 14.375 4195.118
-  angles 0 -87.862 0
- }
- {
-  coords 6780.951 14.375 4194.988
-  angles 0 -87.862 0
- }
- {
-  coords 6856.046 14.764 4173.74
-  angles 0 -24.447 0
- }
- {
-  coords 6885 14.375 4095.358
-  angles 0 -4.92 0
- }
- {
-  coords 6845.456 14.375 4093.873
-  angles 0 89.904 0
- }
- {
-  coords 6806.575 14.375 4093.668
-  angles 0 89.904 0
- }
- {
-  coords 6723.679 14.375 4149.018
-  angles 0 91.466 0
+  coords 6515.342 14.375 4598.238
+  angles 0 7.838 0
  }
 }
 Vehicle Motorbike_US9 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 3707.612 2.625 3155.009
  angles 0 -169.51 0
+}
+$grp GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: Grenade"
+   }
+  }
+  coords 6853.055 14.813 4174.126
+  angles 0 93.895 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: 300m Pop-up"
+   }
+  }
+  coords 6780.75 14.375 4193.37
+  angles 0 -33.177 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: Launchers"
+   }
+  }
+  coords 6641.487 14.375 4214.994
+  angles 0 1.015 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: 25m Popup"
+   }
+  }
+  coords 6845.224 14.375 4095.777
+  angles 0 -177.596 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: Bounding"
+   }
+  }
+  coords 6882.702 14.375 4096.234
+  angles 0 40.322 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: Bunker Assault"
+   }
+  }
+  coords 6721.529 14.375 4149.759
+  angles 0 -154.663 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "Range: ALDO"
+   }
+  }
+  coords 6351.606 60.781 4524.053
+  angles 0 -13.593 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "MOUT: Zone Urbaine"
+   }
+  }
+  coords 6569.663 14.589 4783.168
+  angles 0 144.952 0
+ }
+ {
+  components {
+   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+     Name "Base Camp"
+    }
+   }
+   TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+    m_sEditorName "CQB: Tranchées"
+   }
+  }
+  coords 6515.062 14.375 4596.262
+  angles 0 -14.845 0
+ }
 }
 GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
  coords 6813.782 14.375 4182.964

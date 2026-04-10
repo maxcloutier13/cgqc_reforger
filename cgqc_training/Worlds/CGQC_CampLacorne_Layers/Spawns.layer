@@ -1,67 +1,8 @@
-$grp SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- s_BaseCamp {
-  coords 6937.119 41.122 3930.621
-  angles 0 62.694 0
-  m_iPriority 10
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Base Camp"
-   Description "Site principal"
-  }
- }
- s_Sniper {
-  coords 5189.013 291.065 1798.023
-  angles 0 47.502 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Station Longue-Portée"
-   Description "Position 1"
-  }
- }
- s_Armor {
-  coords 6899.505 13.406 3712.595
-  angles 0 -130.147 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Blindés"
-   Description "Station de blindés"
-  }
- }
- s_Ranges {
-  coords 6794.78 14.375 4166.565
-  angles 0 -74.14 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Postes de tir variés"
-   Description "Ranges de toute sortes"
-  }
- }
- s_CQB {
-  coords 6553.693 14.376 4637.191
-  angles 0 122.395 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "CQB"
-   Description "Close quarters, MOUT, tranchées"
-  }
- }
- s_airfield {
-  coords 6237.096 68.938 4285.098
-  angles 0 95.759 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Aéroport"
-   Description "Air stuff"
-  }
- }
- s_Mortar {
-  coords 5738.875 135 3037.982
-  angles 0 -88.036 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Mortiers"
-   Description "Station de mortiers"
-  }
- }
- s_Port {
-  coords 3715.337 2.625 3149.315
-  angles 0 -130.147 0
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-   Name "Port"
-   Description "Port de pratique"
-  }
+SCR_SpawnPoint s_BaseCamp : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 6937.119 41.122 3930.621
+ angles 0 62.694 0
+ m_iPriority 10
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name ""
  }
 }

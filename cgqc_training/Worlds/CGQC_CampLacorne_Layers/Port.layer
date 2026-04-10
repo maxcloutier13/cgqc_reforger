@@ -6,17 +6,27 @@ Vehicle M151A2_transport7 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
  coords 3705.489 2.625 3155.247
  angles 0 -163.82 0
 }
-GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
- coords 3710.55 2.625 3151.533
- angles 0 -167.786 0
-}
-GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
- coords 3712.339 2.625 3151.062
- angles 0 -71.724 0
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 3712.44 1.616 3151.73
+ angles 0 20.978 0
 }
 Vehicle Motorbike_US10 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  coords 6797.286 14.376 4169.369
  angles 0 -95.526 0
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Port"
+  }
+ }
+ coords 3710.722 2.625 3149.48
+ angles 0 -136.175 0
 }
 GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
  coords 3687.234 2.625 3160.323

@@ -277,6 +277,20 @@ GenericEntity : "{BDC0B74B1350B129}Prefabs/BriefingRoom/quadrobranco1.et" {
  coords 6935.692 42.926 3952.284
  angles 0 -53.852 0
 }
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Camp de Base"
+  }
+ }
+ coords 6943.801 41.122 3928.768
+ angles 0 38.807 0
+}
 GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_02.et" {
  coords 6934.127 41.122 3949.262
  angles 0 127.59 0
@@ -297,10 +311,6 @@ GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Fur
    angles 0 165 0
   }
  }
-}
-GenericEntity : "{D2B0F72599E0491B}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_Large_CGQC.et" {
- coords 6942.606 41.122 3935.762
- angles 0 35.855 0
 }
 GenericEntity : "{D3AF08F8ACE946C0}Prefabs/Props/PropsHeine/BodyBag_2.et" {
  coords 6938.545 41.11 3955.126
