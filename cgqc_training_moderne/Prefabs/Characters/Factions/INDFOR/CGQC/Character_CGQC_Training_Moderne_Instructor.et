@@ -30,6 +30,11 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{690C232DABEBBC53}" {
      TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
     }
+    ItemsInitConfigurationItem "{690C232DB4E1E45C}" {
+     PrefabsToSpawn + {
+      "{8A45D4DF4FFA00E7}Prefabs/Items/Equipment/Keys/Masterkey.et"
+     }
+    }
    }
   }
  }

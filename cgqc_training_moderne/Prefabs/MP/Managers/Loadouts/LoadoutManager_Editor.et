@@ -8,10 +8,37 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{2896A3035CB85D11}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Instructor.et"
   }
   SCR_FactionPlayerLoadout "{690732B1FBE65356}" {
-   m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"
+   m_sLoadoutResource ""
   }
   SCR_FactionPlayerLoadout "{690738C82CD291C0}" {
-   m_sLoadoutResource "{F619087E723CE627}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Teamleader_Moderne.et"
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68C83889C5D151F1}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68C8388B3E4A37DB}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68C83882FB5E2606}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68C85D46D4CE3C55}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68DA25C80F8E5E18}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68DE3388F224A608}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68E42894ED969286}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68E4289490AD43C5}" {
+   m_sLoadoutResource ""
+  }
+  SCR_FactionPlayerLoadout "{68E428949330F9C2}" {
+   m_sLoadoutResource ""
   }
  }
 }

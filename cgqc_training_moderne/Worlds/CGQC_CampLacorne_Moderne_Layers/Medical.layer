@@ -44,14 +44,6 @@ $grp GenericEntity : "{4D739103C9B946EC}Prefabs/Structures/Signs/SignLarge_02/TC
   angles 0 1.812 0
  }
 }
-SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 6535.274 59.656 3954.832
- angles 0 -171.064 0
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Medical"
-  Description "Medical Training"
- }
-}
 $grp GenericEntity : "{E8A768A02385F5D2}Prefabs/Structures/Signs/SignLarge_02/FLOWCHART.et" {
  {
   coords 6538.339 59.656 3934.297

@@ -24,14 +24,6 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  coords 5741.649 134.999 3037.594
  angles 0 115.259 0
 }
-$grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_US.et" {
- {
-  coords 5705.429 135 3037.134
- }
- {
-  coords 5713.299 135 3045.403
- }
-}
 GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
  coords 5767.657 135 3074.692
  angles 0 169.866 0

@@ -1,6 +1,3 @@
-GenericEntity : "{613BBCF9770B84F6}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/ImprovisedArsenal_closed.et" {
- coords 7040.164 28.687 3849.356
-}
 $grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
  {
   coords 6936.95 41.122 3939.168

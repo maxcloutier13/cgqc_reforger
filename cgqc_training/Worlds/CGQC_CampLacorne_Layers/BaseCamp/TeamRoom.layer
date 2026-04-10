@@ -1,0 +1,139 @@
+GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ coords 6956.575 41.122 3940.189
+ angles 0 29.085 0
+}
+GenericEntity : "{119783F0F2E70035}Prefabs/nogm/onlyfantas_nogm.et" {
+ coords 6950.483 41.122 3930.022
+ angles 0 -145.642 0
+}
+GenericEntity : "{21C8DF66A6D837AD}Prefabs/nogm/WaterCooler_nogm.et" {
+ coords 6949.795 41.122 3930.318
+ angles 0 -145.642 0
+ scale 0.8
+}
+GenericEntity : "{28765E0DB82CDCB1}Prefabs/Props/Furniture/Sofa_01.et" {
+ coords 6948.648 41.122 3931.553
+ angles 0 33.862 0
+}
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  components {
+   RigidBody "{66D4256676938EAF}" {
+    Gravity 0
+   }
+  }
+  coords 6951.037 41.122 3929.02
+  angles 0 35.767 0
+ }
+ {
+  coords 6947.753 41.122 3931.39
+  angles 0 35.767 0
+ }
+ {
+  coords 6950.847 41.122 3929.164
+  angles 0 35.767 0
+ }
+ {
+  coords 6953.885 41.122 3928.283
+  angles 0 -54.233 0
+ }
+ {
+  coords 6956.108 41.122 3931.372
+  angles 0 -54.233 0
+ }
+ {
+  coords 6958.928 41.122 3935.295
+  angles 0 -54.233 0
+ }
+ {
+  coords 6958.329 41.122 3934.465
+  angles 0 -54.233 0
+ }
+}
+GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_WallDoor.et" {
+ components {
+  Persistence "{66D4F718A38253FD}" {
+  }
+  RigidBody "{66D4F71F58444467}" {
+   ResponseIndex "MediumDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  WorldSubsceneComponent "{66D4F71F0C06AA4A}" {
+  }
+  RplComponent "{66D4F71F10213EB9}" {
+  }
+  Hierarchy "{66D4F71F7A825849}" {
+  }
+ }
+ coords 6946.217 41.122 3932.501
+ angles 0 35.767 0
+ {
+  GenericEntity : "{F771F656A03D0AE2}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Frame.et" {
+   coords 0 0 0
+  }
+ }
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 6953.122 41.122 3942.64
+ angles 0 29.085 0
+}
+GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
+ coords 6958.542 41.122 3938.831
+ angles 0 -140.954 0
+}
+$grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
+ {
+  coords 6951.244 41.122 3940.56
+  angles 0 305.247 0
+ }
+ {
+  coords 6950.092 41.122 3938.922
+  angles 0 305.247 0
+ }
+ {
+  coords 6956.355 41.122 3936.224
+  angles 0 305.247 0
+ }
+}
+GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
+ coords 6947.896 41.122 3940.967
+ angles 0 -54.224 0
+ {
+  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+   coords -1.007 0.947 -0.002
+   angles 0 144.48 0
+  }
+  GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+   components {
+    SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+     m_eSupportedArsenalItemTypes 1
+     m_eSupportedArsenalItemModes 254
+    }
+    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+   coords 0.524 0.949 0.065
+   angles 0 0.274 0
+  }
+ }
+}
+GenericEntity : "{C5A9091473439963}Prefabs/Structures/BuildingParts/Doors/Door_Bunker_02/DoorSet_Bunker_02_A_LEFT_EXT_ST_B_camo.et" {
+ coords 6946.141 41.122 3932.465
+ angles 0 35.547 0
+ {
+  GenericEntity {
+   ID "5A68D7E0EEF8D4C4"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     i_doorLockChance 100
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ coords 6944.672 41.122 3933.615
+ angles 0 35.767 0
+}
