@@ -1,0 +1,280 @@
+GenericEntity {
+ ID "69144A0FFAA18712"
+ components {
+  ClothNodeStorageComponent "{69144A0FFAA1871B}" {
+   Attributes SCR_IdentityItemAttributeCollection "{69144A0FFAA18707}" {
+    ItemDisplayName UIInfo "{69144A0FFAA1870B}" {
+     Name "Ronin Shuto Belt | CB"
+     Description "Ronin Shuto Belt | CB"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69144A0FFAA18730}" {
+     Weight 0.39
+     SizeSetupStrategy Manual
+     ItemDimensions 1 1 1
+     ItemVolume 25001
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69144A0FFAA18734}" {
+      CameraDistanceToItem 1.25
+      CameraOffset 0 0 0
+      FOV 15
+      AspectRatio 1
+      PreviewWornModel 1
+      PreviewModel "{70FEAECAD6EF1F29}Assets/Characters/Clothing/Bison Belt/Bison_belt_Item.xob"
+     }
+     RHS_CustomAttributes "{69144A0FFAA18737}" {
+      m_sCompatibleSlotNames {
+      }
+     }
+    }
+   }
+   Priority 100
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 0
+  }
+  MeshObject "{69144A0FFAA1873B}" {
+   Object "{15A78064CEE0C93A}Assets/Characters/Belts/Belt_Ronin/TyrBelt.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69144A0FFAA1873D}" {
+   Mass 2
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69144A0FFAA18720}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69144A0FFAA18724}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69144A0FFAA18726}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69144A0FFAA18729}" {
+     m_sSoundProject "{087200FA6DF8D1D2}Sounds/Items/_SharedData/Drop/Items_Drop_Vest.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69144A0FFAA1872C}" {
+   AreaType ZEL_WaistArea "{69144A0FFAA18478}" {
+   }
+   Slots {
+    LoadoutSlotInfo Slot1 {
+     PivotID "Hips"
+     Offset -0.1295 0.0401 0.1375
+     Angles -1.012 -28.0731 4.3122
+     MergePhysics 1
+     Enabled 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18460}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.1872 0.071 0.0202
+     DeflatedAngles -1.9002 71.85455 -1.9816
+    }
+    LoadoutSlotInfo Slot2 {
+     PivotID "Hips"
+     Offset -0.1838 0.0487 0.0926
+     Angles 6.7429 -56.5482 9.0376
+     MergePhysics 1
+     Enabled 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18463}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset -0.1391 0.0619 -0.1068
+     DeflatedAngles -4.7891 -138.4312 1.3584
+    }
+    LoadoutSlotInfo Slot3 {
+     PivotID "Hips"
+     Offset -0.201 0.0595 0.032
+     Angles 8.5345 -74.1712 10.4086
+     MergePhysics 1
+     Enabled 1
+     Prefab "{D63A9ABD10F03A21}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17_simunition.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18466}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset -0.1391 0.0619 -0.1068
+     DeflatedAngles -4.7891 -138.4312 1.3584
+    }
+    LoadoutSlotInfo Slot4 {
+     PivotID "Hips"
+     Offset -0.1872 0.0538 -0.0703
+     Angles 13.5056 -120.7566 2.8233
+     MergePhysics 1
+     Prefab "{DD8B8135BE77BDB2}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC_Simunition.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18469}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.009 0.0903 -0.1623
+     DeflatedAngles -12.874 180 0
+    }
+    LoadoutSlotInfo Slot5 {
+     PivotID "Hips"
+     Offset -0.1298 0.0455 -0.1279
+     Angles 11.1605 -162.0192 -0.6161
+     MergePhysics 1
+     Enabled 1
+     Prefab "{DD8B8135BE77BDB2}Prefabs/Modular/Placards/Pouch_SEARM4_MC_CGQC_Simunition.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA1846C}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.009 0.0903 -0.1623
+     DeflatedAngles -12.874 180 0
+    }
+    LoadoutSlotInfo Slot6 {
+     PivotID "Hips"
+     Offset 0.018 0.0578 -0.1623
+     Angles 11.8481 176.30911 -0.6316
+     MergePhysics 1
+     Enabled 1
+     Prefab "{18E40EA7E09B4A50}Prefabs/Modular/Placards/Pouch_BlowoutIFAK_MC_CGQC.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA1846F}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0 0.0503 -0.0074
+     DeflatedAngles 0 0 0
+    }
+    LoadoutSlotInfo Slot7 {
+     PivotID "Hips"
+     Offset 0.1212 0.0709 -0.1295
+     Angles 12.093 157.27371 1.3084
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18411}" {
+     }
+     DeflatedOffset 0.009 0.0903 -0.1623
+     DeflatedAngles -12.874 180 0
+    }
+    LoadoutSlotInfo Slot8 {
+     PivotID "Hips"
+     Offset 0.1859 0.0697 -0.0832
+     Angles 12.4715 126.5761 -3.2861
+     MergePhysics 1
+     Prefab "{D63A9ABD10F03A21}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_GBRSDbl_Pistol_m17_simunition.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18413}" {
+     }
+    }
+    LoadoutSlotInfo Slot9 {
+     PivotID "Hips"
+     Offset 0.2133 0.0647 -0.0027
+     Angles 10.5809 88.6836 -3.8876
+     MergePhysics 1
+     Enabled 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18416}" {
+     }
+    }
+    LoadoutSlotInfo Slot10 {
+     PivotID "Hips"
+     Offset 0.1799 0.0477 0.0985
+     Angles 4.1912 53.1784 -8.1032
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltPouch "{69144A0FFAA18419}" {
+     }
+    }
+    LoadoutSlotInfo Holster {
+     PivotID "Hips"
+     Offset 0.1758 0.0777 0.0677
+     Angles 4.5253 161.9247 -0.3723
+     MergePhysics 1
+     Prefab "{0D105EB2B8488B32}Prefabs/Modular/Placards/Vest_JPC_Pouches/SafarilandQLS.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_BeltHolster "{69144A0FFAA18408}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.1872 0.071 0.0202
+     DeflatedAngles -1.9002 71.85457 -1.9816
+    }
+    LoadoutSlotInfo Lanyard {
+     PivotID "Hips"
+     Offset -0.1121 -0.0933 -0.011
+     Angles 5.2305 -8.6585 6.1059
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_Lanyard "{69144A0FFAA1840A}" {
+     }
+    }
+    LoadoutSlotInfo TQ {
+     PivotID "Hips"
+     Offset 0.1797 0.0669 0.1169
+     Angles -3.5182 17.8156 -91.58881
+     MergePhysics 1
+     Prefab "{01BBA7367E4FDDBE}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_TQ_Invis.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType CDD_SlotArea_item "{69144A0FFAA1840D}" {
+     }
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.009 0.0903 -0.1623
+     DeflatedAngles -12.874 180 0
+    }
+    LoadoutSlotInfo Suspenders {
+     Enabled 0
+     EnableDeflatedOffset 1
+    }
+   }
+   WornModel "{A4E83A492D38C896}Assets/Characters/Belts/Belt_Ronin/ronin_shuto.xob"
+   ItemModel "{11A0D08496A1A535}Assets/Characters/Belts/Belt_Ronin/ronin_shuto_ground.xob"
+   SoundInt 400
+   DebugWornModel 0
+   DepthLeft 0.06
+   DepthRight 0.04
+  }
+  ActionsManagerComponent "{69144A0FFAA18432}" {
+   ActionContexts {
+    UserActionContext "{69144A0FFAA18434}" {
+     ContextName "default"
+     Position PointInfo "{69144A0FFAA18437}" {
+     }
+     Radius 0.5
+     Height 0
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{69144A0FFAA1843C}" {
+     ParentContextList {
+      "default"
+     }
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{69144A0FFAA1843E}" {
+     ParentContextList {
+      "default"
+     }
+    }
+   }
+  }
+  RplComponent "{69144A0FFAA18420}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69144A0FFAA18423}" {
+  }
+ }
+ coords 89.186 1 145.548
+}

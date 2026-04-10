@@ -1,0 +1,12 @@
+GenericEntity : "{D0406D35FBDE3201}Prefabs/Modular/Placards/Pouch_CryeMBITR_MC_343.et" {
+ ID "667863CFA4A3D4FE"
+ components {
+  RHS_EquipmentStorageComponent "{667863CFA4A3D523}" {
+   InitialStorageSlots {
+    RHS_EquipmentStorageSlot Pouch0 {
+     Prefab "{580434EEF7E64787}Prefabs/Items/Equipment/Radios/CGQC_Radio_CDD_2_4_152.et"
+    }
+   }
+  }
+ }
+}

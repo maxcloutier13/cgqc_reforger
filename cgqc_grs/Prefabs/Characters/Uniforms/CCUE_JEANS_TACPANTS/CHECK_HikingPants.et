@@ -1,0 +1,28 @@
+GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/Pants_Fisherman_01_base.et" {
+ ID "5104869D194C6243"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "GRS: Gray Hiking Pants"
+     Description "GRS: Gray Hiking Pants"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     ItemVolume 500
+    }
+   }
+   MaxCumulativeVolume 5000
+   MaxItemSize 50 50 50
+   m_fMaxWeight 2500
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   WornModel "{BBFEF0FBD7C786B9}Assets/Pants/HikingPants/hiking_pants_1.xob"
+   WornMaterialsOverride {
+   }
+   ItemModel "{BBFEF0FBD7C786B9}Assets/Pants/HikingPants/hiking_pants_1.xob"
+   ItemMaterialsOverride {
+   }
+  }
+ }
+ coords 111.277 1 130.385
+}

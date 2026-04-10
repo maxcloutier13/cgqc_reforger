@@ -34,7 +34,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
    WeaponTemplate ""
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
-   WeaponTemplate "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
+   WeaponTemplate "{5D971D6EC966CF52}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC_Simunition.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {

@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0 0.312 1 1
+ BCRMap "{33569D8A38965F7E}Assets/BaconM17/texture/m17_main_BCR.edds"
+ NMOMap "{0B8E2618E1E10DE0}Assets/BaconM17/texture/m17_main_NMO.edds"
+}

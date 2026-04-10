@@ -1,0 +1,12 @@
+GenericEntity : "{0E0BABBD31801753}Prefabs/Modular/Placards/Pouch_M4_INVIS.et" {
+ ID "50E0B40D7407B664"
+ components {
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   InitialStorageSlots {
+    RHS_MorphedEquipmentStorageSlot pouch0 {
+     Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+    }
+   }
+  }
+ }
+}

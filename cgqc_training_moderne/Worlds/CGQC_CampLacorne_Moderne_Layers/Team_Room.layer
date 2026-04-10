@@ -199,13 +199,13 @@ GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Wall
   }
  }
 }
-GenericEntity : "{8DF4483E43B507D5}Prefabs/Props/Military/Arsenal/ArsenalBoxes/US/Wall Locker.et" {
- coords 6954.594 41.122 3941.642
- angles 0 35.499 0
-}
 GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
  coords 6958.542 41.122 3938.831
  angles 0 -140.954 0
+}
+GenericEntity : "{B33D266B01B89267}Prefabs/Props/Military/Arsenal/ArsenalBoxes/Wall locker.BLE.et" {
+ coords 6954.594 41.122 3941.642
+ angles 0 35.499 0
 }
 $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
  {
@@ -240,7 +240,7 @@ GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/Arsena
 }
 GenericEntity : "{EEFA430FD6488D4E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/M200_Repair_Table.et" {
  coords 6947.088 41.122 3937.778
- angles 0 305.247 0
+ angles 0 485.247 0
 }
 GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
  coords 6944.672 41.122 3933.615
