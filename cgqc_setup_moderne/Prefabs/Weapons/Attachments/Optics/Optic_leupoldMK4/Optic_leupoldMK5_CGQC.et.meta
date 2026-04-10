@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{24DDC79F5F184546}Prefabs/Weapons/Attachments/Optics/Optic_leupoldMK4/Optic_leupoldMK4_CGQC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
