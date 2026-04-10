@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DBB2C34B6DC8BD60}Prefabs/Characters/Uniforms/CCUE_JEANS_TACPANTS/LevisJeansBlue.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

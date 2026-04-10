@@ -1,0 +1,18 @@
+GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{673767152D4EFDAF}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.6
+    }
+   }
+   MaxCumulativeVolume 800
+   MaxItemSize 10 10 10
+   m_fMaxWeight 5
+  }
+ }
+}

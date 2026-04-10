@@ -1,0 +1,19 @@
+GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/Pants_Fisherman_01_base.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{689A32B8010AC3C6}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "GRS: Black Bootcut Jeans"
+     Description "GRS: Black Bootcut Jeans"
+    }
+   }
+   MaxCumulativeVolume 800
+   MaxItemSize 10 10 10
+   m_fMaxWeight 5
+  }
+ }
+}
