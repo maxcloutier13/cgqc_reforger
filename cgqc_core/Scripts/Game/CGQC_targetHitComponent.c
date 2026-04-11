@@ -63,3 +63,42 @@ class CGQC_TargetHitComponentClass : ScriptComponentClass {}
 class CGQC_TargetHitComponent : ScriptComponent
 {
 }
+
+//------------------------------------------------------------------------------------------------
+// Reset action — placed directly on CQB_TargetBlank_CGQC.et
+// Reads the prefab resource from CGQC_TargetHitComponent on the same entity
+//------------------------------------------------------------------------------------------------
+
+class CGQC_TargetSelfResetAction : ScriptedUserAction
+{
+    [Attribute(defvalue: "", desc: "Prefab to respawn (e.g. CQB_TargetBlank_CGQC.et)", params: "et")]
+    protected ResourceName m_sRespawnPrefab;
+
+    override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
+    {
+        if (!Replication.IsServer())
+            return;
+
+        if (!pOwnerEntity || m_sRespawnPrefab.IsEmpty())
+        {
+            Print("[CGQC_TargetSelfResetAction] No owner or respawn prefab not set.", LogLevel.WARNING);
+            return;
+        }
+
+        CGQC_ResetHelper.s_sName = pOwnerEntity.GetName();
+        CGQC_ResetHelper.s_fBaseX = pOwnerEntity.GetOrigin()[0];
+        CGQC_ResetHelper.s_sPrefab = m_sRespawnPrefab;
+        pOwnerEntity.GetTransform(CGQC_ResetHelper.s_vTransform);
+
+        SCR_EntityHelper.DeleteEntityAndChildren(pOwnerEntity);
+        GetGame().GetCallqueue().CallLater(CGQC_ResetHelper.DoReset, 100, false);
+
+        SCR_HintManagerComponent hint = SCR_HintManagerComponent.GetInstance();
+        if (hint)
+            hint.ShowCustomHint("Reset de la cible", "", 2.0);
+    }
+
+    override bool CanBeShownScript(IEntity user) { return true; }
+    override bool CanBePerformedScript(IEntity user) { return true; }
+    override bool HasLocalEffectOnlyScript() { return false; }
+}
