@@ -1,19 +1,22 @@
+GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
+ coords 6697.802 14.721 4199.349
+}
 SCR_DestructibleBuildingEntity : "{686B4C83AC940895}Prefabs/Structures/Infrastructure/Naval/Piers/PierConcrete_01_flat.et" {
  coords 6695.475 -1.334 4198.172
  angles 0 -180 0
  scale 0.42
 }
 $grp GenericEntity : "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et" {
- {
+ zeroTarget_1 {
   coords 6698.895 14.375 4298.733
   angles 0 -179.472 0
  }
- {
+ zeroTarget_2 {
   coords 6698.103 14.375 4398.994
   angles 0 -179.472 0
  }
- {
-  coords 6696.828 15.613 4498.562
+ zeroTarget_3 {
+  coords 6696.83 15.613 4498.758
   angles 0 -179.472 0
  }
 }
@@ -30,4 +33,64 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  }
  coords 6697.448 14.375 4195.49
  angles 0 143.192 0
+}
+GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
+ components {
+  ActionsManagerComponent "{691635765270CB8C}" {
+   ActionContexts {
+    UserActionContext "{69163576548028A8}" {
+     ContextName "Default"
+     Position PointInfo "{69163575DC7D285B}" {
+      Offset 0 0.0568 0.0371
+     }
+    }
+   }
+   additionalActions {
+    CGQC_TargetHitResetAction "{69163571848A0E78}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{69163571BC775475}" {
+      Name "Reset 100m"
+     }
+     ActionTitle "Reset100"
+     VisibilityRange 2
+     Duration 0.5
+     m_sTargetEntityName "zeroTarget_1"
+     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
+    }
+    CGQC_TargetHitResetAction "{691635704997A7F5}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{691635704997A722}" {
+      Name "Reset 100m"
+     }
+     ActionTitle "Reset200"
+     VisibilityRange 2
+     Duration 0.5
+     "Sort Priority" 1
+     m_sTargetEntityName "zeroTarget_2"
+     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
+    }
+    CGQC_TargetHitResetAction "{69163570486FFE36}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{69163570486FFF8A}" {
+      Name "Reset 100m"
+     }
+     ActionTitle "Reset300"
+     VisibilityRange 2
+     Duration 0.5
+     m_sTargetEntityName "zeroTarget_3"
+     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
+    }
+   }
+  }
+  RplComponent "{58FC7CAC2034C3E2}" {
+   Enabled 1
+  }
+ }
+ coords 6698.644 15.627 4198.992
 }

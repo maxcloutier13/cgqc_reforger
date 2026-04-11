@@ -1,0 +1,11 @@
+$grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+ {
+  coords 632.178 9.85 750.851
+ }
+ {
+  coords 632.178 9.588 741.895
+ }
+ {
+  coords 641.481 9.588 741.841
+ }
+}
