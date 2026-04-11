@@ -3,5 +3,29 @@ GenericEntity : "{D429FF7E2C336A37}PrefabsEditable/Auto/Compositions/Slotted/ARY
  components {
   CGQC_TargetHitComponent "{690618AE36FE042E}" {
   }
+  ActionsManagerComponent "{5D66ED1096104FD8}" {
+   ActionContexts {
+    UserActionContext "{69161BCE3CF43B13}" {
+     UIInfo UIInfo "{69161BCE22B5B80C}" {
+      Name "Reset"
+     }
+     ContextName "Reset"
+     Position PointInfo "{69161BCED9F09D21}" {
+     }
+    }
+   }
+   additionalActions {
+    CGQC_TargetSelfResetAction "{69161BCED7C78095}" {
+     ParentContextList {
+      "Reset"
+     }
+     UIInfo SCR_ActionUIInfo "{69161BCECACA1A88}" {
+      Name "Reset Target"
+     }
+     VisibilityRange 2
+     Duration 0.5
+    }
+   }
+  }
  }
 }

@@ -100,11 +100,7 @@ GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
  coords 6947.896 41.122 3940.967
  angles 0 -54.224 0
  {
-  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-   coords -1.007 0.947 -0.002
-   angles 0 144.48 0
-  }
-  GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+  GenericEntity {
    components {
     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
      m_eSupportedArsenalItemTypes 1
@@ -117,6 +113,10 @@ GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
    coords 0.524 0.949 0.065
    angles 0 0.274 0
   }
+  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+   coords -1.007 0.947 -0.002
+   angles 0 144.48 0
+  }
  }
 }
 GenericEntity : "{C5A9091473439963}Prefabs/Structures/BuildingParts/Doors/Door_Bunker_02/DoorSet_Bunker_02_A_LEFT_EXT_ST_B_camo.et" {
@@ -125,11 +125,6 @@ GenericEntity : "{C5A9091473439963}Prefabs/Structures/BuildingParts/Doors/Door_B
  {
   GenericEntity {
    ID "5A68D7E0EEF8D4C4"
-   components {
-    DoorComponent "{221C667A9F7D4B69}" {
-     i_doorLockChance 100
-    }
-   }
   }
  }
 }

@@ -1,0 +1,7 @@
+SCR_SpawnPoint : "{9FDC165DE3771D3C}PrefabsEditable/Auto/MP/Spawning/E_SpawnPoint_CGQC.et" {
+ ID "544EB04DCBFBD126"
+ m_sFaction "CGQC_UPO"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Icon "{571CB87D306C0A64}UI/Textures/Factions/cgqc_faction_newLogo_UPO_128.edds"
+ }
+}

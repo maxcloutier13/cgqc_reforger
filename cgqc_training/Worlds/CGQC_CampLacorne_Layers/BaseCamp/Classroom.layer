@@ -288,7 +288,7 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
    m_sEditorName "Camp de Base"
   }
  }
- coords 6944.226 41.122 3937.788
+ coords 6944.403 41.122 3937.843
  angles 0 -17.156 0
 }
 GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_02.et" {

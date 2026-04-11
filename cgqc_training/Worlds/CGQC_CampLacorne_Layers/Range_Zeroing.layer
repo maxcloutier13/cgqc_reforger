@@ -1,0 +1,33 @@
+SCR_DestructibleBuildingEntity : "{686B4C83AC940895}Prefabs/Structures/Infrastructure/Naval/Piers/PierConcrete_01_flat.et" {
+ coords 6695.475 -1.334 4198.172
+ angles 0 -180 0
+ scale 0.42
+}
+$grp GenericEntity : "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et" {
+ {
+  coords 6698.895 14.375 4298.733
+  angles 0 -179.472 0
+ }
+ {
+  coords 6698.103 14.375 4398.994
+  angles 0 -179.472 0
+ }
+ {
+  coords 6696.828 15.613 4498.562
+  angles 0 -179.472 0
+ }
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Range: Zeroing"
+  }
+ }
+ coords 6697.448 14.375 4195.49
+ angles 0 143.192 0
+}

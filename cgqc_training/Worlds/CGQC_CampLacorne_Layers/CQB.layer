@@ -1,3 +1,24 @@
+$grp GenericEntity {
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 5704.98 135 3037.121
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 5712.864 135 3045.667
+ }
+}
+SCR_SpawnPoint {
+ coords 6942.998 41.122 3936.66
+}
 Vehicle M151A2_transport6 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6566.277 14.375 4651.188
  angles 0 -91.241 0
@@ -15,11 +36,7 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
   coords 6562.853 14.375 4634.523
   angles 0 -89.915 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords -1.007 0.947 -0.002
-    angles 0 144.48 0
-   }
-   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+   GenericEntity {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
       m_eSupportedArsenalItemTypes 1
@@ -31,6 +48,10 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
     }
     coords 0.524 0.949 0.065
     angles 0 0.274 0
+   }
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
    }
   }
  }
@@ -38,11 +59,7 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
   coords 6617.825 14.375 4606.947
   angles 0 -1.657 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords -1.007 0.947 -0.002
-    angles 0 144.48 0
-   }
-   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+   GenericEntity {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
       m_eSupportedArsenalItemTypes 1
@@ -54,6 +71,10 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
     }
     coords 0.524 0.949 0.065
     angles 0 0.274 0
+   }
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
    }
   }
  }
@@ -71,24 +92,6 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  }
  coords 6559.827 14.375 4634.299
  angles 0 143.192 0
-}
-$grp GenericEntity : "{DD7AF7E3D6815F2C}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_CGQC_Simunition.et" {
- {
-  components {
-   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-    "faction affiliation" "CGQC"
-   }
-  }
-  coords 5704.98 135 3037.121
- }
- {
-  components {
-   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-    "faction affiliation" "CGQC"
-   }
-  }
-  coords 5712.864 135 3045.667
- }
 }
 GenericEntity : "{ECB8E313DFBD3416}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_Conflict_US_01.et" {
  coords 6563.853 14.375 4641.695
