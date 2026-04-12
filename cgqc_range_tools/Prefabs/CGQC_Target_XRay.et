@@ -1,0 +1,19 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  MeshObject "{6164BAFDFEF59A09}" {
+   Materials {
+    MaterialAssignClass "{691760DEBE5F8977}" {
+     SourceMaterial "PRP_Target"
+     AssignedMaterial "{4B3D2C971C2B872F}Textures/Target/Target1B.emat"
+    }
+   }
+  }
+  SCR_EditableEntityComponent "{6168C78EA5B8B40D}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{6168C78C54949280}" {
+    Name "USASOC XRay Target 3"
+    m_Image "{6F15A50F6E12CFD1}Textures/Preview Images/TargetPreview3.edds"
+   }
+  }
+ }
+}
