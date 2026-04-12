@@ -1,34 +1,46 @@
 // ============================================================
 // CGQC_RangeTools_TargetHitComponent.c
-//
-// Tracks projectile hits on an IPSC target.
-// Records: shooter playerID, impact velocity (m/s), distance (m),
-//          world-space hit position.
-//
-// Two user actions:
-//   Reset       - saves transform, deletes old entity, spawns fresh prefab
-//   Check Target - sends a hit-group report hint to the requesting player
-//
-// Fully server-authoritative. Hit logic, spawning, and report
-// building all run on authority. Hint delivery is RPC'd to the
-// requesting client's owned PlayerController component.
-//
-// ---- Prefab setup ----
-// On CGQC_Target_IPSC.et:
-//   1. Replace SCR_DamageManagerComponent with CGQC_RangeTools_TargetDamageManager
-//   2. Add CGQC_RangeTools_TargetHitComponent (set m_sPrefabPath to this .et)
-//   3. ActionsManagerComponent -> Additional Actions:
-//        CGQC_RangeTools_ResetTargetAction
-//        CGQC_RangeTools_CheckTargetAction
-//
-// On PlayerController.et (modded SCR_PlayerController):
-//   4. Add CGQC_RangeTools_PlayerReportComponent
 // ============================================================
 
 
 // ----------------------------------------------------------------
-// Static helper for reset - stores spawn parameters across the
-// entity deletion boundary (same pattern as CGQC_TargetMoverComponent)
+// BaseProjectileEffect - fires CLIENT-SIDE on every bullet hit.
+// Shows per-hit hint locally. No RPC needed.
+// ----------------------------------------------------------------
+class CGQC_RangeTools_TargetHitEffect : BaseProjectileEffect
+{
+	override void OnEffect(IEntity pHitEntity, inout vector outMat[3], IEntity damageSource, notnull Instigator instigator, string colliderName, float speed)
+	{
+		if (!pHitEntity)
+			return;
+
+		PlayerController pc = GetGame().GetPlayerController();
+		if (!pc)
+			return;
+
+		IEntity localPlayer = pc.GetControlledEntity();
+		if (!localPlayer || instigator.GetInstigatorEntity() != localPlayer)
+			return;
+
+		CGQC_RangeTools_TargetHitComponent hitComp =
+			CGQC_RangeTools_TargetHitComponent.Cast(pHitEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
+		if (!hitComp)
+			return;
+
+		float distance = vector.Distance(localPlayer.GetOrigin(), pHitEntity.GetOrigin()) - 1.0;
+		int distM  = (int)distance;
+		int velMs  = (int)speed;
+
+		// Local fallback hint - on dedi the server RPC handles this with correct zone data
+		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
+		if (hm)
+			hm.ShowCustomHint("Distance: " + distM.ToString() + "m\nVelocite: " + velMs.ToString() + " m/s", "Impact!", 2.5);
+	}
+}
+
+
+// ----------------------------------------------------------------
+// Static helper for reset
 // ----------------------------------------------------------------
 class CGQC_RangeTools_ResetHelper
 {
@@ -66,11 +78,11 @@ class CGQC_RangeTools_ResetHelper
 class CGQC_RangeTools_HitData
 {
 	int		m_iPlayerID;
-	float	m_fVelocity;	// m/s at impact
-	float	m_fDistance;	// metres from shooter to target at time of shot
-	vector	m_vWorldPos;	// world-space impact point
-	string	m_sZone;		// "A1", "A2", "C", "D", "M"
-	int		m_iPoints;		// IPSC points for this hit
+	float	m_fVelocity;
+	float	m_fDistance;
+	vector	m_vWorldPos;
+	string	m_sZone;
+	int		m_iPoints;
 
 	void CGQC_RangeTools_HitData(int pid, float vel, float dist, vector wpos, string zone, int points)
 	{
@@ -96,17 +108,11 @@ class CGQC_RangeTools_TargetHitComponentClass : ScriptComponentClass {}
 class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 {
 	[Attribute(defvalue: "", uiwidget: UIWidgets.ResourcePickerThumbnail,
-		desc: "Prefab to re-spawn on Reset - point to this target's own .et",
-		params: "et")]
+		desc: "Prefab to re-spawn on Reset", params: "et")]
 	protected ResourceName m_sPrefabPath;
 
-	[Attribute(defvalue: "20", uiwidget: UIWidgets.EditBox,
-		desc: "Maximum shots tracked before ignoring new ones")]
+	[Attribute(defvalue: "10", uiwidget: UIWidgets.EditBox, desc: "Maximum shots tracked")]
 	protected int m_iMaxHits;
-
-	// ---- Zone boundaries (local space, tunable in Workbench) ----
-	// All Y values are from entity origin (ground level at base center).
-	// X values are half-widths (symmetric around X=0).
 
 	[Attribute(defvalue: "0.105", uiwidget: UIWidgets.EditBox, desc: "A2 torso half-width (X)")]
 	protected float m_fAZoneHalfX;
@@ -126,27 +132,24 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	[Attribute(defvalue: "0.105", uiwidget: UIWidgets.EditBox, desc: "A1 head half-width (X)")]
 	protected float m_fAHeadHalfX;
 
-	// C upper - shoulders/neck (wide)
-	[Attribute(defvalue: "0.28", uiwidget: UIWidgets.EditBox, desc: "C upper half-width (X) - shoulder width")]
+	[Attribute(defvalue: "0.28", uiwidget: UIWidgets.EditBox, desc: "C upper half-width (X)")]
 	protected float m_fCZoneHalfX;
 
-	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C upper band bottom Y")]
+	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C upper bottom Y")]
 	protected float m_fCZoneYMin;
 
-	[Attribute(defvalue: "1.88", uiwidget: UIWidgets.EditBox, desc: "C upper band top Y")]
+	[Attribute(defvalue: "1.88", uiwidget: UIWidgets.EditBox, desc: "C upper top Y")]
 	protected float m_fCZoneYMax;
 
-	// C lower - waist/torso sides (narrow)
-	[Attribute(defvalue: "0.19", uiwidget: UIWidgets.EditBox, desc: "C lower half-width (X) - waist width")]
+	[Attribute(defvalue: "0.19", uiwidget: UIWidgets.EditBox, desc: "C lower half-width (X)")]
 	protected float m_fCLowerHalfX;
 
-	[Attribute(defvalue: "0.92", uiwidget: UIWidgets.EditBox, desc: "C lower band bottom Y")]
+	[Attribute(defvalue: "0.92", uiwidget: UIWidgets.EditBox, desc: "C lower bottom Y")]
 	protected float m_fCLowerYMin;
 
-	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C lower band top Y")]
+	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C lower top Y")]
 	protected float m_fCLowerYMax;
 
-	// D - brown flanking area
 	[Attribute(defvalue: "0.32", uiwidget: UIWidgets.EditBox, desc: "D zone half-width (X)")]
 	protected float m_fDZoneHalfX;
 
@@ -156,7 +159,6 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "D zone top Y")]
 	protected float m_fDZoneYMax;
 
-	// authority-only runtime state
 	protected ref array<ref CGQC_RangeTools_HitData> m_aHits = new array<ref CGQC_RangeTools_HitData>();
 	protected RplComponent m_RplComp;
 
@@ -164,66 +166,35 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	override void OnPostInit(IEntity owner)
 	{
 		super.OnPostInit(owner);
-
 		if (!GetGame().InPlayMode())
 			return;
-
 		m_RplComp = RplComponent.Cast(owner.FindComponent(RplComponent));
-		Print("[CGQC_TargetHit] OnPostInit | entity=" + owner.GetName()
-			+ " | IsProxy=" + (m_RplComp && m_RplComp.IsProxy()).ToString(), LogLevel.NORMAL);
+		Print("[CGQC_TargetHit] OnPostInit | IsProxy=" + (m_RplComp && m_RplComp.IsProxy()).ToString(), LogLevel.NORMAL);
 	}
 
-	// ----------------------------------------------------------------
 	protected bool IsAuthority()
 	{
 		return !m_RplComp || !m_RplComp.IsProxy();
 	}
 
 	// ----------------------------------------------------------------
-	// Called by GetOnDamage() invoker on the entity's damage manager.
-	// Runs on authority only (proxy guard inside).
+	// Accessors for BaseProjectileEffect (client-side, reads proxy data)
 	// ----------------------------------------------------------------
-	protected void OnDamageReceived(BaseDamageContext damageContext)
+	int GetLocalHitCount()
 	{
-		if (!IsAuthority())
-			return;
+		return m_aHits.Count();
+	}
 
-		if (!damageContext)
-			return;
-
-		// hitPosition and impactVelocity are direct fields on BaseDamageContext
-		vector impactPos = damageContext.hitPosition;
-		float velocity = damageContext.impactVelocity.Length();
-
-		// instigator is also a direct field
-		int playerID = -1;
-		Instigator instigator = damageContext.instigator;
-		if (instigator)
-		{
-			IEntity instigEnt = instigator.GetInstigatorEntity();
-			if (instigEnt)
-			{
-				playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(instigEnt);
-				if (playerID <= 0)
-				{
-					IEntity parent = instigEnt.GetParent();
-					if (parent)
-						playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(parent);
-				}
-			}
-		}
-
-		Print("[CGQC_TargetHit] OnDamageReceived | damage=" + damageContext.damageValue.ToString()
-			+ " | vel=" + velocity.ToString()
-			+ " | pid=" + playerID.ToString()
-			+ " | pos=" + impactPos.ToString(), LogLevel.NORMAL);
-
-		RegisterHit(playerID, velocity, impactPos);
+	int GetLocalTotalPoints()
+	{
+		int total = 0;
+		for (int i = 0; i < m_aHits.Count(); i++)
+			total += m_aHits[i].m_iPoints;
+		return total;
 	}
 
 	// ================================================================
-	// GetZone - classify a world-space hit position into A / C / D / M
-	// Projects hit into entity local space, checks against boundaries.
+	// GetZone
 	// ================================================================
 	string GetZone(vector worldHitPos)
 	{
@@ -231,71 +202,47 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		if (!owner)
 			return "M";
 
-		// Transform world position to entity local space
 		vector mat[4];
 		owner.GetWorldTransform(mat);
-
-		// Inverse transform: subtract origin, dot against axes
 		vector offset = worldHitPos - mat[3];
 		float localX = vector.Dot(offset, mat[0]);
 		float localY = vector.Dot(offset, mat[1]);
 
-		// A1 - head box
-		if (localY >= m_fAHeadYMin && localY <= m_fAHeadYMax
-			&& Math.AbsFloat(localX) <= m_fAHeadHalfX)
+		if (localY >= m_fAHeadYMin && localY <= m_fAHeadYMax && Math.AbsFloat(localX) <= m_fAHeadHalfX)
 			return "A1";
-
-		// A2 - torso box
-		if (localY >= m_fATorsoYMin && localY <= m_fATorsoYMax
-			&& Math.AbsFloat(localX) <= m_fAZoneHalfX)
+		if (localY >= m_fATorsoYMin && localY <= m_fATorsoYMax && Math.AbsFloat(localX) <= m_fAZoneHalfX)
 			return "A2";
-
-		// C upper - shoulders and above (wide)
-		if (localY >= m_fCZoneYMin && localY <= m_fCZoneYMax
-			&& Math.AbsFloat(localX) <= m_fCZoneHalfX)
+		if (localY >= m_fCZoneYMin && localY <= m_fCZoneYMax && Math.AbsFloat(localX) <= m_fCZoneHalfX)
 			return "C";
-
-		// C lower - waist/bottom of silhouette (narrow)
-		if (localY >= m_fCLowerYMin && localY <= m_fCLowerYMax
-			&& Math.AbsFloat(localX) <= m_fCLowerHalfX)
+		if (localY >= m_fCLowerYMin && localY <= m_fCLowerYMax && Math.AbsFloat(localX) <= m_fCLowerHalfX)
 			return "C";
-
-		// D - brown flanking area, wider than silhouette
-		if (localY >= m_fDZoneYMin && localY <= m_fDZoneYMax
-			&& Math.AbsFloat(localX) <= m_fDZoneHalfX)
+		if (localY >= m_fDZoneYMin && localY <= m_fDZoneYMax && Math.AbsFloat(localX) <= m_fDZoneHalfX)
 			return "D";
 
-		// Miss / off scored area
 		return "M";
 	}
 
 	// ================================================================
-	// GetZonePoints - standard IPSC points per zone
+	// GetZonePoints
 	// ================================================================
-	protected int GetZonePoints(string zone)
+	int GetZonePoints(string zone)
 	{
 		if (zone == "A1" || zone == "A2") return 5;
 		if (zone == "C") return 3;
 		if (zone == "D") return 1;
-		return 0; // M
+		return 0;
 	}
 
 	// ================================================================
-	// RegisterHit - called by OnDamageReceived or external damage manager
+	// RegisterHit - server only
 	// ================================================================
 	void RegisterHit(int playerID, float velocityMS, vector worldHitPos)
 	{
 		if (!IsAuthority())
-		{
-			Print("[CGQC_TargetHit] RegisterHit called on proxy - ignoring.", LogLevel.WARNING);
 			return;
-		}
 
 		if (m_aHits.Count() >= m_iMaxHits)
-		{
-			Print("[CGQC_TargetHit] Hit limit " + m_iMaxHits.ToString() + " reached - ignoring.", LogLevel.NORMAL);
 			return;
-		}
 
 		IEntity owner = GetOwner();
 		if (!owner)
@@ -307,58 +254,37 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			dist = vector.Distance(shooterChar.GetOrigin(), owner.GetOrigin());
 
 		string zone = GetZone(worldHitPos);
-
-		// DEBUG - remove once zones are calibrated
-		IEntity ownerDbg = GetOwner();
-		if (ownerDbg)
-		{
-			vector matDbg[4];
-			ownerDbg.GetWorldTransform(matDbg);
-			vector offsetDbg = worldHitPos - matDbg[3];
-			float lx = vector.Dot(offsetDbg, matDbg[0]);
-			float ly = vector.Dot(offsetDbg, matDbg[1]);
-			Print("[CGQC_Zone] localX=" + lx.ToString() + " localY=" + ly.ToString() + " zone=" + zone, LogLevel.NORMAL);
-		}
-
 		int points = GetZonePoints(zone);
 		m_aHits.Insert(new CGQC_RangeTools_HitData(playerID, velocityMS, dist, worldHitPos, zone, points));
 
 		int hitNum = m_aHits.Count();
-
-		// Compute running total
 		int totalPoints = 0;
 		for (int i = 0; i < hitNum; i++)
 			totalPoints += m_aHits[i].m_iPoints;
 
-		Print("[CGQC_TargetHit] Hit #" + hitNum.ToString()
-			+ " | pid=" + playerID.ToString()
-			+ " | vel=" + velocityMS.ToString()
-			+ " | dist=" + dist.ToString()
-			+ " | zone=" + zone
-			+ " | pts=" + points.ToString()
-			+ " | total=" + totalPoints.ToString(), LogLevel.NORMAL);
+		// Zone debug
+		vector matDbg[4];
+		owner.GetWorldTransform(matDbg);
+		vector offsetDbg = worldHitPos - matDbg[3];
+		float lx = vector.Dot(offsetDbg, matDbg[0]);
+		float ly = vector.Dot(offsetDbg, matDbg[1]);
+		Print("[CGQC_Zone] localX=" + lx.ToString() + " localY=" + ly.ToString() + " zone=" + zone, LogLevel.NORMAL);
+		Print("[CGQC_TargetHit] Hit #" + hitNum.ToString() + " | pid=" + playerID.ToString()
+			+ " | zone=" + zone + " | pts=" + points.ToString() + " | total=" + totalPoints.ToString(), LogLevel.NORMAL);
 
-		// Send per-hit hint to the shooter
-		PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(playerID);
-		if (pc)
+		// RPC hit hint to shooter
+		if (playerID > 0)
 		{
-			CGQC_RangeTools_PlayerReportComponent prc =
-				CGQC_RangeTools_PlayerReportComponent.Cast(pc.FindComponent(CGQC_RangeTools_PlayerReportComponent));
-			if (prc)
+			PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(playerID);
+			if (pc)
 			{
-				int velWhole = (int)velocityMS;
-				int velFrac  = (int)((velocityMS - velWhole) * 10.0);
-				if (velFrac < 0) velFrac = -velFrac;
-				int distRoundedHit = (int)dist;
-				string hitLine = "Distance: " + distRoundedHit.ToString() + "m";
-				hitLine = hitLine + "\nVelocite: " + velWhole.ToString() + "." + velFrac.ToString() + " m/s";
-				hitLine = hitLine + "\nZone: " + zone + " | " + points.ToString() + " pts";
-				hitLine = hitLine + "\nTotal: " + totalPoints.ToString() + "/" + (hitNum * 5).ToString() + " pts";
-
-				if (hitNum >= m_iMaxHits)
-					hitLine = hitLine + "\n- Cible pleine -";
-
-				prc.Rpc_ShowHitHint(hitLine, hitNum >= m_iMaxHits, hitNum);
+				SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
+				if (spc)
+				{
+					int distInt = (int)dist;
+					int velInt  = (int)velocityMS;
+					spc.CGQC_Rpc_ShowHitHint(hitNum, zone, points, totalPoints, distInt, velInt, hitNum >= m_iMaxHits);
+				}
 			}
 		}
 	}
@@ -366,13 +292,10 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	// ================================================================
 	// Server_Reset
 	// ================================================================
-	void Server_Reset()
+	void Server_Reset(int requestingPlayerID = -1)
 	{
 		if (!IsAuthority())
-		{
-			Print("[CGQC_TargetHit] Server_Reset called on proxy - ignoring.", LogLevel.WARNING);
 			return;
-		}
 
 		IEntity owner = GetOwner();
 		if (!owner)
@@ -382,27 +305,32 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 
 		if (m_sPrefabPath == string.Empty)
 		{
-			Print("[CGQC_TargetHit] Server_Reset: m_sPrefabPath not set - clearing hits only.", LogLevel.WARNING);
+			Print("[CGQC_TargetHit] Server_Reset: m_sPrefabPath not set.", LogLevel.WARNING);
 			m_aHits.Clear();
 			return;
 		}
 
-		// Store everything in static helper before delete - same pattern as CGQC_TargetMoverComponent
 		vector mat[4];
 		owner.GetWorldTransform(mat);
-
-		CGQC_RangeTools_ResetHelper.s_sPrefab     = m_sPrefabPath;
-		CGQC_RangeTools_ResetHelper.s_vTransform  = mat;
-
+		CGQC_RangeTools_ResetHelper.s_sPrefab    = m_sPrefabPath;
+		CGQC_RangeTools_ResetHelper.s_vTransform = mat;
 		m_aHits.Clear();
 
-		// Delete first, then spawn via CallLater - owner/this are gone after this line
+		// RPC reset hint before entity deletion
+		if (requestingPlayerID > 0)
+		{
+			PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(requestingPlayerID);
+			if (pc)
+			{
+				SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
+				if (spc)
+					spc.CGQC_Rpc_ShowResetHint();
+			}
+		}
+
 		SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		GetGame().GetCallqueue().CallLater(CGQC_RangeTools_ResetHelper.DoReset, 100, false);
 	}
-
-	// DeferredDelete no longer needed - kept as stub for safety
-	protected void DeferredDelete(IEntity ent) {}
 
 	// ================================================================
 	// Server_Check
@@ -410,80 +338,68 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	void Server_Check(int requestingPlayerID)
 	{
 		if (!IsAuthority())
-		{
-			Print("[CGQC_TargetHit] Server_Check called on proxy - ignoring.", LogLevel.WARNING);
 			return;
-		}
 
 		Print("[CGQC_TargetHit] Server_Check | pid=" + requestingPlayerID.ToString()
 			+ " | hits=" + m_aHits.Count().ToString(), LogLevel.NORMAL);
 
-		string reportText = BuildReport(requestingPlayerID);
+		string reportText  = BuildReport(requestingPlayerID);
 		string reportTitle = BuildReportTitle(requestingPlayerID);
 
 		PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(requestingPlayerID);
 		if (!pc)
 		{
-			Print("[CGQC_TargetHit] Server_Check: no PlayerController for pid " + requestingPlayerID.ToString(), LogLevel.ERROR);
+			Print("[CGQC_TargetHit] Server_Check: no PlayerController.", LogLevel.ERROR);
 			return;
 		}
 
-		CGQC_RangeTools_PlayerReportComponent prc =
-			CGQC_RangeTools_PlayerReportComponent.Cast(pc.FindComponent(CGQC_RangeTools_PlayerReportComponent));
-		if (!prc)
+		SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
+		if (!spc)
 		{
-			Print("[CGQC_TargetHit] Server_Check: CGQC_RangeTools_PlayerReportComponent not found on PlayerController "
-				+ "for pid " + requestingPlayerID.ToString()
-				+ " - add it to the PlayerController prefab.", LogLevel.ERROR);
+			Print("[CGQC_TargetHit] Server_Check: SCR_PlayerController cast failed.", LogLevel.ERROR);
 			return;
 		}
 
-		prc.Rpc_ShowTargetReport(reportText, reportTitle);
+		spc.CGQC_Rpc_ShowTargetReport(reportText, reportTitle);
 	}
 
 	// ================================================================
-	// BuildReportTitle — player | weapon | mag for hint title
+	// BuildReportTitle
 	// ================================================================
-	protected string BuildReportTitle(int requestingPlayerID)
+	protected string BuildReportTitle(int pid)
 	{
-		string playerName = GetGame().GetPlayerManager().GetPlayerName(requestingPlayerID);
+		string playerName = GetGame().GetPlayerManager().GetPlayerName(pid);
 		string weaponName = "Unknown";
 		string magName    = "Unknown";
 
-		IEntity shooterChar = GetCharacterForPlayer(requestingPlayerID);
-		if (shooterChar)
+		IEntity ch = GetCharacterForPlayer(pid);
+		if (ch)
 		{
-			BaseWeaponManagerComponent wm = BaseWeaponManagerComponent.Cast(shooterChar.FindComponent(BaseWeaponManagerComponent));
+			BaseWeaponManagerComponent wm = BaseWeaponManagerComponent.Cast(ch.FindComponent(BaseWeaponManagerComponent));
 			if (wm)
 			{
 				WeaponSlotComponent ws = wm.GetCurrentSlot();
 				if (ws)
 				{
-					IEntity weaponEnt = ws.GetWeaponEntity();
-					BaseWeaponComponent weaponComp = null;
-					if (weaponEnt)
-						weaponComp = BaseWeaponComponent.Cast(weaponEnt.FindComponent(BaseWeaponComponent));
-					if (weaponComp)
+					IEntity wEnt = ws.GetWeaponEntity();
+					BaseWeaponComponent wComp = null;
+					if (wEnt) wComp = BaseWeaponComponent.Cast(wEnt.FindComponent(BaseWeaponComponent));
+					if (wComp)
 					{
-						UIInfo wUI = weaponComp.GetUIInfo();
+						UIInfo wUI = wComp.GetUIInfo();
 						if (wUI) weaponName = wUI.GetName();
-
-						BaseMagazineComponent magComp = weaponComp.GetCurrentMagazine();
-						if (magComp)
+						BaseMagazineComponent mag = wComp.GetCurrentMagazine();
+						if (mag)
 						{
-							InventoryItemComponent mInv = InventoryItemComponent.Cast(magComp.GetOwner().FindComponent(InventoryItemComponent));
-							if (mInv)
-							{
-								UIInfo mUI = mInv.GetUIInfo();
-								if (mUI) magName = mUI.GetName();
-							}
+							InventoryItemComponent mInv = InventoryItemComponent.Cast(mag.GetOwner().FindComponent(InventoryItemComponent));
+							if (mInv) { UIInfo mUI = mInv.GetUIInfo(); if (mUI) magName = mUI.GetName(); }
 						}
 					}
 				}
 			}
 		}
 
-		return playerName + " | " + weaponName + " | " + magName;
+		return playerName + " | " + weaponName;
 	}
 
 	// ================================================================
@@ -492,65 +408,43 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	protected string BuildReport(int requestingPlayerID)
 	{
 		if (m_aHits.IsEmpty())
-		{
-			Print("[CGQC_TargetHit] BuildReport: no hits.", LogLevel.NORMAL);
-			return "CGQC Range Tools\nNo hits recorded on this target.";
-		}
+			return "Aucun impact enregistre.";
 
-		// Header uses last hit's player
-		int lastPID = m_aHits[m_aHits.Count() - 1].m_iPlayerID;
-		string playerName = GetGame().GetPlayerManager().GetPlayerName(lastPID);
-		string weaponName = "Unknown";
-		string magName    = "Unknown";
+		float shotDistM = m_aHits[0].m_fDistance;
+		int hitCount = m_aHits.Count();
 
-		IEntity shooterChar = GetCharacterForPlayer(lastPID);
-		if (shooterChar)
+		// Get mag name for first line
+		string magName = "Unknown";
+		IEntity ch = GetCharacterForPlayer(requestingPlayerID);
+		if (ch)
 		{
-			BaseWeaponManagerComponent wm =
-				BaseWeaponManagerComponent.Cast(shooterChar.FindComponent(BaseWeaponManagerComponent));
+			BaseWeaponManagerComponent wm = BaseWeaponManagerComponent.Cast(ch.FindComponent(BaseWeaponManagerComponent));
 			if (wm)
 			{
 				WeaponSlotComponent ws = wm.GetCurrentSlot();
 				if (ws)
 				{
-					IEntity weaponEnt = ws.GetWeaponEntity();
-					BaseWeaponComponent weaponComp = null;
-					if (weaponEnt)
-						weaponComp = BaseWeaponComponent.Cast(weaponEnt.FindComponent(BaseWeaponComponent));
-					if (weaponComp)
+					IEntity wEnt = ws.GetWeaponEntity();
+					BaseWeaponComponent wComp = null;
+					if (wEnt) wComp = BaseWeaponComponent.Cast(wEnt.FindComponent(BaseWeaponComponent));
+					if (wComp)
 					{
-						// GetUIInfo() is on BaseWeaponComponent directly
-						UIInfo wUI = weaponComp.GetUIInfo();
-						if (wUI) weaponName = wUI.GetName();
-
-						// GetCurrentMagazine() is also on BaseWeaponComponent directly
-						BaseMagazineComponent magComp = weaponComp.GetCurrentMagazine();
-						if (magComp)
+						BaseMagazineComponent mag = wComp.GetCurrentMagazine();
+						if (mag)
 						{
-							InventoryItemComponent mInv =
-								InventoryItemComponent.Cast(magComp.GetOwner().FindComponent(InventoryItemComponent));
-							if (mInv)
-							{
-								UIInfo mUI = mInv.GetUIInfo();
-								if (mUI) magName = mUI.GetName();
-							}
+							InventoryItemComponent mInv = InventoryItemComponent.Cast(mag.GetOwner().FindComponent(InventoryItemComponent));
+							if (mInv) { UIInfo mUI = mInv.GetUIInfo(); if (mUI) magName = mUI.GetName(); }
 						}
 					}
 				}
 			}
 		}
 
-		Print("[CGQC_TargetHit] BuildReport | player=" + playerName
-			+ " | weapon=" + weaponName + " | mag=" + magName, LogLevel.NORMAL);
-
-		float shotDistM = m_aHits[0].m_fDistance;
-
-		// Project hits onto target local right/up axes for group size
+		// Group size
 		IEntity owner = GetOwner();
 		vector targetRight = vector.Right;
 		vector targetUp    = vector.Up;
 		vector targetPos   = vector.Zero;
-
 		if (owner)
 		{
 			vector mat[4];
@@ -560,12 +454,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			targetPos   = mat[3];
 		}
 
-		float minR =  99999.0;
-		float maxR = -99999.0;
-		float minU =  99999.0;
-		float maxU = -99999.0;
-
-		int hitCount = m_aHits.Count();
+		float minR = 99999.0, maxR = -99999.0, minU = 99999.0, maxU = -99999.0;
 		for (int i = 0; i < hitCount; i++)
 		{
 			vector offset = m_aHits[i].m_vWorldPos - targetPos;
@@ -577,89 +466,65 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			if (u > maxU) maxU = u;
 		}
 
-		float groupW  = maxR - minR;
-		float groupH  = maxU - minU;
-		float groupM  = Math.Sqrt(groupW * groupW + groupH * groupH);
+		float groupM  = Math.Sqrt((maxR - minR) * (maxR - minR) + (maxU - minU) * (maxU - minU));
 		float groupIn = groupM * 39.3701;
-
+		float groupCm = groupM * 100.0;
 		float moaValue = 0.0;
 		if (shotDistM > 0.1)
 		{
 			float distYards = shotDistM / 0.9144;
-			if (distYards > 0.0)
-				moaValue = (groupIn / distYards) * 100.0;
+			if (distYards > 0.0) moaValue = (groupIn / distYards) * 100.0;
 		}
 
-		Print("[CGQC_TargetHit] BuildReport | dist=" + shotDistM.ToString()
-			+ " | groupM=" + groupM.ToString()
-			+ " | groupIn=" + groupIn.ToString()
-			+ " | MOA=" + moaValue.ToString(), LogLevel.NORMAL);
-
-		// Assemble report string
-		int distRounded = (int)shotDistM;
-		string nl = "\n";
-		string sep = "--------------------------------" + nl;
-
-		// System date/time
-		int year, month, day, hour, minute, second;
-		System.GetHourMinuteSecond(hour, minute, second);
-		System.GetYearMonthDay(year, month, day);
-		string yy = (year % 100).ToString();
-		if (year % 100 < 10) yy = "0" + yy;
-		string mm = month.ToString();
-		if (month < 10) mm = "0" + mm;
-		string dd = day.ToString();
-		if (day < 10) dd = "0" + dd;
-		string hh = hour.ToString();
-		if (hour < 10) hh = "0" + hh;
-		string mn = minute.ToString();
-		if (minute < 10) mn = "0" + mn;
-		string datetime = yy + mm + dd + " - " + hh + ":" + mn + " - Dist: " + distRounded.ToString() + "m";
-
 		// Chrono stats
-		float velSum = 0;
-		float velMin = 999999.0;
-		float velMax = 0.0;
+		float velSum = 0, velMin = 999999.0, velMax = 0.0;
+		int totalScore = 0;
 		for (int i = 0; i < hitCount; i++)
 		{
 			float v = m_aHits[i].m_fVelocity;
 			velSum = velSum + v;
 			if (v < velMin) velMin = v;
 			if (v > velMax) velMax = v;
+			totalScore += m_aHits[i].m_iPoints;
 		}
-		float velAvg = velSum / hitCount;
+		float velAvg  = velSum / hitCount;
 		int velAvgMs  = (int)velAvg;
 		int velAvgFts = (int)(velAvg * 3.28084);
 		int velMinMs  = (int)velMin;
 		int velMaxMs  = (int)velMax;
 		int extSpread = velMaxMs - velMinMs;
-
-		// Standard deviation
 		float variance = 0;
 		for (int i = 0; i < hitCount; i++)
 		{
-			float diff = m_aHits[i].m_fVelocity - velAvg;
-			variance = variance + diff * diff;
+			float dv = m_aHits[i].m_fVelocity - velAvg;
+			variance = variance + dv * dv;
 		}
 		int stdDev = (int)Math.Sqrt(variance / hitCount);
 
-		// Group in cm
-		float groupCm = groupM * 100.0;
+		// Date/time
+		int year, month, day, hour, minute, second;
+		System.GetHourMinuteSecond(hour, minute, second);
+		System.GetYearMonthDay(year, month, day);
+		string yy = (year % 100).ToString(); if (year % 100 < 10) yy = "0" + yy;
+		string mm = month.ToString();        if (month < 10)       mm = "0" + mm;
+		string dd = day.ToString();          if (day < 10)         dd = "0" + dd;
+		string hh = hour.ToString();         if (hour < 10)        hh = "0" + hh;
+		string mn = minute.ToString();       if (minute < 10)      mn = "0" + mn;
+		int distRounded = (int)shotDistM;
+		string datetime = yy + mm + dd + " - " + hh + ":" + mn + " - Dist: " + distRounded.ToString() + "m";
 
-		// Total score
-		int totalScore = 0;
-		for (int i = 0; i < hitCount; i++)
-			totalScore += m_aHits[i].m_iPoints;
+		string nl  = "\n";
+		string sep = "--------------------------------" + nl;
 
-		string reportText = datetime + nl;
-		reportText = reportText + sep;
-		reportText = reportText + "Groupe: " + FloatStr(groupIn, 2) + " in | " + FloatStr(groupCm, 2) + " cm | " + FloatStr(moaValue, 2) + " MOA" + nl;
-		reportText = reportText + "Score: " + totalScore.ToString() + " / " + (hitCount * 5).ToString() + " pts" + nl;
-		reportText = reportText + sep;
+		string r = datetime + nl;
+		r = r + magName + nl;
+		r = r + sep;
+		r = r + "Groupe: " + FloatStr(groupIn, 2) + " in | " + FloatStr(groupCm, 2) + " cm | " + FloatStr(moaValue, 2) + " MOA" + nl;
+		r = r + "Score: " + totalScore.ToString() + " / " + (hitCount * 5).ToString() + " pts" + nl;
+		r = r + sep;
 
 		int maxShow = hitCount;
-		if (maxShow > 10)
-			maxShow = 10;
+		if (maxShow > 10) maxShow = 10;
 
 		for (int i = 0; i < maxShow; i++)
 		{
@@ -668,44 +533,24 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			int velWhole = (int)h.m_fVelocity;
 			int distM    = (int)h.m_fDistance;
 
-			// Pad shot number
 			string numStr = shotNum.ToString();
 			if (shotNum < 10) numStr = " " + numStr;
 
-			// Pad zone
-			string zoneStr = h.m_sZone;
-			if (zoneStr.Length() < 2) zoneStr = " " + zoneStr;
-
-			// Pad distance
-			string distStr = distM.ToString() + "m";
-			if (distM < 10) distStr = "  " + distStr;
-			else if (distM < 100) distStr = " " + distStr;
-
-			// Pad velocity
-			string velStr = velWhole.ToString() + " m/s";
-			if (velWhole < 100) velStr = "  " + velStr;
-			else if (velWhole < 1000) velStr = " " + velStr;
-
-			// Pad points
-			string ptsStr = h.m_iPoints.ToString() + " pts";
-			if (h.m_iPoints < 10) ptsStr = " " + ptsStr;
-
-			reportText = reportText + numStr + "  " + zoneStr + "   " + distStr + "   " + velStr + "   " + ptsStr + nl;
+			r = r + numStr + ". " + h.m_sZone + " - " + distM.ToString() + "m - " + velWhole.ToString() + " m/s - " + h.m_iPoints.ToString() + " pts" + nl;
 		}
 
 		if (hitCount > maxShow)
 		{
 			int remaining = hitCount - maxShow;
-			reportText = reportText + "(+" + remaining.ToString() + " more)" + nl;
+			r = r + "(+" + remaining.ToString() + " more)" + nl;
 		}
 
-		// Chrono footer
-		reportText = reportText + sep;
-		reportText = reportText + hitCount.ToString() + " tirs  | Vel. Moy: " + velAvgMs.ToString() + " m/s | " + velAvgFts.ToString() + " ft/s" + nl;
-		reportText = reportText + "Min: " + velMinMs.ToString() + " m/s | Max: " + velMaxMs.ToString() + " m/s" + nl;
-		reportText = reportText + "Spread: " + extSpread.ToString() + " m/s | Ecart type: " + stdDev.ToString() + " m/s" + nl;
+		r = r + sep;
+		r = r + hitCount.ToString() + " tirs  | Vel. Moy: " + velAvgMs.ToString() + " m/s | " + velAvgFts.ToString() + " ft/s" + nl;
+		r = r + "Min: " + velMinMs.ToString() + " m/s | Max: " + velMaxMs.ToString() + " m/s" + nl;
+		r = r + "Spread: " + extSpread.ToString() + " m/s | Ecart type: " + stdDev.ToString() + " m/s" + nl;
 
-		return reportText;
+		return r;
 	}
 
 	// ================================================================
@@ -717,39 +562,23 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		return GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 	}
 
-	// Float to N decimal places without chaining on return value
 	protected string FloatStr(float v, int decimals)
 	{
 		int whole = (int)v;
 		float factor = 1.0;
 		int d = decimals;
-		while (d > 0)
-		{
-			factor = factor * 10.0;
-			d--;
-		}
+		while (d > 0) { factor = factor * 10.0; d--; }
 		int frac = (int)((v - whole) * factor);
 		if (frac < 0) frac = -frac;
 		string fracStr = frac.ToString();
-		while (fracStr.Length() < decimals)
-			fracStr = "0" + fracStr;
+		while (fracStr.Length() < decimals) fracStr = "0" + fracStr;
 		return whole.ToString() + "." + fracStr;
-	}
-
-	protected string VecStr(vector v)
-	{
-		int x = (int)v[0];
-		int y = (int)v[1];
-		int z = (int)v[2];
-		return "(" + x.ToString() + ", " + y.ToString() + ", " + z.ToString() + ")";
 	}
 }
 
 
 // ============================================================
-// Damage manager
-// Replaces SCR_DamageManagerComponent on the target prefab.
-// Subscribes to the damage started invoker to capture bullet hits.
+// Damage manager - server-side hit tracking only
 // ============================================================
 class CGQC_RangeTools_TargetDamageManagerClass : SCR_DamageManagerComponentClass {}
 
@@ -758,21 +587,17 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 	override void OnPostInit(IEntity owner)
 	{
 		super.OnPostInit(owner);
-		if (!GetGame().InPlayMode())
-			return;
+		if (!GetGame().InPlayMode()) return;
 		Print("[CGQC_TargetDmg] OnPostInit on: " + owner.GetName(), LogLevel.NORMAL);
 	}
 
-	// Override OnDamage - called during damage processing, context fully populated
 	override protected void OnDamage(notnull BaseDamageContext damageContext)
 	{
 		super.OnDamage(damageContext);
 
 		RplComponent rpl = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
-		if (rpl && rpl.IsProxy())
-			return;
+		if (rpl && rpl.IsProxy()) return;
 
-		// hitPosition and impactVelocity are live here
 		vector impactPos = damageContext.hitPosition;
 		float velocity   = damageContext.impactVelocity.Length();
 
@@ -787,27 +612,25 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 				if (playerID <= 0)
 				{
 					IEntity parent = instigEnt.GetParent();
-					if (parent)
-						playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(parent);
+					if (parent) playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(parent);
 				}
 			}
 		}
 
-		Print("[CGQC_TargetDmg] OnDamage | vel=" + velocity.ToString()
-			+ " | pid=" + playerID.ToString()
-			+ " | pos=" + impactPos.ToString(), LogLevel.NORMAL);
+		Print("[CGQC_TargetDmg] OnDamage | vel=" + velocity.ToString() + " | pid=" + playerID.ToString(), LogLevel.NORMAL);
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (hitComp)
 			hitComp.RegisterHit(playerID, velocity, impactPos);
 		else
-			Print("[CGQC_TargetDmg] TargetHitComponent not found on owner!", LogLevel.ERROR);
+			Print("[CGQC_TargetDmg] TargetHitComponent not found!", LogLevel.ERROR);
 	}
 }
 
+
 // ============================================================
-// User action: Reset Target
+// User action: Reset
 // ============================================================
 class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 {
@@ -815,24 +638,19 @@ class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 	{
 		Print("[CGQC_ResetAction] PerformAction called.", LogLevel.NORMAL);
 
-		// Only execute on authority - the action system calls PerformAction on the server
-		// when HasLocalEffectOnlyScript returns false
 		if (!Replication.IsServer())
-		{
-			Print("[CGQC_ResetAction] Not server - skipping.", LogLevel.WARNING);
 			return;
-		}
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (!hitComp)
 		{
-			Print("[CGQC_ResetAction] TargetHitComponent not found on owner!", LogLevel.ERROR);
+			Print("[CGQC_ResetAction] TargetHitComponent not found!", LogLevel.ERROR);
 			return;
 		}
 
-		Print("[CGQC_ResetAction] Calling Server_Reset.", LogLevel.NORMAL);
-		hitComp.Server_Reset();
+		int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
+		hitComp.Server_Reset(pid);
 	}
 
 	override bool CanBeShownScript(IEntity user)     { return true; }
@@ -842,7 +660,7 @@ class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 
 
 // ============================================================
-// User action: Check Target
+// User action: Check
 // ============================================================
 class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 {
@@ -850,12 +668,8 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 	{
 		Print("[CGQC_CheckAction] PerformAction called.", LogLevel.NORMAL);
 
-		// PerformAction runs on server when HasLocalEffectOnlyScript = false
 		if (!Replication.IsServer())
-		{
-			Print("[CGQC_CheckAction] Not server - skipping.", LogLevel.WARNING);
 			return;
-		}
 
 		int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
 		if (pid <= 0)
@@ -868,11 +682,10 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (!hitComp)
 		{
-			Print("[CGQC_CheckAction] TargetHitComponent not found on owner!", LogLevel.ERROR);
+			Print("[CGQC_CheckAction] TargetHitComponent not found!", LogLevel.ERROR);
 			return;
 		}
 
-		Print("[CGQC_CheckAction] pid=" + pid.ToString() + " | calling Server_Check.", LogLevel.NORMAL);
 		hitComp.Server_Check(pid);
 	}
 
@@ -883,106 +696,38 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 
 
 // ============================================================
-// PlayerReportComponent
-// Plain ScriptComponent on the PlayerController entity.
-// Carries client->server and server->owner RPCs for this system.
+// Modded SCR_PlayerController - adds range tools RPCs
+// Inherits replication from SCR_PlayerController so
+// RplRcver.Owner routes correctly to the owning client.
 // ============================================================
-class CGQC_RangeTools_PlayerReportComponentClass : ScriptComponentClass {}
-
-class CGQC_RangeTools_PlayerReportComponent : ScriptComponent
+modded class SCR_PlayerController
 {
-	override void OnPostInit(IEntity owner)
-	{
-		super.OnPostInit(owner);
-		if (!GetGame().InPlayMode())
-			return;
-		Print("[CGQC_PlayerReport] Attached to: " + owner.GetName(), LogLevel.NORMAL);
-	}
-
-	// ---- Client -> Server: reset ----
-	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_ResetTarget(RplId targetId)
-	{
-		Print("[CGQC_PlayerReport] RpcAsk_ResetTarget received on server.", LogLevel.NORMAL);
-
-		IEntity targetEnt = IEntity.Cast(Replication.FindItem(targetId));
-		if (!targetEnt)
-		{
-			Print("[CGQC_PlayerReport] RpcAsk_ResetTarget: entity not found for RplId.", LogLevel.ERROR);
-			return;
-		}
-
-		CGQC_RangeTools_TargetHitComponent hitComp =
-			CGQC_RangeTools_TargetHitComponent.Cast(targetEnt.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp)
-		{
-			Print("[CGQC_PlayerReport] RpcAsk_ResetTarget: no TargetHitComponent on entity.", LogLevel.ERROR);
-			return;
-		}
-		hitComp.Server_Reset();
-	}
-
-	// ---- Client -> Server: check ----
-	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_CheckTarget(RplId targetId)
-	{
-		Print("[CGQC_PlayerReport] RpcAsk_CheckTarget received on server.", LogLevel.NORMAL);
-
-		IEntity targetEnt = IEntity.Cast(Replication.FindItem(targetId));
-		if (!targetEnt)
-		{
-			Print("[CGQC_PlayerReport] RpcAsk_CheckTarget: entity not found.", LogLevel.ERROR);
-			return;
-		}
-
-		CGQC_RangeTools_TargetHitComponent hitComp =
-			CGQC_RangeTools_TargetHitComponent.Cast(targetEnt.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp)
-		{
-			Print("[CGQC_PlayerReport] RpcAsk_CheckTarget: no TargetHitComponent on entity.", LogLevel.ERROR);
-			return;
-		}
-
-		int pid = -1;
-		PlayerController pc = PlayerController.Cast(GetOwner());
-		if (pc)
-		{
-			IEntity controlled = pc.GetControlledEntity();
-			if (controlled)
-				pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(controlled);
-		}
-
-		Print("[CGQC_PlayerReport] RpcAsk_CheckTarget: resolved pid=" + pid.ToString(), LogLevel.NORMAL);
-
-		if (pid > 0)
-			hitComp.Server_Check(pid);
-	}
-
-	// ---- Server -> Owner client: show hint ----
+	// ---- Server -> Owner: Check report ----
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
-	void Rpc_ShowTargetReport(string reportText, string reportTitle)
+	void CGQC_Rpc_ShowTargetReport(string reportText, string reportTitle)
 	{
-		Print("[CGQC_PlayerReport] Rpc_ShowTargetReport received on client.", LogLevel.NORMAL);
-
+		Print("[CGQC_PlayerReport] CGQC_Rpc_ShowTargetReport received.", LogLevel.NORMAL);
 		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (!hm)
-		{
-			Print("[CGQC_PlayerReport] SCR_HintManagerComponent.GetInstance() returned NULL on client!", LogLevel.ERROR);
-			return;
-		}
-		Print("[CGQC_PlayerReport] Showing hint, title=" + reportTitle, LogLevel.NORMAL);
+		if (!hm) { Print("[CGQC_PlayerReport] HintManager NULL!", LogLevel.ERROR); return; }
 		hm.ShowCustomHint(reportText, reportTitle, 15.0);
 	}
 
+	// ---- Server -> Owner: Reset confirmation ----
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
-	void Rpc_ShowHitHint(string hitText, bool isFull, int hitNum)
+	void CGQC_Rpc_ShowResetHint()
 	{
 		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (!hm)
-		{
-			Print("[CGQC_PlayerReport] Rpc_ShowHitHint: SCR_HintManagerComponent.GetInstance() returned NULL!", LogLevel.ERROR);
-			return;
-		}
+		if (!hm) return;
+		hm.ShowCustomHint("Cible remise a zero.", "Reset", 2.5);
+	}
+
+	// ---- Server -> Owner: per-hit hint ----
+	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
+	void CGQC_Rpc_ShowHitHint(int hitNum, string zone, int points, int totalPoints, int distM, int velMs, bool isFull)
+	{
+		Print("[CGQC_PlayerReport] CGQC_Rpc_ShowHitHint received | zone=" + zone, LogLevel.WARNING);
+		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
+		if (!hm) return;
 
 		string title;
 		float duration;
@@ -996,6 +741,12 @@ class CGQC_RangeTools_PlayerReportComponent : ScriptComponent
 			title = "Impact! Hit " + hitNum.ToString();
 			duration = 2.5;
 		}
-		hm.ShowCustomHint(hitText, title, duration);
+
+		string body = "Distance: " + distM.ToString() + "m";
+		body = body + "\nVelocite: " + velMs.ToString() + " m/s";
+		body = body + "\nZone: " + zone + " | " + points.ToString() + " pts";
+		body = body + "\nTotal: " + totalPoints.ToString() + "/" + (hitNum * 5).ToString() + " pts";
+
+		hm.ShowCustomHint(body, title, duration);
 	}
 }

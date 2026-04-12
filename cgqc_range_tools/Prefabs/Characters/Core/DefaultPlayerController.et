@@ -1,7 +1,0 @@
-SCR_PlayerController {
- ID "1A9BA6BEFA06E3B1"
- components {
-  CGQC_RangeTools_PlayerReportComponent "{691760C19A1FE292}" {
-  }
- }
-}
