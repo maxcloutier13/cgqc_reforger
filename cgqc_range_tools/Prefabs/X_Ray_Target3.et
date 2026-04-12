@@ -1,0 +1,30 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  CGQC_RangeTools_TargetHitComponent "{69192EAEFF222966}" {
+   m_sPrefabPath "{5904B087762001F8}Prefabs/X_Ray_Target3.et"
+  }
+  ActionsManagerComponent "{69192EAEEA22E4A2}" {
+   ActionContexts {
+    UserActionContext "{69192EAEED2D5A02}" {
+     ContextName "Default"
+     Position PointInfo "{69192EAEE1701583}" {
+      Offset 0 0.8979 0.0163
+     }
+    }
+   }
+   additionalActions {
+    CGQC_RangeTools_ResetTargetAction "{69192EAE92462116}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{69192EAE88F2B175}" {
+      Name "Reset"
+     }
+     VisibilityRange 2
+     Duration 0.5
+    }
+   }
+  }
+ }
+}

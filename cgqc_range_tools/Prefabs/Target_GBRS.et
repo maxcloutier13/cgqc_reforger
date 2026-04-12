@@ -1,0 +1,30 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  CGQC_RangeTools_TargetHitComponent "{69192EAEB95E446B}" {
+   m_sPrefabPath "{2F07DA20B367A266}Prefabs/Target_GBRS.et"
+  }
+  ActionsManagerComponent "{69192EAE3911E60E}" {
+   ActionContexts {
+    UserActionContext "{69192EAE385E252C}" {
+     ContextName "Default"
+     Position PointInfo "{69192EAE3E2EBA9C}" {
+      Offset 0 0.9065 0
+     }
+    }
+   }
+   additionalActions {
+    CGQC_RangeTools_ResetTargetAction "{69192EAE2196FA6D}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{69192EAE254EFF9F}" {
+      Name "Reset"
+     }
+     VisibilityRange 2
+     Duration 0.5
+    }
+   }
+  }
+ }
+}

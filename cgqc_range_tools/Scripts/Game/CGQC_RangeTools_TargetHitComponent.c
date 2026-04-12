@@ -150,7 +150,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C lower top Y")]
 	protected float m_fCLowerYMax;
 
-	[Attribute(defvalue: "0.32", uiwidget: UIWidgets.EditBox, desc: "D zone half-width (X)")]
+	[Attribute(defvalue: "0.26", uiwidget: UIWidgets.EditBox, desc: "D zone half-width (X)")]
 	protected float m_fDZoneHalfX;
 
 	[Attribute(defvalue: "0.92", uiwidget: UIWidgets.EditBox, desc: "D zone bottom Y")]
@@ -280,6 +280,11 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		Print("[CGQC_Zone] localX=" + lx.ToString() + " localY=" + ly.ToString() + " zone=" + zone, LogLevel.NORMAL);
 		Print("[CGQC_TargetHit] Hit #" + hitNum.ToString() + " | pid=" + playerID.ToString()
 			+ " | zone=" + zone + " | pts=" + points.ToString() + " | total=" + totalPoints.ToString(), LogLevel.NORMAL);
+
+		// Rebuild replicated report so client can read it immediately on Check
+		m_sLastReport      = BuildReport(playerID);
+		m_sLastReportTitle = BuildReportTitle(playerID);
+		Replication.BumpMe();
 
 		// RPC hit hint to shooter
 		if (playerID > 0)
