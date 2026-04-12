@@ -100,19 +100,6 @@ GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
  coords 6947.896 41.122 3940.967
  angles 0 -54.224 0
  {
-  GenericEntity {
-   components {
-    SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-     m_eSupportedArsenalItemTypes 1
-     m_eSupportedArsenalItemModes 254
-    }
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "CGQC"
-    }
-   }
-   coords 0.524 0.949 0.065
-   angles 0 0.274 0
-  }
   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
    coords -1.007 0.947 -0.002
    angles 0 144.48 0

@@ -45,48 +45,6 @@ GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/Li
      }
     }
    }
-   additionalActions {
-    CGQC_TargetHitResetAction "{69163571848A0E78}" {
-     ParentContextList {
-      "Default"
-     }
-     UIInfo SCR_ActionUIInfo "{69163571BC775475}" {
-      Name "Reset 100m"
-     }
-     ActionTitle "Reset100"
-     VisibilityRange 2
-     Duration 0.5
-     m_sTargetEntityName "zeroTarget_1"
-     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
-    }
-    CGQC_TargetHitResetAction "{691635704997A7F5}" {
-     ParentContextList {
-      "Default"
-     }
-     UIInfo SCR_ActionUIInfo "{691635704997A722}" {
-      Name "Reset 100m"
-     }
-     ActionTitle "Reset200"
-     VisibilityRange 2
-     Duration 0.5
-     "Sort Priority" 1
-     m_sTargetEntityName "zeroTarget_2"
-     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
-    }
-    CGQC_TargetHitResetAction "{69163570486FFE36}" {
-     ParentContextList {
-      "Default"
-     }
-     UIInfo SCR_ActionUIInfo "{69163570486FFF8A}" {
-      Name "Reset 100m"
-     }
-     ActionTitle "Reset300"
-     VisibilityRange 2
-     Duration 0.5
-     m_sTargetEntityName "zeroTarget_3"
-     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
-    }
-   }
   }
   RplComponent "{58FC7CAC2034C3E2}" {
    Enabled 1

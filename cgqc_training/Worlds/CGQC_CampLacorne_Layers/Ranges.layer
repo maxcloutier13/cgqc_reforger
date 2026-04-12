@@ -44,10 +44,6 @@ Vehicle Motorbike_US9 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Mo
  coords 3707.612 2.625 3155.009
  angles 0 -169.51 0
 }
-GenericEntity : "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et" {
- coords 6941.928 41.122 3934.982
- angles 0 -143.209 0
-}
 $grp GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  {
   components {

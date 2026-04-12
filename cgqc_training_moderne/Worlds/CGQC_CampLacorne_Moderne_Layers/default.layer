@@ -1,23 +1,151 @@
-GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
- coords 6942.602 41.122 3934.318
- angles 0 -144.48 0
+$grp GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
  {
-  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-   coords -1.007 0.947 -0.002
-   angles 0 144.48 0
-  }
-  GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
-   components {
-    SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-     m_eSupportedArsenalItemTypes 1
-     m_eSupportedArsenalItemModes 254
-    }
-    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-     "faction affiliation" "CGQC"
-    }
+  components {
+   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+    m_eSupportedArsenalItemTypes 129
+    m_eSupportedArsenalItemModes 254
    }
-   coords 0.524 0.949 0.065
-   angles 0 0.274 0
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 6948.209 42.069 3941.485
+  angles 0 -54.036 0
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+    m_eSupportedArsenalItemTypes 129
+    m_eSupportedArsenalItemModes 254
+   }
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 5201.137 292.412 1806.485
+  angles 0 45.153 0
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+    m_eSupportedArsenalItemTypes 129
+    m_eSupportedArsenalItemModes 254
+   }
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 6562.821 15.324 4635.021
+  angles 0 -89.324 0
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+    m_eSupportedArsenalItemTypes 129
+    m_eSupportedArsenalItemModes 254
+   }
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 6618.186 15.324 4607.015
+  angles 0 0.274 0
+ }
+}
+SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+ coords 6942.247 41.122 3936.825
+}
+$grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
+ {
+  coords 6942.602 41.122 3934.318
+  angles 0 -144.48 0
+  {
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    components {
+     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+      m_eSupportedArsenalItemTypes 129
+      m_eSupportedArsenalItemModes 254
+     }
+     SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 0.524 0.949 0.065
+    angles 0 0.274 0
+   }
+  }
+ }
+ {
+  coords 6350.005 60.781 4528.086
+  angles 0 -175.182 0
+  {
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    components {
+     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+      m_eSupportedArsenalItemTypes 129
+      m_eSupportedArsenalItemModes 254
+     }
+     SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 0.524 0.949 0.065
+    angles 0 0.274 0
+   }
+  }
+ }
+ {
+  coords 6851.381 14.897 4176.83
+  angles 0 130.59 0
+  {
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    components {
+     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+      m_eSupportedArsenalItemTypes 129
+      m_eSupportedArsenalItemModes 254
+     }
+     SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 0.524 0.949 0.065
+    angles 0 0.274 0
+   }
+  }
+ }
+ {
+  coords 6777.758 14.375 4195.681
+  angles 0 179.15 0
+  {
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    components {
+     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+      m_eSupportedArsenalItemTypes 129
+      m_eSupportedArsenalItemModes 254
+     }
+     SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 0.524 0.949 0.065
+    angles 0 0.274 0
+   }
   }
  }
 }

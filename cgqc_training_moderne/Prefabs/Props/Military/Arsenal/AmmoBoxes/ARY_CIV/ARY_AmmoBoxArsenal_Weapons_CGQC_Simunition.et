@@ -8,11 +8,11 @@ GenericEntity : "{CCFA1D2A74D3F13E}Prefabs/Props/Military/Arsenal/AmmoBoxes/Ammo
    ResponseIndex "SmallDestructible"
   }
   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-   m_eSupportedArsenalItemTypes 1
+   m_eSupportedArsenalItemTypes 4391553
    m_eArsenalSaveType NO_RESTRICTIONS
   }
   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
-   "faction affiliation" "CIV"
+   "faction affiliation" "CGQC"
   }
   UniversalInventoryStorageComponent "{58A17A341AB8F069}" {
    Attributes SCR_ItemAttributeCollection "{58A17A346E386320}" {
