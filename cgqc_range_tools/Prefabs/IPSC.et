@@ -19,7 +19,7 @@ GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
     UserActionContext "{691760C1ACF3C98D}" {
      ContextName "Default"
      Position PointInfo "{691760C1A3B8D8AD}" {
-      Offset 0 1.3949 0
+      Offset 0 0.9108 0
      }
     }
    }

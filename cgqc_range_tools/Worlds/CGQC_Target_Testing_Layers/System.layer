@@ -1,0 +1,32 @@
+SCR_BaseGameMode GameMode_Plain1 : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
+ components {
+  SCR_GameModeHUDComponent "{69183823CB7CB59B}" {
+   m_sLayout "{EA1CC57D868E94F9}UI/layouts/HUD/Hint/Hint.layout"
+  }
+  SCR_HintManagerComponent "{5702B54C6CBC9D7F}" {
+   m_bIgnoreHintSettings 1
+  }
+ }
+ coords 128.247 1 130.595
+}
+SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 127.057 1 130.59
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   UnitType Infantry
+  }
+ }
+ coords 129 1 129
+ angles 0 180 0
+}
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 128.895 1 131.168
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{691832E3DDAE597F}" {
+   m_sLoadoutResource "{0F6689B491641155}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Sniper.et"
+   m_sAffiliatedFaction "US"
+  }
+ }
+}
