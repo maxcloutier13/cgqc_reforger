@@ -162,6 +162,12 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	protected ref array<ref CGQC_RangeTools_HitData> m_aHits = new array<ref CGQC_RangeTools_HitData>();
 	protected RplComponent m_RplComp;
 
+	[RplProp()]
+	protected string m_sLastReport = string.Empty;
+
+	[RplProp()]
+	protected string m_sLastReportTitle = string.Empty;
+
 	// ----------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
@@ -192,6 +198,9 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			total += m_aHits[i].m_iPoints;
 		return total;
 	}
+
+	string GetLastReport()      { return m_sLastReport; }
+	string GetLastReportTitle() { return m_sLastReportTitle; }
 
 	// ================================================================
 	// GetZone
@@ -343,8 +352,9 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		Print("[CGQC_TargetHit] Server_Check | pid=" + requestingPlayerID.ToString()
 			+ " | hits=" + m_aHits.Count().ToString(), LogLevel.NORMAL);
 
-		string reportText  = BuildReport(requestingPlayerID);
-		string reportTitle = BuildReportTitle(requestingPlayerID);
+		m_sLastReport      = BuildReport(requestingPlayerID);
+		m_sLastReportTitle = BuildReportTitle(requestingPlayerID);
+		Replication.BumpMe();
 
 		PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(requestingPlayerID);
 		if (!pc)
@@ -360,7 +370,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			return;
 		}
 
-		spc.CGQC_Rpc_ShowTargetReport(reportText, reportTitle);
+		spc.CGQC_Rpc_ShowTargetReport(m_sLastReport, m_sLastReportTitle);
 	}
 
 	// ================================================================
@@ -636,18 +646,14 @@ class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		Print("[CGQC_ResetAction] PerformAction called.", LogLevel.NORMAL);
+		Print("[CGQC_ResetAction] PerformAction called. IsServer=" + Replication.IsServer().ToString(), LogLevel.NORMAL);
 
 		if (!Replication.IsServer())
 			return;
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp)
-		{
-			Print("[CGQC_ResetAction] TargetHitComponent not found!", LogLevel.ERROR);
-			return;
-		}
+		if (!hitComp) { Print("[CGQC_ResetAction] TargetHitComponent not found!", LogLevel.ERROR); return; }
 
 		int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
 		hitComp.Server_Reset(pid);
@@ -666,32 +672,33 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		Print("[CGQC_CheckAction] PerformAction called.", LogLevel.NORMAL);
-
-		if (!Replication.IsServer())
-			return;
-
-		int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
-		if (pid <= 0)
-		{
-			Print("[CGQC_CheckAction] Could not resolve playerID.", LogLevel.WARNING);
-			return;
-		}
+		Print("[CGQC_CheckAction] PerformAction called. IsServer=" + Replication.IsServer().ToString(), LogLevel.NORMAL);
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp)
-		{
-			Print("[CGQC_CheckAction] TargetHitComponent not found!", LogLevel.ERROR);
-			return;
-		}
+		if (!hitComp) { Print("[CGQC_CheckAction] TargetHitComponent not found!", LogLevel.ERROR); return; }
 
-		hitComp.Server_Check(pid);
+		if (Replication.IsServer())
+		{
+			// Server: build and replicate the report
+			int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
+			if (pid <= 0) { Print("[CGQC_CheckAction] Could not resolve pid.", LogLevel.WARNING); return; }
+			hitComp.Server_Check(pid);
+		}
+		else
+		{
+			// Client: show the last replicated report directly
+			string report = hitComp.GetLastReport();
+			string title  = hitComp.GetLastReportTitle();
+			if (report.IsEmpty()) report = "Aucun impact enregistre.";
+			SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
+			if (hm) hm.ShowCustomHint(report, title, 15.0);
+		}
 	}
 
 	override bool CanBeShownScript(IEntity user)     { return true; }
 	override bool CanBePerformedScript(IEntity user) { return true; }
-	override bool HasLocalEffectOnlyScript()         { return false; }
+	override bool HasLocalEffectOnlyScript()         { return true; }
 }
 
 
@@ -702,6 +709,47 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 // ============================================================
 modded class SCR_PlayerController
 {
+	// ---- Client -> Server: ask check ----
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void CGQC_Rpc_AskCheck(RplId targetId)
+	{
+		IEntity targetEnt = IEntity.Cast(Replication.FindItem(targetId));
+		if (!targetEnt) return;
+
+		CGQC_RangeTools_TargetHitComponent hitComp =
+			CGQC_RangeTools_TargetHitComponent.Cast(targetEnt.FindComponent(CGQC_RangeTools_TargetHitComponent));
+		if (!hitComp) return;
+
+		int pid = -1;
+		IEntity controlled = GetControlledEntity();
+		if (controlled)
+			pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(controlled);
+
+		Print("[CGQC] CGQC_Rpc_AskCheck | pid=" + pid.ToString(), LogLevel.NORMAL);
+		if (pid > 0)
+			hitComp.Server_Check(pid);
+	}
+
+	// ---- Client -> Server: ask reset ----
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void CGQC_Rpc_AskReset(RplId targetId)
+	{
+		IEntity targetEnt = IEntity.Cast(Replication.FindItem(targetId));
+		if (!targetEnt) return;
+
+		CGQC_RangeTools_TargetHitComponent hitComp =
+			CGQC_RangeTools_TargetHitComponent.Cast(targetEnt.FindComponent(CGQC_RangeTools_TargetHitComponent));
+		if (!hitComp) return;
+
+		int pid = -1;
+		IEntity controlled = GetControlledEntity();
+		if (controlled)
+			pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(controlled);
+
+		Print("[CGQC] CGQC_Rpc_AskReset | pid=" + pid.ToString(), LogLevel.NORMAL);
+		hitComp.Server_Reset(pid);
+	}
+
 	// ---- Server -> Owner: Check report ----
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowTargetReport(string reportText, string reportTitle)
