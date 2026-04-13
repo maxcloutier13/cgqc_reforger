@@ -44,7 +44,10 @@ class CGQC_RangeTools_ResetHelper
 {
 	static ResourceName s_sPrefab;
 	static vector s_vTransform[4];
-	static string s_sName;          // ADD THIS
+	static string s_sName;
+	static float s_fBaseX;
+	static int s_iDistanceIndex;
+	static bool s_bCheckMode;
 
 	static void DoReset()
 	{
@@ -63,9 +66,19 @@ class CGQC_RangeTools_ResetHelper
 		if (!newEnt)
 			return;
 
-		// ADD THIS — restore name so FindEntityByName still works
 		if (!s_sName.IsEmpty())
 			newEnt.SetName(s_sName);
+
+		CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
+			newEnt.FindComponent(CGQC_TargetMoverComponent)
+		);
+		if (newMover)
+		{
+			newMover.SetBaseX(s_fBaseX);
+			newMover.SetDistanceIndex(s_iDistanceIndex);
+			newMover.SetCheckMode(s_bCheckMode);
+			
+		}
 	}
 }
 
@@ -305,24 +318,41 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	{
 		if (!IsAuthority())
 			return;
-	
+
 		IEntity owner = GetOwner();
 		if (!owner)
 			return;
-	
+
 		if (m_sPrefabPath == string.Empty)
 		{
 			m_aHits.Clear();
 			return;
 		}
-	
+
 		vector mat[4];
 		owner.GetWorldTransform(mat);
 		CGQC_RangeTools_ResetHelper.s_sPrefab    = m_sPrefabPath;
 		CGQC_RangeTools_ResetHelper.s_vTransform = mat;
-		CGQC_RangeTools_ResetHelper.s_sName      = owner.GetName(); 
-		m_aHits.Clear();
+		CGQC_RangeTools_ResetHelper.s_sName      = owner.GetName();
 
+		// Capture mover state before deletion so bay buttons and check mode survive respawn
+		CGQC_TargetMoverComponent mover = CGQC_TargetMoverComponent.Cast(
+			owner.FindComponent(CGQC_TargetMoverComponent)
+		);
+		if (mover)
+		{
+			CGQC_RangeTools_ResetHelper.s_fBaseX         = mover.GetBaseX();
+			CGQC_RangeTools_ResetHelper.s_iDistanceIndex = mover.GetDistanceIndex();
+			CGQC_RangeTools_ResetHelper.s_bCheckMode     = mover.IsCheckMode();
+		}
+		else
+		{
+			CGQC_RangeTools_ResetHelper.s_fBaseX         = mat[3][0];
+			CGQC_RangeTools_ResetHelper.s_iDistanceIndex = 0;
+			CGQC_RangeTools_ResetHelper.s_bCheckMode     = false;
+		}
+
+		m_aHits.Clear();
 
 		// RPC reset hint before entity deletion
 		if (requestingPlayerID > 0)
@@ -347,7 +377,6 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	{
 		if (!IsAuthority())
 			return;
-
 
 		m_sLastReport      = BuildReport(requestingPlayerID);
 		m_sLastReportTitle = BuildReportTitle(requestingPlayerID);
@@ -621,12 +650,10 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 			}
 		}
 
-
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (hitComp)
 			hitComp.RegisterHit(playerID, velocity, impactPos);
-		else
 	}
 }
 
@@ -638,7 +665,6 @@ class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-
 		if (!Replication.IsServer())
 			return;
 
@@ -663,7 +689,6 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (!hitComp) { return; }

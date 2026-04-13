@@ -1,0 +1,8 @@
+SCR_FiringRangeController : "{D7C6CCC78CF6D38D}Prefabs/Structures/Military/Training/RangeCP_01/RangeCP_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{AD51E776526588CC}Assets/Structures/Military/Training/RangeCP_01/RangeCP_01.xob"
+  }
+ }
+}
