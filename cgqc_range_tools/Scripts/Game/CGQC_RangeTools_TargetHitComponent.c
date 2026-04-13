@@ -44,14 +44,13 @@ class CGQC_RangeTools_ResetHelper
 {
 	static ResourceName s_sPrefab;
 	static vector s_vTransform[4];
+	static string s_sName;          // ADD THIS
 
 	static void DoReset()
 	{
 		Resource res = Resource.Load(s_sPrefab);
 		if (!res || !res.IsValid())
-		{
 			return;
-		}
 
 		EntitySpawnParams params = new EntitySpawnParams();
 		params.TransformMode = ETransformMode.WORLD;
@@ -60,7 +59,13 @@ class CGQC_RangeTools_ResetHelper
 		params.Transform[2] = s_vTransform[2];
 		params.Transform[3] = s_vTransform[3];
 
-		GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
+		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
+		if (!newEnt)
+			return;
+
+		// ADD THIS — restore name so FindEntityByName still works
+		if (!s_sName.IsEmpty())
+			newEnt.SetName(s_sName);
 	}
 }
 
@@ -282,6 +287,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			if (pc)
 			{
 				SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
+				Print("[CGQC_HitHint] spc null=" + (spc == null).ToString() + " pid=" + playerID.ToString(), LogLevel.WARNING);
 				if (spc)
 				{
 					int distInt = (int)dist;
@@ -299,23 +305,24 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	{
 		if (!IsAuthority())
 			return;
-
+	
 		IEntity owner = GetOwner();
 		if (!owner)
 			return;
-
-
+	
 		if (m_sPrefabPath == string.Empty)
 		{
 			m_aHits.Clear();
 			return;
 		}
-
+	
 		vector mat[4];
 		owner.GetWorldTransform(mat);
 		CGQC_RangeTools_ResetHelper.s_sPrefab    = m_sPrefabPath;
 		CGQC_RangeTools_ResetHelper.s_vTransform = mat;
+		CGQC_RangeTools_ResetHelper.s_sName      = owner.GetName(); 
 		m_aHits.Clear();
+
 
 		// RPC reset hint before entity deletion
 		if (requestingPlayerID > 0)

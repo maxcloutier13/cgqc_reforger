@@ -1,8 +1,6 @@
 GenericEntity : "{D429FF7E2C336A37}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et" {
  ID "5282DCB5DFC8538F"
  components {
-  CGQC_TargetHitComponent "{690618AE36FE042E}" {
-  }
   ActionsManagerComponent "{5D66ED1096104FD8}" {
    ActionContexts {
     UserActionContext "{69161BCE3CF43B13}" {
