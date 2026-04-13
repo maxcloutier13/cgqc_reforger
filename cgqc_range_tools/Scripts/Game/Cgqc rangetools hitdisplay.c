@@ -7,7 +7,7 @@
 
 class CGQC_RangeTools_HitDisplay
 {
-	protected static const ResourceName LAYOUT = "{CGQC_HitDisplay}UI/layouts/CGQC_RangeTools_HitDisplay.layout";
+	protected static const ResourceName LAYOUT = "{CF3057165B961942}UI/layouts/CGQC_RangeTools_HitDisplay.layout";
 	protected static const float FADE_DURATION  = 0.4;	// seconds for fade out animation
 	protected static const float SHOW_DURATION  = 3.0;	// seconds before fade starts
 

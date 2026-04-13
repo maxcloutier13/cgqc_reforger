@@ -1,0 +1,66 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ {
+  VerticalLayoutWidgetClass "{691A0634465BB13A}" {
+   Name "CGQC_HitDisplay_VLayout"
+   Slot FrameWidgetSlot "{691A0634465BBED3}" {
+    PositionX 10
+    OffsetLeft 10
+    PositionY 60
+    OffsetTop 60
+    OffsetRight -110
+    OffsetBottom -90
+    SizeToContent 1
+   }
+   Color 0 0 0 1
+   {
+    OverlayWidgetClass "{691A063472E4ADF7}" {
+     Name "SizeLayout0"
+     Slot LayoutSlot "{691A063472E4AD84}" {
+      Padding 12 12 12 12
+     }
+     Opacity 0.9
+     Color 0 0 0 1
+     {
+      ImageWidgetClass "{691A063A47888656}" {
+       Name "Image0"
+       Slot OverlayWidgetSlot {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Opacity 0.85
+       Color 0 0 0 1
+       Size 0 0
+      }
+      VerticalLayoutWidgetClass "{691A0634195251E1}" {
+       Name "VerticalLayout0"
+       Slot OverlayWidgetSlot "{691A063BB5682B1E}" {
+       }
+       {
+        RichTextWidgetClass "{691A063416B76A9A}" {
+         Name "CGQC_HitDisplay_Title"
+         Slot LayoutSlot "{691A063416B76A03}" {
+          HorizontalAlign 1
+          VerticalAlign 1
+          Padding 12 12 12 12
+         }
+         Color 0 0.0445 1 1
+         Text "CGQC Hit Title Card"
+         "Font Size" 32
+         "Horizontal Alignment" Right
+         "Vertical Alignment" Center
+        }
+        RichTextWidgetClass "{691A063409C581C2}" {
+         Name "CGQC_HitDisplay_Body"
+         Slot LayoutSlot "{691A063409C581E7}" {
+          Padding 12 0 12 12
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

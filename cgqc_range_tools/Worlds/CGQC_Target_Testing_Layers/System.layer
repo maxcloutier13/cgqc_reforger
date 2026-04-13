@@ -21,7 +21,7 @@ SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
    UnitType Infantry
   }
  }
- coords 129 1 129
+ coords 129 1 125.385
  angles 0 180 0
 }
 SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {

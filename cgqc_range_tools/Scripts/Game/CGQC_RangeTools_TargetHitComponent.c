@@ -674,8 +674,7 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 			string report = hitComp.GetLastReport();
 			string title  = hitComp.GetLastReportTitle();
 			if (report.IsEmpty()) report = "Aucun impact enregistre.";
-			SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-			if (hm) hm.ShowCustomHint(report, title, 15.0);
+			CGQC_RangeTools_HitDisplay.Show(title, report, 15.0);
 		}
 	}
 
@@ -736,18 +735,14 @@ modded class SCR_PlayerController
 	void CGQC_Rpc_ShowTargetReport(string reportText, string reportTitle)
 	{
 		Print("[CGQC_Check] " + reportTitle + "\n" + reportText, LogLevel.NORMAL);
-		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (!hm) { return; }
-		hm.ShowCustomHint(reportText, reportTitle, 15.0);
+		CGQC_RangeTools_HitDisplay.Show(reportTitle, reportText, 15.0);
 	}
 
 	// ---- Server -> Owner: Reset confirmation ----
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowResetHint()
 	{
-		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (!hm) return;
-		hm.ShowCustomHint("Cible remise a zero.", "Reset", 2.5);
+		CGQC_RangeTools_HitDisplay.Show("Reset", "Cible remise a zero.", 2.5);
 	}
 
 	// ---- Server -> Owner: per-hit hint ----
@@ -780,6 +775,6 @@ modded class SCR_PlayerController
 		body = body + "\nZone: " + zone + " | " + points.ToString() + " pts";
 		body = body + "\nTotal: " + totalPoints.ToString() + "/" + (hitNum * 5).ToString() + " pts";
 
-		hm.ShowCustomHint(body, title, duration);
+		CGQC_RangeTools_HitDisplay.Show(title, body, duration);
 	}
 }
