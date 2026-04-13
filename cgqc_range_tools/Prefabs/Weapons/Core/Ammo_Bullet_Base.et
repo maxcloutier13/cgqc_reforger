@@ -4,6 +4,10 @@ Projectile {
   ShellMoveComponent "{851AA4A2AE0A5691}" {
    ProjectileEffects {
     CGQC_RangeTools_TargetHitEffect "{691852C79616A07C}" {
+     Enabled 0
+    }
+    CGQC_RangeTools_GBRSTargetHitEffect "{6919545D9B056DBC}" {
+     Enabled 0
     }
    }
   }

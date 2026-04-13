@@ -16,9 +16,6 @@ $grp GenericEntity {
   coords 5712.864 135 3045.667
  }
 }
-SCR_SpawnPoint {
- coords 6942.998 41.122 3936.66
-}
 Vehicle M151A2_transport6 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6566.277 14.375 4651.188
  angles 0 -91.241 0

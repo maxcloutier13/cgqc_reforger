@@ -1,24 +1,24 @@
 GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
  coords 6697.802 14.721 4199.349
 }
-SCR_DestructibleBuildingEntity : "{686B4C83AC940895}Prefabs/Structures/Infrastructure/Naval/Piers/PierConcrete_01_flat.et" {
- coords 6695.475 -1.334 4198.172
- angles 0 -180 0
- scale 0.42
-}
-$grp GenericEntity : "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et" {
+$grp GenericEntity : "{2F07DA20B367A266}Prefabs/Target_GBRS.et" {
  zeroTarget_1 {
   coords 6698.895 14.375 4298.733
+  angles 0 -180 0
+ }
+ zeroTarget_3 {
+  coords 6696.83 15.613 4498.758
   angles 0 -179.472 0
  }
  zeroTarget_2 {
   coords 6698.103 14.375 4398.994
   angles 0 -179.472 0
  }
- zeroTarget_3 {
-  coords 6696.83 15.613 4498.758
-  angles 0 -179.472 0
- }
+}
+SCR_DestructibleBuildingEntity : "{686B4C83AC940895}Prefabs/Structures/Infrastructure/Naval/Piers/PierConcrete_01_flat.et" {
+ coords 6695.475 -1.334 4198.172
+ angles 0 -180 0
+ scale 0.42
 }
 GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  components {

@@ -1,0 +1,50 @@
+ContentLayoutWidget {
+ Name "CGQC_HitDisplay_Root";
+ StyleSheet "{EDA79D5B7F4ED974}UI/stylesheets/Default.css";
+ LayoutStyle "padding: 0 0 0 0";
+ Visible 0;
+ children [
+  FrameWidget {
+   Name "CGQC_HitDisplay_Frame";
+   FrameSlot {
+    Pos {0, 60};
+    Size {280, 0};
+    Alignment {0, 0};
+   };
+   VerticalLayoutWidget {
+    Name "CGQC_HitDisplay_VLayout";
+    FrameSlot {
+     Pos {0, 0};
+     Size {280, 0};
+     Alignment {0, 0};
+    };
+    SizeLayoutWidget {
+     Name "CGQC_HitDisplay_BG";
+     HorizontalAlignment "HorizontalAlignment.Stretch";
+     Color "0 0 0 0.65";
+     Padding {12, 8, 12, 10};
+     VerticalLayoutWidget {
+      Name "CGQC_HitDisplay_InnerVLayout";
+      HorizontalAlignment "HorizontalAlignment.Stretch";
+      RichTextWidget {
+       Name "CGQC_HitDisplay_Title";
+       HorizontalAlignment "HorizontalAlignment.Left";
+       Text "Impact!";
+       Color "1 0.75 0.2 1";
+       FontSize 16;
+       Bold 1;
+      };
+      RichTextWidget {
+       Name "CGQC_HitDisplay_Body";
+       HorizontalAlignment "HorizontalAlignment.Left";
+       Text "";
+       Color "1 1 1 1";
+       FontSize 14;
+       Bold 0;
+      };
+     };
+    };
+   };
+  };
+ ];
+}

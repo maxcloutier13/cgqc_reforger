@@ -1,9 +1,6 @@
 GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
  coords 128 1 128
 }
-GenericEntity : "{2F07DA20B367A266}Prefabs/Target_GBRS.et" {
- coords 127 1 124
-}
 GenericEntity : "{5904B087762001F8}Prefabs/X_Ray_Target3.et" {
  coords 129 1 124
 }

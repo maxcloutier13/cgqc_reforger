@@ -1,6 +1,16 @@
 GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
  ID "6164BAE2F6590B34"
  components {
+  CGQC_RangeTools_TargetDamageManager "{6919512BEB23CE4F}" {
+   "Additional hit zones" {
+    SCR_HitZone Main_HItzone {
+     ColliderNames {
+      "UBX_target_itself"
+     }
+     MaxHealth 1000
+    }
+   }
+  }
   CGQC_RangeTools_TargetHitComponent "{69192EAEFF222966}" {
    m_sPrefabPath "{5904B087762001F8}Prefabs/X_Ray_Target3.et"
   }

@@ -1,7 +1,17 @@
 GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
  ID "6164BAE2F6590B34"
  components {
-  CGQC_RangeTools_TargetHitComponent "{69192EAEB95E446B}" {
+  CGQC_RangeTools_GBRSTargetDamageManager "{6919512BC8181291}" {
+   "Additional hit zones" {
+    SCR_HitZone Main_Hitzone {
+     ColliderNames {
+      "UBX_target_itself"
+     }
+     MaxHealth 1000
+    }
+   }
+  }
+  CGQC_RangeTools_GBRSTargetHitComponent "{69192EAEB95E446B}" {
    m_sPrefabPath "{2F07DA20B367A266}Prefabs/Target_GBRS.et"
   }
   ActionsManagerComponent "{69192EAE3911E60E}" {
@@ -14,15 +24,15 @@ GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
     }
    }
    additionalActions {
-    CGQC_RangeTools_ResetTargetAction "{69192EAE2196FA6D}" {
+    CGQC_RangeTools_GBRSResetAction "{69195448C96FCB92}" {
      ParentContextList {
       "Default"
      }
-     UIInfo SCR_ActionUIInfo "{69192EAE254EFF9F}" {
+     UIInfo SCR_FactionUIInfo "{69195448F02E6582}" {
       Name "Reset"
      }
-     VisibilityRange 2
      Duration 0.5
+     "Sort Priority" 1
     }
    }
   }

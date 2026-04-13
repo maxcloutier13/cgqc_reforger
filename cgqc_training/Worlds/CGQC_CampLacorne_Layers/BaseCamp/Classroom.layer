@@ -269,6 +269,11 @@ GenericEntity : "{9CCDFC3D400F1240}Prefabs/nogm/cheytac_m200_nogm.et" {
  coords 6935.259 42.03 3950.905
  angles 0 -139.135 0
 }
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 6943.283 41.122 3936.701
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+ }
+}
 GenericEntity : "{BBBC235B9B053092}Prefabs/Props/Furniture/Armchair_02.et" {
  coords 6938.739 41.122 3951.857
  angles 0 168.899 0

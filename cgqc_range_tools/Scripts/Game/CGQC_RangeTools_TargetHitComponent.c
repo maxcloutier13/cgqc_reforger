@@ -28,13 +28,11 @@ class CGQC_RangeTools_TargetHitEffect : BaseProjectileEffect
 			return;
 
 		float distance = vector.Distance(localPlayer.GetOrigin(), pHitEntity.GetOrigin()) - 1.0;
-		int distM  = (int)distance;
-		int velMs  = (int)speed;
 
-		// Local fallback hint - on dedi the server RPC handles this with correct zone data
-		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (hm)
-			hm.ShowCustomHint("Distance: " + distM.ToString() + "m\nVelocite: " + velMs.ToString() + " m/s", "Impact!", 2.5);
+		if (distance <= 100.0)
+			return;
+
+		// Nothing to do client-side - server RPC handles the full hint
 	}
 }
 
@@ -52,7 +50,6 @@ class CGQC_RangeTools_ResetHelper
 		Resource res = Resource.Load(s_sPrefab);
 		if (!res || !res.IsValid())
 		{
-			Print("[CGQC_RangeTools_ResetHelper] Resource.Load failed: " + s_sPrefab, LogLevel.ERROR);
 			return;
 		}
 
@@ -63,11 +60,7 @@ class CGQC_RangeTools_ResetHelper
 		params.Transform[2] = s_vTransform[2];
 		params.Transform[3] = s_vTransform[3];
 
-		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
-		if (newEnt)
-			Print("[CGQC_RangeTools_ResetHelper] Spawned new target at " + s_vTransform[3].ToString(), LogLevel.NORMAL);
-		else
-			Print("[CGQC_RangeTools_ResetHelper] SpawnEntityPrefab failed!", LogLevel.ERROR);
+		GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
 	}
 }
 
@@ -150,7 +143,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 	[Attribute(defvalue: "1.62", uiwidget: UIWidgets.EditBox, desc: "C lower top Y")]
 	protected float m_fCLowerYMax;
 
-	[Attribute(defvalue: "0.26", uiwidget: UIWidgets.EditBox, desc: "D zone half-width (X)")]
+	[Attribute(defvalue: "0.32", uiwidget: UIWidgets.EditBox, desc: "D zone half-width (X)")]
 	protected float m_fDZoneHalfX;
 
 	[Attribute(defvalue: "0.92", uiwidget: UIWidgets.EditBox, desc: "D zone bottom Y")]
@@ -175,7 +168,6 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		if (!GetGame().InPlayMode())
 			return;
 		m_RplComp = RplComponent.Cast(owner.FindComponent(RplComponent));
-		Print("[CGQC_TargetHit] OnPostInit | IsProxy=" + (m_RplComp && m_RplComp.IsProxy()).ToString(), LogLevel.NORMAL);
 	}
 
 	protected bool IsAuthority()
@@ -277,17 +269,14 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		vector offsetDbg = worldHitPos - matDbg[3];
 		float lx = vector.Dot(offsetDbg, matDbg[0]);
 		float ly = vector.Dot(offsetDbg, matDbg[1]);
-		Print("[CGQC_Zone] localX=" + lx.ToString() + " localY=" + ly.ToString() + " zone=" + zone, LogLevel.NORMAL);
-		Print("[CGQC_TargetHit] Hit #" + hitNum.ToString() + " | pid=" + playerID.ToString()
-			+ " | zone=" + zone + " | pts=" + points.ToString() + " | total=" + totalPoints.ToString(), LogLevel.NORMAL);
 
 		// Rebuild replicated report so client can read it immediately on Check
 		m_sLastReport      = BuildReport(playerID);
 		m_sLastReportTitle = BuildReportTitle(playerID);
 		Replication.BumpMe();
 
-		// RPC hit hint to shooter
-		if (playerID > 0)
+		// RPC hit hint to shooter - only if distance > 100m
+		if (playerID > 0 && dist > 100.0)
 		{
 			PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(playerID);
 			if (pc)
@@ -315,11 +304,9 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		if (!owner)
 			return;
 
-		Print("[CGQC_TargetHit] Server_Reset | clearing " + m_aHits.Count().ToString() + " hits.", LogLevel.NORMAL);
 
 		if (m_sPrefabPath == string.Empty)
 		{
-			Print("[CGQC_TargetHit] Server_Reset: m_sPrefabPath not set.", LogLevel.WARNING);
 			m_aHits.Clear();
 			return;
 		}
@@ -354,8 +341,6 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		if (!IsAuthority())
 			return;
 
-		Print("[CGQC_TargetHit] Server_Check | pid=" + requestingPlayerID.ToString()
-			+ " | hits=" + m_aHits.Count().ToString(), LogLevel.NORMAL);
 
 		m_sLastReport      = BuildReport(requestingPlayerID);
 		m_sLastReportTitle = BuildReportTitle(requestingPlayerID);
@@ -364,14 +349,12 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(requestingPlayerID);
 		if (!pc)
 		{
-			Print("[CGQC_TargetHit] Server_Check: no PlayerController.", LogLevel.ERROR);
 			return;
 		}
 
 		SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
 		if (!spc)
 		{
-			Print("[CGQC_TargetHit] Server_Check: SCR_PlayerController cast failed.", LogLevel.ERROR);
 			return;
 		}
 
@@ -603,7 +586,6 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 	{
 		super.OnPostInit(owner);
 		if (!GetGame().InPlayMode()) return;
-		Print("[CGQC_TargetDmg] OnPostInit on: " + owner.GetName(), LogLevel.NORMAL);
 	}
 
 	override protected void OnDamage(notnull BaseDamageContext damageContext)
@@ -632,14 +614,12 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 			}
 		}
 
-		Print("[CGQC_TargetDmg] OnDamage | vel=" + velocity.ToString() + " | pid=" + playerID.ToString(), LogLevel.NORMAL);
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
 		if (hitComp)
 			hitComp.RegisterHit(playerID, velocity, impactPos);
 		else
-			Print("[CGQC_TargetDmg] TargetHitComponent not found!", LogLevel.ERROR);
 	}
 }
 
@@ -651,14 +631,13 @@ class CGQC_RangeTools_ResetTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		Print("[CGQC_ResetAction] PerformAction called. IsServer=" + Replication.IsServer().ToString(), LogLevel.NORMAL);
 
 		if (!Replication.IsServer())
 			return;
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp) { Print("[CGQC_ResetAction] TargetHitComponent not found!", LogLevel.ERROR); return; }
+		if (!hitComp) { return; }
 
 		int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
 		hitComp.Server_Reset(pid);
@@ -677,17 +656,16 @@ class CGQC_RangeTools_CheckTargetAction : ScriptedUserAction
 {
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		Print("[CGQC_CheckAction] PerformAction called. IsServer=" + Replication.IsServer().ToString(), LogLevel.NORMAL);
 
 		CGQC_RangeTools_TargetHitComponent hitComp =
 			CGQC_RangeTools_TargetHitComponent.Cast(pOwnerEntity.FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (!hitComp) { Print("[CGQC_CheckAction] TargetHitComponent not found!", LogLevel.ERROR); return; }
+		if (!hitComp) { return; }
 
 		if (Replication.IsServer())
 		{
 			// Server: build and replicate the report
 			int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
-			if (pid <= 0) { Print("[CGQC_CheckAction] Could not resolve pid.", LogLevel.WARNING); return; }
+			if (pid <= 0) { return; }
 			hitComp.Server_Check(pid);
 		}
 		else
@@ -730,7 +708,6 @@ modded class SCR_PlayerController
 		if (controlled)
 			pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(controlled);
 
-		Print("[CGQC] CGQC_Rpc_AskCheck | pid=" + pid.ToString(), LogLevel.NORMAL);
 		if (pid > 0)
 			hitComp.Server_Check(pid);
 	}
@@ -751,7 +728,6 @@ modded class SCR_PlayerController
 		if (controlled)
 			pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(controlled);
 
-		Print("[CGQC] CGQC_Rpc_AskReset | pid=" + pid.ToString(), LogLevel.NORMAL);
 		hitComp.Server_Reset(pid);
 	}
 
@@ -759,9 +735,9 @@ modded class SCR_PlayerController
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowTargetReport(string reportText, string reportTitle)
 	{
-		Print("[CGQC_PlayerReport] CGQC_Rpc_ShowTargetReport received.", LogLevel.NORMAL);
+		Print("[CGQC_Check] " + reportTitle + "\n" + reportText, LogLevel.NORMAL);
 		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
-		if (!hm) { Print("[CGQC_PlayerReport] HintManager NULL!", LogLevel.ERROR); return; }
+		if (!hm) { return; }
 		hm.ShowCustomHint(reportText, reportTitle, 15.0);
 	}
 
@@ -778,7 +754,6 @@ modded class SCR_PlayerController
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowHitHint(int hitNum, string zone, int points, int totalPoints, int distM, int velMs, bool isFull)
 	{
-		Print("[CGQC_PlayerReport] CGQC_Rpc_ShowHitHint received | zone=" + zone, LogLevel.WARNING);
 		SCR_HintManagerComponent hm = SCR_HintManagerComponent.GetInstance();
 		if (!hm) return;
 
@@ -788,6 +763,11 @@ modded class SCR_PlayerController
 		{
 			title = "Impact! - Cible pleine";
 			duration = 4.0;
+		}
+		else if (hitNum == 0)
+		{
+			title = "Impact!";
+			duration = 2.5;
 		}
 		else
 		{

@@ -8,7 +8,12 @@ GenericEntity : "{75E0FE8945FB2A96}PrefabsEditable/Auto/Props/Airport/E_RunwayLi
  angles 90 90 90
  scale 0.571
 }
-GenericEntity bay14_target : "{B83661928BE0CF42}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank_CGQC.et" {
+GenericEntity bay14_target : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
+ components {
+  CGQC_TargetMoverComponent "{6919415FCAAFD1BC}" {
+   m_sRespawnPrefab "{98F8FCFE93E5D499}Prefabs/IPSC.et"
+  }
+ }
  coords 643.363 1.891 752.004
  angles 0 90 0
 }
@@ -69,19 +74,6 @@ $grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletric
       ActionTitle "Vérification"
       VisibilityRange 2
       "Sort Priority" -1
-      m_sTargetEntityName "bay14_target"
-     }
-     CGQC_TargetResetAction "{690320482C1ACFDE}" {
-      ParentContextList {
-       "switchCheck"
-      }
-      UIInfo SCR_ActionUIInfo "{690320570A6142F7}" {
-       Name "Reset"
-       Description "Reset la patente"
-      }
-      ActionTitle "Reset"
-      VisibilityRange 2
-      Duration 2
       m_sTargetEntityName "bay14_target"
      }
     }
