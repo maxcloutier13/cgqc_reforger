@@ -9,7 +9,7 @@ $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/
   coords 641.481 9.588 741.841
  }
 }
-GenericEntity bay0_target : "{B83661928BE0CF42}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank_CGQC.et" {
+GenericEntity bay0_target : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
  coords 643.363 1.891 723.633
  angles 0 90 0
 }

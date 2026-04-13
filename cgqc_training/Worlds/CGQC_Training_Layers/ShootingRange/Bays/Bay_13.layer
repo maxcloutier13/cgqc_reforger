@@ -8,7 +8,7 @@ GenericEntity : "{75E0FE8945FB2A96}PrefabsEditable/Auto/Props/Airport/E_RunwayLi
  angles 90 180 -180
  scale 0.571
 }
-GenericEntity bay13_target : "{B83661928BE0CF42}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank_CGQC.et" {
+GenericEntity bay13_target : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
  coords 643.363 1.891 749.976
  angles 0 90 0
 }

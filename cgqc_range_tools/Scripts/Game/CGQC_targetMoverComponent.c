@@ -158,7 +158,9 @@ class CGQC_TargetMoverComponent : ScriptComponent
 	float GetBaseX() { return m_fBaseX; }
 	int GetDistanceIndex() { return m_iDistanceIndex; }
 	ResourceName GetPrefabName() { return m_sRespawnPrefab; }
-
+	
+	void SetDistanceIndex(int val) { m_iDistanceIndex = val; }
+	void SetCheckMode(bool val)    { m_bCheckMode = val; }
 	void SetBaseX(float val) { m_fBaseX = val; m_fTargetX = val; }
 	void SetRespawnPrefab(ResourceName val) { m_sRespawnPrefab = val; }
 
@@ -340,6 +342,25 @@ class CGQC_TargetCheckAction : ScriptedUserAction
 	[Attribute(defvalue: "", desc: "Exact scene name of this bay's target entity")]
 	protected string m_sTargetEntityName;
 
+	override bool CanBePerformedScript(IEntity user)
+	{
+	    CGQC_TargetMoverComponent mover = CGQC_FindMoverSilent(m_sTargetEntityName);
+	    if (!mover)
+	        return true;
+	
+	    // Update label while we're being polled
+	    UIInfo ui = GetUIInfo();
+	    if (ui)
+	    {
+	        if (mover.IsCheckMode())
+	            ui.SetName("Retour");
+	        else
+	            ui.SetName("Vérification");
+	    }
+	
+	    return !mover.IsMoving();
+	}
+	
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
 		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetCheckAction");
@@ -354,15 +375,11 @@ class CGQC_TargetCheckAction : ScriptedUserAction
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
-	override bool CanBePerformedScript(IEntity user)
-	{
-		CGQC_TargetMoverComponent mover = CGQC_FindMoverSilent(m_sTargetEntityName);
-		if (!mover)
-			return true;
-		return !mover.IsMoving();
-	}
+
 	override bool HasLocalEffectOnlyScript() { return false; }
 }
+
+
 
 //------------------------------------------------------------------------------------------------
 // Reset

@@ -24,11 +24,11 @@ FrameWidgetClass {
      {
       ImageWidgetClass "{691A063A47888656}" {
        Name "Image0"
-       Slot OverlayWidgetSlot {
+       Slot OverlayWidgetSlot "{691A32E8E6AEDB64}" {
         HorizontalAlign 3
         VerticalAlign 3
        }
-       Opacity 0.85
+       Opacity 0.95
        Color 0 0 0 1
        Size 0 0
       }

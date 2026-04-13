@@ -1,0 +1,55 @@
+$grp StaticModelEntity : "{BB64FBA6986C62F7}Prefabs/Structures/BuildingParts/Entry/ConcreteSlope_02_MediumVehicle.et" {
+ {
+  coords 4602.969 30.419 2641.63
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2641.63
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2646.146
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 30.419 2646.146
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 30.419 2650.68
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2650.68
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2655.196
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 30.419 2655.196
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2659.722
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 36.299 2664.238
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 30.419 2659.722
+  angles 0 -90 0
+ }
+ {
+  coords 4602.969 30.419 2664.238
+  angles 0 -90 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{FD1CE2903D41D4A7}Prefabs/Structures/Walls/Concrete/ConcreteRetainingWall_01/ConcreteRetainingWall_01_8m.et" {
+ coords 4600.115 27.556 2667.022
+ angles 0 0 0
+ scale 1.3
+}

@@ -1,0 +1,9 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ components {
+  MeshObject "{506EDA9D46FC6C06}" {
+   Object "{88450B9A63C9F6AE}Assets/Structures/Airport/Hangar_01/Hangar_01.xob"
+  }
+ }
+ coords 4619.803 0.015 2656.887
+ scale 1.2
+}

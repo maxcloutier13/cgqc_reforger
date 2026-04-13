@@ -1,4 +1,4 @@
-GenericEntity bay7_target : "{B83661928BE0CF42}Prefabs/Props/VRTCQBShootHouse/CQB_TargetBlank_CGQC.et" {
+GenericEntity bay7_target : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
  coords 643.363 1.891 737.774
  angles 0 90 0
 }

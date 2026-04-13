@@ -34,21 +34,3 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  coords 6697.448 14.375 4195.49
  angles 0 143.192 0
 }
-GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
- components {
-  ActionsManagerComponent "{691635765270CB8C}" {
-   ActionContexts {
-    UserActionContext "{69163576548028A8}" {
-     ContextName "Default"
-     Position PointInfo "{69163575DC7D285B}" {
-      Offset 0 0.0568 0.0371
-     }
-    }
-   }
-  }
-  RplComponent "{58FC7CAC2034C3E2}" {
-   Enabled 1
-  }
- }
- coords 6698.644 15.627 4198.992
-}

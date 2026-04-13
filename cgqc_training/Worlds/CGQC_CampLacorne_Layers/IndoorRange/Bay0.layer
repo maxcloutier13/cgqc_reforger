@@ -1,0 +1,461 @@
+GenericEntity : "{16415CF017E77E29}Prefabs/Props/Military/Training/Obstacles/ObstacleRamp_01_platform.et" {
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Materials {
+    MaterialAssignClass "{6617318AB9B889CA}" {
+     SourceMaterial "ObstacleRamp_01_platform"
+     AssignedMaterial "{24E5434B22F19644}Assets/Props/Military/Training/Obstacles/ObstacleRamp_01/Data/ObstacleRamp_01_platform_TC.emat"
+    }
+   }
+   LODFactors {
+    5
+    0
+    0
+    0
+    0
+    0
+   }
+   PixelSizeScale 0.1
+   CastFarShadow 0
+  }
+ }
+ coords 4638.424 25.736 2640.343
+ angles 90 -26.565 153.435
+ scale 1.207
+}
+GenericEntity : "{2C020648380E2D68}Prefabs/Structures/BuildingParts/Eletrical/CGQC_RangeSwitch_Distance.et" {
+ components {
+  ActionsManagerComponent "{691A32E98661E6EF}" {
+   additionalActions {
+    CGQC_TargetCycleAction "{691A32E9AD9C05B3}" {
+     m_sTargetEntityName "bay_target0"
+    }
+   }
+  }
+ }
+ coords 4638.008 25.594 2639.941
+}
+StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/AirfieldMatting_01/AirfieldMatting_USSR_01_short.et" {
+ coords 4638.393 0.001 2640.861
+ angles 0 90 0
+ {
+  $grp GenericEntity : "{16415CF017E77E29}Prefabs/Props/Military/Training/Obstacles/ObstacleRamp_01_platform.et" {
+   {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+      Materials {
+       MaterialAssignClass "{6617318AB9B889CA}" {
+        SourceMaterial "ObstacleRamp_01_platform"
+        AssignedMaterial "{24E5434B22F19644}Assets/Props/Military/Training/Obstacles/ObstacleRamp_01/Data/ObstacleRamp_01_platform_TC.emat"
+       }
+      }
+      LODFactors {
+       5
+       0
+       0
+       0
+       0
+       0
+      }
+      PixelSizeScale 0.1
+      CastFarShadow 0
+     }
+    }
+    coords 2.406 1.234 0.032
+    angles 90 153.435 63.435
+    scale 1.207
+   }
+   {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+      LODFactors {
+       5
+       0
+       0
+       0
+       0
+       0
+      }
+      PixelSizeScale 0.1
+      CastFarShadow 0
+     }
+    }
+    coords -0.011 -0.03 -0.209
+    angles 0 -90 0
+    scale 0.769
+   }
+   {
+    components {
+     MeshObject "{5872F0EB7FA40561}" {
+      Materials {
+       MaterialAssignClass "{6617318AB9B889CA}" {
+        SourceMaterial "ObstacleRamp_01_platform"
+        AssignedMaterial "{24E5434B22F19644}Assets/Props/Military/Training/Obstacles/ObstacleRamp_01/Data/ObstacleRamp_01_platform_TC.emat"
+       }
+      }
+      LODFactors {
+       5
+       0
+       0
+       0
+       0
+       0
+      }
+      PixelSizeScale 0.05
+      CastFarShadow 0
+     }
+    }
+    coords -0.533 1.262 0.032
+    angles -90 -90 -180
+    scale 1.207
+   }
+  }
+  $grp StaticModelEntity : "{38830F6F1297670A}Prefabs/Structures/Military/Camps/AirfieldMatting_01/AirfieldMatting_USSR_01_short.et" {
+   {
+    coords 0 0 -0.517
+   }
+   {
+    coords 0 -0.001 0.535
+   }
+  }
+  GenericEntity : "{5C053ACAE9D17683}Prefabs/Items/Equipment/Detonators/BlastingMachine_KPM_3U1/ArmedDetonatorWires_KPM_3U1.et" {
+   coords 0.924 1.015 0.507
+   angles 0 180 -180
+   scale 6.793
+  }
+  GenericEntity : "{5D8A463DF84135AA}Prefabs/Structures/BuildingParts/Eletrical/UtilityBoxInt_01/UtilityBoxInt_01_v4.et" {
+   coords 0.865 2.352 0.038
+   scale 0.47
+  }
+  GenericEntity : "{8F0C763B613691A8}Prefabs/Structures/BuildingParts/Eletrical/UtilityBoxInt_01/UtilityBoxInt_01_v3.et" {
+   coords 0.878 2.024 -0.076
+   scale 0.54
+  }
+  $grp GenericEntity : "{C1B7AB00FF7C1424}Prefabs/Props/Industrial/ConcretePanel_01_A.et" {
+   {
+    coords 0.94 0.947 0.407
+    angles 0 0 90
+    scale 0.504
+   }
+   {
+    coords 0.94 1.779 0.407
+    angles 0 180 90
+    scale 0.504
+   }
+   {
+    coords 0.94 1.78 -0.33
+    angles 0 180 90
+    scale 0.504
+   }
+   {
+    coords 0.94 0.937 -0.33
+    angles 0 180 90
+    scale 0.504
+   }
+  }
+ }
+}
+GenericEntity : "{75E0FE8945FB2A96}PrefabsEditable/Auto/Props/Airport/E_RunwayLightPortable_01_red.et" {
+ components {
+  SCR_EditableEntityComponent "{58AAE8059945F150}" {
+   Enabled 0
+  }
+ }
+ coords 4637.787 26.812 2641.895
+ angles 90 90 90
+ scale 0.571
+}
+GenericEntity bay_target0 : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
+ components {
+  CGQC_TargetMoverComponent "{6919415FCAAFD1BC}" {
+   m_sRespawnPrefab "{98F8FCFE93E5D499}Prefabs/IPSC.et"
+  }
+ }
+ coords 4635.652 24.502 2640.932
+ angles 0 90 0
+}
+GenericEntity : "{AAA9315EB1CC7532}Prefabs/Structures/BuildingParts/Eletrical/CGQC_RangeSwitch_Check.et" {
+ components {
+  ActionsManagerComponent "{691A32E9DE56EC8C}" {
+   additionalActions {
+    CGQC_TargetCheckAction "{691A32E9C6376502}" {
+     m_sTargetEntityName "bay_target0"
+    }
+   }
+  }
+ }
+ coords 4638.228 25.594 2639.939
+}
+GenericEntity : "{B088F5F8EA2ADEF6}Prefabs/Structures/BuildingParts/Doors/Doorset_GuardHouse_03_A_EXT_B.et" {
+ components {
+  MeshObject "{61B367470698533A}" {
+   PixelSizeScale 0.05
+  }
+ }
+ coords 4637.656 25.447 2641.953
+ angles 0 -90 -90
+ scale 0.719
+ {
+  GenericEntity {
+   ID "566E8B42DFA362EC"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "566E8B42DFA362F7"
+   components {
+    MeshObject "{309366462BDAFB24}" {
+     Enabled 0
+    }
+    RigidBody "{309366462BDAFB2D}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{C1B7AB00FF7C1424}Prefabs/Props/Industrial/ConcretePanel_01_A.et" {
+ {
+  components {
+   MeshObject "{5872F0EB7FA40561}" {
+    Materials {
+     MaterialAssignClass "{5582FBC496332FAE}" {
+      SourceMaterial "ConcretePanel_01"
+      AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+     }
+    }
+   }
+  }
+  coords 4620.364 23.591 2641.949
+  angles -90 -180 -180
+  {
+   $grp GenericEntity : "{C1B7AB00FF7C1424}Prefabs/Props/Industrial/ConcretePanel_01_A.et" {
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 15.119 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 3.743 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -7.599 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 7.518 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -11.376 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 11.339 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -3.776 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -15.19 0 0
+    }
+   }
+  }
+ }
+ {
+  components {
+   MeshObject "{5872F0EB7FA40561}" {
+    Materials {
+     MaterialAssignClass "{5582FBC496332FAE}" {
+      SourceMaterial "ConcretePanel_01"
+      AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+     }
+    }
+   }
+  }
+  coords 4620.367 23.591 2639.842
+  angles -90 -180 -180
+  {
+   $grp GenericEntity : "{C1B7AB00FF7C1424}Prefabs/Props/Industrial/ConcretePanel_01_A.et" {
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 15.119 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 3.743 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -7.599 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 7.518 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -11.376 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords 11.339 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -3.776 0 0
+    }
+    {
+     components {
+      MeshObject "{5872F0EB7FA40561}" {
+       Materials {
+        MaterialAssignClass "{5582FBC496332FAE}" {
+         SourceMaterial "ConcretePanel_01"
+         AssignedMaterial "{75B057452EEAC7B2}Assets/Props/Industrial/ConcretePanel_01/Data/ConcretePanel_01_clean_TC.emat"
+        }
+       }
+      }
+     }
+     coords -15.19 0 0
+    }
+   }
+  }
+ }
+}
