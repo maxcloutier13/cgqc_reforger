@@ -12,8 +12,13 @@ SCR_BaseGameMode GameMode_Plain1 : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/Gam
 SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
  coords 127.057 1 130.59
 }
-GenericEntity : "{2F07DA20B367A266}Prefabs/Target_GBRS.et" {
- coords 127 1 124
+$grp GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
+ {
+  coords 125.5 1 128
+ }
+ {
+  coords 128 1 128
+ }
 }
 SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
  components {
@@ -21,7 +26,7 @@ SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
    UnitType Infantry
   }
  }
- coords 129 1 250
+ coords 126 1 130
  angles 0 180 0
 }
 SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
