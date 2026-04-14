@@ -1,20 +1,5 @@
 // CGQC_TargetHitComponent.c
 //
-// Two parts:
-//
-// 1. CGQC_TargetHitEffect — a BaseProjectileEffect assigned to ammo configs.
-//    Fires on the shooter's client on every bullet hit.
-//    Checks if the hit entity has CGQC_TargetHitComponent and shows the hint locally.
-//
-// 2. CGQC_TargetHitComponent — a marker component placed on CQB_TargetBlank_CGQC.et.
-//    No logic needed — just used as an identifier tag.
-//
-// Setup:
-//   - Add CGQC_TargetHitComponent to CQB_TargetBlank_CGQC.et in Workbench
-//   - Remove SCR_DamageManagerComponent from CQB_TargetBlank_CGQC.et (not needed)
-//   - For each ammo type you want to detect (e.g. ProjBullet_556x45_Ball.et),
-//     create an inherited prefab in cgqc_training, add CGQC_TargetHitEffect
-//     to its Projectile Effects array in the ammo config
 
 //------------------------------------------------------------------------------------------------
 class CGQC_TargetHitEffect : BaseProjectileEffect

@@ -15,6 +15,7 @@ GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
    m_sPrefabPath "{98F8FCFE93E5D499}Prefabs/IPSC.et"
   }
   CGQC_TargetMoverComponent "{691A301C6DD9512B}" {
+   m_sRespawnPrefab "{98F8FCFE93E5D499}Prefabs/IPSC.et"
   }
   ActionsManagerComponent "{691760C1AAC72A60}" {
    ActionContexts {

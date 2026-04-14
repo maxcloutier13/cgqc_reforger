@@ -8,6 +8,7 @@
 // ----------------------------------------------------------------
 // Hit effect for GBRS target - fires CLIENT-SIDE
 // ----------------------------------------------------------------
+/*
 class CGQC_RangeTools_GBRSTargetHitEffect : BaseProjectileEffect
 {
 	override void OnEffect(IEntity pHitEntity, inout vector outMat[3], IEntity damageSource, notnull Instigator instigator, string colliderName, float speed)
@@ -36,7 +37,7 @@ class CGQC_RangeTools_GBRSTargetHitEffect : BaseProjectileEffect
 		if (hm)
 			hm.ShowCustomHint("Distance: " + distM.ToString() + "m\nVelocite: " + velMs.ToString() + " m/s", "Impact!", 2.5);
 	}
-}
+}*/
 
 
 // ----------------------------------------------------------------
