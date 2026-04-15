@@ -1,0 +1,60 @@
+GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ coords 6973.301 41.317 3912.283
+ angles 0 32.951 0
+}
+GenericEntity : "{44000BB5A7F7EE0A}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/MilitaryBase_Hangar_Base_Base.et" {
+ coords 6967.102 41.139 3909.408
+ angles 0 35.996 0
+ {
+  GenericEntity : "{AA80A4EACA7C42D9}Prefabs/Structures/BuildingParts/Doors/DoorSet_Lighthouse_main_right.et" {
+   coords -0.405 -0.054 -7.221
+   angles 0 180 0
+   {
+    GenericEntity {
+     ID "611EC77D32FF0709"
+     components {
+      DoorComponent "{221C667A9F7D4B69}" {
+       i_doorLockChance 100
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 6967.425 41.316 3916.15
+ angles 0 30 0
+}
+$grp GenericEntity : "{B61A08FB644D2051}Prefabs/Props/Furniture/LampFluorescent/LampFluorescent_01_exterior.et" {
+ {
+  coords 6969.158 45.937 3912.924
+  angles 0 -53.833 0
+ }
+ {
+  coords 6966.503 45.937 3909.292
+  angles 0 -53.833 0
+ }
+ {
+  coords 6963.847 45.937 3905.659
+  angles 0 -53.833 0
+ }
+}
+GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
+ coords 6964.828 41.316 3912.182
+ angles 0 124.879 0
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Armurerie"
+  }
+ }
+ coords 6960.055 41.093 3900.225
+ angles 0 36.109 0
+}

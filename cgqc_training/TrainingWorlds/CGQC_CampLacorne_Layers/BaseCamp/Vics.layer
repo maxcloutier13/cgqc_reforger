@@ -1,0 +1,28 @@
+$grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ M151A2_transport1 {
+  coords 6927.441 41.122 3935.436
+  angles 0 154.236 0
+ }
+ M151A2_transport2 {
+  coords 6925.736 41.122 3932.562
+  angles 0 154.236 0
+ }
+}
+$grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ Motorbike_US2 {
+  coords 6929.811 41.122 3940.737
+  angles 0 148.546 0
+ }
+ Motorbike_US1 {
+  coords 6930.611 41.122 3941.892
+  angles 0 148.546 0
+ }
+ Motorbike_US3 {
+  coords 6929.285 41.122 3939.618
+  angles 0 148.546 0
+ }
+ Motorbike_US4 {
+  coords 6928.5 41.122 3938.546
+  angles 0 148.546 0
+ }
+}
