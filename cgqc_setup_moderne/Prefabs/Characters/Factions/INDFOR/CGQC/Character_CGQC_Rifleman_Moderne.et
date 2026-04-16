@@ -49,7 +49,6 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{1E991CD19C6F7659}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Brown.et"
     }
     LoadoutSlotInfo Waist {
-     Prefab "{D0E84652C9ACA933}Assets/Characters/Belts/Belt_Ronin/ShutoBelt_Simunition.et"
     }
    }
   }
