@@ -1,0 +1,447 @@
+GenericEntity : "{04BA1B510DA3CB74}Prefabs/nogm/FastCap.et" {
+ coords 6970.76 41.449 3914.839
+ angles 0 0 0
+}
+SCR_DestructibleEntity : "{052DDF0E3A5E2AF6}Prefabs/Structures/Walls/Metal/MetalWall_01/MetalWall_01_9m.et" {
+ coords 6967.25 0.222 3917.976
+ angles 0 35.996 0
+}
+GenericEntity : "{0607FC1461EB56D1}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_LR.et" {
+ coords 6959.033 41.316 3906.925
+ angles 0 125.247 0
+ {
+  GenericEntity {
+   ID "660D2CA1D1DCE67A"
+   coords 0 0.468 0.001
+   {
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F81743"
+     coords 0.872 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F84879"
+     coords 0.719 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8487E"
+     coords 0.554 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8487F"
+     coords 0.397 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8BC26"
+     coords 0.238 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8E5DA"
+     coords 0.077 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8E5DB"
+     coords -0.083 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8EE6A"
+     coords -0.241 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F8F030"
+     coords -0.399 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "589E95D8B3F9A124"
+     coords -0.562 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "58FE9CD5BFDF8702"
+     coords -0.721 0.622 0.162
+    }
+    SCR_WeaponRackSlotEntity {
+     ID "58FE9CD5BFDFFDF8"
+     coords -0.875 0.622 0.162
+    }
+   }
+  }
+  GenericEntity {
+   ID "660D2CA2D669E2EB"
+   coords 0 -0.07 0.001
+  }
+ }
+}
+GenericEntity : "{06B68C58B72EAAC7}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 6970.034 42.193 3915.608
+ angles 0 0 0
+}
+GenericEntity : "{0E4F9AB828904294}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Weapons.et" {
+ coords 6972.513 41.317 3913.676
+ angles 0 32.951 0
+}
+GenericEntity : "{1913B2546C83DD1C}Prefabs/nogm/boot.et" {
+ coords 6967.829 41.316 3916.554
+ angles 0 0 0
+}
+$grp GenericEntity : "{192636A1620C6866}Prefabs/Weapons/Explosives/DemoBlock_M112/M112_Teste.et" {
+ {
+  coords 6968.521 42.236 3916.633
+ }
+ {
+  coords 6968.515 42.236 3916.806
+ }
+}
+GenericEntity : "{2A677868AB9539B7}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Workbench2.et" {
+ coords 6967.394 41.316 3906.754
+ angles 0 126.128 0
+ {
+  GenericEntity {
+   ID "658504F5AEFE1E6B"
+   coords -0.573 0.884 0.004
+  }
+  GenericEntity {
+   ID "658504F52C22D317"
+   coords 0.292 0.384 -0.092
+  }
+  GenericEntity {
+   ID "658504F52C22D337"
+   coords 0.599 0.384 -0.092
+  }
+  GenericEntity {
+   ID "658504F5AEFE1E23"
+   coords 0.371 1.419 0.214
+  }
+  GenericEntity {
+   ID "658504F5AEFE1E30"
+   coords 0.371 1.083 0.214
+  }
+  GenericEntity {
+   ID "658504F52C22D34F"
+   coords -0.365 0.356 0.076
+  }
+  GenericEntity {
+   ID "658504F52C22D3B7"
+   coords -0.401 0.358 -0.212
+  }
+  GenericEntity {
+   ID "658504F5AEFE1FC3"
+   coords -0.436 1.212 0.229
+  }
+  GenericEntity {
+   ID "658504F5AEFE1FD3"
+   coords -0.436 1.545 0.229
+  }
+  GenericEntity {
+   ID "658504F5AEFE1FF3"
+   coords 0.001 0 0
+  }
+ }
+}
+GenericEntity : "{2DD4D94957E1DC2C}Prefabs/Props/Furniture/Carpet_03_red.et" {
+ coords 6963.322 41.317 3905.014
+ angles 0 35.996 0
+}
+GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_LockerClosed_1.et" {
+ coords 6963.17 41.316 3912.473
+ angles 0 -54.753 0
+ {
+  GenericEntity {
+   ID "65C6DE0A9D65C7EE"
+   coords -0.174 0 0
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C880"
+   coords 0.054 1.169 0.252
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C8DE"
+   coords -0.497 1.169 0.252
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C8E7"
+   coords -0.218 1.169 0.251
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C918"
+   coords 0.474 0.185 0.06
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C940"
+   coords 0.474 0.036 0.06
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C966"
+   coords 0.474 0.112 0.06
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C742"
+   coords -0.343 0.474 0.058
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C730"
+   coords 0.008 0.42 0.036
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C85E"
+   coords -0.667 1.946 -0.113
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C8A1"
+   coords -0.667 1.767 -0.113
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C985"
+   coords 0.311 1.184 0.286
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C9A6"
+   coords 0.514 1.184 0.286
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C807"
+   coords 0.469 1.678 -0.062
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C820"
+   coords 0.357 1.678 -0.062
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C862"
+   coords 0.575 1.678 -0.062
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C9DD"
+   coords 0.251 1.678 -0.062
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C9EA"
+   coords 0.421 1.871 -0.058
+  }
+  GenericEntity {
+   ID "65C6DE0A9D65C768"
+   coords -0.175 0.036 0.042
+  }
+ }
+}
+GenericEntity : "{43ADCAF653A0EC1C}Prefabs/Props/Furniture/Sofa_02/Sofa_02_Base.et" {
+ coords 6965.65 41.316 3916.127
+ angles 0 125.996 0
+}
+GenericEntity : "{44000BB5A7F7EE0A}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/MilitaryBase_Hangar_Base_Base.et" {
+ coords 6967.102 41.139 3909.408
+ angles 0 35.996 0
+ {
+  GenericEntity : "{AA80A4EACA7C42D9}Prefabs/Structures/BuildingParts/Doors/DoorSet_Lighthouse_main_right.et" {
+   coords -0.405 -0.054 -7.221
+   angles 0 180 0
+   {
+    GenericEntity {
+     ID "611EC77D32FF0709"
+     components {
+      DoorComponent "{221C667A9F7D4B69}" {
+       i_doorLockChance 100
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{6E75DEA5094771F9}Prefabs/Props/Military/Compositions/US/ArsenalCubby2_CGQC.et" {
+ {
+  coords 6963.036 41.316 3910.531
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    ID "69103923810D903E"
+    coords -0.69 0.458 -0.993
+   }
+  }
+ }
+ {
+  coords 6964.456 41.316 3912.549
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    ID "69103923810D903E"
+    coords -0.688 0.458 -0.993
+   }
+  }
+ }
+ {
+  coords 6964.948 41.316 3913.255
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    ID "69103923810D903E"
+    coords -0.688 0.458 -0.994
+   }
+  }
+ }
+ {
+  coords 6965.416 41.316 3913.96
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    ID "69103923810D903E"
+    coords -0.688 0.458 -0.994
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{73FACBBD74481582}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/MedHescos_1.et" {
+ coords 6959.79 -0.001 3903.106
+ angles 0 125.996 0
+}
+GenericEntity : "{8A2EC35B7C52048E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Box2.et" {
+ coords 6965.535 41.316 3904.218
+ angles 0 -53.857 0
+}
+GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
+ coords 6968.932 41.316 3916.109
+ angles 0 30 0
+}
+GenericEntity : "{8D6DABA6D4A7F875}Prefabs/nogm/ArmoredLaptop.et" {
+ coords 6972.189 42.236 3913.932
+ angles 0 -138.551 0
+}
+GenericEntity : "{A23CA978495F3A45}Prefabs/nogm/ATGM_LaunchSystem.et" {
+ coords 6969.37 42.24 3916.221
+ angles -3.159 -54.611 0
+}
+SCR_DestructibleBuildingEntity : "{AC8A1CBE6D9CA553}Prefabs/Structures/Forest/DeerStands/DeerStand_01.et" {
+ coords 6972.881 0.35 3898.952
+ angles 0 -81.895 0
+}
+GenericEntity : "{AEA40783A4E50483}Prefabs/nogm/AR15-mod2.et" {
+ coords 6968.865 43.253 3916.706
+ angles 0 35.996 0
+}
+GenericEntity : "{B2CB435BD71F4C98}Prefabs/nogm/Crate_Medic.et" {
+ coords 6970.541 41.748 3915.2
+ angles 0 125.996 0
+}
+GenericEntity : "{B33D266B01B89267}Prefabs/Props/Military/Arsenal/ArsenalBoxes/Wall locker.BLE.et" {
+ coords 6970.548 41.317 3915.169
+ angles 0 35.996 0
+}
+$grp GenericEntity : "{B61A08FB644D2051}Prefabs/Props/Furniture/LampFluorescent/LampFluorescent_01_exterior.et" {
+ {
+  coords 6969.158 45.937 3912.924
+  angles 0 -53.833 0
+ }
+ {
+  coords 6966.503 45.937 3909.292
+  angles 0 -53.833 0
+ }
+ {
+  coords 6963.847 45.937 3905.659
+  angles 0 -53.833 0
+ }
+}
+$grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
+ {
+  coords 6965.4 41.316 3913.002
+  angles 0 124.879 0
+ }
+ {
+  coords 6969.052 41.316 3909.132
+  angles 0 124.879 0
+ }
+ {
+  coords 6964.141 41.316 3911.196
+  angles 0 124.879 0
+ }
+}
+GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
+ coords 6965.908 41.316 3902.301
+ angles 0 -54.493 0
+ {
+  $grp GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
+   {
+    coords 2.947 0 -0.035
+   }
+   {
+    coords 5.896 0 -0.041
+   }
+   {
+    coords 8.863 0 -0.032
+   }
+  }
+ }
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Armurerie"
+  }
+ }
+ coords 6960.055 41.093 3900.225
+ angles 0 36.109 0
+}
+GenericEntity : "{DE7A07D10B7BF25B}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" {
+ coords 6971.561 42.209 3914.422
+ angles 1.676 30.491 0
+}
+GenericEntity : "{DF64F75C84B426A6}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et" {
+ coords 6972.047 43.276 3914.42
+ angles 0 305.996 0
+}
+GenericEntity : "{E34ABE27DD798CE0}Prefabs/GM_Props/Locker3_mod2_nogm.et" {
+ coords 6973.133 41.316 3910.795
+ angles 0 125.996 0
+}
+GenericEntity : "{E6F7A58516F902E8}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et" {
+ coords 6971.285 42.287 3914.733
+ angles -90 -180 -180
+}
+GenericEntity : "{EEFA430FD6488D4E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/M200_Repair_Table.et" {
+ coords 6961.096 41.316 3909.53
+ angles 0 125.247 0
+ {
+  GenericEntity {
+   ID "654B03E884EA045F"
+   coords -0.781 0.938 -0.139
+  }
+  GenericEntity {
+   ID "654B03E884EA04A2"
+   coords -1.394 0.938 -0.155
+  }
+  GenericEntity {
+   ID "654B03E884EA0473"
+   coords -0.374 1.011 0.135
+  }
+  GenericEntity {
+   ID "654B03E884EA0482"
+   coords -1.075 -0.009 0.099
+  }
+  GenericEntity {
+   ID "654B03E884EA0452"
+   coords -0.937 0.938 0.143
+  }
+  GenericEntity {
+   ID "654B03E884EA0491"
+   coords 1.087 -0.009 0.017
+  }
+  GenericEntity {
+   ID "654B03E884EA032A"
+   coords 0.035 0.939 0.02
+  }
+  GenericEntity {
+   ID "654B03E884EA04CD"
+   coords 1.31 0.938 -0.132
+  }
+  GenericEntity {
+   ID "654B03E884EA04B3"
+   coords -1.08 0.411 0.134
+  }
+  GenericEntity {
+   ID "654B03E884EA04E0"
+   coords 0 -0.009 -0.001
+  }
+ }
+}
