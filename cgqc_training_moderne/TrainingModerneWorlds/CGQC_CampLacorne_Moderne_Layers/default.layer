@@ -149,3 +149,23 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
   }
  }
 }
+$grp SCR_ChimeraCharacter : "{F90692C108D117A7}Prefabs/Characters/bonz/E_bonz_UnitLoadout.et" {
+ {
+  components {
+   bonz_UnitLoadoutComponent "{671B5177F4A8503C}" {
+    m_sLoadoutName "Training_Rifleman"
+   }
+  }
+  coords 6937.741 41.122 3937.607
+  angles 0 -146.374 0
+ }
+ {
+  components {
+   bonz_UnitLoadoutComponent "{671B5177F4A8503C}" {
+    m_sLoadoutName "Training_Instructeur"
+   }
+  }
+  coords 6936.94 41.122 3938.206
+  angles 0 -146.374 0
+ }
+}

@@ -1,13 +1,6 @@
 SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
-  RandomGearComponent "{68AAF221635F9889}" {
-   m_WaistConfig SCR_GearPoolConfig "{690C2328F3D44BE6}" {
-    m_aGearPool {
-     "{D0E84652C9ACA933}Assets/Characters/Belts/Belt_Ronin/ShutoBelt_Simunition.et"
-    }
-   }
-  }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     IconSetName "EditableEntity_Character_Unnarmed"
@@ -23,6 +16,9 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
    Slots {
     LoadoutSlotInfo Vest {
      Prefab "{145E7DDE09046841}Prefabs/Characters/Vests/JPC/Vest_MFHybrid_MC_Simunition_Student.et"
+    }
+    LoadoutSlotInfo Waist {
+     Prefab ""
     }
    }
   }

@@ -15,13 +15,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     }
    }
   }
-  RandomGearComponent "{68AAF221635F9889}" {
-   m_WaistConfig SCR_GearPoolConfig "{690C2328F3D44BE6}" {
-    m_aGearPool {
-     "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
-    }
-   }
-  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{9C97B50CC5DEBE40}Prefabs/Weapons/Rifles/Rifle_AR15_115_base.et"
   }
@@ -47,6 +40,9 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     LoadoutSlotInfo Ears {
      Prefab "{F85339DBC07A1156}Prefabs/Clothing/CDD_Comtac7G.et"
+    }
+    LoadoutSlotInfo Waist {
+     Prefab "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
     }
    }
   }
