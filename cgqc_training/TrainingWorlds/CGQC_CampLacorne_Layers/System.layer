@@ -6,10 +6,10 @@ SCR_MapEntity MapEntity1 : "{731564B66F91B107}Prefabs/World/Game/MapEntity.et" {
 SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
  components {
   SCR_TimeAndWeatherHandlerComponent "{69151762BD4FC63B}" {
-   m_iStartingHours 1
+   m_iStartingHours 5
+   m_iStartingMinutes 30
    m_iRangeHoursStart 6
    m_iRangeHoursEnd 17
-   m_bRandomStartingWeather 1
    m_bRandomWeatherChanges 1
    m_bDateOverride 1
    m_iDay 10
