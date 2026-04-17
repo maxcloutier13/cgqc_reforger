@@ -9,6 +9,8 @@ SCR_ChimeraCharacter : "{5F176C7DF71EC94A}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Jacket {
      Prefab "{A722676E7175F8E0}Prefabs/Characters/Uniforms/Tshirts/CGQC_Instructor_Tshirt.et"
     }
+    LoadoutSlotInfo Pants {
+    }
     LoadoutSlotInfo Vest {
      Prefab "{5BBC2496A856AAFF}Prefabs/Characters/Vests/JPC/Vest_MFHybrid_MC_Simunition_Instructor.et"
     }

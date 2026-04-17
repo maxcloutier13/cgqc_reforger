@@ -23,7 +23,7 @@ GenericEntity {
       FOV 15
       AspectRatio 1
       PreviewWornModel 1
-      PreviewModel "{70FEAECAD6EF1F29}Assets/Characters/Clothing/Bison Belt/Bison_belt_Item.xob"
+      PreviewModel "{15A78064CEE0C93A}Assets/Characters/Belts/Belt_Ronin/TyrBelt.xob"
      }
      RHS_CustomAttributes "{69144A0FFAA18737}" {
       m_sCompatibleSlotNames {
