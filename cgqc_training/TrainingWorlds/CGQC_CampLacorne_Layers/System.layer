@@ -8,8 +8,11 @@ SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Ed
   SCR_TimeAndWeatherHandlerComponent "{69151762BD4FC63B}" {
    m_iStartingHours 5
    m_iStartingMinutes 30
-   m_iRangeHoursStart 6
-   m_iRangeHoursEnd 17
+   m_bRandomStartingDaytime 1
+   m_bRandomStartingDaytimeRange 1
+   m_iRangeHoursStart 0
+   m_iRangeHoursEnd 0
+   m_iRangeMinutesEnd 10
    m_bRandomWeatherChanges 1
    m_bDateOverride 1
    m_iDay 10

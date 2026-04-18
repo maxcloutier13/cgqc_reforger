@@ -64,8 +64,3 @@ $grp StaticModelEntity : "{BB64FBA6986C62F7}Prefabs/Structures/BuildingParts/Ent
   angles 0 -90 0
  }
 }
-SCR_DestructibleBuildingEntity : "{FD1CE2903D41D4A7}Prefabs/Structures/Walls/Concrete/ConcreteRetainingWall_01/ConcreteRetainingWall_01_8m.et" {
- coords 4600.115 27.556 2680.772
- angles 0 0 0
- scale 1.3
-}
