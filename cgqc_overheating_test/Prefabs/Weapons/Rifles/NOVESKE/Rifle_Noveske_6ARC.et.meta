@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{86CB19FC0BB124D8}Prefabs/Weapons/Rifles/NOVESKE/Rifle_Noveske_6ARC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
