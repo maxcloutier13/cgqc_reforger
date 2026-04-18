@@ -30,7 +30,7 @@ class CGQC_TargetHitEffect : BaseProjectileEffect
 		float distance = vector.Distance(localPlayer.GetOrigin(), pHitEntity.GetOrigin()) - 1.0;
 
 		string msg = string.Format(
-			"Distance: %1 m  |  Vélocité: %2 m/s",
+			"Distance: %1 m  |  Vélocité@Impact: %2 m/s",
 			Math.Round(distance).ToString(),
 			Math.Round(speed).ToString()
 		);

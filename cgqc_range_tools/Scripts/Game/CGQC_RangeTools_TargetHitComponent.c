@@ -3,10 +3,6 @@
 // ============================================================
 
 
-// ----------------------------------------------------------------
-// BaseProjectileEffect - fires CLIENT-SIDE on every bullet hit.
-// Shows per-hit hint locally. No RPC needed.
-// ----------------------------------------------------------------
 class CGQC_RangeTools_TargetHitEffect : BaseProjectileEffect
 {
 	override void OnEffect(IEntity pHitEntity, inout vector outMat[3], IEntity damageSource, notnull Instigator instigator, string colliderName, float speed)
@@ -545,7 +541,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		string hh = hour.ToString();         if (hour < 10)        hh = "0" + hh;
 		string mn = minute.ToString();       if (minute < 10)      mn = "0" + mn;
 		int distRounded = (int)shotDistM;
-		string datetime = yy + mm + dd + " - " + hh + ":" + mn + " - Dist: " + distRounded.ToString() + "m";
+		string datetime = yy + mm + dd + " - " + hh + ":" + mn + " - Dist: " + distRounded.ToString() + "m - Tgt:IPSC";
 
 		string nl  = "\n";
 		string sep = "--------------------------------" + nl;
@@ -580,7 +576,7 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 		}
 
 		r = r + sep;
-		r = r + hitCount.ToString() + " tirs  | Vel. Moy: " + velAvgMs.ToString() + " m/s | " + velAvgFts.ToString() + " ft/s" + nl;
+		r = r + hitCount.ToString() + " tirs  | MuzzleVel. Moy: " + velAvgMs.ToString() + " m/s | " + velAvgFts.ToString() + " ft/s" + nl;
 		r = r + "Min: " + velMinMs.ToString() + " m/s | Max: " + velMaxMs.ToString() + " m/s" + nl;
 		r = r + "Spread: " + extSpread.ToString() + " m/s | Ecart type: " + stdDev.ToString() + " m/s" + nl;
 
@@ -626,34 +622,46 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 
 	override protected void OnDamage(notnull BaseDamageContext damageContext)
 	{
-		super.OnDamage(damageContext);
-
-		RplComponent rpl = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
-		if (rpl && rpl.IsProxy()) return;
-
-		vector impactPos = damageContext.hitPosition;
-		float velocity   = damageContext.impactVelocity.Length();
-
-		int playerID = -1;
-		Instigator instigator = damageContext.instigator;
-		if (instigator)
-		{
-			IEntity instigEnt = instigator.GetInstigatorEntity();
-			if (instigEnt)
-			{
-				playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(instigEnt);
-				if (playerID <= 0)
-				{
-					IEntity parent = instigEnt.GetParent();
-					if (parent) playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(parent);
-				}
-			}
-		}
-
-		CGQC_RangeTools_TargetHitComponent hitComp =
-			CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
-		if (hitComp)
-			hitComp.RegisterHit(playerID, velocity, impactPos);
+	    super.OnDamage(damageContext);
+	
+	    RplComponent rpl = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
+	    if (rpl && rpl.IsProxy()) return;
+	
+	    vector impactPos = damageContext.hitPosition;
+	
+	    int playerID = -1;
+	    Instigator instigator = damageContext.instigator;
+	    if (instigator)
+	    {
+	        IEntity instigEnt = instigator.GetInstigatorEntity();
+	        if (instigEnt)
+	        {
+	            playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(instigEnt);
+	            if (playerID <= 0)
+	            {
+	                IEntity parent = instigEnt.GetParent();
+	                if (parent) playerID = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(parent);
+	            }
+	        }
+	    }
+	
+	    float muzzleVelocity = 0.0;
+	    if (playerID > 0)
+	    {
+	        IEntity shooterChar = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
+	        if (shooterChar)
+	        {
+	            CGQC_RangeTools_ChronographComponent chrono = CGQC_RangeTools_ChronographComponent.Cast(
+	                shooterChar.FindComponent(CGQC_RangeTools_ChronographComponent));
+	            if (chrono)
+	                muzzleVelocity = chrono.GetLastMuzzleVelocity();
+	        }
+	    }
+	
+	    CGQC_RangeTools_TargetHitComponent hitComp =
+	        CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
+	    if (hitComp)
+	        hitComp.RegisterHit(playerID, muzzleVelocity, impactPos);
 	}
 }
 
