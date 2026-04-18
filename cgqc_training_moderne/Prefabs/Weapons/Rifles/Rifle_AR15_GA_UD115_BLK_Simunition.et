@@ -47,7 +47,7 @@ GenericEntity : "{2489F63D9ABBE1D4}Prefabs/Weapons/Rifles/M4A1/Variants/ION/Rifl
        }
       }
      }
-     MagazineTemplate "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+     MagazineTemplate ""
     }
    }
   }

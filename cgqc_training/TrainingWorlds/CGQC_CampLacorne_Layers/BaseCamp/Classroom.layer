@@ -49,7 +49,7 @@ $grp GenericEntity : "{313CC1F195E06A6E}Prefabs/Props/Furniture/TVSet_01.et" {
   angles 0 128.11 0
  }
 }
-$grp GenericEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+$grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
  {
   coords 6935.275 41.122 3949.957
   angles 0 -53.757 0
@@ -240,10 +240,6 @@ GenericEntity : "{58B227C19640BC67}Prefabs/GM_Props/tablet1_GM.et" {
 GenericEntity : "{65B6E58379AC6DD3}Prefabs/GM_Props/investigationboard.et" {
  coords 6947.2 41.122 3946.365
  angles 0 -144.021 0
-}
-GenericEntity : "{68FAE36C8EB96E14}Prefabs/BBOC-MissionProps/Projetor_Portatil.et" {
- coords 6939.51 42.022 3950.494
- angles 0 126.873 0
 }
 GenericEntity : "{6A8B7BD2A7BF0B93}Prefabs/Structures/BuildingParts/Lights/LightIndustrial_03.et" {
  coords 7308.005 108.986 3919.165

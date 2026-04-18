@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{E2D694F5A2EAB512}Prefabs/Weapons/Ammo/CHECK_Ammo_545x39_Simunition.et"
+ Name "{6E2BB64764E3BE9B}Prefabs/Characters/Core/DefaultPlayerController.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
