@@ -23,12 +23,21 @@ $grp GenericEntity : "{0597ADC954852985}Prefabs/CGQC_Targets_Zero.et" {
     }
    }
   }
-  coords 131 1 124
+  coords 131 1 2.5
  }
  {
-  coords 131 1 124
+  coords 131 1 2.5
  }
 }
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ components {
+  SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+   Enabled 0
+  }
+ }
+ coords 124.316 1 8.157
+ angles 0 90 0
+}
 GenericEntity : "{F25A5E8C9947F182}Prefabs/CGQC_Targets_GBRS.et" {
- coords 130 1 124
+ coords 130 1 2.5
 }

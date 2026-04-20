@@ -1,5 +1,5 @@
 MatPBRBasic {
  RoughnessScale 2
- BCRMap "{34BCC536399D498C}Textures/Target/CGQC_Targets_zero.edds"
+ BCRMap "{DBC9FD2E4EBE5207}Textures/Target/CGQC_Targets_zero_s.edds"
  NormalPower 0.5
 }

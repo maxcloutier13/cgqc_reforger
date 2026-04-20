@@ -1,0 +1,76 @@
+SCR_FiringRangeController : "{D7C6CCC78CF6D38D}Prefabs/Structures/Military/Training/RangeCP_01/RangeCP_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{AD51E776526588CC}Assets/Structures/Military/Training/RangeCP_01/RangeCP_01.xob"
+  }
+  ActionsManagerComponent "{55BCF8E9FC76BCC4}" {
+   ActionContexts {
+    UserActionContext "{55BCF8E9FDB5A3EB}" {
+     ContextName "Default"
+    }
+   }
+   additionalActions {
+    SCR_SetTargetsModeUserAction "{55BCF8E8CBDDE169}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_SetTargetDistanceUpUserAction "{55BCF8EAB989353A}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_SetTargetDistanceDownUserAction "{55C49C5D1D61D48A}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_AddTarget "{55C49C5D0A4EC523}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_RemoveTarget "{55C49C5D03071DED}" {
+     ParentContextList {
+      ""
+     }
+    }
+    CGQC_RangeTools_ZeroMoveCloserAction "{6928259BA4394257}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{6928259BBB944E50}" {
+      Name "Check"
+     }
+     ActionTitle "Check"
+     m_sTargetEntityName "zero1"
+    }
+    CGQC_RangeTools_ZeroMoveAwayAction "{6928259BA21CED7F}" {
+     ParentContextList {
+      "DistanceUp"
+     }
+     UIInfo SCR_ActionUIInfo "{6928259BB61D5CF3}" {
+      Name "Move Away"
+      Description "R"
+     }
+     ActionTitle "Move Away"
+     m_sTargetEntityName "zero1"
+    }
+    CGQC_RangeTools_ZeroMoveCloserAction "{69282598BEADFC10}" {
+     ParentContextList {
+      "DistanceDown"
+     }
+     UIInfo SCR_ActionUIInfo "{69282598BEADFCA5}" {
+      Name "Move Closer"
+      Description "R"
+     }
+     ActionTitle "Move Closer "
+     m_sTargetEntityName "zero1"
+    }
+   }
+  }
+  RplComponent "{6928258EBD58E87C}" {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+SCR_FiringRangeController : "{03A26D66AD19AA45}Prefabs/Structures/Military/Training/RangeCP_01/RangeCP_Zero.et" {
+ coords 99.616 0.607 239.748
+}
+$grp GenericEntity : "{0597ADC954852985}Prefabs/CGQC_Targets_Zero.et" {
+ zero1 {
+  coords 100 1 238.84
+ }
+ {
+  coords 98.019 1 236.603
+ }
+}
+GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
+ coords 100 1 239.638
+}
+GenericEntity : "{F25A5E8C9947F182}Prefabs/CGQC_Targets_GBRS.et" {
+ coords 97.234 1 237.828
+}

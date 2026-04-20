@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{34BCC536399D498C}Textures/Target/CGQC_Targets_zero.edds"
+ Name "{DBC9FD2E4EBE5207}Textures/Target/CGQC_Targets_zero_s.edds"
  Configurations {
   PNGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
    FormatCompress Best

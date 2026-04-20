@@ -1,0 +1,55 @@
+SCR_ChimeraCharacter : "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/OPFOR/USSR_Army/Campaign_USSR_Player.et" {
+ ID "5242B7AE8EF4D733"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{03810BEF182ADA0B}Prefabs/Items/Equipment/Binoculars/Rangefinder_Vector21.et"
+      }
+     }
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{01146792833C0877}Prefabs/Weapons/Rifles/M700/Rifle_M700_FDE.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate ""
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{54A68D64D7F9124F}" {
+     PrefabsToSpawn {
+      "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et"
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5723}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5732}" {
+     PrefabsToSpawn {
+      "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{03C6EB1EBD25AA33}Prefabs/Items/Equipment/BallisticTable/ACE_BallisticTable_Mrads.et" "{4EE236EE814D3584}Prefabs/Items/Equipment/BallisticTable/ACE_BallisticTable_WpMils.et"
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5735}" {
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5738}" {
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5739}" {
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+   }
+  }
+ }
+}
