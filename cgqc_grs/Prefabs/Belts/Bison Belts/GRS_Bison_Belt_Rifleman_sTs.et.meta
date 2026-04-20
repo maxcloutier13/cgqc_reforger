@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FB0F9615D9BC8E57}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_sTs.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

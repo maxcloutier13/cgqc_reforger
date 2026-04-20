@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8ED4D8B8E3AD91D7}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Grenadier_sTs.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

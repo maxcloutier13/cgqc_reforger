@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{015E3E3E0D9212B1}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Rifleman_RG_V1_sTs.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
