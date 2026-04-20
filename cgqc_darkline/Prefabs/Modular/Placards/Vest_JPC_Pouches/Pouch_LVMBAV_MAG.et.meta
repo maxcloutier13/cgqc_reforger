@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EAC771101285D4A8}Prefabs/Modular/Placards/Vest_JPC_Pouches/Pouch_LVMBAV_MAG.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

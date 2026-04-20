@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

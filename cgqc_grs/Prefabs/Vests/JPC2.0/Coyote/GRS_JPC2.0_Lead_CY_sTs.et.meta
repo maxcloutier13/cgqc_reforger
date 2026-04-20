@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{23F5664966318D12}Prefabs/Vests/JPC2.0/Coyote/GRS_JPC2.0_Lead_CY_sTs.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

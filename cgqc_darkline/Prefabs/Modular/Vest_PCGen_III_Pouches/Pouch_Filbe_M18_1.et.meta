@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DA93E659C775B0B9}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_Filbe_M18_1.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

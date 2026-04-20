@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4AB433D7A72B9D26}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_SWKKnifeHBelt_L.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,28 @@
+GenericEntity : "{F9E6107C47C1B088}Prefabs/Weapons/Core/LongRangeRifle_Base.et" {
+ ID "5260C45AAAA407F4"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{68A9430325FD6DF4}" {
+     AttachmentSlot InventoryStorageSlot Optics {
+      Prefab "{E9E4B001C12E71F8}Prefabs/Weapons/Attachments/Optics/Scopes/Optic_SchmidtBender_PMII_5-25x/Optic_SchmidtBender_PMII_5-25x_base.et"
+     }
+    }
+    AttachmentSlotComponent "{68AAEAD4102AF522}" {
+     AttachmentSlot InventoryStorageSlot RisR {
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{68AACA566849B739}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{B9CC8A5009886534}Prefabs/Weapons/Attachments/Muzzle/MRAD/Suppressor_MRAD_base.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

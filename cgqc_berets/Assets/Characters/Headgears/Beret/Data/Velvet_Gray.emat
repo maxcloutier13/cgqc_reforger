@@ -1,0 +1,5 @@
+MatPBRBasic {
+ BCRMap "{76EAD8B4EEC22458}Assets/Characters/Headgears/Beret/Data/Textures/gray_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{B63408077B3C0EB0}Assets/Characters/Headgears/Beret/Data/Textures/VeloursBeret_NMO.edds"
+}

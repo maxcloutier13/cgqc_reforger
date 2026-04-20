@@ -1,0 +1,12 @@
+GenericEntity : "{09DEA8153A0C312D}Prefabs/Characters/Core/EquipmentPart_Base.et" {
+ ID "50E0B40D7407B664"
+ components {
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   InitialStorageSlots {
+    RHS_MorphedEquipmentStorageSlot pouch0 {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

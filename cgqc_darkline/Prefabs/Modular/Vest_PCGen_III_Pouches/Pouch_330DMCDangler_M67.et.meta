@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FD459570A71A0983}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_330DMCDangler_M67.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,22 @@
+GameEntity : "{ECB3FAA33C663FD6}Scopes/Schmidt and Bender PMII 5-25x56/Prefabs/Optic_SHMITTBENDERPM2525.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  ActionsManagerComponent "{5284E0EFF569AD07}" {
+   additionalActions {
+    RHS_SlideAttachmentAction "{6926F2185BBB4F50}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo UIInfo "{6926F2185BBB4062}" {
+      Name "#RHS-Action_Slide"
+     }
+     Duration -1
+     PerformPerFrame 1
+     m_fAdjustmentStep 0.01
+     m_bManualAdjustment 1
+     m_fBaseHalfLength 0.05
+    }
+   }
+  }
+ }
+}

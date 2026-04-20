@@ -1,0 +1,18 @@
+SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Base_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Soldat"
+    Description "Soldat en formation"
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
+    }
+   }
+  }
+ }
+}

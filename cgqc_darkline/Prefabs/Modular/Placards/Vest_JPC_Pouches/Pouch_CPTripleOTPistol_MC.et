@@ -1,0 +1,24 @@
+GenericEntity : "{14BD08A15E2AB6FD}Prefabs/Characters/Vests/Vest_PCGen_III_Pouches/Pouch_OpenTop_M27_1_pouch.et" {
+ ID "50E0B40D7407B664"
+ components {
+  RHS_EquipmentStorageComponent "{5222CB03D1147687}" {
+   InitialStorageSlots {
+    RHS_MorphedEquipmentStorageSlot pouch0 {
+     Prefab ""
+    }
+    RHS_MorphedEquipmentStorageSlot pouch1 {
+     Prefab ""
+    }
+    RHS_MorphedEquipmentStorageSlot M4Pouch0 {
+     Prefab ""
+    }
+    RHS_MorphedEquipmentStorageSlot M4Pouch1 {
+     Prefab ""
+    }
+    RHS_MorphedEquipmentStorageSlot M4Pouch2 {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

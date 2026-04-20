@@ -1,0 +1,36 @@
+GenericEntity : "{BEC9710797A5C593}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_Base.et" {
+ ID "5111E74D4E7A8DB6"
+ components {
+  MeshObject "{5111E74D5E891458}" {
+   Object "{0BC83CA17895C1EB}Assets/Structures/BuildingsParts/Electrical/KillSwitch/KillSwitch_01.xob"
+  }
+  RigidBody "{5111E74C06F5C1E1}" {
+   ResponseIndex "HugeDestructible"
+  }
+  ActionsManagerComponent "{691A32E98661E6EF}" {
+   ActionContexts {
+    UserActionContext "{691A32E9B8B7662E}" {
+     ContextName "Default"
+     Position PointInfo "{691A32E9BC7A0C54}" {
+      Offset 0 0 0.0972
+     }
+     LineOfSightCheck 1
+    }
+   }
+   additionalActions {
+    CGQC_TargetCycleAction "{691A32E9AD9C05B3}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{691A32E9A3DA3CFF}" {
+      Name "Distance"
+     }
+     Duration 0.2
+    }
+   }
+  }
+  RplComponent "{58FC7CAC2034C3E2}" {
+   Enabled 1
+  }
+ }
+}

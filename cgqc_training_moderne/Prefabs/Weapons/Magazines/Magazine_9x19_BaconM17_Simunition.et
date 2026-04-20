@@ -1,0 +1,40 @@
+GenericEntity : "{DFFBF5F097FCF797}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Base.et" {
+ ID "39D3A791BB854198"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name " 21rnd M17 Simunition Magazine"
+     Description "SIMUNITION"
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWellBaconM17 "{39D3A791ABFFFA3C}" {
+   }
+   MaxAmmo 21
+   AmmoConfig "{76301B12952D2621}Configs/Weapons/Ammo/Ammo_9x19_Simunition.conf"
+   AmmoMapping + {
+    0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{9FEB0E16EBFC29B3}Assets/BaconM17/m17_mag.xob"
+   Materials {
+    MaterialAssignClass "{69144A0E49EE257A}" {
+     SourceMaterial "Sig_Sauer_P320_M17"
+     AssignedMaterial "{96419172A5321173}Assets/BaconM17/data/Sig_Sauer_P320_M17_Simunition.emat"
+    }
+   }
+  }
+  ActionsManagerComponent "{F092E6B0537754FD}" {
+   additionalActions {
+    SCR_AttachItemFromInventoryAction "{5A1E58F7D9256374}" {
+     ParentContextList {
+      "default"
+     }
+    }
+   }
+  }
+ }
+}

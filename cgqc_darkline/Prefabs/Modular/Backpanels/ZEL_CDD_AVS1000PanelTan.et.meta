@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CEBCBB801DA58F7F}Prefabs/Modular/Backpanels/ZEL_CDD_AVS1000PanelTan.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

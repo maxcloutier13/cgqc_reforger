@@ -1,0 +1,282 @@
+$grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+ {
+  components {
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 4635.165 37.266 2653.318
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -25.157 0 -0.002
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -18.85 0 -0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -12.451 0 -0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -5.699 0 -0.002
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 7.342 0 -0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -28.403 0 0
+    }
+   }
+  }
+ }
+ {
+  components {
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 4623.136 37.022 2644.09
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 19.792 0 -0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 12.451 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 6.751 0 -0.002
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -6.398 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -12.706 0 -0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -15.953 0 0
+    }
+   }
+  }
+ }
+ {
+  components {
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 4642.526 37.838 2662.941
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -32.499 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -7.341 0 0.001
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -13.042 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -26.192 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 0 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -19.793 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -35.745 0 0
+    }
+   }
+  }
+ }
+ {
+  components {
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 4622.733 38.393 2671.865
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 6.751 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 19.793 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -6.399 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -12.706 0 0
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords -15.952 0 0.032
+    }
+    {
+     components {
+      RplComponent "{58FC7CAC2034C3E2}" {
+       Enabled 1
+      }
+     }
+     coords 12.452 0 0
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{C1E195E625940F80}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_03.et" {
+ components {
+  CGQC_LightSwitchComponent "{69246C9F018C2807}" {
+   m_fRadius 50
+  }
+  ActionsManagerComponent "{69246C9E8FA70AE6}" {
+   ActionContexts {
+    UserActionContext "{69246C9E8D36E7A5}" {
+     ContextName "Default"
+     Position PointInfo "{69246C9E22020AA5}" {
+      Offset 0 0 0.0732
+     }
+     Omnidirectional 0
+    }
+   }
+   additionalActions {
+    CGQC_LightSwitchAction "{69246C9EE506B84D}" {
+     ParentContextList {
+      "Default"
+     }
+     ActionTitle "Interrupteur"
+     Duration 0.5
+    }
+   }
+  }
+  RplComponent "{58FC7CAC2034C3E2}" {
+   Enabled 1
+  }
+ }
+ coords 4645.497 26.125 2654.337
+ angles 0 -90 0
+}

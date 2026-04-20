@@ -4,7 +4,5 @@ SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionMana
  Factions {
   SCR_Faction "{68B9080FDF559072}" : "{FC76EA6983CAA3EE}Configs/Factions/CGQC.conf" {
   }
-  SCR_Faction "{68F8F75D1A13D187}" : "{8395C4BF6CE7BCD1}Configs/Factions/CGQC_UPO.conf" {
-  }
  }
 }

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{160664C8E54A8DE3}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_Conflict_CGQC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,20 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ coords 129.595 1 126.396
+ angles 0 -90 0
+}
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 129.595 1 128.013
+ angles 0 -90 0
+}
+GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et" {
+ coords 129.595 1 124.709
+ angles 0 -90 0
+}
+GenericEntity : "{B53B98CEA2D72735}Prefabs/Props/Military/Compositions/FIA/ArsenalBox_FIA.et" {
+ coords 129.595 1 129.588
+ angles 0 -90 0
+}
+GenericEntity : "{F542F974956C255F}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_CIV.et" {
+ coords 129.595 1 131.223
+ angles 0 -90 0
+}

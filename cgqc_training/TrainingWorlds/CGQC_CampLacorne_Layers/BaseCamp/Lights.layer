@@ -1,0 +1,89 @@
+$grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+ {
+  coords 6937.29 51.384 3949.407
+  angles 0 -144.495 0
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     coords -10.5 0 0
+    }
+    {
+     coords 0 0 0
+    }
+    {
+     coords -21.499 0 0
+    }
+    {
+     coords -15.999 0 0
+    }
+    {
+     coords -26.999 0 0
+    }
+    {
+     coords -32.499 0 0
+    }
+    {
+     coords -5.5 0 0.001
+    }
+   }
+  }
+ }
+ {
+  coords 6941.772 51.505 3937.611
+  angles 0 -144.495 0
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     coords 10.499 0 0.001
+    }
+    {
+     coords -11 0 0.001
+    }
+    {
+     coords -5.5 0 0.001
+    }
+    {
+     coords -16.5 0 0
+    }
+    {
+     coords -22 0 0
+    }
+    {
+     coords 10.499 0 0.001
+    }
+    {
+     coords 4.998 0 0.002
+    }
+   }
+  }
+ }
+ {
+  coords 6928.869 51.884 3937.603
+  angles 0 -144.495 0
+  {
+   $grp GenericEntity : "{8036528D341B6983}Prefabs/Structures/BuildingParts/Lights/LampIndustrial_02_HF_Lights.et" {
+    {
+     coords -21.499 0 0.001
+    }
+    {
+     coords -15.999 0 0.001
+    }
+    {
+     coords -26.999 0 -0.001
+    }
+    {
+     coords -32.499 0 0
+    }
+    {
+     coords 0 0 0
+    }
+    {
+     coords -5.5 0 0.001
+    }
+    {
+     coords -10.499 0 -0.001
+    }
+   }
+  }
+ }
+}

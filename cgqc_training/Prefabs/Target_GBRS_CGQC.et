@@ -1,0 +1,50 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  CGQC_TargetHitComponent "{691613C6318B4D7D}" {
+  }
+  MeshObject "{6164BAFDFEF59A09}" {
+   Materials {
+    MaterialAssignClass "{691613C71CD23D59}" {
+     SourceMaterial "PRP_Target"
+     AssignedMaterial "{53CD5566FBC8B4B1}Textures/Target/TargetGBRS.emat"
+    }
+   }
+  }
+  SCR_EditableEntityComponent "{6168C78EA5B8B40D}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{6168C78C54949280}" {
+    Name "(Target_GBRS_CGQC)"
+    m_Image ""
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels {
+     ENTITYTYPE_OBJECT SIZE_S
+    }
+   }
+  }
+  ActionsManagerComponent "{691613C72701395F}" {
+   ActionContexts {
+    UserActionContext "{691613C7D89E54BB}" {
+     ContextName "TargetOptions"
+     Position PointInfo "{691613C79791A821}" {
+     }
+    }
+   }
+   additionalActions {
+    CGQC_TargetSelfResetAction "{691613C7D553DBAF}" {
+     ParentContextList {
+      "TargetOptions"
+     }
+     UIInfo SCR_ActionUIInfo "{691613C786BBDC7C}" {
+      Name "Reset Target"
+      Description "Reset la patente"
+     }
+     ActionTitle "Reset"
+     VisibilityRange 2
+     Duration 1
+     m_sRespawnPrefab "{C2A0511F9FB7AF6E}Prefabs/Target_GBRS_CGQC.et"
+    }
+   }
+  }
+ }
+}

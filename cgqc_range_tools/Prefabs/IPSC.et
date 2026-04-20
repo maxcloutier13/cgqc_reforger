@@ -1,0 +1,53 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  CGQC_RangeTools_TargetDamageManager "{691760C1B4C06A50}" {
+   "Additional hit zones" {
+    SCR_HitZone Main_Hitzone {
+     ColliderNames {
+      "UBX_target_itself"
+     }
+     MaxHealth 1000
+    }
+   }
+  }
+  CGQC_RangeTools_TargetHitComponent "{691760C1B3F8DE75}" {
+   m_sPrefabPath "{98F8FCFE93E5D499}Prefabs/IPSC.et"
+  }
+  CGQC_TargetMoverComponent "{691A301C6DD9512B}" {
+   m_sRespawnPrefab "{98F8FCFE93E5D499}Prefabs/IPSC.et"
+  }
+  ActionsManagerComponent "{691760C1AAC72A60}" {
+   ActionContexts {
+    UserActionContext "{691760C1ACF3C98D}" {
+     ContextName "Default"
+     Position PointInfo "{691760C1A3B8D8AD}" {
+      Offset 0 0.9108 0
+     }
+    }
+   }
+   additionalActions {
+    CGQC_RangeTools_CheckTargetAction "{691760C1A42D19C7}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{691760C05B73532E}" {
+      Name "Check"
+     }
+     VisibilityRange 2
+    }
+    CGQC_RangeTools_ResetTargetAction "{691760C1A63100ED}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{691760C048569E99}" {
+      Name "Reset"
+     }
+     VisibilityRange 2
+     Duration 0.5
+     "Sort Priority" 1
+    }
+   }
+  }
+ }
+}

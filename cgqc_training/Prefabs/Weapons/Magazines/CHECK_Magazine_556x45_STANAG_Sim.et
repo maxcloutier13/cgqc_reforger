@@ -1,0 +1,31 @@
+GenericEntity : "{11B9CC1FB4AEE740}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "5.56 Simunition Mag"
+     Description "#AR-Magazine_STANAG_M193_Description"
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "#AR-Magazine_STANAG_Name"
+    Description "#AR-Magazine_STANAG_M193_Description"
+   }
+   AmmoConfig "{D80ED95D82C22CE0}BLUFOR_Sims.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{69144A0D27A1F723}" {
+     SourceMaterial "Magazine_30rnd_STANAG"
+     AssignedMaterial "{99645362438B1672}Prefabs/Weapons/Magazines/m4.emat"
+    }
+   }
+  }
+ }
+}

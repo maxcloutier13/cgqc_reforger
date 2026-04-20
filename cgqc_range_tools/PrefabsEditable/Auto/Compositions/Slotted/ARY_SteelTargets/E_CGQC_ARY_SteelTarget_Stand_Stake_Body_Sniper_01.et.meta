@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{41F318B162BC7EF6}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

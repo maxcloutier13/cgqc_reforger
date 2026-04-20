@@ -1,0 +1,18 @@
+$grp SCR_ChimeraCharacter : "{F90692C108D117A7}Prefabs/Characters/bonz/E_bonz_UnitLoadout.et" {
+ {
+  coords 6954.03 41.122 3929.72
+  angles 0 -54.825 0
+ }
+ {
+  coords 6953.578 41.122 3929.078
+  angles 0 -54.825 0
+ }
+ {
+  coords 6954.5 41.122 3930.374
+  angles 0 -54.825 0
+ }
+ {
+  coords 6954.943 41.122 3931.003
+  angles 0 -54.825 0
+ }
+}

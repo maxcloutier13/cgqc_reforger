@@ -1,0 +1,29 @@
+GenericEntity : "{D429FF7E2C336A37}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  ActionsManagerComponent "{5D66ED1096104FD8}" {
+   ActionContexts {
+    UserActionContext "{69161BCE3CF43B13}" {
+     UIInfo UIInfo "{69161BCE22B5B80C}" {
+      Name "Reset"
+     }
+     ContextName "Reset"
+     Position PointInfo "{69161BCED9F09D21}" {
+     }
+    }
+   }
+   additionalActions {
+    CGQC_TargetSelfResetAction "{69161BCED7C78095}" {
+     ParentContextList {
+      "Reset"
+     }
+     UIInfo SCR_ActionUIInfo "{69161BCECACA1A88}" {
+      Name "Reset Target"
+     }
+     VisibilityRange 2
+     Duration 0.5
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,79 @@
+$grp GenericEntity {
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 5704.98 135 3037.121
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+    "faction affiliation" "CGQC"
+   }
+  }
+  coords 5712.864 135 3045.667
+ }
+}
+Vehicle M151A2_transport6 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 6566.277 14.375 4651.188
+ angles 0 -91.241 0
+}
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 6563.031 14.375 4631.012
+ angles 0 7.838 0
+}
+Vehicle Motorbike_US8 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ coords 6566.785 14.375 4648.762
+ angles 0 -96.93 0
+}
+$grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
+ {
+  coords 6562.854 14.375 4635.065
+  angles 0 -89.915 0
+  {
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+  }
+ }
+ {
+  coords 6617.825 14.375 4606.947
+  angles 0 -1.657 0
+  {
+   GenericEntity {
+    components {
+     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+      m_eSupportedArsenalItemTypes 1
+      m_eSupportedArsenalItemModes 254
+     }
+     SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 0.524 0.949 0.065
+    angles 0 0.274 0
+   }
+   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+    coords -1.007 0.947 -0.002
+    angles 0 144.48 0
+   }
+  }
+ }
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "CQB"
+  }
+ }
+ coords 6559.827 14.375 4634.299
+ angles 0 143.192 0
+}

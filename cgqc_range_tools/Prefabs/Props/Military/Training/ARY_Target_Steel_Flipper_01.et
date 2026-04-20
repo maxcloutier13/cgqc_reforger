@@ -1,0 +1,8 @@
+SCR_ARY_SteelPlateTargetFlip : "{C2C5390B06019FA5}Prefabs/Props/Military/Training/ARY_Target_Steel_Flipper_Base.et" {
+ ID "66086BE6C06BCF7A"
+ components {
+  CGQC_SteelTargetHitComponent "{691CD27B41130EAF}" {
+   m_sLabel "Direct dans le coeur!"
+  }
+ }
+}

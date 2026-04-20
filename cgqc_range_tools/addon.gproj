@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcrangetools"
+ GUID "691751795451761F"
+ TITLE "cgqc_range_tools"
+ Dependencies {
+  "58D0FB3206B6F859" "660AC9C37FC70020" "690F074CB22485DB" "6614B1FAE9694F8B"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

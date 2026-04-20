@@ -3,7 +3,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_PlayerArsenalLoadout "{68CA51CFAD8D489E}" {
    m_sLoadoutName "CGQC Saved Loadout"
-   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_old.et"
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
@@ -15,16 +15,6 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutName "Team Leader"
    m_sLoadoutResource "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et"
    m_sAffiliatedFaction "CGQC"
-  }
-  SCR_FactionPlayerLoadout "{68F8F75DEAC97B0D}" {
-   m_sLoadoutName "Student"
-   m_sLoadoutResource "{977A798176C46E8A}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_UPO_Student.et"
-   m_sAffiliatedFaction "CGQC_UPO"
-  }
-  SCR_FactionPlayerLoadout "{68F8F75DED70B77A}" {
-   m_sLoadoutName "Instructeur"
-   m_sLoadoutResource "{4EDB14BC2B971014}Prefabs/Characters/Factions/INDFOR/CGQC_UPO/Character_CGQC_UPO_Instructor.et"
-   m_sAffiliatedFaction "CGQC_UPO"
   }
  }
 }

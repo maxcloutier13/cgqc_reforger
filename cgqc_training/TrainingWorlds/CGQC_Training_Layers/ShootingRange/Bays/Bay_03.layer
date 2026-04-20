@@ -1,0 +1,85 @@
+GenericEntity bay3_target : "{98F8FCFE93E5D499}Prefabs/IPSC.et" {
+ coords 643.363 1.891 729.615
+ angles 0 90 0
+}
+$grp GenericEntity : "{FCD5B0DE50F886B7}Prefabs/Structures/BuildingParts/Eletrical/LightSwitch_04.et" {
+ {
+  components {
+   ActionsManagerComponent "{6903204D2C070332}" {
+    ActionContexts {
+     UserActionContext "{6903204DDBAF060C}" {
+      ContextName "switch"
+      Position PointInfo "{6903204DCC1A1E4C}" {
+       Offset 0 0 0.0784
+      }
+     }
+    }
+    additionalActions {
+     CGQC_TargetCycleAction "{6903204DF3894DA2}" {
+      ParentContextList {
+       "switch"
+      }
+      UIInfo SCR_ActionUIInfo "{6903204C41C45377}" {
+       Name "Distance"
+       Description "Change la distance de la cible"
+      }
+      ActionTitle "Distance"
+      VisibilityRange 2
+      Duration 0.2
+      m_sTargetEntityName "bay3_target"
+     }
+    }
+   }
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 646.138 3.01 728.72
+ }
+ {
+  components {
+   ActionsManagerComponent "{6903204A1A166D77}" {
+    ActionContexts {
+     UserActionContext "{6903204A1CABC4F0}" {
+      ContextName "switchCheck"
+      Position PointInfo "{6903204A16C346C2}" {
+       Offset 0 0 0.0784
+      }
+     }
+    }
+    additionalActions {
+     CGQC_TargetCheckAction "{6903204917A9E631}" {
+      ParentContextList {
+       "switchCheck"
+      }
+      UIInfo SCR_ActionUIInfo "{690320490B387EFA}" {
+       Name "Vérification"
+       Description "Check la cible de proche"
+      }
+      ActionTitle "Vérification"
+      VisibilityRange 2
+      "Sort Priority" -1
+      m_sTargetEntityName "bay3_target"
+     }
+     CGQC_TargetResetAction "{690320482C1ACFDE}" {
+      ParentContextList {
+       "switchCheck"
+      }
+      UIInfo SCR_ActionUIInfo "{690320570A6142F7}" {
+       Name "Reset"
+       Description "Reset la patente"
+      }
+      ActionTitle "Reset"
+      VisibilityRange 2
+      Duration 2
+      m_sTargetEntityName "bay3_target"
+     }
+    }
+   }
+   RplComponent "{58FC7CAC2034C3E2}" {
+    Enabled 1
+   }
+  }
+  coords 646.431 3.01 728.72
+ }
+}

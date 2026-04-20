@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "667611555BD37E1F"
+ components {
+  GRS_EquipmentStorageComponent "{66761157AB8AEC51}" {
+   InitialStorageSlots {
+    RHS_MorphedEquipmentStorageSlot Radio {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

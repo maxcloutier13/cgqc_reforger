@@ -1,0 +1,12 @@
+GenericEntity : "{145E7DDE09046841}Prefabs/Characters/Vests/JPC/Vest_MFHybrid_MC_Simunition_Student.et" {
+ ID "691453EF67DF06A8"
+ components {
+  BaseLoadoutClothComponent "{691453EF67DF07D2}" {
+   Slots {
+    LoadoutSlotInfo PouchL1 {
+     Prefab "{E836279FB1C9AC61}Prefabs/Modular/Placards/Pouch_CryeMBITR_MC_152.et"
+    }
+   }
+  }
+ }
+}

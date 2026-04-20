@@ -1,0 +1,13 @@
+Projectile {
+ ID "DA5C6308000CDEF2"
+ components {
+  ShellMoveComponent "{851AA4A2AE0A5691}" {
+   ProjectileEffects {
+    CGQC_SteelTargetHitEffect "{691CD2703211653D}" {
+    }
+    CGQC_RangeTools_TargetHitEffect "{691852C79616A07C}" {
+    }
+   }
+  }
+ }
+}

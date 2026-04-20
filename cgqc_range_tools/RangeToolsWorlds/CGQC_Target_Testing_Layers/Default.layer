@@ -1,0 +1,43 @@
+$grp GenericEntity : "{0597ADC954852985}Prefabs/CGQC_Targets_Zero.et" {
+ {
+  components {
+   ActionsManagerComponent "{69261B315EEC28FB}" {
+    ActionContexts {
+     UserActionContext "{69261B315C2CC807}" {
+      ContextName "Default"
+      Position PointInfo "{69261B315B8A193A}" {
+      }
+     }
+    }
+    additionalActions {
+     CGQC_RangeTools_ResetTargetAction "{69261B317B6FAEFD}" {
+      ParentContextList {
+       "Default"
+      }
+      UIInfo SCR_ActionUIInfo "{69261B31727BA28C}" {
+       Name "Reset"
+      }
+      ActionTitle "Reset"
+      Duration 0.2
+     }
+    }
+   }
+  }
+  coords 131 1 2.5
+ }
+ {
+  coords 131 1 2.5
+ }
+}
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ components {
+  SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+   Enabled 0
+  }
+ }
+ coords 124.316 1 8.157
+ angles 0 90 0
+}
+GenericEntity : "{F25A5E8C9947F182}Prefabs/CGQC_Targets_GBRS.et" {
+ coords 130 1 2.5
+}

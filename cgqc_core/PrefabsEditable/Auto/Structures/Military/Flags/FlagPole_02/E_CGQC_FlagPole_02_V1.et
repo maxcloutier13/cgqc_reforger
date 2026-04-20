@@ -1,0 +1,44 @@
+GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
+ ID "50C6D20663830070"
+ components {
+  SCR_EditableEntityComponent "{68FB094135093101}" : "{7933327C6791C5D0}Prefabs/Editor/Components/Structures_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Flagpole"
+    m_Image ""
+    m_aAuthoredLabels {
+     FACTION_CGQC
+    }
+    m_aAutoLabels {
+     THEME_MILITARY ENTITYTYPE_OBJECT SIZE_M
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{68FB0941350DC4C2}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{68FB0941350DCC35}" {
+     m_iParentID -1
+     m_Mesh "{E9A0740046C9DFA1}Assets/Structures/Military/Flags/FlagPole_02/FlagPole_02.xob"
+     m_Flags 257
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{68FB0941350D00C8}" {
+     m_iParentID 0
+     m_Mesh "{94F7CE276B05E84B}Assets/Props/Fabric/Flags/Flag_1_2.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 4.396 -0.083
+     m_vAngles 0 0 0
+    }
+   }
+  }
+  RplComponent "{68FB0941350929D4}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+ }
+}

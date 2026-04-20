@@ -1,0 +1,41 @@
+GenericEntity {
+ coords 124.021 1 7.575
+}
+GenericEntity : "{2E665D4ABC5EB121}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_CGQC_ARY_SteelTarget_Stand_Frame_Gong_01.et" {
+ coords 124.5 1 2.5
+ {
+  GenericEntity {
+   ID "6608C1474F98AAAB"
+   coords 0 0 0
+  }
+  SCR_ARY_SteelPlateTarget {
+   ID "6608C147512A671A"
+   coords 0 1.583 -0.222
+  }
+ }
+}
+GenericEntity : "{41F318B162BC7EF6}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_CGQC_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et" {
+ coords 126 1 2.5
+ {
+  GenericEntity {
+   ID "6608BA60DD9ED123"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "6608BB49E7B0120D"
+   coords 0 0 0
+  }
+  SCR_ARY_SteelPlateTarget {
+   ID "6608BBF0D700A6A1"
+   coords 0 1.197 0.055
+  }
+  SCR_ARY_SteelPlateTargetFlip {
+   ID "6608BBF075AF7046"
+   coords -0.049 1.679 0.07
+  }
+  SCR_ARY_SteelPlateTargetFlip {
+   ID "6608BBF0E10C3A63"
+   coords -0.127 1.472 0.075
+  }
+ }
+}

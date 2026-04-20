@@ -1,5 +1,5 @@
 class CGQC_Scripts
-{
+{	
 	// Get name from mod CustomName
 	static string GetCustomPlayerName(int playerID)
 	{
@@ -238,8 +238,8 @@ class CGQC_Scripts
 			// Apply identity if head and body are set
 			if (!cgqc_head.IsEmpty() && !cgqc_body.IsEmpty())
 			{
-				Print("[CGQC_InitializePlayer] Custom Identity found: Applying");
-				SetPlayerIdentity(playerEntity, cgqc_head, cgqc_body);
+			    Print("[CGQC_InitializePlayer] Custom Identity found: Applying");
+			    GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, cgqc_head, cgqc_body);
 			}
 			
 			// Assign Rank
@@ -252,6 +252,7 @@ class CGQC_Scripts
 	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
 			}	
 		}
+		
 		// Swap default radios for CGQC radios
 		//CGQC_Scripts.swapRadios(playerEntity);
     }

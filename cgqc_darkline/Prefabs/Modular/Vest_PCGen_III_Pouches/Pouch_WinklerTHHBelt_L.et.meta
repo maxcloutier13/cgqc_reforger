@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E37F6D1B069874EF}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_WinklerTHHBelt_L.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

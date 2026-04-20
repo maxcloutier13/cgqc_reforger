@@ -21,6 +21,12 @@ GenericEntity : "{751107CE717C4C9B}Prefabs/Items/Equipment/Accessories/IFAK/IFAK
     }
     MultiSlotConfiguration "{685043611373DD05}" {
     }
+    MultiSlotConfiguration "{68504367871CAC98}" {
+     SlotTemplate EquipmentStorageSlot ChestSeal {
+      Enabled 0
+     }
+     NumSlots 0
+    }
     MultiSlotConfiguration "{68B353ADF230AEBD}" {
      SlotTemplate EquipmentStorageSlot d {
       Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"

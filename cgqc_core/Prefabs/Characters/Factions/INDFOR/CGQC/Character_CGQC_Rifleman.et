@@ -1,17 +1,3 @@
-SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et" {
+SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_old.et" {
  ID "520EC961A090B1EE"
- components {
-  RandomGearComponent "{68AAF221635F9889}" {
-   m_HeadConfig SCR_GearPoolConfig "{68F93718CE710231}" {
-    m_aGearPool {
-     "{19231774D1D67091}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_TigerStripe.et" "{56915D05E3190762}Prefabs/Characters/HeadGear/Hat_Patrol_US_01/Hat_Patrol_US_01_TigerStripe.et" "{BE19A15F1073E7BD}Prefabs/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01_black.et"
-    }
-   }
-   m_BootsConfig SCR_GearPoolConfig "{68F937189EC80746}" {
-    m_aGearPool {
-     "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et" "{203EEA924B049EF1}Prefabs/Characters/Footwear/JungleBoots_01/JungleBoots_01.et"
-    }
-   }
-  }
- }
 }

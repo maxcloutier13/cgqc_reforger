@@ -1,0 +1,64 @@
+$grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et" {
+ LAV1 {
+  coords 6862.66 13.406 3713.154
+  angles 0 180 0
+ }
+ LAV2 {
+  coords 6867.647 13.406 3713.588
+  angles 0 180 0
+ }
+}
+DecalEntity : "{28DBB1C4928B9FB6}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_03.et" {
+ coords 6919.819 -1.062 3677.459
+ angles -90 -180 -180
+ scale 5
+}
+GenericEntity : "{3884B81D0BEBEA26}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/CheckPoint1.et" {
+ coords 6905.444 13.407 3687.413
+}
+Vehicle M151A2_transport5 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 6886.359 13.406 3715.341
+ angles 0 175.18 0
+}
+GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
+ coords 6925.062 13.406 3699.194
+}
+DecalEntity : "{9EE74738BD9E8CDB}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_02.et" {
+ coords 6891.858 0 3687.13
+ angles -90 180 10.806
+ scale 5
+}
+GenericEntity : "{9EF2973AE46B5AFC}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_02.et" {
+ coords 6927.71 13.406 3695.008
+}
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 6895.747 12.397 3717.24
+ angles 0 -13.603 0
+}
+Vehicle Motorbike_US7 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ coords 6888.749 13.406 3716
+ angles 0 169.49 0
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Véhicules"
+  }
+ }
+ coords 6895.832 13.406 3719.692
+ angles 0 37.782 0
+}
+GenericEntity : "{F2A6A3DA58AFD5D2}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_01.et" {
+ coords 6928.148 13.406 3685.952
+ {
+  DecalEntity {
+   ID "56E0B29FC2CE4204"
+   coords -9.591 0 1.324
+  }
+ }
+}

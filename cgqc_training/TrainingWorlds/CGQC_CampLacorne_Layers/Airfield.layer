@@ -1,0 +1,26 @@
+Vehicle M151A2_transport3 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 6239.815 68.937 4280.146
+ angles 0 70.329 0
+}
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 6235.021 68.937 4294.487
+ angles 0 -111.348 0
+}
+Vehicle Motorbike_US5 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ coords 6238.17 68.937 4282.368
+ angles 0 64.64 0
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Aéroport"
+  }
+ }
+ coords 6236.811 68.937 4285.349
+ angles 0 36.98 0
+}

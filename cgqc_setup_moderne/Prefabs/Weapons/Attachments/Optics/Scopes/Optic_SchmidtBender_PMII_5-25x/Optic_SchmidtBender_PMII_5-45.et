@@ -1,0 +1,148 @@
+GameEntity : "{966B4E5523D2F166}Prefabs/Weapons/Attachments/Optics/WeaponOptic_Base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  InventoryItemComponent "{52627A1F45CD4EB6}" {
+   Attributes SCR_ItemAttributeCollection "{52627A1EBB0698FD}" {
+    ItemDisplayName SCR_InventoryUIInfo "{5D0CC83435B5584E}" {
+     Name "Schmidt & Bender PM II 5-45x56"
+     Description "The 5-45x56 PM II High Power combines a sniper scope and spotting scope in one. "
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{5D0CC83435B55848}" {
+     Weight 1.06
+    }
+    CustomAttributes {
+     WeaponAttachmentAttributes "{5284D858FFF9BE66}" {
+      AttachmentType AttachmentOpticsRIS1913Medium "{691417791142764A}" {
+      }
+     }
+     PreviewRenderAttributes "{52D69389645B4E4D}" {
+      CameraDistanceToItem 1.2
+      LodModel 0
+     }
+    }
+   }
+  }
+  MeshObject "{5D0CC83435B55858}" {
+   Object "{38BE94D0FAB8D4A6}Assets/Weapons/Attachments/Optics/SchmidtBender 5-25x56 PM II/Schmidtbender_PM2_5-25x56.xob"
+   Materials {
+    MaterialAssignClass "{691417791142767A}" {
+     SourceMaterial "525pm2"
+     AssignedMaterial "{26B734BB3B17D692}Assets/Weapons/Attachments/Optics/SchmidtBender 5-25x56 PM II/Data/525pm2_BLK.emat"
+    }
+    MaterialAssignClass "{691417791142767C}" {
+     SourceMaterial "geissele_sp34"
+     AssignedMaterial "{0F5ABB3BC6C889B2}Assets/Weapons/Attachments/Optics/SchmidtBender 5-25x56 PM II/Data/geissele_sp34_blk.emat"
+    }
+   }
+  }
+  SCR_2DPIPSightsComponent "{5D0CC83435B55855}" {
+   SightsPosition PointInfo "{5D0CC83435B55853}" {
+    Offset 0 0 -0.02
+   }
+   SightsRanges {
+    SightRangeInfo "{6914177911427662}" {
+     Range 0.083 300
+    }
+    SightRangeInfo "{6914177911427664}" {
+     Range 0.115 400
+    }
+    SightRangeInfo "{691417791142276D}" {
+     Range 0.145 500
+    }
+    SightRangeInfo "{691417791142276F}" {
+     Range 0.183 600
+    }
+    SightRangeInfo "{691417791142276E}" {
+     Range 0.231 700
+    }
+    SightRangeInfo "{6914177911422762}" {
+     Range 0.285 800
+    }
+    SightRangeInfo "{69141779114393CB}" {
+     Range 0.345 900
+    }
+    SightRangeInfo "{69141779114393CD}" {
+     Range 0.423 1000
+    }
+    SightRangeInfo "{6914177911434A47}" {
+     Range 0.51 1100
+    }
+    SightRangeInfo "{6914177911434A45}" {
+     Range 0.615 1200
+    }
+    SightRangeInfo "{6914177911434BDD}" {
+     Range 0.737 1300
+    }
+    SightRangeInfo "{6914177911434BD3}" {
+     Range 0.876 1400
+    }
+    SightRangeInfo "{69141779114339A0}" {
+     Range 1.046 1500
+    }
+    SightRangeInfo "{69141779114339A2}" {
+     Range 1.25 1600
+    }
+    SightRangeInfo "{691417791144F14B}" {
+     Range 1.48 1700
+    }
+    SightRangeInfo "{691417791144F14D}" {
+     Range 1.7625 1800
+    }
+   }
+   SightsFOVInfo SCR_SightsZoomFOVInfo "{691417791144F150}" {
+    m_fBaseZoom 5
+    m_fZoomMax 45
+    m_fStepZoomSize 2
+    m_fInterpolationSpeed 16
+   }
+   SightsPointFront PointInfo "{691417791144F152}" {
+    PivotID "optic_front"
+   }
+   SightsPointRear PointInfo "{691417791144F155}" {
+    PivotID "optic_rear"
+   }
+   ADSTime 0.65
+   CameraRecoilAmount -0.25
+   SightsPriority 1
+   SoundInt 10002
+   m_sReticleTexture "{F70EB7A3489A2A1F}Assets/Weapons/Attachments/Optics/SchmidtBender 5-25x56 PM II/Data/MSR2_reticle.edds"
+   m_bHasIllumination 1
+   m_fReticleTextureGlowAlpha 1
+   m_eZeroingType EPZ_CAMERA_TURN
+   m_fReticleOffsetInterpSpeed 59.1
+   m_rScopeHDRMatrial "{B8E63C91CC8582B0}Assets/Weapons/Attachments/Optics/SchmidtBender 5-25x56 PM II/Data/Optic_SB5-25_HDR.emat"
+   m_fADSActivationPercentagePIP 0.2
+   m_fADSDeactivationPercentagePIP 0.8
+   m_fBasicParallax 1.15
+   m_fCenterOffsetY 0.01
+   m_fReticlePIPScale 0.5
+   m_fObjectiveFov 7
+   m_fReticleAngularSize 2.1
+   m_fMagnification 5
+   m_fScopeRadius 0.02094
+  }
+  ActionsManagerComponent "{5284E0EFF569AD07}" {
+   additionalActions {
+    SCR_PickUpItemAction "{585CED82E5DD85D6}" {
+     UIInfo SCR_ActionUIInfo "{60F48D7284D5722F}" {
+      Name "Pickup: "
+     }
+    }
+    SCR_AttachItemFromInventoryAction "{5D0CC83435B55B88}" {
+     ParentContextList {
+      "optic"
+     }
+     UIInfo SCR_ActionUIInfo "{5D0CC83435B55B89}" {
+      Name ""
+      m_sIconName ""
+     }
+    }
+    SCR_AttachementAction "{5D0CC83435B55B8D}" {
+     UIInfo SCR_ActionUIInfo "{5D0CC83435B55B8A}" {
+      Name "Detach: "
+     }
+    }
+   }
+  }
+ }
+}

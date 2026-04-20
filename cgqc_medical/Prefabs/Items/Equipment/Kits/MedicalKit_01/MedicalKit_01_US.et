@@ -24,6 +24,12 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      }
      NumSlots 2
     }
+    MultiSlotConfiguration "{68FB03BA62A557F3}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{FDFA3EAC0D60C65F}Prefabs/Items/Medicine/OxygenMask/ACE_Medical_OxygenMask.et"
+     }
+     NumSlots 2
+    }
     MultiSlotConfiguration "{68B353ABD15E91BF}" {
      SlotTemplate InventoryStorageSlot Morphine {
       Prefab "{661744F5F88B401C}Prefabs/Items/Medicine/NCDKit/ACE_Medical_NCDKit.et"

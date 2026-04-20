@@ -1,0 +1,10 @@
+GenericEntity : "{E1C6FBFB008B2EA6}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_Large_US.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_EditableEntityComponent "{660EA51E64E91031}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_sFaction "CGQC_UPO"
+   }
+  }
+ }
+}

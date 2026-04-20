@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "65F130AFB2F2A723"
+ components {
+  GRS_EquipmentStorageComponent "{65F130AFB2F2A702}" {
+   InitialStorageSlots {
+    GRS_HolsterStorageSlot M320 {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{42B38B4453C89374}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_WallChargeIgnitor_Invis.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

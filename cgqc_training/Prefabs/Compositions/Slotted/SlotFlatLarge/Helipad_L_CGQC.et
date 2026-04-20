@@ -1,0 +1,29 @@
+GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_US_01.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_ResourceComponent "{6908FDDF48D0B41D}" {
+   m_aConsumers {
+    SCR_ResourceConsumerServicePoint "{6908FDDF48D0B55C}" {
+     m_sDebugName "Rearmament - Consumer"
+     m_eResourceRights ALL
+     m_eGeneratorIdentifier DEFAULT
+     m_fResourceRange 150
+     m_fSellMultiplier 0
+     m_ContainerQueue SCR_ResourceConsumerContainerQueue "{6908FDDF48D0B542}" {
+      m_StoragePolicies {
+       SCR_ResourceConsumerStoragePolicy "{6908FDDF48D0B545}" {
+        m_StorageQueue SCR_ResourceConsumerContainerStorageQueueExtended "{6908FDDF48D0B547}" {
+        }
+        m_eStorageType STORED
+       }
+      }
+     }
+    }
+   }
+  }
+  WCS_RearmSupportStationComponent "{6908FDDF48D0B54D}" {
+   m_eSupportStationPriority HIGH
+   m_fRange 20
+  }
+ }
+}

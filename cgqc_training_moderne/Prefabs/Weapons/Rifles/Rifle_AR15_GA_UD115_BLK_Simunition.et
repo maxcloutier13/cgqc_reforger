@@ -1,0 +1,56 @@
+GenericEntity : "{2489F63D9ABBE1D4}Prefabs/Weapons/Rifles/M4A1/Variants/ION/Rifle_AR15_GA_UD115_BLK.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
+      Offset 0 0 0.0276
+      Prefab "{083930626BBB5C4D}Scopes/Sig Sauer Romeo 5/Prefabs/Optic_ROMEO5_MAG3.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Offset 0 0.1115 0.3246
+      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE95B630A07A}" {
+     AttachmentSlot InventoryStorageSlot "{5EA2BE95B7F1B3D5}" {
+     }
+    }
+    AttachmentSlotComponent "{609EE5047488AAA1}" {
+     AttachmentSlot InventoryStorageSlot REAR_IRONSIGHT {
+     }
+    }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+     }
+    }
+    AttachmentSlotComponent "{629ADD50107BFFEA}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD500DE777C8}" {
+     }
+    }
+    AttachmentSlotComponent "{629ADD528EE856C1}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
+     }
+    }
+    AttachmentSlotComponent "{647D57A4E99CBFA3}" {
+     AttachmentSlot InventoryStorageSlot "{647D57BB184D5F9B}" {
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626713EF43D3CC9E}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{7C4C82A5CC86129B}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_WARDEN.et"
+       }
+      }
+     }
+     MagazineTemplate "{0D5284C72ECCDE58}Prefabs/Weapons/Magazines/CHECK_Magazine_556x45_STANAG_Sim.et"
+    }
+   }
+  }
+ }
+ coords 1057.425 51.257 1346.216
+}

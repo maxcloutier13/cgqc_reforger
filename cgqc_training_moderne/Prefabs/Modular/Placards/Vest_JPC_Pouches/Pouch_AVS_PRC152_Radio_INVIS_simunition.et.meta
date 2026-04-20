@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B757B9041F848F86}Prefabs/Modular/Placards/Vest_JPC_Pouches/Pouch_AVS_PRC152_Radio_INVIS_simunition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

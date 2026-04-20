@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8562528781F86DA0}Configs/EntityCatalog/CGQC/InventoryItems_EntityCatalog_CGQC_OLDI.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

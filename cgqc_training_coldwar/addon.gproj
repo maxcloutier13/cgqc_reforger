@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctrainingcoldwar"
+ GUID "68FC1AAC49686686"
+ TITLE "cgqc_training_coldwar"
+ Dependencies {
+  "58D0FB3206B6F859" "68FC062054BB6D8B" "68C61DEE53D353EF"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

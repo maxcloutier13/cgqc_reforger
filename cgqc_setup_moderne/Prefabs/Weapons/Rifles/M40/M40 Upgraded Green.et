@@ -1,0 +1,23 @@
+GenericEntity : "{F9E6107C47C1B088}Prefabs/Weapons/Core/LongRangeRifle_Base.et" {
+ ID "5260C45AAAA407F4"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{6578D32BFBB00E6A}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Scope {
+      Prefab "{333A794F0B55C019}Prefabs/Weapons/Attachments/Optics/m8541/Optic_M8541.et"
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{6578D32BFBB00E8C}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{48414BA60F3B0DFA}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/SF_FA762SS.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

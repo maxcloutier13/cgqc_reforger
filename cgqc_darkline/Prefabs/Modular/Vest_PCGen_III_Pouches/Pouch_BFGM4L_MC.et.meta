@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A137267BEC461E47}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_BFGM4L_MC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

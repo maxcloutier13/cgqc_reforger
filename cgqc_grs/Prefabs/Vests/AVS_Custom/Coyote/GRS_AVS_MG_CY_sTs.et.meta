@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FAA369C3DC43C14F}Prefabs/Vests/AVS_Custom/Coyote/GRS_AVS_MG_CY_sTs.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

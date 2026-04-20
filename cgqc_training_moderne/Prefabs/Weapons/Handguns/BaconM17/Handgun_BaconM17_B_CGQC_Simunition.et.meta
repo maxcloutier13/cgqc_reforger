@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5D971D6EC966CF52}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC_Simunition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

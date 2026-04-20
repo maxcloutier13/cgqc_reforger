@@ -1,0 +1,36 @@
+GenericEntity : "{CCFA1D2A74D3F13E}Prefabs/Props/Military/Arsenal/AmmoBoxes/AmmoBoxArsenal_Weapon_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{3E9BF470FDBBA7B9}Assets/Props/Military/AmmoBox/ARY_WeaponCase_Plastic/ARY_WeaponCase_03.xob"
+  }
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ResponseIndex "SmallDestructible"
+  }
+  SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+   m_eSupportedArsenalItemTypes 513
+   m_eArsenalSaveType NO_RESTRICTIONS
+  }
+  SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+   "faction affiliation" "CGQC"
+  }
+  UniversalInventoryStorageComponent "{58A17A341AB8F069}" {
+   Attributes SCR_ItemAttributeCollection "{58A17A346E386320}" {
+    ItemDisplayName SCR_InventoryUIInfo "{58A17A3474A3430E}" {
+     Name "#AR-EditableEntity_AmmoBoxArsenal_Weapons_US_Name"
+    }
+   }
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   ActionContexts {
+    UserActionContext "{5476B36C47B0461A}" {
+     Position PointInfo "{5476B36C45ADDA89}" {
+      Offset 0 0.0881 0.1664
+     }
+    }
+   }
+  }
+ }
+ coords 2704.137 79.328 1783.33
+ angles 0 -163.603 0
+}

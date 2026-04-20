@@ -1,0 +1,140 @@
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  coords 4638.869 24.515 2674.294
+ }
+ {
+  coords 4635.061 24.515 2674.294
+ }
+ {
+  coords 4631.256 24.515 2674.294
+ }
+ {
+  coords 4627.448 24.515 2674.294
+ }
+ {
+  coords 4623.647 24.515 2674.294
+ }
+ {
+  coords 4619.839 24.515 2674.294
+ }
+ {
+  coords 4616.035 24.515 2674.294
+ }
+ {
+  coords 4612.228 24.515 2674.294
+ }
+ {
+  coords 4608.43 24.515 2674.294
+ }
+ {
+  coords 4604.622 24.515 2674.294
+ }
+ {
+  coords 4600.819 24.515 2674.294
+ }
+ {
+  coords 4597.011 24.515 2674.294
+ }
+ {
+  coords 4595.065 24.515 2674.294
+ }
+ {
+  coords 4638.869 27.7 2674.294
+ }
+ {
+  coords 4635.061 27.7 2674.294
+ }
+ {
+  coords 4631.256 27.7 2674.294
+ }
+ {
+  coords 4627.448 27.7 2674.294
+ }
+ {
+  coords 4623.647 27.7 2674.294
+ }
+ {
+  coords 4619.839 27.7 2674.294
+ }
+ {
+  coords 4616.035 27.7 2674.294
+ }
+ {
+  coords 4612.228 27.7 2674.294
+ }
+ {
+  coords 4608.43 27.7 2674.294
+ }
+ {
+  coords 4604.622 27.7 2674.294
+ }
+ {
+  coords 4600.819 27.7 2674.294
+ }
+ {
+  coords 4597.011 27.7 2674.294
+ }
+ {
+  coords 4595.065 27.7 2674.294
+ }
+ {
+  coords 4642.681 27.7 2674.294
+ }
+ {
+  coords 4635.061 30.871 2674.294
+ }
+ {
+  coords 4631.256 30.871 2674.294
+ }
+ {
+  coords 4627.448 30.871 2674.294
+ }
+ {
+  coords 4623.647 30.871 2674.294
+ }
+ {
+  coords 4619.839 30.871 2674.294
+ }
+ {
+  coords 4616.035 30.871 2674.294
+ }
+ {
+  coords 4612.228 30.871 2674.294
+ }
+ {
+  coords 4608.43 30.871 2674.294
+ }
+ {
+  coords 4604.622 30.871 2674.294
+ }
+ {
+  coords 4600.819 30.871 2674.294
+ }
+ {
+  coords 4597.011 30.871 2674.294
+ }
+ {
+  coords 4595.065 30.871 2674.294
+ }
+ {
+  coords 4642.681 30.871 2674.294
+ }
+ {
+  coords 4638.869 30.871 2674.294
+ }
+}
+GenericEntity : "{7F7FC9E63EA0E96B}Prefabs/Props/VRTCQBShootHouse/CQB_WallDoor.et" {
+ coords 4642.67 24.515 2674.294
+}
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ components {
+  MeshObject "{506EDA9D46FC6C06}" {
+   Object "{88450B9A63C9F6AE}Assets/Structures/Airport/Hangar_01/Hangar_01.xob"
+  }
+ }
+ coords 4619.803 0.015 2656.887
+ scale 1.2
+}
+GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ coords 4644.576 24.515 2674.294
+}

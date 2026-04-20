@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{467DE70E16397B61}Prefabs/Characters/Uniforms/CCUE_JEANS_TACPANTS/WiderLevisJeansRegular.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

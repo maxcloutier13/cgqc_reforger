@@ -7,6 +7,8 @@ SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et
     }
     SCR_PlaceableEntitiesRegistry "{68CC706C2389288A}" : "{9186840E1DA55300}Configs/Editor/PlaceableEntities/System/CGQC_Registry_System.conf" {
     }
+    SCR_PlaceableEntitiesRegistry "{68FB139ED9A3D2C0}" : "{6CDDE5D8CC803DFA}Configs/Arsenal/CGQC_Registry_Flags.conf" {
+    }
    }
   }
  }

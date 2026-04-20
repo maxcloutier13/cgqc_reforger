@@ -1,0 +1,61 @@
+$grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+ {
+  coords 5188.723 291.305 1802.222
+  angles 0 70.048 0
+ }
+ {
+  coords 5189.601 291.29 1800.434
+  angles 0 47.842 0
+ }
+}
+Vehicle M151A2_transport9 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 5170.631 290.208 1776.597
+ angles 0 37.627 0
+}
+StaticModelEntity : "{785F322AC3DFD4B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_US_01.et" {
+ coords 5189.503 291.344 1801.483
+ angles 0 0 0
+}
+GenericEntity Sniping_TP : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 5190.248 291.103 1798.958
+ angles 0 -54.783 0
+}
+Vehicle Motorbike_US11 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ coords 5169.164 290.424 1778.914
+ angles 0 31.937 0
+}
+SCR_DestructibleBuildingEntity : "{BB3A4D0D66C39921}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/Military_Tent_Command.et" {
+ coords 5278.605 0.391 1952.931
+ angles 0 -19.632 0
+}
+GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
+ coords 5200.996 291.463 1806.575
+ angles 0 46.64 0
+ {
+  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
+   coords -1.007 0.947 -0.002
+   angles 0 144.48 0
+  }
+ }
+}
+GenericEntity Sniping_Target : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Station Longue-Portée"
+  }
+ }
+ coords 5189.682 291.092 1797.791
+ angles 0 -53.985 0
+}
+GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
+ coords 5191.095 291.405 1802.995
+}
+SCR_DestructibleBuildingEntity : "{FDB73CBC36C9FE21}PrefabLibrary/DefaultLibrary/Infrastructure/Bridges/ConcreteBridge_01_Pillar.et" {
+ coords 5205.255 284.418 1810.545
+ angles 0 45.507 0
+}

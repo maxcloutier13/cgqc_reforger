@@ -1,0 +1,36 @@
+SCR_ChimeraCharacter : "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/OPFOR/USSR_Army/Campaign_USSR_Player.et" {
+ ID "5242B7AE8EF4D733"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate ""
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{54A68D64D7F9124F}" {
+     PrefabsToSpawn {
+      "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et"
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5723}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5735}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5738}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{61BB2B3887EB5739}" {
+     PrefabsToSpawn {
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "668603664F332FAB"
+ components {
+  RHS_EquipmentStorageComponent "{668603664F332F95}" {
+   InitialStorageSlots {
+    RHS_EquipmentStorageSlot Pouch0 {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

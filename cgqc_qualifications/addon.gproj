@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcqualifications"
+ GUID "692326B4895F5671"
+ TITLE "cgqc_qualifications"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

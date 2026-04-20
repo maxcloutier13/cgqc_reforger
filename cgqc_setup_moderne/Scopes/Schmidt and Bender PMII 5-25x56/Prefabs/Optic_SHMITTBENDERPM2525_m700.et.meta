@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C70B6EA16A9261B1}Scopes/Schmidt and Bender PMII 5-25x56/Prefabs/Optic_SHMITTBENDERPM2525_m700.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

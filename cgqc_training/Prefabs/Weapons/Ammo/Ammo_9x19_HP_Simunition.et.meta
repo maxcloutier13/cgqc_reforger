@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2BCEF349BC263429}Prefabs/Weapons/Ammo/SmallArms/Ammo_9x19_HP_Simunition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3C02CBF855B9B12A}Prefabs/Modular/Vest_PCGen_III_Pouches/Pouch_WinklerKnifeVBelt_L.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,12 @@
+GenericEntity : "{CE1E02F9A3B8B1E0}Prefabs/Vests/AVS_Custom/GRS_AVS_Base.et" {
+ ID "65696E47F20A81F7"
+ components {
+  BaseLoadoutClothComponent "{65696E47E5268667}" {
+   Slots {
+    LoadoutSlotInfo Other_Patch {
+     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
+    }
+   }
+  }
+ }
+}

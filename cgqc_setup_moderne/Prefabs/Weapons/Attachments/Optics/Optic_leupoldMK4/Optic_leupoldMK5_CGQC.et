@@ -1,0 +1,101 @@
+GameEntity : "{061785BDE2DB997E}Prefabs/Weapons/Attachments/Core/Optic_Scope_Base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  SignalsManagerComponent "{6914177C872F0DD7}" {
+  }
+  InventoryItemComponent "{52627A1F45CD4EB6}" {
+   Attributes SCR_ItemAttributeCollection "{52627A1EBB0698FD}" {
+    ItemDisplayName UIInfo "{6914177C872F0DA9}" {
+     Name "Mk 5 HD 7-35x56"
+     Description "#RHS-Item_leupoldMK4_Description"
+    }
+    CustomAttributes {
+     WeaponAttachmentAttributes "{5284D858FFF9BE66}" {
+      AttachmentType AttachmentOpticsRIS1913Short "{6914177C872F0DAE}" {
+      }
+     }
+     PreviewRenderAttributes "{52D69389645B4E4D}" {
+      FOV 25
+     }
+    }
+    m_SlotType SLOT_ANY
+   }
+  }
+  MeshObject "{5D0CC83435B55858}" {
+   Object "{FD14BC5FF3C9DFDD}Assets/Weapons/Attachments/Optics/Leupold_mk4/leupold_mk4.xob"
+  }
+  RHS_2DPIPSightsComponent "{5D0CC83435B55855}" {
+   SightsPosition PointInfo "{6914177C872F0DB5}" {
+    PivotID "eye"
+    Offset 0 0 -0.075
+   }
+   SightsRanges {
+    SightRangeInfo "{6914177C872F0DBB}" {
+     Range 0.09 100
+    }
+    SightRangeInfo "{6914177C872F0DBD}" {
+     Range 0.11 200
+    }
+    SightRangeInfo "{6914177C872F0DBE}" {
+     Range 0.16 300
+    }
+    SightRangeInfo "{6914177C872F0D80}" {
+     Range 0.27 500
+    }
+    SightRangeInfo "{6914177C872F0D81}" {
+     Range 0.5 800
+    }
+    SightRangeInfo "{6914177C872F0D82}" {
+     Range 0.7 1000
+    }
+   }
+   SightsFOVInfo SCR_SightsZoomFOVInfo "{6914177C872F0D86}" {
+    m_fBaseZoom 7
+    m_fZoomMax 35
+    m_fStepZoomSize 2
+    m_fInterpolationSpeed 12
+   }
+   SightsPointFront PointInfo "{6914177C872F0D8A}" {
+    PivotID "eye"
+    Offset 0 0 0.4
+   }
+   SightsPointRear PointInfo "{6914177C872F0D8D}" {
+    PivotID "eye"
+    Offset 0 0 0.071
+   }
+   ZeroingGenerator BaseZeroingGenerator "{6914177C872F0E61}" {
+   }
+   m_sReticleTexture "{4EE9C848559DEF97}Assets/Weapons/Attachments/Optics/Leupold_mk4/Data/rhsusf_nxs_12xf1_h58_ca.edds"
+   m_sReticleGlowTexture "{4EE9C848559DEF97}Assets/Weapons/Attachments/Optics/Leupold_mk4/Data/rhsusf_nxs_12xf1_h58_ca.edds"
+   m_fVignetteMoveSpeed 6.5
+   m_fMotionBlurScale 10
+   m_eZeroingType EPZ_CAMERA_TURN
+   m_fReticleOffsetInterpSpeed 40
+   m_fNearPlane 0.001
+   m_rScopeHDRMatrial "{14F1CFFDFD762B77}Assets/Weapons/Attachments/Optics/Leupold_mk4/Data/Optic_H58_HDR.emat"
+   m_fObjectiveFov 2.749
+   m_fReticleAngularSize 0.45
+   m_fReticlePortion 0.16007
+   m_fMagnification 6.5
+   m_fScopeRadius 0.0184
+   m_rScopeDoFMaterial "{50A93C8A1F6C06A7}UI/Materials/ScreenEffects_DoFSightsPP_RHS.emat"
+   m_aRHSOpticAnimationArray {
+    5 332 0 6 354 0 7 12 0 8 32 0 10 65 0 12 87 0
+   }
+   m_aRHSOpticRangeAnimationArray {
+    100 326 0 200 263 0 300 206 0 500 157 0 800 111 0 1000 63 0
+   }
+   m_cReticle 0 0 0 1
+  }
+  ProcAnimComponent "{6914177C872F0E65}" {
+   Parameters {
+    ProcAnimParams "{6914177C872F0E67}" {
+     ResourceName "{A517F7063C397594}Assets/Weapons/Attachments/Optics/m8541/Anim/M8541_Animations.pap"
+     BoneNames {
+      "s_mag" "s_par"
+     }
+    }
+   }
+  }
+ }
+}

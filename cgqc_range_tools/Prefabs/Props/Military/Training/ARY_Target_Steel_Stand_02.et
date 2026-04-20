@@ -1,0 +1,7 @@
+SCR_ARY_SteelPlateTarget : "{D5CF2AF7B063AE6E}Prefabs/Props/Military/Training/ARY_Target_Steel_Stand_Base.et" {
+ ID "6602E670D39B3BD9"
+ components {
+  CGQC_SteelTargetHitComponent "{691CD27B3CE5A5B6}" {
+  }
+ }
+}

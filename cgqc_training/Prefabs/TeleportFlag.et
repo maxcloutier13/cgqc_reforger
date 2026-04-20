@@ -1,0 +1,121 @@
+GenericEntity : "{E55FC02F8C1518A2}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_02_V1_US.et" {
+ ID "50C6D20663830070"
+ components {
+  ActionsManagerComponent "{6859121B8FD1ED28}" {
+   additionalActions {
+    TELEP_TeleportSlotUserAction "{69153240BD4C5C15}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 10
+    }
+    TELEP_TeleportSlotUserAction "{69153240B781E000}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 11
+    }
+    TELEP_TeleportSlotUserAction "{6915324F748A63BD}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 12
+    }
+    TELEP_TeleportSlotUserAction "{6915324F69C649A3}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 13
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6C7FAA4B}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 14
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6FD672A7}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 15
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6F49EECE}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 16
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6EF59D2A}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 17
+    }
+    TELEP_TeleportSlotUserAction "{6915324F61A5C37A}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 18
+    }
+    TELEP_TeleportSlotUserAction "{6915324F61041C6D}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 19
+    }
+    TELEP_TeleportSlotUserAction "{6915324F60E34BAD}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 20
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6045CA0A}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 21
+    }
+    TELEP_TeleportSlotUserAction "{6915324F63D5F090}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 22
+    }
+    TELEP_TeleportSlotUserAction "{6915324F62A2CEF7}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 23
+    }
+    TELEP_TeleportSlotUserAction "{6915324F6265412C}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 24
+    }
+    TELEP_TeleportSlotUserAction "{6915324F03CF40AA}" {
+     ParentContextList {
+      "default"
+     }
+     VisibilityRange 5
+     m_iSlotIndex 25
+    }
+   }
+  }
+ }
+}

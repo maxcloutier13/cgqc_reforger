@@ -48,6 +48,8 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo HandWear {
      Prefab "{1E991CD19C6F7659}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Brown.et"
     }
+    LoadoutSlotInfo Waist {
+    }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {

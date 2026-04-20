@@ -1,0 +1,41 @@
+SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Base_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Instructeur"
+    Description "Giving instructions"
+    m_aAuthoredLabels +{
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{BC2FAF35A4DA094E}Prefabs/Characters/HeadGear/Hat_M70_01/ARY_Hat_M70_01_black.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A722676E7175F8E0}Prefabs/Characters/Uniforms/Tshirts/CGQC_Instructor_Tshirt.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{5BBC2496A856AAFF}Prefabs/Characters/Vests/JPC/Vest_MFHybrid_MC_Simunition_Instructor.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{17DAAF4DC71B2AC3}Prefabs/Characters/Handwear/Gloves_MechanixMpact/GRS_Gun_Gloves_Black.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
+    }
+    ItemsInitConfigurationItem "{690C232DB4E1E45C}" {
+     PrefabsToSpawn + {
+      "{8A45D4DF4FFA00E7}Prefabs/Items/Equipment/Keys/Masterkey.et"
+     }
+    }
+   }
+  }
+ }
+}

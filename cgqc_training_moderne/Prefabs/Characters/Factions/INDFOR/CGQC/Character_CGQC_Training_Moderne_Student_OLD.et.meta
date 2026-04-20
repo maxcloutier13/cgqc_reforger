@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{53A6AB58CC155C86}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Moderne_Student.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

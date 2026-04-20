@@ -1,0 +1,53 @@
+GenericEntity : "{67039D69C89041DB}Prefabs/1_Template.et" {
+ ID "6164BAE2F6590B34"
+ components {
+  CGQC_RangeTools_TargetDamageManager "{69261B30264122E3}" {
+   "Additional hit zones" {
+    SCR_HitZone Main_Hitzone {
+     ColliderNames {
+      "UBX_target_itself"
+     }
+    }
+   }
+  }
+  CGQC_RangeTools_TargetHitComponent "{69261B3016F5318A}" {
+   m_sPrefabPath "{F25A5E8C9947F182}Prefabs/CGQC_Targets_GBRS.et"
+  }
+  MeshObject "{6164BAFDFEF59A09}" {
+   Materials {
+    MaterialAssignClass "{692530FB0C7697A4}" {
+     SourceMaterial "PRP_Target"
+     AssignedMaterial "{DA90D9F17BEAD24A}Textures/Target/Target_Gbrs.emat"
+    }
+   }
+  }
+  SCR_EditableEntityComponent "{6168C78EA5B8B40D}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{6168C78C54949280}" {
+    Name "CGQC GBRS Target"
+    m_Image "{C5F5CBD4DC4229AA}Textures/Preview Images/TargetPreview1.edds"
+   }
+  }
+  ActionsManagerComponent "{69261B30394C4CB7}" {
+   ActionContexts {
+    UserActionContext "{69261B3036A4C852}" {
+     ContextName "Default"
+     Position PointInfo "{69261B30335BD40F}" {
+      Offset 0 0.875 0.0313
+     }
+    }
+   }
+   additionalActions {
+    CGQC_RangeTools_ResetTargetAction "{69261B3046FA97EA}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo SCR_ActionUIInfo "{69261B3043D74A3D}" {
+      Name "Reset"
+     }
+     ActionTitle "Reset"
+     Duration 0.2
+    }
+   }
+  }
+ }
+}
