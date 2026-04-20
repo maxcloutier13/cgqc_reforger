@@ -22,7 +22,7 @@ GenericEntity : "{A77F06B892FA378B}Prefabs/Weapons/Handguns/BaconM17/Handgun_Bac
      }
     }
     MuzzleComponent "{50F64C45E7271D47}" {
-     MagazineTemplate ""
+     MagazineTemplate "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
     }
    }
    UIInfo WeaponUIInfo "{CC3BA6A2C42F09F4}" {

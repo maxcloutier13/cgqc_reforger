@@ -4,7 +4,7 @@ GenericEntity : "{76C400582D3C4AF9}Prefabs/Weapons/MachineGuns/PKM/MG_PKM_base.e
   WeaponComponent "{CFBAA4B706BA66E8}" {
    components {
     MuzzleComponent "{50F64C4591CD7AA6}" {
-     MagazineTemplate ""
+     MagazineTemplate "{F74E9D59C5C8BFCF}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_Sim.et"
     }
    }
   }
