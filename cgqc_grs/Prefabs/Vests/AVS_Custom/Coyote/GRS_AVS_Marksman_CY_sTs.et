@@ -1,3 +1,14 @@
 GenericEntity : "{16DE480A958DBB70}Prefabs/Vests/AVS_Custom/GRS_AVS_Marksman_sTs.et" {
  ID "65696E47F20A81F7"
+ components {
+  BaseLoadoutClothComponent "{65696E47E5268667}" {
+   Slots {
+    LoadoutSlotInfo LS_Radio {
+     Prefab ""
+    }
+    LoadoutSlotInfo Rear_Radio {
+    }
+   }
+  }
+ }
 }

@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "65CC0BE4BF2EF189"
+ components {
+  GRS_EquipmentStorageComponent "{6606CD287C764A1A}" {
+   InitialStorageSlots {
+    GRS_RadioStorageSlot Radio {
+     Prefab "{133810B5D3B81E17}Prefabs/Accessories/CGQC_Radio_MPU5.et"
+    }
+   }
+  }
+ }
+}

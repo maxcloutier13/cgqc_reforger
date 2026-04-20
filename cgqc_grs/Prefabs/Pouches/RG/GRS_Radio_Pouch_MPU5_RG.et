@@ -1,0 +1,13 @@
+GenericEntity : "{5EB0C4BD6B157FDD}Prefabs/Pouches/Base/GRS_Radio_Pouch_MPU5.et" {
+ ID "65CC0BE74104047C"
+ components {
+  GRS_EquipmentStorageComponent "{65DA02EDDF4486D4}" {
+   Attributes SCR_ItemAttributeCollection "{65DA02ED971D5D48}" {
+    ItemDisplayName UIInfo "{65DA02ED9B917B8A}" {
+     Name "GRS: MPU5 Radio Pouch - RG"
+     Description "GRS: MPU5 Radio Pouch - RG"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+GenericEntity {
+ ID "65CC0BE74E2BEFA1"
+ components {
+  GRS_EquipmentStorageComponent "{6606CD2822F301E7}" {
+   Attributes SCR_ItemAttributeCollection "{6606CD2826D1C9B6}" {
+    ItemDisplayName UIInfo "{65DA02ED9B917B8A}" {
+     Name "GRS: 152 Radio Pouch - MC"
+    }
+   }
+   InitialStorageSlots {
+    GRS_RadioStorageSlot Radio {
+     Prefab "{9FDB2653D8D8D48B}Prefabs/Accessories/CGQC_Radio_JTAC_152_R.et"
+    }
+   }
+  }
+ }
+}

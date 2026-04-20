@@ -1,0 +1,18 @@
+GenericEntity : "{DB7FF5C465426DAE}Prefabs/Pouches/Black/GRS_Radio_Pouch_MPU5_Black.et" {
+ ID "65CC0BE74104047C"
+ components {
+  GRS_EquipmentStorageComponent "{65DA02EDDF4486D4}" {
+   Attributes SCR_ItemAttributeCollection "{65DA02ED971D5D48}" {
+    ItemDisplayName UIInfo "{65DA02ED9B917B8A}" {
+     Name "GRS: 343 Radio Pouch - Black"
+     Description "GRS: 343 Radio Pouch - Black"
+    }
+   }
+   InitialStorageSlots {
+    GRS_RadioStorageSlot Radio {
+     Prefab "{86C16544D72A4BFD}Prefabs/Accessories/CGQC_Radio_Trellisware_343.et"
+    }
+   }
+  }
+ }
+}

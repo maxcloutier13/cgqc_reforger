@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6D767D0DCD7EF3E1}Prefabs/Items/Equipment/Backpacks/Radio_Backpack/Radio_Backpack_AOR1.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

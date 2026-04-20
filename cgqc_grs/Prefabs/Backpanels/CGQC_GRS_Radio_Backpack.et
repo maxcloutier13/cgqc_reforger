@@ -1,0 +1,125 @@
+GenericEntity : "{5879D8E9C56E358E}Prefabs/Items/Equipment/Radios/Radio_Deployable_Base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "poutine"
+   Transceivers {
+    RelayTransceiver "{5EA4A89F0D06E18F}" {
+     "Transmitting Range" 5000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 68000
+     "Frequency resolution" 100
+    }
+    RelayTransceiver "{69291E1C14B68891}" {
+     ChannelFrequency 68000
+     "Transmitting Range" 30000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+    }
+   }
+  }
+  ClothNodeStorageComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "GRS: 152+HQ Backpanel"
+     Description "GRS: Deployable Radio Backpanel"
+     Icon ""
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69291E1CE1B39990}" {
+     Weight 0.5
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 8001
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5EA4A89F0D06E1A6}" {
+      CameraPreset Front
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 0.75
+      CameraOffset 0 0 0
+      FOV 40
+      IsDynamicObject 0
+      PreviewWornModel 1
+      PreviewModel ""
+     }
+     CharacterModifierAttributes "{69291E1CE1B3998A}" {
+     }
+    }
+    CommonItemType "RADIO"
+    m_Size SLOT_2x2
+    m_SlotType SLOT_BACKPACK
+   }
+  }
+  MeshObject "{5A30BAE7673C63D1}" {
+   Object "{F38C6E30AA480C0F}Assets/Backpanels/Backpanel_Ground.xob"
+  }
+  RigidBody "{5A30BAE7673C63D3}" {
+   Enabled 0
+  }
+  SCR_RestrictedDeployableSpawnPointComponent "{5EA4A89F0D06E1A8}" {
+   m_sReplacementPrefab "{B5A9B78EE58D9C76}Prefabs/Systems/DeployableRadios/DeployableItemRadioReplacemenUS.et"
+   m_FactionKey "US"
+   m_eRespawnBudgetType NONE
+   m_iMaxRespawns 1000
+   m_iRespawnGenerationTime 10
+   m_bQueryFactionRadioRange 0
+   m_bQueryBases 0
+   m_bQuerySpawnPoints 0
+  }
+  BaseLoadoutClothComponent "{5EA4A89F0D06E1DE}" {
+   AreaType LoadoutBackpackArea "{5EA4A89F0D06E1DA}" {
+   }
+   Slots {
+    LoadoutSlotInfo Bolt_Cutters {
+     PivotID "Spine5"
+     Offset 0 -1.2161 -0.0952
+     Angles -5.938 0 0
+     AreaType GL_Bag_Bolt_Cutters "{69291E1CE1B399FC}" {
+     }
+    }
+    LoadoutSlotInfo Bottom {
+     PivotID "Spine5"
+     Offset 0.0282 0.0201 -0.2243
+     Angles 82.8708 0.8666 -92.5257
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Bag_SlotArea_Bottom "{69291E1CE1B399F9}" {
+     }
+    }
+    LoadoutSlotInfo Pouches {
+     PivotID "Spine5"
+     Offset 0.0047 -1.1742 -0.1373
+     Angles -5.938 2.4799 0
+     Prefab "{2DE2865DFB25F250}Prefabs/Pouches/Backpack_Pouches/GRS_Minimap_Bag.et"
+    }
+    LoadoutSlotInfo Radio {
+     PivotID "Spine5"
+     Offset -0.0072 -1.1821 -0.1176
+     Angles -5.8504 0 0
+     Prefab "{94BD3BB9A7607CE7}Prefabs/Pouches/Base/GRS_Radio_ANPRC_Pouch_V2.et"
+     InspectionWidgetOffset 0 -6 0
+    }
+    LoadoutSlotInfo Antenna {
+     PivotID "Spine5"
+     Offset -0.0222 -1.2046 -0.1502
+     Angles -7.0913 -0.0043 0.7529
+     MergePhysics 1
+     Prefab "{BC5C9481C4135B5E}Prefabs/Accessories/GRS_Large_Antenna.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+    }
+    LoadoutSlotInfo Storage {
+     Prefab "{D2D08350EDB33DDF}Prefabs/Backpanels/GRS_BackpackStorage.et"
+    }
+   }
+   WornModel "{BD802E76B123CC5A}Assets/Backpanels/Backpanel_Backpack_Breacher_V2.xob"
+   ItemModel "{F38C6E30AA480C0F}Assets/Backpanels/Backpanel_Ground.xob"
+   DeflatedModel ""
+  }
+ }
+ coords -0.192 0.536 1.316
+}
