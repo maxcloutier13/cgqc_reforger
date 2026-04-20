@@ -113,7 +113,7 @@ GenericEntity : "{911D6C8DC7BA2D63}Prefabs/Weapons/Core/Rifle_Base.et" {
      AttachmentSlot InventoryStorageSlot optics {
       PivotID "slot_optic"
       ChildPivotID "snap_weapon"
-      Prefab "{ECB3FAA33C663FD6}Scopes/Schmidt and Bender PMII 5-25x56/Prefabs/Optic_SHMITTBENDERPM2525.et"
+      Prefab "{C70B6EA16A9261B1}Scopes/Schmidt and Bender PMII 5-25x56/Prefabs/Optic_SHMITTBENDERPM2525_m700.et"
       InspectionWidgetOffset 0 0.1222 0.1277
      }
      AttachmentType AttachmentOpticsRIS1913 "{68DE338FD2EBEA33}" {
