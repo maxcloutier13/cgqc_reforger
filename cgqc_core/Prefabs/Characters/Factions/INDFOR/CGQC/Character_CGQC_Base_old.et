@@ -1,9 +1,6 @@
 SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et" {
  ID "520EC961A090B1EE"
  components {
-  RandomGearComponent "{68AAF221635F9889}" {
-   Enabled 0
-  }
   SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
    "faction affiliation" "CGQC"
   }
@@ -90,7 +87,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
     ItemsInitConfigurationItem "{68B908099C22257E}" {
      TargetStorage "Jacket/Jacket_US_BDU_TigerStripe.et"
      PrefabsToSpawn {
-      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/PaperMap_01_folded_US.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et"
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et"
      }
     }
     ItemsInitConfigurationItem "{68B908083C369512}" {
