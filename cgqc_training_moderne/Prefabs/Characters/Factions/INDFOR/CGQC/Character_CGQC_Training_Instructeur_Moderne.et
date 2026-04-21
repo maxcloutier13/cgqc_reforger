@@ -1,0 +1,46 @@
+SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Base_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate ""
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{BC2FAF35A4DA094E}Prefabs/Characters/HeadGear/Hat_M70_01/ARY_Hat_M70_01_black.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A722676E7175F8E0}Prefabs/Characters/Uniforms/Tshirts/CGQC_Instructor_Tshirt.et"
+    }
+    LoadoutSlotInfo Back {
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{17DAAF4DC71B2AC3}Prefabs/Characters/Handwear/Gloves_MechanixMpact/GRS_Gun_Gloves_Black.et"
+    }
+    LoadoutSlotInfo Eyes {
+     Prefab "{E2AEE09BA445A688}Prefabs/Characters/Eyewear/npp_kondor/Eyewear_npp_kondor.et"
+    }
+    LoadoutSlotInfo Ears {
+     Prefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Enabled 0
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/CGQC_Instructor_Tshirt.et"
+    }
+   }
+  }
+ }
+}

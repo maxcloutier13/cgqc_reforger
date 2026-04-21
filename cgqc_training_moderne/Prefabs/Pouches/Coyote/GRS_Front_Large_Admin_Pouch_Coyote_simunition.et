@@ -1,0 +1,36 @@
+GenericEntity : "{4DBBAABC009C0449}Prefabs/Pouches/Base/GRS_Front_Large_Admin_Pouch.et" {
+ ID "65CC0BE63B41D430"
+ components {
+  GRS_PouchStorageComponent "{65CC0BE65456908C}" {
+   Attributes SCR_ItemAttributeCollection "{65CC0BE6545690A2}" {
+    ItemDisplayName UIInfo "{65CC0BE6545690D8}" {
+     Name "GRS: Front Admin Pouch - Coyote"
+     Description "GRS: Front Admin Pouch - Coyote"
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{692A23C4E269ABEA}" {
+     SlotTemplate InventoryStorageSlot Nades {
+      Prefab "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et"
+     }
+     NumSlots 2
+    }
+    MultiSlotConfiguration "{692A23C4F02659AC}" {
+     SlotTemplate InventoryStorageSlot Mags {
+      Prefab "{0D5284C72ECCDE58}Prefabs/Weapons/Magazines/CHECK_Magazine_556x45_STANAG_Sim.et"
+     }
+     NumSlots 3
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CC0BE654569712}" {
+   WornMaterialsOverride {
+    "{7150DDD9AEF6B157}Assets/Pouches/Coyote/BackPanel_Spiritus_Coyote.emat"
+   }
+   ItemMaterialsOverride {
+    "{7150DDD9AEF6B157}Assets/Pouches/Coyote/BackPanel_Spiritus_Coyote.emat"
+   }
+  }
+ }
+ coords -0.437 0.788 0.299
+}

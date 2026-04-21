@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{54637FFF0741E3FA}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Coyote_Simunition_Instructor.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

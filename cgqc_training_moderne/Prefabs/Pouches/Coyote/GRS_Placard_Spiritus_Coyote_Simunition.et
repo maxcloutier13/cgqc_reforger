@@ -1,0 +1,33 @@
+GenericEntity : "{DE8C272F91C64210}Prefabs/Pouches/Base/GRS_Placard_Spiritus.et" {
+ ID "65CC0BE46CF1F88F"
+ components {
+  GRS_EquipmentStorageComponent "{65CC0BE79F088DB4}" {
+   Attributes SCR_ItemAttributeCollection "{65CC0BE79F088D04}" {
+    ItemDisplayName UIInfo "{65CC0BE79F088D44}" {
+     Name "GRS: Placard Spiritus - Coyote"
+     Description "GRS: Placard Spiritus - Coyote"
+    }
+   }
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot GRS_Rifle_Pouch_0 {
+     Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+    }
+    GRS_EquipmentStorageSlot GRS_Rifle_Pouch_1 {
+     Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+    }
+    GRS_EquipmentStorageSlot GRS_Rifle_Pouch_2 {
+     Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CC0BE79F0812F2}" {
+   WornMaterialsOverride {
+    "{5DAC02550FF7C66E}Assets/Pouches/Coyote/MI_Spiritus_Placard_556_Coyote.emat"
+   }
+   ItemMaterialsOverride {
+    "{5DAC02550FF7C66E}Assets/Pouches/Coyote/MI_Spiritus_Placard_556_Coyote.emat"
+   }
+  }
+ }
+ coords 0.52 0.606 0.268
+}

@@ -1,0 +1,50 @@
+GenericEntity : "{BC15373E079526B7}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_CY_sTs.et" {
+ ID "65CD429C92ECDDD3"
+ components {
+  ClothNodeStorageComponent "{65CD429C8E98C57C}" {
+   Attributes SCR_ItemAttributeCollection "{65CD429C8E98C572}" {
+    ItemDisplayName UIInfo "{65CD429C8E98C51B}" {
+     Name "CGQC Instructor Belt"
+     Description "Fake bullets around here. "
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CD429C8E98BBEE}" {
+   Slots {
+    LoadoutSlotInfo Pistol_Mag_Front_Pouch {
+     Prefab "{157AD8A207D4581B}Prefabs/Pouches/Coyote/GRS_G24_Pouch_Coyote_simunition.et"
+    }
+    LoadoutSlotInfo Holster_Strap {
+     Prefab "{8FDF67565DECA3AD}Prefabs/Belts/Bison Belts/GRS_Holster_Strap_DarkB.et"
+    }
+    LoadoutSlotInfo Holster {
+     Prefab "{24129C254B221C81}Prefabs/Belts/BM_Holster_Brown.et"
+    }
+    LoadoutSlotInfo Pistol_Mag_Pouch {
+     Prefab "{157AD8A207D4581B}Prefabs/Pouches/Coyote/GRS_G24_Pouch_Coyote_simunition.et"
+    }
+    LoadoutSlotInfo Pistol_Mag_Pouch_2 {
+     Prefab "{157AD8A207D4581B}Prefabs/Pouches/Coyote/GRS_G24_Pouch_Coyote_simunition.et"
+    }
+    LoadoutSlotInfo RS_Front_Carabiner {
+     Prefab ""
+    }
+    LoadoutSlotInfo LS_Front_Pouch {
+     Prefab ""
+    }
+    LoadoutSlotInfo LS_Side_Pouch {
+     Prefab "{0301003BD624B776}Prefabs/Pouches/Coyote/GRS_M18_Filbe_Pouch_Coyote.et"
+    }
+    LoadoutSlotInfo Middle_Rear_Pouch {
+     Prefab "{6AF129E2B30B2A3B}Prefabs/Pouches/Coyote/GRS_Rear_Medic_Pouch_Coyote.et"
+    }
+    LoadoutSlotInfo RS_Rear_Pouch {
+     Prefab "{22105F8E68172D5A}Prefabs/Pouches/Coyote/GRS_Side_Pouch_1_Coyote_Simunition.et"
+    }
+    LoadoutSlotInfo Rear_Carabiner_Accessory {
+     Prefab "{CBD2C31FBB5A09A0}Prefabs/Accessories/Chemlights/Emissive/BM_Rear_Carabiner_Chemlights_Green_EM.et"
+    }
+   }
+  }
+ }
+}

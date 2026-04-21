@@ -1,0 +1,47 @@
+GenericEntity : "{5347CDB994FBCC3F}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Base.et" {
+ ID "657354449CFDD2B2"
+ components {
+  ClothNodeStorageComponent "{657354449B52FB44}" {
+   Attributes SCR_ItemAttributeCollection "{657354449B52FB5C}" {
+    ItemDisplayName UIInfo "{657354449B52FB33}" {
+     Name "GRS: Chest Rig Modular - Coyote - Simunition"
+     Description "GRS: Chest Rig Modular - Coyote"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657354449B52E34C}" {
+   Slots {
+    LoadoutSlotInfo AR_Placard {
+     Prefab "{3479D20A4BE5DB31}Prefabs/Pouches/Coyote/GRS_Placard_Spiritus_Coyote_Simunition.et"
+    }
+    LoadoutSlotInfo Front_Pouch_Large {
+     Prefab "{07E8FD001BE21374}Prefabs/Pouches/Coyote/GRS_Front_Large_Admin_Pouch_Coyote_simunition.et"
+    }
+    LoadoutSlotInfo LS_Radio {
+     Prefab "{D853BB46E67E0333}Prefabs/Pouches/Base/GRS_Radio_Pouch_343_CY.et"
+    }
+    LoadoutSlotInfo BackRadio {
+     PivotID "Spine5"
+     Offset 0.1623 0.0104 0.0462
+     Angles -1.1273 73.4464 0
+     MergePhysics 1
+     Enabled 0
+     Prefab "{D853BB46E67E0333}Prefabs/Pouches/Base/GRS_Radio_Pouch_343_CY.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Radio_Pouch "{692A23C6CD2A9A3D}" {
+     }
+    }
+    LoadoutSlotInfo Microphone {
+     Prefab "{1D5791C230ACE618}Prefabs/Accessories/GRS_Microphone_V2.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{57D5EAECA551BA79}Assets/Vests/Haley_Chest_Rig/Data/MI_D3CRM_Coyote.emat"
+   }
+   ItemMaterialsOverride {
+    "{57D5EAECA551BA79}Assets/Vests/Haley_Chest_Rig/Data/MI_D3CRM_Coyote.emat"
+   }
+  }
+ }
+}
