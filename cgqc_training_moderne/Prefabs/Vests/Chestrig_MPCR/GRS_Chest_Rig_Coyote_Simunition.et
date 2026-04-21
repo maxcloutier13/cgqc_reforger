@@ -20,6 +20,9 @@ GenericEntity : "{5347CDB994FBCC3F}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Bas
     LoadoutSlotInfo LS_Radio {
      Prefab "{D853BB46E67E0333}Prefabs/Pouches/Base/GRS_Radio_Pouch_343_CY.et"
     }
+    LoadoutSlotInfo Microphone {
+     Prefab "{1D5791C230ACE618}Prefabs/Accessories/GRS_Microphone_V2.et"
+    }
     LoadoutSlotInfo BackRadio {
      PivotID "Spine5"
      Offset 0.1623 0.0104 0.0462
@@ -31,9 +34,6 @@ GenericEntity : "{5347CDB994FBCC3F}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Bas
      DeactivatePhysicsOnAtaching 1
      AreaType GL_Radio_Pouch "{692A23C6CD2A9A3D}" {
      }
-    }
-    LoadoutSlotInfo Microphone {
-     Prefab "{1D5791C230ACE618}Prefabs/Accessories/GRS_Microphone_V2.et"
     }
    }
    WornMaterialsOverride {

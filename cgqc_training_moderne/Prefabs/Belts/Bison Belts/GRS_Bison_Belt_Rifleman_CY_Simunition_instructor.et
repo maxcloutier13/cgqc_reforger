@@ -39,7 +39,7 @@ GenericEntity : "{BC15373E079526B7}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifl
      Prefab "{6AF129E2B30B2A3B}Prefabs/Pouches/Coyote/GRS_Rear_Medic_Pouch_Coyote.et"
     }
     LoadoutSlotInfo RS_Rear_Pouch {
-     Prefab "{22105F8E68172D5A}Prefabs/Pouches/Coyote/GRS_Side_Pouch_1_Coyote_Simunition.et"
+     Prefab "{266CD6DB8AD689A3}Prefabs/Pouches/Coyote/GRS_Side_Pouch_1_Coyote_Simunition_instructor.et"
     }
     LoadoutSlotInfo Rear_Carabiner_Accessory {
      Prefab "{CBD2C31FBB5A09A0}Prefabs/Accessories/Chemlights/Emissive/BM_Rear_Carabiner_Chemlights_Green_EM.et"

@@ -14,6 +14,7 @@ GenericEntity : "{A77F06B892FA378B}Prefabs/Weapons/Handguns/BaconM17/Handgun_Bac
     AttachmentSlotComponent "{5CA72768717BD842}" {
      AttachmentSlot InventoryStorageSlot ris {
       Enabled 1
+      Prefab ""
      }
     }
     AttachmentSlotComponent "{B502E4DC8A9E835E}" {

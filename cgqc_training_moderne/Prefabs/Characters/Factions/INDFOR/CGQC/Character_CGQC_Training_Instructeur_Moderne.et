@@ -4,9 +4,6 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate ""
   }
-  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
-   WeaponTemplate ""
-  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
@@ -30,8 +27,7 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
     }
     LoadoutSlotInfo GRS_Waist {
-     Enabled 0
-     Prefab ""
+     Prefab "{C98C33C8BFCE376C}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_CY_Simunition_instructor.et"
     }
    }
   }

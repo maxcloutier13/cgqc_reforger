@@ -13,7 +13,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
    WeaponTemplate ""
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
-   WeaponTemplate ""
+   WeaponTemplate "{5D971D6EC966CF52}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC_Simunition.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
@@ -31,6 +31,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab ""
     }
     LoadoutSlotInfo GRS_Waist {
+     Prefab "{5F7C1B30448712A1}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_CY_Simunition.et"
     }
    }
   }

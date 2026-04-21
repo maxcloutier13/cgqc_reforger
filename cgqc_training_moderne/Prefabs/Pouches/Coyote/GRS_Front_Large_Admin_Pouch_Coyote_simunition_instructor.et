@@ -8,11 +8,6 @@ GenericEntity : "{4DBBAABC009C0449}Prefabs/Pouches/Base/GRS_Front_Large_Admin_Po
      Description "GRS: Front Admin Pouch - Coyote"
     }
    }
-   InitialStorageSlots {
-    InventoryStorageSlot Keys {
-     Prefab "{8A45D4DF4FFA00E7}Prefabs/Items/Equipment/Keys/Masterkey.et"
-    }
-   }
    MultiSlots {
     MultiSlotConfiguration "{692A23C29DF67A8D}" {
      SlotTemplate InventoryStorageSlot Nades {

@@ -1,3 +1,58 @@
+$grp GenericEntity {
+ {
+  coords 6963.036 41.316 3910.531
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    coords -0.69 0.458 -0.993
+   }
+  }
+ }
+ {
+  coords 6964.456 41.316 3912.549
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    coords -0.688 0.458 -0.993
+   }
+  }
+ }
+ {
+  coords 6964.948 41.316 3913.255
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    coords -0.688 0.458 -0.994
+   }
+  }
+ }
+ {
+  coords 6965.416 41.316 3913.96
+  angles 0 125.247 0
+  {
+   GenericEntity {
+    coords -0.688 0.458 -0.994
+   }
+  }
+ }
+ {
+  coords 6965.908 41.316 3902.301
+  angles 0 -54.493 0
+  {
+   $grp GenericEntity {
+    {
+     coords 2.947 0 -0.035
+    }
+    {
+     coords 5.896 0 -0.041
+    }
+    {
+     coords 8.863 0 -0.032
+    }
+   }
+  }
+ }
+}
 GenericEntity : "{04BA1B510DA3CB74}Prefabs/nogm/FastCap.et" {
  coords 6970.76 41.449 3914.839
  angles 0 0 0
@@ -7,7 +62,7 @@ SCR_DestructibleEntity : "{052DDF0E3A5E2AF6}Prefabs/Structures/Walls/Metal/Metal
  angles 0 35.996 0
 }
 GenericEntity : "{0607FC1461EB56D1}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_LR.et" {
- coords 6959.033 41.316 3906.925
+ coords 6958.87 41.316 3906.694
  angles 0 125.247 0
  {
   GenericEntity {
@@ -140,9 +195,31 @@ GenericEntity : "{2DD4D94957E1DC2C}Prefabs/Props/Furniture/Carpet_03_red.et" {
  coords 6963.322 41.317 3905.014
  angles 0 35.996 0
 }
+$grp GenericEntity : "{2F34847676F90655}PrefabsEditable/Auto/Props/Military/Ready_Cage/CGQC_Ready_Cage_1.et" {
+ {
+  coords 6965.976 41.316 3902.121
+  angles 0 126.143 0
+ }
+ {
+  coords 6967.746 41.316 3904.544
+  angles 0 126.143 0
+ }
+ {
+  coords 6969.516 41.316 3906.967
+  angles 0 126.143 0
+ }
+ {
+  coords 6971.286 41.316 3909.39
+  angles 0 126.143 0
+ }
+}
+GenericEntity : "{3304B2132BF44CEF}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_Rocket.et" {
+ coords 6964.505 41.316 3914.51
+ angles 0 126.143 0
+}
 GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_LockerClosed_1.et" {
- coords 6963.17 41.316 3912.473
- angles 0 -54.753 0
+ coords 6973.178 41.316 3910.747
+ angles 0 126.143 0
  {
   GenericEntity {
    ID "65C6DE0A9D65C7EE"
@@ -159,18 +236,6 @@ GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/Comp
   GenericEntity {
    ID "65C6DE0A9D65C8E7"
    coords -0.218 1.169 0.251
-  }
-  GenericEntity {
-   ID "65C6DE0A9D65C918"
-   coords 0.474 0.185 0.06
-  }
-  GenericEntity {
-   ID "65C6DE0A9D65C940"
-   coords 0.474 0.036 0.06
-  }
-  GenericEntity {
-   ID "65C6DE0A9D65C966"
-   coords 0.474 0.112 0.06
   }
   GenericEntity {
    ID "65C6DE0A9D65C742"
@@ -223,7 +288,7 @@ GenericEntity : "{3CADFC2AAD95C552}Prefabs/Compositions/Misc/CustomEntities/Comp
  }
 }
 GenericEntity : "{43ADCAF653A0EC1C}Prefabs/Props/Furniture/Sofa_02/Sofa_02_Base.et" {
- coords 6965.65 41.316 3916.127
+ coords 6965.895 41.316 3916.266
  angles 0 125.996 0
 }
 GenericEntity : "{44000BB5A7F7EE0A}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/MilitaryBase_Hangar_Base_Base.et" {
@@ -246,55 +311,9 @@ GenericEntity : "{44000BB5A7F7EE0A}Prefabs/Compositions/Misc/CustomEntities/Dest
   }
  }
 }
-$grp GenericEntity : "{6E75DEA5094771F9}Prefabs/Props/Military/Compositions/US/ArsenalCubby2_CGQC.et" {
- {
-  coords 6963.036 41.316 3910.531
-  angles 0 125.247 0
-  {
-   GenericEntity {
-    ID "69103923810D903E"
-    coords -0.69 0.458 -0.993
-   }
-  }
- }
- {
-  coords 6964.456 41.316 3912.549
-  angles 0 125.247 0
-  {
-   GenericEntity {
-    ID "69103923810D903E"
-    coords -0.688 0.458 -0.993
-   }
-  }
- }
- {
-  coords 6964.948 41.316 3913.255
-  angles 0 125.247 0
-  {
-   GenericEntity {
-    ID "69103923810D903E"
-    coords -0.688 0.458 -0.994
-   }
-  }
- }
- {
-  coords 6965.416 41.316 3913.96
-  angles 0 125.247 0
-  {
-   GenericEntity {
-    ID "69103923810D903E"
-    coords -0.688 0.458 -0.994
-   }
-  }
- }
-}
-SCR_DestructibleBuildingEntity : "{73FACBBD74481582}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/MedHescos_1.et" {
- coords 6959.79 -0.001 3903.106
- angles 0 125.996 0
-}
 GenericEntity : "{8A2EC35B7C52048E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Box2.et" {
  coords 6965.535 41.316 3904.218
- angles 0 -53.857 0
+ angles 0 126.143 0
 }
 GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
  coords 6968.932 41.316 3916.109
@@ -308,9 +327,9 @@ GenericEntity : "{A23CA978495F3A45}Prefabs/nogm/ATGM_LaunchSystem.et" {
  coords 6969.37 42.24 3916.221
  angles -3.159 -54.611 0
 }
-SCR_DestructibleBuildingEntity : "{AC8A1CBE6D9CA553}Prefabs/Structures/Forest/DeerStands/DeerStand_01.et" {
- coords 6972.881 0.35 3898.952
- angles 0 -81.895 0
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 6962.905 41.094 3900.981
+ angles 0 -54.783 0
 }
 GenericEntity : "{AEA40783A4E50483}Prefabs/nogm/AR15-mod2.et" {
  coords 6968.865 43.253 3916.706
@@ -352,20 +371,13 @@ $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial
   angles 0 124.879 0
  }
 }
-GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
- coords 6965.908 41.316 3902.301
- angles 0 -54.493 0
+GenericEntity : "{C2816F35DF4E0624}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_MG.et" {
+ coords 6963.331 41.316 3912.868
+ angles 0 126.143 0
  {
-  $grp GenericEntity : "{C0D70C468A61C546}Prefabs/Props/Military/Compositions/US/ArsenalCage_CGQC.et" {
-   {
-    coords 2.947 0 -0.035
-   }
-   {
-    coords 5.896 0 -0.041
-   }
-   {
-    coords 8.863 0 -0.032
-   }
+  GenericEntity {
+   ID "660D2CA2D669E2EB"
+   coords 0 -0.07 0
   }
  }
 }
@@ -388,19 +400,15 @@ GenericEntity : "{DE7A07D10B7BF25B}Prefabs/Items/Equipment/Accessories/ETool_ALI
  angles 1.676 30.491 0
 }
 GenericEntity : "{DF64F75C84B426A6}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et" {
- coords 6972.047 43.276 3914.42
+ coords 6972.238 43.303 3914.281
  angles 0 305.996 0
-}
-GenericEntity : "{E34ABE27DD798CE0}Prefabs/GM_Props/Locker3_mod2_nogm.et" {
- coords 6973.133 41.316 3910.795
- angles 0 125.996 0
 }
 GenericEntity : "{E6F7A58516F902E8}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et" {
  coords 6971.285 42.287 3914.733
  angles -90 -180 -180
 }
 GenericEntity : "{EEFA430FD6488D4E}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/M200_Repair_Table.et" {
- coords 6961.096 41.316 3909.53
+ coords 6960.595 41.316 3908.821
  angles 0 125.247 0
  {
   GenericEntity {

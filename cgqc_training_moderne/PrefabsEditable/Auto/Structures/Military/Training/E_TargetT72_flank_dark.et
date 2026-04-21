@@ -1,0 +1,49 @@
+GenericEntity : "{5E354F5DFD5FAFC4}Prefabs/Structures/Military/Training/TargetVehicles/TargetT72_flank.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_EditableEntityComponent "{60D0E22B59B9A65D}" : "{7933327C6791C5D0}Prefabs/Editor/Components/Structures_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-EditableEntity_TargetT72_flank_Name"
+    m_Image "{6C2750376CDC963A}UI/Textures/EditorPreviews/Auto/Structures/Military/Training/E_TargetT72_flank.edds"
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     THEME_MILITARY ENTITYTYPE_OBJECT SIZE_M
+    }
+    m_EntityChildrenBudgetCost {
+     SCR_EntityBudgetValue "{692AD9D2EC646070}" {
+      m_BudgetType PROPS
+      m_Value 1
+     }
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{60D0E22B59B9F7B1}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{692AD9D2EC646057}" {
+     m_iParentID -1
+     m_Mesh "{1B0227F7C6CDE510}Assets/Structures/Military/Training/TargetVehicleBase/TargetVehicleBase_01.xob"
+     m_Flags 257
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{692AD9D2EC646052}" {
+     m_iParentID 0
+     m_Mesh "{DF2F20640087D937}Assets/Structures/Military/Training/TargetT72/TargetT72_flank.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+  RplComponent "{60D0E22B59B9A323}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+ }
+}

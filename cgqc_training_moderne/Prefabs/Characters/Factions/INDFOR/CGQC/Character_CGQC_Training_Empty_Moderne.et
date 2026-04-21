@@ -1,6 +1,20 @@
 SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab ""
+      }
+      SCR_EquipmentStorageSlot WristwatchSlot {
+       Prefab ""
+      }
+     }
+    }
+   }
+  }
   SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
    "faction affiliation" "CGQC_UPO"
   }
@@ -18,6 +32,15 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
+     Prefab ""
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
      Prefab ""
     }
     LoadoutSlotInfo Vest {
