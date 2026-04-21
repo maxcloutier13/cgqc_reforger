@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "65CC0BE63F12373A"
+ components {
+  GRS_PouchStorageComponent "{65CC0BE654573FB1}" {
+   InitialStorageSlots {
+    InventoryStorageSlot IFAK {
+     Prefab "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+GenericEntity {
+ ID "65CC0BE19645F0BF"
+ components {
+  GRS_EquipmentStorageComponent "{65CC0BE1EF2E162F}" {
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot Medkit {
+     Prefab "{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et"
+    }
+    GRS_EquipmentStorageSlot IFAK {
+     Prefab "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+    }
+   }
+  }
+ }
+}

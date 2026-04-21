@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "65CC0BE687642242"
+ components {
+  GRS_PouchStorageComponent "{65CC0BE6FD6E96B2}" {
+   InitialStorageSlots {
+    InventoryStorageSlot IFAK {
+     Prefab "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+    }
+   }
+  }
+ }
+}
