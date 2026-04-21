@@ -1,3 +1,11 @@
 GenericEntity : "{5796512175D91FC1}Prefabs/Pouches/Base/GRS_Radio_MPU5_Pouch.et" {
  ID "65CC0BE4BF2EF189"
+ components {
+  GRS_EquipmentStorageComponent "{6606CD287C764A1A}" {
+   InitialStorageSlots {
+    GRS_RadioStorageSlot Radio {
+    }
+   }
+  }
+ }
 }
