@@ -1,0 +1,9 @@
+GameEntity : "{608F66AB8B36B85D}Prefabs/Characters/Eyewear/crossbow/Eyewear_ess_crossbow_blk.et" {
+ ID "5112706CD4157AC7"
+ components {
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   AreaType ZEL_EyesArea "{5AD4C744691240D1}" {
+   }
+  }
+ }
+}

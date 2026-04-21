@@ -1,0 +1,9 @@
+GameEntity : "{F8554F236521F974}Prefabs/Characters/HeadGear/Headphones_6M2/headphones_6m2.et" {
+ ID "50D485E1435D6C72"
+ components {
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   AreaType ZEL_EarsArea "{5AD4C744691240D1}" {
+   }
+  }
+ }
+}

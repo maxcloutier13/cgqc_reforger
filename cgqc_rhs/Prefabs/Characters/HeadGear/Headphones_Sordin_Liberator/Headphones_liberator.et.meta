@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3FDA3C5B74681C25}Prefabs/Characters/HeadGear/Headphones_Sordin_Liberator/Headphones_liberator.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

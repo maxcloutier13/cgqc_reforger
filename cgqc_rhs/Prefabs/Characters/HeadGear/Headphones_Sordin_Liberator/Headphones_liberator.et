@@ -1,0 +1,9 @@
+GameEntity : "{2162B5F1B9F5F6BB}Prefabs/Characters/HeadGear/Headphones_Sordin_Liberator/Headphones_Sordin_base.et" {
+ ID "50D485E1435D6C72"
+ components {
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   AreaType ZEL_EarsArea "{5AD4C744691240D1}" {
+   }
+  }
+ }
+}
