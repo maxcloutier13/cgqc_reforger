@@ -6,6 +6,7 @@ GenericEntity : "{209B3789589C13CB}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
     Name "CGQC Rack Launchers"
     Icon "{D5EBF515EE77251A}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Weapons.edds"
     m_Image "{163C64D0B8843AA1}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_ARY_Locker_Large-Rack_Large_UI.edds"
+    m_sFaction "CGQC"
     m_aAuthoredLabels + {
      CONTENT_MODDED ARY_CONTENT_ARMARY ARY_LOCKERS FACTION_CGQC
     }
@@ -22,6 +23,7 @@ GenericEntity : "{209B3789589C13CB}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
    components {
     SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
      m_eSupportedArsenalItemTypes ROCKET_LAUNCHER
+     m_bAlwaysUseDefaultFaction 1
     }
     SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
      "faction affiliation" "CGQC"

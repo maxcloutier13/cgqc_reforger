@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et" {
+SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_old.et" {
  ID "520EC961A090B1EF"
  components {
   SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
@@ -64,7 +64,7 @@ SCR_ChimeraCharacter : "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "Jacket/Jacket_Crye_Combat_Shirt_Rolled_mcblack.et"
      TargetPurpose 1
      PrefabsToSpawn {
-      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/PaperMap_01_folded_US.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et"
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et"
      }
     }
     ItemsInitConfigurationItem "{68B908099C22257E}" {
