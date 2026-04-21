@@ -2,6 +2,30 @@ Vehicle M151A2_transport8 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
  coords 6796.474 14.376 4171.931
  angles 0 -89.836 0
 }
+$grp SCR_DestructibleBuildingEntity : "{525700C0EC3BA75C}Prefabs/Structures/Industrial/Sheds/ShedMetal_02/ShedMetal_02_short_base.et" {
+ {
+  coords 6796.205 0.746 4133.78
+  angles 0 90.847 0
+ }
+ {
+  coords 6795.968 0.746 4117.781
+  angles 0 90.847 0
+ }
+}
+$grp SCR_DestructibleEntity : "{879865F07EA907B0}Prefabs/Structures/Walls/Concrete/ConcreteWall_02/ConcreteWall_02_4m.et" {
+ {
+  coords 6855.292 1.482 4174.767
+  angles 0 49.802 0
+ }
+ {
+  coords 6856.18 1.63 4171.337
+  angles 0 101.961 0
+ }
+ {
+  coords 6852.319 1.459 4176.986
+  angles 0 23.282 0
+ }
+}
 $grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
  {
   coords 6854.903 13.804 4171.543
@@ -16,7 +40,7 @@ $grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" 
   angles 0 -115.763 0
  }
  {
-  coords 6845.139 13.366 4093.325
+  coords 6844.315 13.366 4093.125
   angles 0 -13.603 0
  }
  {
@@ -56,7 +80,7 @@ $grp GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et"
     m_sEditorName "Range: Grenade"
    }
   }
-  coords 6853.055 14.813 4174.126
+  coords 6851.403 14.813 4174.238
   angles 0 93.895 0
  }
  {

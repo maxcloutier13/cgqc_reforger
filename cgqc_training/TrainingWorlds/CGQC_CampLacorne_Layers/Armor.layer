@@ -23,6 +23,16 @@ Vehicle M151A2_transport5 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
 GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
  coords 6925.062 13.406 3699.194
 }
+$grp StaticModelEntity : "{80DF3BD810D032AF}Prefabs/Structures/Industrial/Towers/LightTower_01/LightTower_01.et" {
+ {
+  coords 6889.925 13.406 3720.483
+  angles 0 -3.823 0
+ }
+ {
+  coords 6858.507 13.636 3718.175
+  angles 0 18.236 0
+ }
+}
 DecalEntity : "{9EE74738BD9E8CDB}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_02.et" {
  coords 6891.858 0 3687.13
  angles -90 180 10.806
@@ -32,7 +42,7 @@ GenericEntity : "{9EF2973AE46B5AFC}Prefabs/Compositions/Misc/CustomEntities/Comp
  coords 6927.71 13.406 3695.008
 }
 GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
- coords 6895.747 12.397 3717.24
+ coords 6891.088 12.397 3710.229
  angles 0 -13.603 0
 }
 Vehicle Motorbike_US7 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
@@ -50,8 +60,12 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
    m_sEditorName "Véhicules"
   }
  }
- coords 6895.832 13.406 3719.692
+ coords 6891.227 13.406 3713.751
  angles 0 37.782 0
+}
+SCR_DestructibleBuildingEntity : "{EEEBF095E1B611CF}Prefabs/Structures/Industrial/Sheds/ShedMetal_02/ShedMetal_02_long_base.et" {
+ coords 6905.884 -0.1 3715.383
+ angles 0 177.796 0
 }
 GenericEntity : "{F2A6A3DA58AFD5D2}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_01.et" {
  coords 6928.148 13.406 3685.952

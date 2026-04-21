@@ -24,6 +24,9 @@ SCR_DestructibleBuildingEntity : "{686B4C83AC940895}Prefabs/Structures/Infrastru
  angles 0 -180 0
  scale 0.42
 }
+GenericEntity : "{A98050A098B0F5D5}PrefabsEditable/Auto/Structures/Infrastructure/Lamps/LampStreet_E_01/E_LampStreet_E_01_4m.et" {
+ coords 6754.089 0 4166.202
+}
 GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  components {
   SCR_EditableEntityComponent "{68612E145DE97F2B}" {
