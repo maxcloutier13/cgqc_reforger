@@ -1,6 +1,13 @@
 GenericEntity : "{41078ADB1A1C335F}Prefabs/Vests/JPC2.0/GRS_JPC2.0_Base.et" {
  ID "657354668459517B"
  components {
+  ClothNodeStorageComponent "{6573546684595169}" {
+   Attributes SCR_ItemAttributeCollection "{6573546684595694}" {
+    ItemDisplayName UIInfo "{6573546684595692}" {
+     Name "JPC - MC - "
+    }
+   }
+  }
   BaseLoadoutClothComponent "{65735466845956AE}" {
    Slots {
     LoadoutSlotInfo Other_Patch {

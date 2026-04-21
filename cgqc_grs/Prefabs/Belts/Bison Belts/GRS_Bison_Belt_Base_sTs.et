@@ -1,3 +1,12 @@
 GenericEntity : "{0F5CE05B7C33EBB3}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base.et" {
  ID "65CD429C92ECDDD3"
+ components {
+  ClothNodeStorageComponent "{65CD429C8E98C57C}" {
+   Attributes SCR_ItemAttributeCollection "{65CD429C8E98C572}" {
+    ItemDisplayName UIInfo "{65CD429C8E98C51B}" {
+     Name "Bison Belt - MC"
+    }
+   }
+  }
+ }
 }

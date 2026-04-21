@@ -1,3 +1,12 @@
 GenericEntity : "{54ED984C3D8694FB}Prefabs/Vests/JPC2.0/GRS_JPC2.0_Medic_sTs.et" {
  ID "657354668459517B"
+ components {
+  ClothNodeStorageComponent "{6573546684595169}" {
+   Attributes SCR_ItemAttributeCollection "{6573546684595694}" {
+    ItemDisplayName UIInfo "{6573546684595692}" {
+     Name "JPC - CY - Medic"
+    }
+   }
+  }
+ }
 }
