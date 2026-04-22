@@ -26,7 +26,7 @@ class CGQC_getBeret
 	    string unitPrefabName = unitPrefabData.GetPrefabName();
 	    PrintFormat("[CGQC_getBeret] Unit prefab name: %1", unitPrefabName);
 
-	    if (!unitPrefabName.Contains("Training"))
+	    if (!unitPrefabName.Contains("Training") && !unitPrefabName.Contains("training"))
 	    {
 	        PrintFormat("[CGQC_getBeret] 'training' not found in prefab name -> skipping. Full name: %1", unitPrefabName);
 	        return;
@@ -62,6 +62,8 @@ class CGQC_getBeret
 
 	        bool removed = invManager.TryRemoveItemFromInventory(currentHead);
 	        PrintFormat("[CGQC_getBeret] TryRemoveItemFromInventory result: %1", removed);
+	        SCR_EntityHelper.DeleteEntityAndChildren(currentHead);
+	        Print("[CGQC_getBeret] Head item deleted");
 	    }
 	    else
 	    {
