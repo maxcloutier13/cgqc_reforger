@@ -8,6 +8,14 @@ GenericEntity : "{4DBBAABC009C0449}Prefabs/Pouches/Base/GRS_Front_Large_Admin_Po
      Description "GRS: Front Admin Pouch - Coyote"
     }
    }
+   InitialStorageSlots {
+    InventoryStorageSlot Radio {
+     Prefab "{86C16544D72A4BFD}Prefabs/Accessories/CGQC_Radio_Trellisware_343.et"
+    }
+    InventoryStorageSlot Cutters {
+     Prefab "{42232FFE6E7AC415}Prefabs/Items/Core/Wirecutters/wirecutters.et"
+    }
+   }
    MultiSlots {
     MultiSlotConfiguration "{692A23C4E269ABEA}" {
      SlotTemplate InventoryStorageSlot Nades {
@@ -17,7 +25,7 @@ GenericEntity : "{4DBBAABC009C0449}Prefabs/Pouches/Base/GRS_Front_Large_Admin_Po
     }
     MultiSlotConfiguration "{692A23C4F02659AC}" {
      SlotTemplate InventoryStorageSlot Mags {
-      Prefab "{0D5284C72ECCDE58}Prefabs/Weapons/Magazines/CHECK_Magazine_556x45_STANAG_Sim.et"
+      Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
      }
      NumSlots 3
     }

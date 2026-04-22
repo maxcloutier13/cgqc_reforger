@@ -18,7 +18,7 @@ GenericEntity : "{5347CDB994FBCC3F}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Bas
      Prefab "{8F1DBEDA45052C2D}Prefabs/Pouches/Coyote/GRS_Front_Large_Admin_Pouch_Coyote_simunition_instructor.et"
     }
     LoadoutSlotInfo LS_Radio {
-     Prefab "{3516342F04D3E49C}Prefabs/Pouches/Coyote/GRS_Radio_MPU5_Pouch_Coyote.et"
+     Prefab "{D34639188428F3AC}Prefabs/Pouches/Base/GRS_Radio_JTAC_Pouch_JTAC_L_CY.et"
     }
     LoadoutSlotInfo Microphone {
      Prefab "{7103A5228C686936}Prefabs/Accessories/GRS_Microphone_V1.et"
