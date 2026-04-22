@@ -1,22 +1,11 @@
-$grp Vehicle {
- M998_covered_long_USAF1 {
-  coords 6913.588 41.094 3946.086
- }
- M998_covered_USAF1 {
-  coords 6909.804 41.094 3946.251
- }
- M998_USAF1 {
-  coords 6906.81 41.094 3946.29
- }
-}
 $grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  M151A2_transport1 {
-  coords 6927.441 41.122 3935.436
-  angles 0 154.236 0
+  coords 6926.374 41.122 3933.72
+  angles 0 121.875 0
  }
  M151A2_transport2 {
-  coords 6925.736 41.122 3932.562
-  angles 0 154.236 0
+  coords 6925.051 41.122 3931.534
+  angles 0 123.673 0
  }
 }
 GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
@@ -24,19 +13,11 @@ GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene
 }
 $grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  Motorbike_US2 {
-  coords 6929.811 41.122 3940.737
-  angles 0 148.546 0
+  coords 6929.984 41.122 3940.736
+  angles 0 130.707 0
  }
  Motorbike_US1 {
-  coords 6930.611 41.122 3941.892
-  angles 0 148.546 0
- }
- Motorbike_US3 {
-  coords 6929.285 41.122 3939.618
-  angles 0 148.546 0
- }
- Motorbike_US4 {
-  coords 6928.5 41.122 3938.546
-  angles 0 148.546 0
+  coords 6930.659 41.122 3941.851
+  angles 0 130.707 0
  }
 }

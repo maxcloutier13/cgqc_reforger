@@ -1,0 +1,271 @@
+Vehicle MH47G_Block1 : "{03300A0463827C4B}Prefabs/Vehicles/Helicopters/H47/MH47G_Block2.et" {
+ coords 6336.914 68.937 4441.694
+ angles 0 63.862 0
+}
+Tank M113A2_APC1 : "{0A41E8DF1F680496}Prefabs/Vehicles/Tracked/M113/M113A2_APC.et" {
+ coords 6898.228 13.437 3714.568
+ angles 0 177.915 0
+}
+Vehicle AH6M_AIM92x1 : "{0D355CF9D40F79CA}Prefabs/Vehicles/Helicopters/AH6M/AH6M_AIM92x2.et" {
+ coords 6121.557 68.938 4574.157
+ angles 0 66.934 0
+}
+Vehicle AUS_UH60_Pylon_Quad_Hydra1 : "{1529FD2C6A8162A1}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_Pylon_Quad_Hydra.et" {
+ coords 6381.777 68.937 4337.112
+ angles 0 70.072 0
+}
+Vehicle JLTV_CROWS_Black1 : "{21908B379B8DDE0B}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M2HB/JLTV_CROWS_Black.et" {
+ coords 6950.756 41.094 3854.885
+ angles 0 -5.835 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "66E17C9E7A72D233"
+   coords 0 1.564 0
+  }
+ }
+}
+GenericEntity : "{3A49A5DCEDAB7186}Prefabs/Props/PropsHeine/Patriot_AirDefense.et" {
+ coords 6313.599 69.011 4250.231
+}
+Vehicle JLTV_Unarmed_Black1 : "{3A66B6586464A16C}Prefabs/Vehicles/Wheeled/JLTV/Unarmed/JLTV_Unarmed_Black.et" {
+ coords 6936.406 41.094 3853.297
+ angles 0 -5.835 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "66E17C9E7A72D233"
+   coords 0 1.564 0
+  }
+ }
+}
+$grp Vehicle : "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et" {
+ M1025_armed_M2HB1 {
+  coords 6875.656 41.094 3909.187
+  angles 0 99.481 0
+ }
+ M1025_armed_M2HB2 {
+  coords 6876.397 41.094 3913.625
+  angles 0 99.481 0
+ }
+}
+GenericEntity : "{427DA89457B921DB}Prefabs/Vehicles/Airplanes/IL76/Plane_IL76_UN_static.et" {
+ coords 6178.954 68.938 4435.293
+ angles 0 66.011 0
+}
+$grp Vehicle : "{48F288F5BFF10D8B}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_armed.et" {
+ AUS_UH60_armed1 {
+  coords 6358.677 68.94 4390.521
+  angles 0 67.644 0
+ }
+ AUS_UH60_armed2 {
+  coords 6642.457 61.679 3923.857
+  angles 0 -2.959 0
+ }
+}
+Tank M1A2_TUSKII_Woodland1 : "{4A2EC4B5EAA232DF}Prefabs/Vehicles/Tracked/M1A2/M1A2_TUSKII_Woodland.et" {
+ coords 6857.18 13.437 3713.056
+ angles 0 177.915 0
+}
+$grp Vehicle : "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et" {
+ M1 {
+  coords 6873.973 41.094 3899.475
+  angles 0 98.999 0
+ }
+ M2 {
+  coords 6874.73 41.094 3904.266
+  angles 0 98.999 0
+ }
+}
+$grp Vehicle : "{521F48CA9E635A54}Vehicles/ATV/ATV2p.et" {
+ ATV2p1 {
+  coords 6929.119 41.122 3938.276
+  angles 0 126.034 0
+ }
+ ATV2p2 {
+  coords 6928.062 41.122 3936.771
+  angles 0 126.034 0
+ }
+}
+Turret : "{54838E573DCDC027}Prefabs/Weapons/Howitzers/M777/M777_Howitzer.et" {
+ coords 5767.193 135.063 3076.083
+ angles 0 -10.792 0
+}
+Vehicle JLTV_OGPK_Black1 : "{5544A492985CF8C3}Prefabs/Vehicles/Wheeled/JLTV/OGPK/M2HB/JLTV_OGPK_Black.et" {
+ coords 6941.139 41.094 3853.825
+ angles 0 -5.835 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "66E17C9E7A72D233"
+   coords 0 1.564 0
+  }
+ }
+}
+Vehicle Stryker_CROWS_Cage1 : "{5F17F054025E8B30}Prefabs/Vehicles/Wheeled/Stryker/M1126/CROWS/Stryker_CROWS_Cage.et" {
+ coords 6877.642 13.407 3712.939
+ angles 0 179.332 0
+}
+Vehicle MI28_9M120_B8V20A_Grey1 : "{6338E62940DE185C}Prefabs/Vehicles/Helicopters/MI28/MI28_9M120_B8V20A_Grey.et" {
+ coords 6191.279 68.938 4551.151
+ angles 0 66.236 0
+}
+Tank M2A2_BUSK_MERDC1 : "{634C65C1C55CA723}Prefabs/Vehicles/Tracked/BFV/M2A2_BUSK_MERDC.et" {
+ coords 6908.397 13.416 3715.341
+ angles 0 179.332 0
+}
+Tank M270_MERDC1 : "{6C330BECAAF4FD38}Prefabs/Vehicles/Tracked/M270/M270_MERDC.et" {
+ coords 6903.698 13.406 3714.821
+ angles 0 179.332 0
+}
+Vehicle AH6M_Armed_base1 : "{6CA46BC65DE861A8}Prefabs/Vehicles/Helicopters/AH6M/AH6M_Armed_base.et" {
+ coords 6140.623 68.94 4530.191
+ angles 0 68.426 0
+}
+Vehicle Stryker_Cage1 : "{7A561BEDC287CC52}Prefabs/Vehicles/Wheeled/Stryker/M1126/Stryker_Cage.et" {
+ coords 6872.695 13.406 3713.883
+ angles 0 179.332 0
+}
+Vehicle Cougar4x4_Olive_OPGK1 : "{8A3F76D5A8740113}Prefabs/Vehicles/Wheeled/Cougar4x4/Cougar4x4_Olive_OPGK.et" {
+ coords 6918.474 41.093 3851.006
+ angles 0 8.808 0
+}
+Vehicle RHIB_Transport1 : "{90FB4A19890F9E5C}Prefabs/Vehicles/Naval/RHIB/RHIB_Transport.et" {
+ coords 7114.169 0 3869.545
+}
+$grp Vehicle : "{9D7C5F83543F4671}Prefabs/Vehicles/Wheeled/MRZR/M2HB/MRZRD4_M2HB_Black.et" {
+ MRZRD4_M2HB_Black1 {
+  coords 6962.763 41.122 3922.13
+  angles 0 -78.515 0
+ }
+ MRZRD4_M2HB_Black2 {
+  coords 6964.306 41.123 3924.782
+  angles 0 -78.515 0
+ }
+}
+$grp Vehicle : "{A4533B5AC50A57E6}Vehicles/ZAG650/ZAG650132p_ZDF.et" {
+ ZAG650132p_ZDF1 {
+  coords 6956.739 41.122 3928.982
+  angles 0 -175.55 0
+ }
+ ZAG650132p_ZDF2 {
+  coords 6955.426 41.122 3927.938
+  angles 0 -175.55 0
+ }
+}
+Vehicle Stryker_MGS_MERDC1 : "{A76DCC7AD6494682}Prefabs/Vehicles/Wheeled/Stryker/M1128/Stryker_MGS_MERDC.et" {
+ coords 6882.609 13.406 3713.698
+ angles 0 179.332 0
+}
+$grp Vehicle : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ MH6M2 {
+  coords 6150.653 68.937 4508.777
+  angles 0 66.218 0
+ }
+ MH6M1 {
+  coords 6893.354 41.094 3949.744
+  angles 0 -171.148 0
+ }
+}
+Vehicle Mi24P_armed_GUV1 : "{B7446F42AC0063B8}Prefabs/Vehicles/Helicopters/Mi24/Mi24P_armed_GUV8700.et" {
+ coords 6180.602 68.936 4573.215
+ angles 0 64.878 0
+}
+Vehicle AH6M_ATGMx1 : "{C28701D4428959F5}Prefabs/Vehicles/Helicopters/AH6M/AH6M_ATGMx2.et" {
+ coords 6131.066 68.94 4552.349
+ angles 0 66.047 0
+}
+Vehicle Cougar6x6_Olive_OPGK1 : "{C924932F1B87B3CA}Prefabs/Vehicles/Wheeled/Cougar6x6/Cougar6x6_Olive_OPGK.et" {
+ coords 6913.878 41.093 3852.015
+ angles 0 8.808 0
+}
+Tank M2A3_BUSK_BASE1 : "{D37EE00F2A5B9AB5}Prefabs/Vehicles/Tracked/BFV/M2A3_BUSK_BASE.et" {
+ coords 6913.414 13.437 3715.698
+ angles 0 179.332 0
+}
+Tank M1A2_Woodland1 : "{D568E4C745849C74}Prefabs/Vehicles/Tracked/M1A2/M1A2_Woodland.et" {
+ coords 6851.693 13.437 3713.042
+ angles 0 177.915 0
+}
+$grp Vehicle : "{D768882A4BA33526}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed_Black.et" {
+ MRZRD4_Unarmed_Black1 {
+  coords 6959.828 41.122 3917.037
+  angles 0 -78.515 0
+ }
+ MRZRD4_Unarmed_Black2 {
+  coords 6961.223 41.122 3919.518
+  angles 0 -78.515 0
+ }
+}
+Vehicle RHIB_Gunboat1 : "{DDE009B6A29873EE}Prefabs/Vehicles/Naval/RHIB/RHIB_Gunboat.et" {
+ coords 7118.208 0 3868.174
+}
+$grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+ {
+  coords 6381.785 68.936 4337.175
+  angles 0 -112.199 0
+  {
+   $grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+    {
+     coords 57.771 0.003 1.187
+    }
+    {
+     coords 114.044 0.002 2.196
+    }
+    {
+     coords 246.37 0.001 94.984
+    }
+    {
+     coords 270.821 0.001 95.631
+    }
+    {
+     coords 294.616 0.001 95.603
+    }
+    {
+     coords 317.89 0.001 96.278
+    }
+    {
+     coords 317.603 0.002 151.047
+    }
+    {
+     coords 293.508 0.002 150.573
+    }
+    {
+     coords 269.732 0 150.208
+    }
+    {
+     coords 246.046 0.001 150.647
+    }
+   }
+  }
+ }
+ {
+  coords 6893.369 41.093 3950.441
+  angles 0 9.422 0
+ }
+ {
+  coords 6202.912 68.938 4363.678
+  angles 0 66.898 0
+ }
+ {
+  coords 6784.762 14.376 4172.168
+ }
+ {
+  coords 6942.083 13.406 3678.403
+ }
+}
+SCR_DestructibleBuildingEntity : "{EEEBF095E1B611CF}Prefabs/Structures/Industrial/Sheds/ShedMetal_02/ShedMetal_02_long_base.et" {
+ coords 6875.104 -0.076 3911.354
+ angles 0 -82.204 0
+}
+Vehicle AH64D1 : "{F2C8E85F145934F4}Prefabs/Vehicles/Helicopters/AH64/AH64D.et" {
+ coords 6199.415 68.938 4529.343
+ angles 0 69.402 0
+}
+Vehicle JLTV_CROWS_M240_Black1 : "{F36AC030AD0B6CD4}Prefabs/Vehicles/Wheeled/JLTV/CROWS_1/M240/JLTV_CROWS_M240_Black.et" {
+ coords 6946.064 41.094 3853.88
+ angles 0 -5.835 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "66E17C9E7A72D233"
+   coords 0 1.564 0
+  }
+ }
+}
