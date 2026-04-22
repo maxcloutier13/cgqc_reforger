@@ -54,7 +54,3 @@ SCR_GameModeEditor GameMode_Editor_Full : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Ed
  }
  coords 5354.086 2.108 5095.316
 }
-SCR_DestructibleEntity : "{C4A76956504FAF05}Prefabs/Structures/Signs/SignLarge_02/SignLarge_02_345x240_base.et" {
- coords 6943.762 41.659 3949.53
- angles 0 -144.471 0
-}

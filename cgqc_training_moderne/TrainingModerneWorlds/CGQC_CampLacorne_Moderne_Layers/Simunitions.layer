@@ -18,7 +18,7 @@ $grp GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes
     "faction affiliation" "CGQC"
    }
   }
-  coords 6949.347 42.069 3940.437
+  coords 6950.419 42.069 3941.872
   angles 0 126.143 0
  }
  {
@@ -380,7 +380,7 @@ SCR_DestructibleBuildingEntity : "{BB3A4D0D66C39921}Prefabs/Compositions/Misc/Cu
 }
 $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
  {
-  coords 6946.148 41.122 3936.33
+  coords 6945.644 41.122 3935.65
   angles 0 126.28 0
   {
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
@@ -393,7 +393,7 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
       "faction affiliation" "CGQC"
      }
     }
-    coords 0.524 0.949 0.067
+    coords 0.523 0.949 0.067
     angles 0 0.274 0
    }
   }

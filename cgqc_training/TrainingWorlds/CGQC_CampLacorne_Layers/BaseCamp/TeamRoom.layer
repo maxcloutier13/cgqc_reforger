@@ -76,7 +76,7 @@ GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Wall
 }
 $grp GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
  {
-  coords 6947.958 41.122 3938.555
+  coords 6948.633 41.122 3939.479
   angles 0 126.143 0
  }
  {
@@ -90,11 +90,11 @@ GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
 }
 $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial_01/BenchIndustrial_01.et" {
  {
-  coords 6951.244 41.122 3940.56
+  coords 6951.433 41.122 3939.766
   angles 0 305.247 0
  }
  {
-  coords 6950.092 41.122 3938.922
+  coords 6950.281 41.122 3938.127
   angles 0 305.247 0
  }
  {
@@ -103,7 +103,7 @@ $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial
  }
 }
 GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
- coords 6949.654 41.122 3940.766
+ coords 6950.726 41.122 3942.201
  angles 0 126.143 0
  {
   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
@@ -128,7 +128,7 @@ GenericEntity : "{C5A9091473439963}Prefabs/Structures/BuildingParts/Doors/Door_B
  }
 }
 GenericEntity : "{D2B0F72599E0491B}PrefabsEditable/Auto/Props/Military/Arsenal/E_ARY_Locker_Large_Rack_Large_Simunition.et" {
- coords 6956.47 41.122 3940.021
+ coords 6956.919 41.122 3939.696
  angles 0 -144.05 0
  {
   GenericEntity {

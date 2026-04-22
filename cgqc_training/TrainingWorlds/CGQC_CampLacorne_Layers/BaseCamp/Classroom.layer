@@ -63,132 +63,136 @@ $grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/Cha
   angles 0 -53.757 0
  }
  {
-  coords 6943.352 41.122 3943.379
+  coords 6940.297 41.122 3942.042
   angles 0 36.469 0
- }
- {
-  coords 6941.73 41.122 3940.998
-  angles 0 36.469 0
- }
- {
-  coords 6942.615 41.122 3943.937
-  angles 0 36.469 0
- }
- {
-  coords 6937.935 41.122 3947.366
-  angles 0 36.469 0
- }
- {
-  coords 6941.154 41.122 3944.974
-  angles 0 36.469 0
- }
- {
-  coords 6936.316 41.122 3944.986
-  angles 0 36.469 0
- }
- {
-  coords 6938.515 41.122 3943.388
-  angles 0 36.469 0
- }
- {
-  coords 6937.091 41.109 3942.943
-  angles 0 36.469 0
- }
- {
-  coords 6940.993 41.122 3941.557
-  angles 0 36.469 0
- }
- {
-  coords 6937.779 41.122 3943.945
-  angles 0 36.469 0
- }
- {
-  coords 6938.681 41.122 3946.826
-  angles 0 36.469 0
- }
- {
-  coords 6940.134 41.122 3945.768
-  angles 0 36.469 0
- }
- {
-  coords 6939.399 41.122 3946.325
-  angles 0 36.469 0
- }
- {
-  coords 6937.176 41.122 3946.144
-  angles 0 36.469 0
- }
- {
-  coords 6937.921 41.122 3945.605
-  angles 0 36.469 0
- }
- {
-  coords 6942.592 41.122 3942.157
-  angles 0 36.469 0
- }
- {
-  coords 6938.638 41.122 3945.104
-  angles 0 36.469 0
- }
- {
-  coords 6941.14 41.122 3943.214
-  angles 0 36.469 0
- }
- {
-  coords 6941.854 41.122 3942.713
-  angles 0 36.469 0
- }
- {
-  coords 6937.06 41.122 3944.446
-  angles 0 36.469 0
- }
- {
-  coords 6939.592 41.122 3941.056
-  angles 0 36.469 0
- }
- {
-  coords 6939.532 41.122 3942.592
-  angles 0 36.469 0
- }
- {
-  coords 6941.901 41.122 3944.434
-  angles 0 36.469 0
- }
- {
-  coords 6936.373 41.103 3943.446
-  angles 0 36.469 0
- }
- {
-  coords 6937.829 41.119 3942.388
-  angles 0 36.469 0
- }
- {
-  coords 6940.395 41.122 3943.752
-  angles 0 36.469 0
- }
- {
-  coords 6939.378 41.122 3944.547
-  angles 0 36.469 0
- }
- {
-  coords 6935.628 41.104 3943.982
-  angles 0 36.469 0
- }
- {
-  coords 6938.844 41.122 3941.592
-  angles 0 36.469 0
- }
- {
-  coords 6941.046 41.122 3939.999
-  angles 0 36.469 0
- }
- {
-  coords 6940.307 41.122 3940.553
-  angles 0 36.469 0
- }
- {
-  coords 6940.279 41.122 3942.056
-  angles 0 36.469 0
+  {
+   $grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+    {
+     coords 1.685 0 2.891
+     angles 0 0 0
+    }
+    {
+     coords 1.796 0 0.012
+     angles 0 0 0
+    }
+    {
+     coords 0.761 0 2.901
+     angles 0 0 0
+    }
+    {
+     coords -5.041 0 2.877
+     angles 0 0 0
+    }
+    {
+     coords -1.031 0 2.867
+     angles 0 0 0
+    }
+    {
+     coords -4.928 0 0.001
+     angles 0 0 0
+    }
+    {
+     coords -2.21 0 0.023
+     angles 0 0 0
+    }
+    {
+     coords -3.091 -0.013 -1.182
+     angles 0 0 0
+    }
+    {
+     coords 0.871 0 0.023
+     angles 0 0 0
+    }
+    {
+     coords -3.133 0 0.033
+     angles 0 0 0
+    }
+    {
+     coords -4.12 0 2.886
+     angles 0 0 0
+    }
+    {
+     coords -2.323 0 2.899
+     angles 0 0 0
+    }
+    {
+     coords -3.245 0 2.91
+     angles 0 0 0
+    }
+    {
+     coords -4.925 0 1.443
+     angles 0 0 0
+    }
+    {
+     coords -4.005 0 1.453
+     angles 0 0 0
+    }
+    {
+     coords 1.8 0 1.456
+     angles 0 0 0
+    }
+    {
+     coords -3.131 0 1.476
+     angles 0 0 0
+    }
+    {
+     coords 0.004 0 1.443
+     angles 0 0 0
+    }
+    {
+     coords 0.876 0 1.464
+     angles 0 0 0
+    }
+    {
+     coords -4.009 0 0.009
+     angles 0 0 0
+    }
+    {
+     coords 0.042 0 -1.212
+     angles 0 0 0
+    }
+    {
+     coords -0.919 0 -0.013
+     angles 0 0 0
+    }
+    {
+     coords -0.109 0 2.876
+     angles 0 0 0
+    }
+    {
+     coords -3.967 -0.019 -1.204
+     angles 0 0 0
+    }
+    {
+     coords -2.167 -0.003 -1.189
+     angles 0 0 0
+    }
+    {
+     coords -0.914 0 1.433
+     angles 0 0 0
+    }
+    {
+     coords -2.205 0 1.468
+     angles 0 0 0
+    }
+    {
+     coords -4.885 -0.018 -1.216
+     angles 0 0 0
+    }
+    {
+     coords -0.877 0 -1.226
+     angles 0 0 0
+    }
+    {
+     coords 1.84 0 -1.198
+     angles 0 0 0
+    }
+    {
+     coords 0.916 0 -1.192
+     angles 0 0 0
+    }
+   }
+  }
  }
 }
 GenericEntity : "{46334C881751B699}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/Comp_Workbench1.et" {
@@ -236,10 +240,6 @@ GenericEntity : "{4AC034517E87747E}Prefabs/GM_Props/Office_chair_GM.et" {
 GenericEntity : "{58B227C19640BC67}Prefabs/GM_Props/tablet1_GM.et" {
  coords 6938.189 42.028 3949.199
  angles 0 -46.157 0
-}
-GenericEntity : "{65B6E58379AC6DD3}Prefabs/GM_Props/investigationboard.et" {
- coords 6947.2 41.122 3946.365
- angles 0 -144.021 0
 }
 GenericEntity : "{6A8B7BD2A7BF0B93}Prefabs/Structures/BuildingParts/Lights/LightIndustrial_03.et" {
  coords 7308.005 108.986 3919.165

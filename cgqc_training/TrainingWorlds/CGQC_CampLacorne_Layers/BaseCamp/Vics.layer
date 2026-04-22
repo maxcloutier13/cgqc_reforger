@@ -9,7 +9,8 @@ $grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transpo
  }
 }
 GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
- coords 6946.918 42.069 3937.278
+ coords 6946.346 42.069 3936.443
+ angles 0 34.404 0
 }
 $grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  Motorbike_US2 {

@@ -23,6 +23,7 @@ GenericEntity : "{209B3789589C13CB}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
    components {
     SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
      m_eSupportedArsenalItemTypes MACHINE_GUN
+     m_eSupportedArsenalItemModes 12
      m_bAlwaysUseDefaultFaction 1
     }
     SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
