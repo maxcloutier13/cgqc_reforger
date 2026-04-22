@@ -42,8 +42,6 @@ class CGQC_RangeTools_ResetHelper
 	static vector s_vTransform[4];
 	static string s_sName;
 	static float s_fBaseX;
-	static int s_iDistanceIndex;
-	static bool s_bCheckMode;
 
 	static void DoReset()
 	{
@@ -65,16 +63,13 @@ class CGQC_RangeTools_ResetHelper
 		if (!s_sName.IsEmpty())
 			newEnt.SetName(s_sName);
 
+		// Spawned clean — prefab defaults to distIndex=0, checkMode=false
+		// SetBaseX so the mover knows where home is
 		CGQC_TargetMoverComponent newMover = CGQC_TargetMoverComponent.Cast(
 			newEnt.FindComponent(CGQC_TargetMoverComponent)
 		);
 		if (newMover)
-		{
 			newMover.SetBaseX(s_fBaseX);
-			newMover.SetDistanceIndex(s_iDistanceIndex);
-			newMover.SetCheckMode(s_bCheckMode);
-			
-		}
 	}
 }
 
@@ -325,28 +320,26 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 			return;
 		}
 
-		vector mat[4];
-		owner.GetWorldTransform(mat);
-		CGQC_RangeTools_ResetHelper.s_sPrefab    = m_sPrefabPath;
-		CGQC_RangeTools_ResetHelper.s_vTransform = mat;
-		CGQC_RangeTools_ResetHelper.s_sName      = owner.GetName();
-
-		// Capture mover state before deletion so bay buttons and check mode survive respawn
+		// Capture mover base X before deletion
 		CGQC_TargetMoverComponent mover = CGQC_TargetMoverComponent.Cast(
 			owner.FindComponent(CGQC_TargetMoverComponent)
 		);
+
+		float baseX;
 		if (mover)
-		{
-			CGQC_RangeTools_ResetHelper.s_fBaseX         = mover.GetBaseX();
-			CGQC_RangeTools_ResetHelper.s_iDistanceIndex = mover.GetDistanceIndex();
-			CGQC_RangeTools_ResetHelper.s_bCheckMode     = mover.IsCheckMode();
-		}
+			baseX = mover.GetBaseX();
 		else
-		{
-			CGQC_RangeTools_ResetHelper.s_fBaseX         = mat[3][0];
-			CGQC_RangeTools_ResetHelper.s_iDistanceIndex = 0;
-			CGQC_RangeTools_ResetHelper.s_bCheckMode     = false;
-		}
+			baseX = owner.GetOrigin()[0];
+
+		// Build spawn transform at base X, keeping Y/Z/rotation
+		vector mat[4];
+		owner.GetWorldTransform(mat);
+		mat[3][0] = baseX;
+
+		CGQC_RangeTools_ResetHelper.s_sPrefab    = m_sPrefabPath;
+		CGQC_RangeTools_ResetHelper.s_sName      = owner.GetName();
+		CGQC_RangeTools_ResetHelper.s_fBaseX     = baseX;
+		CGQC_RangeTools_ResetHelper.s_vTransform = mat;
 
 		m_aHits.Clear();
 
@@ -380,15 +373,11 @@ class CGQC_RangeTools_TargetHitComponent : ScriptComponent
 
 		PlayerController pc = GetGame().GetPlayerManager().GetPlayerController(requestingPlayerID);
 		if (!pc)
-		{
 			return;
-		}
 
 		SCR_PlayerController spc = SCR_PlayerController.Cast(pc);
 		if (!spc)
-		{
 			return;
-		}
 
 		spc.CGQC_Rpc_ShowTargetReport(m_sLastReport, m_sLastReportTitle);
 	}
@@ -623,12 +612,12 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 	override protected void OnDamage(notnull BaseDamageContext damageContext)
 	{
 	    super.OnDamage(damageContext);
-	
+
 	    RplComponent rpl = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
 	    if (rpl && rpl.IsProxy()) return;
-	
+
 	    vector impactPos = damageContext.hitPosition;
-	
+
 	    int playerID = -1;
 	    Instigator instigator = damageContext.instigator;
 	    if (instigator)
@@ -644,7 +633,7 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 	            }
 	        }
 	    }
-	
+
 	    float muzzleVelocity = 0.0;
 	    if (playerID > 0)
 	    {
@@ -657,7 +646,7 @@ class CGQC_RangeTools_TargetDamageManager : SCR_DamageManagerComponent
 	                muzzleVelocity = chrono.GetLastMuzzleVelocity();
 	        }
 	    }
-	
+
 	    CGQC_RangeTools_TargetHitComponent hitComp =
 	        CGQC_RangeTools_TargetHitComponent.Cast(GetOwner().FindComponent(CGQC_RangeTools_TargetHitComponent));
 	    if (hitComp)

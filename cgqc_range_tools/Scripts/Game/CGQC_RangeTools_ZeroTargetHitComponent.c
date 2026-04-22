@@ -31,6 +31,36 @@ class CGQC_RangeTools_ZeroHitData
 
 
 // ----------------------------------------------------------------
+// Static helper for zero target reset (clears hits)
+// ----------------------------------------------------------------
+class CGQC_RangeTools_ZeroResetHelper
+{
+	static ResourceName s_sPrefab;
+	static vector s_vTransform[4];
+	static string s_sName;
+
+	static void DoReset()
+	{
+		Resource res = Resource.Load(s_sPrefab);
+		if (!res || !res.IsValid()) return;
+
+		EntitySpawnParams params = new EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		params.Transform[0] = s_vTransform[0];
+		params.Transform[1] = s_vTransform[1];
+		params.Transform[2] = s_vTransform[2];
+		params.Transform[3] = s_vTransform[3];
+
+		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
+		if (!newEnt) return;
+
+		if (!s_sName.IsEmpty())
+			newEnt.SetName(s_sName);
+	}
+}
+
+
+// ----------------------------------------------------------------
 // Static helper for zero target move (preserves hit data)
 // ----------------------------------------------------------------
 class CGQC_RangeTools_ZeroMoveHelper
@@ -47,7 +77,10 @@ class CGQC_RangeTools_ZeroMoveHelper
 
 		EntitySpawnParams params = new EntitySpawnParams();
 		params.TransformMode = ETransformMode.WORLD;
-		params.Transform = s_vTransform;
+		params.Transform[0] = s_vTransform[0];
+		params.Transform[1] = s_vTransform[1];
+		params.Transform[2] = s_vTransform[2];
+		params.Transform[3] = s_vTransform[3];
 
 		IEntity newEnt = GetGame().SpawnEntityPrefab(res, GetGame().GetWorld(), params);
 		if (!newEnt) return;
@@ -191,12 +224,9 @@ class CGQC_RangeTools_ZeroTargetHitComponent : ScriptComponent
 		vector mat[4];
 		owner.GetTransform(mat);
 
-		CGQC_RangeTools_ResetHelper.s_sPrefab        = m_sPrefabPath;
-		CGQC_RangeTools_ResetHelper.s_vTransform     = mat;
-		CGQC_RangeTools_ResetHelper.s_sName          = owner.GetName();
-		CGQC_RangeTools_ResetHelper.s_fBaseX         = mat[3][0];
-		CGQC_RangeTools_ResetHelper.s_iDistanceIndex = 0;
-		CGQC_RangeTools_ResetHelper.s_bCheckMode     = false;
+		CGQC_RangeTools_ZeroResetHelper.s_sPrefab    = m_sPrefabPath;
+		CGQC_RangeTools_ZeroResetHelper.s_vTransform = mat;
+		CGQC_RangeTools_ZeroResetHelper.s_sName      = owner.GetName();
 
 		m_aHits.Clear();
 		m_sLastReport      = string.Empty;
@@ -213,7 +243,7 @@ class CGQC_RangeTools_ZeroTargetHitComponent : ScriptComponent
 		}
 
 		SCR_EntityHelper.DeleteEntityAndChildren(owner);
-		GetGame().GetCallqueue().CallLater(CGQC_RangeTools_ResetHelper.DoReset, 100, false);
+		GetGame().GetCallqueue().CallLater(CGQC_RangeTools_ZeroResetHelper.DoReset, 100, false);
 	}
 
 	// ================================================================
@@ -496,8 +526,6 @@ class CGQC_RangeTools_ZeroTargetHitComponent : ScriptComponent
 		r = r + "Groupe: " + FloatStr(groupCm, 1) + " cm | " + FloatStr(groupMrad, 2) + " mrad" + nl;
 		r = r + sep;
 
-		string dirR = "D"; if (centroidMradX < 0.0) dirR = "G";
-		string dirU = "H"; if (centroidMradY < 0.0) dirU = "B";
 		float centroidCmX = centroidR * 100.0;
 		float centroidCmY = centroidU * 100.0;
 		r = r + "Centre groupe:" + nl;
@@ -697,12 +725,8 @@ class CGQC_RangeTools_ZeroCheckAction : ScriptedUserAction
 
 // ================================================================
 // zeroControl movement actions
-// Uses same FindEntityByName pattern as CGQC_targetMoverComponent.c
 // ================================================================
 
-// ----------------------------------------------------------------
-// Close: place target 2m in front of the player
-// ----------------------------------------------------------------
 class CGQC_RangeTools_ZeroCloseAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of the zero target entity")]
@@ -724,9 +748,6 @@ class CGQC_RangeTools_ZeroCloseAction : ScriptedUserAction
 	override bool HasLocalEffectOnlyScript()         { return false; }
 }
 
-// ----------------------------------------------------------------
-// Move Away: stepped distances 25/50/100/200...
-// ----------------------------------------------------------------
 class CGQC_RangeTools_ZeroMoveAwayAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of the zero target entity")]
@@ -748,9 +769,6 @@ class CGQC_RangeTools_ZeroMoveAwayAction : ScriptedUserAction
 	override bool HasLocalEffectOnlyScript()         { return false; }
 }
 
-// ----------------------------------------------------------------
-// Move Closer: stepped distances, snap to player at 25m
-// ----------------------------------------------------------------
 class CGQC_RangeTools_ZeroMoveCloserAction : ScriptedUserAction
 {
 	[Attribute(defvalue: "", desc: "Exact scene name of the zero target entity")]
