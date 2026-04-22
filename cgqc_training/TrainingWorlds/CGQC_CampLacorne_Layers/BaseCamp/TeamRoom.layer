@@ -1,3 +1,7 @@
+GenericEntity {
+ coords 6962.157 41.316 3911.23
+ angles 0 126.143 0
+}
 GenericEntity : "{119783F0F2E70035}Prefabs/nogm/onlyfantas_nogm.et" {
  coords 6950.483 41.122 3930.022
  angles 0 -145.642 0
@@ -79,10 +83,6 @@ $grp GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC
   coords 6953.853 41.122 3941.282
   angles 0 -144.436 0
  }
-}
-GenericEntity : "{9096B12FB10112C7}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_CGQC_AR.et" {
- coords 6962.157 41.316 3911.23
- angles 0 126.143 0
 }
 GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
  coords 6958.542 41.122 3938.831

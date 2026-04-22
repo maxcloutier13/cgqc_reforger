@@ -1,3 +1,14 @@
+$grp Vehicle {
+ M998_covered_long_USAF1 {
+  coords 6913.588 41.094 3946.086
+ }
+ M998_covered_USAF1 {
+  coords 6909.804 41.094 3946.251
+ }
+ M998_USAF1 {
+  coords 6906.81 41.094 3946.29
+ }
+}
 $grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  M151A2_transport1 {
   coords 6927.441 41.122 3935.436
@@ -7,6 +18,9 @@ $grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transpo
   coords 6925.736 41.122 3932.562
   angles 0 154.236 0
  }
+}
+GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+ coords 6946.918 42.069 3937.278
 }
 $grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
  Motorbike_US2 {
