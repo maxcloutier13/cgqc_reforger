@@ -12,6 +12,13 @@ $grp GenericEntity : "{0597ADC954852985}Prefabs/CGQC_Targets_Zero.et" {
 GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
  coords 100 1 239.638
 }
+GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+ coords 100.647 1.906 239.79
+ angles 0 0 0
+}
+GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ coords 98.359 1 240.503
+}
 GenericEntity : "{F25A5E8C9947F182}Prefabs/CGQC_Targets_GBRS.et" {
  coords 97.234 1 237.828
 }
