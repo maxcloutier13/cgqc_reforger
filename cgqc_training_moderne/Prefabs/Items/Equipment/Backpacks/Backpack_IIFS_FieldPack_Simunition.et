@@ -1,0 +1,77 @@
+GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
+ ID "511E9C6ADE70F798"
+ components {
+  MeshObject "{511E9C6ADE70F7BD}" {
+   Object "{582D5ED9889AB099}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Backpack_IIFS_FieldPack_item.xob"
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB03A40528FA}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB039E9715D1}" {
+    ItemDisplayName UIInfo "{5222CB03904B414C}" {
+     Name "#AR-Backpack_IIFS_FieldPack_Name"
+     Description "#AR-Backpack_IIFS_FieldPack_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 3.63
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 25001
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{52BCBDD2B54658EC}" {
+      CameraOrbitAngles 25 -25 180
+     }
+    }
+   }
+   UseCapacityCoefficient 0
+   CapacityCoefficient 1.26
+   MaxCumulativeVolume 15000
+   MaxItemSize 25 25 25
+   MultiSlots {
+    MultiSlotConfiguration "{692CD9F93DBF7038}" {
+     SlotTemplate InventoryStorageSlot Mags {
+      Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+     }
+     NumSlots 30
+    }
+    MultiSlotConfiguration "{692CD9F95141DBCA}" {
+     SlotTemplate InventoryStorageSlot PistolMags {
+      Prefab "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+     NumSlots 20
+    }
+    MultiSlotConfiguration "{692CD9F96356FB64}" {
+     SlotTemplate InventoryStorageSlot Nades {
+      Prefab "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et"
+     }
+     NumSlots 20
+    }
+    MultiSlotConfiguration "{692CD9FE89A50283}" {
+     SlotTemplate InventoryStorageSlot Bangs {
+      Prefab "{535342DF43FD23C6}Prefabs/Weapons/Grenades/Grenade_MultiStun_HalfTime.et"
+     }
+     NumSlots 20
+    }
+   }
+   m_fMaxWeight 40
+  }
+  BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
+   WornModel "{19D524546D004762}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Backpack_IIFS_FieldPack.xob"
+   ItemModel "{582D5ED9889AB099}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Backpack_IIFS_FieldPack_item.xob"
+   SoundInt 830
+   DeflatedModel "{279D39272DDDA525}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Backpack_IIFS_FieldPack_Inflated.xob"
+   AreaTypeWhenModelChange {
+    LoadoutArmoredVestSlotArea "{692CD9F92226B75E}" {
+    }
+   }
+  }
+  ActionsManagerComponent "{511E9C6ADE70F786}" {
+   ActionContexts {
+    UserActionContext "{511E9C6ADE70F788}" {
+     Position PointInfo "{511E9C6ADE70F78D}" {
+      Offset 0 0.2985 0
+     }
+    }
+   }
+  }
+ }
+}
