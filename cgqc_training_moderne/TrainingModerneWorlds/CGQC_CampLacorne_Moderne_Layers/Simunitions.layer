@@ -53,10 +53,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6854.669 14.897 4174.115
   angles 0 49.279 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -69,6 +65,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.583 0.947 0.009
+    angles 0 -1.252 0
    }
   }
  }
@@ -76,10 +76,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6885.848 14.375 4095.823
   angles 0 86.387 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -92,6 +88,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.598 0.909 0.012
+    angles 0 85.007 0
    }
   }
  }
@@ -99,10 +99,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6846.008 14.375 4093.519
   angles 0 178.876 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -115,6 +111,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.628 0.908 -0.042
+    angles 0 177.496 0
    }
   }
  }
@@ -122,10 +122,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6777.188 14.375 4195.829
   angles 0 0.844 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -138,6 +134,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.632 0.909 0.076
+    angles 0 -0.536 0
    }
   }
  }
@@ -145,10 +145,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6723.159 14.375 4195.705
   angles 0 0.844 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -162,16 +158,16 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
    }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.632 0.909 0.077
+    angles 0 -0.536 0
+   }
   }
  }
  {
   coords 6720.248 14.375 4151.349
   angles 0 8.465 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -191,10 +187,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6807.678 14.375 4093.572
   angles 0 179.41 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -207,6 +199,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.626 0.908 -0.049
+    angles 0 178.03 0
    }
   }
  }
@@ -214,10 +210,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6349.915 60.781 4528.265
   angles 0 7.662 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -230,6 +222,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.637 0.909 0
+    angles 0 6.282 0
    }
   }
  }
@@ -237,10 +233,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6562.952 14.375 4635.04
   angles 0 92.161 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -253,6 +245,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.591 0.909 0.07
+    angles 0 90.781 0
    }
   }
  }
@@ -260,10 +256,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6618.368 14.375 4606.663
   angles 0 179.573 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -276,6 +268,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.618 0.908 -0.05
+    angles 0 178.193 0
    }
   }
  }
@@ -283,10 +279,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 6573.22 14.584 4782.924
   angles 0 17.106 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -299,6 +291,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.628 0.908 -0.104
+    angles 0 15.726 0
    }
   }
  }
@@ -306,10 +302,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 5179.253 291.017 1790.487
   angles 0 -144.254 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -322,6 +314,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.596 0.909 -0.048
+    angles 0 -145.634 0
    }
   }
  }
@@ -329,10 +325,6 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
   coords 5734.245 135 3033.829
   angles 0 -144.254 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords 0.631 0.947 0.085
-    angles 0 -1.38 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -345,6 +337,10 @@ $grp GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
     }
     coords -0.154 0.91 -0.026
     angles 0 -179.886 0
+   }
+   GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+    coords 0.627 0.909 0.054
+    angles 0 178.242 0
    }
   }
  }
@@ -387,10 +383,6 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
   coords 6946.148 41.122 3936.33
   angles 0 126.28 0
   {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords -1.007 0.947 -0.002
-    angles 0 144.48 0
-   }
    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
     components {
      SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -409,20 +401,9 @@ $grp GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
  {
   coords 4645.235 24.515 2646.89
   angles 0 -90 0
-  {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords -1.007 0.947 -0.002
-    angles 0 144.48 0
-   }
-  }
  }
  {
   coords 4645.235 24.515 2661.693
   angles 0 -90 0
-  {
-   GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-    coords -1.36 0.947 -0.192
-   }
-  }
  }
 }
