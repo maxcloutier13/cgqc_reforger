@@ -19,7 +19,7 @@ $grp GenericEntity : "{41F318B162BC7EF6}PrefabsEditable/Auto/Compositions/Slotte
    }
    SCR_ARY_SteelPlateTarget {
     ID "6608BBF0D700A6A1"
-    coords -0 1.197 0.055
+    coords 0 1.197 0.055
     angles 0 -180 0
    }
    SCR_ARY_SteelPlateTargetFlip {
@@ -159,10 +159,6 @@ GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
  coords 6679.881 14.375 4096.396
  angles 0 89.829 0
  {
-  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-   coords 0.631 0.947 0.085
-   angles 0 -1.38 0
-  }
   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
    components {
     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
@@ -175,6 +171,10 @@ GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
    }
    coords -0.154 0.91 -0.026
    angles 0 -179.886 0
+  }
+  GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+   coords 0.606 0.909 0.006
+   angles 0 88.449 0
   }
  }
 }

@@ -106,9 +106,9 @@ GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
  coords 6949.654 41.122 3940.766
  angles 0 126.143 0
  {
-  GenericEntity : "{0ED7499549352351}Prefabs/Props/Civilian/LampKerosene_01/Dst/LampKerosene_01_DST_01_military.et" {
-   coords -1.007 0.947 -0.002
-   angles 0 144.48 0
+  GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+   coords -1.137 0.947 -0.169
+   angles 0 -89.377 0
   }
  }
 }
