@@ -128,7 +128,8 @@ class CGQC_Scripts
 			case "Psyck0u":
             {
                 Print("[CGQC_welcomePlayer] CGQC Fournier detected");
-				isCGQC = true;               
+				isCGQC = true;    
+				break;           
             }
         }
 				
@@ -164,6 +165,7 @@ class CGQC_Scripts
         // Check Steam ID and activate specific features for certain players
         switch (playerIdentityId)
         {
+			// MAJOR --------------------------------------------------------------------------------------------------------------------------------------
             case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
             {
                 Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
@@ -174,47 +176,105 @@ class CGQC_Scripts
 				desiredRank = SCR_ECharacterRank.MAJOR;	
 				isCGQC = true;
                 break;
-            }					
-			case "6538de9f-32ce-41cc-bc6f-844a6a3b2ce8":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Lafo detected");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "lafo");
-				isCGQC = true;
-                break;
-            }			
-			case "120786ec-60cd-4a96-9e10-c846578745f2":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Genest detected");
-				isCGQC = true;
-                break;
-            }
+            }		
 			case "c3fcb72f-2f87-4937-8847-1fb62b39a40c":
             {
                 Print("[CGQC_InitializePlayer] CGQC Tremblay detected");
 				cgqc_head = "{22EDFA2131C317E9}Prefabs/Characters/Heads/Head_WhiteHead_01.et";
 				cgqc_body = "{89C2788E9B1C96B0}Prefabs/Characters/Basebody/CharacterBasebody_01.et";
+				desiredRank = SCR_ECharacterRank.MAJOR;	
+				isCGQC = true; 
+                break;
+            }			
+			
+			
+			// CAPTAIN --------------------------------------------------------------------------------------------------------------------------------------
+			case "6538de9f-32ce-41cc-bc6f-844a6a3b2ce8":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Lafo detected");
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "lafo");
+				desiredRank = SCR_ECharacterRank.CAPTAIN;	
+				isCGQC = true;
+                break;
+            }			
+			
+			// LIEUTENANT --------------------------------------------------------------------------------------------------------------------------------------
+			case "120786ec-60cd-4a96-9e10-c846578745f2":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Genest detected");
+				desiredRank = SCR_ECharacterRank.LIEUTENANT;	
 				isCGQC = true;
                 break;
             }
+			
 			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
             {
                 Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
 				cgqc_head = "{F5808273F0A0F3AC}Prefabs/Characters/Heads/Head_RussianHead_1.et";
 				cgqc_body = "{E5964C6E27D8199E}Prefabs/Characters/Basebody/CharacterBasebody_02.et";
+				desiredRank = SCR_ECharacterRank.LIEUTENANT;
 				isCGQC = true;
                 break;
             }
+			case "e98c24ac-31b8-4647-94f8-c4ffa5bec5fe":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Trépanier detected");
+				desiredRank = SCR_ECharacterRank.LIEUTENANT;
+				isCGQC = true;
+                break;
+            }
+			
+			// SERGEANT --------------------------------------------------------------------------------------------------------------------------------------
 			case "fdeca5b5-5cba-403a-8e3a-d598325dbccc":
             {
                 Print("[CGQC_InitializePlayer] CGQC Dubé detected");
+				desiredRank = SCR_ECharacterRank.SERGEANT;
 				isCGQC = true;
                 break;
+            }
+			case "c6643f04-50cb-461a-b591-b6e6deb63ed9":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Fournier detected");
+				desiredRank = SCR_ECharacterRank.SERGEANT;
+				isCGQC = true;
+				break;               
+            }
+			case "cdce42da0-351f-4d03-821b-e89e46b70002":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Turcotte detected");
+				desiredRank = SCR_ECharacterRank.SERGEANT;
+				isCGQC = true;
+               break;
+            }
+			case "789954f6-cdb6-4f69-8095-af635b9a78a1":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Lauzon detected");
+				desiredRank = SCR_ECharacterRank.SERGEANT;
+				isCGQC = true;
+               	break;
+            }
+			case "dd7969a6-722f-4ae6-a9e7-898ee9e6fea5":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Pike detected");
+				desiredRank = SCR_ECharacterRank.SERGEANT;
+				isCGQC = true;
+               	break;
             }
 			case "60e84a60-c12f-4b4a-91ed-c294bab6046e":
             {
                 Print("[CGQC_InitializePlayer] CGQC Comeau detected");
 				cgqc_head = "{3B473755F8A85D65}Prefabs/Characters/Heads/Head_GreekHead_A3_04.et";
 				cgqc_body = "{5EE1CAC3D1D1AC46}Prefabs/Characters/Basebody/CharacterBasebody_Asian_03.et";
+				desiredRank = SCR_ECharacterRank.SERGEANT;
+				isCGQC = true;
+                break;
+            }
+			
+			// PRIVATE --------------------------------------------------------------------------------------------------------------------------------------
+			case "72c38387-e5fd-46f4-806e-ce1e7c0ce16e":
+            {
+                Print("[CGQC_InitializePlayer] CGQC Walker detected");
+				desiredRank = SCR_ECharacterRank.PRIVATE;
 				isCGQC = true;
                 break;
             }
@@ -223,15 +283,11 @@ class CGQC_Scripts
                 Print("[CGQC_InitializePlayer] CGQC Jeune Comeau detected");
 				cgqc_head = "{CCF92B30D886C909}Prefabs/Characters/Heads/Head_WhiteHead_21.et";
 				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";
+				desiredRank = SCR_ECharacterRank.PRIVATE;
 				isCGQC = true;
                 break;
             }
-			case "c6643f04-50cb-461a-b591-b6e6deb63ed9":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Fournier detected");
-				isCGQC = true;
-               
-            }
+			
         }
 		if (isCGQC)
 		{
@@ -250,6 +306,7 @@ class CGQC_Scripts
 	        }else{
 				rankComp.SetCharacterRank(desiredRank);
 	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+				GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
 			}	
 		}
 		
@@ -371,8 +428,8 @@ class CGQC_Scripts
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{E513AC48A65855AA}Prefabs/Items/Smokeables/Smokeable_Cigar.et");
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{F723BDF891EFECAE}Prefabs/Items/Smokeables/Smokeable_Joint.et");
 				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{C918F658F962C669}Prefabs/Characters/HeadGear/Helmet_M1_01/BeardV2Blonde.et");
-		        CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
-				CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
+		        //CGQC_Scripts.CheckAndGiveItem(playerEntity, "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et");
+				//CGQC_Scripts.CheckAndGiveItem(playerEntity, "{EEEDC5D1AC2CE09F}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_4_163a.et");	
 				break;
 			}
 			case "lafo":
