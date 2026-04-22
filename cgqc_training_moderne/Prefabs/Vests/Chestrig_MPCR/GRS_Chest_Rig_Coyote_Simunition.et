@@ -4,7 +4,7 @@ GenericEntity : "{5347CDB994FBCC3F}Prefabs/Vests/Chestrig_MPCR/GRS_Chest_Rig_Bas
   ClothNodeStorageComponent "{657354449B52FB44}" {
    Attributes SCR_ItemAttributeCollection "{657354449B52FB5C}" {
     ItemDisplayName UIInfo "{657354449B52FB33}" {
-     Name "GRS: Chest Rig Modular - Coyote - Simunition"
+     Name "CGQC Training ChestRig Soldat"
      Description "GRS: Chest Rig Modular - Coyote"
     }
    }
