@@ -1,0 +1,15 @@
+GenericEntity : "{E1F14DB52DBFBC57}Prefabs/Weapons/Core/Weapon_Base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    CustomAttributes {
+     CharacterModifierAttributes "{672B09AA6E00C3D4}" {
+      ADSSpeedLimit 1.8
+      SpeedLimitHighready 1.9
+     }
+    }
+   }
+  }
+ }
+}
