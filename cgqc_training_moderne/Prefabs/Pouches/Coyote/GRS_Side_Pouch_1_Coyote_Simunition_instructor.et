@@ -12,6 +12,12 @@ GenericEntity : "{7C7F6D4083FAEA14}Prefabs/Pouches/Base/GRS_Side_Pouch_1.et" {
     InventoryStorageSlot Keys {
      Prefab "{8A45D4DF4FFA00E7}Prefabs/Items/Equipment/Keys/Masterkey.et"
     }
+    InventoryStorageSlot Radio {
+     Prefab "{86C16544D72A4BFD}Prefabs/Accessories/CGQC_Radio_Trellisware_343.et"
+    }
+    InventoryStorageSlot Cutters {
+     Prefab "{42232FFE6E7AC415}Prefabs/Items/Core/Wirecutters/wirecutters.et"
+    }
    }
    MultiSlots {
     MultiSlotConfiguration "{692AD0EE9BAE1B8C}" {
