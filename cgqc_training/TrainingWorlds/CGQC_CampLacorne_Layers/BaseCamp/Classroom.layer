@@ -257,10 +257,6 @@ GenericEntity : "{6EDB04BBE080E345}Prefabs/GM_Props/WaterCooler_GM.et" {
  coords 6941.035 41.122 3951.181
  angles 0 33.866 0
 }
-GenericEntity : "{7FFBB7FD89E1A9D6}Prefabs/BBOC-MissionProps/Server1.et" {
- coords 6937.508 41.122 3953.535
- angles 0 128.442 0
-}
 GenericEntity : "{9CCDFC3D400F1240}Prefabs/nogm/cheytac_m200_nogm.et" {
  coords 6935.259 42.03 3950.905
  angles 0 -139.135 0
