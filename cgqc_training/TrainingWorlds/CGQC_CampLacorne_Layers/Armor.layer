@@ -1,13 +1,3 @@
-$grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et" {
- LAV1 {
-  coords 6862.66 13.406 3713.154
-  angles 0 180 0
- }
- LAV2 {
-  coords 6867.647 13.406 3713.588
-  angles 0 180 0
- }
-}
 DecalEntity : "{28DBB1C4928B9FB6}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_03.et" {
  coords 6919.819 -1.062 3677.459
  angles -90 -180 -180

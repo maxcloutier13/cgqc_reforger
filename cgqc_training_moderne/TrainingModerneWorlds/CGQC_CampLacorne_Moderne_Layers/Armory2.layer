@@ -251,7 +251,7 @@ GenericEntity : "{44000BB5A7F7EE0A}Prefabs/Compositions/Misc/CustomEntities/Dest
      ID "611EC77D32FF0709"
      components {
       DoorComponent "{221C667A9F7D4B69}" {
-       i_doorLockChance 100
+       i_doorLockChance 0
       }
      }
     }

@@ -1,34 +1,4 @@
-$grp Vehicle : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
- UAZ452_transport1 {
-  coords 6954.51 41.122 3911.345
-  angles 0 -89.104 0
- }
- UAZ452_transport2 {
-  coords 6957.68 41.122 3914.152
-  angles 0 -89.104 0
- }
- UAZ452_transport3 {
-  coords 4649.516 24.5 2657.678
-  angles 0 -89.104 0
- }
-}
-$grp Vehicle : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
- M923A1_transport_covered1 {
-  coords 6873.041 41.093 3889.423
-  angles 0 97.8 0
- }
- M923A1_transport_covered2 {
-  coords 6873.72 41.093 3894.377
-  angles 0 97.8 0
- }
-}
-$grp Vehicle : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
- M923A1_transport1 {
-  coords 6871.282 41.094 3879.791
-  angles 0 100.185 0
- }
- M923A1_transport2 {
-  coords 6872.255 41.094 3885.204
-  angles 0 100.185 0
- }
+Vehicle UAZ452_transport3 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ coords 4649.516 24.5 2657.678
+ angles 0 -89.104 0
 }
