@@ -39,10 +39,10 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{F3672F802360D2E4}Prefabs/Characters/Eyewear/crossbow/Eyewear_ess_crossbow_blk_clr.et"
     }
     LoadoutSlotInfo Ears {
-     Prefab "{F85339DBC07A1156}Prefabs/Clothing/CDD_Comtac7G.et"
+     Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
     }
     LoadoutSlotInfo Waist {
-     Prefab "{38CD60392EA68DD7}Assets/Characters/Belts/Belt_Ronin/ShutoBelt.et"
+     Prefab "{5C9B3C4E15FF604E}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_RG_sTs.et"
     }
    }
   }

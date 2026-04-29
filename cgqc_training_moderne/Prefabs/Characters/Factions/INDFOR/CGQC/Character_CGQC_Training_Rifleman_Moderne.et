@@ -7,5 +7,15 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
     Description "Soldat en formation"
    }
   }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Ears {
+     Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{5F7C1B30448712A1}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_CY_Simunition.et"
+    }
+   }
+  }
  }
 }

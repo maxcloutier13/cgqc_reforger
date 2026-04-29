@@ -18,20 +18,12 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{CA5497BEDD4B3898}Prefabs/Characters/HeadGear/Hat/Baseball_Cap_Green.et"
-    }
-    LoadoutSlotInfo Vest {
-    }
-    LoadoutSlotInfo Eyes {
+     Prefab ""
     }
     LoadoutSlotInfo Ears {
      Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
     }
     LoadoutSlotInfo Waist {
-     Prefab ""
-    }
-    LoadoutSlotInfo GRS_Waist {
-     Prefab "{5F7C1B30448712A1}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_CY_Simunition.et"
     }
    }
   }

@@ -7,7 +7,6 @@ SCR_ChimeraCharacter : "{A4F595B1EFEBD7F3}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{BC2FAF35A4DA094E}Prefabs/Characters/HeadGear/Hat_M70_01/ARY_Hat_M70_01_black.et"
     }
     LoadoutSlotInfo Jacket {
      Prefab "{A722676E7175F8E0}Prefabs/Characters/Uniforms/Tshirts/CGQC_Instructor_Tshirt.et"
