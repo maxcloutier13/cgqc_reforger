@@ -9,12 +9,6 @@ GenericEntity : "{4DBBAABC009C0449}Prefabs/Pouches/Base/GRS_Front_Large_Admin_Po
     }
    }
    MultiSlots {
-    MultiSlotConfiguration "{692A23C29DF67A8D}" {
-     SlotTemplate InventoryStorageSlot Nades {
-      Prefab "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et"
-     }
-     NumSlots 2
-    }
     MultiSlotConfiguration "{692A23C29DF67A83}" {
      SlotTemplate InventoryStorageSlot Mags {
       Prefab "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"

@@ -39,12 +39,6 @@ GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
      }
      NumSlots 20
     }
-    MultiSlotConfiguration "{692CD9F96356FB64}" {
-     SlotTemplate InventoryStorageSlot Nades {
-      Prefab "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et"
-     }
-     NumSlots 20
-    }
     MultiSlotConfiguration "{692CD9FE89A50283}" {
      SlotTemplate InventoryStorageSlot Bangs {
       Prefab "{535342DF43FD23C6}Prefabs/Weapons/Grenades/Grenade_MultiStun_HalfTime.et"

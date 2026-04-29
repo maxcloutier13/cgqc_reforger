@@ -17,12 +17,6 @@ GenericEntity : "{7C7F6D4083FAEA14}Prefabs/Pouches/Base/GRS_Side_Pouch_1.et" {
     }
    }
    MultiSlots {
-    MultiSlotConfiguration "{69293CA7E4A7C50D}" {
-     SlotTemplate InventoryStorageSlot TrainingNades {
-      Prefab "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et"
-     }
-     NumSlots 4
-    }
     MultiSlotConfiguration "{69293CA7002277A7}" {
      SlotTemplate InventoryStorageSlot MAgs {
       Prefab "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
