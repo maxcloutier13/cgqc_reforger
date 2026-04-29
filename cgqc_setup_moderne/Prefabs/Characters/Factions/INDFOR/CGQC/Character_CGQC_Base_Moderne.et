@@ -42,7 +42,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
     }
     LoadoutSlotInfo Waist {
-     Prefab "{5C9B3C4E15FF604E}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifleman_RG_sTs.et"
     }
    }
   }
