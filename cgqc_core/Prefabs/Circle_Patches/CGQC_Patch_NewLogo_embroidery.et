@@ -18,4 +18,5 @@ GameEntity : "{31B8D047E27D9FF1}Prefabs/Circle_Patches/Patch_Reaper_Base.et" {
    }
   }
  }
+ scale 1.2
 }
