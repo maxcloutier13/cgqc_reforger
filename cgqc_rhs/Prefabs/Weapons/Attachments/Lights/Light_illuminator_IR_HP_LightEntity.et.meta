@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F3D9A3B4DC26F123}Prefabs/Weapons/Attachments/Lights/Light_illuminator_IR_HP_LightEntity.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
