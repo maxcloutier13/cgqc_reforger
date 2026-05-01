@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F5E8C7D6551B7BDE}Prefabs/Characters/Eyewear/GATORZ_Magnum/GATORZ_Magnum_Clear.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
