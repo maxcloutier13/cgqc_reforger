@@ -2,6 +2,41 @@
 
 modded class SCR_CharacterDamageManagerComponent
 {
+	protected static const string CGQC_SIMU_AMMO_TAG = "Simunition";
+	protected static const float CGQC_KO_DURATION = 1.5;
+
+	//------------------------------------------------------------------------------------------------
+	override bool HijackDamageHandling(notnull BaseDamageContext damageContext)
+	{
+		if (!Replication.IsServer())
+			return super.HijackDamageHandling(damageContext);
+
+		if (damageContext.damageSource)
+		{
+			EntityPrefabData prefabData = damageContext.damageSource.GetPrefabData();
+			if (prefabData && prefabData.GetPrefabName().Contains(CGQC_SIMU_AMMO_TAG))
+			{
+				damageContext.damageValue = 0;
+				ForceUnconsciousness(0);
+				GetGame().GetCallqueue().CallLater(CGQC_WakeUp, CGQC_KO_DURATION * 1000, false);
+				return false;
+			}
+		}
+
+		return super.HijackDamageHandling(damageContext);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void CGQC_WakeUp()
+	{
+		FullHeal();
+		UpdateConsciousness();
+	}
+}
+
+/*
+modded class SCR_CharacterDamageManagerComponent
+{
     protected static const string CGQC_SIMU_AMMO_TAG = "Simunition";
     protected static const float CGQC_KO_DURATION = 30.0;
 
@@ -39,4 +74,4 @@ modded class SCR_CharacterDamageManagerComponent
         FullHeal();
         UpdateConsciousness();
     }
-}
+}*/
