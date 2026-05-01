@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcbaconheatfix"
+ GUID "6942D7E084BB944A"
+ TITLE "cgqc_bacon_heatfix"
+ Dependencies {
+  "58D0FB3206B6F859" "65B8EA178A3E94E3" "5AB890B71D748750"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
