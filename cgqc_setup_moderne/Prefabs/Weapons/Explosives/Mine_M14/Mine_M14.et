@@ -1,3 +1,9 @@
 GenericEntity : "{91CE54ECA33BCB05}Prefabs/Weapons/Explosives/Mine_M14/Mine_M14_base.et" {
  ID "5968D2B6A82C6019"
+ components {
+  SCR_MineWeaponComponent "{59F2DC2C202D1AFB}" {
+   WeaponType SmokeGrenade
+   WeaponSlotType "throwable"
+  }
+ }
 }
