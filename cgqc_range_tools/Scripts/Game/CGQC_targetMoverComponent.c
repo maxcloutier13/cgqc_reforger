@@ -236,10 +236,14 @@ class CGQC_TargetMoverComponent : ScriptComponent
 	}
 
 	//------------------------------------------------------------------------------------------------
-	string GetNextCycleLabel()
+	// Returns the label for the current distance state.
+	// Call AFTER CycleDistance() to get the label for the move that just happened.
+	//------------------------------------------------------------------------------------------------
+	string GetCurrentLabel()
 	{
-		int nextIndex = (m_iDistanceIndex + 1) % DIST_COUNT;
-		return GetDistanceAtIndex(nextIndex).ToString() + "m";
+		if (m_bCheckMode)
+			return "Vérification";
+		return GetDistanceAtIndex(m_iDistanceIndex).ToString() + "m";
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -274,6 +278,17 @@ class CGQC_TargetMoverComponent : ScriptComponent
 			Replication.BumpMe();
 		}
 	}
+}
+
+//------------------------------------------------------------------------------------------------
+// Helper: get SCR_PlayerController from interacting character entity
+//------------------------------------------------------------------------------------------------
+static SCR_PlayerController CGQC_GetPlayerController(IEntity userEntity)
+{
+	if (!userEntity) return null;
+	int pid = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(userEntity);
+	if (pid <= 0) return null;
+	return SCR_PlayerController.Cast(GetGame().GetPlayerManager().GetPlayerController(pid));
 }
 
 //------------------------------------------------------------------------------------------------
@@ -323,12 +338,13 @@ class CGQC_TargetCycleAction : ScriptedUserAction
 		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetCycleAction");
 		if (!mover) return;
 
-		string label = mover.GetNextCycleLabel();
+		// Cycle first, then read the current label so hint matches the actual move
 		mover.CycleDistance();
+		string label = mover.GetCurrentLabel();
 
-		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
-		if (hintMgr)
-			hintMgr.ShowCustomHint("Distance — " + label, "", 2.0);
+		SCR_PlayerController pc = CGQC_GetPlayerController(pUserEntity);
+		if (pc)
+			pc.CGQC_Rpc_ShowMoverHint("Champ de tir", "Distance — " + label);
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
@@ -373,11 +389,13 @@ class CGQC_TargetCheckAction : ScriptedUserAction
 		CGQC_TargetMoverComponent mover = CGQC_FindMover(m_sTargetEntityName, "CGQC_TargetCheckAction");
 		if (!mover) return;
 
+		// Toggle first, then read state so hint matches the actual move
 		mover.ToggleCheck();
+		string label = mover.GetCurrentLabel();
 
-		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
-		if (hintMgr)
-			hintMgr.ShowCustomHint("Vérification de la cible", "", 2.0);
+		SCR_PlayerController pc = CGQC_GetPlayerController(pUserEntity);
+		if (pc)
+			pc.CGQC_Rpc_ShowMoverHint("Champ de tir", label);
 	}
 
 	override bool CanBeShownScript(IEntity user) { return true; }
@@ -399,9 +417,9 @@ class CGQC_TargetResetAction : ScriptedUserAction
 
 		mover.Reset();
 
-		SCR_HintManagerComponent hintMgr = SCR_HintManagerComponent.GetInstance();
-		if (hintMgr)
-			hintMgr.ShowCustomHint("Reset de toute la patente", "", 2.0);
+		SCR_PlayerController pc = CGQC_GetPlayerController(pUserEntity);
+		if (pc)
+			pc.CGQC_Rpc_ShowResetHint();
 	}
 
 	override bool CanBeShownScript(IEntity user)     { return true; }

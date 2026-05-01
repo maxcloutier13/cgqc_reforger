@@ -9,9 +9,10 @@
 //   CGQC_Rpc_AskCheck          – Client → Server
 //   CGQC_Rpc_AskReset          – Client → Server
 //   CGQC_Rpc_ShowTargetReport  – Server → Owner  (IPSC + Zero shared)
-//   CGQC_Rpc_ShowResetHint     – Server → Owner  (IPSC + Zero shared)
+//   CGQC_Rpc_ShowResetHint     – Server → Owner  (IPSC + Zero + Mover shared)
 //   CGQC_Rpc_ShowHitHint       – Server → Owner  (IPSC target)
 //   CGQC_Rpc_ShowZeroHitHint   – Server → Owner  (Zero target)
+//   CGQC_Rpc_ShowMoverHint     – Server → Owner  (Target mover distance/check)
 // ============================================================
 
 modded class SCR_PlayerController
@@ -72,7 +73,7 @@ modded class SCR_PlayerController
 	}
 
 	// ----------------------------------------------------------------
-	// Server → Owner: reset confirmation (IPSC and Zero shared)
+	// Server → Owner: reset confirmation (IPSC, Zero, and Mover shared)
 	// ----------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowResetHint()
@@ -129,6 +130,15 @@ modded class SCR_PlayerController
 		body = body + "\nOffset: " + mradStr;
 		body = body + "\n        " + cmStr;
 
+		CGQC_RangeTools_HitDisplay.Show(title, body, 3.0);
+	}
+
+	// ----------------------------------------------------------------
+	// Server → Owner: quick hint for target mover distance/check actions
+	// ----------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
+	void CGQC_Rpc_ShowMoverHint(string title, string body)
+	{
 		CGQC_RangeTools_HitDisplay.Show(title, body, 3.0);
 	}
 }
