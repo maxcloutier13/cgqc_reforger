@@ -5,7 +5,6 @@ GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/P
    Enabled 0
   }
   SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
-   Enabled 1
    Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
     ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
      Name "GRS: Blue Levys (Slim Fit)"
@@ -14,6 +13,7 @@ GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/P
    }
    MaxCumulativeVolume 800
    MaxItemSize 10 10 10
+   m_fMaxWeight 5
   }
  }
 }

@@ -10,13 +10,10 @@ GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/P
      Name "GRS: Blue Levys"
      Description "GRS: Blue Levys"
     }
-    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.6
-    }
    }
-   MaxCumulativeVolume 800
+   MaxCumulativeVolume 900
    MaxItemSize 10 10 10
-   m_fMaxWeight 5
+   m_fMaxWeight 6
   }
  }
 }

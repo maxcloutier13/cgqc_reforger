@@ -5,9 +5,11 @@ GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
    Enabled 0
   }
   SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Enabled 1
    Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
-    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.6
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "GRS: Blue Jeans"
+     Description "GRS: Blue Jeans"
     }
    }
    MaxCumulativeVolume 800
