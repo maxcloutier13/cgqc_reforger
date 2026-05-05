@@ -1,0 +1,3 @@
+GameMaterial : "{78B12E5F774CDA69}Common/Materials/Game/Core/vegetation_base.gamemat" {
+ "Vehicle contact surface" "{3FE0D00BC351EA1C}Common/Materials/Vehicles/grass.vhcsurf"
+}
