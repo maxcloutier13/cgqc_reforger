@@ -10,28 +10,28 @@ $grp GenericEntity : "{04385750E1EFE6D5}Prefabs/Structures/Signs/SignLarge_02/MA
 }
 $grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
  {
-  coords 6543.386 59.656 3948.142
-  angles 0 -165.419 0
+  coords 6523.728 59.656 3944.577
+  angles 0 -175.259 0
  }
  {
-  coords 6544.329 59.656 3951.421
-  angles 0 -165.419 0
+  coords 6523.622 59.656 3941.166
+  angles 0 -175.259 0
  }
  {
-  coords 6545.22 59.656 3954.4
-  angles 0 -165.419 0
+  coords 6523.492 59.656 3938.061
+  angles 0 -175.259 0
  }
  {
-  coords 6528.446 59.656 3952.097
-  angles 0 -165.419 0
+  coords 6537.845 59.656 3944.462
+  angles 0 1.697 0
  }
  {
-  coords 6529.239 59.656 3955.1
-  angles 0 -165.419 0
+  coords 6537.742 59.656 3941.357
+  angles 0 1.697 0
  }
  {
-  coords 6530.237 59.656 3958.345
-  angles 0 -165.419 0
+  coords 6537.492 59.656 3937.972
+  angles 0 1.697 0
  }
 }
 $grp GenericEntity : "{4D739103C9B946EC}Prefabs/Structures/Signs/SignLarge_02/TCCC Overview.et" {
