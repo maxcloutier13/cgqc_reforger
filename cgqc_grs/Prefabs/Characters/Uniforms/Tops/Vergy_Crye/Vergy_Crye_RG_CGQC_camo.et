@@ -15,6 +15,7 @@ GameEntity : "{EDB998C9B424A3C5}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Verg
      Prefab "{8DEC3C6B7063AE11}Prefabs/Flag_Patches/spartan_camo_up.et"
     }
     GRS_MorphSlotComponent Lower_Right_Patch {
+     Prefab "{D6D502301484882C}Prefabs/Rectangle_Patches/role_inf.et"
     }
     GRS_MorphSlotComponent Upper_Left_Patch {
      Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
