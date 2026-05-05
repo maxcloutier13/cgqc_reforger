@@ -1,0 +1,28 @@
+GameEntity : "{B6CC74F306F54A8D}Prefabs/Items/Equipment/Patches/Patch_Base.et" {
+ ID "5DB09136945FC6DB"
+ components {
+  InventoryItemComponent "{5DB09136B1C985CE}" {
+   Attributes SCR_ItemAttributeCollection "{5DB09136B1C985C1}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{5DB09136B1C985EB}" {
+     Name "CGQC Spartan Jaune"
+    }
+   }
+  }
+  MeshObject "{5DB09136B1C985B5}" {
+   Materials {
+    MaterialAssignClass "{694ACC7AC1FAB8E8}" {
+     SourceMaterial "patch_us_flag"
+     AssignedMaterial "{FF2E5428E6C8B478}Assets/Characters/Patches/rhs_qc.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5DB09136B1C9859A}" {
+   WornMaterialsOverride {
+    "{F0C41A712C30D785}Assets/Characters/Patches/rhs_spartan_yellow.emat"
+   }
+   ItemMaterialsOverride {
+    "{F0C41A712C30D785}Assets/Characters/Patches/rhs_spartan_yellow.emat"
+   }
+  }
+ }
+}
