@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{5F176C7DF71EC949}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+ Name "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

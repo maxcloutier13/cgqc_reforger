@@ -1,22 +1,14 @@
 SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
-   m_sLoadoutName "Élève"
-   m_sLoadoutResource "{8C3AECE1C16EEA80}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Student.et"
-  }
-  SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
-   m_sLoadoutName "Instructeur"
-   m_sLoadoutResource "{6F95DEA381AD485B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Instructor.et"
-  }
-  SCR_FactionPlayerLoadout "{690732B1FBE65356}" {
-   m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{5F176C7DF71EC949}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
+  SCR_FactionPlayerLoadout "{69493457571159C7}" {
+   m_sLoadoutName "Soldat Training"
+   m_sLoadoutResource "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et"
    m_sAffiliatedFaction "CGQC"
   }
-  SCR_FactionPlayerLoadout "{690738C82CD291C0}" {
-   m_sLoadoutName "TeamLeader"
-   m_sLoadoutResource "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et"
+  SCR_FactionPlayerLoadout "{694934576D3794E4}" {
+   m_sLoadoutName "Instructeur"
+   m_sLoadoutResource "{3DA369C4E3AA5E28}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructor_Training.et"
    m_sAffiliatedFaction "CGQC"
   }
  }

@@ -1,0 +1,27 @@
+SCR_ChimeraCharacter : "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
+   "faction affiliation" "CGQC"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Instructeur"
+    Description "Instructeur CGQC"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{A943AD4A4191ADAB}Prefabs/Characters/Uniforms/ARY_Jacket_US_BDU_rolledup_02_black.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{FCA7468A38A142ED}Prefabs/Characters/Uniforms/ARY_Pants_US_M65_black.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{4F71E7468E78DDD2}Prefabs/Characters/Handwear/Gloves_Leather_01/Gloves_Leather_01.et"
+    }
+   }
+  }
+ }
+}

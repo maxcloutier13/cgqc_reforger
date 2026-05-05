@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_Moderne.et" {
+SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
@@ -20,10 +20,16 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Hat {
      Prefab ""
     }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
     LoadoutSlotInfo Ears {
      Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
     }
     LoadoutSlotInfo Waist {
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab ""
     }
    }
   }

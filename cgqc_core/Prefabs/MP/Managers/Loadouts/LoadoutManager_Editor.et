@@ -3,17 +3,12 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_PlayerArsenalLoadout "{68CA51CFAD8D489E}" {
    m_sLoadoutName "CGQC Saved Loadout"
-   m_sLoadoutResource "{7DB785F294836FF0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_old.et"
+   m_sLoadoutResource "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
-   m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{5F176C7DF71EC949}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman.et"
-   m_sAffiliatedFaction "CGQC"
-  }
-  SCR_FactionPlayerLoadout "{68B90833300EBAA7}" {
-   m_sLoadoutName "Team Leader"
-   m_sLoadoutResource "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et"
+   m_sLoadoutName "Soldat"
+   m_sLoadoutResource "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et"
    m_sAffiliatedFaction "CGQC"
   }
  }
