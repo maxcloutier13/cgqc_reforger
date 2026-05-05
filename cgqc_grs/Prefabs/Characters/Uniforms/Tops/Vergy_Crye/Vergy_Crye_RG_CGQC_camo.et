@@ -1,0 +1,35 @@
+GameEntity : "{EDB998C9B424A3C5}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_Base.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "GRS: Crye G3 - OD"
+     Description "GRS: Crye G3 - OD"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    GRS_MorphSlotComponent Upper_Right_Patch {
+     Prefab "{8DEC3C6B7063AE11}Prefabs/Flag_Patches/spartan_camo_up.et"
+    }
+    GRS_MorphSlotComponent Lower_Right_Patch {
+    }
+    GRS_MorphSlotComponent Upper_Left_Patch {
+     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
+    }
+    GRS_MorphSlotComponent Lower_Left_Patch {
+     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{7C707C1F97EA85BB}Assets/Characters/Uniforms/Tops/Vergy_Tops/Data/Crye_Shirt_Rolled_RG.emat"
+   }
+   ItemMaterialsOverride {
+    "{7C707C1F97EA85BB}Assets/Characters/Uniforms/Tops/Vergy_Tops/Data/Crye_Shirt_Rolled_RG.emat"
+   }
+  }
+ }
+ coords 0 0.068 0
+}

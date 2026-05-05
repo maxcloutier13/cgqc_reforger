@@ -34,7 +34,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Hat {
     }
     LoadoutSlotInfo Jacket {
-     Prefab "{5978572E8E04AA6A}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC.et"
+     Prefab "{30B17FA64E5C8BDC}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo.et"
     }
     LoadoutSlotInfo ArmoredVest {
      Prefab "{015E3E3E0D9212B1}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Rifleman_RG_V1_sTs.et"
@@ -61,7 +61,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{690C232DABEBBC53}" {
-     TargetStorage "Jacket/Vergy_Crye_RG_CGQC.et/GRS_StorageComponent/GRS_StorageComponent.et"
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo.et/GRS_StorageComponent/GRS_StorageComponent.et"
      PrefabsToSpawn {
       "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{C1279AFE5FE0C3AC}Prefabs/Items/Equipment/Pace_Counter/Pace_counter_01.et"
      }
