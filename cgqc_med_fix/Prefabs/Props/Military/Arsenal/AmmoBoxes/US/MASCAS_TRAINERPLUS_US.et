@@ -7,5 +7,8 @@ GenericEntity : "{0AD8F5CBED139651}Prefabs/Props/Military/Arsenal/AmmoBoxes/Ammo
   AF_SingleCasualtySpawnerComponent "{684B2E6123D1DD09}" {
    m_CasualtyPrefab "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
   }
+  SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+   "faction affiliation" "CGQC"
+  }
  }
 }
