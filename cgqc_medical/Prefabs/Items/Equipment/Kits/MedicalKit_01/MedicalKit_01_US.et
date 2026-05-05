@@ -40,6 +40,25 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      SlotTemplate InventoryStorageSlot Morphine {
       Prefab "{79379D4E43B29B88}Prefabs/Items/Medicine/ChestSeal/ACE_Medical_ChestSeal.et"
      }
+     NumSlots 6
+    }
+    MultiSlotConfiguration "{694B362DE590C208}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{D8326FEE52670D2A}Prefabs/Characters/Handwear/Gloves_Blue/Medical_Gloves_Blue_Base.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{694B362D3F683B47}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{395D1185E649EDE2}Prefabs/Characters/Handwear/Gloves_Purple/Medical_Gloves_Purple_Base.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{694B362D3617D986}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{C07A52D13353AB2F}Prefabs/Clothing/ZEL_FaceClothing_Base.et"
+     }
+     NumSlots 2
     }
    }
   }
