@@ -1,0 +1,12 @@
+GenericEntity {
+ ID "65CC0BEFC62AC196"
+ components {
+  GRS_EquipmentStorageComponent "{6606CD260060FAE1}" {
+   InitialStorageSlots {
+    GRS_PatchStorageSlot Rectangle_Patch {
+     Prefab "{F20A13563AFED116}Prefabs/Rectangle_Patches/spartan_camo.et"
+    }
+   }
+  }
+ }
+}
