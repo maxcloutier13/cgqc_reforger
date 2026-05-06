@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{091C602BB2F7CBF7}Assets/Personal_Patches/patch_pike.edds"
+}
