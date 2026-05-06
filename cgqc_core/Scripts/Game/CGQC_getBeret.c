@@ -7,7 +7,6 @@ class CGQC_getBeret
 	{
 	    if (!playerEntity)
 	    {
-	        Print("[CGQC_getBeret] ERROR: playerEntity is null");
 	        return;
 	    }
 
@@ -15,42 +14,34 @@ class CGQC_getBeret
 	    EntityPrefabData unitPrefabData = playerEntity.GetPrefabData();
 	    if (!unitPrefabData)
 	    {
-	        Print("[CGQC_getBeret] ERROR: No prefab data on playerEntity");
 	        return;
 	    }
 
 	    string unitPrefabName = unitPrefabData.GetPrefabName();
-	    PrintFormat("[CGQC_getBeret] Unit prefab: %1", unitPrefabName);
 
-	    if (!unitPrefabName.Contains("Training") && !unitPrefabName.Contains("training"))
+	    if (!unitPrefabName.Contains("Training") && !unitPrefabName.Contains("training") && !unitPrefabName.Contains("Moderne"))
 	    {
-	        Print("[CGQC_getBeret] Not a training prefab, skipping");
 	        return;
 	    }
 
-	    Print("[CGQC_getBeret] Training prefab confirmed");
 
 	    // Resolve beret prefab for this rank
 	    ResourceName beretPrefab = CGQC_getBeret.GetBeretForRank(rank);
 	    if (beretPrefab.IsEmpty())
 	    {
-	        PrintFormat("[CGQC_getBeret] No beret defined for rank %1, skipping", rank);
 	        return;
 	    }
-	    PrintFormat("[CGQC_getBeret] Beret for rank %1: %2", rank, beretPrefab);
 
 	    // Find loadout storage
 	    EquipedLoadoutStorageComponent loadoutStorage = EquipedLoadoutStorageComponent.Cast(playerEntity.FindComponent(EquipedLoadoutStorageComponent));
 	    if (!loadoutStorage)
 	    {
-	        Print("[CGQC_getBeret] ERROR: No EquipedLoadoutStorageComponent found");
 	        return;
 	    }
 
 	    SCR_InventoryStorageManagerComponent invManager = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));
 	    if (!invManager)
 	    {
-	        Print("[CGQC_getBeret] ERROR: No SCR_InventoryStorageManagerComponent found");
 	        return;
 	    }
 
@@ -59,25 +50,16 @@ class CGQC_getBeret
 	    if (!currentHead)
 	    {
 	        // Head slot is empty -> equip beret directly
-	        Print("[CGQC_getBeret] Head slot empty -> equipping beret");
 	        CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
 	    }
 	    else
 	    {
 	        // Head slot occupied -> check if player already has any beret in inventory
-	        Print("[CGQC_getBeret] Head slot occupied -> checking inventory for beret");
 	        if (!CGQC_getBeret.HasAnyBeret(invManager))
 	        {
-	            Print("[CGQC_getBeret] No beret found in inventory -> inserting");
 	            CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
 	        }
-	        else
-	        {
-	            Print("[CGQC_getBeret] Beret already in inventory, nothing to do");
-	        }
 	    }
-
-	    Print("[CGQC_getBeret] Done <-");
 	}
 
 	//! Returns the ranked beret prefab ResourceName
@@ -129,7 +111,6 @@ class CGQC_getBeret
 
 	        if (berets.Contains(prefabData.GetPrefabName()))
 	        {
-	            PrintFormat("[CGQC_getBeret] Found beret in inventory: %1", prefabData.GetPrefabName());
 	            return true;
 	        }
 	    }
