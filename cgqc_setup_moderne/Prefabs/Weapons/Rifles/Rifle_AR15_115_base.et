@@ -62,7 +62,6 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
     AttachmentSlotComponent "{629ADD528EE856C1}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
       Offset 0.0292 0.0819 0.4125
-      Prefab "{C32EC74B4B0C8CA1}Prefabs/Weapons/Attachments/Lights/Light_m300c_blk.et"
      }
     }
     MuzzleComponent "{CA6BE4D6B867541F}" {

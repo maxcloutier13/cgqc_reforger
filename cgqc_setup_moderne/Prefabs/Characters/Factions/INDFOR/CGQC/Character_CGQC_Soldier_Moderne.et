@@ -21,6 +21,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Soldat Moderne"
+    IconSetName "EditableEntity_Character_Rifleman"
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {

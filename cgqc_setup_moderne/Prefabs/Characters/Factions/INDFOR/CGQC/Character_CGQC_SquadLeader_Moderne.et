@@ -1,0 +1,93 @@
+SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "SquadLeader Moderne"
+    IconSetName "EditableEntity_Character_Leader_Squad"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{49B0013D16607291}Prefabs/5AB890B71D748750/Weapon_Variants_B/Rifle_M4_Variant_Block2_UGL_CGQC_TL.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{C3875A8A398397CC}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo_sl.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{ED28005C64741DBC}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Lead_RG_sTs.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{35EC03DF590FC853}Prefabs/Items/Equipment/Backpacks/Radio_Backpack/CGQC_Radio_Backpack_Black.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{4BF6D3D9D5A63633}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Grenadier_RG_TL.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo_sl.et/GRS_StorageComponent/GRS_StorageComponent.et"
+    }
+    ItemsInitConfigurationItem "{6949249825AF0522}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Pistol_Mag_Front_Pouch/GRS_G24_Pouch_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF7046E3B}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Front_Pouch/GRS_AR_Flex_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF756FA10}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Side_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF1943048}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Fanny_Pack/GRS_Fanny_Pack_2_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249A0AAABC84}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/RS_Rear_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{2BA3B074AE0BFF82}Prefabs/Weapons/Ammo/Ammo_Grenade_Marker_M713.et" "{2BA3B074AE0BFF82}Prefabs/Weapons/Ammo/Ammo_Grenade_Marker_M713.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249C9C484C6A}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/Placards/GRS_Placard_Single_Flex_RG.et"
+     PrefabsToSpawn {
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249CA8084362}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/RS_Front_Pouch/GRS_AR_Flex_Pouch_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249CA3B11CDC}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/RS_Rear_Pouch/GRS_Side_Pouch_1_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249CCCD428B4}" {
+     Enabled 0
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/RS_Rear_Pouch/GRS_Side_Pouch_1_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249CC25CADD1}" {
+     Enabled 0
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/LS_Rear_Pouch/GRS_Side_Pouch_2_RG.et"
+    }
+    ItemsInitConfigurationItem "{694D075A16824A34}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Rear_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{694D075D510FEC7C}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs.et/Front_Admin_Pouch/GRS_Front_Large_Admin_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+   }
+  }
+ }
+}
