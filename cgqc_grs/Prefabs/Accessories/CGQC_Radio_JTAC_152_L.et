@@ -6,7 +6,7 @@ GenericEntity {
   SignalsManagerComponent "{692912010CCDB997}" {
   }
   BaseRadioComponent "{692912010CCDB995}" {
-   "Encryption key" "chickenNuggets"
+   "Encryption key" "poutine"
    "Turned on" 1
    Transceivers {
     RelayTransceiver "{692912010CCDB991}" {
