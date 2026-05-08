@@ -7,13 +7,68 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
-   m_sLoadoutName "Soldat"
-   m_sLoadoutResource "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et"
+   m_sLoadoutName "Rifleman LAT"
+   m_sLoadoutResource "{FDF8418A3D7284D7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_RiflemanLAT.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A4F5D50C}" {
+   m_sLoadoutName "Grenadier"
+   m_sLoadoutResource "{BB448F8C154BF55D}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Grenadier.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
+   m_sLoadoutName "LMG"
+   m_sLoadoutResource "{48BCFDE4B196C801}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_LMG.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
+   m_sLoadoutName "Marksman"
+   m_sLoadoutResource "{0DAC912E7F9E045E}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Marksman.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
+   m_sLoadoutName "Medic"
+   m_sLoadoutResource "{E8A2D7A04351EE26}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic.et"
    m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
-   m_sLoadoutName "Team Leader"
+   m_sLoadoutName "Ingénieur"
+   m_sLoadoutResource "{9D94301A8A95F125}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_EOD.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
+   m_sLoadoutName "TeamLeader"
    m_sLoadoutResource "{6AEBAAB77D2F7B3F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF07E6889CC}" {
+   m_sLoadoutName "RTO"
+   m_sLoadoutResource "{D3C0C71DE7BC4A5C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_RTO.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFC5F4FA5C}" {
+   m_sLoadoutName "SquadLeader"
+   m_sLoadoutResource "{0D9FB99C2B45D948}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DFE15F74B63}" {
+   m_sLoadoutName "Heli Pilot"
+   m_sLoadoutResource "{75B9A7B67813A2F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_HeliPilot.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF0612CD5CA}" {
+   m_sLoadoutName "Tankiste"
+   m_sLoadoutResource "{E3059771E7B40A41}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TankDriver.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DF07F6BB06B}" {
+   m_sLoadoutName "Sniper"
+   m_sLoadoutResource "{043F0E81D9D810A9}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFB04BDC03}" {
+   m_sLoadoutName "Spotter"
+   m_sLoadoutResource "{105308FA3E54387F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Spotter.et"
    m_sAffiliatedFaction "CGQC"
   }
  }

@@ -1,4 +1,4 @@
-GenericEntity : "{0FC1D6E9B592F75D}PrefabsEditable/Auto/Systems/Arsenal/Ammo Boxes/US/E_SuspiciousItems_Box.et" {
+GenericEntity : "{0FC1D6E9B592F75D}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_US.et" {
  ID "F0DBA538AC2A0552"
  components {
   RigidBody "{5872F0EB7DFB5A9D}" {

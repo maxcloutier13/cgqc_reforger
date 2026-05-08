@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D3C0C71DE7BC4A5C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_RTO.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
