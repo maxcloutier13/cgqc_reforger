@@ -306,7 +306,7 @@ class CGQC_Scripts
 	        }else{
 				rankComp.SetCharacterRank(desiredRank);
 	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
-				GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
+				// BERET GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
 			}	
 		}
 		
