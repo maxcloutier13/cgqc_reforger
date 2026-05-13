@@ -1,0 +1,23 @@
+MatPBR2Layers {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ RoughnessScale 5
+ MetalnessScale 2
+ BCRMap "{B93D5693D55D675C}Assets/Beret_Patches/CGQC_Logo_Shield2.edds"
+ NMOMap "{E31FFE2CA129BFDE}Assets/Beret_Patches/CGQC_Logo_Shield2_nmo.edds"
+ MaskMapUVTransform MatUVTransform "{692C3D9604067F9D}" {
+ }
+ MaskScale 5
+ DetailMask "{5D357D3133BBC644}Assets/Data/Flash - 1LT - Metal 0.25K.edds"
+ Color2 0.561 0.694 1 1
+ BCRMap2 "{5D357D3133BBC644}Assets/Data/Flash - 1LT - Metal 0.25K.edds"
+ NormalPower2 0.05
+ NMOMap2 "{5D357D3133BBC644}Assets/Data/Flash - 1LT - Metal 0.25K.edds"
+ RoughnessScale2 0
+ MetalnessScale2 5
+ AOScale2 0.75
+ DetailNormalPower2 0.05
+ DetailNormalMap2 "{5D357D3133BBC644}Assets/Data/Flash - 1LT - Metal 0.25K.edds"
+ HeightMap2 "{5D357D3133BBC644}Assets/Data/Flash - 1LT - Metal 0.25K.edds"
+ ParallaxScale2 0.01
+}

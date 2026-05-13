@@ -1,0 +1,41 @@
+GameEntity : "{6E8633D9C5802A4A}Prefabs/Characters/HeadGear/Hat_RadiovkaBeret_01/Hat_RadiovkaBeret_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{F7F1838EB6187018}Assets/Ranger_Beret.xob"
+  }
+  RigidBody "{5112706CD4157AE6}" {
+   Layers 0x1 0
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "CGQC Beret Bleu"
+     Description "1LT"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{59DCE0608EB82CD1}" {
+     ItemVolume 10
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{52D2D35767351900}" {
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 0.75
+     }
+    }
+    m_SlotType SLOT_ANY
+   }
+   m_fForceThreshold 0.8
+   m_fChanceToDetach 50
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   WornModel "{F7F1838EB6187018}Assets/Ranger_Beret.xob"
+   WornMaterialsOverride {
+    "{CDFB1D6726DD845A}Assets/Beret_Patches/Blue.emat" "{A37D75EF6A3C7272}Assets/Beret_Patches/CGQC.emat"
+   }
+   ItemModel "{73C99B17FD5EBC1F}Assets/Beret_Floor.xob"
+   ItemMaterialsOverride {
+    "{CDFB1D6726DD845A}Assets/Beret_Patches/Blue.emat" "{A37D75EF6A3C7272}Assets/Beret_Patches/CGQC.emat"
+   }
+  }
+ }
+}
