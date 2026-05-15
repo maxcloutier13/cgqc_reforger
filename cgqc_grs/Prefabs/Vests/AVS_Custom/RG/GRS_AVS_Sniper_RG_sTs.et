@@ -1,0 +1,38 @@
+GenericEntity : "{88EB6AF33C8CE877}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Marksman_RG_sTs.et" {
+ ID "65696E47F20A81F7"
+ components {
+  ClothNodeStorageComponent "{65696E47E5263D95}" {
+   Attributes SCR_ItemAttributeCollection "{65696E47E5263C61}" {
+    ItemDisplayName UIInfo "{65696E47E5263C47}" {
+     Name "AVS - RG - Marksman"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65696E47E5268667}" {
+   Slots {
+    LoadoutSlotInfo LS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo RS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo Atak {
+     Prefab "{FAA745EFA9107043}Prefabs/Accessories/GRS_Atak_Phone.et"
+    }
+    LoadoutSlotInfo Other_Patch {
+     Prefab ""
+    }
+    LoadoutSlotInfo LS_Radio {
+     Prefab "{27D0719EAB4B602F}Prefabs/Pouches/Base/GRS_Radio_JTAC_Pouch_JTAC_L_RG.et"
+    }
+    LoadoutSlotInfo RS_Radio {
+    }
+    LoadoutSlotInfo Rear_Carabiner {
+    }
+    LoadoutSlotInfo Rear_Radio {
+     Prefab "{2CC5F3C0C91D90B0}Prefabs/Pouches/Base/GRS_Radio_Pouch_343_RG.et"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,28 @@
+GenericEntity : "{C62D15B74E2FB00A}Prefabs/Backpanels/GRS_Modular_Backpanel_Base.et" {
+ ID "65CD429FE6DF99B3"
+ components {
+  ClothNodeStorageComponent "{65CD429FDC9C42F4}" {
+   Attributes SCR_ItemAttributeCollection "{65CD429FDC9C42CA}" {
+    ItemDisplayName UIInfo "{65CD429FDC9C4D6A}" {
+     Name "GRS: Modular Backpanel - RG"
+     Description "GRS: Modular Backpanel - RG"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CD429FDC9C44A2}" {
+   Slots {
+    LoadoutSlotInfo Bags {
+    }
+    LoadoutSlotInfo Pouches_LEGACY {
+     Prefab "{587BA78E06C6E42C}Prefabs/Pouches/Backpack_Pouches/GRS_Backpanel_Pouch_RG.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat"
+   }
+   ItemMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat"
+   }
+  }
+ }
+}

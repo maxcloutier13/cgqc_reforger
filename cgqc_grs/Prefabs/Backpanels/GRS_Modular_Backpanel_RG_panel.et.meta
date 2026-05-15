@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{35EC03DF590FC853}Prefabs/Items/Equipment/Backpacks/Radio_Backpack/Radio_Backpack_Black.et"
+ Name "{C12A8FFE0A3503C6}Prefabs/Backpanels/GRS_Modular_Backpanel_RG_panel.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
