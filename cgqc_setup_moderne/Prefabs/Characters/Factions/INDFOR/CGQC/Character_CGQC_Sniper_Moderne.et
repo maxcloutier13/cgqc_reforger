@@ -1,0 +1,67 @@
+SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Sniper Moderne"
+    IconSetName "EditableEntity_Character_Sharpshooter"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{01146792833C0877}Prefabs/Weapons/Rifles/M700/Rifle_M700_FDE.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{8F520C057B6DE496}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo_sniper.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{FCA16A11C707188B}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Sniper_RG_sTs.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{C12A8FFE0A3503C6}Prefabs/Backpanels/GRS_Modular_Backpanel_RG_panel.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo_sniper.et/GRS_StorageComponent/GRS_StorageComponent.et"
+    }
+    ItemsInitConfigurationItem "{6949249C9C484C6A}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Sniper_RG_sTs.et/Placards/GRS_Placard_ARC_Marksman_RG.et"
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et" "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249CA8084362}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Sniper_RG_sTs.et/RS_Rear_Pouch/GRS_Side_Pouch_1_RG.et"
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249CA3B11CDC}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Sniper_RG_sTs.et/LS_Rear_Pouch/GRS_Side_Pouch_2_RG.et"
+     PrefabsToSpawn {
+      "{D393BF8CDCE1DF17}Prefabs/Weapons/Core/M700_Magazine_Base.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249CCCD428B4}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Sniper_RG_sTs.et/Front_Admin_Pouch/GRS_Front_Large_Admin_Pouch_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249CC25CADD1}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Sniper_RG_sTs.et/Front_Admin_Pouch/GRS_Front_Large_Admin_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{03C6EB1EBD25AA33}Prefabs/Items/Equipment/BallisticTable/ACE_BallisticTable_Mrads.et" "{B70756E9489B011A}Prefabs/Items/Equipment/WeatherMeter/WeatherMeter_Kestrel4500/WeatherMeter_Kestrel4500.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6950F2D715F409A4}" {
+     TargetStorage "Back/GRS_Modular_Backpanel_RG_panel.et/Pouches_LEGACY/GRS_Backpanel_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{6CE8208592BF50F9}Prefabs/Clothing/Ghillie Hood.et" "{6A14695F2C89069C}Prefabs/Characters/Uniforms/Ghillie Top.et" "{B5A0606C7C687CE7}Prefabs/Clothing/Ghillie Bottoms.et"
+     }
+    }
+   }
+  }
+ }
+}

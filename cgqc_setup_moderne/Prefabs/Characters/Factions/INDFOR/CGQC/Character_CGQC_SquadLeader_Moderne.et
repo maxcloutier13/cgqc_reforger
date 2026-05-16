@@ -19,7 +19,6 @@ SCR_ChimeraCharacter : "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{ED28005C64741DBC}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Lead_RG_sTs.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{35EC03DF590FC853}Prefabs/Items/Equipment/Backpacks/Radio_Backpack/CGQC_Radio_Backpack_Black.et"
     }
     LoadoutSlotInfo GRS_Waist {
      Prefab "{4BF6D3D9D5A63633}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Grenadier_RG_TL.et"

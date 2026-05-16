@@ -4,14 +4,17 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
    m_sLoadoutResource "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne.et"
   }
-  SCR_FactionPlayerLoadout "{694D02340C42E767}" {
-   m_sLoadoutName "TL"
+  SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
    m_sLoadoutResource "{AF849499F67BAD7F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
   }
   SCR_FactionPlayerLoadout "{694D075CC12B55EE}" {
-   m_sLoadoutName "SL"
+   m_sLoadoutName "Squad Leader"
    m_sLoadoutResource "{275D1C3FE4EC157B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader_Moderne.et"
+   m_sAffiliatedFaction "CGQC"
+  }
+  SCR_FactionPlayerLoadout "{6950F2D773EF2CE0}" {
+   m_sLoadoutName "Sniper"
+   m_sLoadoutResource "{C8CB273EFB0E2140}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
  }
