@@ -1,4 +1,4 @@
-$grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+$grp GenericEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
  {
   coords 5188.007 291.058 1804.195
   angles 0 96.865 0
@@ -12,7 +12,7 @@ Vehicle M151A2_transport9 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M
  coords 5170.631 290.208 1776.597
  angles 0 -122.609 0
 }
-StaticModelEntity : "{785F322AC3DFD4B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_US_01.et" {
+GenericEntity : "{785F322AC3DFD4B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_US_01.et" {
  coords 5188.122 291.283 1802.068
  angles 0 0 0
 }
