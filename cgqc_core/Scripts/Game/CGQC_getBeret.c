@@ -19,7 +19,7 @@ class CGQC_getBeret
 
 	    string unitPrefabName = unitPrefabData.GetPrefabName();
 
-	    if (!unitPrefabName.Contains("Training") && !unitPrefabName.Contains("training") && !unitPrefabName.Contains("Moderne"))
+	    if (!unitPrefabName.Contains("CGQC") && !unitPrefabName.Contains("cgqc"))
 	    {
 	        return;
 	    }
