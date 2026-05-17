@@ -3,7 +3,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_PlayerArsenalLoadout "{69493817698F8242}" {
    m_sLoadoutName "UPO Saved Loadout"
-   m_sLoadoutResource "{EFB1926B42578E4A}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Empty_Moderne.et"
+   m_sLoadoutResource "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
    m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{6949381779B65AF1}" {
