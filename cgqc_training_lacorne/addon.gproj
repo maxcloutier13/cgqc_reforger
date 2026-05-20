@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctraininglacorne"
+ GUID "696714DC9AB9E89E"
+ TITLE "cgqc_training_lacorne"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "68FC062054BB6D8B" "672143CCBB93E2DA"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

@@ -7,6 +7,7 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 {
 	protected bool m_bIsProtected = false;
 	
+	/*
 	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
@@ -120,4 +121,5 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 			Print("[CGQC_ProtectedBackpack] FAILED to blacklist backpack", LogLevel.ERROR);
 		}
 	}
+	*/
 }

@@ -1,0 +1,30 @@
+SCR_DestructibleBuildingEntity : "{CEB1F71D46592F3C}Prefabs/Structures/Airport/Hangar_01/Hangar_01.et" {
+ coords 12390.323 0.361 660.813
+ angles 0 -144.495 0
+ {
+  GenericEntity {
+   ID "554AD98811AF57BB"
+   coords 0 0 0
+   {
+    GenericEntity {
+     ID "5868A440C9B6E7E2"
+     components {
+      DoorComponent "{221C667A9F7D4B69}" {
+       FakeDoor 1
+      }
+     }
+     coords 0 0 0
+    }
+    GenericEntity {
+     ID "5868A440C9B6E700"
+     components {
+      DoorComponent "{221C667A9F7D4B69}" {
+       FakeDoor 1
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

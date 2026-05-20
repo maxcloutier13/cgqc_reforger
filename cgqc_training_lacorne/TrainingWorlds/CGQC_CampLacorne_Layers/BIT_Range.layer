@@ -1,0 +1,284 @@
+$grp GenericEntity : "{41F318B162BC7EF6}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_CGQC_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et" {
+ {
+  coords 6655.834 14.375 4106.982
+  angles 0 91.488 0
+ }
+ {
+  coords 6638.339 14.407 4076.028
+  angles 0 81.426 0
+  {
+   GenericEntity {
+    ID "6608BA60DD9ED123"
+    coords 0 0 0
+    angles 0 -180 0
+   }
+   GenericEntity {
+    ID "6608BB49E7B0120D"
+    coords 0 0 0
+    angles 0 -180 0
+   }
+   SCR_ARY_SteelPlateTarget {
+    ID "6608BBF0D700A6A1"
+    coords 0 1.197 0.055
+    angles 0 -180 0
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF075AF7046"
+    coords -0.049 1.679 0.07
+    angles 0 0 -90
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF0E10C3A63"
+    coords -0.127 1.472 0.075
+    angles 0.508 0 -90
+   }
+  }
+ }
+ {
+  coords 6601.394 16.898 4078.467
+  angles 0 91.488 0
+  {
+   GenericEntity {
+    ID "6608BB49E7B0120D"
+    coords 0.009 0 0.001
+    angles 0 170.708 0
+   }
+   SCR_ARY_SteelPlateTarget {
+    ID "6608BBF0D700A6A1"
+    coords 0 1.197 0.055
+    angles 0 170.708 0
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF075AF7046"
+    coords -0.05 1.679 0.062
+    angles 0 -9.292 -90
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF0E10C3A63"
+    coords -0.128 1.472 0.054
+    angles 0.508 -9.292 -90
+   }
+  }
+ }
+ {
+  coords 6618.066 14.69 4081.598
+  angles 0 91.488 0
+ }
+ {
+  coords 6605.911 14.98 4088.424
+  angles 0 91.488 0
+ }
+ {
+  coords 6635.373 14.375 4092.373
+  angles 0 91.488 0
+ }
+ {
+  coords 6599.552 14.469 4107.775
+  angles 0 91.488 0
+ }
+ {
+  coords 6600.664 14.377 4121.142
+  angles 0 91.488 0
+ }
+ {
+  coords 6626.526 14.375 4107.089
+  angles 0 91.488 0
+ }
+ {
+  coords 6636.465 14.376 4124.608
+  angles 0 105.381 0
+  {
+   GenericEntity {
+    ID "6608BB49E7B0120D"
+    coords 0 0 0
+    angles 0 180 0
+   }
+   SCR_ARY_SteelPlateTarget {
+    ID "6608BBF0D700A6A1"
+    coords 0 1.197 0.055
+    angles 0 180 0
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF075AF7046"
+    coords -0.049 1.679 0.07
+    angles 0 0 -90
+   }
+   SCR_ARY_SteelPlateTargetFlip {
+    ID "6608BBF0E10C3A63"
+    coords -0.127 1.472 0.075
+    angles 0.508 0 -90
+   }
+  }
+ }
+ {
+  coords 6613.642 14.375 4141.673
+  angles 0 117.215 0
+ }
+ {
+  coords 6598.402 14.374 4135.634
+  angles 0 111.163 0
+ }
+ {
+  coords 6637.512 14.375 4114.908
+  angles 0 91.488 0
+ }
+ {
+  coords 6578.208 21.108 4079.621
+  angles 0 77.311 0
+ }
+ {
+  coords 6571.007 21.295 4091.533
+  angles 0 91.488 0
+ }
+ {
+  coords 6551.563 24.111 4105.082
+  angles 0 91.488 0
+ }
+ {
+  coords 6560.009 22.632 4108.738
+  angles 0 91.488 0
+ }
+ {
+  coords 6551.082 23.197 4131.301
+  angles 0 91.488 0
+ }
+ {
+  coords 6556.149 21.351 4146.059
+  angles 0 91.488 0
+ }
+ {
+  coords 6548.655 22.716 4157.525
+  angles 0 91.488 0
+ }
+ {
+  coords 6550.035 21.29 4170.786
+  angles 0 91.488 0
+ }
+}
+GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
+ coords 6679.881 14.375 4096.396
+ angles 0 89.829 0
+ {
+  GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+   components {
+    SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+     m_eSupportedArsenalItemTypes 513
+     m_eSupportedArsenalItemModes 254
+    }
+    SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+   coords -0.154 0.91 -0.026
+   angles 0 -179.886 0
+  }
+  GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+   coords 0.606 0.909 0.006
+   angles 0 88.449 0
+  }
+ }
+}
+$grp GenericEntity : "{4F54C4E785BC2F6A}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Stake_Body_Small_01.et" {
+ {
+  coords 6637.612 14.375 4097.61
+  angles 0 100.995 0
+ }
+ {
+  coords 6655.387 14.375 4127.793
+  angles 0 118.004 0
+ }
+ {
+  coords 6647.562 14.627 4071.654
+  angles 0 66.961 0
+ }
+}
+$grp GenericEntity : "{5FA07B67B17DAB5C}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Flippers_01.et" {
+ {
+  coords 6659.299 14.374 4101.042
+  angles 0 88.313 0
+ }
+ {
+  coords 6650.101 14.375 4081.398
+  angles 0 105.486 0
+ }
+}
+$grp GenericEntity : "{98051E652590EF95}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Frame_Gong_01.et" {
+ {
+  coords 6597.009 15.332 4097.684
+  angles 0 109.202 0
+ }
+ {
+  coords 6597.169 14.375 4128.507
+  angles 0 109.202 0
+ }
+ {
+  coords 6618.133 15.685 4073.424
+  angles 0 79.772 0
+ }
+ {
+  coords 6638.236 14.375 4135.701
+  angles 0 109.202 0
+ }
+ {
+  coords 6579.215 15.488 4147.06
+  angles 0 109.202 0
+ }
+ {
+  coords 6578.621 16.818 4114.44
+  angles 0 109.202 0
+ }
+}
+GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 6678.657 14.417 4098.775
+ angles 0 7.838 0
+}
+GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+ components {
+  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Base Camp"
+   }
+  }
+  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+   m_sEditorName "Range: Steel Targets"
+  }
+ }
+ coords 6679.111 14.43 4093.865
+ angles 0 -48.516 0
+}
+$grp GenericEntity : "{D58FFA52428FB37C}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_Stake_Body_01.et" {
+ {
+  coords 6578.812 18.679 4100.29
+  angles 0 90.198 0
+ }
+ {
+  coords 6566.978 19.876 4121.594
+  angles 0 100.17 0
+ }
+ {
+  coords 6570.492 17.443 4131.654
+  angles 0 100.17 0
+ }
+ {
+  coords 6565.613 18.387 4144.414
+  angles 0 100.17 0
+ }
+ {
+  coords 6580.165 17.191 4160.856
+  angles 0 111.932 0
+ }
+ {
+  coords 6593.537 21.066 4067.367
+  angles 0 73.73 0
+ }
+}
+$grp GenericEntity : "{FB427C2F58955456}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_ARY_SteelTarget_Stand_DuelTree_01.et" {
+ {
+  coords 6656.19 14.376 4087.632
+  angles 0 105.181 0
+ }
+ {
+  coords 6663.137 14.375 4112.083
+  angles 0 88.873 0
+ }
+}

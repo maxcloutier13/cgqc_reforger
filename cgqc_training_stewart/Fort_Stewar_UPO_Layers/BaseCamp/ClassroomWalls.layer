@@ -1,0 +1,277 @@
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  coords 12380.643 24.361 670.204
+  angles 0 35.767 0
+ }
+ {
+  coords 12393.171 24.361 673.132
+  angles 0 -54.233 0
+ }
+ {
+  components {
+   RigidBody "{66D4256676938EAF}" {
+    Gravity 0
+   }
+  }
+  coords 12374.466 24.361 674.647
+  angles 0 35.767 0
+ }
+ {
+  coords 12377.549 24.361 672.431
+  angles 0 35.767 0
+ }
+ {
+  coords 12388.127 24.361 666.12
+  angles 0 -54.233 0
+ }
+ {
+  coords 12392.574 24.361 672.302
+  angles 0 -54.233 0
+ }
+}
+$grp GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_WallDoor.et" {
+ {
+  components {
+   Persistence "{66D4F718A38253FD}" {
+   }
+   RigidBody "{66D4F71F58444467}" {
+    ResponseIndex "MediumDestructible"
+    ModelGeometry 1
+    Static 1
+   }
+   WorldSubsceneComponent "{66D4F71F0C06AA4A}" {
+   }
+   RplComponent "{66D4F71F10213EB9}" {
+   }
+   Hierarchy "{66D4F71F7A825849}" {
+   }
+  }
+  coords 12383.729 24.361 667.983
+  angles 0 35.767 0
+  {
+   GenericEntity : "{E9980CBF3A4C51AD}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Door.et" {
+    components {
+     Persistence "{66D51263AAEA91ED}" {
+      Flags 0 0x1
+     }
+     DoorComponent "{66D512627EE14B2D}" {
+      DoorAction SCR_DoorUserAction "{66D51262F424462A}" {
+       ParentContextList {
+        "SCR_DoorUserAction"
+       }
+       UIInfo SCR_ActionUIInfo "{66D51262EE1FF072}" {
+        m_sIconName "open-door"
+       }
+      }
+      SoundFilename "{20BF71F689270E57}Sounds/Structures/_ShaderData/Doors/Structures_Door_Wooden_Handle.acp"
+      SoundPoints {
+       SoundPointEventInfo "{66D512629A03C916}" {
+        Offset 1.1831 1.022 0
+       }
+       SoundPointEventInfo "{66D512629A7CC6F1}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_OPEN_FINISH
+       }
+       SoundPointEventInfo "{66D512629A9A457D}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_CLOSE_START
+       }
+       SoundPointEventInfo "{66D512629AB4B3B2}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_CLOSE_FINISH
+       }
+       SoundPointEventInfo "{66D512629AAB933F}" {
+        Offset 0 0.9999 0
+        Event SOUND_MOVEMENT
+       }
+      }
+      i_doorLockChance 0
+      b_canLock 0
+     }
+     NavmeshCustomLinkComponent "{66D512625495B972}" {
+      LinkType NavmeshDoorLink "{66D5126255FEA856}" {
+       "Navmesh setting presets" {
+        NavmeshCustomLinkSetting "{66D512624E1D7FA6}" {
+         ProjectPresets {
+          NavmeshCustomLinkPreset "{5C90F7CD768EA01F}" {
+           ProjectName "Soldiers"
+           AreaType "Door"
+          }
+         }
+         BeginPoint 0.75 0 -1.5
+         EndPoint 0.75 0 1.5
+         Radius 0.5
+         QueueDelay 0.5
+         SnapDistance 1
+        }
+       }
+      }
+     }
+     RigidBody "{66D512620C82C452}" {
+      ModelGeometry 1
+      Static 1
+      Kinematic 1
+     }
+     SCR_AISmartActionComponent "{66D51262D7103640}" {
+      AIBehaviorTree "{49E6280CE3FAAF4F}AI/BehaviorTrees/SmartActions/SA_OpenGate.bt"
+      Tags {
+       "OpenGate"
+      }
+     }
+     ActionsManagerComponent "{66D512620F42F04D}" {
+      ActionContexts {
+       UserActionContext "{66D51262051006C9}" {
+        UIInfo SCR_ActionUIInfo "{66D5126239657A9F}" {
+         m_sIconName "open-door"
+        }
+        ContextName "SCR_DoorUserAction"
+        Position PointInfo "{50888D37F0EB77E0}" {
+         Offset 1.0977 1.1378 0
+        }
+        Radius 0.65
+       }
+      }
+     }
+     RplComponent "{66D5126222E193A2}" {
+      RuntimeOnly 1
+     }
+     Hierarchy "{66D51262DC90C5FC}" {
+     }
+    }
+    coords -0.61 0 -0.045
+   }
+   GenericEntity : "{F771F656A03D0AE2}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Frame.et" {
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  components {
+   Persistence "{66D4F718A38253FD}" {
+   }
+   RigidBody "{66D4F71F58444467}" {
+    ResponseIndex "MediumDestructible"
+    ModelGeometry 1
+    Static 1
+   }
+   WorldSubsceneComponent "{66D4F71F0C06AA4A}" {
+   }
+   RplComponent "{66D4F71F10213EB9}" {
+   }
+   Hierarchy "{66D4F71F7A825849}" {
+   }
+  }
+  coords 12390.35 24.361 669.215
+  angles 0 -54.233 0
+  {
+   GenericEntity : "{E9980CBF3A4C51AD}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Door.et" {
+    components {
+     Persistence "{66D51263AAEA91ED}" {
+      Flags 0 0x1
+     }
+     DoorComponent "{66D512627EE14B2D}" {
+      DoorAction SCR_DoorUserAction "{66D51262F424462A}" {
+       ParentContextList {
+        "SCR_DoorUserAction"
+       }
+       UIInfo SCR_ActionUIInfo "{66D51262EE1FF072}" {
+        m_sIconName "open-door"
+       }
+      }
+      SoundFilename "{20BF71F689270E57}Sounds/Structures/_ShaderData/Doors/Structures_Door_Wooden_Handle.acp"
+      SoundPoints {
+       SoundPointEventInfo "{66D512629A03C916}" {
+        Offset 1.1831 1.022 0
+       }
+       SoundPointEventInfo "{66D512629A7CC6F1}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_OPEN_FINISH
+       }
+       SoundPointEventInfo "{66D512629A9A457D}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_CLOSE_START
+       }
+       SoundPointEventInfo "{66D512629AB4B3B2}" {
+        Offset 1.1831 1.022 0
+        Event SOUND_CLOSE_FINISH
+       }
+       SoundPointEventInfo "{66D512629AAB933F}" {
+        Offset 0 0.9999 0
+        Event SOUND_MOVEMENT
+       }
+      }
+      i_doorLockChance 0
+      b_canLock 0
+     }
+     NavmeshCustomLinkComponent "{66D512625495B972}" {
+      LinkType NavmeshDoorLink "{66D5126255FEA856}" {
+       "Navmesh setting presets" {
+        NavmeshCustomLinkSetting "{66D512624E1D7FA6}" {
+         ProjectPresets {
+          NavmeshCustomLinkPreset "{5C90F7CD768EA01F}" {
+           ProjectName "Soldiers"
+           AreaType "Door"
+          }
+         }
+         BeginPoint 0.75 0 -1.5
+         EndPoint 0.75 0 1.5
+         Radius 0.5
+         QueueDelay 0.5
+         SnapDistance 1
+        }
+       }
+      }
+     }
+     RigidBody "{66D512620C82C452}" {
+      ModelGeometry 1
+      Static 1
+      Kinematic 1
+     }
+     SCR_AISmartActionComponent "{66D51262D7103640}" {
+      AIBehaviorTree "{49E6280CE3FAAF4F}AI/BehaviorTrees/SmartActions/SA_OpenGate.bt"
+      Tags {
+       "OpenGate"
+      }
+     }
+     ActionsManagerComponent "{66D512620F42F04D}" {
+      ActionContexts {
+       UserActionContext "{66D51262051006C9}" {
+        UIInfo SCR_ActionUIInfo "{66D5126239657A9F}" {
+         m_sIconName "open-door"
+        }
+        ContextName "SCR_DoorUserAction"
+        Position PointInfo "{50888D37F0EB77E0}" {
+         Offset 1.0977 1.1378 0
+        }
+        Radius 0.65
+       }
+      }
+     }
+     RplComponent "{66D5126222E193A2}" {
+      RuntimeOnly 1
+     }
+     Hierarchy "{66D51262DC90C5FC}" {
+     }
+    }
+    coords -0.609 0 -0.045
+   }
+   GenericEntity : "{F771F656A03D0AE2}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Frame.et" {
+    coords 0 0 0
+   }
+  }
+ }
+}
+$grp GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ {
+  coords 12391.465 24.361 670.763
+  angles 0 -54.233 0
+ }
+ {
+  coords 12385.275 24.361 666.867
+  angles 0 35.767 0
+ }
+ {
+  coords 12386.82 24.361 665.758
+  angles 0 35.767 0
+ }
+}

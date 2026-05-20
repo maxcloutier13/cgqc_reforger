@@ -1,0 +1,24 @@
+$grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ M151A2_transport1 {
+  coords 6926.374 41.122 3933.72
+  angles 0 121.875 0
+ }
+ M151A2_transport2 {
+  coords 6925.051 41.122 3931.534
+  angles 0 123.673 0
+ }
+}
+GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+ coords 6946.346 42.069 3936.443
+ angles 0 34.404 0
+}
+$grp Vehicle : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
+ Motorbike_US2 {
+  coords 6929.984 41.122 3940.736
+  angles 0 130.707 0
+ }
+ Motorbike_US1 {
+  coords 6930.659 41.122 3941.851
+  angles 0 130.707 0
+ }
+}

@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctrainingstewart"
+ GUID "696710968BD84FE5"
+ TITLE "cgqc_training_stewart"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "68FC062054BB6D8B" "666F38C032B6628F"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
