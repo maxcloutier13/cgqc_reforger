@@ -1,0 +1,39 @@
+FrameWidgetClass {
+ {
+  SizeLayoutWidgetClass "{693A3BA12C274665}" {
+   Prefab "{693A3BA12C274665}"
+   Slot FrameWidgetSlot "{693A3BA12C27460A}" {
+    OffsetLeft 0
+    PositionY 15
+    OffsetTop 15
+    OffsetRight -240
+    SizeY 1040
+    OffsetBottom -1055
+   }
+   {
+    VerticalLayoutWidgetClass "{693A3BA1A71D7F89}" {
+     Prefab "{693A3BA1A71D7F89}"
+     {
+      TextWidgetClass "{693A3BA49D18F925}" {
+       Prefab "{693A3BA49D18F925}"
+       Text ""
+      }
+      TextWidgetClass "{693A3BA54B18ED05}" {
+       Prefab "{693A3BA54B18ED05}"
+       Text ""
+      }
+      HorizontalLayoutWidgetClass "{693A3BA5A84A4FAB}" {
+       Prefab "{693A3BA5A84A4FAB}"
+       {
+        TextWidgetClass "{693A3BA66FE25E00}" {
+         Prefab "{693A3BA66FE25E00}"
+         Text ""
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
