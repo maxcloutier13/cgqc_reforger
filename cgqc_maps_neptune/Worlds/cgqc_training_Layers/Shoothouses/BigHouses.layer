@@ -1,0 +1,10 @@
+$grp GenericEntity : "{05B59A2F88ABBF9B}Prefabs/Props/VRTCQBShootHouse/CQB_ShootHouseLarge.et" {
+ {
+  coords 3875.828 503.187 3419.903
+  angles 0 -1.462 0
+ }
+ {
+  coords 3838.397 503.187 3418.333
+  angles 0 -3.069 0
+ }
+}

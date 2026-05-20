@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcpara"
+ GUID "6964256984EDAEA8"
+ TITLE "cgqc_para"
+ Dependencies {
+  "58D0FB3206B6F859" "6952B5DF43C6B720" "6867754CA817D856" "6708A2497129CDEE" "" ""
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
