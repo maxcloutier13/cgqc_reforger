@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqctrainingstewart"
- GUID "6968109E815079F3"
- TITLE "cgqc_training_stewart"
+ ID "cgqctrainingstewartmoderne"
+ GUID "696821B3874AFEF7"
+ TITLE "cgqc_training_stewart_moderne"
  Dependencies {
-  "58D0FB3206B6F859" "66BB20CA43330BC2" "68FC062054BB6D8B" "666F38C032B6628F"
+  "58D0FB3206B6F859" "68FC341D5E50CEA4" "6968109E815079F3" "" "" ""
  }
  Configurations {
   GameProjectConfig PC {

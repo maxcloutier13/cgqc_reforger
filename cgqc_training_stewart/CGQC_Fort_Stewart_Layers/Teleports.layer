@@ -1,0 +1,160 @@
+$grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ Main {
+  coords 12440.142 24 552.049
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "HQ"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ VicID {
+  coords 12863.786 36 7460.108
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Vehicle ID"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Obstacles {
+  coords 12672.414 34 6681.739
+  angles 0 9.929 0
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Course Obstacle"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_GL {
+  coords 12545.23 30 5975.013
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: GL"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_Frag {
+  coords 12369.343 30 5722.292
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Grenade"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_Rocket {
+  coords 10892.271 37.812 4576.126
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Launcher"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_Rifle {
+  coords 10136.065 34 3891.825
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Rifle"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_Pistol {
+  coords 9647.143 30.165 3515.864
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Handgun"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Medical {
+  coords 1232.249 29.446 4140.555
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Medical Training"
+     }
+    }
+    coords -1.885 0 0.08
+    angles 0 46.217 0
+   }
+  }
+ }
+ CQB_Shoothouses {
+  coords 11176.549 24 1191.362
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "CQB Shoothouses"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ Range_Sniper {
+  coords 3359.307 30.52 6784.232
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Tir Longue-Distance"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+ CQB_ZeroRange {
+  coords 11379.277 24 676.306
+  {
+   GenericEntity : "{A3FECFF81CBED939}PrefabsEditable/Auto/CHECK_E_TeleportPoint.et" {
+    components {
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Zeroing"
+     }
+    }
+    coords 1.127 0 -0.973
+   }
+  }
+ }
+}

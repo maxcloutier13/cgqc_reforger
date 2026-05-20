@@ -1,0 +1,100 @@
+$grp GenericEntity : "{2E665D4ABC5EB121}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_CGQC_ARY_SteelTarget_Stand_Frame_Gong_01.et" {
+ {
+  coords 3361.857 14.856 7128.83
+  angles 0 180 0
+ }
+ {
+  coords 3447.509 15.001 7270.243
+  angles 0 180 0
+ }
+ {
+  coords 3401.102 14.97 7487.766
+  angles 0 180 0
+ }
+ {
+  coords 3291.89 17.069 7439.078
+  angles 0 180 0
+ }
+ {
+  coords 3211.958 22.479 7557.649
+  angles 0 180 0
+ }
+ {
+  coords 3501.36 14.665 7645.907
+  angles 0 180 0
+ }
+ {
+  coords 3500.255 14.999 7349.477
+  angles 0 180 0
+ }
+ {
+  coords 3451.766 15 7091.252
+  angles 0 180 0
+ }
+ {
+  coords 3252.044 15 7257.343
+  angles 0 180 0
+ }
+ {
+  coords 3289.772 15 7065.928
+  angles 0 180 0
+ }
+}
+$grp GenericEntity : "{41F318B162BC7EF6}PrefabsEditable/Auto/Compositions/Slotted/ARY_SteelTargets/E_CGQC_ARY_SteelTarget_Stand_Stake_Body_Sniper_01.et" {
+ {
+  coords 3371.11 15.032 6910.167
+  angles 0 180 0
+ }
+ {
+  coords 3366.733 15 6952.462
+  angles 0 180 0
+ }
+ {
+  coords 3374.724 15.001 7066.079
+  angles 0 180 0
+ }
+ {
+  coords 3330.178 15.001 7328.373
+  angles 0 180 0
+ }
+ {
+  coords 3274.248 14.969 7401.034
+  angles 0 180 0
+ }
+ {
+  coords 3330.757 15 7083.254
+  angles 0 180 0
+ }
+ {
+  coords 3400.058 15 6961.96
+  angles 0 180 0
+ }
+ {
+  coords 3320.429 15.001 6999.184
+  angles 0 180 0
+ }
+ {
+  coords 3358.738 15 7370.856
+  angles 0 180 0
+ }
+ {
+  coords 3406.245 15 7128.728
+  angles 0 180 0
+ }
+ {
+  coords 3343.009 14.937 6907.701
+  angles 0 180 0
+ }
+ {
+  coords 3289.094 14.999 7181.044
+  angles 0 180 0
+ }
+ {
+  coords 3430.378 15 7438.805
+  angles 0 180 0
+ }
+ {
+  coords 3433.5 15.001 7081.188
+  angles 0 180 0
+ }
+}
