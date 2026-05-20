@@ -1,0 +1,536 @@
+GenericEntity {
+ ID "696847C6A4F3232C"
+ components {
+  SignalsManagerComponent "{696847C6A4F32373}" {
+  }
+  WeaponSoundComponent "{696847C6A4F32353}" {
+   Filenames {
+    "{D8F675F3468362E2}Sounds/Weapons/_SharedData/Weapons_Sights_Actions.acp" "{0EDF037F2DC3E098}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_UGL_Generic.acp" "{D32144A00CA494A6}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_Pistol.acp" "{92CB09CB84872CB4}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_Attachments_LongGeneric.acp" "{6DECA775666513C9}Sounds/Weapons/Attachments/Underbarrel/M203/Weapons_Attch_Underbarrel_M203_Handling.acp" "{1A619AD876DD71BE}Sounds/Weapons/Attachments/Underbarrel/M203/Weapons_Attch_Underbarrel_M203_Shot.acp"
+   }
+   DistanceManagement 0
+  }
+  MeshObject "{696847C6A4F3235E}" {
+   Object "{94028DD44F6ECB46}Assets/GrenadeLauncher/GrenadeLauncher/M320/M320.xob"
+   Materials {
+    MaterialAssignClass "{696847C6A4F3235A}" {
+     SourceMaterial "M320"
+     AssignedMaterial "{316EE8AD27DEDDF0}Prefabs/Weapons/GrenadeLaunchers/M79/Data/M320.emat"
+    }
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{696847C6A4F32347}" {
+   SimState None
+   ModelGeometry 1
+  }
+  SCR_MeleeWeaponProperties "{696847C6A4F32345}" {
+   m_fDamage 20
+  }
+  SCR_WeaponAttachmentsStorageComponent "{696847C6A4F32342}" {
+   Attributes SCR_ItemAttributeCollection "{696847C6A4F3234F}" {
+    ItemDisplayName WeaponUIInfo "{696847C6A4F3234D}" {
+     Name "M320"
+     Description "M320"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{696847C6A4F3234A}" {
+     Weight 1.55
+     SizeSetupStrategy Manual
+     ItemVolume 500
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{696847C6A4F32348}" {
+     IkSettings {
+      ItemIKSettings "{696847C6A4F323B6}" {
+       MovementSpeedRange 0 1
+       IkSettingsStand 0x7 0
+       IkSettingsCrouch 0x7 0
+       IkSettingsProne 0x7 0
+      }
+      ItemIKSettings "{696847C6A4F323B4}" {
+       MovementSpeedRange 0 0
+      }
+      ItemIKSettings "{696847C6A4F32396}" {
+       MovementSpeedRange 1 2.5
+       IkSettingsStand 0x7 0
+       IkSettingsCrouch 0x7 0
+       IkSettingsProne 0x6 0
+      }
+      ItemIKSettings "{696847C6A4F32394}" {
+       ProneTurn 1
+       MovementSpeedRange 2.5 3
+       IkSettingsStand 0x7 0
+       IkSettingsCrouch 0x6 0
+       IkSettingsProne 0x6 0
+      }
+     }
+     AnimationInstance "{0350283642830782}anims/workspaces/player/player_main_rifle.asi"
+     AnimationIKPose "{AC1746938608DF63}TXA/TXA/p_m320_ik.anm"
+     AllowInspection 0
+    }
+    CustomAttributes {
+     AimingModifierAttributes "{696847C6A4F32391}" {
+      ErectLimitsHorizontal -90 90
+      ErectLimitsVertical -90 90
+      CrouchLimitsHorizontal -90 90
+      CrouchLimitsVertical -90 90
+      ProneLimitsHorizontal -90 90
+      ProneLimitsVertical -90 90
+      LowerGunCollisionDistance 0.05
+      DeploymentPoints {
+       PivotPointInfoItem "{696847C6A4F3239D}" {
+        "Point info" DeploymentPointInfo dp {
+         Offset 0 0.0777 0.4321
+        }
+        StabilizationSize 0.05 0.12 0.37
+       }
+      }
+     }
+     ItemMovementSwayAttributes "{696847C6A4F32398}" {
+      BobMagnitudeLinear 0.03 -0.01 -0.01
+      BobMagnitudeAngular -6.25 5 0
+      TargetVelocity 3.6
+      TargetVelocitySteepness 3
+      TargetVelocityLimit 3.6
+     }
+     SCR_RecoilCameraShakeParams "{696847C6A4F32385}" {
+      m_fBlendOutTime 0.089
+      m_fMaxVelocity 15
+      m_vTranslationMin 0.004 0.004 0
+      m_vTranslationMax 0.005 0.005 0
+      m_fFOVModifier 0.985
+      m_vRotationImpulseMin 0.005 0.005 7
+      m_vRotationImpulseMax 0.012 0.012 8
+      m_fMinImpulseThreshold 0.01
+      m_fImpulseCrouchMagnitudeModifier 0.7
+      m_fImpulseProneMagnitudeModifier 1
+      m_fCrouchMagnitudeModifier 0.5
+      m_fProneMagnitudeModifier 0.33
+     }
+     PreviewRenderAttributes "{696847C6A4F32381}" {
+      CameraPreset Right
+      CameraDistanceToItem 1
+      FOV 30
+      AspectRatio 3
+      AnimationInstance "{5E862EB6989F8833}anims/workspaces/player/player_inventory_rifle.asi"
+     }
+     ItemOneHandAnimAttributes "{696847C6A4F3238E}" {
+      ErectLinearOffsetUpper 0 0 0
+      ErectLinearOffset 0.018 -0.2 -0.1
+      ErectLinearOffsetLower 0.018 -0.05 0
+      CrouchLinearOffsetUpper 0 0 0
+      CrouchLinearOffset 0.018 -0.16 -0.1
+      CrouchLinearOffsetLower 0 -0.15 0
+      InterpolationSpeed 5
+      StanceInterpolationSpeed 5
+      SpringCoefficient 2.2
+      DamperCoefficient 2.4
+      ObstructionMultiplier 1
+     }
+    }
+    CommonItemType "RHS_PISTOL"
+    m_SlotType SLOT_WEAPONS_STORAGE
+   }
+   StoragePurpose 0x20 0x1
+  }
+  WeaponComponent "{696847C6A4F3238B}" {
+   components {
+    SightsComponent "{696847C6A4F32389}" {
+     SightsPosition PointInfo "{696847C6A4F323F7}" {
+      PivotID "eyes"
+     }
+     SightsRanges {
+      SightRangeInfo "{696847C6A4F323E7}" {
+       Range 0 50
+       WeaponPosition PointInfo "{696847C6A4F323E6}" {
+        Offset 0 -0.0809 0
+        Angles 8.04 0 0
+       }
+      }
+      SightRangeInfo "{696847C6A4F323E5}" {
+       Range 0 100
+       WeaponPosition PointInfo "{696847C6A4F323E4}" {
+        Offset 0 -0.117 0
+        Angles 10.66 0 0
+       }
+      }
+      SightRangeInfo "{696847C6A4F323E3}" {
+       Range 0 150
+       WeaponPosition PointInfo "{696847C6A4F323E2}" {
+        Offset 0 -0.1713 0
+        Angles 14.03 0 0
+       }
+      }
+      SightRangeInfo "{696847C6A4F323E1}" {
+       Range 0 200
+       WeaponPosition PointInfo "{696847C6A4F323E0}" {
+        Offset 0 -0.2165 0
+        Angles 17.1 0 0
+       }
+      }
+      SightRangeInfo "{696847C6A4F323EF}" {
+       Range 0 250
+       WeaponPosition PointInfo "{696847C6A4F323EE}" {
+        Offset 0 -0.2907 0
+        Angles 20.38 0 0
+       }
+      }
+     }
+     ZeroingGenerator FrontSightGLZeroingGenerator "{696847C6A4F323EC}" {
+     }
+     SoundInt 9001
+    }
+    WeaponAnimationComponent "{696847C6A4F323EA}" {
+     AnimGraph "{D02B384DBEA22B84}Assets/GrenadeLauncher/GrenadeLauncher/M320/workspace/m320.agr"
+     AnimInstance "{DECE0FF1DCC479B0}Assets/GrenadeLauncher/GrenadeLauncher/M320/workspace/m320_weapon.asi"
+     AnimInjection AnimationAttachmentInfo "{696847C6A4F323D7}" {
+      AnimGraph "{D02B384DBEA22B84}Assets/GrenadeLauncher/GrenadeLauncher/M320/workspace/m320.agr"
+      AnimInstance "{25909EC044C51D5C}Assets/GrenadeLauncher/GrenadeLauncher/M320/workspace/m320_player.asi"
+      BindingName "Weapon"
+     }
+     BindWithInjection 1
+     AnimVariablesToBind {
+      "WeaponInspectionState"
+     }
+    }
+    AttachmentSlotComponent "{696847C6A4F323D5}" {
+     AttachmentSlot InventoryStorageSlot SlotStockM320 {
+      PivotID "slot_stock"
+      Offset 0.0008 0.0045 -0.1273
+     }
+     AttachmentType AttachmentStock "{696847C6A4F323D0}" {
+     }
+    }
+    MuzzleInMagComponent "{696847C6A4F323DF}" {
+     components {
+      MuzzleEffectComponent "{696847C6A4F323DB}" {
+      }
+     }
+     MuzzleEndPositions {
+      PointInfo "{696847C6A4F323DA}" {
+       PivotID "muzzle_end"
+      }
+     }
+     ProjectileSpawnPositions {
+      PointInfo "{696847C6A4F323D8}" {
+       PivotID "chamber"
+      }
+     }
+     ChamberedAmmo 1
+     FireModes {
+      BaseFireMode "{696847C6A4F323C6}" {
+       MaxBurst 0
+       MaxSalvo 0
+       RoundsPerMinute 0
+       UIName "Safe"
+       "Gamepad Trigger effect" GamepadTriggerEffect "{696847C6A4F323C3}" {
+        Name "Safety"
+        ContextName "GrenadeLauncher"
+        Priority 20
+        "Auto Disable Timeout" 0
+        TriggerEffectCurve {
+         0.222 0 0.333 1
+        }
+       }
+       "Empty Trigger effect" GamepadTriggerEffect "{696847C6A4F323C1}" {
+        Name "Safety"
+        ContextName "GrenadeLauncher"
+        Priority 20
+        "Auto Disable Timeout" 0
+        TriggerEffectCurve {
+         0.222 0 0.333 1
+        }
+       }
+      }
+      BaseFireMode "{696847C6A4F32427}" {
+       UIName "Single"
+       ManualAction 1
+      }
+     }
+     MissileWeaponLink BaseMissileWeaponLinkClass "{696847C6A4F32424}" {
+     }
+     MagazineWell MagazineWellUS_UGL "{696847C6A4F32421}" {
+     }
+     DispersionRange 500
+     WeaponAimModifiers {
+      SwayWeaponAimModifier "{696847C6A4F3242F}" {
+       Name "SWAY"
+       "Linear Damping" 0.85 0.5 0.825
+       "Linear Magnitude" 1
+       "Angular Damping" 0.95 0.3 0.4
+       "Angular Magnitude" 1
+       "ADS Multiplier" 0.3
+       "Focus Multiplier" 0.2
+       "Stamina Magnitude Curve" {
+        0 1 0.491 0.961 0.722 0.867 0.828 0.727 0.947 0.518 1 0.087
+       }
+       "Stamina Scale Mins" 0.4 0.5 0
+       "Stamina Scale Maxs" 1.4 1.4 0
+       "Linear Inertia Magnitude" 0.0015 0.02 0
+       "Angular Inertia Magnitude" 5 4 14
+       "Angular Inertia Magnitude ADS" 4 2 12
+       "Linear Inertia Decay Speed" 10
+       "Angular Inertia Decay Speed" 12
+       "Lower Translation" 0.05 -0.005 -0.013
+       "Lower Rotation" -10 -8 -10
+       DamageToSway 2
+       OneHandMultiplier 2
+      }
+      RecoilWeaponAimModifier "{696847C6A4F3242C}" {
+       LinearData RecoilData "{696847C6A4F3242A}" {
+        "Curve Y" {
+         0 0.5 0.035 1 0.55 0.65 1 0.5
+        }
+        "Curve Z" {
+         0 0.5 0.018 0.65 0.043 1 0.251 0.533 0.5 0.45 0.75 0.5 1 0.5
+        }
+        "Curve Time Scale" 1.35
+        "Curve Magnitudes" 1 1 1.5
+        "Curve Mins" 0 0.02 -0.048
+        "Curve Maxs" 0 0.015 -0.042
+        "Base Recoil Scale" 3
+        "OneHand Scale" 2
+       }
+       AngularData RecoilData "{696847C6A4F32428}" {
+        "Curve Y" {
+         0 0.5 0.035 1 0.55 0.65 1 0.5
+        }
+        "Curve Z" {
+         0 0.5 0.018 0.65 0.043 1 0.251 0.533 0.5 0.45 0.75 0.5 1 0.5
+        }
+        "Curve Time Scale" 1.3
+        "Curve Magnitudes" 1 1 1
+        "Curve Mins" 0 2 -5
+        "Curve Maxs" 0 4 -4
+        "Base Recoil Scale" 3
+        "OneHand Scale" 2
+       }
+       TurnOffsetData RecoilData "{696847C6A4F32417}" {
+        "Curve Y" {
+         0 0.5 0.101 1 0.539 0.412 0.841 0.542 1 0.5
+        }
+        "Curve Time Scale" 1.5
+        "Curve Magnitudes" 0 1 0
+        "Curve Mins" 0 0.75 0
+        "Curve Maxs" 0 0.95 0
+        "Base Recoil Scale" 3
+        "OneHand Scale" 2
+       }
+      }
+      OnHitAimModifier "{696847C6A4F32415}" {
+       IsEnabled 0
+      }
+      ZeroingWeaponAimModifier "{696847C6A4F32412}" {
+       "Rotation Interpolation Speed" 5
+       "Translation Interpolation Speed" 5
+      }
+     }
+     UIInfo MuzzleUIInfo "{696847C6A4F32411}" {
+      m_sFiremodeSingle ""
+      m_sFiremodeBurst ""
+      m_sFiremodeAuto ""
+      m_MagIndicator SCR_MagazineIndicatorConfiguration "{696847C6A4F3241C}" {
+       m_sMagazineLayout "{8A98061335A620E1}UI/layouts/HUD/WeaponInfo/SingleMagazineWidget_RocketPod.layout"
+       m_sOutline "grenade-gl-m406"
+       m_bProgressBar 0
+      }
+     }
+     "LEFT HAND TARGET" DeploymentPointInfo "{65AD33ABF6D3C42B}" {
+      PivotID ""
+      Offset 0 -0.0515 -0.1692
+     }
+     RIGHT_HAND_TARGET DeploymentPointInfo "{65AD33ABC8489F76}" {
+      PivotID "snap_hand_right"
+     }
+     BUTSTOCK_TRANSFORMATION DeploymentPointInfo "{65AD33ABC33FDC9F}" {
+      Offset 0 0.041 -0.3423
+     }
+     ProjectilePosition InventoryStorageSlot M203ProjectilePosition {
+      PivotID "slot_magazine"
+     }
+     AmmoTemplate "{1663496AE5B9F10B}Prefabs/Weapons/Ammo/Ammo_Grenade_HEDP_M433.et"
+     AllowDetachingProjectile 1
+     ProjectileVisible 1
+    }
+    AttachmentSlotComponent "{696847C6A4F32407}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{65D94D38B6FC4F23}" {
+      Offset -0.0011 0.0372 -0.0791
+      Prefab "{5E7B325E89A46FF9}Prefabs/Weapons/Attachments/Optics/rmr/Optic_RMR_base.et"
+     }
+     AttachmentType AttachmentOpticsRIS1913 "{696847C6A4F32405}" {
+     }
+    }
+   }
+   SignalsSourceAccess SignalsSourceAccessClass "{696847C6A4F32403}" {
+   }
+   WeaponType Rifle
+   obstructionTestCharacterOffset 0 0 0
+   obstructionTestAddedLength 0.05
+   signObstrWeaponConstantOffset 0.079 -0.163 0
+   signiObstrWeaponMaxZOffset 0.25
+   obstructionTestBBScale 0.08 0.08 0.08
+   sightsCameraRollScaler -1
+   SoundInt 1020200
+   UIInfo WeaponUIInfo "{696847C6A4F32401}" {
+    Name "#AR-Weapon_M320_Name"
+    Description "#AR-Weapon_M320_Description"
+    m_MagIndicator SCR_MagazineIndicatorConfiguration "{565ECA2FE3F0F3FB}" : "{7C114BA7C59E198D}Configs/WeaponInfo/MagazineIndicators/box.conf" {
+    }
+   }
+   WeaponSlotType "primary"
+   CanBeOnSling 1
+  }
+  ActionsManagerComponent "{696847C6A4F3240D}" {
+   ActionContexts {
+    UserActionContext "{696847C6A4F3240B}" {
+     ContextName "default"
+     Position PointInfo "{696847C6A4F32409}" {
+      PivotID "chamber"
+      Offset 0 -0.05 0.0185
+     }
+    }
+    UserActionContext "{696847C6A4F32408}" {
+     UIInfo SCR_ActionContextUIInfo "{608488A963951E31}" : "{970293F8561231D4}Configs/UI/NearbyInteractionContext/NearbyContextWeapons.conf" {
+     }
+     ContextName "bipod"
+     Position PointInfo "{696847C6A4F32476}" {
+     }
+     Radius 0.05
+    }
+    UserActionContext "{696847C6A4F32474}" {
+     UIInfo SCR_ActionContextUIInfo "{608488A95953A22A}" : "{970293F8561231D4}Configs/UI/NearbyInteractionContext/NearbyContextWeapons.conf" {
+     }
+     ContextName "magazine"
+     Position PointInfo "{696847C6A4F32472}" {
+      PivotID "chamber"
+      Offset -0.033 0 0.0154
+     }
+     Radius 0.075
+    }
+    UserActionContext "{696847C6A4F32471}" {
+     UIInfo SCR_ActionContextUIInfo "{608488A95BEC69AC}" : "{970293F8561231D4}Configs/UI/NearbyInteractionContext/NearbyContextWeapons.conf" {
+     }
+     ContextName "firemode"
+     Position PointInfo "{696847C6A4F32470}" {
+      PivotID "w_safety"
+      Offset -0.0352 0 0
+     }
+     Radius 0.05
+     Omnidirectional 0
+    }
+   }
+   additionalActions {
+    SCR_EquipWeaponAction "{696847C6A4F3247D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{696847C6A4F3247B}" {
+      Name "#AR-Inventory_Equip"
+     }
+    }
+    SCR_EquipWeaponHolsterAction "{696847C6A4F32479}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{696847C6A4F32478}" {
+      Name "#AR-Inventory_EquipHolster"
+     }
+     "Sort Priority" 1
+    }
+    SCR_PickUpItemAction "{696847C6A4F32466}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{696847C6A4F32465}" {
+      Name "#AR-Inventory_PickUp"
+     }
+     "Sort Priority" 2
+    }
+    SCR_WeaponAction "{696847C6A4F32464}" {
+     ParentContextList {
+      "bipod"
+     }
+     UIInfo SCR_ActionUIInfo "{696847C6A4F32463}" {
+      Name "Bipod"
+      m_sIconName "bipod"
+     }
+     m_WeaponActionType Bipod
+    }
+    SCR_ToggleSafetyUserAction "{696847C6A4F32461}" {
+     ParentContextList {
+      "firemode"
+     }
+     UIInfo SCR_ActionUIInfo "{696847C6A4F32460}" {
+      Name "#AR-Keybind_WeaponSafety"
+      m_sIconName "not-available"
+     }
+    }
+    SCR_DetachMagazineUserAction "{696847C6A4F3246F}" {
+     ParentContextList {
+      "magazine"
+     }
+     UIInfo SCR_ActionUIInfo "{696847C6A4F3246D}" {
+      Name "#AR-UserAction_Detach"
+      m_sIconName "magazine"
+     }
+    }
+    SCR_FireModeSwitchUserAction "{696847C6A4F3246C}" {
+     ParentContextList {
+      "firemode"
+     }
+     UIInfo SCR_ActionUIInfo "{696847C6A4F3246B}" {
+      Name "#AR-ControlsHint_NextFireMode"
+      m_sIconName "availability-full"
+     }
+    }
+   }
+  }
+  WeaponGamepadEffectsManagerComponent "{696847C6A4F32469}" {
+   EffectContexts {
+    GamepadEffectContext "{696847C6A4F32454}" {
+     Name "GrenadeLauncher"
+    }
+   }
+   "Default Chambered Trigger effect" GamepadTriggerEffect "{61D30BF7F0381163}" : "{18523135C9051B39}Prefabs/Weapons/Core/Configs/TriggerEffects/Charged/TriggerEffect_Charged.conf" {
+    Name "GrenadeLauncher"
+    ContextName "GrenadeLauncher"
+    "Auto Disable Timeout" 0
+    TriggerEffectCurve {
+     0.222 0 0.333 0.25 0.444 0.5 0.556 0.75 0.667 1 0.778 0
+    }
+   }
+   "Default ADS Trigger effect" GamepadTriggerEffect "{61B129618F212411}" : "{7194991724224602}Prefabs/Weapons/Core/Configs/TriggerEffects/ADS/TriggerEffect_ADS.conf" {
+    ContextName "GrenadeLauncher"
+    "Auto Disable Timeout" 0
+    TriggerEffectCurve {
+     0.556 0 0.667 0.125 0.778 0 0.889 0.875 1 0.625
+    }
+   }
+   "Default Deployment effect" GamepadTriggerEffect "{61C377CC2932DEB0}" : "{B304BE7D80CD076F}Prefabs/Weapons/Core/Configs/TriggerEffects/ADS/TriggerEffect_ADSDeployed.conf" {
+    Name "ADS"
+    ContextName "GrenadeLauncher"
+    Priority 10
+    "Auto Disable Timeout" 0
+    TriggerEffectCurve {
+     0.556 0 0.667 0.125 0.778 0 0.889 0.875 1 0.625
+    }
+   }
+   "Default Empty Fire Trigger effect" GamepadTriggerEffect "{61B12961A9A552E1}" : "{0F3D24E63B0AFAF7}Prefabs/Weapons/Core/Configs/TriggerEffects/Empty/TriggerEffect_Empty.conf" {
+    "Auto Disable Timeout" 0
+   }
+   "Default Firing Trigger effect" GamepadTriggerEffect "{61D30BF7F81F8C61}" : "{9BC0B370BB78C4E9}Prefabs/Weapons/Core/Configs/TriggerEffects/Fire/TriggerEffect_Fire.conf" {
+    Name "FireGrenadeLauncher"
+    "Auto Disable Timeout" 0.071
+    TriggerEffectFrequency 7
+   }
+  }
+  NwkPhysicsMovementComponent "{696847C6A4F3245E}" {
+  }
+  RplComponent "{696847C6A4F3245D}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{696847C6A4F3245A}" {
+  }
+ }
+ Flags 0x400003 0
+ coords 117.151 1.136 129.555
+}
