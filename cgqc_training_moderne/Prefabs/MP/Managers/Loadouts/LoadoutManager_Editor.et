@@ -7,13 +7,23 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{6949381779B65AF1}" {
-   m_sLoadoutName "Soldat Training Moderne"
+   m_sLoadoutName "Soldat (Simunition)"
    m_sLoadoutResource "{6FC69726C73FBDFB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Rifleman_Moderne.et"
    m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{69493817773193EE}" {
-   m_sLoadoutName "Instructeur Moderne"
+   m_sLoadoutName "Instructeur (Simunition)"
    m_sLoadoutResource "{4422D33726403B54}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Instructeur_Moderne.et"
+   m_sAffiliatedFaction "CGQC_UPO"
+  }
+  SCR_FactionPlayerLoadout "{6969324BB799AC40}" {
+   m_sLoadoutName "Soldat (Lethal)"
+   m_sLoadoutResource "{75957C41408DF242}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne_Lethal.et"
+   m_sAffiliatedFaction "CGQC_UPO"
+  }
+  SCR_FactionPlayerLoadout "{6969324BB9E8F5EC}" {
+   m_sLoadoutName "Instructeur (Lethal)"
+   m_sLoadoutResource "{003313FF82C47D3A}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructeur_Moderne_Lethal.et"
    m_sAffiliatedFaction "CGQC_UPO"
   }
  }
