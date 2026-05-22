@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0EA327A1039848F8}Configs/GroupPresets/GRIT/GroupPreset_GRIT_Intel.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -17,5 +17,15 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{C8CB273EFB0E2140}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper_Moderne.et"
    m_sAffiliatedFaction "CGQC"
   }
+  SCR_PlayerArsenalLoadout "{696D113D358F3EAE}" {
+   m_sLoadoutName "GRIT  Saved Loadout"
+   m_sLoadoutResource "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
+  SCR_FactionPlayerLoadout "{696D113D489F0E7A}" {
+   m_sLoadoutName "Assaulter"
+   m_sLoadoutResource "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
  }
 }

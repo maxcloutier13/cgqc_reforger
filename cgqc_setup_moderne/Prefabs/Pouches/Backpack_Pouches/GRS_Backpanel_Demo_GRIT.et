@@ -1,0 +1,15 @@
+GenericEntity : "{A2D7B1424AA575E5}Prefabs/Pouches/Backpack_Pouches/GRS_Backpanel_Demo_Base.et" {
+ ID "65CC0BE1AE3EC231"
+ components {
+  GRS_EquipmentStorageComponent "{65CC0BE1EF2E0E1E}" {
+   InitialStorageSlots {
+    GRS_PatchStorageSlot Top_Patch {
+     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+    }
+    GRS_PatchStorageSlot Bottom_Patch {
+     Prefab "{B0D47F45F3C7294C}Prefabs/Rectangle_Patches/section_grit.et"
+    }
+   }
+  }
+ }
+}

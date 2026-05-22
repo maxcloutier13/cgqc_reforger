@@ -1,0 +1,110 @@
+SCR_AIGroup {
+ ID "696C4D95753962F1"
+ components {
+  Persistence "{696C4D95753962EB}" {
+  }
+  AIChimeraBehaviorTreeComponent "{696C4D95753962C6}" {
+   BehaviorTree "{082D5B0D5D33DB1D}AI/BehaviorTrees/Chimera/Group/Group.bt"
+  }
+  AIFormationComponent "{696C4D95753962C4}" {
+   DefaultFormation "Wedge"
+   "Min Distance to Raytrace an Offset" 1
+   "Projection distance" 10
+  }
+  AIPathfindingComponent "{696C4D95753962C1}" {
+   NavmeshProject "Soldiers"
+  }
+  SCR_AIConfigComponent "{696C4D95753962CF}" {
+   m_aDefaultReactions {
+    SCR_AIIdleReaction "{696C4D95753962CC}" {
+    }
+   }
+   m_aGoalReactions {
+    SCR_AIGoalReaction_Attack "{696C4D95753962CA}" {
+     m_eType ANIMATE
+    }
+    SCR_AIGoalReaction_GetInVehicle "{696C4D95753962C9}" {
+     m_eType GET_IN_VEHICLE
+    }
+    SCR_AIGoalReaction_GetOutVehicle "{696C4D9575396337}" {
+     m_eType GET_OUT_VEHICLE
+    }
+    SCR_AIGoalReaction_Heal "{696C4D9575396336}" {
+     m_eType HEAL
+    }
+    SCR_AIGoalReaction_Defend "{696C4D9575390BAB}" {
+     m_eType DEFEND
+    }
+    SCR_AIGoalReaction_Move "{696C4D9575390BA9}" {
+     m_eType MOVE
+    }
+    SCR_AIGoalReaction_SeekAndDestroy "{696C4D9575390BAE}" {
+     m_eType SEEK_DESTROY
+    }
+    SCR_AIGoalReaction_PerformAction "{696C4D9575390BC8}" {
+     m_eType PERFORM_ACTION
+    }
+    SCR_AIGoalReaction_Cancel "{696C4D9575390BC9}" {
+     m_eType CANCEL
+    }
+    SCR_AIGoalReaction_Follow "{696C4D957536E5D1}" {
+     m_eType FOLLOW
+    }
+    SCR_AIGoalReaction_Animate "{696C4D957536E5D6}" {
+     m_eType ANIMATE
+    }
+   }
+   m_aInfoReactions {
+    SCR_AIInfoReaction_Wounded "{696C4D957536E5D4}" {
+     m_eType WOUNDED
+    }
+    SCR_AIInfoReaction_NoAmmo "{696C4D957536E5D5}" {
+     m_eType NO_AMMO
+    }
+   }
+  }
+  SCR_AIGroupInfoComponent "{696C4D957536E5DA}" {
+  }
+  SCR_AIGroupMovementComponent "{696C4D957536E5D8}" {
+   "Min Speed" 7
+   "Using Railroad" 0
+   "Max Distance to Path" 5
+   DefaultFormation "Wedge"
+  }
+  SCR_AIGroupSettingsComponent "{696C4D957536E5D9}" {
+  }
+  SCR_AIGroupUtilityComponent "{696C4D957536E5DC}" {
+  }
+  SCR_CallsignGroupComponent "{696C4D957536B83F}" {
+  }
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" : "{8CA09EBD20B25B39}Prefabs/Editor/Components/Group_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "#AR-Group_Default"
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{696C4D957536B82F}" {
+      m_BudgetType CAMPAIGN
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{696C4D957536B8D1}" {
+      m_BudgetType AI_SERVER
+     }
+    }
+    m_MilitarySymbol SCR_MilitarySymbol "{696C4D957536B8D0}" {
+    }
+   }
+   m_bAutoRegister ALWAYS
+  }
+  SCR_GroupIdentityComponent "{696C4D957536B8D2}" {
+   m_MilitarySymbol SCR_MilitarySymbol "{696C4D957536B8D5}" {
+   }
+  }
+  SCR_MailboxComponent "{696C4D957536B8DB}" {
+  }
+  RplComponent "{696C4D9575368A99}" {
+   "Rpl State Override" Runtime
+   Streamable Disabled
+  }
+ }
+ coords 0 0 0
+ DangerEventRange 200
+}

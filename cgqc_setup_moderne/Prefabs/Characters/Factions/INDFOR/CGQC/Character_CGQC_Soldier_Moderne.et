@@ -70,7 +70,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{690C232DB4E1E45C}" {
      TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
      PrefabsToSpawn {
-      "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{CEB4C2CB3B4858DF}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/GL_Hat_Boonie_OD.et"
+      "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{CEB4C2CB3B4858DF}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/GL_Hat_Boonie_OD.et" "{B3F2B47340817ED6}Prefabs/Items/ACE_Facepaint_01_US.et"
      }
     }
     ItemsInitConfigurationItem "{6949249825AF0522}" {
@@ -124,7 +124,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{6949249CCCD428B4}" {
      TargetStorage "ArmoredVest/GRS_AVS_Rifleman_RG_V1_sTs.et/LS_Rear_Pouch/GRS_Side_Pouch_2_RG.et"
      PrefabsToSpawn {
-      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
+      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et"
      }
     }
     ItemsInitConfigurationItem "{6949249CC25CADD1}" {

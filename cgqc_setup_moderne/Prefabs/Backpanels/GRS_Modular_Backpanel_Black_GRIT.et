@@ -1,0 +1,29 @@
+GenericEntity : "{C62D15B74E2FB00A}Prefabs/Backpanels/GRS_Modular_Backpanel_Base.et" {
+ ID "65CD429FE6DF99B3"
+ components {
+  ClothNodeStorageComponent "{65CD429FDC9C42F4}" {
+   Attributes SCR_ItemAttributeCollection "{65CD429FDC9C42CA}" {
+    ItemDisplayName UIInfo "{65CD429FDC9C4D6A}" {
+     Name "GRS: Modular Backpanel - Black"
+     Description "GRS: Modular Backpanel - Black"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CD429FDC9C44A2}" {
+   Slots {
+    LoadoutSlotInfo Pouches_LEGACY {
+     Prefab "{1CF90F2101AA2A06}Prefabs/Pouches/Backpack_Pouches/GRS_Backpanel_Demo_GRIT.et"
+    }
+    LoadoutSlotInfo Bolt_Cutters {
+     Prefab "{733AB12201B88422}Prefabs/Accessories/GRS_Breacher_Bolt_Cutters.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{1D696E493703202B}Assets/Pouches/Black/BackPanel_Spiritus_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{1D696E493703202B}Assets/Pouches/Black/BackPanel_Spiritus_Black.emat"
+   }
+  }
+ }
+}

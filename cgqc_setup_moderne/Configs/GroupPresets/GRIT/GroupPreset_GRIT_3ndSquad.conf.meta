@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7237C8A11F5A63F7}Configs/GroupPresets/GRIT/GroupPreset_GRIT_3ndSquad.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

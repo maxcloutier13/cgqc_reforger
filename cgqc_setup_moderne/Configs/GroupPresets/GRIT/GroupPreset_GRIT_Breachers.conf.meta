@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DC82AB97AFF2B55C}Configs/GroupPresets/GRIT/GroupPreset_GRIT_Breachers.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

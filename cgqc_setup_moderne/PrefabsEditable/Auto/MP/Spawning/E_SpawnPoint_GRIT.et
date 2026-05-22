@@ -1,0 +1,40 @@
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ ID "544EB04DCBFBD126"
+ components {
+  SCR_EditableEntityComponent "{68CC706C19FC7E4B}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Spawn GRIT"
+    Icon "{B3FBE7D84E42508A}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Respawn.edds"
+    m_Image "{831012F41EFE085A}UI/Textures/EditorPreviews/Auto/Systems/SpawnPoints/E_SpawnPoint_US.edds"
+    m_sFaction "CGQC_GRIT"
+    m_aAuthoredLabels {
+     ENTITYTYPE_SYSTEM TRAIT_SPAWNPOINT FACTION_CGQC
+    }
+    m_aAutoLabels {
+    }
+   }
+   m_bStatic 1
+   m_Flags 32839
+  }
+  SCR_PreviewEntityComponent "{68CC706C1AE38590}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 1
+   m_aEntries {
+    SCR_BasePreviewEntry "{696D113D7BA4CF30}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+ m_sFaction "CGQC_GRIT"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "GRIT"
+ }
+}

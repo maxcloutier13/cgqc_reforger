@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2FF4B427274C7C88}Prefabs/Belts/TYR BELTS/GRS_Tyr_Belt_Black_GRIT.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

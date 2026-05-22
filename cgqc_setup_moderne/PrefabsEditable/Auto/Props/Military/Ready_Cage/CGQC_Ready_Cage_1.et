@@ -37,82 +37,22 @@ GenericEntity : "{5DAC571CF23FE3C4}Prefabs/Props/Agriculture/Beehive_01/Beehive_
   }
  }
  {
-  GenericEntity : "{04BA1B510DA3CB74}Prefabs/nogm/FastCap.et" {
-   ID "692AD9C6DC6F5723"
-   coords -1.025 1.672 -0.012
-   angles -34.448 -71.708 -8.594
-  }
-  GenericEntity : "{1913B2546C83DD1C}Prefabs/nogm/boot.et" {
-   ID "692AD9C6DC6F5722"
-   coords -1.155 0.027 -0.076
-   angles 0 -69.464 0
-  }
-  GenericEntity : "{217434C3A125A8D4}Prefabs/nogm/M32_nogm.et" {
-   ID "692AD9C6DC6F572D"
-   coords -1.39 0.62 -0.245
-   angles 0 -180 0
-  }
-  GenericEntity : "{2CD32C933330253E}Prefabs/nogm/headset.et" {
-   ID "692AD9C6DC6F572C"
-   coords -0.834 0.455 0.59
-   angles -90 0 0
-  }
-  GenericEntity : "{2F0AC7E8C997A221}Prefabs/nogm/Eletricwire7.et" {
-   ID "692AD9C6DC6F572B"
-   coords 1.474 0.013 0.117
-   angles 0 180 0
-  }
-  GenericEntity : "{32C05BF17E216276}Prefabs/nogm/colete_nogm.et" {
-   ID "692AD9C6DC6F572A"
-   coords -1.307 0.616 -0.917
-   angles 0 -90 0
-  }
-  GenericEntity : "{476F9F2D36CB62A0}Prefabs/nogm/Miltable_2.et" {
-   ID "692AD9C6DC6F5596"
-   coords 1.13 0 -0.426
-   angles 0 90 0
-  }
-  $grp GenericEntity : "{64663B8BD1AB8A28}Prefabs/nogm/Crate_Smoke.et" {
+  $grp GenericEntity {
    {
-    ID "692AD9C6DC6F5594"
-    coords -1.196 0.419 0.487
-    angles 0 -75 0
+    ID "692AD9C6DC6028D9"
+    coords -1.287 1.164 -0.983
+    angles 0 90 0
    }
-   {
-    ID "692AD9C6DC6F5595"
-    coords -1.169 1.663 -0.941
-    angles 0 -116.946 0
-   }
-  }
-  GenericEntity : "{71152142F67B190E}Prefabs/nogm/Eletricwire11.et" {
-   ID "692AD9C6DC6F55AB"
-   coords 1.529 0.007 -0.207
-  }
-  GenericEntity : "{7E51795C4BB555BB}Prefabs/nogm/Shotgun_nogm.et" {
-   ID "692AD9C6DC6F1E41"
-   coords -1.45 0.891 -0.362
-   angles 0 0 0
-  }
-  GenericEntity : "{86245E34CF47B537}Prefabs/Props/Military/Arsenal/ArsenalBoxes/Ready_Cage_Arsenal.et" {
-   ID "692AD9C6DC6F1E40"
-   components {
-    SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-     m_eSupportedArsenalItemTypes 2097151
-     m_eArsenalSaveType NO_RESTRICTIONS
-    }
-    SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
-     "faction affiliation" "CGQC"
-    }
-   }
-   coords 1.197 0 0.846
-   angles 0 -90 0
-  }
-  $grp GenericEntity : "{8C33251343913E44}Prefabs/nogm/Crate.et" {
    {
     ID "692AD9C6DC603740"
     coords -1.223 0 0.483
     angles 0 60.512 0
     scale 0.5
+   }
+   {
+    ID "692AD9C6DC603741"
+    coords 1.209 0.912 -0.619
+    angles 0 180 0
    }
    {
     ID "692AD9C6DC60A8C8"
@@ -133,59 +73,25 @@ GenericEntity : "{5DAC571CF23FE3C4}Prefabs/Props/Agriculture/Beehive_01/Beehive_
     scale 0.5
    }
    {
-    ID "692AD9C6DC6F01D3"
-    coords -1.245 0.42 0.988
-    angles 0 -44.488 0
-    scale 0.5
+    ID "692AD9C6DC612EFA"
+    coords -1.464 1.484 -0.601
+    angles 90 97.212 -172.788
    }
    {
-    ID "692AD9C6DC6F1E42"
-    coords -1.245 0.21 0.988
-    angles 0 -24.844 0
-    scale 0.5
+    ID "692AD9C6DC616C7E"
+    coords -1.162 0 -0.504
+    angles 0 -90 0
    }
-  }
-  GenericEntity : "{9CCDFC3D400F1240}Prefabs/nogm/cheytac_m200_nogm.et" {
-   ID "692AD9C6DC603741"
-   coords 1.209 0.912 -0.619
-   angles 0 180 0
-  }
-  GenericEntity : "{A67B98417F9AC219}Prefabs/nogm/milbackpack.et" {
-   ID "692AD9C6DC6028D9"
-   coords -1.287 1.164 -0.983
-   angles 0 90 0
-  }
-  GenericEntity : "{AEA40783A4E50483}Prefabs/nogm/AR15-mod2.et" {
-   ID "692AD9C6DC619A05"
-   coords -1.433 1.145 -0.209
-   angles 0 90 0
-  }
-  GenericEntity : "{B2CB435BD71F4C98}Prefabs/nogm/Crate_Medic.et" {
-   ID "692AD9C6DC619A06"
-   coords 1.09 0.382 -0.118
-   angles 0 -159.265 0
-  }
-  GenericEntity : "{DAE9359A303B4890}Prefabs/nogm/LockerFence_Open.et" {
-   ID "692AD9C6DC616C7E"
-   coords -1.162 0 -0.504
-   angles 0 -90 0
-  }
-  GenericEntity : "{E115E507A638E5BB}Prefabs/nogm/cap.et" {
-   ID "692AD9C6DC612EFA"
-   coords -1.464 1.484 -0.601
-   angles 90 97.212 -172.788
-  }
-  GenericEntity : "{E1F032D8DF22BFF0}Prefabs/nogm/Wall_TV_Monitor4_Nogm.et" {
-   ID "692AD9C6DC62FDF0"
-   coords 1.482 1.35 -0.85
-   angles 0 90 0
-  }
-  GenericEntity : "{F839798F4F9E5AF2}Prefabs/nogm/Wall_TV_Monitor3_Nogm.et" {
-   ID "692AD9C6DC62FDF1"
-   coords 1.472 1.348 0.013
-   angles 0 90 0
-  }
-  $grp GenericEntity : "{FFE8B63FF8F9FDE2}Prefabs/nogm/Crate_blk.et" {
+   {
+    ID "692AD9C6DC619A05"
+    coords -1.433 1.145 -0.209
+    angles 0 90 0
+   }
+   {
+    ID "692AD9C6DC619A06"
+    coords 1.09 0.382 -0.118
+    angles 0 -159.265 0
+   }
    {
     ID "692AD9C6DC62060E"
     coords -1.132 0.03 -0.727
@@ -202,6 +108,95 @@ GenericEntity : "{5DAC571CF23FE3C4}Prefabs/Props/Agriculture/Beehive_01/Beehive_
     coords 1.127 0 -0.097
     angles 0 90 0
     scale 0.9
+   }
+   {
+    ID "692AD9C6DC62FDF0"
+    coords 1.482 1.35 -0.85
+    angles 0 90 0
+   }
+   {
+    ID "692AD9C6DC62FDF1"
+    coords 1.472 1.348 0.013
+    angles 0 90 0
+   }
+   {
+    ID "692AD9C6DC6F01D3"
+    coords -1.245 0.42 0.988
+    angles 0 -44.488 0
+    scale 0.5
+   }
+   {
+    ID "692AD9C6DC6F1E40"
+    components {
+     SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+      m_eSupportedArsenalItemTypes 2097151
+      m_eArsenalSaveType NO_RESTRICTIONS
+     }
+     SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+      "faction affiliation" "CGQC"
+     }
+    }
+    coords 1.197 0 0.846
+    angles 0 -90 0
+   }
+   {
+    ID "692AD9C6DC6F1E41"
+    coords -1.45 0.891 -0.362
+   }
+   {
+    ID "692AD9C6DC6F1E42"
+    coords -1.245 0.21 0.988
+    angles 0 -24.844 0
+    scale 0.5
+   }
+   {
+    ID "692AD9C6DC6F5594"
+    coords -1.196 0.419 0.487
+    angles 0 -75 0
+   }
+   {
+    ID "692AD9C6DC6F5595"
+    coords -1.169 1.663 -0.941
+    angles 0 -116.946 0
+   }
+   {
+    ID "692AD9C6DC6F5596"
+    coords 1.13 0 -0.426
+    angles 0 90 0
+   }
+   {
+    ID "692AD9C6DC6F55AB"
+    coords 1.529 0.007 -0.207
+   }
+   {
+    ID "692AD9C6DC6F5722"
+    coords -1.155 0.027 -0.076
+    angles 0 -69.464 0
+   }
+   {
+    ID "692AD9C6DC6F5723"
+    coords -1.025 1.672 -0.012
+    angles -34.448 -71.708 -8.594
+   }
+   {
+    ID "692AD9C6DC6F572A"
+    coords -1.307 0.616 -0.917
+    angles 0 -90 0
+   }
+   {
+    ID "692AD9C6DC6F572B"
+    coords 1.474 0.013 0.117
+    angles 0 180 0
+   }
+   {
+    ID "692AD9C6DC6F572C"
+    coords -0.834 0.455 0.59
+    angles -90 0 0
+   }
+   {
+    ID "692AD9C6DC6F572D"
+    coords -1.39 0.62 -0.245
+    angles 0 -180 0
    }
   }
  }

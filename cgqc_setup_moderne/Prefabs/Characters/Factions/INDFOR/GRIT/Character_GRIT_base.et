@@ -1,0 +1,112 @@
+SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot WristwatchSlot {
+       Prefab "{CCB365E9B5737ECD}Prefabs/Items/Equipment/Watches/Watch_GarminTactixBravo_black.et"
+      }
+     }
+    }
+   }
+  }
+  SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
+   "faction affiliation" "CGQC_GRIT"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Opérateur (Rattler)"
+    Description "Membre de base de l'Équipe d'Intervention"
+    m_sFaction "CGQC_GRIT"
+   }
+  }
+  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
+   WeaponTemplate "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
+  }
+  CharacterGrenadeSlotComponent "{5A6CDA0CCF43068E}" {
+   WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{A3E3F0DE9B6BD9AB}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_RattlerGBRS.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{81071DC5DC2E4C62}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_GRIT_black.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{AC03CBE55EE629A3}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_BTiger_GRIT.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{E13636764B46A209}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_GRIT.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{7C6E21856AAF7E0C}Prefabs/Characters/Uniforms/Bottoms/Vergy_Pants/Vergy_Crye_Trousers_BTiger.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{F177C9417949A7CB}Prefabs/Characters/Uniforms/Footwear/Walking_Boots/WalkingBoots_Black.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{E69E753794A57A60}Prefabs/Backpanels/GRS_Modular_Backpanel_Black_GRIT.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{39428D5F8D2E26B3}Prefabs/Characters/Handwear/Gloves_MechanixMpact/GRS_Oakley_Gloves_Black.et"
+    }
+    LoadoutSlotInfo Ears {
+     Prefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
+    }
+    LoadoutSlotInfo Face {
+     Prefab "{59F9727757DB226B}Prefabs/Characters/HeadGear/Balaclavas/cotton_balaclava_twohole_standalone.et"
+    }
+    LoadoutSlotInfo Neck {
+     Prefab "{651F0CCA02166DB8}Prefabs/Characters/Masks/GRS_shemagh_base.et"
+    }
+    LoadoutSlotInfo Extra {
+     Prefab "{7DF9CDB82621B14F}Prefabs/Characters/Uniforms/Accessories/Under_Shirt_Sleeves/Under_Shirt_Sleeves_Black.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{2FF4B427274C7C88}Prefabs/Belts/TYR BELTS/GRS_Tyr_Belt_Black_GRIT.et"
+    }
+    LoadoutSlotInfo GRS_Right_Drop_Leg {
+     Prefab "{93DB7359EB7330C9}Prefabs/Belts/Bison Belts/GRS_Drop_Leg_Right_GRIT.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D112501353972}" {
+     TargetStorage "Jacket/Vergy_Crye_BTiger_GRIT.et/GRS_StorageComponent/GRS_StorageComponent.et"
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D11251E6084B6}" {
+     TargetStorage "Pants/Vergy_Crye_Trousers_BTiger.et"
+    }
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/Placards/GRS_Placard_Spiritus_Black.et"
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
+     PrefabsToSpawn {
+      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     TargetStorage "Back/GRS_Modular_Backpanel_Black_GRIT.et/Pouches_LEGACY/GRS_Backpanel_Demo_Base.et"
+     PrefabsToSpawn {
+      "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et"
+     }
+    }
+   }
+  }
+ }
+}

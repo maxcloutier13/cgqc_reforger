@@ -3,11 +3,13 @@ SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et
  components {
   SCR_PlacingEditorComponent "{5145484399BAA2E7}" {
    m_Registries {
-    SCR_PlaceableEntitiesRegistry "{692AD9C71744747A}" : "{8363BC5E4E89F4FF}Configs/Arsenal/CGQC_Registry_Simunition.conf" {
+    SCR_PlaceableEntitiesRegistry "{692AD9C71744747A}" {
     }
     SCR_PlaceableEntitiesRegistry "{690F4392F0BFAE98}" : "{CA6D5174186886AF}Configs/Arsenal/CGQC_Registry_Racks.conf" {
     }
     SCR_PlaceableEntitiesRegistry "{692AD9C65FD2284E}" : "{5F4D3A4E0EDE090F}Configs/Arsenal/CGQC_Registry_Arsenals.conf" {
+    }
+    SCR_PlaceableEntitiesRegistry "{696D113CD2C4013D}" : "{7A8CCC73F385DB3D}Configs/Arsenal/GRIT_Registry_Various.conf" {
     }
    }
   }

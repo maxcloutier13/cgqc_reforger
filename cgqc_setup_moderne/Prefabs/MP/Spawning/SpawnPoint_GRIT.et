@@ -1,0 +1,13 @@
+SCR_SpawnPoint : "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et" {
+ ID "544EB04DCBFBD126"
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   VisibleOnMap 1
+  }
+ }
+ m_sFaction "CGQC_GRIT"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "GRIT"
+  Icon "{3434B4EF68EE75B2}UI/Textures/cgqc_faction_newLogo_GRIT_128.edds"
+ }
+}
