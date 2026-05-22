@@ -1,0 +1,6 @@
+MatPBRBasic {
+ Color 0.546 0.531 0.481 1
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{F8531BBCA41DEA51}Assets/Rectangle_Patches/patch_unit_griffon.edds"
+}
