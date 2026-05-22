@@ -148,182 +148,70 @@ class CGQC_Scripts
         Print("[CGQC_InitializePlayer] Done <-");
 	
 	}
-	// Server-side init for player 
-    static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId, bool isInitialised)
-    {
-        Print("[CGQC_InitializePlayer] Starting ->");
-        // Get player's name
-        string playerName = GetPlayerName(playerId);
-        PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
-		// CGQC flag
-		bool isCGQC = false;
-		SCR_ECharacterRank desiredRank = SCR_ECharacterRank.CGQC_CADET;
-		// Identity
-		string cgqc_head = "";
-		string cgqc_body = "";
-
-        // Check Steam ID and activate specific features for certain players
-        switch (playerIdentityId)
-        {
-			// MAJOR --------------------------------------------------------------------------------------------------------------------------------------
-            case "d7e9113c-f075-41c5-a72a-9ee5187dc723":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Cloutier detected - activating admin features");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "clou");
-				//cgqc_head = "{BB234A3ADB246C1C}Prefabs/Characters/Heads/Head_livonianHead_9.et";
-				cgqc_head = "{1B1F4BCCC3A54549}Prefabs/Characters/Heads/Head_Cloutier.et";
-				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";	
-				desiredRank = SCR_ECharacterRank.CGQC_MAJOR;	
-				isCGQC = true;
-                break;
-            }		
-			case "c3fcb72f-2f87-4937-8847-1fb62b39a40c":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Tremblay detected");
-				cgqc_head = "{22EDFA2131C317E9}Prefabs/Characters/Heads/Head_WhiteHead_01.et";
-				cgqc_body = "{89C2788E9B1C96B0}Prefabs/Characters/Basebody/CharacterBasebody_01.et";
-				desiredRank = SCR_ECharacterRank.CGQC_MAJOR;	
-				isCGQC = true; 
-                break;
-            }			
-			
-			
-			// CAPTAIN --------------------------------------------------------------------------------------------------------------------------------------
-			case "6538de9f-32ce-41cc-bc6f-844a6a3b2ce8":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Lafo detected");
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, "lafo");
-				desiredRank = SCR_ECharacterRank.CGQC_CAPITAINE;	
-				isCGQC = true;
-                break;
-            }			
-			
-			// LIEUTENANT --------------------------------------------------------------------------------------------------------------------------------------
-			case "120786ec-60cd-4a96-9e10-c846578745f2":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Genest detected");
-				desiredRank = SCR_ECharacterRank.CGQC_LIEUTENANT;	
-				isCGQC = true;
-                break;
-            }
-			
-			case "e1c8cdf2-953a-4db0-be45-2cd8e79556f2":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Valiquette detected");
-				cgqc_head = "{F5808273F0A0F3AC}Prefabs/Characters/Heads/Head_RussianHead_1.et";
-				cgqc_body = "{E5964C6E27D8199E}Prefabs/Characters/Basebody/CharacterBasebody_02.et";
-				desiredRank = SCR_ECharacterRank.CGQC_LIEUTENANT;
-				isCGQC = true;
-                break;
-            }
-			
-			// SOUS LIEUTENANT --------------------------------------------------------------------------------------------------------------------------------------
-			case "e98c24ac-31b8-4647-94f8-c4ffa5bec5fe":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Trépanier detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SOUS_LIEUTENANT;
-				isCGQC = true;
-                break;
-            }
-			// ADJUDENT CHEF --------------------------------------------------------------------------------------------------------------------------------------
-			
-			// ADJUDENT MAITRE --------------------------------------------------------------------------------------------------------------------------------------
-			case "60e84a60-c12f-4b4a-91ed-c294bab6046e":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Comeau detected");
-				cgqc_head = "{3B473755F8A85D65}Prefabs/Characters/Heads/Head_GreekHead_A3_04.et";
-				cgqc_body = "{5EE1CAC3D1D1AC46}Prefabs/Characters/Basebody/CharacterBasebody_Asian_03.et";
-				desiredRank = SCR_ECharacterRank.CGQC_ADJUDENT_MAITRE;
-				isCGQC = true;
-                break;
-            }
-			// ADJUDENT --------------------------------------------------------------------------------------------------------------------------------------
-			
-			// Deslauriers
-			
-			
-			// SERGEANT --------------------------------------------------------------------------------------------------------------------------------------
-			case "fdeca5b5-5cba-403a-8e3a-d598325dbccc":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Dubé detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SERGENT;
-				isCGQC = true;
-                break;
-            }
-			case "c6643f04-50cb-461a-b591-b6e6deb63ed9":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Fournier detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SERGENT;
-				isCGQC = true;
-				break;               
-            }
-			case "cdce42da0-351f-4d03-821b-e89e46b70002":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Turcotte detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SERGENT;
-				isCGQC = true;
-               break;
-            }
-			case "789954f6-cdb6-4f69-8095-af635b9a78a1":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Lauzon detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SERGENT;
-				isCGQC = true;
-               	break;
-            }
-			case "dd7969a6-722f-4ae6-a9e7-898ee9e6fea5":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Pike detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SERGENT;
-				isCGQC = true;
-               	break;
-            }
-			
-			
-			// PRIVATE --------------------------------------------------------------------------------------------------------------------------------------
-			case "72c38387-e5fd-46f4-806e-ce1e7c0ce16e":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Walker detected");
-				desiredRank = SCR_ECharacterRank.CGQC_SOLDAT;
-				isCGQC = true;
-                break;
-            }
-			case "c40d4907-67a4-4a53-b7c0-49ae4f3d3121":
-            {
-                Print("[CGQC_InitializePlayer] CGQC Jeune Comeau detected");
-				cgqc_head = "{CCF92B30D886C909}Prefabs/Characters/Heads/Head_WhiteHead_21.et";
-				cgqc_body = "{000A00972B3D8EF5}Prefabs/Characters/Basebody/CharacterBasebody_03.et";
-				desiredRank = SCR_ECharacterRank.CGQC_SOLDAT;
-				isCGQC = true;
-                break;
-            }
-			
-        }
-		if (isCGQC)
-		{
-			// Apply identity if head and body are set
-			if (!cgqc_head.IsEmpty() && !cgqc_body.IsEmpty())
-			{
-			    Print("[CGQC_InitializePlayer] Custom Identity found: Applying");
-			    GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, cgqc_head, cgqc_body);
-			}
-			
-			// Assign Rank
-			SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
-	        if (!rankComp)
-	        {
-	            Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");	            
-	        }else{
-				rankComp.SetCharacterRank(desiredRank);
-	        	PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
-				GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
-			}	
-		}
-		
-		// Swap default radios for CGQC radios
-		//CGQC_Scripts.swapRadios(playerEntity);
-    }
 	
+	// Roster stuff
+	static const ResourceName CGQC_ROSTER_CONFIG = "{262B3F77A01CFAE4}Configs/CGQC/CGQC_Roster.conf";
+	
+	static CGQC_PlayerRosterConfig LoadRosterConfig()
+	{
+		Resource res = Resource.Load(CGQC_ROSTER_CONFIG);
+		if (!res.IsValid())
+		{
+			Print("[CGQC] LoadRosterConfig: Failed to load roster config - resource invalid");
+			return null;
+		}
+		return CGQC_PlayerRosterConfig.Cast(BaseContainerTools.CreateInstanceFromContainer(res.GetResource().ToBaseContainer()));
+	}
+	
+	static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId, bool isInitialised)
+	{
+		Print("[CGQC_InitializePlayer] Starting ->");
+	
+		string playerName = GetPlayerName(playerId);
+		PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
+	
+		CGQC_PlayerRosterConfig roster = CGQC_Scripts.LoadRosterConfig();
+		if (!roster || !roster.m_aPlayers)
+		{
+			Print("[CGQC_InitializePlayer] No valid roster config found, skipping.");
+			return;
+		}
+	
+		for (int i = 0; i < roster.m_aPlayers.Count(); i++)
+		{
+			CGQC_PlayerEntry entry = roster.m_aPlayers[i];
+			if (!entry || entry.m_sIdentityId != playerIdentityId)
+				continue;
+	
+			PrintFormat("[CGQC_InitializePlayer] Matched: %1", entry.m_sLabel);
+	
+			// Admin features
+			if (!entry.m_sAdminTag.IsEmpty())
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, entry.m_sAdminTag);
+	
+			// Custom identity
+			if (!entry.m_sHeadPrefab.IsEmpty() && !entry.m_sBodyPrefab.IsEmpty())
+				GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
+	
+			// Rank
+			SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
+			if (!rankComp)
+			{
+				Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");
+				return;
+			}
+	
+			SCR_ECharacterRank desiredRank = entry.m_iRank;
+			rankComp.SetCharacterRank(desiredRank);
+			PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+			GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
+	
+			return;
+		}
+	
+		Print("[CGQC_InitializePlayer] Player not in CGQC roster, no action taken.");
+	}
+		
 
 		/*
 		{"d7e9113c-f075-41c5-a72a-9ee5187dc723", SCR_ECharacterRank.MAJOR}, // Cloutier
