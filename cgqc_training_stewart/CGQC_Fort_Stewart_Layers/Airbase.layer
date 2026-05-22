@@ -8,30 +8,30 @@ $grp Vehicle : "{08879C568643A27D}Vehicles/ATV/ATV2pUS.et" {
 }
 $grp GenericEntity : "{0AE6B56F94A76C37}Prefabs/GM_Props/Helipad_Decal.et" {
  {
-  coords 12429.927 23.999 698.179
-  angles 0 15.591 0
+  coords 12099.861 23.999 1419.823
+  angles 0 -40.844 0
   {
    Vehicle UH1H_armed_gunship_HE_sharkNose1 : "{350492BE6F09A847}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
-    coords 0.13 0.001 -0.498
+    coords 0.133 0.001 -0.499
     {
      GameEnvironmentProbeEntity {
       ID "654C8CC81C957F97"
-      coords 0.003 1.813 1.073
+      coords -0.001 1.813 1.072
      }
     }
    }
   }
  }
  {
-  coords 12410.663 23.999 703.554
-  angles 0 15.591 0
+  coords 12079.086 23.999 1401.863
+  angles 0 -40.844 0
   {
    Vehicle UH1H_armed_sharkNose1 : "{00BC1E407D536A34}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_sharkNose.et" {
-    coords 0.006 0.002 -0.302
+    coords 0.007 0.002 -0.302
     {
      GameEnvironmentProbeEntity {
       ID "654C8CC81C957F97"
-      coords 0 1.813 1.072
+      coords -0.001 1.813 1.073
      }
     }
    }

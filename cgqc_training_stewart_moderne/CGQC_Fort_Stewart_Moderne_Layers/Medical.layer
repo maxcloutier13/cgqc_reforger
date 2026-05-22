@@ -1,0 +1,74 @@
+$grp GenericEntity : "{10E741473FE11779}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/MASCAS_TRAINERPLUS_US.et" {
+ {
+  coords 1180.674 29.471 4142.051
+  angles 0 45 0
+ }
+ {
+  coords 1183.148 29.471 4144.522
+  angles 0 45 0
+ }
+ {
+  coords 1204.714 29.471 4122.956
+  angles 0 45 0
+ }
+ {
+  coords 1199.765 29.471 4118.008
+  angles 0 45 0
+ }
+ {
+  coords 1196.229 29.471 4131.441
+  angles 0 45 0
+ }
+ {
+  coords 1193.755 29.471 4128.969
+  angles 0 45 0
+ }
+ {
+  coords 1186.684 29.471 4131.089
+  angles 0 45 0
+ }
+ {
+  coords 1191.281 29.471 4126.492
+  angles 0 45 0
+ }
+ {
+  coords 1182.441 29.471 4135.332
+  angles 0 45 0
+ }
+ {
+  coords 1178.2 29.471 4139.574
+  angles 0 45 0
+ }
+ {
+  coords 1184.916 29.471 4137.807
+  angles 0 45 0
+ }
+ {
+  coords 1187.39 29.471 4140.281
+  angles 0 45 0
+ }
+ {
+  coords 1189.159 29.471 4133.563
+  angles 0 45 0
+ }
+ {
+  coords 1195.522 29.471 4122.25
+  angles 0 45 0
+ }
+ {
+  coords 1197.997 29.471 4124.725
+  angles 0 45 0
+ }
+ {
+  coords 1202.24 29.471 4120.482
+  angles 0 45 0
+ }
+ {
+  coords 1200.471 29.471 4127.199
+  angles 0 45 0
+ }
+ {
+  coords 1191.633 29.471 4136.038
+  angles 0 45 0
+ }
+}

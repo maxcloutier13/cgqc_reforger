@@ -1,0 +1,68 @@
+Vehicle MH47G_Block1 : "{03300A0463827C4B}Prefabs/Vehicles/Helicopters/H47/MH47G_Block2.et" {
+ coords 12027.1 24.001 1356.471
+ angles 0 -41.506 0
+}
+$grp GenericEntity : "{0AE6B56F94A76C37}Prefabs/GM_Props/Helipad_Decal.et" {
+ {
+  coords 12054.061 24.001 1380.531
+  angles 0 -40.844 0
+ }
+ {
+  coords 12026.692 24.001 1356.87
+  angles 0 -40.844 0
+ }
+ {
+  coords 11999.183 24.001 1333.088
+  angles 0 -40.844 0
+ }
+ {
+  coords 11974.988 24.001 1312.171
+  angles 0 -40.844 0
+ }
+ {
+  coords 11950.016 24.001 1290.582
+  angles 0 -40.844 0
+ }
+}
+Vehicle AH6M_AIM92x1 : "{0D355CF9D40F79CA}Prefabs/Vehicles/Helicopters/AH6M/AH6M_AIM92x2.et" {
+ coords 11998.65 24 1333.805
+ angles 0 -41.746 0
+}
+Vehicle AH6M_GAU1 : "{A317D959A4248173}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19.et" {
+ coords 11974.332 24 1312.24
+ angles 0 -45.226 0
+}
+SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+ coords 12445.91 24.1 551.034
+ angles 0 -168.579 0
+}
+$grp Vehicle : "{D768882A4BA33526}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed_Black.et" {
+ MRZRD4_Unarmed_Black1 {
+  coords 12467.077 24.1 539.51
+  angles 0 -86.377 0
+ }
+ MRZRD4_Unarmed_Black2 {
+  coords 12467.235 24.1 542.005
+  angles 0 -86.377 0
+ }
+ MRZRD4_Unarmed_Black3 {
+  coords 12467.394 24.1 544.5
+  angles 0 -86.377 0
+ }
+ MRZRD4_Unarmed_Black4 {
+  coords 12467.583 24.1 547.494
+  angles 0 -86.377 0
+ }
+ MRZRD4_Unarmed_Black5 {
+  coords 12467.772 24.1 550.488
+  angles 0 -86.377 0
+ }
+}
+Vehicle AH64D1 : "{F2C8E85F145934F4}Prefabs/Vehicles/Helicopters/AH64/AH64D.et" {
+ coords 12053.803 24.013 1380.484
+ angles 0 -40.894 0
+}
+Vehicle AH6M_RKTO1 : "{FAA52C8EBB0EBCF7}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKTO.et" {
+ coords 11949.425 24 1291.194
+ angles 0 -40.24 0
+}
