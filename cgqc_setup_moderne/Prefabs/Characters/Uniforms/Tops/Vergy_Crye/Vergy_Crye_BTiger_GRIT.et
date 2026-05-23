@@ -18,7 +18,7 @@ GameEntity : "{EDB998C9B424A3C5}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Verg
      Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
     }
     GRS_MorphSlotComponent Upper_Left_Patch {
-     Prefab "{679108DC957C9420}Prefabs/Flag_Patches/Quebec_Flag_Color.et"
+     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
     }
     GRS_MorphSlotComponent Lower_Left_Patch {
      Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"

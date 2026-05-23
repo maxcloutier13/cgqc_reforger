@@ -101,9 +101,45 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "Back/GRS_Modular_Backpanel_Black_GRIT.et/Pouches_LEGACY/GRS_Backpanel_Demo_Base.et"
+     TargetStorage "Back/GRS_Modular_Backpanel_Black_GRIT.et/Pouches_LEGACY/GRS_Backpanel_Demo_GRIT.et"
      PrefabsToSpawn {
       "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112D95B95BCC}" {
+     TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/Pistol_Mag_Pouch/GRS_Angled_G24_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DA2A401C7}" {
+     TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/Pistol_Mag_Pouch_2/GRS_Angled_G24_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/LS_Pouch/GRS_ARSingle_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DB145C658}" {
+     TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/RS_Rear_Pouch/GRS_M18_Filbe_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DC234C970}" {
+     TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/LS_Rear_Pouch/GRS_M18_Filbe_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DD29DDE74}" {
+     TargetStorage "GRS_Right_Drop_Leg/GRS_Drop_Leg_Right_GRIT.et/Pistol_Pouch/GRS_G24_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
      }
     }
    }
