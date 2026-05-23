@@ -1,5 +1,4 @@
 MatPBRBasic {
- Color 0.546 0.531 0.481 1
  AllowUserAlphaBias 1
  DisableUserAphaInShadow 1
  BCRMap "{E0B629E43F97BE6B}Assets/Rectangle_Patches/patch_unit_centaure.edds"
