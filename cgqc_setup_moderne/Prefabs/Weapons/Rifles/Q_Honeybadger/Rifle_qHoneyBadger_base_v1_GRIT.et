@@ -1,0 +1,76 @@
+GenericEntity : "{C0C989BF02F86391}Prefabs/Weapons/Rifles/Q_Honeybadger/Rifle_qHoneyBadger_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Object "{56C717AB4F3CF63C}Assets/Weapons/Rifles/Q_HoneyBadger/q_hb_4_recv_test.xob"
+   Materials {
+    MaterialAssignClass "{696E42C8790394EF}" {
+     SourceMaterial "honeybadger"
+     AssignedMaterial "{9B99E1C2D2F97D6A}Assets/Weapons/Rifles/Q_HoneyBadger/Data/honeybadger_blk.emat"
+    }
+   }
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5534745C44D1EF58}" {
+     AttachmentSlot LoadoutSlotInfo optics {
+      Prefab "{4BBD741316336894}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Optic_T2_Unity.et"
+     }
+    }
+    AttachmentSlotComponent "{56DE9C900611C1AF}" {
+     AttachmentSlot InventoryStorageSlot Handguard {
+      Prefab "{2802C83438BF8E97}Prefabs/Weapons/Rifles/Q_Honeybadger/Handguard/12/qHB_12_hg_railed.et"
+     }
+    }
+    AttachmentSlotComponent "{68684EDB841E8EE7}" {
+     AttachmentSlot LoadoutSlotInfo Charging_handle {
+      Offset 0 -0.0053 0
+     }
+    }
+    AttachmentSlotComponent "{68684EDB841E8F27}" {
+     AttachmentSlot LoadoutSlotInfo Stock {
+     }
+    }
+    AttachmentSlotComponent "{68974CF052D93598}" {
+     AttachmentSlot LoadoutSlotInfo Twelve_in_HG_Top {
+      Prefab "{77F825113A3CE361}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_NGAL.et"
+     }
+    }
+    AttachmentSlotComponent "{68974CF0EDFD9EBA}" {
+     AttachmentSlot LoadoutSlotInfo Twelve_in_HG_Right {
+      Prefab "{59A6645239DEFF9F}Prefabs/Weapons/Attachments/Flashlight/m600v_FDE.et"
+     }
+    }
+    AttachmentSlotComponent "{696E42C8790394C4}" {
+     AttachmentSlot LoadoutSlotInfo Receiver {
+      Prefab "{7F035BCB3BCEAC75}Prefabs/Weapons/Rifles/Q_Honeybadger/Receiver/qHB_receiver_fde.et"
+     }
+     AttachmentType Attachmentc10rqhbreceiver "{696E42C8790394CF}" {
+     }
+    }
+    SightsComponent "{BB23A637957CFFF8}" {
+     SightsSwitchSkip 1
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{5D527627CCB8F756}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{BD0099BE6F54DD53}Prefabs/Weapons/Rifles/Q_Honeybadger/Barrel/7/qHB_7in_barrel_supp_hb.et"
+       }
+      }
+     }
+     MagazinePosition InventoryStorageSlot "{B80A64F4C834E9CB}" {
+      ChildPivotID "snap_magazine"
+     }
+     MagazineTemplate "{80445D4175B15780}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_Ball_194me_1k.et"
+    }
+   }
+  }
+ }
+}

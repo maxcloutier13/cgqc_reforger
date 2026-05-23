@@ -84,6 +84,9 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{696D11251E6084B6}" {
      TargetStorage "Pants/Vergy_Crye_Trousers_BTiger.et"
+     PrefabsToSpawn {
+      "{934F7D4CF484C652}Prefabs/Items/Equipment/Lockpicks/LockPick_Manual.et"
+     }
     }
     ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
      TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/Placards/GRS_Placard_Spiritus_Black.et"

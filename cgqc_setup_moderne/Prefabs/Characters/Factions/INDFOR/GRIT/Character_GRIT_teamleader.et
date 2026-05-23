@@ -1,0 +1,39 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT TeamLeader"
+    IconSetName "EditableEntity_Character_Leader_Team"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{5B908EE5618B8BDD}Prefabs/Weapons/Rifles/ARY_G3_Modern/ARY_Rifle_MC51SD4_Rail_GRIT.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{1AF8EA19D7C0442C}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_Leader_GRIT.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_Leader_GRIT.et/Placards/GRS_Placard_Closed_Black.et"
+     PrefabsToSpawn {
+      "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et" "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et" "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et" "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_Leader_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
+    }
+    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     PrefabsToSpawn {
+      "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,39 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Voltigeur (SA-58)"
+    IconSetName "EditableEntity_Character_Scout"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{90B92DDA52F4C87A}Prefabs/Weapons/Rifles/M16/sa58_GRIT.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{C1B90BD72965B89F}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_DMR_GRIT.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_DMR_GRIT.et/Placards/GRS_Placard_ARC_Marksman_Black.et"
+     PrefabsToSpawn {
+      "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_DMR_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
+    }
+    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     PrefabsToSpawn {
+      "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,37 @@
+GenericEntity : "{BF4765264D5F6F8E}Prefabs/Weapons/Rifles/ARY_G3/ARY_G3_MC51/ARY_Rifle_MC51SD4_Base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "#ary-mc51sd4-rail-name"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{65F73688A412FC01}" {
+     AttachmentSlot InventoryStorageSlot "{65F73688A0F87C60}" {
+      Offset 0 0.0067 0.0282
+      Prefab "{AB4D42B14034E06D}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Optic_t2_Scalar.et"
+     }
+     AttachmentType AttachmentOpticsRIS1913 "{65F73688A2533067}" {
+     }
+    }
+    AttachmentSlotComponent "{696E42CC8C256365}" {
+     AttachmentSlot InventoryStorageSlot OpticRail {
+      PivotID "slot_optics"
+      ChildPivotID "snap_weapon"
+      Prefab "{109B8D6B562577B5}Prefabs/Weapons/Attachments/Optic Rails/ARY_G3_Modern_OpticRail/ARY_G3_Modern_OpticRail_Base.et"
+     }
+     AttachmentType ARY_AttachmentRisOpticRailG3 "{696E42CC8C256372}" {
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     MagazineTemplate "{36410B4FA6FFECC5}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/ARY_Magazine_762x51_G3_20Rnd_Alu_DM111_Ball_Darker.et"
+    }
+   }
+  }
+ }
+ coords 123.019 3.005 132.3
+}

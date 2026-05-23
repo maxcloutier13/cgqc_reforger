@@ -1,0 +1,40 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Spécialiste Effraction"
+    Description "Spécialiste en explosif et entrée par effraction de l'Équipe d'Intervention"
+    IconSetName "EditableEntity_Character_Engineer"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{C5161125F45F41BA}Prefabs/Weapons/Shotguns/Benelli M4/Benelli_M4_GRIT.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{147B986C594C4E42}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_ENG_GRIT.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_ENG_GRIT.et/Placards/GRS_MG_Pouches_Black.et"
+     PrefabsToSpawn {
+      "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et" "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et" "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et" "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et" "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et" "{309D576201C25199}Prefabs/Items/Equipment/Kits/EOD Clippers/EOD_Clippers.et" "{B41607EAB58A4252}Prefabs/Items/Equipment/BalisticTable/BalisticTable_USSR.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Black_ENG_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
+    }
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     PrefabsToSpawn + {
+      "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et" "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et"
+     }
+    }
+   }
+  }
+ }
+}

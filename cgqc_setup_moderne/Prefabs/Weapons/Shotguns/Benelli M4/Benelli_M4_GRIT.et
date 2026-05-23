@@ -1,0 +1,303 @@
+GenericEntity : "{911D6C8DC7BA2D63}Prefabs/Weapons/Core/Rifle_Base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponSoundComponent "{5A8685198A9AEEDD}" {
+   Filenames {
+    "{85B4640D522A989D}Sounds/Weapons/Rifles/AK-74/Weapons_Rifles_Benelli_Shot.acp" "{A6F3D0955462D8FE}Sounds/Weapons/Rifles/M16A2/Weapons_Rifles_M16A2_Handling.acp" "{D8F675F3468362E2}Sounds/Weapons/_SharedData/Weapons_Sights_Actions.acp" "{68E023371FDD3B12}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_Rifle_WoodMetal.acp" "{07E8D425196745F4}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_Rifle_Plastic.acp" "{332983CC95EE1E1E}Sounds/Weapons/_SharedData/Melee/Weapons_Melee_Rifle.acp" "{10C1421961C34D26}Sounds/Weapons/_SharedData/Weapons_Deployment.acp" "{E419B2CF55F4A389}Sounds/Weapons/_SharedData/Melee/Weapons_Melee_Bayonett.acp" "{49030BC3BF645522}Sounds/Weapons/Rifles/M16A2/Weapons_Rifles_BenelliM4_Shot_Suppressed_SuperSonic.acp"
+   }
+  }
+  MeshObject "{CFBAA4B701F95D69}" {
+   Object "{EA85265618CBF035}Assets/Weapons/Rifles/Benelli_M4/BenelliM4.xob"
+  }
+  RigidBody "{696E42CCA8F2BB50}" {
+   SimState None
+   ModelGeometry 1
+  }
+  SCR_MeleeWeaponProperties "{696E42CCA8F2BB5D}" {
+   m_fDamage 20
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "Benelli M4 Super 90"
+     Description "The Benelli M4 Super 90 is an Italian-made, gas-operated, semi-automatic shotgun developed by Benelli Armi S.p.A., a firearms manufacturer based in Urbino, Italy. Introduced in 1998, the M4 was engineered in response to a request from the United States military for a new combat shotgun that could deliver unmatched reliability, durability, and versatility in harsh combat conditions.[SERVER TEST EDITION ANIMATIONS NOT COMPLETE]"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{696E42CCA8F2BB24}" {
+     Weight 3.5
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 1500
+     RestingUP Left
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5284960E1D29F45C}" {
+     AnimationInstance "{0350283642830782}anims/workspaces/player/player_main_rifle.asi"
+     AnimationIKPose "{2B192F87CC9253DF}Assets/Weapons/Rifles/Benelli_M4/anims/anm/p_benellim4_ik.anm"
+     OverrideDefaultIkBonesBlend 1
+    }
+    CustomAttributes {
+     AimingModifierAttributes "{566C7D15A071B88E}" {
+      DeploymentPoints {
+       PivotPointInfoItem "{696E42CCA8F2BB29}" {
+        "Point info" DeploymentPointInfo dp {
+         PivotID "Scene_Root"
+         Offset 0 0.0777 0.4321
+        }
+        StabilizationSize 0.05 0.12 0.37
+       }
+      }
+     }
+     SCR_RecoilCameraShakeParams "{58DEF2AB0413E346}" {
+      m_fRecoilTarget 0.038
+      m_vTranslationMin 0.002 0.002 0
+      m_vTranslationMax 0.003 0.003 0
+      m_vRotationImpulseMin 0 0 7
+      m_vRotationImpulseMax 0 0 8
+     }
+     PreviewRenderAttributes "{52BAB5E48C906DB8}" {
+      CameraDistanceToItem 1
+      FOV 30
+      AspectRatio 3
+     }
+     ItemOneHandAnimAttributes "{696E42CCA8F2BB32}" {
+      ErectLinearOffsetUpper 0 0 0
+      ErectLinearOffset 0.018 -0.2 -0.1
+      ErectLinearOffsetLower 0.018 -0.05 0
+      CrouchLinearOffsetUpper 0 0 0
+      CrouchLinearOffset 0.018 -0.16 -0.1
+      CrouchLinearOffsetLower 0 -0.15 0
+      SpringCoefficient 2.2
+      DamperCoefficient 2.4
+     }
+    }
+   }
+  }
+  SCR_WeaponStatsManagerComponent "{696E42CCA8F2BB36}" {
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{696E42CCA8F2BB3D}" {
+     AttachmentSlot InventoryStorageSlot Handguard {
+      PivotID "slot_optic"
+      Prefab "{BCA64CD9221E7A21}Scopes/Barska RDS/Prefabs/Collim_CHEAPREDDOT_base.et"
+      DeactivatePhysicsOnAtaching 1
+      InspectionWidgetOffset 0 0.1453 -0.0436
+     }
+     AttachmentType AttachmentOpticsRIS1913VeryShort "{696E42CCA8F2BB01}" {
+     }
+     ShowInInspection 1
+    }
+    SightsComponent "{BB23A637957CFFF8}" {
+     SightsPosition PointInfo "{BB23A63796688E69}" {
+      Offset 0 0 -0.01
+     }
+     SightsRanges {
+      SightRangeInfo "{696E42CCA8F2BB05}" {
+       Range 0 50
+      }
+      SightRangeInfo "{696E42CCA8F2BB07}" {
+       Range 0 100
+      }
+      SightRangeInfo "{696E42CCA8F2BB09}" {
+       Range 0 150
+      }
+     }
+     SightsRangesDefaultIndex 1
+     SightsPointFront PointInfo "{696E42CCA8F2BB0B}" {
+      Offset 0 0.1444 0.4649
+     }
+     SightsPointRear PointInfo "{696E42CCA8F2BB11}" {
+      PivotID "w_sight"
+      Offset 0 0.0076 0
+     }
+     SightsSwitchSkip 1
+     m_iOpticDOFDistanceScale 30
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{696E42CCA8F2BBE4}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        PivotID "slot_barrel_muzzel"
+        ChildPivotID "snap_barrel_muzzle"
+        InspectionWidgetOffset 0 0.1207 0.655
+       }
+       AttachmentType AttachmentSuppressorBenelliM4 "{696E42CCA8F2BBE7}" {
+       }
+       ShowInInspection 1
+      }
+      CaseEjectingEffectComponent "{5122AAD190FCA21D}" {
+       ParticleEffect "{DF992D523DC62700}Particles/Weapon/Casing_12g.ptc"
+       EffectPosition EntitySlotInfo "{5122BA87B56F471A}" {
+        PivotID "barrel_chamber"
+        Offset 0.0216 0.006 -0.055
+       }
+      }
+      SCR_MuzzleEffectComponent "{C9B3271BB22CDB68}" {
+       ParticleEffect "{DDF8E6F5BCEABCCC}Particles/Weapon/Muzzle_M16A2_Open.ptc"
+       ResetOnFire 0
+      }
+     }
+     ProjectileSpawnPositions {
+      PointInfo "{50F64C476EC435CA}" {
+       Offset 0 0 0.3873
+      }
+     }
+     FireModes {
+      BaseFireMode "{B80A64F4A8EF8333}" : "{D5D52E848DBCAA53}Prefabs/Weapons/Core/Configs/FireModes/FireMode_Single.conf" {
+       RoundsPerMinute 800
+      }
+     }
+     MagazineWell MagazineWellBenelliM4 "{696E42CCA8F2BBF1}" {
+     }
+     DispersionDiameter 0.4
+     DispersionRange 400
+     WeaponAimModifiers {
+      SwayWeaponAimModifier "{521AE9A27BDC1E6F}" {
+       "Lower Translation" 0.05 -0.005 -0.013
+       "Lower Rotation" -10 -8 -10
+      }
+      RecoilWeaponAimModifier "{696E42CCA8F2BBF4}" {
+       LinearData RecoilData "{696E42CCA8F2BBF7}" {
+        "Curve X" {
+         0 0.5 0.034 0.553 0.051 0.905 0.203 0.641 0.301 0.518 1 0.5
+        }
+        "Curve Y" {
+         0 0.5 0.032 0.55 0.045 0.75 0.071 0.65 0.095 0.5 0.261 0.5 1 0.5
+        }
+        "Curve Z" {
+         0 0.5 0.008 0.809 0.026 0.997 0.032 0.944 0.046 0.948 0.081 0.62 0.177 0.512 0.436 0.5 1 0.5
+        }
+        "Curve Magnitudes" 1 1 1
+        "Curve Mins" -0.001 -0.001 -0.022
+        "Curve Maxs" 0 -0.001 -0.018
+        "Base Recoil Scale" 3
+       }
+       AngularData RecoilData "{696E42CCA8F2BBF9}" {
+        "Curve X" {
+         0 0.5 0.019 0.411 0.055 0.539 0.11 0.474 0.216 0.497 1 0.5
+        }
+        "Curve Y" {
+         0 0.5 0.038 0.796 0.093 1 0.222 0.765 0.349 0.571 0.529 0.508 1 0.5
+        }
+        "Curve Z" {
+         0 0.5 0.033 0.641 0.049 0.892 0.095 0.7 0.238 0.487 0.443 0.5 0.7 0.5 1 0.5
+        }
+        "Curve Time Scale" 1.25
+        "Curve Magnitudes" 1 1 1
+        "Curve Mins" -1 1.5 1
+        "Curve Maxs" 1 1.8 1
+        "Base Recoil Scale" 3
+       }
+       TurnOffsetData RecoilData "{696E42CCA8F2BBFB}" {
+        "Curve X" {
+         0 0.5 0.06 1 0.093 0.752 0.116 0.539 0.148 0.502 1 0.5
+        }
+        "Curve Y" {
+         0.031 0.998 0.105 0.576 0.236 0.5 1 0.5
+        }
+        "Curve Time Scale" 1
+        "Curve Magnitudes" 1 1 0
+        "Curve Mins" -1.5 4.5 0
+        "Curve Maxs" 1.5 6 0
+        "Base Recoil Scale" 3
+       }
+      }
+      ZeroingWeaponAimModifier "{696E42CCA8F2BBFE}" {
+      }
+     }
+     UIInfo MuzzleUIInfo "{2FBBA72C906C627E}" {
+      m_MagIndicator SCR_MagazineIndicatorConfiguration "{565ECB55D6F6D63D}" : "{1AA788302FE3C53A}Configs/WeaponInfo/MagazineIndicators/ak74_30.conf" {
+      }
+     }
+     AllowWeaponDeployment 1
+     "LEFT HAND TARGET" DeploymentPointInfo lht {
+      PivotID "snap_hand_left"
+      Offset -0.06 -0.03 -0.05
+      Angles 0 -80 50
+     }
+     RIGHT_HAND_TARGET DeploymentPointInfo rht {
+      PivotID "snap_hand_right"
+     }
+     BUTSTOCK_TRANSFORMATION DeploymentPointInfo bt {
+      Offset 0 0.041 -0.3423
+     }
+     MagazinePosition InventoryStorageSlot "{B80A64F4C834E9CB}" {
+      InspectionWidgetOffset 0 -0.0431 0.0743
+     }
+     MagazineTemplate "{62F4E645820431BC}Prefabs/Weapons/Magazines/BenelliM4/Benelli_Magazine_Slug.et"
+    }
+    WeaponAnimationComponent "{60B4EA76EB15F6E0}" {
+     AnimGraph "{0FF086699A5B06D2}Assets/Weapons/Rifles/workspaces/benellim4.agr"
+     AnimInstance "{86DD0479D3E8C728}Assets/Weapons/Rifles/workspaces/benellim4_weapon.asi"
+     AnimInjection AnimationAttachmentInfo "{696E42CCA8F2BBCA}" {
+      AnimGraph "{0FF086699A5B06D2}Assets/Weapons/Rifles/workspaces/benellim4.agr"
+      AnimInstance "{7D8395484BE9A3C4}Assets/Weapons/Rifles/workspaces/benellim4_player.asi"
+      BindingName "Weapon"
+     }
+     BindWithInjection 1
+    }
+   }
+   obstructionTestAddedLength 0.05
+   signiObstrWeaponMaxZOffset 0.25
+   obstructionTestBBScale 0.08 0.08 0.08
+   SoundInt 1020200
+   UIInfo WeaponUIInfo "{CC3BA6A2C42F09F4}" {
+    Name "Benelli M4 Super 90"
+    Description "The Benelli M4 Super 90 is an Italian-made, gas-operated, semi-automatic shotgun developed by Benelli Armi S.p.A., a firearms manufacturer based in Urbino, Italy. Introduced in 1998, the M4 was engineered in response to a request from the United States military for a new combat shotgun that could deliver unmatched reliability, durability, and versatility in harsh combat conditions.[SERVER TEST EDITION ANIMATIONS NOT COMPLETE]"
+    Icon ""
+   }
+  }
+  ActionsManagerComponent "{A29AE67FF4D82B0F}" {
+   ActionContexts {
+    UserActionContext "{5086F9ADF588DCA4}" {
+     Position PointInfo "{5086F9ADE97650DF}" {
+      Offset 0 -0.0178 -0.053
+     }
+    }
+    UserActionContext "{5956E32BAAADE657}" {
+     Position PointInfo "{5956E329E6B11261}" {
+      Offset 0 0.0745 0.4719
+     }
+    }
+    UserActionContext "{5A1E58F7B04F9BE5}" {
+     Position PointInfo "{696E42CCA8F2BBD1}" {
+      PivotID "slot_magazine"
+      Offset 0 -0.0493 -0.0254
+     }
+    }
+    UserActionContext "{5A1E58F7AED270D4}" {
+     Position PointInfo "{696E42CCA8F2BBD3}" {
+      PivotID "w_fire_mode"
+      Angles 0 -90 0
+     }
+     Radius 0.05
+     Omnidirectional 0
+    }
+    UserActionContext "{618A84270A2BFDC0}" {
+     UIInfo SCR_ActionContextUIInfo "{618A842787792024}" : "{970293F8561231D4}Configs/UI/NearbyInteractionContext/NearbyContextWeapons.conf" {
+     }
+     Position PointInfo "{618A842792A66B70}" {
+      Offset 0 0.0009 0.0047
+     }
+    }
+    UserActionContext "{696E42CCA8F2BBA6}" {
+     UIInfo SCR_ActionContextUIInfo "{6104781998187301}" : "{970293F8561231D4}Configs/UI/NearbyInteractionContext/NearbyContextWeapons.conf" {
+     }
+     ContextName "bayonet"
+     Position PointInfo "{696E42CCA8F2BBA8}" {
+      PivotID "slot_barrel_muzzle"
+      Offset 0 -0.0278 -0.1254
+     }
+     Radius 0.1
+    }
+    UserActionContext "{696E42CCA8F2BBAA}" {
+     ContextName "optic"
+     Position PointInfo "{696E42CCA8F2BBAB}" {
+      Offset 0 0.1351 0.0448
+     }
+     Radius 0.075
+    }
+   }
+  }
+ }
+ coords 119.494 2.168 124.675
+}

@@ -1,0 +1,27 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Opérateur d'Intervention (HoneyBadger)"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3B1624B7DCEE1C76}Prefabs/Weapons/Rifles/Q_Honeybadger/Rifle_qHoneyBadger_base_v1_GRIT.et"
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     PrefabsToSpawn {
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     PrefabsToSpawn {
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+     }
+    }
+   }
+  }
+ }
+}
