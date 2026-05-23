@@ -17,7 +17,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "GRIT Opérateur (Rattler)"
+    Name "GRIT Opérateur BASE"
     Description "Membre de base de l'Équipe d'Intervention"
     m_sFaction "CGQC_GRIT"
    }
@@ -27,9 +27,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   CharacterGrenadeSlotComponent "{5A6CDA0CCF43068E}" {
    WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
-  }
-  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{A3E3F0DE9B6BD9AB}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_RattlerGBRS.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
@@ -90,9 +87,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
      TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/Placards/GRS_Placard_Spiritus_Black.et"
-     PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
-     }
     }
     ItemsInitConfigurationItem "{696D1129CAA8B751}" {
      TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
@@ -120,9 +114,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
      TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/LS_Pouch/GRS_ARSingle_Pouch_Black.et"
-     PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
-     }
     }
     ItemsInitConfigurationItem "{696D112DB145C658}" {
      TargetStorage "GRS_Waist/GRS_Tyr_Belt_Black_GRIT.et/RS_Rear_Pouch/GRS_M18_Filbe_Pouch_Black.et"

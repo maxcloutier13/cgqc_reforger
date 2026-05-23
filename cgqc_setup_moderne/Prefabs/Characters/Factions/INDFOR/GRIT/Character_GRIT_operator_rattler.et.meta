@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

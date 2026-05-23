@@ -23,8 +23,8 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696D113D489F0E7A}" {
-   m_sLoadoutName "Assaulter"
-   m_sLoadoutResource "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et"
+   m_sLoadoutName "Opérateur (Rattler)"
+   m_sLoadoutResource "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
  }

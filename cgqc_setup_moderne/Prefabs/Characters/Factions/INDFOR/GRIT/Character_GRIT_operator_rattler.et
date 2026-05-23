@@ -1,0 +1,27 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Opérateur (Rattler)"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{A3E3F0DE9B6BD9AB}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_RattlerGBRS.et"
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+     }
+    }
+   }
+  }
+ }
+}
