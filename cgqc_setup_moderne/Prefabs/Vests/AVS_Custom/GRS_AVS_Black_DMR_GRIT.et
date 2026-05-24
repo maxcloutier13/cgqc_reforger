@@ -4,7 +4,7 @@ GenericEntity : "{CE1E02F9A3B8B1E0}Prefabs/Vests/AVS_Custom/GRS_AVS_Base.et" {
   ClothNodeStorageComponent "{65696E47E5263D95}" {
    Attributes SCR_ItemAttributeCollection "{65696E47E5263C61}" {
     ItemDisplayName UIInfo "{65696E47E5263C47}" {
-     Name "GRS: AVS Modular - Black"
+     Name "CGQC GRIT DMR"
      Description "GRS: AVS Modular - Black"
     }
    }

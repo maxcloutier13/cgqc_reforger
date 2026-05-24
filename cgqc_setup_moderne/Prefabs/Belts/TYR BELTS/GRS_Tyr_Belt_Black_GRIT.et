@@ -4,7 +4,7 @@ GenericEntity : "{70D626E266998D1B}Prefabs/Belts/TYR BELTS/GRS_Tyr_Belt_Base.et"
   ClothNodeStorageComponent "{65CD429CD4A3549B}" {
    Attributes SCR_ItemAttributeCollection "{65CD429CD4A35490}" {
     ItemDisplayName UIInfo "{65CD429CD4A3573B}" {
-     Name "GRS: Modular TYR Belt - Black"
+     Name "GRS: Modular GRIT"
     }
    }
   }

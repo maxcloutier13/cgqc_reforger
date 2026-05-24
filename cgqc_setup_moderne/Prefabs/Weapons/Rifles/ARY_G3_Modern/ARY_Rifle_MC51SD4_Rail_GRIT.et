@@ -4,7 +4,7 @@ GenericEntity : "{BF4765264D5F6F8E}Prefabs/Weapons/Rifles/ARY_G3/ARY_G3_MC51/ARY
   SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
    Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
     ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
-     Name "#ary-mc51sd4-rail-name"
+     Name "CGQC mc51sd4"
     }
    }
   }

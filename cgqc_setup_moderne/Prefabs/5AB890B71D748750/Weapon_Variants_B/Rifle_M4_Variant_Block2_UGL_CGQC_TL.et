@@ -1,6 +1,13 @@
 GenericEntity : "{61C6D75066FC1964}Prefabs/5AB890B71D748750/Weapon_Variants_B/Rifle_M4_Variant_Block2.et" {
  ID "CFBAA4B725411E45"
  components {
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "CGQC M4 BlkII UGL"
+    }
+   }
+  }
   WeaponComponent "{CFBAA4B706BA66E8}" {
    components {
     AttachmentSlotComponent "{5534745C44D1EF58}" {

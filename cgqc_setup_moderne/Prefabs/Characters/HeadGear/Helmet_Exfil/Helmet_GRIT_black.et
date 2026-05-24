@@ -4,7 +4,7 @@ GameEntity : "{0F610D0687FA5814}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_
   RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
    Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
     ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
-     Name "#RHS-Headgear_Exfil_Name - #RHS-Color_BLK"
+     Name "CGQC GRIT Exfil"
     }
    }
   }
