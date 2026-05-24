@@ -94,7 +94,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{696D1129CAA8B751}" {
      TargetStorage "ArmoredVest/GRS_AVS_Black_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
      PrefabsToSpawn {
-      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et"
+      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et" "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et"
      }
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
