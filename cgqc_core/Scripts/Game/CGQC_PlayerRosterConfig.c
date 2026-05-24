@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------------------------
 // CGQC Player Roster Config
-// Define entries in Workbench via Config Editor, then drop the .conf GUID into CGQC_Scripts.
+// Define rank entries in Workbench via Config Editor.
+// Each rank has its own .conf (CGQC_Roster_Soldats.conf, etc.)
+// Drop rank conf GUIDs into CGQC_Roster.conf via m_aRankRosters.
 //------------------------------------------------------------------------------------------------
 
 [BaseContainerProps()]
@@ -23,14 +25,21 @@ class CGQC_PlayerEntry
 
 	[Attribute(defvalue: "", uiwidget: UIWidgets.ResourcePickerThumbnail, desc: "Custom body prefab (.et). Leave empty for default.", params: "et")]
 	ResourceName m_sBodyPrefab;
-	
+
 	[Attribute(defvalue: "{F20A13563AFED116}Prefabs/Rectangle_Patches/spartan_camo.et", uiwidget: UIWidgets.ResourcePickerThumbnail, desc: "Custom Patch (.et). Leave empty for default.", params: "et")]
 	ResourceName m_sPatch;
 }
 
 [BaseContainerProps(configRoot: true)]
+class CGQC_RankRosterConfig
+{
+	[Attribute(desc: "Players in this rank group")]
+	ref array<ref CGQC_PlayerEntry> m_aPlayers;
+}
+
+[BaseContainerProps(configRoot: true)]
 class CGQC_PlayerRosterConfig
 {
-	[Attribute(desc: "List of all recognized CGQC players")]
-	ref array<ref CGQC_PlayerEntry> m_aPlayers;
+	[Attribute("", UIWidgets.Object, "Per-rank player lists")]
+	ref array<ref CGQC_RankRosterConfig> m_aRankRosters;
 }

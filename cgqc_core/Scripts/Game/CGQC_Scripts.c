@@ -171,44 +171,49 @@ class CGQC_Scripts
 		PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
 	
 		CGQC_PlayerRosterConfig roster = CGQC_Scripts.LoadRosterConfig();
-		if (!roster || !roster.m_aPlayers)
+		if (!roster || !roster.m_aRankRosters)
 		{
 			Print("[CGQC_InitializePlayer] No valid roster config found, skipping.");
 			return;
 		}
 	
-		for (int i = 0; i < roster.m_aPlayers.Count(); i++)
+		foreach (CGQC_RankRosterConfig rankConfig : roster.m_aRankRosters)
 		{
-			CGQC_PlayerEntry entry = roster.m_aPlayers[i];
-			if (!entry || entry.m_sIdentityId != playerIdentityId)
+			if (!rankConfig || !rankConfig.m_aPlayers)
 				continue;
-	
-			PrintFormat("[CGQC_InitializePlayer] Matched: %1", entry.m_sLabel);
-	
-			// Admin features
-			if (!entry.m_sAdminTag.IsEmpty())
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, entry.m_sAdminTag);
-	
-			// Custom identity
-			if (!entry.m_sHeadPrefab.IsEmpty() && !entry.m_sBodyPrefab.IsEmpty())
-				GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
-	
-			// Rank
-			SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
-			if (!rankComp)
+
+			foreach (CGQC_PlayerEntry entry : rankConfig.m_aPlayers)
 			{
-				Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");
+				if (!entry || entry.m_sIdentityId != playerIdentityId)
+					continue;
+
+				PrintFormat("[CGQC_InitializePlayer] Matched: %1", entry.m_sLabel);
+
+				// Admin features
+				if (!entry.m_sAdminTag.IsEmpty())
+					GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, entry.m_sAdminTag);
+
+				// Custom identity
+				if (!entry.m_sHeadPrefab.IsEmpty() && !entry.m_sBodyPrefab.IsEmpty())
+					GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
+
+				// Rank
+				SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
+				if (!rankComp)
+				{
+					Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");
+					return;
+				}
+
+				SCR_ECharacterRank desiredRank = entry.m_iRank;
+				rankComp.SetCharacterRank(desiredRank);
+				PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+				GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
+
 				return;
 			}
-	
-			SCR_ECharacterRank desiredRank = entry.m_iRank;
-			rankComp.SetCharacterRank(desiredRank);
-			PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
-			GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
-	
-			return;
 		}
-	
+
 		Print("[CGQC_InitializePlayer] Player not in CGQC roster, no action taken.");
 	}
 		
