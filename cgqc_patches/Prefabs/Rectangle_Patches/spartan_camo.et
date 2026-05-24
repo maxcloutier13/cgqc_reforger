@@ -1,0 +1,21 @@
+GameEntity : "{5DB7E554E938C969}Prefabs/Rectangle_Patches/Rectangle_DemonHunter_Patch.et" {
+ ID "657C17E446464A1E"
+ components {
+  InventoryItemComponent "{657C17E446464A0E}" {
+   Attributes SCR_ItemAttributeCollection "{657C17E446464A0D}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{657C17E446464A0A}" {
+     Name "CGQC Spartan Camo"
+     Description "Yellow"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657C17E446464A39}" {
+   WornMaterialsOverride {
+    "{2165D3F313C92EC1}Assets/Rectangle_Patches/Spartan_Camo.emat"
+   }
+   ItemMaterialsOverride {
+    "{2165D3F313C92EC1}Assets/Rectangle_Patches/Spartan_Camo.emat"
+   }
+  }
+ }
+}

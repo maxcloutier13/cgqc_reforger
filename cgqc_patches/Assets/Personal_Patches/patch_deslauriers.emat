@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{4CFE56ACA5E4DA3E}Assets/Personal_Patches/patch_deslauriers.edds"
+}

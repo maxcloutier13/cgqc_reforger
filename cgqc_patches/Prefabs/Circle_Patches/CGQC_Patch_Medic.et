@@ -1,0 +1,30 @@
+GameEntity : "{31B8D047E27D9FF1}Prefabs/Circle_Patches/Patch_Reaper_Base.et" {
+ ID "657B0C0A4C1F9EDE"
+ components {
+  InventoryItemComponent "{657B0C0AEEF49C10}" {
+   Attributes SCR_ItemAttributeCollection "{657B0C0AEEF49C16}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{657B0C0AEEF49F14}" {
+     Name "CGQC Medic"
+     Description "GRS: Patch ODA 1112"
+    }
+   }
+  }
+  MeshObject "{657B0C0AEEEB7DCB}" {
+   Materials {
+    MaterialAssignClass "{694ACC69E70A09F8}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657B0C0AEEEB7D3C}" {
+   WornMaterialsOverride {
+    "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+   }
+   ItemMaterialsOverride {
+    "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+   }
+  }
+ }
+ scale 1.2
+}

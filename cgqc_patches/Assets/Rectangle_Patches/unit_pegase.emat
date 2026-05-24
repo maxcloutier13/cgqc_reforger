@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{A9D56FF5E356054B}Assets/Rectangle_Patches/patch_unit_pegase.edds"
+}

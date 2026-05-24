@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{615593AF3EF8ED6D}Assets/Personal_Patches/patch_trepanier.edds"
+}
