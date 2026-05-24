@@ -1,5 +1,0 @@
-MatPBRBasic {
- AllowUserAlphaBias 1
- DisableUserAphaInShadow 1
- BCRMap "{6AFA75197A6F577F}Assets/Personal_Patches/patch_genest.edds"
-}

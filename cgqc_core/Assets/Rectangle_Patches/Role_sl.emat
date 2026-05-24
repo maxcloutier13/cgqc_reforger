@@ -1,6 +1,0 @@
-MatPBRBasic {
- Color 0.546 0.531 0.481 1
- AllowUserAlphaBias 1
- DisableUserAphaInShadow 1
- BCRMap "{C177180622BC40A5}Assets/Rectangle_Patches/patch_role_sl.edds"
-}

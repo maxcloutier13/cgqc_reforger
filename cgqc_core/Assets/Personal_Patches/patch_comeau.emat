@@ -1,5 +1,0 @@
-MatPBRBasic {
- AllowUserAlphaBias 1
- DisableUserAphaInShadow 1
- BCRMap "{9CE918E37D30DB1F}Assets/Personal_Patches/patch_comeau.edds"
-}

@@ -1,5 +1,0 @@
-MatPBRBasic {
- AllowUserAlphaBias 1
- DisableUserAphaInShadow 1
- BCRMap "{92DB74B8532A4958}Assets/Personal_Patches/patch_fournier.edds"
-}

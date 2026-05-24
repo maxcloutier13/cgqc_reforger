@@ -1,5 +1,0 @@
-MatPBRBasic {
- AllowUserAlphaBias 1
- DisableUserAphaInShadow 1
- BCRMap "{E3AEECDEA01A6FBF}Assets/Rectangle_Patches/patch_section_grit2.edds"
-}
