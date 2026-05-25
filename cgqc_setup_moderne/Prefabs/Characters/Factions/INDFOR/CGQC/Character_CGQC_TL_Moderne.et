@@ -1,0 +1,109 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Team Leader"
+    IconSetName "EditableEntity_Character_Leader_Team"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{49B0013D16607291}Prefabs/5AB890B71D748750/Weapon_Variants_B/Rifle_M4_Variant_Block2_UGL_CGQC_TL.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{1DC780F58D0BF422}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo_lead.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{D03D4021EB1DA7BC}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Lead_RG_sTs_CGQC_TL.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{5451EE5DDF933200}Prefabs/Characters/Uniforms/Gloves/Ferro_Gun_Gloves/Ferro_Gun_Gloves_Black.et"
+    }
+    LoadoutSlotInfo Face {
+     Prefab "{80DFD9826F264764}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Balaclava/Arcteryx_Balaclava_Black.et"
+    }
+    LoadoutSlotInfo Extra2 {
+     Prefab "{7DF9CDB82621B14F}Prefabs/Characters/Uniforms/Accessories/Under_Shirt_Sleeves/Under_Shirt_Sleeves_Black.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{4BF6D3D9D5A63633}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Grenadier_RG_TL.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo_lead.et/GRS_StorageComponent/GRS_StorageComponent.et"
+    }
+    ItemsInitConfigurationItem "{6949249825AF0522}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Pistol_Mag_Front_Pouch/GRS_G24_Pouch_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF7046E3B}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Fanny_Pack/GRS_Fanny_Pack_2_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF756FA10}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Front_Pouch/GRS_AR_Flex_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF1943048}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Fanny_Pack/GRS_Fanny_Pack_2_RG.et"
+    }
+    ItemsInitConfigurationItem "{6949249A0AAABC84}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/Fanny_Pack/GRS_Fanny_Pack_2_RG.et"
+     PrefabsToSpawn + {
+      "{2BA3B074AE0BFF82}Prefabs/Weapons/Ammo/Ammo_Grenade_Marker_M713.et" "{2BA3B074AE0BFF82}Prefabs/Weapons/Ammo/Ammo_Grenade_Marker_M713.et" "{F4E0DBA5A9D60B96}Prefabs/Weapons/Ammo/Ammo_Grenade_Star_Cluster_XM663.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_TL.et/Placards/GRS_Placard_Spiritus_RG.et"
+     PrefabsToSpawn {
+      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_TL.et/RS_Front_Pouch/GRS_AR_Flex_Pouch_RG.et"
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_TL.et/Front_Admin_Pouch/GRS_Front_Large_Admin_Pouch_RG.et"
+     PrefabsToSpawn + {
+      "{F4E0DBA5A9D60B96}Prefabs/Weapons/Ammo/Ammo_Grenade_Star_Cluster_XM663.et" "{5A47CA2D94F2B675}Prefabs/Weapons/Ammo/40x46mm_Marker_Preview/M715_Green.et" "{63C02196E90E8437}Prefabs/Weapons/Ammo/40x46mm_Marker_Preview/M713_Red.et" ""
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_TL.et/LS_Rear_Pouch/GRS_Side_Pouch_2_RG.et"
+     PrefabsToSpawn + {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_TL.et/RS_Rear_Pouch/GRS_Side_Pouch_1_RG.et"
+     PrefabsToSpawn {
+      "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et" "{78C157CDD0F85279}Prefabs/Weapons/Grenades/Chemlight_IR_D3CLS.et" "{BDE45691D3DD8DEB}Prefabs/Weapons/Grenades/Chemlight_Green_D3CLS.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971326DC3A0C29A}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Side_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971326DD877002D}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/LS_Rear_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et" "{5375FA7CB1F68573}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_M406.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971326DD7A2E8C6}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Grenadier_RG_TL.et/RS_Rear_Pouch/BM_40MM_Double_Pouch_RG.et"
+     PrefabsToSpawn {
+      "{1663496AE5B9F10B}Prefabs/Weapons/Ammo/Ammo_Grenade_HEDP_M433.et" "{1663496AE5B9F10B}Prefabs/Weapons/Ammo/Ammo_Grenade_HEDP_M433.et"
+     }
+    }
+   }
+  }
+ }
+}
