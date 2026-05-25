@@ -10,17 +10,17 @@ GenericEntity {
    "Turned on" 1
    Transceivers {
     RelayTransceiver "{692912010553148F}" {
-     ChannelFrequency 38000
-     "Transmitting Range" 5000
+     ChannelFrequency 48000
+     "Transmitting Range" 8000
      "Min tunable frequency" 34000
-     "Max tunable frequency" 68000
+     "Max tunable frequency" 80000
      "Frequency resolution" 100
     }
     RelayTransceiver "{692912038B0FC84F}" {
-     ChannelFrequency 48000
+     ChannelFrequency 70000
      "Transmitting Range" 10000
      "Min tunable frequency" 41000
-     "Max tunable frequency" 68000
+     "Max tunable frequency" 80000
      "Frequency resolution" 100
     }
    }
