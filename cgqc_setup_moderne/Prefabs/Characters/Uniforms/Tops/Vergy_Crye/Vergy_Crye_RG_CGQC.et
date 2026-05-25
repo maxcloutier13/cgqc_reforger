@@ -12,15 +12,16 @@ GameEntity : "{EDB998C9B424A3C5}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Verg
   BaseLoadoutClothComponent "{5104869D194C627A}" {
    Slots {
     GRS_MorphSlotComponent Upper_Right_Patch {
-     Prefab "{8DEC3C6B7063AE11}Prefabs/Flag_Patches/spartan_camo_up.et"
+     Prefab "{0618AA7A706FAC2D}Prefabs/Unit_Patches/unit_spartan.et"
     }
     GRS_MorphSlotComponent Lower_Right_Patch {
+     Prefab "{D6D502301484882C}Prefabs/Role_Patches/role_inf.et"
     }
     GRS_MorphSlotComponent Upper_Left_Patch {
-     Prefab "{679108DC957C9420}Prefabs/Flag_Patches/Quebec_Flag_Color.et"
+     Prefab "{D4CC1D67D3130236}Prefabs/Flag_Patches/flag_qc.et"
     }
     GRS_MorphSlotComponent Lower_Left_Patch {
-     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+     Prefab "{144F61655BC22A09}Prefabs/Section_Patches/patch_cgqc.et"
     }
    }
    WornMaterialsOverride {

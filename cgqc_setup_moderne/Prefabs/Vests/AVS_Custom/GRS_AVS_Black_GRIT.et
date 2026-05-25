@@ -18,7 +18,7 @@ GenericEntity : "{CE1E02F9A3B8B1E0}Prefabs/Vests/AVS_Custom/GRS_AVS_Base.et" {
      Prefab "{C9A4E563205BAC75}Prefabs/Accessories/GRS_TQ.et"
     }
     LoadoutSlotInfo Other_Patch {
-     Prefab "{B0D47F45F3C7294C}Prefabs/Rectangle_Patches/section_grit.et"
+     Prefab "{B2C8078B1B7B5407}Prefabs/Section_Patches/section_grit_clean.et"
     }
     LoadoutSlotInfo LS_Rear_Pouch {
      Prefab "{6EC53B7B437B0D12}Prefabs/Pouches/Black/GRS_Side_Pouch_1_Black.et"

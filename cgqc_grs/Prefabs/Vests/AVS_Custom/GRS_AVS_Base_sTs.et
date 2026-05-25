@@ -11,7 +11,7 @@ GenericEntity : "{CE1E02F9A3B8B1E0}Prefabs/Vests/AVS_Custom/GRS_AVS_Base.et" {
   BaseLoadoutClothComponent "{65696E47E5268667}" {
    Slots {
     LoadoutSlotInfo Other_Patch {
-     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
+     Prefab "{F20A13563AFED116}Prefabs/Unit_Patches/spartan_camo.et"
     }
    }
   }

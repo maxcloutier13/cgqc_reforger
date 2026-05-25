@@ -15,6 +15,9 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Hat {
      Prefab "{3365643DACF080EF}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_CGQC_black.et"
     }
+    LoadoutSlotInfo Jacket {
+     Prefab "{30B17FA64E5C8BDC}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo.et"
+    }
     LoadoutSlotInfo ArmoredVest {
      Prefab "{015E3E3E0D9212B1}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Rifleman_RG_V1_sTs.et"
     }
@@ -43,6 +46,9 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo.et/GRS_StorageComponent/GRS_StorageComponent.et"
+    }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
      TargetStorage "ArmoredVest/GRS_AVS_Rifleman_RG_V1_sTs.et/Placards/GRS_Placard_DualAR_Flex_RG.et"
      PrefabsToSpawn {

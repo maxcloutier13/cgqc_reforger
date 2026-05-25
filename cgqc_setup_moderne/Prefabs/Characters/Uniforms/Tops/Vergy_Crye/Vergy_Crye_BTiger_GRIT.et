@@ -12,16 +12,16 @@ GameEntity : "{EDB998C9B424A3C5}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Verg
   BaseLoadoutClothComponent "{5104869D194C627A}" {
    Slots {
     GRS_MorphSlotComponent Upper_Right_Patch {
-     Prefab "{B0D47F45F3C7294C}Prefabs/Rectangle_Patches/section_grit.et"
+     Prefab "{B0D47F45F3C7294C}Prefabs/Section_Patches/section_grit.et"
     }
     GRS_MorphSlotComponent Lower_Right_Patch {
-     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+     Prefab "{967320383A43C323}Prefabs/Section_Patches/patch_cgqc_notext.et"
     }
     GRS_MorphSlotComponent Upper_Left_Patch {
-     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
+     Prefab "{51EEBD4C939A66FC}Prefabs/Flag_Patches/flag_qc_black.et"
     }
     GRS_MorphSlotComponent Lower_Left_Patch {
-     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+     Prefab "{967320383A43C323}Prefabs/Section_Patches/patch_cgqc_notext.et"
     }
    }
    WornMaterialsOverride {
