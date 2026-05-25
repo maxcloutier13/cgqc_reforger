@@ -1,0 +1,31 @@
+GenericEntity : "{ED28005C64741DBC}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Lead_RG_sTs.et" {
+ ID "65696E47F20A81F7"
+ components {
+  ClothNodeStorageComponent "{65696E47E5263D95}" {
+   Attributes SCR_ItemAttributeCollection "{65696E47E5263C61}" {
+    ItemDisplayName UIInfo "{65696E47E5263C47}" {
+     Name "CGQC - RG - TeamLeader"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65696E47E5268667}" {
+   Slots {
+    LoadoutSlotInfo Placards {
+     Prefab "{A7A6B1C92715161D}Prefabs/Pouches/RG/GRS_Placard_Spiritus_RG.et"
+    }
+    LoadoutSlotInfo Garmin {
+     Prefab ""
+    }
+    LoadoutSlotInfo Atak {
+     Prefab "{928F80FF0470FFF1}Prefabs/Kagwerks/GRS_Kagwerks_01_CGQC.et"
+    }
+    LoadoutSlotInfo Other_Patch {
+     Prefab ""
+    }
+    LoadoutSlotInfo Rear_Carabiner {
+     Prefab ""
+    }
+   }
+  }
+ }
+}

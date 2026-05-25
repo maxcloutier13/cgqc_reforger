@@ -1,0 +1,32 @@
+GameEntity : "{73DE9EBFF20E5E8A}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Coy.et" {
+ ID "50D485E1435D6C72"
+ components {
+  RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "OPSCORE SF RgrGr CGQC"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    RHS_LoadoutSlotInfo BackVelcro {
+     Prefab "{F20A13563AFED116}Prefabs/Rectangle_Patches/spartan_camo.et"
+    }
+    RHS_LoadoutSlotInfo NVG {
+     Prefab "{B385064A383A384B}Prefabs/Items/Equipment/Nightvision/PVS14/NVG_PVS14Dual_WP.et"
+    }
+    RHS_LoadoutSlotInfo TopVelcro {
+     Prefab "{5F7EF7FEBC39B874}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{74F488949C813D17}Assets/Characters/HeadGear/Helmet_OPSCORE/Data/LWstraps_BLK.emat" "{6C569F7A00010439}Assets/Characters/HeadGear/Helmet_OPSCORE_SF/data/opscore_SF_RGR.emat"
+   }
+   ItemMaterialsOverride {
+    "{6C569F7A00010439}Assets/Characters/HeadGear/Helmet_OPSCORE_SF/data/opscore_SF_RGR.emat" ""
+   }
+   DebugWornModel 0
+  }
+ }
+}

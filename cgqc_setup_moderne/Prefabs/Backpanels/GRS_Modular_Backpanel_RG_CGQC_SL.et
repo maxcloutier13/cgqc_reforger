@@ -1,0 +1,32 @@
+GenericEntity : "{C62D15B74E2FB00A}Prefabs/Backpanels/GRS_Modular_Backpanel_Base.et" {
+ ID "65CD429FE6DF99B3"
+ components {
+  ClothNodeStorageComponent "{65CD429FDC9C42F4}" {
+   Attributes SCR_ItemAttributeCollection "{65CD429FDC9C42CA}" {
+    ItemDisplayName UIInfo "{65CD429FDC9C4D6A}" {
+     Name "CGQC: Modular Backpanel - RG - SL"
+     Description "GRS: Modular Backpanel - RG"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CD429FDC9C44A2}" {
+   Slots {
+    LoadoutSlotInfo Pouches_LEGACY {
+     Prefab "{D4082E6586B8BF8A}Prefabs/Pouches/Backpack_Pouches/GRS_Backpanel_Pouch_RG_CGQC.et"
+    }
+    LoadoutSlotInfo Radio {
+     Prefab "{BCD99F95866F1FFD}Prefabs/Pouches/Base/GRS_Radio_MPU5_V2_Pouch.et"
+    }
+    LoadoutSlotInfo Antenna {
+     Prefab "{BC5C9481C4135B5E}Prefabs/Accessories/GRS_Large_Antenna.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat"
+   }
+   ItemMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat"
+   }
+  }
+ }
+}

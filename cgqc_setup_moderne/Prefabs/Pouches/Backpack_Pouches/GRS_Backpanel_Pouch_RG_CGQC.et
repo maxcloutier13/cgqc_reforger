@@ -1,0 +1,29 @@
+GenericEntity : "{ACF6A2D2555A1FE8}Prefabs/Pouches/Backpack_Pouches/GRS_Backpanel_Pouch_Base.et" {
+ ID "65CC0BE144C4CC6C"
+ components {
+  GRS_EquipmentStorageComponent "{65CC0BE1EF2EC37F}" {
+   Attributes SCR_ItemAttributeCollection "{65CC0BE1EF2EC3A9}" {
+    ItemDisplayName UIInfo "{65CC0BE1EF2EC3EA}" {
+     Name "GRS: Backpanel Setup 1 - RG"
+     Description "GRS: Backpanel Setup 1 - RG"
+    }
+   }
+   InitialStorageSlots {
+    GRS_PatchStorageSlot Top_Patch {
+     Prefab "{3FF7AE01A5201EE1}Prefabs/Circle_Patches/CGQC_Patch_NewLogo_embroidery.et"
+    }
+    GRS_PatchStorageSlot Bottom_Patch {
+     Prefab "{F20A13563AFED116}Prefabs/Rectangle_Patches/spartan_camo.et"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{65CC0BE1EF2EC2C4}" {
+   WornMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat" ""
+   }
+   ItemMaterialsOverride {
+    "{E3A9C5FE23248F96}Assets/Pouches/RG/BackPanel_Spiritus_RG.emat" ""
+   }
+  }
+ }
+}

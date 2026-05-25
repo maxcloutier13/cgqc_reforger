@@ -13,8 +13,13 @@ GenericEntity : "{F0750790900672D1}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Gren
     LoadoutSlotInfo Fanny_Pack {
      Prefab "{485990EEAEA3E68C}Prefabs/Pouches/RG/GRS_Fanny_Pack_2_RG.et"
     }
+    LoadoutSlotInfo RS_Front_Carabiner {
+     Prefab "{F7F46C2A4B951304}Prefabs/Accessories/GRS_Carabiner_Gloves.et"
+    }
     LoadoutSlotInfo Middle_Rear_Pouch {
-     Prefab "{70AC93BA0D3C3BCA}Prefabs/Pouches/RG/GRS_Rear_Medic_Pouch_RG.et"
+    }
+    LoadoutSlotInfo Rear_Carabiner_Accessory {
+     Prefab "{CBD2C31FBB5A09A0}Prefabs/Accessories/Chemlights/Emissive/BM_Rear_Carabiner_Chemlights_Green_EM.et"
     }
    }
   }

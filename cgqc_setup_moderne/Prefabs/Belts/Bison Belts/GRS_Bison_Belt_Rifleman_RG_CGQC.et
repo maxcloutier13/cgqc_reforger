@@ -11,11 +11,15 @@ GenericEntity : "{5C9B3C4E15FF604E}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifl
   }
   BaseLoadoutClothComponent "{65CD429C8E98BBEE}" {
    Slots {
+    LoadoutSlotInfo Holster_Strap {
+    }
+    LoadoutSlotInfo Holster {
+    }
     LoadoutSlotInfo Pistol_Mag_Pouch {
-     Prefab "{7AA1ED587E949E15}Prefabs/Pouches/RG/GRS_G24_Pouch_RG.et"
+     Prefab "{41B7FBD1BB1E4B3D}Prefabs/Pouches/RG/GRS_Angled_G24_Pouch_RG.et"
     }
     LoadoutSlotInfo Pistol_Mag_Pouch_2 {
-     Prefab "{7AA1ED587E949E15}Prefabs/Pouches/RG/GRS_G24_Pouch_RG.et"
+     Prefab "{41B7FBD1BB1E4B3D}Prefabs/Pouches/RG/GRS_Angled_G24_Pouch_RG.et"
     }
     LoadoutSlotInfo RS_Front_Carabiner {
      Prefab ""
@@ -24,6 +28,7 @@ GenericEntity : "{5C9B3C4E15FF604E}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Rifl
      Prefab ""
     }
     LoadoutSlotInfo LS_Side_Pouch {
+     Offset -0.1806 0.0829 -0.0013
      Prefab "{7AC21524915A0F98}Prefabs/Pouches/RG/GRS_Side_Pouch_1_RG.et"
     }
     LoadoutSlotInfo Rear_Carabiner_Accessory {

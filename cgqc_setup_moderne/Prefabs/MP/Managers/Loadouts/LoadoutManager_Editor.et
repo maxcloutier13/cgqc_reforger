@@ -2,20 +2,48 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
-   m_sLoadoutResource "{80AE18B31FA21033}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne.et"
+   m_sLoadoutName "Soldat (Garnison)"
+   m_sLoadoutResource "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A4F5D50C}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
+   m_sLoadoutName "TeamLeader"
+   m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TL_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
+   m_sLoadoutName "SquadLeader"
+   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SL_Moderne.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
+   m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
-   m_sLoadoutResource "{AF849499F67BAD7F}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TeamLeader_Moderne.et"
+   m_sLoadoutResource "{AF849499F67BAD7F}Prefabs/Characters/Factions/INDFOR/CGQC/Old/Character_CGQC_TeamLeader_Moderne.et"
+   m_sAffiliatedFaction "CGQC_OLD"
   }
-  SCR_FactionPlayerLoadout "{694D075CC12B55EE}" {
-   m_sLoadoutName "Squad Leader"
-   m_sLoadoutResource "{275D1C3FE4EC157B}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SquadLeader_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
+  SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
+   m_sAffiliatedFaction "CGQC_OLD"
   }
-  SCR_FactionPlayerLoadout "{6950F2D773EF2CE0}" {
-   m_sLoadoutName "Sniper"
-   m_sLoadoutResource "{C8CB273EFB0E2140}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Sniper_Moderne.et"
-   m_sAffiliatedFaction "CGQC"
+  SCR_FactionPlayerLoadout "{69510DF07E6889CC}" {
+   m_sAffiliatedFaction "CGQC_OLD"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFC5F4FA5C}" {
+   m_sAffiliatedFaction "CGQC_OLD"
+  }
+  SCR_FactionPlayerLoadout "{69510DFE15F74B63}" {
+   m_sAffiliatedFaction "CGQC_OLD"
+  }
+  SCR_FactionPlayerLoadout "{69510DF0612CD5CA}" {
+   m_sAffiliatedFaction "CGQC_OLD"
+  }
+  SCR_FactionPlayerLoadout "{69510DF07F6BB06B}" {
+   m_sAffiliatedFaction "CGQC_OLD"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFB04BDC03}" {
+   m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_PlayerArsenalLoadout "{696D113D358F3EAE}" {
    m_sLoadoutName "GRIT  Saved Loadout"

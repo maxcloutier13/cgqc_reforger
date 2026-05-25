@@ -17,7 +17,8 @@ GenericEntity : "{61C6D75066FC1964}Prefabs/5AB890B71D748750/Weapon_Variants_B/Ri
     }
     AttachmentSlotComponent "{60A4B045D1BB26C7}" {
      AttachmentSlot InventoryStorageSlot Optics {
-      Prefab "{61ECD3C29600A4BC}Prefabs/Weapons/Attachments/BaconOptics/Bacon_Specter.et"
+      Offset 0 0 0.0097
+      Prefab "{04FF74C0F9DCD368}Scopes/EoTech VUDU 1-6x24/Prefabs/Optic_VUDU16.et"
      }
     }
     AttachmentSlotComponent "{60A4B045D1BB26CB}" {
