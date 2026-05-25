@@ -14,6 +14,7 @@ GameEntity : "{6E8633D9C5802A4A}Prefabs/Characters/HeadGear/Hat_RadiovkaBeret_01
      Description "CGQC"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{59DCE0608EB82CD1}" {
+     Weight 0.1
      ItemVolume 10
     }
     CustomAttributes {
