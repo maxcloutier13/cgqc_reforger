@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{A718CBDCB29EF754}Assets/Morale_Patches/patch_morale_20.edds"
+}

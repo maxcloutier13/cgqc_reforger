@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{79F0FAA45113C759}Assets/Morale_Patches/patch_morale_blackbeard.edds"
+}

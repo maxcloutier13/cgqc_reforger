@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{D0DFA4F9D44626E4}Assets/Unit_Patches/patch_section_grit_clean.edds"
+}

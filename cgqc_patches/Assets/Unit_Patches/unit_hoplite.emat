@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{55281FAB47BC9FB4}Assets/Unit_Patches/patch_unit_hoplite.edds"
+}
