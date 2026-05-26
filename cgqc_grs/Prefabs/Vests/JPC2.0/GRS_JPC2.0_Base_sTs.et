@@ -11,7 +11,7 @@ GenericEntity : "{41078ADB1A1C335F}Prefabs/Vests/JPC2.0/GRS_JPC2.0_Base.et" {
   BaseLoadoutClothComponent "{65735466845956AE}" {
    Slots {
     LoadoutSlotInfo Other_Patch {
-     Prefab "{4E548264220D649A}Prefabs/Flag_Patches/Quebec_Flag_Camo.et"
+     Prefab "{F20A13563AFED116}Prefabs/Unit_Patches/spartan_camo.et"
     }
    }
   }
