@@ -1,0 +1,17 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  CGQC_CasualtyComponent "{6976DEDAEF700357}" {
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    CGQC_BorrowAction "{6976E268DB88141C}" {
+     ParentContextList {
+      "Chest"
+     }
+     Duration 0.5
+    }
+   }
+  }
+ }
+}

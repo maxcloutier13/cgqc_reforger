@@ -2,6 +2,7 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
  ID "508AB2013EEE1E00"
  components {
   ACE_Medical_MedicalKitInventoryStorageComponent "{5E4E8A7876A50FDC}" {
+   Priority -50
    MultiSlots {
     MultiSlotConfiguration "{66E81CB8294EABB5}" {
      NumSlots 15
