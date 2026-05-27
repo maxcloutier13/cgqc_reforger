@@ -29,5 +29,25 @@ GenericEntity : "{9DE547DE239F120C}Prefabs/Items/Equipment/Accessories/Pouch_ALI
     }
    }
   }
+  ActionsManagerComponent "{521AC04910AB992B}" {
+   additionalActions {
+    SCR_PickUpItemAction "{697621526CD2D5D9}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6976215275DB9573}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+    SCR_OpenStorageAction "{69762152681631C2}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69762151FEC61CE3}" {
+      Name "#AR-Inventory_OpenStorage"
+     }
+    }
+   }
+  }
  }
 }
