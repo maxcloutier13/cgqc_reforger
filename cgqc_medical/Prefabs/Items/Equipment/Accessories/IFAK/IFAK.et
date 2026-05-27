@@ -9,6 +9,7 @@ GenericEntity : "{9DE547DE239F120C}Prefabs/Items/Equipment/Accessories/Pouch_ALI
      ItemVolume 50
     }
    }
+   Priority -50
    MultiSlots {
     MultiSlotConfiguration "{659077396DD91AB7}" {
      NumSlots 2
