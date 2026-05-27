@@ -98,7 +98,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "Back/GRS_Modular_Backpanel_Black_GRIT.et/Pouches_LEGACY/GRS_Backpanel_Demo_GRIT.et"
+     TargetStorage "Back/GRS_Modular_Backpanel_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
       "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et"
      }
