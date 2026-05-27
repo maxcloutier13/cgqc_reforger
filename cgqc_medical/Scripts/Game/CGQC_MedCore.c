@@ -1,17 +1,7 @@
 class CGQC_MedCore
 {
-	// Debug Logging
-	static bool s_bDebugEnabled  = false;
-	
-	//------------------------------------------------------------------------------------------------
-	static void Log(string msg)
-	{
-		if (!s_bDebugEnabled )
-			return;
-
-		Print(string.Format("[CGQC_Medical] %1", msg));
-	}
-
+	// Toggle debug prints (default OFF for server efficiency)
+	static bool s_bDebugEnabled = false;
 
 	// All borrowable kit container prefabs. Must match CGQC_MedUtils constants.
 	static ref array<ResourceName> MED_KIT_PREFABS = {
@@ -19,33 +9,18 @@ class CGQC_MedCore
 		"{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et",
 		"{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et"
 	};
-	
-	static BaseInventoryStorageComponent FindNonKitStorage(SCR_InventoryStorageManagerComponent invMgr)
-	{
-	    array<IEntity> items = {};
-	    invMgr.GetItems(items, EStoragePurpose.PURPOSE_ANY);
-	
-	    foreach (IEntity it : items)
-	    {
-	        if (!it)
-	            continue;
-	
-	        if (CGQC_MedUtils.IsMedKitContainer(GetPrefabNameSafe(it)))
-	            continue;
-	
-	        BaseInventoryStorageComponent storage = BaseInventoryStorageComponent.Cast(
-	            it.FindComponent(BaseInventoryStorageComponent)
-	        );
-	
-	        if (storage)
-	            return storage;
-	    }
-	
-	    return null;
-	}
 
-	// Distance guard (meters). Keep in sync with CGQC_CasualtyComponent.
+	// Distance guard in meters. Keep in sync with CGQC_CasualtyComponent.
 	static const float MAX_BORROW_DISTANCE = 5.0;
+
+	//------------------------------------------------------------------------------------------------
+	static void Log(string msg)
+	{
+		if (!s_bDebugEnabled)
+			return;
+
+		Print(string.Format("[CGQC_Medical] %1", msg));
+	}
 
 	//------------------------------------------------------------------------------------------------
 	// Server-side: returns true only for real player-controlled characters.
@@ -207,7 +182,7 @@ class CGQC_MedCore
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// Returns the parent storage component of an item (e.g. the vest pocket storage that holds it).
+	// Returns the parent storage component of an item (e.g. the vest attachment storage that holds it).
 	static BaseInventoryStorageComponent GetParentStorageOfItem(IEntity item)
 	{
 		if (!item)
@@ -226,7 +201,7 @@ class CGQC_MedCore
 
 	//------------------------------------------------------------------------------------------------
 	// Snapshot the ResourceNames of all children inside a kit container.
-	// Used to duplicate kit contents during borrow and to diff provider consumption on return.
+	// Used by reconciliation to diff provider consumption during the borrow window.
 	static void SnapshotKitContents(IEntity kit, SCR_InventoryStorageManagerComponent invMgr, out array<ResourceName> outPrefabs)
 	{
 		outPrefabs.Clear();
@@ -256,98 +231,14 @@ class CGQC_MedCore
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// Deletes all children inside a kit container (used to wipe default contents of a freshly spawned copy).
-	static void ClearKitContents(IEntity kit, SCR_InventoryStorageManagerComponent invMgr)
-	{
-		if (!kit || !invMgr)
-			return;
-
-		BaseInventoryStorageComponent storage = BaseInventoryStorageComponent.Cast(kit.FindComponent(BaseInventoryStorageComponent));
-		if (!storage)
-		{
-			Log("ClearKitContents: kit has no BaseInventoryStorageComponent.");
-			return;
-		}
-
-		array<IEntity> children = {};
-		invMgr.GetAllItems(children, storage);
-
-		int deleted = 0;
-
-		foreach (IEntity it : children)
-		{
-			if (!it || it == kit)
-				continue;
-
-			if (invMgr.TryDeleteItem(it))
-				deleted++;
-		}
-
-		Log(string.Format("ClearKitContents: deleted %1 items.", deleted));
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// Spawns a list of prefabs into a kit container (used to restore a snapshot into a fresh copy).
-	static void FillKitContents(IEntity kit, SCR_InventoryStorageManagerComponent invMgr, array<ResourceName> prefabs)
-	{
-		if (!kit || !invMgr)
-			return;
-
-		BaseInventoryStorageComponent storage = BaseInventoryStorageComponent.Cast(kit.FindComponent(BaseInventoryStorageComponent));
-		if (!storage)
-		{
-			Log("FillKitContents: kit has no BaseInventoryStorageComponent.");
-			return;
-		}
-
-		foreach (ResourceName rn : prefabs)
-		{
-			if (rn == "")
-				continue;
-
-			invMgr.TrySpawnPrefabToStorage(rn, storage, -1, EStoragePurpose.PURPOSE_ANY);
-		}
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// After spawning a new kit into an inventory, finds the newly added entity by comparing before/after.
-	static IEntity FindNewlySpawnedKit(SCR_InventoryStorageManagerComponent invMgr, array<IEntity> beforeItems, ResourceName kitPrefab)
-	{
-		array<IEntity> afterItems = {};
-		invMgr.GetItems(afterItems, EStoragePurpose.PURPOSE_ANY);
-
-		foreach (IEntity it : afterItems)
-		{
-			if (!it)
-				continue;
-
-			if (GetPrefabNameSafe(it) != kitPrefab)
-				continue;
-
-			bool existedBefore = false;
-			foreach (IEntity b : beforeItems)
-			{
-				if (b == it)
-				{
-					existedBefore = true;
-					break;
-				}
-			}
-
-			if (!existedBefore)
-				return it;
-		}
-
-		return null;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// Executes a borrow: snapshots the casualty's kit, spawns an identical copy in the borrower's
-	// inventory (same prefab, same contents), then deletes the original from the casualty.
+	// Moves the casualty's actual kit entity into the borrower's inventory using InsertItem.
+	// Captures the kit's original storage on the casualty before moving, so it can be
+	// returned to the exact same slot later.
 	// Server-only.
-	static bool ExecuteBorrow(IEntity casualty, IEntity borrower, IEntity casualtyKit, out IEntity outBorrowedKit)
+	static bool ExecuteBorrow(IEntity casualty, IEntity borrower, IEntity casualtyKit, out IEntity outBorrowedKit, out BaseInventoryStorageComponent outOriginalStorage)
 	{
 		outBorrowedKit = null;
+		outOriginalStorage = null;
 
 		if (!Replication.IsServer())
 			return false;
@@ -355,77 +246,39 @@ class CGQC_MedCore
 		if (!casualty || !borrower || !casualtyKit)
 			return false;
 
-		SCR_InventoryStorageManagerComponent casInv = GetInvMgr(casualty);
 		SCR_InventoryStorageManagerComponent borInv = GetInvMgr(borrower);
-		if (!casInv || !borInv)
+		if (!borInv)
 			return false;
 
-		ResourceName kitPrefab = GetPrefabNameSafe(casualtyKit);
-		if (kitPrefab == "")
-			return false;
+		// Capture the casualty's original storage slot BEFORE moving.
+		// Used on return to push the kit back to the exact same slot,
+		// bypassing inventory state checks on the unconscious casualty.
+		outOriginalStorage = GetParentStorageOfItem(casualtyKit);
 
-		// 1. Snapshot existing contents
-		array<ResourceName> snapshot = {};
-		SnapshotKitContents(casualtyKit, casInv, snapshot);
-		Log(string.Format("ExecuteBorrow: snapped %1 items from casualty kit.", snapshot.Count()));
+		Log("ExecuteBorrow: inserting kit into borrower inventory.");
 
-		// 2. Spawn a fresh copy of the same kit prefab into borrower inventory
-		array<IEntity> before = {};
-		borInv.GetItems(before, EStoragePurpose.PURPOSE_ANY);
-		
-		//bool spawned = borInv.TrySpawnPrefabToStorage(kitPrefab, null, -1, EStoragePurpose.PURPOSE_ANY);
-		BaseInventoryStorageComponent targetStorage = FindNonKitStorage(borInv);
-		bool spawned = borInv.TrySpawnPrefabToStorage(kitPrefab, targetStorage, -1, EStoragePurpose.PURPOSE_ANY);
+		// InsertItem uses multiple fallback strategies and handles clothing-type items
+		// (BaseLoadoutClothComponent) more reliably than TrySpawnPrefabToStorage.
+		borInv.InsertItem(casualtyKit);
 
-		if (!spawned)
+		if (!IsMedKitInInventory(borrower, casualtyKit))
 		{
-			array<IEntity> dbgItems = {};
-		    borInv.GetItems(dbgItems, EStoragePurpose.PURPOSE_ANY);
-		    CGQC_MedCore.Log(string.Format("ExecuteBorrow: GetItems returned %1 items after spawn.", dbgItems.Count()));
-		    
-		    foreach (IEntity dbgIt : dbgItems)
-		    {
-		        if (!dbgIt) continue;
-		        CGQC_MedCore.Log(string.Format("  - %1", GetPrefabNameSafe(dbgIt)));
-		    }
-			Log("ExecuteBorrow: failed to spawn borrowed kit into borrower inventory.");
+			Log("ExecuteBorrow: InsertItem failed - kit not found in borrower inventory after insert.");
 			return false;
 		}
 
-		IEntity borrowedKit = FindNewlySpawnedKit(borInv, before, kitPrefab);
-		if (!borrowedKit)
-		{
-		    array<IEntity> dbgItems = {};
-		    borInv.GetItems(dbgItems, EStoragePurpose.PURPOSE_ANY);
-		    Log(string.Format("ExecuteBorrow: GetItems sees %1 items after spawn.", dbgItems.Count()));
-		    foreach (IEntity dbgIt : dbgItems)
-		    {
-		        if (!dbgIt)
-		            continue;
-		        Log(string.Format("  - %1", GetPrefabNameSafe(dbgIt)));
-		    }
-		
-		    Log("ExecuteBorrow: could not locate newly spawned kit in borrower inventory.");
-		    return false;
-		}
-
-		// 3. Clear default fill, restore casualty's snapshot
-		ClearKitContents(borrowedKit, borInv);
-		FillKitContents(borrowedKit, borInv, snapshot);
-
-		// 4. Remove the original from the casualty
-		if (!casInv.TryDeleteItem(casualtyKit))
-			Log("ExecuteBorrow: failed to delete casualty's original kit.");
-
-		outBorrowedKit = borrowedKit;
+		outBorrowedKit = casualtyKit;
+		Log("ExecuteBorrow: kit inserted successfully.");
 		return true;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// Executes a return: snapshots the borrowed kit's remaining contents, spawns an identical copy
-	// back on the casualty, then deletes the borrowed kit from the borrower.
+	// Moves the borrowed kit entity back to the casualty using the borrower's inventory manager,
+	// targeting the casualty's original storage slot directly.
+	// Using the borrower's (active) inv manager bypasses inventory state restrictions
+	// on the unconscious casualty.
 	// Server-only.
-	static bool ExecuteReturn(IEntity borrower, IEntity casualty, IEntity borrowedKit)
+	static bool ExecuteReturn(IEntity borrower, IEntity casualty, IEntity borrowedKit, BaseInventoryStorageComponent originalStorage)
 	{
 		if (!Replication.IsServer())
 			return false;
@@ -433,58 +286,34 @@ class CGQC_MedCore
 		if (!casualty || !borrowedKit)
 			return false;
 
-		SCR_InventoryStorageManagerComponent casInv = GetInvMgr(casualty);
-		if (!casInv)
+		SCR_InventoryStorageManagerComponent borInv = GetInvMgr(borrower);
+		if (!borInv)
 			return false;
 
-		ResourceName kitPrefab = GetPrefabNameSafe(borrowedKit);
-		if (kitPrefab == "")
-			return false;
+		Log("ExecuteReturn: pushing kit back to casualty original storage.");
 
-		// 1. Snapshot what's left in the borrowed kit
-		array<ResourceName> snapshot = {};
-		SCR_InventoryStorageManagerComponent borInv = null;
-
-		if (borrower)
-			borInv = GetInvMgr(borrower);
-
-		if (borInv)
-			SnapshotKitContents(borrowedKit, borInv, snapshot);
-
-		Log(string.Format("ExecuteReturn: snapped %1 remaining items from borrowed kit.", snapshot.Count()));
-
-		// 2. Spawn a fresh copy of the same kit on the casualty
-		array<IEntity> before = {};
-		casInv.GetItems(before, EStoragePurpose.PURPOSE_ANY);
-
-		//bool spawned = casInv.TrySpawnPrefabToStorage(kitPrefab, null, -1, EStoragePurpose.PURPOSE_ANY);
-		
-		BaseInventoryStorageComponent targetStorage = FindNonKitStorage(casInv);
-		bool spawned = casInv.TrySpawnPrefabToStorage(kitPrefab, targetStorage, -1, EStoragePurpose.PURPOSE_ANY);
-		if (!spawned)
+		// Push from borrower's active inv manager to the casualty's original slot.
+		// Targeting the specific original storage bypasses the unconscious inv state check.
+		bool moved = borInv.TryMoveItemToStorage(borrowedKit, originalStorage, -1, null);
+		if (!moved)
 		{
-			Log("ExecuteReturn: failed to spawn kit back onto casualty.");
+			// Fallback: try without targeting a specific storage, in case original slot is gone.
+			Log("ExecuteReturn: original storage failed, trying casualty inv manager fallback.");
+			SCR_InventoryStorageManagerComponent casInv = GetInvMgr(casualty);
+			if (casInv)
+			{
+				casInv.InsertItem(borrowedKit);
+				moved = IsMedKitInInventory(casualty, borrowedKit);
+			}
+		}
+
+		if (!moved)
+		{
+			Log("ExecuteReturn: all return strategies failed.");
 			return false;
 		}
 
-		IEntity returnedKit = FindNewlySpawnedKit(casInv, before, kitPrefab);
-		if (!returnedKit)
-		{
-			Log("ExecuteReturn: could not locate newly spawned kit on casualty.");
-			return false;
-		}
-
-		// 3. Clear default fill, restore snapshot
-		ClearKitContents(returnedKit, casInv);
-		FillKitContents(returnedKit, casInv, snapshot);
-
-		// 4. Delete borrowed copy from borrower
-		if (borInv)
-		{
-			if (!borInv.TryDeleteItem(borrowedKit))
-				Log("ExecuteReturn: could not delete borrowed kit from borrower (may have been dropped).");
-		}
-
+		Log("ExecuteReturn: kit returned successfully.");
 		return true;
 	}
 

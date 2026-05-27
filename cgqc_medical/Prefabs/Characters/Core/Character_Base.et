@@ -11,6 +11,13 @@ SCR_ChimeraCharacter {
      }
      Duration 0.5
     }
+    CGQC_ReturnAction "{69773A49477A1204}" {
+     ParentContextList {
+      "Chest"
+     }
+     Duration 0.5
+     "Sort Priority" 50
+    }
    }
   }
  }

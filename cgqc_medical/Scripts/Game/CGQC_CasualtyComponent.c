@@ -1,12 +1,18 @@
 // -----------------------------------------------------------------------
 // CGQC_BorrowRecord
 // Tracks a single active borrow: which kit was borrowed, who borrowed it,
+// the casualty's original storage slot for accurate return,
 // and a snapshot of the provider's own kit at borrow-time for reconciliation.
 // -----------------------------------------------------------------------
 class CGQC_BorrowRecord
 {
 	IEntity m_BorrowedKit;
 	IEntity m_Borrower;
+
+	// The storage slot on the casualty the kit came from.
+	// Used to push the kit back to the exact original slot on return,
+	// bypassing inventory state restrictions on the unconscious casualty.
+	BaseInventoryStorageComponent m_CasualtyOriginalStorage;
 
 	// Provider's original kit and its contents at borrow-time.
 	// Used to detect which items the provider consumed from their own kit
@@ -27,9 +33,6 @@ class CGQC_CasualtyComponentClass : ScriptComponentClass
 // -----------------------------------------------------------------------
 class CGQC_CasualtyComponent : ScriptComponent
 {
-	// Keep in sync with CGQC_MedCore.MAX_BORROW_DISTANCE
-	protected const float MAX_BORROW_DISTANCE_SQ = 20; 
-
 	// Think loop intervals
 	protected const int THINK_IDLE_MS		= 1000;  // No active borrows
 	protected const int THINK_ACTIVE_MS		= 250;   // Active borrows: range / state guard
@@ -90,11 +93,12 @@ class CGQC_CasualtyComponent : ScriptComponent
 		if (!Replication.IsServer() || !m_bInitialized || !casualty)
 			return;
 
-		 CGQC_MedCore.Log(string.Format("ThinkTick: borrows=%1 dead=%2 uncon=%3",
-		        m_aBorrows.Count(),
-		        CGQC_MedCore.IsActorDead(casualty),
-		        CGQC_MedCore.IsCasualtyUnconscious(casualty)
-		    ));
+		CGQC_MedCore.Log(string.Format("ThinkTick: borrows=%1 dead=%2 uncon=%3",
+			m_aBorrows.Count(),
+			CGQC_MedCore.IsActorDead(casualty),
+			CGQC_MedCore.IsCasualtyUnconscious(casualty)
+		));
+
 		// ---- Death flow ----
 		if (CGQC_MedCore.IsActorDead(casualty))
 		{
@@ -148,7 +152,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 		m_bLastUnconsciousState = nowUnconscious;
 
-		// Not unconscious and no borrows to return (should not occur, but be safe)
+		// Not unconscious with no borrows to enforce (should not occur, but safe)
 		if (!nowUnconscious)
 		{
 			ScheduleThink(casualty, THINK_IDLE_MS);
@@ -183,26 +187,27 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 	//------------------------------------------------------------------------------------------------
 	// Called by CGQC_BorrowAction after a successful ExecuteBorrow.
-	// Snapshots the provider's own kit at this moment as the reconciliation baseline.
-	void RegisterBorrow(IEntity borrowedKit, IEntity borrower)
+	// Stores the original storage slot and snapshots the provider's own kit
+	// at this moment as the reconciliation baseline.
+	void RegisterBorrow(IEntity borrowedKit, IEntity borrower, BaseInventoryStorageComponent originalStorage)
 	{
 		if (!Replication.IsServer() || !borrowedKit)
 			return;
 
-		ShowNotification("Tu emprunte son IFAK...", 1);
 		ref CGQC_BorrowRecord rec = new CGQC_BorrowRecord();
-		rec.m_BorrowedKit			= borrowedKit;
-		rec.m_Borrower				= borrower;
-		rec.m_ProviderKit			= null;
-		rec.m_ProviderStartSnapshot	= new array<ResourceName>();
+		rec.m_BorrowedKit				= borrowedKit;
+		rec.m_Borrower					= borrower;
+		rec.m_CasualtyOriginalStorage	= originalStorage;
+		rec.m_ProviderKit				= null;
+		rec.m_ProviderStartSnapshot		= new array<ResourceName>();
 
 		if (borrower)
 		{
 			SCR_InventoryStorageManagerComponent borInv = CGQC_MedCore.GetInvMgr(borrower);
 			if (borInv)
 			{
-				// The provider may now have two kits (theirs + borrowed).
-				// We want their ORIGINAL kit – not the borrowed one.
+				// The provider now has the borrowed kit in their inventory.
+				// Find their ORIGINAL kit (not the borrowed one) for reconciliation.
 				array<IEntity> allItems = {};
 				borInv.GetItems(allItems, EStoragePurpose.PURPOSE_ANY);
 
@@ -263,7 +268,8 @@ class CGQC_CasualtyComponent : ScriptComponent
 	// Range, state, and inventory guard loop. Runs every THINK_ACTIVE_MS while borrows are active.
 	protected void EnforceGuards(IEntity casualty)
 	{
-		CGQC_MedCore.Log(string.Format("EnforceGuards: threshold=%1", MAX_BORROW_DISTANCE_SQ));
+		CGQC_MedCore.Log(string.Format("EnforceGuards: threshold=%1", CGQC_MedCore.MAX_BORROW_DISTANCE));
+
 		for (int i = m_aBorrows.Count() - 1; i >= 0; i--)
 		{
 			CGQC_BorrowRecord rec = m_aBorrows[i];
@@ -294,15 +300,15 @@ class CGQC_CasualtyComponent : ScriptComponent
 				continue;
 			}
 
-			// Range guard 
+			// Range guard
 			vector delta = borrower.GetOrigin() - casualty.GetOrigin();
 			float dist = Math.Sqrt(delta[0] * delta[0] + delta[1] * delta[1] + delta[2] * delta[2]);
 			if (dist > CGQC_MedCore.MAX_BORROW_DISTANCE)
 			{
-			    CGQC_MedCore.Log(string.Format("Borrower too far (%1 m) -> returning kit.", dist));
-			    ReturnBorrow(rec, casualty);
-			    m_aBorrows.Remove(i);
-			    continue;
+				CGQC_MedCore.Log(string.Format("Borrower too far (%1 m) -> returning kit.", dist));
+				ReturnBorrow(rec, casualty);
+				m_aBorrows.Remove(i);
+				continue;
 			}
 
 			// Kit left borrower inventory (dropped, traded, etc.)
@@ -320,36 +326,45 @@ class CGQC_CasualtyComponent : ScriptComponent
 	// Reconcile + return for a single borrow record.
 	protected void ReturnBorrow(CGQC_BorrowRecord rec, IEntity casualty)
 	{
-	    if (!rec || !Replication.IsServer())
-	        return;
-	
-	    ReconcileConsumption(rec);
-	
-	    IEntity carrier = rec.m_Borrower;
-	    if (!carrier)
-	        carrier = GetCurrentCarrier(rec.m_BorrowedKit);
-	
-	    if (!carrier)
-	        return;
-	
-	    bool returned = CGQC_MedCore.ExecuteReturn(carrier, casualty, rec.m_BorrowedKit);
+		if (!rec || !Replication.IsServer())
+			return;
+
+		// Reimburse the provider for any items consumed from their own kit during the borrow window.
+		ReconcileConsumption(rec);
+
+		IEntity borrower = rec.m_Borrower;
+
+		// If borrower is gone, try to resolve current carrier from the kit itself.
+		if (!borrower)
+			borrower = GetCurrentCarrier(rec.m_BorrowedKit);
+
+		if (!borrower)
+			return;
+
+		bool returned = CGQC_MedCore.ExecuteReturn(borrower, casualty, rec.m_BorrowedKit, rec.m_CasualtyOriginalStorage);
 		CGQC_MedCore.Log(string.Format("ReturnBorrow: ExecuteReturn result=%1", returned));
-	    if (returned)
-	    {
-	        // Notify borrower
-	        CGQC_CasualtyComponent borrowerComp = CGQC_CasualtyComponent.Cast(
-	            carrier.FindComponent(CGQC_CasualtyComponent)
-	        );
-	        if (borrowerComp)
-	            borrowerComp.ShowNotification("IFAK remis au patient");
-	
-	        // Notify casualty
-	        ShowNotification("Ton IFAK a été récupéré.");
-	    }
+
+		if (returned)
+		{
+			// Notify borrower via their own component
+			CGQC_CasualtyComponent borrowerComp = CGQC_CasualtyComponent.Cast(
+				borrower.FindComponent(CGQC_CasualtyComponent)
+			);
+			if (borrowerComp)
+				borrowerComp.ShowNotification("IFAK remis au blessé.");
+
+			// Notify casualty — this IS the casualty's component
+			ShowNotification("Ton IFAK t'a été retourné.");
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// Reimburses the provider for medical items consumed 
+	// Reimburses the provider for medical items consumed from their own kit while they had the
+	// borrowed kit. For each consumed item (start snapshot – end snapshot), we look for a matching
+	// prefab in the borrowed (casualty) kit and move it to the provider's kit.
+	//
+	// If the casualty's kit has no match, the provider simply eats the loss — which is correct:
+	// you can't be reimbursed for something the casualty never had.
 	protected void ReconcileConsumption(CGQC_BorrowRecord rec)
 	{
 		if (!Replication.IsServer() || !rec)
@@ -362,8 +377,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 		if (!borrower || !borrowedKit || !providerKit)
 			return;
 
-		// Skip reconciliation if the borrowed kit is no longer in borrower inventory –
-		// inventory manager queries won't resolve correctly in that state.
+		// Skip reconciliation if the borrowed kit is no longer in borrower inventory.
 		if (!CGQC_MedCore.IsMedKitInInventory(borrower, borrowedKit))
 			return;
 
@@ -477,19 +491,66 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 		return parentStorage.GetOwner();
 	}
-	
+
+	//------------------------------------------------------------------------------------------------
+	// Returns true if the given entity currently has an active borrow on this casualty.
+	// Used by CGQC_ReturnAction to show the manual return action only to the borrower.
+	bool HasActiveBorrowByEntity(IEntity borrower)
+	{
+		if (!borrower)
+			return false;
+
+		foreach (CGQC_BorrowRecord rec : m_aBorrows)
+		{
+			if (rec && rec.m_Borrower == borrower)
+				return true;
+		}
+
+		return false;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// Triggered by CGQC_ReturnAction. Finds and returns the borrow record belonging to the
+	// requesting entity, then resynchs borrowability.
+	void RequestReturn(IEntity borrower)
+	{
+		if (!Replication.IsServer() || !borrower)
+			return;
+
+		IEntity casualty = GetOwner();
+		if (!casualty)
+			return;
+
+		for (int i = m_aBorrows.Count() - 1; i >= 0; i--)
+		{
+			CGQC_BorrowRecord rec = m_aBorrows[i];
+			if (!rec || rec.m_Borrower != borrower)
+				continue;
+
+			ReturnBorrow(rec, casualty);
+			m_aBorrows.Remove(i);
+			break;
+		}
+
+		// Resync borrowability after manual return.
+		bool hasKit = (CGQC_MedCore.FindMedKitOnCharacter(casualty) != null);
+		Server_SetBorrowable(hasKit);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	void ShowNotification(string message, float duration = 3.0)
 	{
-	    Rpc(RpcDo_ShowNotification, message, duration);
+		Rpc(RpcDo_ShowNotification, message, duration);
 	}
-	
+
+	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void RpcDo_ShowNotification(string message, float duration)
 	{
-	    SCR_PopUpNotification popup = SCR_PopUpNotification.GetInstance();
-	    if (!popup)
-	        return;
-	
-	    popup.PopupMsg(message, duration);
+		SCR_PopUpNotification popup = SCR_PopUpNotification.GetInstance();
+		if (!popup)
+			return;
+
+		popup.PopupMsg(message, duration);
 	}
 }

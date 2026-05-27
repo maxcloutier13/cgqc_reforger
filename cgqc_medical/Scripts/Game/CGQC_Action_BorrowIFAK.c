@@ -82,27 +82,30 @@ class CGQC_BorrowAction : ScriptedUserAction
 		}
 
 		IEntity borrowedKit;
-		bool ok = CGQC_MedCore.ExecuteBorrow(casualty, borrower, casualtyKit, borrowedKit);
+		BaseInventoryStorageComponent originalStorage;
+		bool ok = CGQC_MedCore.ExecuteBorrow(casualty, borrower, casualtyKit, borrowedKit, originalStorage);
+
 		if (!ok || !borrowedKit)
 		{
 			CGQC_MedCore.Log("BorrowAction: ExecuteBorrow failed.");
 
-		    CGQC_CasualtyComponent borrowerComp = CGQC_CasualtyComponent.Cast(
-		        borrower.FindComponent(CGQC_CasualtyComponent)
-		    );
-		    if (borrowerComp)
-		        borrowerComp.ShowNotification("Inventaire plein - impossible d'emprunter le IFAK.");
-		    return;
+			CGQC_CasualtyComponent borrowerComp = CGQC_CasualtyComponent.Cast(
+				borrower.FindComponent(CGQC_CasualtyComponent)
+			);
+			if (borrowerComp)
+				borrowerComp.ShowNotification("Inventaire plein - impossible d'emprunter le IFAK.");
+
+			return;
 		}
 
-		// Register the borrow record: sets up reconciliation snapshot + hides action (replicated).
-		casualtyComp.RegisterBorrow(borrowedKit, borrower);
+		// Register the borrow record: stores original slot + reconciliation snapshot + hides action.
+		casualtyComp.RegisterBorrow(borrowedKit, borrower, originalStorage);
 	}
 
 	//------------------------------------------------------------------------------------------------
 	override bool GetActionNameScript(out string outName)
 	{
-		outName = "Grab IFAK"; 
+		outName = "Emprunter kit médical";
 		return true;
 	}
 }
