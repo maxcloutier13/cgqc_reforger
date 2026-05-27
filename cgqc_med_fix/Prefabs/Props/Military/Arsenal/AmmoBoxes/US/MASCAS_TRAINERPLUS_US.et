@@ -10,5 +10,102 @@ GenericEntity : "{0AD8F5CBED139651}Prefabs/Props/Military/Arsenal/AmmoBoxes/Ammo
   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {
    "faction affiliation" "CGQC"
   }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   ActionContexts {
+    UserActionContext "{697710280D44BA14}" {
+     ContextName "default"
+     Position PointInfo "{6977102807BDA0AA}" {
+      Offset 0 0.2364 0
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{5476DE57AA50402F}" {
+     "Sort Priority" 50
+    }
+    AF_SpawnSingleAction "{684B2E03AF03CB4A}" {
+    }
+    AF_SpawnAirwayAction "{684B2E002B8E60E5}" {
+     "Sort Priority" 1
+    }
+    AF_SpawnAirwayVomitAction "{684B2E06448A8B14}" {
+     "Sort Priority" 2
+    }
+    AF_SpawnPneumoAction "{684B2E002E75C824}" {
+     "Sort Priority" 3
+    }
+    AF_SpawnClass2HemoAction "{684B2E002C3C9C94}" {
+     "Sort Priority" 4
+    }
+    AF_SpawnMASCASAction "{684D2D5FC23B0630}" {
+     "Sort Priority" 5
+    }
+    CGQC_Action_TourniquetDrillSelf "{6977102B1CDA3AA5}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6977102B263CBF76}" {
+      Name "CGQC - E1 - Individuel - Facile"
+     }
+     "Sort Priority" -10
+     m_bLoopAction 0
+    }
+    CGQC_Action_TourniquetDrillSelf "{697710242340363A}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69771024234036B7}" {
+      Name "CGQC - E1 - Individuel - Normal"
+     }
+     "Sort Priority" -9
+     m_bLoopAction 0
+     m_Difficulty NORMAL
+    }
+    CGQC_Action_TourniquetDrillSelf "{69771024478CF9C4}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69771024478CFA60}" {
+      Name "CGQC - E1 - Individuel - Difficile"
+     }
+     "Sort Priority" -8
+     m_bLoopAction 0
+     m_Difficulty HARD
+    }
+    CGQC_Action_TourniquetDrill "{6977102622C4EF6D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6977102622C4EFF6}" {
+      Name "CGQC - E2 - Secours - Facile"
+     }
+     "Sort Priority" -7
+     m_bLoopAction 0
+    }
+    CGQC_Action_TourniquetDrill "{69771022388C53A9}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69771022388C541C}" {
+      Name "CGQC - E2 - Secours - Normal"
+     }
+     "Sort Priority" -6
+     m_bLoopAction 0
+     m_Difficulty NORMAL
+    }
+    CGQC_Action_TourniquetDrill "{697710224DEBD1EA}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{697710224DEBD270}" {
+      Name "CGQC - E2 - Secours - Difficile"
+     }
+     "Sort Priority" -5
+     m_bLoopAction 0
+     m_Difficulty HARD
+    }
+   }
+  }
  }
 }
