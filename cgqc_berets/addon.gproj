@@ -1,9 +1,9 @@
 GameProject {
  ID "cgqcberets"
  GUID "690E1690B26A1D4E"
- TITLE "cgqc_berets"
+ TITLE "cgqc_berets_1.7"
  Dependencies {
-  "58D0FB3206B6F859" "66BB20CA43330BC2" "61C87225D2A7348A"
+  "58D0FB3206B6F859" "692069AC8EBBC633"
  }
  Configurations {
   GameProjectConfig PC {

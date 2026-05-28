@@ -1,7 +1,7 @@
 GameProject {
  ID "cgqcadmin"
  GUID "66BB0CD55FFB27AA"
- TITLE "cgqc_admin"
+ TITLE "cgqc_admin_1.7"
  Dependencies {
   "58D0FB3206B6F859" "5AAAC70D754245DD" "5ED8BE1DDFEFBE4C"
  }
