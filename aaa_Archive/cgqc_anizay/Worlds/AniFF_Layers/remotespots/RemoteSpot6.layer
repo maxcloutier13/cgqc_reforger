@@ -1,7 +1,0 @@
-JWK_RemoteSiteEntity : "{A3ED6DA78DEB5E34}Prefabs/Controllers/Loadtime/JWK_RemoteSite.et" {
- coords 1865.89 139.788 7467.302
-}
-GenericEntity : "{CBBCD1602FF8677E}Prefabs/Controllers/Loadtime/ParkingSpot/JWK_AmbientParkingSpot.et" {
- coords 1866.677 138.156 7479.067
- angles 0 81.519 0
-}

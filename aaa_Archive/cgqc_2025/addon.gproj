@@ -1,8 +1,0 @@
-GameProject {
- ID "cgqc2025"
- GUID "66BC37335631930F"
- TITLE "cgqc_2025"
- Dependencies {
-  "58D0FB3206B6F859"
- }
-}

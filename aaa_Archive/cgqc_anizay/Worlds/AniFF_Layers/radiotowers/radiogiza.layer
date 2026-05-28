@@ -1,7 +1,0 @@
-JWK_RadioSiteEntity JWK_RadioSiteController_663971012549A245 : "{14C2550C9BBE7476}Prefabs/Controllers/Loadtime/JWK_RadioSiteController.et" {
- coords 1523.895 168.261 2055.438
- m_iSignalRange 800
-}
-StaticModelEntity : "{4DE187A3508D5A46}Prefabs/Modded/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small_base.et" {
- coords 1519.954 169.138 2055.896
-}
