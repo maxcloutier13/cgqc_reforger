@@ -50,6 +50,11 @@ class CGQC_CasualtyComponent : ScriptComponent
 	[RplProp()]
 	protected bool m_bBorrowable = true;
 
+	// Replicated: player ID of the current borrower (-1 = no active borrow).
+	// Clients use this to show/hide the manual return action for the correct player.
+	[RplProp()]
+	protected int m_iBorrowerPlayerId = -1;
+
 	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
@@ -111,6 +116,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 				CGQC_MedCore.DumpKitContentsOnDeath(casualty);
 				Server_SetBorrowable(false);
+				Server_SetBorrowerPlayerId(-1);
 
 				m_bDeathProcessed = true;
 			}
@@ -144,6 +150,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 			bool hasKit = (CGQC_MedCore.FindMedKitOnCharacter(casualty) != null);
 			Server_SetBorrowable(hasKit);
+			Server_SetBorrowerPlayerId(-1);
 
 			m_bLastUnconsciousState = nowUnconscious;
 			ScheduleThink(casualty, THINK_IDLE_MS);
@@ -183,6 +190,35 @@ class CGQC_CasualtyComponent : ScriptComponent
 
 		m_bBorrowable = state;
 		Replication.BumpMe();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	void Server_SetBorrowerPlayerId(int playerId)
+	{
+		if (!Replication.IsServer())
+			return;
+
+		if (m_iBorrowerPlayerId == playerId)
+			return;
+
+		m_iBorrowerPlayerId = playerId;
+		Replication.BumpMe();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// Returns true if the given entity is the current active borrower.
+	// Works on both server and client since m_iBorrowerPlayerId is replicated.
+	bool HasActiveBorrowByEntity(IEntity borrower)
+	{
+		if (!borrower)
+			return false;
+
+		PlayerManager pm = GetGame().GetPlayerManager();
+		if (!pm)
+			return false;
+
+		int userId = pm.GetPlayerIdFromControlledEntity(borrower);
+		return userId > 0 && userId == m_iBorrowerPlayerId;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -232,6 +268,11 @@ class CGQC_CasualtyComponent : ScriptComponent
 				if (providerKit)
 					CGQC_MedCore.SnapshotKitContents(providerKit, borInv, rec.m_ProviderStartSnapshot);
 			}
+
+			// Replicate borrower player ID so clients can show/hide the return action.
+			PlayerManager pm = GetGame().GetPlayerManager();
+			if (pm)
+				Server_SetBorrowerPlayerId(pm.GetPlayerIdFromControlledEntity(borrower));
 		}
 
 		m_aBorrows.Insert(rec);
@@ -262,6 +303,8 @@ class CGQC_CasualtyComponent : ScriptComponent
 			ReturnBorrow(rec, casualty);
 			m_aBorrows.Remove(i);
 		}
+
+		Server_SetBorrowerPlayerId(-1);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -288,6 +331,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 				CGQC_MedCore.Log("Borrower missing/disconnected -> returning kit.");
 				ReturnBorrow(rec, casualty);
 				m_aBorrows.Remove(i);
+				Server_SetBorrowerPlayerId(-1);
 				continue;
 			}
 
@@ -297,6 +341,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 				CGQC_MedCore.Log("Borrower dead/unconscious -> returning kit.");
 				ReturnBorrow(rec, casualty);
 				m_aBorrows.Remove(i);
+				Server_SetBorrowerPlayerId(-1);
 				continue;
 			}
 
@@ -308,6 +353,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 				CGQC_MedCore.Log(string.Format("Borrower too far (%1 m) -> returning kit.", dist));
 				ReturnBorrow(rec, casualty);
 				m_aBorrows.Remove(i);
+				Server_SetBorrowerPlayerId(-1);
 				continue;
 			}
 
@@ -317,6 +363,7 @@ class CGQC_CasualtyComponent : ScriptComponent
 				CGQC_MedCore.Log("Borrowed kit no longer in borrower inventory -> returning kit.");
 				ReturnBorrow(rec, casualty);
 				m_aBorrows.Remove(i);
+				Server_SetBorrowerPlayerId(-1);
 				continue;
 			}
 		}
@@ -359,8 +406,36 @@ class CGQC_CasualtyComponent : ScriptComponent
 	}
 
 	//------------------------------------------------------------------------------------------------
+	// Triggered by CGQC_ReturnAction. Finds and returns the borrow record belonging to the
+	// requesting entity, then resyncs borrowability and clears the borrower ID.
+	void RequestReturn(IEntity borrower)
+	{
+		if (!Replication.IsServer() || !borrower)
+			return;
+
+		IEntity casualty = GetOwner();
+		if (!casualty)
+			return;
+
+		for (int i = m_aBorrows.Count() - 1; i >= 0; i--)
+		{
+			CGQC_BorrowRecord rec = m_aBorrows[i];
+			if (!rec || rec.m_Borrower != borrower)
+				continue;
+
+			ReturnBorrow(rec, casualty);
+			m_aBorrows.Remove(i);
+			break;
+		}
+
+		bool hasKit = (CGQC_MedCore.FindMedKitOnCharacter(casualty) != null);
+		Server_SetBorrowable(hasKit);
+		Server_SetBorrowerPlayerId(-1);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	// Reimburses the provider for medical items consumed from their own kit while they had the
-	// borrowed kit. For each consumed item (start snapshot – end snapshot), we look for a matching
+	// borrowed kit. For each consumed item (start snapshot - end snapshot), we look for a matching
 	// prefab in the borrowed (casualty) kit and move it to the provider's kit.
 	//
 	// If the casualty's kit has no match, the provider simply eats the loss — which is correct:
@@ -490,51 +565,6 @@ class CGQC_CasualtyComponent : ScriptComponent
 			return null;
 
 		return parentStorage.GetOwner();
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// Returns true if the given entity currently has an active borrow on this casualty.
-	// Used by CGQC_ReturnAction to show the manual return action only to the borrower.
-	bool HasActiveBorrowByEntity(IEntity borrower)
-	{
-		if (!borrower)
-			return false;
-
-		foreach (CGQC_BorrowRecord rec : m_aBorrows)
-		{
-			if (rec && rec.m_Borrower == borrower)
-				return true;
-		}
-
-		return false;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// Triggered by CGQC_ReturnAction. Finds and returns the borrow record belonging to the
-	// requesting entity, then resynchs borrowability.
-	void RequestReturn(IEntity borrower)
-	{
-		if (!Replication.IsServer() || !borrower)
-			return;
-
-		IEntity casualty = GetOwner();
-		if (!casualty)
-			return;
-
-		for (int i = m_aBorrows.Count() - 1; i >= 0; i--)
-		{
-			CGQC_BorrowRecord rec = m_aBorrows[i];
-			if (!rec || rec.m_Borrower != borrower)
-				continue;
-
-			ReturnBorrow(rec, casualty);
-			m_aBorrows.Remove(i);
-			break;
-		}
-
-		// Resync borrowability after manual return.
-		bool hasKit = (CGQC_MedCore.FindMedKitOnCharacter(casualty) != null);
-		Server_SetBorrowable(hasKit);
 	}
 
 	//------------------------------------------------------------------------------------------------
