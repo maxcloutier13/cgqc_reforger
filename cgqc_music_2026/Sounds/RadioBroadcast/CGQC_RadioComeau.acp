@@ -1,0 +1,1409 @@
+AudioClass {
+ signals {
+  SignalClass "39949" {
+   id 39949
+   name "Signal Occlusion"
+   tl -25 -328.437
+   res "{A45B14CDEA2D5DCD}Sounds/_SharedData/Signals/Props/Props_Occlusion.sig"
+   inputsport {
+    23 52
+   }
+   outputsport {
+    37
+   }
+   inputvalues {
+    0 1000
+   }
+   inputvaluesmin {
+    0 0
+   }
+   inputvaluesmax {
+    1 10000
+   }
+   path "{A45B14CDEA2D5DCD}Sounds/_SharedData/Signals/Props/Props_Occlusion.sig"
+  }
+  SignalClass "45069" {
+   id 45069
+   name "Signal Reverb"
+   tl 512.87 128
+   res "{76CBB40EF7F227B6}Sounds/_SharedData/Signals/Reverb/Reverb_Base.sig"
+   inputsport {
+    1 35 112
+   }
+   outputsport {
+    39 105 107 106 110
+   }
+   inputvalues {
+    40 0 0
+   }
+   inputvaluesmin {
+    0 0 0
+   }
+   inputvaluesmax {
+    100 1 16000
+   }
+   path "{76CBB40EF7F227B6}Sounds/_SharedData/Signals/Reverb/Reverb_Base.sig"
+  }
+  SignalClass "47117" {
+   id 47117
+   name "Signal 46"
+   tl -963.478 -156.522
+   res "{C3E05BC9953729B5}Sounds/RadioBroadcast/CustomRadioBroadcast.sig"
+   inputsport {
+    30 31 32 35 41
+   }
+   outputsport {
+    33 34 36 37 40
+   }
+   inputvalues {
+    0 0 0 0 0
+   }
+   inputvaluesmin {
+    0 0 0 0 0
+   }
+   inputvaluesmax {
+    100 1 300000 1 1
+   }
+   path "{C3E05BC9953729B5}Sounds/RadioBroadcast/CustomRadioBroadcast.sig"
+  }
+ }
+ sounds {
+  SoundClass "1033" {
+   id 1033
+   name "SOUND_CUSTOM_RADIO"
+   version 5
+   tl 193 -116
+   ins {
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "5138:65" {
+       id 5138
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB -16
+   outState 43019
+   outStatePort 79879
+  }
+  SoundClass "16393" {
+   id 16393
+   name "SOUND_RADIO_TURN_ON"
+   version 5
+   tl 190.333 159.666
+   ins {
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "18450:65" {
+       id 18450
+       port 65
+      }
+     }
+    }
+   }
+   outState 43019
+   outStatePort 79879
+  }
+  SoundClass "17417" {
+   id 17417
+   name "SOUND_RADIO_TURN_OFF"
+   version 5
+   tl 189.222 341
+   ins {
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "19474:65" {
+       id 19474
+       port 65
+      }
+     }
+    }
+   }
+   outState 43019
+   outStatePort 79879
+  }
+ }
+ selectors {
+  SelectorClass "27654" {
+   id 27654
+   name "Selector 27"
+   version 5
+   tl -456.369 -130.25
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "47117:37" {
+       id 47117
+       port 37
+      }
+     }
+    }
+    ConnectionsClass "con:2590" {
+     id 2590
+     links {
+      ConnectionClass "35844:65" {
+       id 35844
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:150398217" {
+     id 150398217
+     links {
+      ConnectionClass "32772:65" {
+       id 32772
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    1 0
+   }
+   ports {
+    PortClass DJ {
+     max 0.5
+    }
+    PortClass Music {
+     min 0.51
+     max 1.1
+    }
+   }
+  }
+ }
+ mixers {
+  MixerClass "43019" {
+   id 43019
+   name "OutputState"
+   version 4
+   tl 768 0
+   res "{B764D803219C775E}Sounds/FinalMix.afm"
+   ins {
+    ConnectionsClass "con:79879" {
+     id 79879
+     links {
+      ConnectionClass "1033:65" {
+       id 1033
+       port 65
+      }
+      ConnectionClass "16393:65" {
+       id 16393
+       port 65
+      }
+      ConnectionClass "17417:65" {
+       id 17417
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:300039" {
+     id 300039
+     links {
+      ConnectionClass "40989:65" {
+       id 40989
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:301063" {
+     id 301063
+     links {
+      ConnectionClass "42013:65" {
+       id 42013
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:302087" {
+     id 302087
+     links {
+      ConnectionClass "44061:65" {
+       id 44061
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    234889216 0
+   }
+   path "{B764D803219C775E}Sounds/FinalMix.afm"
+   inputs {
+    "WPN_Handling" "WPN_Shots" "WPN_Explosions" "WNP_BulletHits" "CHAR" "ENV_AMB_2D" "VEH_Animations" "Impacts" "Dialog" "ENV_Doors" "VEH_Engine" "VEH_Tires" "VON" "SFX" "SFX_Reverb_OBSOLETE" "VON_Reverb_Small" "Dialog_Reverb" "Impacts_EXT" "ENV_AMB_3D" "WPN_SonicCracks" "CHAR_Gear" "PA" "SFX_Reverb_Exterior" "ENV_AMB_3D_Reverb_Exterior" "SFX_Direct" "SFX_Reverb_Small" "SFX_Reverb_Medium" "SFX_Reverb_Large" "WPN_Shots_Player" "Dialog_Reverb_Small" "Dialog_Reverb_Medium" "Dialog_Reverb_Large" "WPN_TravelingProjectile" "Dialog_Delay_Exterior" "SFX_Reverb_InCabin" "VON_Reverb_Medium" "VON_Reverb_Large"
+   }
+  }
+ }
+ shaders {
+  ShaderClass "5138" {
+   id 5138
+   name "Shader"
+   version 5
+   tl -25 -115
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "22556:65" {
+       id 22556
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "7187:65" {
+       id 7187
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "14357:65" {
+       id 14357
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "33796:65" {
+       id 33796
+       port 65
+      }
+      ConnectionClass "27654:65" {
+       id 27654
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+  }
+  ShaderClass "18450" {
+   id 18450
+   name "Shader 18"
+   version 5
+   tl -26.667 159.143
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "22556:65" {
+       id 22556
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "36883:65" {
+       id 36883
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "14357:65" {
+       id 14357
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "20484:65" {
+       id 20484
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+  }
+  ShaderClass "19474" {
+   id 19474
+   name "Shader 19"
+   version 5
+   tl -27.778 339.334
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "22556:65" {
+       id 22556
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "36883:65" {
+       id 36883
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "14357:65" {
+       id 14357
+       port 65
+      }
+     }
+    }
+    ConnectionsClass "con:64" {
+     id 64
+     links {
+      ConnectionClass "21508:65" {
+       id 21508
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+  }
+ }
+ amplitudes {
+  AmplitudeClass "7187" : "{C97DEFA6B88F6DE9}Sounds/_SharedData/Configs/Amplitude/_SharedData/Amplitude_-55LUFS_to_-50LUFS.conf" {
+   id 7187
+   version 5
+   tl -25 -497.659
+   parent "{C97DEFA6B88F6DE9}Sounds/_SharedData/Configs/Amplitude/_SharedData/Amplitude_-55LUFS_to_-50LUFS.conf"
+  }
+  AmplitudeClass "36883" : "{7BAAAD4DE72D5E71}Sounds/_SharedData/Configs/Amplitude/_SharedData/Amplitude_-65LUFS_to_-60LUFS.conf" {
+   id 36883
+   version 5
+   tl -26.667 83.667
+   parent "{7BAAAD4DE72D5E71}Sounds/_SharedData/Configs/Amplitude/_SharedData/Amplitude_-65LUFS_to_-60LUFS.conf"
+  }
+ }
+ frequency {
+  FrequencyClass "14357" : "{CA912C59A9267045}Sounds/_SharedData/Configs/Frequency/_SharedData/Frequency_Base.conf" {
+   id 14357
+   version 5
+   tl -25 -424.886
+   parent "{CA912C59A9267045}Sounds/_SharedData/Configs/Frequency/_SharedData/Frequency_Base.conf"
+   ins {
+    ConnectionsClass "con:4" {
+     id 4
+     links {
+      ConnectionClass "39949:37" {
+       id 39949
+       port 37
+      }
+     }
+    }
+   }
+   pi {
+    16 0
+   }
+   pu {
+    16 0
+   }
+   dynamicUpdate 1
+   enableDirectivity 1
+   directivityFactor 0.6
+  }
+ }
+ banks_local {
+  BankLocalClass "20484" {
+   id 20484
+   name "Turn On"
+   version 7
+   tl -250.594 158.333
+   Volume -18
+   Samples {
+    AudioBankSampleClass "Radio_TurnOn.wav" {
+     Filename "{76CC7BF5BDA67366}Sounds/RadioBroadcast/Samples/Everon/Radio_TurnOn.wav"
+     Probability 100
+     Index 0
+     SampleMetadata ""
+    }
+   }
+  }
+  BankLocalClass "21508" {
+   id 21508
+   name "Turn Off"
+   version 7
+   tl -251.778 341.303
+   Volume -18
+   Samples {
+    AudioBankSampleClass "Radio_TurnOff.wav" {
+     Filename "{049C5C173E8C0259}Sounds/RadioBroadcast/Samples/Everon/Radio_TurnOff.wav"
+     Probability 100
+     Index 0
+     SampleMetadata ""
+    }
+   }
+  }
+  BankLocalClass "32772" {
+   id 32772
+   name "Music"
+   version 7
+   tl -701.25 -26.607
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "47117:40" {
+       id 47117
+       port 40
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "47117:33" {
+       id 47117
+       port 33
+      }
+     }
+    }
+    ConnectionsClass "con:4" {
+     id 4
+     links {
+      ConnectionClass "47117:36" {
+       id 47117
+       port 36
+      }
+     }
+    }
+   }
+   pi {
+    21 0
+   }
+   pu {
+    1 0
+   }
+   Selection CustomSignalIndex
+   Resampler FIR_8
+   Samples {
+    AudioBankSampleClass "3 Inches of Blood - Deadly Sinners.snd" {
+     Filename "{C4B99877180A2213}Sounds/RadioBroadcast/Comeau/3 Inches of Blood - Deadly Sinners.snd"
+     Probability 100
+     Index 0
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "3 Inches of Blood - Destroy The Orcs.snd" {
+     Filename "{0DD149653EF140A6}Sounds/RadioBroadcast/Comeau/3 Inches of Blood - Destroy The Orcs.snd"
+     Probability 100
+     Index 1
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Accept - Fast As A Shark.snd" {
+     Filename "{611603FF95241B16}Sounds/RadioBroadcast/Comeau/Accept - Fast As A Shark.snd"
+     Probability 100
+     Index 2
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Angel Witch - Angel Witch.snd" {
+     Filename "{EA0E0CCDCF11670D}Sounds/RadioBroadcast/Comeau/Angel Witch - Angel Witch.snd"
+     Probability 100
+     Index 3
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Anthrax - Metal Thrashing Mad.snd" {
+     Filename "{3AB28817E187CF84}Sounds/RadioBroadcast/Comeau/Anthrax - Metal Thrashing Mad.snd"
+     Probability 100
+     Index 4
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Anvil - March of the Crabs.snd" {
+     Filename "{070E365B300C2117}Sounds/RadioBroadcast/Comeau/Anvil - March of the Crabs.snd"
+     Probability 100
+     Index 5
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Anvil - Tag Team.snd" {
+     Filename "{C04ABF5B751DDE7B}Sounds/RadioBroadcast/Comeau/Anvil - Tag Team.snd"
+     Probability 100
+     Index 6
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Apostasy - Sulphur Injection.snd" {
+     Filename "{20210A4213B1BFFE}Sounds/RadioBroadcast/Comeau/Apostasy - Sulphur Injection.snd"
+     Probability 100
+     Index 7
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Bishop of Hexen - A Serpentine Crave.snd" {
+     Filename "{A2BB06C77CA75A6A}Sounds/RadioBroadcast/Comeau/Bishop of Hexen - A Serpentine Crave.snd"
+     Probability 100
+     Index 8
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Black Sabbath - Children of the Grave.snd" {
+     Filename "{98898D0AFF781001}Sounds/RadioBroadcast/Comeau/Black Sabbath - Children of the Grave.snd"
+     Probability 100
+     Index 9
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Black Sabbath - Never Say Die.snd" {
+     Filename "{CF74C88B809A41A8}Sounds/RadioBroadcast/Comeau/Black Sabbath - Never Say Die.snd"
+     Probability 100
+     Index 10
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Black Sabbath - Symptom of the Universe.snd" {
+     Filename "{C55B656B64BE46BC}Sounds/RadioBroadcast/Comeau/Black Sabbath - Symptom of the Universe.snd"
+     Probability 100
+     Index 11
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Brocas Helm - Cry of the Banshee.snd" {
+     Filename "{ABACB1AEA0AD942F}Sounds/RadioBroadcast/Comeau/Brocas Helm - Cry of the Banshee.snd"
+     Probability 100
+     Index 12
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Brocas Helm - Drink the Blood of the Priestt.snd" {
+     Filename "{C84E949CFABE3A54}Sounds/RadioBroadcast/Comeau/Brocas Helm - Drink the Blood of the Priestt.snd"
+     Probability 100
+     Index 13
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Budgie - Breadfan.snd" {
+     Filename "{CE3190D3A1C62CB4}Sounds/RadioBroadcast/Comeau/Budgie - Breadfan.snd"
+     Probability 100
+     Index 14
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Budgie - Zoom Club.snd" {
+     Filename "{C3CF49E186C065B6}Sounds/RadioBroadcast/Comeau/Budgie - Zoom Club.snd"
+     Probability 100
+     Index 15
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Candlemass - Witches.snd" {
+     Filename "{5F569300211A469C}Sounds/RadioBroadcast/Comeau/Candlemass - Witches.snd"
+     Probability 100
+     Index 16
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Carcass - No Love Lost.snd" {
+     Filename "{F8B26AE7961F0D1C}Sounds/RadioBroadcast/Comeau/Carcass - No Love Lost.snd"
+     Probability 100
+     Index 17
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Children of Bodom - Angels Don't Kill.snd" {
+     Filename "{7181CCD7A8E4FC31}Sounds/RadioBroadcast/Comeau/Children of Bodom - Angels Don't Kill.snd"
+     Probability 100
+     Index 18
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Cloven Hoof - Nightstalker.snd" {
+     Filename "{88CCA0EBA31248FF}Sounds/RadioBroadcast/Comeau/Cloven Hoof - Nightstalker.snd"
+     Probability 100
+     Index 19
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Coroner - Skeleton on your Shoulder.snd" {
+     Filename "{0500C566E2584AA1}Sounds/RadioBroadcast/Comeau/Coroner - Skeleton on your Shoulder.snd"
+     Probability 100
+     Index 20
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Cradle of Filth - Her Ghost In The Fog.snd" {
+     Filename "{F1069B4277C26C6F}Sounds/RadioBroadcast/Comeau/Cradle of Filth - Her Ghost In The Fog.snd"
+     Probability 100
+     Index 21
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Crimson Glory - Queen of the Masquerade.snd" {
+     Filename "{7C50B433F89B330D}Sounds/RadioBroadcast/Comeau/Crimson Glory - Queen of the Masquerade.snd"
+     Probability 100
+     Index 22
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dark Fortress - Insomnia.snd" {
+     Filename "{E8EACCD17E37070F}Sounds/RadioBroadcast/Comeau/Dark Fortress - Insomnia.snd"
+     Probability 100
+     Index 23
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dark Tranquility - Cathode Ray Sunshine.snd" {
+     Filename "{8D8AD7FD69C8BABB}Sounds/RadioBroadcast/Comeau/Dark Tranquility - Cathode Ray Sunshine.snd"
+     Probability 100
+     Index 24
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Deathstars - Blitzkrieg.snd" {
+     Filename "{D22F1A8805B467F4}Sounds/RadioBroadcast/Comeau/Deathstars - Blitzkrieg.snd"
+     Probability 100
+     Index 25
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Def Leppard - Rock of Ages.snd" {
+     Filename "{0C81BC793F97DF18}Sounds/RadioBroadcast/Comeau/Def Leppard - Rock of Ages.snd"
+     Probability 100
+     Index 26
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dethklok-Murmaider.snd" {
+     Filename "{7C7172F788CDFB0A}Sounds/RadioBroadcast/Comeau/Dethklok-Murmaider.snd"
+     Probability 100
+     Index 27
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Diamond Head - Am I Evil.snd" {
+     Filename "{ED9BBEDDCDD6A385}Sounds/RadioBroadcast/Comeau/Diamond Head - Am I Evil.snd"
+     Probability 100
+     Index 28
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dimmu Borgir - Progenies of The Great Apocalypse.snd" {
+     Filename "{ED8E1DB1E9E20AF2}Sounds/RadioBroadcast/Comeau/Dimmu Borgir - Progenies of The Great Apocalypse.snd"
+     Probability 100
+     Index 29
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dokken - Mr. Scary.snd" {
+     Filename "{38146533DB96B20E}Sounds/RadioBroadcast/Comeau/Dokken - Mr. Scary.snd"
+     Probability 100
+     Index 30
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Dragonforce - Through the Fire and Flames.snd" {
+     Filename "{5D07434A31705409}Sounds/RadioBroadcast/Comeau/Dragonforce - Through the Fire and Flames.snd"
+     Probability 100
+     Index 31
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Emperor - Thus Spake The Nightspirit.snd" {
+     Filename "{591C21FEEF29F494}Sounds/RadioBroadcast/Comeau/Emperor - Thus Spake The Nightspirit.snd"
+     Probability 100
+     Index 32
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Enslaved - Frost.snd" {
+     Filename "{C18B0E62FA751E97}Sounds/RadioBroadcast/Comeau/Enslaved - Frost.snd"
+     Probability 100
+     Index 33
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Enslaved - Loke.snd" {
+     Filename "{72E2EE9AB06329C5}Sounds/RadioBroadcast/Comeau/Enslaved - Loke.snd"
+     Probability 100
+     Index 34
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Firehouse - Overnight Sensation.snd" {
+     Filename "{EC300550A0D6253D}Sounds/RadioBroadcast/Comeau/Firehouse - Overnight Sensation.snd"
+     Probability 100
+     Index 35
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Iced Earth - Pure Evil.snd" {
+     Filename "{4CAB4465CDA48D7A}Sounds/RadioBroadcast/Comeau/Iced Earth - Pure Evil.snd"
+     Probability 100
+     Index 36
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Iced Earth - When the Night Falls.snd" {
+     Filename "{E8A3248EAA713490}Sounds/RadioBroadcast/Comeau/Iced Earth - When the Night Falls.snd"
+     Probability 100
+     Index 37
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "In Flames - Goliaths Disarm Their Davids.snd" {
+     Filename "{1501242BC037CB7F}Sounds/RadioBroadcast/Comeau/In Flames - Goliaths Disarm Their Davids.snd"
+     Probability 100
+     Index 38
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Judas Priest - Battle Hymn.snd" {
+     Filename "{3D996F2F9FAE6746}Sounds/RadioBroadcast/Comeau/Judas Priest - Battle Hymn.snd"
+     Probability 100
+     Index 39
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Judas Priest - Leather Rebel.snd" {
+     Filename "{F64502152AA9872B}Sounds/RadioBroadcast/Comeau/Judas Priest - Leather Rebel.snd"
+     Probability 100
+     Index 40
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Judas Priest - Painkiller.snd" {
+     Filename "{0D1E63AA58BA5EF6}Sounds/RadioBroadcast/Comeau/Judas Priest - Painkiller.snd"
+     Probability 100
+     Index 41
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Judas Priest - The Hellion-Electric Eye.snd" {
+     Filename "{3DF57CE68EAB215B}Sounds/RadioBroadcast/Comeau/Judas Priest - The Hellion-Electric Eye.snd"
+     Probability 100
+     Index 42
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Judas Priest- Battle Hymn & One Shot at Glory.snd" {
+     Filename "{E7870E96C11B291A}Sounds/RadioBroadcast/Comeau/Judas Priest- Battle Hymn & One Shot at Glory.snd"
+     Probability 100
+     Index 43
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Kabbage Boy - Girlfriend.snd" {
+     Filename "{5777CFA24483388B}Sounds/RadioBroadcast/Comeau/Kabbage Boy - Girlfriend.snd"
+     Probability 100
+     Index 44
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "King Diamond - Cremation.snd" {
+     Filename "{A4631234F3B4878E}Sounds/RadioBroadcast/Comeau/King Diamond - Cremation.snd"
+     Probability 100
+     Index 45
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "King Diamond - Welcome Home.snd" {
+     Filename "{78CC37CEA9E4311B}Sounds/RadioBroadcast/Comeau/King Diamond - Welcome Home.snd"
+     Probability 100
+     Index 46
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Kiss - God Of Thunder.snd" {
+     Filename "{424649F7251ABB6F}Sounds/RadioBroadcast/Comeau/Kiss - God Of Thunder.snd"
+     Probability 100
+     Index 47
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "KMFDM - Free Your Hate.snd" {
+     Filename "{3CFA1AC433C898E0}Sounds/RadioBroadcast/Comeau/KMFDM - Free Your Hate.snd"
+     Probability 100
+     Index 48
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "KMFDM - Rip The System.snd" {
+     Filename "{6D7881A8F4F15E0C}Sounds/RadioBroadcast/Comeau/KMFDM - Rip The System.snd"
+     Probability 100
+     Index 49
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Lita Ford - Betrayal.snd" {
+     Filename "{D53267ECA04CD6D0}Sounds/RadioBroadcast/Comeau/Lita Ford - Betrayal.snd"
+     Probability 100
+     Index 50
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Manowar - Die For Metal.snd" {
+     Filename "{08CFC96222DCE19F}Sounds/RadioBroadcast/Comeau/Manowar - Die For Metal.snd"
+     Probability 100
+     Index 51
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Manowar - The Dawn Of Battle.snd" {
+     Filename "{724FCC10C8AF6F56}Sounds/RadioBroadcast/Comeau/Manowar - The Dawn Of Battle.snd"
+     Probability 100
+     Index 52
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Marilyn Manson - The Beautiful People.snd" {
+     Filename "{287BA065E93B3864}Sounds/RadioBroadcast/Comeau/Marilyn Manson - The Beautiful People.snd"
+     Probability 100
+     Index 53
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Mastodon - Crack the Skye.snd" {
+     Filename "{7F7C511496357E7D}Sounds/RadioBroadcast/Comeau/Mastodon - Crack the Skye.snd"
+     Probability 100
+     Index 54
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Mastodon - Oblivion (Instrumental).snd" {
+     Filename "{A0B90F7BF3A98B07}Sounds/RadioBroadcast/Comeau/Mastodon - Oblivion (Instrumental).snd"
+     Probability 100
+     Index 55
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Megadeath - High Speed Dirt.snd" {
+     Filename "{8CF5877AC7D654E4}Sounds/RadioBroadcast/Comeau/Megadeath - High Speed Dirt.snd"
+     Probability 100
+     Index 56
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Megadeath - Tornado of Souls.snd" {
+     Filename "{33EBAECD060E8AB9}Sounds/RadioBroadcast/Comeau/Megadeath - Tornado of Souls.snd"
+     Probability 100
+     Index 57
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Metal Church - Metal Church.snd" {
+     Filename "{440CD7270EC61E76}Sounds/RadioBroadcast/Comeau/Metal Church - Metal Church.snd"
+     Probability 100
+     Index 58
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Michael Schenker - Group Assault Attack.snd" {
+     Filename "{60BF1ACB7E644C5B}Sounds/RadioBroadcast/Comeau/Michael Schenker - Group Assault Attack.snd"
+     Probability 100
+     Index 59
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ministry - Stigmata.snd" {
+     Filename "{ACEC78F6C7FD983E}Sounds/RadioBroadcast/Comeau/Ministry - Stigmata.snd"
+     Probability 100
+     Index 60
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ministry - Thieves.snd" {
+     Filename "{E376827D50DF9C4C}Sounds/RadioBroadcast/Comeau/Ministry - Thieves.snd"
+     Probability 100
+     Index 61
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Mirrorthrone - So Frail.snd" {
+     Filename "{44F77E8DFB6E4D05}Sounds/RadioBroadcast/Comeau/Mirrorthrone - So Frail.snd"
+     Probability 100
+     Index 62
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motley Crue - Dr. Feelgood.snd" {
+     Filename "{68E8824B005ADCD8}Sounds/RadioBroadcast/Comeau/Motley Crue - Dr. Feelgood.snd"
+     Probability 100
+     Index 63
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motley Crue - Kickstart My Heart.snd" {
+     Filename "{32C7A46AB659CF8E}Sounds/RadioBroadcast/Comeau/Motley Crue - Kickstart My Heart.snd"
+     Probability 100
+     Index 64
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motley Crue - Live Wire.snd" {
+     Filename "{6029CBF43378C49F}Sounds/RadioBroadcast/Comeau/Motley Crue - Live Wire.snd"
+     Probability 100
+     Index 65
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motorhead - Back at the Funny Farm.snd" {
+     Filename "{2F1EA0327733F783}Sounds/RadioBroadcast/Comeau/Motorhead - Back at the Funny Farm.snd"
+     Probability 100
+     Index 66
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motorhead - Girlschool-Bomber.snd" {
+     Filename "{76EEA08B240E0E05}Sounds/RadioBroadcast/Comeau/Motorhead - Girlschool-Bomber.snd"
+     Probability 100
+     Index 67
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motorhead - In the Black.snd" {
+     Filename "{7CEFFE4E804426D6}Sounds/RadioBroadcast/Comeau/Motorhead - In the Black.snd"
+     Probability 100
+     Index 68
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motorhead - Marching Off to War.snd" {
+     Filename "{430F5FF46B488BF8}Sounds/RadioBroadcast/Comeau/Motorhead - Marching Off to War.snd"
+     Probability 100
+     Index 69
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Motorhead - We Are the Road Crew.snd" {
+     Filename "{1EC841F0B1A436B3}Sounds/RadioBroadcast/Comeau/Motorhead - We Are the Road Crew.snd"
+     Probability 100
+     Index 70
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Nitro - Machine Gunn Eddie.snd" {
+     Filename "{995814F14A1CABF2}Sounds/RadioBroadcast/Comeau/Nitro - Machine Gunn Eddie.snd"
+     Probability 100
+     Index 71
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Omen - The Axeman.snd" {
+     Filename "{5994B4F4F90B29B3}Sounds/RadioBroadcast/Comeau/Omen - The Axeman.snd"
+     Probability 100
+     Index 72
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ostrogoth - Queen of Desire.snd" {
+     Filename "{3B441E245E5DDB2E}Sounds/RadioBroadcast/Comeau/Ostrogoth - Queen of Desire.snd"
+     Probability 100
+     Index 73
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Overkill - World of Hurt.snd" {
+     Filename "{B6973024C67FA579}Sounds/RadioBroadcast/Comeau/Overkill - World of Hurt.snd"
+     Probability 100
+     Index 74
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ozzy Osbourne - Believer.snd" {
+     Filename "{7096F41A8CD3BAFF}Sounds/RadioBroadcast/Comeau/Ozzy Osbourne - Believer.snd"
+     Probability 100
+     Index 75
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ozzy Osbourne - Diary of a Madman.snd" {
+     Filename "{965C2C5C00459B82}Sounds/RadioBroadcast/Comeau/Ozzy Osbourne - Diary of a Madman.snd"
+     Probability 100
+     Index 76
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ozzy Osbourne - Mr. Crowley.snd" {
+     Filename "{BBA6812D463D73CD}Sounds/RadioBroadcast/Comeau/Ozzy Osbourne - Mr. Crowley.snd"
+     Probability 100
+     Index 77
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Prong - Snap Your Fingers, Snap Your Neck.snd" {
+     Filename "{25C401BDF4EDDA19}Sounds/RadioBroadcast/Comeau/Prong - Snap Your Fingers, Snap Your Neck.snd"
+     Probability 100
+     Index 78
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Quiet Riot - The Wild and the Young.snd" {
+     Filename "{EFD869ADDB4F2CFB}Sounds/RadioBroadcast/Comeau/Quiet Riot - The Wild and the Young.snd"
+     Probability 100
+     Index 79
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Racer X - Technical Difficulties.snd" {
+     Filename "{EFDBDC9B2C938E09}Sounds/RadioBroadcast/Comeau/Racer X - Technical Difficulties.snd"
+     Probability 100
+     Index 80
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Racer X - YRO.snd" {
+     Filename "{11366B2CCA901A07}Sounds/RadioBroadcast/Comeau/Racer X - YRO.snd"
+     Probability 100
+     Index 81
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Ratt - Lay It Down.snd" {
+     Filename "{D1657BE4C2247D6D}Sounds/RadioBroadcast/Comeau/Ratt - Lay It Down.snd"
+     Probability 100
+     Index 82
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Riot - Narita.snd" {
+     Filename "{EF6BAF9E34928D7D}Sounds/RadioBroadcast/Comeau/Riot - Narita.snd"
+     Probability 100
+     Index 83
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Riot - Road Racin.snd" {
+     Filename "{9CAE1943656496BE}Sounds/RadioBroadcast/Comeau/Riot - Road Racin.snd"
+     Probability 100
+     Index 84
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Riot - Swords and Tequila.snd" {
+     Filename "{5D2C69EC0402172A}Sounds/RadioBroadcast/Comeau/Riot - Swords and Tequila.snd"
+     Probability 100
+     Index 85
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Rob Zombie - Superbeast.snd" {
+     Filename "{C7634596C496C1FC}Sounds/RadioBroadcast/Comeau/Rob Zombie - Superbeast.snd"
+     Probability 100
+     Index 86
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Rotting Christ - Ad noctis.snd" {
+     Filename "{91314753AB502887}Sounds/RadioBroadcast/Comeau/Rotting Christ - Ad noctis.snd"
+     Probability 100
+     Index 87
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Running Wild - Riding the Storm.snd" {
+     Filename "{1F37293276DDC9B5}Sounds/RadioBroadcast/Comeau/Running Wild - Riding the Storm.snd"
+     Probability 100
+     Index 88
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Sanctuary - Battle Angels.snd" {
+     Filename "{3A7B0B772F188DFC}Sounds/RadioBroadcast/Comeau/Sanctuary - Battle Angels.snd"
+     Probability 100
+     Index 89
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Savatage - Hall Of The Mountain King.snd" {
+     Filename "{C91EDB0291A40ED7}Sounds/RadioBroadcast/Comeau/Savatage - Hall Of The Mountain King.snd"
+     Probability 100
+     Index 90
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Saxon - Wheels of Steel.snd" {
+     Filename "{60CEED66F4D15684}Sounds/RadioBroadcast/Comeau/Saxon - Wheels of Steel.snd"
+     Probability 100
+     Index 91
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Scorpions - Holiday.snd" {
+     Filename "{06D8558D0893CAEC}Sounds/RadioBroadcast/Comeau/Scorpions - Holiday.snd"
+     Probability 100
+     Index 92
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Scorpions- Blackout.snd" {
+     Filename "{8013984F76FFA760}Sounds/RadioBroadcast/Comeau/Scorpions- Blackout.snd"
+     Probability 100
+     Index 93
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Skeletonwitch - Soul Thrashing Black Sorcery.snd" {
+     Filename "{301C7D1B99D1FC4F}Sounds/RadioBroadcast/Comeau/Skeletonwitch - Soul Thrashing Black Sorcery.snd"
+     Probability 100
+     Index 94
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Skid Row - Youth Gone Wild.snd" {
+     Filename "{0E118B36913ED132}Sounds/RadioBroadcast/Comeau/Skid Row - Youth Gone Wild.snd"
+     Probability 100
+     Index 95
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Slayer - Metal Storm'Face The Slayer.snd" {
+     Filename "{9881A4E42DB69D39}Sounds/RadioBroadcast/Comeau/Slayer - Metal Storm'Face The Slayer.snd"
+     Probability 100
+     Index 96
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Slough Feg - Harry Cantwell Drum Solo.snd" {
+     Filename "{343BFEACA5B32F4F}Sounds/RadioBroadcast/Comeau/Slough Feg - Harry Cantwell Drum Solo.snd"
+     Probability 100
+     Index 97
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Slough Feg - Warriors Dawn.snd" {
+     Filename "{DE52348EEFA22665}Sounds/RadioBroadcast/Comeau/Slough Feg - Warriors Dawn.snd"
+     Probability 100
+     Index 98
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Static-X - Love Dump.snd" {
+     Filename "{A55E0E70BCFA70EE}Sounds/RadioBroadcast/Comeau/Static-X - Love Dump.snd"
+     Probability 100
+     Index 99
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Tenacious D - Master Exploder.snd" {
+     Filename "{600E7F050FDF4BDF}Sounds/RadioBroadcast/Comeau/Tenacious D - Master Exploder.snd"
+     Probability 100
+     Index 100
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Tenacious D - The Metal.snd" {
+     Filename "{7CF7EB0D88942E17}Sounds/RadioBroadcast/Comeau/Tenacious D - The Metal.snd"
+     Probability 100
+     Index 101
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Testament - For The Glory Of.snd" {
+     Filename "{6DBE565F4E957F8B}Sounds/RadioBroadcast/Comeau/Testament - For The Glory Of.snd"
+     Probability 100
+     Index 102
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Testament - More Than Meets The Eye.snd" {
+     Filename "{2C27DD13A3186F44}Sounds/RadioBroadcast/Comeau/Testament - More Than Meets The Eye.snd"
+     Probability 100
+     Index 103
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "The Michael Schenker Group-Assault Attack.snd" {
+     Filename "{A9B4BD2A5DAEBDEB}Sounds/RadioBroadcast/Comeau/The Michael Schenker Group-Assault Attack.snd"
+     Probability 100
+     Index 104
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Tvangeste - Birth Of The Hero.snd" {
+     Filename "{709BDCA0372F2D05}Sounds/RadioBroadcast/Comeau/Tvangeste - Birth Of The Hero.snd"
+     Probability 100
+     Index 105
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "UFO - Rock Bottom.snd" {
+     Filename "{2837E4F14C48A44D}Sounds/RadioBroadcast/Comeau/UFO - Rock Bottom.snd"
+     Probability 100
+     Index 106
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Whitesnake - Still of the Night.snd" {
+     Filename "{BB8282686748673D}Sounds/RadioBroadcast/Comeau/Whitesnake - Still of the Night.snd"
+     Probability 100
+     Index 107
+     SampleMetadata ""
+    }
+    AudioBankSampleClass "Wrath Of Killenstein - Igniisis Dance.snd" {
+     Filename "{E527ED3C3D2F9E04}Sounds/RadioBroadcast/Comeau/Wrath Of Killenstein - Igniisis Dance.snd"
+     Probability 100
+     Index 108
+     SampleMetadata ""
+    }
+   }
+  }
+  BankLocalClass "33796" {
+   id 33796
+   name "Static"
+   version 7
+   tl -698.535 -275.394
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "47117:40" {
+       id 47117
+       port 40
+      }
+     }
+    }
+   }
+   pi {
+    1 0
+   }
+   pu {
+    1 0
+   }
+   Volume -8
+   "Loop count" 255
+   "Infinite loop" 1
+   Resampler FIR_8
+   Samples {
+    AudioBankSampleClass "BroadcastRadio_Static_LP.wav" {
+     Filename "{88E4C185F6CC5059}Sounds/RadioBroadcast/Samples/Everon/BroadcastRadio_Static_LP.wav"
+     Probability 100
+     Index 0
+     SampleMetadata ""
+    }
+   }
+  }
+  BankLocalClass "35844" {
+   id 35844
+   name "DJ"
+   version 7
+   tl -701.337 -175.107
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "47117:40" {
+       id 47117
+       port 40
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "47117:34" {
+       id 47117
+       port 34
+      }
+     }
+    }
+    ConnectionsClass "con:4" {
+     id 4
+     links {
+      ConnectionClass "47117:36" {
+       id 47117
+       port 36
+      }
+     }
+    }
+   }
+   pi {
+    21 0
+   }
+   pu {
+    1 0
+   }
+   Selection CustomSignalIndex
+   Resampler FIR_8
+   Samples {
+    AudioBankSampleClass "RadioBroadcast_Jingle_01.wav" {
+     Filename "{8CD73BB853B01DE0}Sounds/RadioBroadcast/Samples/Everon/DJ/RadioBroadcast_Jingle_01.wav"
+     Probability 100
+     Index 0
+     SampleMetadata ""
+    }
+   }
+  }
+ }
+ spatialities {
+  SpatialityClass "22556" {
+   id 22556
+   name "Spatiality"
+   version 5
+   tl -25 -570.912
+   spatialFactor 1
+  }
+ }
+ auxOuts {
+  AuxOutClass "40989" {
+   id 40989
+   name "AuxOut Reverb INT Small"
+   version 5
+   tl 512 320
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "1033:5" {
+       id 1033
+       port 5
+      }
+      ConnectionClass "16393:5" {
+       id 16393
+       port 5
+      }
+      ConnectionClass "17417:5" {
+       id 17417
+       port 5
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "45069:107" {
+       id 45069
+       port 107
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "45069:39" {
+       id 45069
+       port 39
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+   pu {
+    6 0
+   }
+   OSPort 300039
+  }
+  AuxOutClass "42013" {
+   id 42013
+   name "AuxOut Reverb INT Medium"
+   version 5
+   tl 513.521 446.479
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "1033:5" {
+       id 1033
+       port 5
+      }
+      ConnectionClass "16393:5" {
+       id 16393
+       port 5
+      }
+      ConnectionClass "17417:5" {
+       id 17417
+       port 5
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "45069:106" {
+       id 45069
+       port 106
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "45069:39" {
+       id 45069
+       port 39
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+   pu {
+    6 0
+   }
+   OSPort 301063
+  }
+  AuxOutClass "44061" {
+   id 44061
+   name "AuxOut Revverb INT Large"
+   version 5
+   tl 513.521 574.479
+   ins {
+    ConnectionsClass "con:0" {
+     id 0
+     links {
+      ConnectionClass "1033:5" {
+       id 1033
+       port 5
+      }
+      ConnectionClass "16393:5" {
+       id 16393
+       port 5
+      }
+      ConnectionClass "17417:5" {
+       id 17417
+       port 5
+      }
+     }
+    }
+    ConnectionsClass "con:1" {
+     id 1
+     links {
+      ConnectionClass "45069:110" {
+       id 45069
+       port 110
+      }
+     }
+    }
+    ConnectionsClass "con:2" {
+     id 2
+     links {
+      ConnectionClass "45069:39" {
+       id 45069
+       port 39
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+   pu {
+    6 0
+   }
+   OSPort 302087
+  }
+ }
+ version 1
+}

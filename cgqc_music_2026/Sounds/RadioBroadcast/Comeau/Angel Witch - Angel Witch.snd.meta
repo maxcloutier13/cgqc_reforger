@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EA0E0CCDCF11670D}Sounds/RadioBroadcast/Samples/Angel Witch - Angel Witch.snd"
+ Configurations {
+  SNDResourceClass PC {
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

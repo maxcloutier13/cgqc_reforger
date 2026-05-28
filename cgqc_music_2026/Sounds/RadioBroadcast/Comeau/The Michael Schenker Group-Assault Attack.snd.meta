@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{A9B4BD2A5DAEBDEB}Sounds/RadioBroadcast/Comeau/The Michael Schenker Group-Assault Attack.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{3C33F9A60E8F52B0}Sounds/RadioBroadcast/Comeau/The Michael Schenker Group-Assault Attack.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

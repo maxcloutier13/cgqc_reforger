@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{709BDCA0372F2D05}Sounds/RadioBroadcast/Comeau/Tvangeste - Birth Of The Hero.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{E51C982C640EC25E}Sounds/RadioBroadcast/Comeau/Tvangeste - Birth Of The Hero.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

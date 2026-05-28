@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{ABACB1AEA0AD942F}Sounds/RadioBroadcast/Comeau/Brocas Helm - Cry of the Banshee.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{3E2BF522F38C7B74}Sounds/RadioBroadcast/Comeau/Brocas Helm - Cry of the Banshee.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

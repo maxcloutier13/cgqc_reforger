@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{08CFC96222DCE19F}Sounds/RadioBroadcast/Comeau/Manowar - Die For Metal.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{9D488DEE71FD0EC4}Sounds/RadioBroadcast/Comeau/Manowar - Die For Metal.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{ACEC78F6C7FD983E}Sounds/RadioBroadcast/Comeau/Ministry - Stigmata.snd"
+ Configurations {
+  SNDResourceClass PC {
+   AudioFile "{396B3C7A94DC7765}Sounds/RadioBroadcast/Comeau/Ministry - Stigmata.wav"
+   TargetFormat OPUS
+  }
+  SNDResourceClass XBOX_ONE : PC {
+  }
+  SNDResourceClass XBOX_SERIES : PC {
+  }
+  SNDResourceClass PS4 : PC {
+  }
+  SNDResourceClass PS5 : PC {
+  }
+  SNDResourceClass HEADLESS : PC {
+  }
+ }
+}
