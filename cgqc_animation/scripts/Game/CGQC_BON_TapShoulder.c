@@ -1,4 +1,4 @@
-
+/*
 modded class BON_TapShoulderAction : ScriptedUserAction
 {
 	//------------------------------------------------------------------------------------------------
@@ -14,19 +14,21 @@ modded class BON_TapShoulderAction : ScriptedUserAction
 		int tapperPlayerId = playerManager.GetPlayerIdFromControlledEntity(pUserEntity);
 		if (tapperPlayerId == 0)
 			return;
-
-		string tapperName = CGQC_Scripts.GetCustomPlayerName(tapperPlayerId);
-		if (tapperName.IsEmpty())
-			return;
-
+		
 		int ownerPlayerId = playerManager.GetPlayerIdFromControlledEntity(pOwnerEntity);
 		if (ownerPlayerId == 0)
+			return;
+		
+		/*
+		string tapperName = CGQC_Scripts.GetCustomPlayerName(tapperPlayerId);
+		if (tapperName.IsEmpty())
 			return;
 
 		string ownerName = CGQC_Scripts.GetCustomPlayerName(ownerPlayerId);
 		if (ownerName.IsEmpty())
 			return;
-
+		*/
+/*
 		BON_TapShoulderReceiverComponent receiver = BON_TapShoulderReceiverComponent.Cast(pOwnerEntity.FindComponent(BON_TapShoulderReceiverComponent));
 		if (!receiver)
 			return;
@@ -34,11 +36,13 @@ modded class BON_TapShoulderAction : ScriptedUserAction
 		BON_TapShoulderReceiverComponent tapperReceiver = BON_TapShoulderReceiverComponent.Cast(pUserEntity.FindComponent(BON_TapShoulderReceiverComponent));
 
 		// Tapped player gets the shake + notification
-		receiver.ShowTapNotification(tapperName + " is on you", true);
+		//receiver.ShowTapNotification(tapperName + " is on you", true);
+		receiver.ShowTapNotification("Prêt!", true);
 
 		// Tapper gets notification only
 		if (tapperReceiver)
-			tapperReceiver.ShowTapNotification("You tapped " + ownerName, false);
+			tapperReceiver.ShowTapNotification("Prêt...", false);
+			//tapperReceiver.ShowTapNotification("You tapped " + ownerName, false);
 	}
 }
 
@@ -67,4 +71,4 @@ class BON_TapShoulderReceiverComponent : ScriptComponent
 
 		popup.PopupMsg(message, 1.0);
 	}
-}
+}*/
