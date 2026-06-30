@@ -1,7 +1,7 @@
 // ============================================================
 // CGQC_SteelTargetHitComponent.c
 // Simple hit feedback for steel targets.
-// Shows distance + velocity via CGQC_RangeTools_HitDisplay
+// Shows distance + velocity via CGQC_BasicDisplay
 // only when shooter is > 100 m away (closer hits are obvious).
 // No zone detection, no reset action.
 // ============================================================
@@ -108,7 +108,7 @@ class CGQC_SteelTargetHitEffect : BaseProjectileEffect
 			body = body + "\n" + "<color rgba=\"255,80,80,255\"><b>" + label + "</b></color>";
 		body = body + "\nDistance: " + distM.ToString() + " m\nVélocité: " + velMs.ToString() + " m/s";
 
-		CGQC_RangeTools_HitDisplay.Show("Impact!", body, 4.0);
+		CGQC_BasicDisplay.Show("Impact!", body, 4.0);
 	}
 }
 

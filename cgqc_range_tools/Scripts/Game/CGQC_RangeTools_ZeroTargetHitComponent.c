@@ -713,7 +713,7 @@ class CGQC_RangeTools_ZeroCheckAction : ScriptedUserAction
 			string report = hitComp.GetLastReport();
 			string title  = hitComp.GetLastReportTitle();
 			if (report.IsEmpty()) report = "Aucun impact enregistre.";
-			CGQC_RangeTools_HitDisplay.Show(title, report, 15.0);
+			CGQC_BasicDisplay.Show(title, report, 15.0);
 		}
 	}
 

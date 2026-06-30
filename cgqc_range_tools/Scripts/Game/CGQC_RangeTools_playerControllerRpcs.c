@@ -69,7 +69,7 @@ modded class SCR_PlayerController
 	void CGQC_Rpc_ShowTargetReport(string reportText, string reportTitle)
 	{
 		Print("[CGQC_Check] " + reportTitle + "\n" + reportText, LogLevel.NORMAL);
-		CGQC_RangeTools_HitDisplay.Show(reportTitle, reportText, 15.0);
+		CGQC_BasicDisplay.Show(reportTitle, reportText, 15.0);
 	}
 
 	// ----------------------------------------------------------------
@@ -78,7 +78,7 @@ modded class SCR_PlayerController
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowResetHint()
 	{
-		CGQC_RangeTools_HitDisplay.Show("Reset", "Cible remise a zero.", 2.5);
+		CGQC_BasicDisplay.Show("Reset", "Cible remise a zero.", 2.5);
 	}
 
 	// ----------------------------------------------------------------
@@ -114,7 +114,7 @@ modded class SCR_PlayerController
 		body = body + "\nZone: " + zone + " | " + points.ToString() + " pts";
 		body = body + "\nTotal: " + totalPoints.ToString() + "/" + (hitNum * 5).ToString() + " pts";
 
-		CGQC_RangeTools_HitDisplay.Show(title, body, duration);
+		CGQC_BasicDisplay.Show(title, body, duration);
 	}
 
 	// ----------------------------------------------------------------
@@ -130,7 +130,7 @@ modded class SCR_PlayerController
 		body = body + "\nOffset: " + mradStr;
 		body = body + "\n        " + cmStr;
 
-		CGQC_RangeTools_HitDisplay.Show(title, body, 3.0);
+		CGQC_BasicDisplay.Show(title, body, 3.0);
 	}
 
 	// ----------------------------------------------------------------
@@ -139,6 +139,6 @@ modded class SCR_PlayerController
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
 	void CGQC_Rpc_ShowMoverHint(string title, string body)
 	{
-		CGQC_RangeTools_HitDisplay.Show(title, body, 3.0);
+		CGQC_BasicDisplay.Show(title, body, 3.0);
 	}
 }
