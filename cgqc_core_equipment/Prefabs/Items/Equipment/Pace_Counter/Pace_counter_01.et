@@ -7,18 +7,6 @@ GenericEntity : "{10C26F96EF7A8CF5}Prefabs/Props/Core/Props_Base.et" {
      ActionTitle "Check Ranger Beads"
      "Sort Priority" -3
     }
-    CGQC_ResetBeadsAction "{692C41F39A606FC9}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{692C41F39A6060BC}" {
-      Name "Reset Beads"
-     }
-     ActionTitle "Reset Beads"
-     VisibilityRange 1
-     Duration 0.5
-     "Inventory action" 1
-    }
    }
   }
  }

@@ -1,3 +1,4 @@
+/*
 class CGQC_ResetBeadsAction : ScriptedUserAction
 {
     override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
@@ -33,3 +34,4 @@ class CGQC_ResetBeadsAction : ScriptedUserAction
         return true;
     }
 }
+*/
