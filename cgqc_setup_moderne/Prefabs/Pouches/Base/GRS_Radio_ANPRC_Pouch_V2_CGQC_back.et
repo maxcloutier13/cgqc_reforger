@@ -1,0 +1,119 @@
+GenericEntity {
+ ID "69BAF6EB0BA9C2F2"
+ components {
+  Persistence "{69BAF6EB0BA9C2E2}" {
+  }
+  SignalsManagerComponent "{69BAF6EB0BA9C2D1}" {
+  }
+  SoundComponent "{69BAF6EB0BA9C2DE}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+  }
+  GRS_EquipmentStorageComponent "{69BAF6EB0BA9C2DC}" {
+   Attributes SCR_ItemAttributeCollection "{69BAF6EB0BA9C2D9}" {
+    ItemDisplayName UIInfo "{69BAF6EB0BA9C2C7}" {
+     Name "GRS: ANPRC Pouch - MC  - CGQC"
+     Description "GRS: ANPRC Pouch - MC - CGQC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69BAF6EB0BA9C2C1}" {
+     Weight 0.001
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 800
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69BAF6EB0BA9C2CD}" {
+      CameraOrbitAngles -15 15 0
+      FOV 60
+      AspectRatio 1
+      PreviewModel "{C71CCC2A6A1C6F33}Assets/Pouches/New/ANPRC/Backpanel_ANPRC_Pouch.xob"
+     }
+    }
+    CommonItemType "GRS_BASE_POUCH"
+    m_bDraggable 0
+    m_bVisible 0
+    m_bStackable 0
+   }
+   Priority 1
+   StoragePurpose 0x40 0
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 500
+   MaxItemSize 10 10 10
+   UseVirtualInventoryReplication 0
+   InitialStorageSlots {
+    GRS_RadioStorageSlot Radio {
+     Prefab "{CE6320EE34E29382}Prefabs/Accessories/GRS_Radio_ANPRC_LEFT_JTAC.et"
+     ActivatePhysicsOnDetaching 1
+     AllowedItemTypes {
+      "GRS_RADIO" "RADIO"
+     }
+     m_AllowedTypeStrings {
+      "GRS_RADIO" "RADIO"
+     }
+    }
+   }
+  }
+  MeshObject "{69BAF6EB0BA9C335}" {
+   Object "{C71CCC2A6A1C6F33}Assets/Pouches/New/ANPRC/Backpanel_ANPRC_Pouch.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69BAF6EB0BA9C334}" {
+   Enabled 0
+   SimState None
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69BAF6EB0BA9C332}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69BAF6EB0BA9C33D}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69BAF6EB0BA9C33B}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69BAF6EB0BA9C32B}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69BAF6EB0BA9C329}" {
+   AreaType GL_Belt_Nade_Slot "{69BAF6EB0BA9C316}" {
+   }
+   WornModel "{C71CCC2A6A1C6F33}Assets/Pouches/New/ANPRC/Backpanel_ANPRC_Pouch.xob"
+   ItemModel "{C71CCC2A6A1C6F33}Assets/Pouches/New/ANPRC/Backpanel_ANPRC_Pouch.xob"
+  }
+  ActionsManagerComponent "{69BAF6EB0BA9C315}" {
+   ActionContexts {
+    UserActionContext "{69BAF6EB0BA9C313}" {
+     ContextName "default"
+     Position PointInfo "{69BAF6EB0BA9C311}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69BAF6EB0BA9C31E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69BAF6EB0BA9C31D}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{69BAF6EB0BA9C31A}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69BAF6EB0BA9C318}" {
+  }
+ }
+ coords -3.882 1.768 3.347
+}

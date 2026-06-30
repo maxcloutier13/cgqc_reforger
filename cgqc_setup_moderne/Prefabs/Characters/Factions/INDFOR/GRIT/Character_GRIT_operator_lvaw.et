@@ -7,18 +7,18 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{B9C2BD9C23031FD6}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_LVAW_CAG.et"
+   WeaponTemplate "{222F9FB27FDD83B6}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_LVAW.et"
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
      PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
      }
     }
     ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
      PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
      }
     }
    }

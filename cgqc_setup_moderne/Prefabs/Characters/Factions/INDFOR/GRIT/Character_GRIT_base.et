@@ -37,13 +37,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{81071DC5DC2E4C62}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_GRIT_black.et"
     }
     LoadoutSlotInfo Jacket {
-     Prefab "{AC03CBE55EE629A3}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_BTiger_GRIT.et"
+     Prefab "{74E45FA3D8382984}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_Black.et"
     }
     LoadoutSlotInfo ArmoredVest {
      Prefab "{E13636764B46A209}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_GRIT.et"
     }
     LoadoutSlotInfo Pants {
-     Prefab "{7C6E21856AAF7E0C}Prefabs/Characters/Uniforms/Bottoms/Vergy_Pants/Vergy_Crye_Trousers_BTiger.et"
+     Prefab "{185B132D0AEEAF13}Prefabs/Characters/Uniforms/Bottoms/GRS_CryeG3_Bottoms/GRS_CryeG3_Bottoms_Black.et"
     }
     LoadoutSlotInfo Boots {
      Prefab "{F177C9417949A7CB}Prefabs/Characters/Uniforms/Footwear/Walking_Boots/WalkingBoots_Black.et"
@@ -52,7 +52,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{E69E753794A57A60}Prefabs/Backpanels/GRS_Modular_Backpanel_Black_GRIT.et"
     }
     LoadoutSlotInfo HandWear {
-     Prefab "{39428D5F8D2E26B3}Prefabs/Characters/Handwear/Gloves_MechanixMpact/GRS_Oakley_Gloves_Black.et"
+     Prefab "{5451EE5DDF933200}Prefabs/Characters/Uniforms/Gloves/Ferro_Gun_Gloves/Ferro_Gun_Gloves_Black.et"
     }
     LoadoutSlotInfo Ears {
      Prefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
@@ -61,7 +61,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{59F9727757DB226B}Prefabs/Characters/HeadGear/Balaclavas/cotton_balaclava_twohole_standalone.et"
     }
     LoadoutSlotInfo Neck {
-     Prefab "{651F0CCA02166DB8}Prefabs/Characters/Masks/GRS_shemagh_base.et"
+     Prefab "{651F0CCA02166DB8}Prefabs/Characters/Neckwear/GRS_shemagh_base.et"
     }
     LoadoutSlotInfo Extra {
      Prefab "{7DF9CDB82621B14F}Prefabs/Characters/Uniforms/Accessories/Under_Shirt_Sleeves/Under_Shirt_Sleeves_Black.et"
@@ -77,13 +77,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D112501353972}" {
-     TargetStorage "Jacket/Vergy_Crye_BTiger_GRIT.et/GRS_StorageComponent/GRS_StorageComponent.et"
+     TargetStorage "Jacket/GRS_Crye_Black.et"
      PrefabsToSpawn {
       "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
      }
     }
     ItemsInitConfigurationItem "{696D11251E6084B6}" {
-     TargetStorage "Pants/Vergy_Crye_Trousers_BTiger.et"
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_Black.et"
      PrefabsToSpawn {
       "{934F7D4CF484C652}Prefabs/Items/Equipment/Lockpicks/LockPick_Manual.et"
      }

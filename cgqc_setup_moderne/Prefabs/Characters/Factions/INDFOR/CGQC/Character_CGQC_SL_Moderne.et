@@ -13,13 +13,13 @@ SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Jacket {
-     Prefab "{C3875A8A398397CC}Prefabs/Characters/Uniforms/Tops/Vergy_Crye/Vergy_Crye_RG_CGQC_camo_sl.et"
+     Prefab "{2980FC239197B0A9}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC.et"
     }
     LoadoutSlotInfo ArmoredVest {
-     Prefab "{D7FABA708D9B1D7F}Prefabs/Vests/AVS_Custom/RG/GRS_AVS_Lead_RG_sTs_CGQC_SL.et"
+     Prefab "{1E917F5FB866A328}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_SL.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{FB7C7D5B650F78AB}Prefabs/Backpanels/GRS_Modular_Backpanel_RG_CGQC_SL.et"
+     Prefab "{A3D5E11CB5A3F9A5}Prefabs/Items/Equipment/Radios/GRS_Spawn_Radio_US.et"
     }
     LoadoutSlotInfo HandWear {
      Prefab "{EB96B80E37FFBD43}Prefabs/Characters/Uniforms/Gloves/Ferro_Gun_Gloves/1Ferro_Gun_Gloves_Tan.et"
@@ -30,32 +30,45 @@ SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Neck {
     }
     LoadoutSlotInfo Extra2 {
-     Prefab "{5A348337A49C351B}Prefabs/Characters/Uniforms/Accessories/Under_Shirt_Sleeves/Under_Shirt_Sleeves_Tan.et"
     }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{690C232DABEBBC53}" {
-     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo_sl.et/GRS_StorageComponent/GRS_StorageComponent.et"
+     TargetStorage "Jacket/GRS_Crye_RG_CGQC.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF756FA10}" {
+     PrefabsToSpawn {
+      "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
+     }
     }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_SL.et/Placards/GRS_Placard_Spiritus_RG.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/Placards/GRS_Placard_FerroDope.et"
     }
     ItemsInitConfigurationItem "{6971325D1A6605B2}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_SL.et/RS_Front_Pouch/GRS_AR_Flex_Pouch_RG.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
     }
     ItemsInitConfigurationItem "{6971325D11B56690}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_SL.et/Front_Admin_Pouch/GRS_Front_Large_Admin_Pouch_RG.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/Dangler/GRS_Belly_Pouch_V5.et"
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_SL.et/LS_Rear_Pouch/GRS_Side_Pouch_2_RG.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_2/GRS_Side_Pouch_1.et"
     }
     ItemsInitConfigurationItem "{6971325D5F18B90A}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Lead_RG_sTs_CGQC_SL.et/RS_Rear_Pouch/GRS_Side_Pouch_1_RG.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_3/GRS_Side_Pouch_1.et"
     }
     ItemsInitConfigurationItem "{69721A015898A517}" {
-     TargetStorage "Back/GRS_Modular_Backpanel_RG_CGQC_SL.et/Pouches_LEGACY/GRS_Backpanel_Pouch_RG_CGQC.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_4/GRS_Side_Pouch_1.et"
+    }
+    ItemsInitConfigurationItem "{6971326DC3A0C29A}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_4/GRS_Side_Pouch_1.et"
+    }
+    ItemsInitConfigurationItem "{6971326DD877002D}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_4/GRS_Side_Pouch_1.et"
+    }
+    ItemsInitConfigurationItem "{6971326DD7A2E8C6}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_SL.et/RS_Pouch_2/GRS_Side_Pouch_1.et"
     }
    }
   }

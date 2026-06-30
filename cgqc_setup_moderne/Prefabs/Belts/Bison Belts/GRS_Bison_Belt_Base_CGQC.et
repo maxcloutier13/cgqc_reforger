@@ -1,0 +1,280 @@
+GenericEntity {
+ ID "69BA366071058934"
+ components {
+  Persistence "{69BA366071058921}" {
+  }
+  SignalsManagerComponent "{69BA366071058944}" {
+  }
+  ClothNodeStorageComponent "{69BA366071058942}" {
+   Attributes SCR_ItemAttributeCollection "{69BA36607105894E}" {
+    ItemDisplayName UIInfo "{69BA36607105894C}" {
+     Name "GRS: Modular Bison Belt - CGQC"
+     Description "GRS: Modular Bison Belt - CGQC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69BA366071058948}" {
+     Weight 1
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 2500
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69BA3660710589B4}" {
+      CameraPreset Front
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 1
+      ItemRenderRotation 0 0 0
+      FOV 40
+      AspectRatio 1
+      IsDynamicObject 0
+      PreviewWornModel 1
+      PreviewModel ""
+     }
+    }
+    m_Size SLOT_2x2
+    m_SlotType SLOT_BACKPACK
+   }
+   StoragePurpose 0x41 0
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 0
+   MaxItemSize 0 0 0
+   UseVirtualInventoryReplication 0
+  }
+  MeshObject "{69BA3660710589BF}" {
+   Object "{B096AB07A6D8AA91}Assets/Belts/Bison Belt/GRS_New_Bison_Belt.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69BA3660710589BD}" {
+   Enabled 0
+   Mass 5
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69BA3660710589BB}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69BA3660710589A6}" {
+     m_sSoundProject "{3D8789E7ACF6EDD3}Sounds/Items/_SharedData/PickUp/Items_PickUp_BackPack.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69BA3660710589A4}" {
+     m_sSoundProject "{3D8789E7ACF6EDD3}Sounds/Items/_SharedData/PickUp/Items_PickUp_BackPack.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69BA3660710589A3}" {
+     m_sSoundProject "{6D0C4AFA2B734709}Sounds/Items/_SharedData/Drop/Items_Drop_BackPack.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+    SCR_AudioSourceConfiguration "{69BA366071058987}" {
+     m_sSoundProject "{F01623940EA93645}Sounds/Items/_SharedData/Open/Backpack_ALICE/Items_Backpack_ALICE.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{69BA366071058985}" {
+     m_sSoundProject "{F01623940EA93645}Sounds/Items/_SharedData/Open/Backpack_ALICE/Items_Backpack_ALICE.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69BA366071058983}" {
+   AreaType GRSWaist "{69BA366071058981}" {
+   }
+   Slots {
+    LoadoutSlotInfo GRS_Zoinks_Can {
+     PivotID "Spine2"
+     Offset 0.1368 -0.0228 0.0857
+     Angles 1.0981 47.9569 -10.652
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GRS_ZynCan "{69BA36607105898D}" {
+     }
+    }
+    LoadoutSlotInfo RS_Front_Pouch {
+     PivotID "Spine2"
+     Offset 0.1367 -0.0357 0.0772
+     Angles 1.7225 47.4285 -9.4254
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105898B}" {
+     }
+    }
+    LoadoutSlotInfo Pistol_Mag_Front_Pouch {
+     PivotID "Spine2"
+     Offset 0.1387 -0.0311 0.0765
+     Angles -3.0901 47.297 -29.8621
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA3660710589F4}" {
+     }
+    }
+    LoadoutSlotInfo Front_Accessory {
+     PivotID "Spine2"
+     Offset 0.0792 -0.03 0.1168
+     Angles -9.5216 10.5177 -93.0522
+     Prefab "{C9A4E563205BAC75}Prefabs/Accessories/GRS_TQ.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA3660710589F3}" {
+     }
+    }
+    LoadoutSlotInfo Holster {
+     Prefab "{510BC1BFBFBD8F1C}Prefabs/Belts/Holsters/GRS_Strap_Holster_Flat_Earth_CGQC.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GRS_Holster "{69BA3660710589F1}" {
+     }
+    }
+    LoadoutSlotInfo Tether_Strap {
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Tether_Slot "{69BA3660710589F0}" {
+     }
+    }
+    LoadoutSlotInfo Pistol_Mag_Pouch {
+     PivotID "Spine2"
+     Offset -0.1469 -0.0378 0.0578
+     Angles 0.8956 -60.0606 8.2035
+     Prefab "{62F4B1B414B7161B}Prefabs/Pouches/Base/GRS_Angled_Pistol_Pouch.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA3660710589FF}" {
+     }
+    }
+    LoadoutSlotInfo Pistol_Mag_Pouch_2 {
+     PivotID "Spine2"
+     Offset -0.1616 -0.0337 0.0259
+     Angles 1.3343 -77.9061 5.9712
+     Prefab "{62F4B1B414B7161B}Prefabs/Pouches/Base/GRS_Angled_Pistol_Pouch.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA3660710589E1}" {
+     }
+    }
+    LoadoutSlotInfo RS_Front_Carabiner {
+     PivotID "Spine2"
+     Offset 0.0833 -0.0346 0.1395
+     Angles 3.6551 -162.2216 -0.3066
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Large_Carabiner "{69BA3660710589EF}" {
+     }
+    }
+    LoadoutSlotInfo LS_Front_Carabiner {
+     PivotID "Spine2"
+     Offset -0.1092 -0.0526 0.1346
+     Angles 2.7128 160.2375 -2.4695
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Large_Carabiner "{69BA3660710589EE}" {
+     }
+    }
+    LoadoutSlotInfo LS_Side_Pouch {
+     PivotID "Spine2"
+     Offset -0.1668 -0.0176 -0.0281
+     Angles 3.7015 -95.219 6.4924
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105B4B5}" {
+     }
+    }
+    LoadoutSlotInfo LS_Rear_Pouch {
+     PivotID "Spine2"
+     Offset -0.1204 -0.0194 -0.0987
+     Angles 5.0256 -140.08549 2.8746
+     Prefab "{9F93AEF86F6217FC}Prefabs/Pouches/Base/GRS_CryeGP6x6.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105B4B0}" {
+     }
+    }
+    LoadoutSlotInfo Middle_Rear_Pouch {
+     PivotID "Spine2"
+     Offset 0.0016 0.0022 -0.1254
+     Angles 7.0823 178.7269 1.4169
+     Prefab "{FEC6E47E73D1F3A9}Prefabs/Pouches/Base/GRS_Blowout_TQS.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105B4B2}" {
+     }
+    }
+    LoadoutSlotInfo RS_Rear_Pouch {
+     PivotID "Spine2"
+     Offset 0.1327 -0.0219 -0.0931
+     Angles 4.6115 132.4267 -5.5305
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105B4B3}" {
+     }
+    }
+    LoadoutSlotInfo RS_Side_Pouch {
+     PivotID "Spine2"
+     Offset 0.1648 -0.0268 0.0154
+     Angles 1.3514 78.1774 -4.7095
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AreaType GL_Belt_Nade_Slot "{69BA36607105B48C}" {
+     }
+    }
+   }
+   WornModel "{B096AB07A6D8AA91}Assets/Belts/Bison Belt/GRS_New_Bison_Belt.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemModel "{B096AB07A6D8AA91}Assets/Belts/Bison Belt/GRS_New_Bison_Belt.xob"
+   ItemMaterialsOverride {
+    ""
+   }
+   VisibleInVehicle 0
+   SoundInt 810
+   DepthBack 0
+   OffsetShoulderLeft 0
+   OffsetShoulderRight 0
+  }
+  ActionsManagerComponent "{69BA36607105B488}" {
+   ActionContexts {
+    UserActionContext "{69BA36607105B489}" {
+     ContextName "default"
+     Position PointInfo "{69BA36607105B484}" {
+      Offset 0 0.05 0
+     }
+     Radius 0.5
+     Height 0
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{69BA36607105B487}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69BA36607105B480}" {
+      Name "#AR-Inventory_OpenStorage"
+     }
+    }
+    SCR_EquipClothAction "{69BA36607105B482}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69BA36607105B483}" {
+      Name "#AR-Inventory_Equip"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_PickUpItemAction "{69BA36607105B49C}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69BA36607105B49E}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{69BA36607105B498}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69BA36607105B49A}" {
+  }
+ }
+ coords 0.404 -0.247 0.151
+}

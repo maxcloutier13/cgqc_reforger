@@ -1,0 +1,26 @@
+GenericEntity : "{DEF8F6AEC0492901}Prefabs/Belts/Holsters/GRS_Strap_Holster_Base.et" {
+ ID "696EBE0A03A2776F"
+ components {
+  GRS_EquipmentStorageComponent "{696EBE0A03A27499}" {
+   Attributes SCR_ItemAttributeCollection "{696EBE0A03A27487}" {
+    ItemDisplayName UIInfo "{696EBE0A03A27485}" {
+     Name "GRS: Strap Holster - CGQC"
+     Description "GRS: Strap Holster - CGQC"
+    }
+   }
+   InitialStorageSlots {
+    GRS_HolsterStorageSlot PouchStorage {
+     Prefab "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{696EBE0A03A274C6}" {
+   WornMaterialsOverride {
+    "{80D5853C7A40155C}Assets/Belts/Holsters/Data/HolsterLegStrap_Flat_Earth.emat" "{8D8789B55012E6A2}Assets/Belts/Holsters/Data/Holster_Flat_Earth.emat"
+   }
+   ItemMaterialsOverride {
+    "{80D5853C7A40155C}Assets/Belts/Holsters/Data/HolsterLegStrap_Flat_Earth.emat" "{8D8789B55012E6A2}Assets/Belts/Holsters/Data/Holster_Flat_Earth.emat"
+   }
+  }
+ }
+}

@@ -1,43 +1,43 @@
 GenericEntity {
- ID "6971326E56FE532B"
+ ID "69BAF6EF40CAF980"
  components {
-  Persistence "{6971326E56FE531D}" {
+  Persistence "{69BAF6EF40CAF9F6}" {
   }
-  SignalsManagerComponent "{6971326E56FE5377}" {
+  SignalsManagerComponent "{69BAF6EF40CAF9F9}" {
   }
-  SoundComponent "{6971326E56FE5375}" {
+  SoundComponent "{69BAF6EF40CAF9E4}" {
    Filenames {
     "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
    }
   }
-  GRS_BatteryComponent "{6971326E56FE5371}" {
+  GRS_BatteryComponent "{69BAF6EF40CAF9E1}" {
   }
-  GRS_DeviceDisplayComponent "{6971326E56FE5370}" {
+  GRS_DeviceDisplayComponent "{69BAF6EF40CAF9E0}" {
    m_sRTContainerLayout "{E5B8C1EE50A7A496}UI/Layouts/ATAK/GRS_RTContainer.layout"
    m_fHudRangeMeters 40
    m_iHudTickMs 33
    m_fScreenBrightness 0.5
    m_fTwilightHours 0.75
   }
-  GRS_DeviceManagerComponent "{6971326E56FE537D}" {
+  GRS_DeviceManagerComponent "{69BAF6EF40CAF9EE}" {
   }
-  GRS_EquipmentStorageComponent "{6971326E56FE537C}" {
-   Attributes SCR_ItemAttributeCollection "{6971326E56FE5379}" {
-    ItemDisplayName UIInfo "{6971326E56FE5367}" {
+  GRS_EquipmentStorageComponent "{69BAF6EF40CAF9EC}" {
+   Attributes SCR_ItemAttributeCollection "{69BAF6EF40CAF9EA}" {
+    ItemDisplayName UIInfo "{69BAF6EF40CAF9D7}" {
      Name "CGQC ATAK"
     }
-    ItemPhysAttributes ItemPhysicalAttributes "{6971326E56FE5365}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{69BAF6EF40CAF9D4}" {
      Weight 0.1
      SizeSetupStrategy Manual
      ItemDimensions 5 5 5
      ItemVolume 200
     }
     CustomAttributes {
-     PreviewRenderAttributes "{6971326E56FE5361}" {
+     PreviewRenderAttributes "{69BAF6EF40CAF9D1}" {
       CameraDistanceToItem 1.4
       FOV 10
      }
-     CharacterModifierAttributes "{6971326E56FE536F}" {
+     CharacterModifierAttributes "{69BAF6EF40CAF9DE}" {
       ADSSpeedLimit 1
      }
     }
@@ -48,78 +48,78 @@ GenericEntity {
     GRS_PatchStorageSlot Rectangle_Patch {
      Offset 0 -0.024 0.0288
      Angles 6.7224 0 0
-     Prefab "{E3C476F4C9231E7B}Prefabs/Unit_Patches/unit_hoplite.et"
+     Prefab "{0618AA7A706FAC2D}Prefabs/Unit_Patches/unit_spartan.et"
      AllowedItemTypes {
       "GRS_PATCH"
      }
     }
    }
   }
-  MeshObject "{6971326E56FE5355}" {
+  MeshObject "{69BAF6EF40CAF9C6}" {
    Object "{3ACD1F1F1234557D}Assets/CAG.xob"
    Materials {
-    MaterialAssignClass "{6971326F9FEF8FEE}" {
+    MaterialAssignClass "{69BAF6EF40CAF9C9}" {
      SourceMaterial "GRS_KAGWERKS"
      AssignedMaterial "{EEA17F0C3BBF1036}Assets/Data/GRS_KAGWERKS_CGQC_RG.emat"
     }
    }
    InheritVisibility 1
   }
-  RigidBody "{6971326E56FE534F}" {
+  RigidBody "{69BAF6EF40CAFA36}" {
    Enabled 1
    LinearDamping 0.5
    AngularDamping 0.5
    AngularSleepingThreashold 1
    ModelGeometry 1
   }
-  SCR_FactionAffiliationComponent "{6971326E56FE534C}" {
+  SCR_FactionAffiliationComponent "{69BAF6EF40CAFA34}" {
    "faction affiliation" "US"
   }
-  SCR_SoundDataComponent "{6971326E56FE534A}" {
+  SCR_SoundDataComponent "{69BAF6EF40CAFA32}" {
    m_aAudioSourceConfiguration {
-    SCR_AudioSourceConfiguration "{6971326E56FE53B6}" {
+    SCR_AudioSourceConfiguration "{69BAF6EF40CAFA3E}" {
      m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
      m_sSoundEventName "SOUND_PICK_UP"
     }
-    SCR_AudioSourceConfiguration "{6971326E56FE53B5}" {
+    SCR_AudioSourceConfiguration "{69BAF6EF40CAFA3C}" {
      m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
      m_sSoundEventName "SOUND_EQUIP"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{6971326E56FE53B3}" {
+    SCR_AudioSourceConfiguration "{69BAF6EF40CAFA3B}" {
      m_sSoundProject "{CC0E5A1324E761C1}Sounds/Items/_SharedData/Drop/Items_Drop_Generic.acp"
      m_sSoundEventName "SOUND_DROP"
     }
    }
   }
-  BaseLoadoutClothComponent "{6971326E56FE53B0}" {
-   AreaType GL_Vest_Chest_Accessories "{6971326E56FE53BE}" {
+  BaseLoadoutClothComponent "{69BAF6EF40CAFA38}" {
+   AreaType GL_Vest_Chest_Accessories "{69BAF6EF40CAFA26}" {
    }
    WornModel "{3ACD1F1F1234557D}Assets/CAG.xob"
    ItemModel "{3ACD1F1F1234557D}Assets/CAG.xob"
   }
-  ActionsManagerComponent "{6971326E56FE53BC}" {
+  ActionsManagerComponent "{69BAF6EF40CAFA23}" {
    ActionContexts {
-    UserActionContext "{6971326E56FE53BA}" {
+    UserActionContext "{69BAF6EF40CAFA21}" {
      ContextName "default"
-     Position PointInfo "{6971326E56FE53B8}" {
+     Position PointInfo "{69BAF6EF40CAFA1F}" {
      }
      Radius 0.2
     }
    }
    additionalActions {
-    SCR_PickUpItemAction "{6971326E56FE5393}" {
+    SCR_PickUpItemAction "{69BAF6EF40CAFA1C}" {
      ParentContextList {
       "default"
      }
-     UIInfo SCR_ActionUIInfo "{6971326E56FE5392}" {
+     UIInfo SCR_ActionUIInfo "{69BAF6EF40CAFA1A}" {
       Name "#AR-Inventory_PickUp"
       m_sIconName "pick-up"
      }
     }
    }
   }
-  GadgetGamepadEffectsManagerComponent "{6971326E56FE539F}" {
+  GadgetGamepadEffectsManagerComponent "{69BAF6EF40CAFA07}" {
    OwnedEffects {
     GamepadTriggerEffect "{61E294244C3DAAFF}" : "{7D39CAE0A72D6C51}Prefabs/Weapons/Core/Configs/TriggerEffects/ADS/TriggerEffect_ADSGadget.conf" {
     }
@@ -127,11 +127,11 @@ GenericEntity {
     }
    }
   }
-  RplComponent "{6971326E56FE539D}" {
+  RplComponent "{69BAF6EF40CAFA03}" {
    "Rpl State Override" Runtime
    "Parent Node From Parent Entity" 0
   }
-  Hierarchy "{6971326E56FE539B}" {
+  Hierarchy "{69BAF6EF40CAFA00}" {
   }
  }
 }
