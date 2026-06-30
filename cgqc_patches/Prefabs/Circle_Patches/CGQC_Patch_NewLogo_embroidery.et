@@ -11,10 +11,10 @@ GameEntity : "{31B8D047E27D9FF1}Prefabs/Circle_Patches/Patch_Reaper_Base.et" {
   }
   BaseLoadoutClothComponent "{657B0C0AEEEB7D3C}" {
    WornMaterialsOverride {
-    "{6E60247C4E33E518}Assets/Circle_Patches/Data/CGQC_newLogo_embroidery.emat"
+    "{6E60247C4E33E518}Assets/Circle_Patches/CGQC_newLogo_embroidery.emat"
    }
    ItemMaterialsOverride {
-    "{6E60247C4E33E518}Assets/Circle_Patches/Data/CGQC_newLogo_embroidery.emat"
+    "{6E60247C4E33E518}Assets/Circle_Patches/CGQC_newLogo_embroidery.emat"
    }
   }
  }

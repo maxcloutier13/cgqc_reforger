@@ -1,0 +1,144 @@
+GenericEntity : "{5879D8E9C56E358D}Prefabs/Items/Core/Radio_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  BaseRadioComponent "{5A30BAE7673C63CA}" {
+   "Encryption key" "chickenNuggets"
+   "Turned on" 1
+   Transceivers {
+    RelayTransceiver "{69BD35D2D8E5B0BB}" {
+     ChannelFrequency 30000
+     "Transmitting Range" 10000
+     "Min tunable frequency" 25000
+     "Max tunable frequency" 512000
+     "Frequency resolution" 10
+     "Any frequency" 0
+    }
+    RelayTransceiver "{69BD35D2D8E5B16E}" {
+     ChannelFrequency 30000
+     "Transmitting Range" 10000
+     "Min tunable frequency" 30000
+     "Max tunable frequency" 512000
+     "Frequency resolution" 10
+     "Any frequency" 0
+    }
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "#ICR-Item_RM300_Name"
+     Description "#ICR-Item_RM300_Desc"
+     Icon "{2FBD8DA665FB8AF1}UI/Textures/VON/ANPRC68-100px_UI.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 2.3
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 600
+     RestingUP Forward
+     RestingAdditiveOffsetLS 0 0 0.15
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{69BD35D2D8E5B152}" {
+     AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{69BD35D2D8E5B15F}" {
+       AnimGraph "{402BB5FA2891D687}Assets/Items/Equipment/workspaces/Radio_ANPRC68.agr"
+       AnimInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69BD35D2D8E5B15B}" {
+      CameraPreset Front
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 3
+      CameraOffset 0 0 0
+      FOV 10
+     }
+     SCR_VONPreviewAttributes "{69BD35D2D8E5B15A}" {
+      CameraOrbitAngles -30 180 45
+      CameraDistanceToItem 0.6
+      FOV 40
+     }
+    }
+    CommonItemType "RADIO"
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+  }
+  MeshObject "{5A30BAE7673C63D1}" {
+   Object "{1E71649B385CA421}Assets/Items/Equipment/Radios/MR300/MR300.xob"
+  }
+  RigidBody "{5A30BAE7673C63D3}" {
+   CenterOfMass 0 0.1 0
+   ModelGeometry 1
+   CCDRadius 0.015
+  }
+  ProcAnimComponent "{69BD35D2D8E5B144}" {
+   Parameters {
+    ProcAnimParams "{69BD35D2D8E5B142}" {
+     ResourceName "{F335B90D4353B9A4}Assets/Items/Equipment/Radios/Radio_ANPRC68/Radio_ANPRC68_01.pap"
+     BoneNames {
+      "i_channel01" "i_power" "i_volume"
+     }
+     SimulationDistance 20
+     SimulateOnDedicatedServer 0
+    }
+   }
+  }
+  SCR_RadioComponent "{5A30BAE7673C63D4}" {
+   m_eAnimVariable ANPRC68
+   m_bCanBeHeld 0
+   m_iRadioCategory MANPACK
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.1 0
+     }
+     Radius 0.115
+    }
+    UserActionContext "{69BD35D2D8E5B14C}" {
+     ContextName "knob_channel"
+     Position PointInfo "{69BD35D2D8E5B14A}" {
+      Offset 0.012 0.2 0.007
+     }
+     Radius 0.1
+    }
+    UserActionContext "{69BD35D2D8E5B149}" {
+     ContextName "knob_toggle"
+     Position PointInfo "{69BD35D2D8E5B148}" {
+      Offset 0 0.2 -0.01
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipItemAction "{553AEBE8F3B60801}" : "{068D8D646964D12A}Prefabs/Characters/Core/Actions/EquipGadgetAction.conf" {
+    }
+    SCR_RadioTuningUserAction "{69BD35D2D8E5B1B3}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{69BD35D2D8E5B194}" {
+     }
+    }
+    SCR_RadioTuningUserAction "{69BD35D2D8E5B192}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{69BD35D2D8E5B191}" {
+     }
+     m_bTuneUp 1
+    }
+    SCR_RadioToggleUserAction "{69BD35D2D8E5B19F}" {
+     ParentContextList {
+      "knob_toggle"
+     }
+    }
+   }
+  }
+ }
+}

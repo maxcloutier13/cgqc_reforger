@@ -31,15 +31,15 @@ modded class SCR_VONController
 	
 	    if (!m_bIsToggledDirect)
 	    {
-			CGQC_ShowVONHint("VON DIRECT désactivé !");
-	        Print("[CGQC_VON] WATCHDOG: toggle off inattendu", LogLevel.ERROR);
+			//CGQC_ShowVONHint("VON DIRECT désactivé !");
+	       // Print("[CGQC_VON] WATCHDOG: toggle off inattendu", LogLevel.ERROR);
 	        return;
 	    }
 	
 	    if (!m_VONComp)
 	    {
-			CGQC_ShowVONHint("VON fantôme — réinitialisation...");
-	        Print("[CGQC_VON] WATCHDOG: ghost state détecté, réinitialisation", LogLevel.ERROR);
+			//CGQC_ShowVONHint("VON fantôme — réinitialisation...");
+	       // Print("[CGQC_VON] WATCHDOG: ghost state détecté, réinitialisation", LogLevel.ERROR);
 	        ForceEnableVONDirectToggle();
 	        return;
 	    }
