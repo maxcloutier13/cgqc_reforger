@@ -1,0 +1,22 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    CGQC_InspectionAction "{6986299CE7B02F20}" {
+     ParentContextList {
+      "Chest"
+     }
+     UIInfo UIInfo "{6986299CF88D5C0A}" {
+      Name "Inspection"
+     }
+     ActionTitle "Inspection"
+     VisibilityRange 1
+     Duration 1
+     "Sort Priority" 50
+     m_sConfigPath "{B56A3747ACB6F38B}Configs/CGQC/CGQC_InspectionConfig.conf"
+    }
+   }
+  }
+ }
+}

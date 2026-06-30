@@ -6,6 +6,11 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
    m_sAffiliatedFaction "CGQC"
   }
+  SCR_FactionPlayerLoadout "{69794BCBF7C72EA4}" {
+   m_sLoadoutName "Soldat Garnison"
+   m_sLoadoutResource "{79F9AC46C6731CF1}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Garnison.et"
+   m_sAffiliatedFaction "CGQC"
+  }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
    m_sLoadoutName "Rifleman LAT"
    m_sLoadoutResource "{FDF8418A3D7284D7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_RiflemanLAT.et"

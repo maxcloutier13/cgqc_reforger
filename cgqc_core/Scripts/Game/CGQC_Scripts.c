@@ -3,7 +3,7 @@ class CGQC_Scripts
 	// Get name from mod CustomName
 	static string GetCustomPlayerName(int playerID)
 	{
-		/*
+		
 	    // Try CustomNamesManager first
 	    CustomNamesManager cnm = CustomNamesManager.GetInstance();
 	    if (cnm)
@@ -11,7 +11,7 @@ class CGQC_Scripts
 	        string customName = cnm.GetCustomName(playerID);
 	        if (!customName.IsEmpty())
 	            return customName;
-	    }*/
+	    }
 
 	    // Fallback to Steam name
 	    return GetGame().GetPlayerManager().GetPlayerName(playerID);

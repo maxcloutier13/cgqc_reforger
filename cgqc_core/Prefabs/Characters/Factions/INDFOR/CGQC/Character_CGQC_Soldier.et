@@ -35,6 +35,9 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{19231774D1D67091}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_TigerStripe.et"
+    }
     LoadoutSlotInfo Jacket {
      Prefab "{86BBBEFE6A2F7B5A}Prefabs/Characters/Uniforms/Jacket_US_BDU_rolledup_TigerStripe.et"
     }

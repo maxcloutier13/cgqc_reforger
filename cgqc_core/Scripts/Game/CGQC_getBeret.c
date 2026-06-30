@@ -16,12 +16,10 @@ class CGQC_getBeret
 
 	    string unitPrefabName = unitPrefabData.GetPrefabName();
 
-	    bool hasCGQC = unitPrefabName.Contains("CGQC") || unitPrefabName.Contains("cgqc");
-	    bool hasBase = unitPrefabName.Contains("Base") || unitPrefabName.Contains("base");
+	    //bool hasCGQC = unitPrefabName.Contains("CGQC") || unitPrefabName.Contains("cgqc");
+	    //bool hasBase = unitPrefabName.Contains("Base") || unitPrefabName.Contains("base");
 
-	    if (!hasCGQC)
-	        return;
-
+	    
 	    ResourceName beretPrefab = CGQC_getBeret.GetBeretForRank(rank);
 	    if (beretPrefab.IsEmpty())
 	        return;
@@ -34,27 +32,24 @@ class CGQC_getBeret
 	    if (!invManager)
 	        return;
 
-	    if (hasCGQC && hasBase)
-	    {
-	        // Both "CGQC" and "Base" in prefab name -> equip beret on head
-	        IEntity currentHead = loadoutStorage.GetClothFromArea(LoadoutHeadCoverArea);
-	        if (!currentHead)
-	        {
-	            CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
-	        }
-	        else
-	        {
-	            if (!CGQC_getBeret.HasAnyBeret(invManager))
-	            {
-	                CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
-	            }
-	        }
-	    }
-	    else
-	    {
-	        // Only "CGQC" in prefab name -> put beret into pants storage
-	        CGQC_getBeret.GiveBeretToPants(playerEntity, invManager, loadoutStorage, beretPrefab);
-	    }
+	   // Check if something on head
+       IEntity currentHead = loadoutStorage.GetClothFromArea(LoadoutHeadCoverArea);
+       if (!currentHead)
+       {
+		// Nothing on head, putting beret on
+           CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
+       }
+       else
+       {
+		// Got something on head
+           if (!CGQC_getBeret.HasAnyBeret(invManager))
+           {
+			// No beret in pockets: Adding it
+			CGQC_getBeret.GiveBeretToPants(playerEntity, invManager, loadoutStorage, beretPrefab);
+               //CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
+           }
+       }
+	  
 	}
 
 	//! Spawns the beret and inserts it into the pants item's storage.
