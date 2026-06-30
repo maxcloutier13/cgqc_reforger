@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{79F9AC46C6731CF1}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Garnison.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

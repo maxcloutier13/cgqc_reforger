@@ -1,0 +1,33 @@
+SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{3F6CA85A6D4AE898}Prefabs/Weapons/Handguns/ARY_1911/ARY_Handgun_1911_delta_od.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69794BE9B7561D34}" {
+     PrefabsToSpawn {
+      "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et" "{CE1BFF103826C9CA}Prefabs/Items/Equipment/Accessories/IFAK/IFAK_ColdWar.et" "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D17}" {
+     PrefabsToSpawn {
+      "{C1279AFE5FE0C3AC}Prefabs/Items/Equipment/Pace_Counter/Pace_counter_01.et" "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D1F}" {
+     PrefabsToSpawn + {
+      "{81563D558B5BCF69}Prefabs/Weapons/Magazines/ARY_Magazine_45acp_1911_7rnd.et" "{81563D558B5BCF69}Prefabs/Weapons/Magazines/ARY_Magazine_45acp_1911_7rnd.et" "{81563D558B5BCF69}Prefabs/Weapons/Magazines/ARY_Magazine_45acp_1911_7rnd.et" "{81563D558B5BCF69}Prefabs/Weapons/Magazines/ARY_Magazine_45acp_1911_7rnd.et"
+     }
+    }
+   }
+  }
+ }
+}
