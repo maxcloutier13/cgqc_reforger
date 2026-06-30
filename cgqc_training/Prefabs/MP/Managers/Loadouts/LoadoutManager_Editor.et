@@ -4,12 +4,17 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   SCR_FactionPlayerLoadout "{69493457571159C7}" {
    m_sLoadoutName "Soldat Training"
    m_sLoadoutResource "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et"
-   m_sAffiliatedFaction "CGQC"
+   m_sAffiliatedFaction "CGQC_UPO"
+  }
+  SCR_FactionPlayerLoadout "{69BCFBB8DF406717}" {
+   m_sLoadoutName "Soldat Simunitions"
+   m_sLoadoutResource "{395AEFBA305F33D3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training_Simunition.et"
+   m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{694934576D3794E4}" {
    m_sLoadoutName "Instructeur"
    m_sLoadoutResource "{3DA369C4E3AA5E28}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructor_Training.et"
-   m_sAffiliatedFaction "CGQC"
+   m_sAffiliatedFaction "CGQC_UPO"
   }
  }
 }

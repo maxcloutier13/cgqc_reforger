@@ -1,0 +1,40 @@
+SCR_ChimeraCharacter : "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Soldat Simunitions"
+    Description "Soldat équipé pour l'entraînement force on force"
+    IconSetName "EditableEntity_Character_Unnarmed"
+   }
+  }
+  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{A7F4BC9BCE184A66}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_carbine_simunition.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{48514DE93637DCC2}Prefabs/Weapons/Handguns/M9/Handgun_M9_simunition.et"
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69491C3999272B43}" {
+     PrefabsToSpawn {
+      "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et" "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et" "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C39A66BD0C4}" {
+     PrefabsToSpawn {
+      "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et" "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et" "{92B78B46ADE6D2EF}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_Sim.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C39C9BD1242}" {
+     PrefabsToSpawn {
+      "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et" "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et" "{D56665074AFBE025}Prefabs/Weapons/Grenades/Grenade_M69_Practice.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{AE8D39F6AE371C1B}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Sim.et" "{AE8D39F6AE371C1B}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Sim.et" "{19231774D1D67091}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_TigerStripe.et"
+     }
+    }
+   }
+  }
+ }
+}

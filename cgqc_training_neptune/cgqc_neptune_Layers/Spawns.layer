@@ -1,0 +1,85 @@
+$grp GenericEntity : "{666016304C0958E1}Prefabs/Structures/Military/Flags/FlagPole_02/CGQC_FlagPole_02_V1.et" {
+ airbase {
+  coords 3752.415 504.034 3063.601
+  {
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    coords 0.497 0.791 -0.081
+    angles 0 98.865 0
+   }
+   GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+    coords 0.488 0.005 -0.128
+    angles 0 97.84 0
+   }
+   SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+    coords 2.266 -0.003 0.241
+    angles 0 93.967 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "Airbase"
+    }
+   }
+   SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+    coords 2.092 -0.003 -1.041
+    angles 0 97.84 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "Airbase"
+    }
+   }
+  }
+ }
+ shoothouse {
+  coords 4044.825 503.594 3938.54
+  angles 0 -13.066 0
+  {
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    coords 0.518 0.794 -0.054
+    angles 0 98.098 0
+   }
+   GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+    coords 0.488 0.005 -0.128
+    angles 0 97.84 0
+   }
+   SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+    coords 2.282 0 0.292
+    angles 0 93.199 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "Shoothouse"
+    }
+   }
+   SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+    coords 2.15 -0.003 -0.616
+    angles 0 97.84 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "CQB Shoothouse"
+    }
+   }
+  }
+ }
+ sniper {
+  coords 2189.043 617.781 2191.694
+  angles 0 130.073 0
+  {
+   GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+    coords 0.506 0.778 -0.105
+    angles 0 98.545 0
+   }
+   GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+    coords 0.488 0.005 -0.128
+    angles 0 97.84 0
+   }
+   SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+    coords 1.607 -0.016 0.652
+    angles 0 93.646 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "Sniping Range"
+    }
+   }
+   SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+    coords 1.789 -0.003 1.605
+    angles 0 97.84 0
+    m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+     Name "Sniping Range"
+    }
+   }
+  }
+ }
+}

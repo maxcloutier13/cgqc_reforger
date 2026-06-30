@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqctesting"
- GUID "68E32CC955A41224"
- TITLE "cgqc_testing"
+ ID "cgqctrainingneptune"
+ GUID "69A722ED837C0A8B"
+ TITLE "cgqc_training_neptune"
  Dependencies {
-  "58D0FB3206B6F859" "606B100247F5C709" "685EE86810996203"
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "68FC062054BB6D8B" "61EF4AA4D043BE00"
  }
  Configurations {
   GameProjectConfig PC {
@@ -17,8 +17,6 @@ GameProject {
   GameProjectConfig PS5 {
   }
   GameProjectConfig HEADLESS {
-  }
-  GameProjectConfig Xbox {
   }
  }
 }

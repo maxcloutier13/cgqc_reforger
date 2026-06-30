@@ -4,6 +4,13 @@ GenericEntity : "{923D948AB0D57A50}Prefabs/Weapons/Rifles/AK74/Rifle_AK74_long_b
   WeaponComponent "{CFBAA4B706BA66E8}" {
    components {
     MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{4E2B66CBA589F625}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Prefab "{E5A295A84C9019D4}Prefabs/Weapons/Attachments/Muzzle/FlashHider_AK74/FlashHider_AK74_sim.et"
+       }
+      }
+     }
      MagazineTemplate "{7A18BE7763E03F17}Prefabs/Weapons/Magazines/Magazine_545x39_Sim.et"
     }
    }

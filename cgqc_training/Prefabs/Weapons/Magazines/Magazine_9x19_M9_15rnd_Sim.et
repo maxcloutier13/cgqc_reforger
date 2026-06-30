@@ -1,0 +1,26 @@
+GenericEntity : "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" {
+ ID "532EF6B3452A8E37"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "M9 9mm Simunitions"
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    m_eAmmoTypeFlags TRAINING
+   }
+   AmmoConfig "{76301B12952D2621}Configs/Weapons/Ammo/Ammo_9x19_Simunition.conf"
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Materials {
+    MaterialAssignClass "{69BD20A5FE2BF7A5}" {
+     SourceMaterial "M9_Mag"
+     AssignedMaterial "{738C1058D18F4291}Assets/Weapons/Magazines/M9/Data/M9_Mag_Sim.emat"
+    }
+   }
+  }
+ }
+}

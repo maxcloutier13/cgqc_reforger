@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{73B9B2E15E47D550}Configs/EntityCatalog/CGQC/Characters_EntityCatalog_UPO.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

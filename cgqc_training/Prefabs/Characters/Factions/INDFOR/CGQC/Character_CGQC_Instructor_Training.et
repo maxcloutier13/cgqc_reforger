@@ -18,8 +18,20 @@ SCR_ChimeraCharacter : "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Pants {
      Prefab "{FCA7468A38A142ED}Prefabs/Characters/Uniforms/ARY_Pants_US_M65_black.et"
     }
+    LoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
     LoadoutSlotInfo HandWear {
      Prefab "{4F71E7468E78DDD2}Prefabs/Characters/Handwear/Gloves_Leather_01/Gloves_Leather_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69491C39C9BD1242}" {
+     PrefabsToSpawn {
+      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{BC2FAF35A4DA094E}Prefabs/Characters/HeadGear/Hat_M70_01/ARY_Hat_M70_01_black.et"
+     }
     }
    }
   }

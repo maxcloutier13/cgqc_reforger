@@ -1,4 +1,4 @@
-Projectile : "{9DA944F4D6A611BA}Prefabs/Weapons/Ammo/SmallArms/Ammo_9x19_HP_JHP.et" {
+Projectile : "{9DA944F4D6A611BA}Prefabs/Weapons/Ammo/Ammo_9x19_HP_JHP.et" {
  ID "DA5C6308000CDEF2"
  components {
   ShellMoveComponent "{851AA4A2AE0A5691}" {
@@ -10,7 +10,7 @@ Projectile : "{9DA944F4D6A611BA}Prefabs/Weapons/Ammo/SmallArms/Ammo_9x19_HP_JHP.
     ProjectileDamage "{5168BBF3DBD79134}" {
     }
    }
-   BallisticTableConfig "{406B309D8BD88E3E}Configs/Weapons/AIBallisiticTables/SmallArms/AIBT_9x19_JHP_JHP.conf"
+   BallisticTableConfig "{406B309D8BD88E3E}Configs/Weapons/AIBallisticTables/AIBT_9x19_JHP_JHP.conf"
    SonicCracks "{534A3A52CF7042A1}Sounds/Weapons/_SharedData/BulletSonicCracks/Pistol/Weapons_BulletSonicCracks_Pistol.acp"
    SubsonicFlybys "{C3F69D82DBEF24E2}Sounds/Weapons/_SharedData/BulletFlybys/Pistol/Weapons_BulletFlybys_Pistol.acp"
    AirDrag 0.0000145

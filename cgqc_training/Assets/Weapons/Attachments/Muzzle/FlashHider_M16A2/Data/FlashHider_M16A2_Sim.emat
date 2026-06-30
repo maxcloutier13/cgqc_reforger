@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{93EAA72DE8591B81}Assets/FlashHider_M16A2_Sim.edds"
+ NMOMap "{19001FC3C0F4FB2C}Assets/Weapons/Attachments/Muzzle/FlashHider_M16A2/Data/FlashHider_M16A2_NMO.edds"
+}
