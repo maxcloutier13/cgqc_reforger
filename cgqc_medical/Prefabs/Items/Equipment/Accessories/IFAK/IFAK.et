@@ -25,8 +25,9 @@ GenericEntity : "{9DE547DE239F120C}Prefabs/Items/Equipment/Accessories/Pouch_ALI
     }
     MultiSlotConfiguration "{696E42CAF642E90D}" {
      SlotTemplate EquipmentStorageSlot saline {
-      Prefab "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et"
+      Prefab "{632CAEF08C102091}Prefabs/Items/Medicine/Splint_01/GC_Splint_01_Base.et"
      }
+     NumSlots 1
     }
    }
   }

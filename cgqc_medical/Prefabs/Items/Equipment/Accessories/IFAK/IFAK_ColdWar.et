@@ -1,0 +1,28 @@
+GenericEntity : "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et" {
+ ID "521AC0491712FB3A"
+ components {
+  MeshObject "{521AC04910AB9941}" {
+   Object "{D924907BDBD9A146}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Pouch_ALICE_200rnd_M249.xob"
+  }
+  SCR_UniversalInventoryStorageComponent "{54848ED08E74CFC4}" {
+   MultiSlots {
+    MultiSlotConfiguration "{659077396DD91AB7}" {
+     SlotTemplate EquipmentStorageSlot A {
+      Prefab "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et"
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{521AC04910AB9954}" {
+   WornModel "{D924907BDBD9A146}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Pouch_ALICE_200rnd_M249.xob"
+   WornMaterialsOverride {
+    "{4DB662AD3DF3BCDC}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Data/Pouch_ALICE_200rnd_M249.emat"
+   }
+   ItemModel "{D924907BDBD9A146}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Pouch_ALICE_200rnd_M249.xob"
+   ItemMaterialsOverride {
+    "{4DB662AD3DF3BCDC}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Data/Pouch_ALICE_200rnd_M249.emat"
+   }
+   DeflatedModel "{D924907BDBD9A146}Assets/Items/Equipment/Accessories/Pouch_ALICE_200rnd_M249/Pouch_ALICE_200rnd_M249.xob"
+  }
+ }
+}
