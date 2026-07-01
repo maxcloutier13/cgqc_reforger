@@ -3,7 +3,7 @@ GameProject {
  GUID "6970F4808790E23A"
  TITLE "cgqc_patches"
  Dependencies {
-  "58D0FB3206B6F859" "657B064AE0E231DF"
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "657B064AE0E231DF"
  }
  Configurations {
   GameProjectConfig PC {
