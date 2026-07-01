@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{07394ECD0D03534C}Configs/EntityCatalog/ION/ION_InventoryItems.conf"
+ Name "{DA0EA6F7AB8D5A59}Configs/EntityCatalog/US/InventoryItems_EntityCatalog_US.conf"
  Configurations {
   CONFResourceClass PC {
   }

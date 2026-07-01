@@ -1,0 +1,302 @@
+GenericEntity {
+ ID "69C21E76AB968789"
+ components {
+  Persistence "{69C21E76AB9687FF}" {
+  }
+  SignalsManagerComponent "{69C21E76AB9687E1}" {
+  }
+  SoundComponent "{69C21E76AB9687EE}" {
+   Filenames {
+    "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp" "{4AB5F7FA7BB2CCBF}Sounds/Items/_SharedData/PickUp/Items_PickUp_RespawnKit.acp" "{77EF656D5DAC6FD5}Sounds/Items/_SharedData/Drop/Items_Drop_RespawnKit.acp" "{EFFB3D8065A486E3}Sounds/Items/DeployableRadio/Items_DeployableRadio.acp"
+   }
+   DistanceManagement 0
+   IncludeInactive 1
+   SoundPoints {
+    SoundPointInfo RadioPosition {
+     Offset 0 1.2272 0
+    }
+   }
+  }
+  BaseRadioComponent "{69C21E76AB9687EA}" {
+   "Encryption key" "poutine"
+   "Turned on" 1
+   Transceivers {
+    RelayTransceiver "{69C21E76AB9687D7}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 10000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+    }
+    RelayTransceiver "{69C21E76AB9687D6}" {
+     ChannelFrequency 50000
+     "Transmitting Range" 30000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
+    }
+   }
+  }
+  MeshObject "{69C21E76AB9687D3}" {
+   Object "{4D3727E18381807A}Assets/Backpacks/tacticool_bag/GRS_Radio_Bag_Deployable.xob"
+   LODFactors {
+    1 1 1 1 1
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{69C21E76AB9687D1}" {
+   ModelGeometry 1
+  }
+  SCR_RadioComponent "{69C21E76AB9687DF}" {
+   m_eAnimVariable 2147483647
+   m_bCanBeHeld 0
+   m_iRadioCategory MANPACK
+   m_iRadioType ANPRC77
+  }
+  SCR_RestrictedDeployableSpawnPointComponent "{69C21E76AB9687DC}" {
+   m_sReplacementPrefab "{B5A9B78EE58D9C76}Prefabs/Systems/DeployableRadios/DeployableItemRadioReplacemenUS.et"
+   m_bDeleteWhenDestroyed 1
+   m_FactionKey "US"
+   m_eRespawnBudgetType SPAWNTICKET
+   m_iMaxRespawns 3
+   m_iRespawnGenerationAmount 1
+   m_bQueryFactionRadioRange 1
+   m_bQuerySpawnPoints 1
+   m_fQueryRadiusBases 80
+   m_fQueryRadiusSpawnPoints 80
+   m_fQueryRadiusCharacters 60
+   m_bQueryAllBases 1
+  }
+  SCR_SoundDataComponent "{69C21E76AB9687DA}" {
+   Enabled 0
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69C21E76AB9687C7}" {
+     m_sSoundProject "{4AB5F7FA7BB2CCBF}Sounds/Items/_SharedData/PickUp/Items_PickUp_RespawnKit.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB9687C5}" {
+     m_sSoundProject "{4AB5F7FA7BB2CCBF}Sounds/Items/_SharedData/PickUp/Items_PickUp_RespawnKit.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB969837}" {
+     m_sSoundProject "{77EF656D5DAC6FD5}Sounds/Items/_SharedData/Drop/Items_Drop_RespawnKit.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB969835}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_UP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB969833}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_DOWN"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB969832}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_ERROR"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB969830}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_ON"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E76AB96983F}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_OFF"
+     m_eFlags 0
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{69C21E76AB96983D}" {
+   components {
+    SCR_DeployableInventoryItemInventoryComponent "{69C21E76AB96983B}" {
+     Attributes SCR_ItemAttributeCollection "{69C21E76AB969838}" {
+      ItemDisplayName UIInfo "{69C21E76AB969825}" {
+       Name "GRS: Deployable Radio - MC"
+       Description "GRS: Deployable Radio - MC"
+       Icon "{650E1AA9B7CB1F9A}UI/Textures/VON/R107M-100px_UI.edds"
+      }
+      ItemPhysAttributes ItemPhysicalAttributes "{69C21E76AB969822}" {
+       Weight 18.5
+       SizeSetupStrategy Manual
+       ItemDimensions 25 25 25
+       ItemVolume 10000
+      }
+      CustomAttributes {
+       CharacterModifierAttributes "{69C21E76AB969815}" {
+       }
+       PreviewRenderAttributes "{69C21E76AB969812}" {
+        CameraPreset Back
+        CameraOrbitAngles 25 -25 180
+        CameraDistanceToItem 4
+        CameraOffset 0 -0.1 0
+        FOV 10
+        PreviewWornModel 1
+        PreviewModel "{518A95342557BC80}Assets/Items/Equipment/Radios/Radio_R107M/Radio_R107M_01.xob"
+       }
+       SCR_VONPreviewAttributes "{69C21E76AB969810}" {
+        CameraOrbitAngles 0 -150 4
+        CameraDistanceToItem 1.3
+        CameraOffset 0.05 -0.1 0
+        FOV 40
+       }
+      }
+      CommonItemType "RADIO"
+      m_Size SLOT_2x2
+      m_SlotType SLOT_BACKPACK
+      m_bStackable 0
+     }
+    }
+   }
+   Attributes SCR_ItemAttributeCollection "{69C21E76AB96981D}" {
+    ItemDisplayName UIInfo "{69C21E76AB96981C}" {
+     Name "CGQC - Squad Radio"
+     Description "CGQC - Squad Radio"
+     Icon "{CF038C42DC15871B}UI/Textures/VON/ANPRC77-100px_UI.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69C21E76AB96981B}" {
+     Weight 5
+     SizeSetupStrategy Manual
+     ItemDimensions 30 30 30
+     ItemVolume 10000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69C21E76AB969819}" {
+      CameraPreset Back
+      CameraOrbitAngles 25 -25 180
+      CameraDistanceToItem 4
+      CameraOffset 0 -0.1 0
+      FOV 10
+      PreviewWornModel 1
+      PreviewModel "{518A95342557BC80}Assets/Items/Equipment/Radios/Radio_R107M/Radio_R107M_01.xob"
+     }
+    }
+    CommonItemType "RADIO"
+    m_Size SLOT_2x2
+    m_SlotType SLOT_BACKPACK
+    m_bStackable 0
+   }
+   Priority 99
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 10000
+   MaxItemSize 25 25 25
+   m_fMaxWeight 10000
+  }
+  BaseLoadoutClothComponent "{69C21E76AB969805}" {
+   AreaType LoadoutBackpackArea "{69C21E76AB969803}" {
+   }
+   WornModel "{4D3727E18381807A}Assets/Backpacks/tacticool_bag/GRS_Radio_Bag_Deployable.xob"
+   ItemModel "{434DB212A7B5DA39}Assets/Backpacks/tacticool_bag/GRS_Radio_Bag_Deployable_Ground.xob"
+   VisibleInVehicle 0
+   DepthBack 0.025
+   OffsetShoulderLeft -0.1
+   OffsetShoulderRight 0.1
+   DeflatedModel "{7572D866A77917F9}Assets/Backpacks/tacticool_bag/GRS_Radio_Bag_Deployable_Deflated.xob"
+   AreaTypeWhenModelChange {
+    LoadoutArmoredVestSlotArea "{69C21E76AB969800}" {
+    }
+   }
+  }
+  ActionsManagerComponent "{69C21E76AB96980D}" {
+   ActionContexts {
+    UserActionContext "{69C21E76AB96980A}" {
+     ContextName "default"
+     Position PointInfo "{69C21E76AB969874}" {
+      Offset 0 0.1504 -0.1458
+     }
+     Radius 0.2
+    }
+   }
+   additionalActions {
+    SCR_DeployableInventoryItemPickUpAction "{69C21E76AB969871}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69C21E76AB96987F}" {
+      Name "#AR-Inventory_PickUp"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_DeployableInventoryItemEquipClothAction "{69C21E76AB96987D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69C21E76AB96987C}" {
+      Name "#AR-Inventory_Equip"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_DeployInventoryItemRestrictedAction "{69C21E76AB96987A}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E76AB969879}" {
+      Name "#AR-DeployableSpawnPoints_Deploy"
+     }
+     Duration 5
+    }
+    SCR_DismantleInventoryItemBaseAction "{69C21E76AB969878}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E76AB969866}" {
+      Name "#AR-DeployableSpawnPoints_Dismantle"
+     }
+    }
+    SCR_ShowDeployableSpawnPointInfo "{69C21E76AB969863}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E76AB969850}" {
+      Name "#AR-DeployableSpawnPoints_ShowRespawnInfo"
+     }
+    }
+    SCR_OpenDeployableSpawnPointStorageAction "{69C21E76AB96985E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E76AB96985D}" {
+      Name "#AR-Inventory_OpenStorage"
+     }
+    }
+    SCR_ToggleDeployableSpawnPointLoadoutAction "{69C21E76AB969859}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E76AB969858}" {
+      Name "#AR-DeployableSpawnPoints_ToggleLoadouts"
+     }
+    }
+   }
+  }
+  GadgetGamepadEffectsManagerComponent "{69C21E76AB969846}" {
+   OwnedEffects {
+    GamepadTriggerEffect "{69C21E76AB969843}" {
+     Name "ADS"
+     Priority 30
+     TriggerType Left
+     TriggerEffectCurve {
+      0 0 0.556 0 0.667 0.125 0.778 0
+     }
+    }
+    GamepadTriggerEffect "{69C21E76AB969841}" {
+     Name "Charged"
+     Priority 30
+     TriggerEffectCurve {
+      0.556 0 0.667 0.125 0.778 0
+     }
+    }
+   }
+  }
+  RplComponent "{69C21E76AB96984E}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69C21E76AB96984C}" {
+  }
+ }
+ coords 0 0 0
+}

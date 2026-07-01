@@ -1,41 +1,30 @@
 GenericEntity {
- ID "69C21E768977977B"
+ ID "69C21E777A5DB325"
  components {
-  Persistence "{69C21E7689779761}" {
+  Persistence "{69C21E777A5DB328}" {
   }
-  SignalsManagerComponent "{69C21E768977976A}" {
+  SignalsManagerComponent "{69C21E777A5DB311}" {
   }
-  BaseRadioComponent "{69C21E7689779757}" {
-   "Encryption key" "chickenNuggets"
+  BaseRadioComponent "{69C21E777A5DB31E}" {
+   "Encryption key" "poutine"
    "Turned on" 1
    Transceivers {
-    RadioTransceiver "{69C21E7689779754}" {
-     ChannelFrequency 35000
-     "Transmitting Range" 50000
-     "Min tunable frequency" 32000
+    RelayTransceiver "{69C21E777A5DB31B}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 5000
+     "Min tunable frequency" 41000
      "Max tunable frequency" 68000
-    }
-    RadioTransceiver "{69C21E7689779753}" {
-     ChannelFrequency 32000
-     "Transmitting Range" 50000
-     "Min tunable frequency" 32000
-     "Max tunable frequency" 68000
-    }
-    RadioTransceiver "{69C21E7689779751}" {
-     ChannelFrequency 38000
-     "Transmitting Range" 50000
-     "Min tunable frequency" 32000
-     "Max tunable frequency" 68000
+     "Frequency resolution" 100
     }
    }
   }
-  InventoryItemComponent "{69C21E7689779750}" {
-   Attributes SCR_ItemAttributeCollection "{69C21E768977975F}" {
-    ItemDisplayName UIInfo "{69C21E768977975E}" {
-     Name "GRS: SC4200 Radio"
-     Description "GRS: SC4200 Radio"
+  InventoryItemComponent "{69C21E777A5DB307}" {
+   Attributes SCR_ItemAttributeCollection "{69C21E777A5DB305}" {
+    ItemDisplayName UIInfo "{69C21E777A5DB304}" {
+     Name "CGQC AN/PRC 152"
+     Description "Dual purpose SR/LR radio for command use"
     }
-    ItemPhysAttributes ItemPhysicalAttributes "{69C21E768977975C}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{69C21E777A5DB302}" {
      Weight 0.7
      SizeSetupStrategy Manual
      ItemVolume 450
@@ -43,9 +32,9 @@ GenericEntity {
      RestingAdditiveOffsetLS 0 0 0.18
     }
     CustomAttributes {
-     CharacterModifierAttributes "{69C21E7689779759}" {
+     CharacterModifierAttributes "{69C21E777A5DB30F}" {
      }
-     PreviewRenderAttributes "{69C21E7689779747}" {
+     PreviewRenderAttributes "{69C21E777A5DB30C}" {
       CameraOrbitAngles -15 15 0
       CameraDistanceToItem 0.3
       CameraOffset 0 0 0
@@ -53,7 +42,7 @@ GenericEntity {
       AspectRatio 1
       PreviewWornModel 1
      }
-     SCR_VONPreviewAttributes "{69C21E7689779744}" {
+     SCR_VONPreviewAttributes "{69C21E777A5DB30A}" {
       CameraOrbitAngles -15 15 0
       CameraDistanceToItem 0.3
       FOV 60
@@ -62,16 +51,16 @@ GenericEntity {
     }
     CommonItemType "GRS_RADIO"
     m_Size SLOT_1x1
-    m_SlotType SLOT_BACKPACK
+    m_SlotType SLOT_GADGETS_STORAGE
    }
   }
-  MeshObject "{69C21E768977974C}" {
-   Object "{7C69D04A47FF19DD}Assets/Accessories/Backpanel_MPU5.xob"
+  MeshObject "{69C21E777A5DB372}" {
+   Object "{36C95E2539088C18}Assets/Accessories/Backpanel_ANPRC.xob"
    LODFactors {
    }
    InheritVisibility 1
   }
-  RigidBody "{69C21E768977974A}" {
+  RigidBody "{69C21E777A5DB370}" {
    Enabled 0
    Mass 3
    CenterOfMass 0 0.1 0
@@ -80,10 +69,10 @@ GenericEntity {
    ModelGeometry 1
    CCDRadius 0.028
   }
-  ProcAnimComponent "{69C21E76897797B7}" {
+  ProcAnimComponent "{69C21E777A5DB37D}" {
    Enabled 0
    Parameters {
-    ProcAnimParams "{69C21E76897797B4}" {
+    ProcAnimParams "{69C21E777A5DB37B}" {
      ResourceName "{DE57211A364C1700}Assets/Items/Equipment/Radios/Radio_R148/Radio_R148_01.pap"
      BoneNames {
       "i_channel01"
@@ -93,99 +82,100 @@ GenericEntity {
     }
    }
   }
-  SCR_RadioComponent "{69C21E76897797BF}" {
+  SCR_RadioComponent "{69C21E777A5DB367}" {
    m_eAnimVariable ANPRC68
    m_bCanBeHeld 0
+   m_bIsVisibleEquipped 1
    m_iRadioType ANPRC68
   }
-  SCR_SoundDataComponent "{69C21E76897797BD}" {
+  SCR_SoundDataComponent "{69C21E777A5DB366}" {
    m_aAudioSourceConfiguration {
-    SCR_AudioSourceConfiguration "{69C21E76897797BA}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB362}" {
      m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
      m_sSoundEventName "SOUND_PICK_UP"
     }
-    SCR_AudioSourceConfiguration "{69C21E76897797A5}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB361}" {
      m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
      m_sSoundEventName "SOUND_EQUIP"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69C21E76897797A3}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB36F}" {
      m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
      m_sSoundEventName "SOUND_DROP"
     }
-    SCR_AudioSourceConfiguration "{69C21E76897797A1}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB36E}" {
      m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
      m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_UP"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69C21E76897797A0}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB36C}" {
      m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
      m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_DOWN"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69C21E76897797A8}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB355}" {
      m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
      m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_ERROR"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69C21E7689779797}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB354}" {
      m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
      m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_ON"
      m_eFlags 0
     }
-    SCR_AudioSourceConfiguration "{69C21E7689779796}" {
+    SCR_AudioSourceConfiguration "{69C21E777A5DB353}" {
      m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
      m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_OFF"
      m_eFlags 0
     }
    }
   }
-  ActionsManagerComponent "{69C21E7689779793}" {
+  ActionsManagerComponent "{69C21E777A5DB351}" {
    ActionContexts {
-    UserActionContext "{69C21E7689779791}" {
+    UserActionContext "{69C21E777A5DB35F}" {
      ContextName "default"
-     Position PointInfo "{69C21E768977979A}" {
+     Position PointInfo "{69C21E777A5DB35B}" {
       Offset 0.0353 0.1059 0.0202
      }
      Radius 0.135
     }
-    UserActionContext "{69C21E7689779798}" {
+    UserActionContext "{69C21E777A5DB358}" {
      ContextName "knob_channel"
-     Position PointInfo "{69C21E7689779786}" {
+     Position PointInfo "{69C21E777A5DB346}" {
       Offset 0.0755 0.1576 -0.0056
      }
      Radius 0.3
     }
    }
    additionalActions {
-    SCR_PickUpItemAction "{69C21E7689779783}" {
+    SCR_PickUpItemAction "{69C21E777A5DB343}" {
      ParentContextList {
       "default"
      }
-     UIInfo UIInfo "{69C21E7689779781}" {
+     UIInfo UIInfo "{69C21E777A5DB341}" {
       Name "#AR-Inventory_PickUp"
      }
     }
-    SCR_RadioTuningUserAction "{69C21E768977978F}" {
+    SCR_RadioTuningUserAction "{69C21E777A5DB34F}" {
      ParentContextList {
       "knob_channel"
      }
-     UIInfo UIInfo "{69C21E768977978D}" {
+     UIInfo UIInfo "{69C21E777A5DB34D}" {
      }
     }
-    SCR_RadioTuningUserAction "{69C21E768977978B}" {
+    SCR_RadioTuningUserAction "{69C21E777A5DB34B}" {
      ParentContextList {
       "knob_channel"
      }
-     UIInfo UIInfo "{69C21E768977978A}" {
+     UIInfo UIInfo "{69C21E777A5DB349}" {
      }
      m_bTuneUp 1
     }
    }
   }
-  GadgetGamepadEffectsManagerComponent "{69C21E76897797F7}" {
+  GadgetGamepadEffectsManagerComponent "{69C21E777A5DB3B5}" {
    OwnedEffects {
-    GamepadTriggerEffect "{69C21E76897797F4}" {
+    GamepadTriggerEffect "{69C21E777A5DB3B2}" {
      Name "ADS"
      Priority 30
      TriggerType Left
@@ -193,7 +183,7 @@ GenericEntity {
       0 0 0.556 0 0.667 0.125 0.778 0
      }
     }
-    GamepadTriggerEffect "{69C21E76897797F2}" {
+    GamepadTriggerEffect "{69C21E777A5DB3BF}" {
      Name "Charged"
      Priority 30
      TriggerEffectCurve {
@@ -202,11 +192,11 @@ GenericEntity {
     }
    }
   }
-  RplComponent "{69C21E76897797FF}" {
+  RplComponent "{69C21E777A5DB3BC}" {
    "Rpl State Override" Runtime
    "Parent Node From Parent Entity" 0
   }
-  Hierarchy "{69C21E76897797FB}" {
+  Hierarchy "{69C21E777A5DB3B9}" {
   }
  }
  coords 0.105 0.168 0.204

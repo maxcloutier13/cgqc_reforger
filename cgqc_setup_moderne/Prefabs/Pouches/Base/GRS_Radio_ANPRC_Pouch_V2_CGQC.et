@@ -46,7 +46,7 @@ GenericEntity {
    UseVirtualInventoryReplication 0
    InitialStorageSlots {
     GRS_RadioStorageSlot Radio {
-     Prefab "{3AAE94CE6ADC37E5}Prefabs/Accessories/GRS_Radio_ANPRC_V3.et"
+     Prefab "{3AAE94CE6ADC37E6}Prefabs/Items/Equipment/Radios/CGQC_1_343.et"
      ActivatePhysicsOnDetaching 1
      AllowedItemTypes {
       "GRS_RADIO" "RADIO"

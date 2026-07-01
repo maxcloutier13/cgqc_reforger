@@ -21,7 +21,6 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{3814B8399C2A8BFF}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_Rifleman.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{98DEEC5F434C1EF7}Prefabs/Backpanels/GRS_Modular_Backpanel_RG_CGQC.et"
     }
     LoadoutSlotInfo HandWear {
      Prefab "{9F0BD0C67E63DF24}Prefabs/Characters/Uniforms/Gloves/Mechanix/Mechanix_Gloves_RG.et"

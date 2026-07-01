@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{F6F2FCA3B5314023}Prefabs/Items/Equipment/Radios/GRS_Spawn_Radio_USSR_Coyote.et"
+ Name "{A3D5E11CB5A3F9A6}Prefabs/Items/Equipment/Radios/GRS_Spawn_Radio_US.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

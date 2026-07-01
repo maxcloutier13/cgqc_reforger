@@ -19,7 +19,7 @@ SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{1E917F5FB866A328}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_SL.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{A3D5E11CB5A3F9A5}Prefabs/Items/Equipment/Radios/GRS_Spawn_Radio_US.et"
+     Prefab "{A3D5E11CB5A3F9A6}Prefabs/Items/Equipment/Radios/CGQC_4_radioPack.et"
     }
     LoadoutSlotInfo HandWear {
      Prefab "{EB96B80E37FFBD43}Prefabs/Characters/Uniforms/Gloves/Ferro_Gun_Gloves/1Ferro_Gun_Gloves_Tan.et"
