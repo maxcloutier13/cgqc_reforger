@@ -21,9 +21,5 @@ GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/He
     }
    }
   }
-  WCS_RearmSupportStationComponent "{6908FDDF48D0B54D}" {
-   m_eSupportStationPriority HIGH
-   m_fRange 20
-  }
  }
 }
