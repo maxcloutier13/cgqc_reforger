@@ -1,0 +1,432 @@
+$grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ Flag_Airbase {
+  coords 3751.637 504.055 3061.328
+  angles 0 49.203 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Airbase"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_Shoothouses {
+  coords 4044.797 503.594 3933.856
+  angles 0 32.831 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Shoothouses"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_Sniper {
+  coords 2193.891 617.781 2184.958
+  angles 0 179.363 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.169 0.004 2.027
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.094 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.925 0.112 -0.056
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.683 0.906 -0.071
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Sniper"
+     }
+    }
+    coords 1.027 0 0.711
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_flatrange {
+  coords 2937.397 468.844 2745.953
+  angles 0 153.478 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.169 0.004 2.027
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.094 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.925 0.112 -0.056
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.683 0.906 -0.071
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: 60m Flatrange"
+     }
+    }
+    coords 1.027 0 0.711
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_rifle {
+  coords 2786.951 474.937 2817.405
+  angles 0 117.245 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.169 0.004 2.027
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.094 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.925 0.112 -0.056
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.683 0.906 -0.071
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Rifle"
+     }
+    }
+    coords 1.027 0 0.711
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_gl {
+  coords 2756.203 468 2887.008
+  angles 0 -34.591 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.169 0.004 2.027
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.094 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.925 0.112 -0.056
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.683 0.906 -0.071
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: GL"
+     }
+    }
+    coords 1.027 0 0.711
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_grenade {
+  coords 2911.338 462.739 2894.046
+  angles 0 24.237 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: Grenade"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_AT {
+  coords 2230.713 534.898 2786.561
+  angles 0 -41.681 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: AT"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_MG {
+  coords 2171.429 547.563 2545.444
+  angles 0 38.335 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "Range: MG"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+ Flag_MOUT {
+  coords 4047.493 545.015 1485.52
+  angles 0 22.946 0
+  {
+   GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+    coords -1.061 0 2.92
+    angles 0 52.767 0
+    {
+     GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+      coords 0.093 0.908 -0.062
+      angles 0 -1.901 0
+     }
+     GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+      coords -1.926 0 -0.055
+      angles 0 -3.809 0
+     }
+     GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+      components {
+       SCR_LampComponent "{5D2AB5C8865F22C4}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords -0.684 0.906 -0.07
+      angles 0 -90.506 0
+     }
+    }
+   }
+   GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+    components {
+     SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+      m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+       Name "Base Camp"
+      }
+     }
+     TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+      m_sEditorName "MOUT 1"
+     }
+    }
+    coords 1.316 0 0.683
+    angles 0 52.275 0
+   }
+  }
+ }
+}

@@ -1,7 +1,7 @@
 GameProject {
  ID "cgqctrainingneptune"
  GUID "69A722ED837C0A8B"
- TITLE "cgqc_training_neptune"
+ TITLE "cgqc_training_neptune_1.7"
  Dependencies {
   "58D0FB3206B6F859" "66BB20CA43330BC2" "68FC062054BB6D8B" "61EF4AA4D043BE00"
  }

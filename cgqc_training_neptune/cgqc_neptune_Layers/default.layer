@@ -6,6 +6,10 @@ Vehicle UH1H_armed_sharkNose1 : "{00BC1E407D536A34}Prefabs/Vehicles/Helicopters/
    ID "654C8CC81C957F97"
    coords 0 1.813 1.073
   }
+  StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+   coords -0.008 -0.079 1.255
+   angles 0 2.426 0
+  }
  }
 }
 Vehicle UH1H_armed_gunship_HEDP_sharkNose1 : "{3133602B406D131C}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HEDP_sharkNose.et" {
@@ -16,6 +20,10 @@ Vehicle UH1H_armed_gunship_HEDP_sharkNose1 : "{3133602B406D131C}Prefabs/Vehicles
    ID "654C8CC81C957F97"
    coords 0 1.813 1.073
   }
+  StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+   coords 0.733 -0.079 0.689
+   angles 0 -0.671 0
+  }
  }
 }
 Vehicle UH1H_armed_gunship_HE_sharkNose1 : "{350492BE6F09A847}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
@@ -25,6 +33,10 @@ Vehicle UH1H_armed_gunship_HE_sharkNose1 : "{350492BE6F09A847}Prefabs/Vehicles/H
   GameEnvironmentProbeEntity {
    ID "654C8CC81C957F97"
    coords 0 1.813 1.073
+  }
+  StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+   coords 0.172 0.046 0.727
+   angles 0 -3.093 0
   }
  }
 }
@@ -54,21 +66,7 @@ $grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transpo
   angles 0 -90.828 0
  }
 }
-$grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
- {
-  coords 3872.344 504.077 3162.054
-  angles 0 100.676 0
- }
- {
-  coords 3868.396 504.077 3141.113
-  angles 0 100.676 0
- }
- {
-  coords 3864.137 504.077 3118.519
-  angles 0 100.676 0
- }
- {
-  coords 3859.746 504.077 3095.23
-  angles 0 100.676 0
- }
+StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+ coords 3872.344 504.077 3162.054
+ angles 0 100.676 0
 }

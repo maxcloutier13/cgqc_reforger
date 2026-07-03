@@ -1,0 +1,80 @@
+Vehicle UH1H_armed_sharkNose2 : "{00BC1E407D536A34}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_sharkNose.et" {
+ coords 3613.821 494.748 2859.172
+ angles 0 136.49 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "654C8CC81C957F97"
+   coords 0 1.813 1.073
+  }
+  StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+   coords -0.008 -0.079 1.255
+   angles 0 2.426 0
+  }
+ }
+}
+$grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
+ M151A2_transport_MERDC7 {
+  coords 3556.942 494.281 2777.943
+  angles 0 50.846 0
+ }
+ M151A2_transport_MERDC8 {
+  coords 3558.835 494.281 2775.617
+  angles 0 50.846 0
+ }
+}
+SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+ coords 3566.865 494.281 2771.803
+ angles 0 -132.044 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "UPO"
+ }
+}
+GenericEntity MainBase : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 3563.74 494.281 2768.019
+ angles 0 -4.168 0
+ {
+  GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+   coords -1.061 0 2.92
+   angles 0 52.767 0
+   {
+    GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+     coords 0.093 0.908 -0.062
+     angles 0 -1.901 0
+    }
+    GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+     coords -1.926 0 -0.055
+     angles 0 -3.809 0
+    }
+    GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+     components {
+      SCR_LampComponent "{5D2AB5C8865F22C4}" {
+       m_eInitialLightState LIT
+      }
+     }
+     coords -0.684 0.906 -0.07
+     angles 0 -90.506 0
+    }
+   }
+  }
+  GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+   components {
+    SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+     m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+      Name "Base Camp"
+     }
+    }
+    TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+     m_sEditorName "Camp de Base"
+    }
+   }
+   coords 1.316 0 0.683
+   angles 0 52.275 0
+  }
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 3566.289 494.281 2772.313
+ angles 0 -132.044 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+ }
+}
