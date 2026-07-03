@@ -1,3 +1,7 @@
+Vehicle Motorbike_US7 {
+ coords 6921.021 13.406 3723.639
+ angles 0 169.49 0
+}
 $grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et" {
  LAV1 {
   coords 6862.288 13.406 3712.712
@@ -7,18 +11,6 @@ $grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et" {
   coords 6867.752 13.406 3712.952
   angles 0 177.408 0
  }
-}
-Tank M113_APC1 : "{18378FFFC82F30BF}Prefabs/Vehicles/Tracked/M113/M113_APC.et" {
- coords 6882.345 13.406 3713.849
- angles 0 179.414 0
-}
-Tank M1A2_TUSK_Tan1 : "{19DE71593DCD6CBA}Prefabs/Vehicles/Tracked/M1A2/M1A2_TUSK_Tan.et" {
- coords 6887.359 13.406 3714.465
- angles 0 176.359 0
-}
-Tank BMP3_Tank1 : "{1BE270891F0F3772}Prefabs/Vehicles/Tracked/BMP3/BMP3_Tank.et" {
- coords 6877.561 13.406 3713.702
- angles 0 179.357 0
 }
 DecalEntity : "{28DBB1C4928B9FB6}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_03.et" {
  coords 6919.819 -1.062 3677.459
@@ -35,18 +27,6 @@ Vehicle M1025_armed_M2HB1 : "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M10
 Vehicle M151A2_transport5 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6918.632 13.406 3722.98
  angles 0 175.18 0
-}
-Tank M2A2_BUSK_MERDC1 : "{634C65C1C55CA723}Prefabs/Vehicles/Tracked/BFV/M2A2_BUSK_MERDC.et" {
- coords 6898.687 13.406 3714.12
- angles 0 177.465 0
-}
-Tank T72B_base1 : "{726286E1F9570EA1}Prefabs/Vehicles/Tracked/T-72B/T72B_base.et" {
- coords 6908.537 13.406 3715.17
- angles 0 -179.518 0
-}
-Tank ZSU_23_4_Igla1 : "{7938ACA75F276460}Prefabs/Vehicles/Tracked/ZSU-23-4/ZSU-23-4_Igla.et" {
- coords 6913.46 13.406 3714.977
- angles 0 178.896 0
 }
 GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
  coords 6925.062 13.406 3699.194
@@ -69,17 +49,9 @@ DecalEntity : "{9EE74738BD9E8CDB}Prefabs/Decals/Dirt/Decal_Dirt_Tracks_02.et" {
 GenericEntity : "{9EF2973AE46B5AFC}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_02.et" {
  coords 6927.71 13.406 3695.008
 }
-Tank M2A3_MERDC1 : "{A2FDCCF036B73602}Prefabs/Vehicles/Tracked/BFV/M2A3_MERDC.et" {
- coords 6903.697 13.406 3714.202
- angles 0 177.232 0
-}
 GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
  coords 6891.088 12.397 3710.229
  angles 0 -13.603 0
-}
-Vehicle Motorbike_US7 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
- coords 6921.021 13.406 3723.639
- angles 0 169.49 0
 }
 Vehicle BTR14 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
  coords 6872.781 13.406 3713.545
@@ -98,10 +70,6 @@ GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  }
  coords 6890.487 13.406 3708.505
  angles 0 -2.247 0
-}
-Tank M270_base1 : "{D10BEDD1B78E43B5}Prefabs/Vehicles/Tracked/M270/M270_base.et" {
- coords 6893.659 13.406 3713.731
- angles 0 176.689 0
 }
 SCR_DestructibleBuildingEntity : "{EEEBF095E1B611CF}Prefabs/Structures/Industrial/Sheds/ShedMetal_02/ShedMetal_02_long_base.et" {
  coords 6905.884 -0.1 3715.383

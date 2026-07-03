@@ -136,11 +136,6 @@ GenericEntity : "{7F7FC9E63EA0E96B}Prefabs/Props/VRTCQBShootHouse/CQB_WallDoor.e
  {
   GenericEntity {
    ID "66D51B8534D4E0E2"
-   components {
-    DoorComponent "{66D512627EE14B2D}" {
-     i_doorLockChance 0
-    }
-   }
   }
  }
 }

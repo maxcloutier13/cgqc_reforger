@@ -16,6 +16,10 @@ $grp GenericEntity {
   coords 5712.864 135 3045.667
  }
 }
+Vehicle Motorbike_US8 {
+ coords 6566.785 14.375 4648.762
+ angles 0 -96.93 0
+}
 $grp GenericEntity : "{082A7AABE91D6956}PrefabsEditable/Auto/Structures/Military/Training/E_TargetBTR_flank.et" {
  {
   coords 6658.88 14.373 4294.412
@@ -235,10 +239,6 @@ GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
 GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
  coords 6563.031 14.375 4631.012
  angles 0 7.838 0
-}
-Vehicle Motorbike_US8 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
- coords 6566.785 14.375 4648.762
- angles 0 -96.93 0
 }
 GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  components {

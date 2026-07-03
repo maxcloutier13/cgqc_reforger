@@ -2,6 +2,24 @@ GenericEntity {
  coords 6962.157 41.316 3911.23
  angles 0 126.143 0
 }
+$grp SCR_ChimeraCharacter {
+ {
+  coords 6955.758 41.122 3932.172
+  angles 0 -54.825 0
+ }
+ {
+  coords 6955.306 41.122 3931.53
+  angles 0 -54.825 0
+ }
+ {
+  coords 6956.228 41.122 3932.826
+  angles 0 -54.825 0
+ }
+ {
+  coords 6956.671 41.122 3933.455
+  angles 0 -54.825 0
+ }
+}
 GenericEntity : "{119783F0F2E70035}Prefabs/nogm/onlyfantas_nogm.et" {
  coords 6950.483 41.122 3930.022
  angles 0 -145.642 0
@@ -14,6 +32,30 @@ GenericEntity : "{21C8DF66A6D837AD}Prefabs/nogm/WaterCooler_nogm.et" {
 GenericEntity : "{28765E0DB82CDCB1}Prefabs/Props/Furniture/Sofa_01.et" {
  coords 6948.648 41.122 3931.553
  angles 0 33.862 0
+}
+GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+ coords 6949.591 41.122 3941.063
+ angles 0 127.272 0
+ {
+  GenericEntity : "{371BEAE14CAD2D06}Prefabs/Props/Military/Arsenal/AmmoBoxes/ARY_CIV/ARY_AmmoBoxArsenal_Weapons_CGQC_Simunition.et" {
+   coords 0.093 0.908 -0.063
+   angles 0 -1.901 0
+  }
+  GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
+   coords -0.685 0.906 -0.07
+   angles 0 -90.506 0
+  }
+ }
+}
+$grp GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ {
+  coords 6948.445 41.122 3939.543
+  angles 0 125.107 0
+ }
+ {
+  coords 6954.231 41.122 3941.538
+  angles 0 -148.961 0
+ }
 }
 $grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
  {
@@ -74,16 +116,6 @@ GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_Wall
   }
  }
 }
-$grp GenericEntity : "{8D309C93C2E7D2EC}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC_Equipment.et" {
- {
-  coords 6948.633 41.122 3939.479
-  angles 0 126.143 0
- }
- {
-  coords 6953.853 41.122 3941.282
-  angles 0 -144.436 0
- }
-}
 GenericEntity : "{A44BC6A4DFB57A0F}Prefabs/GM_Props/Target_Hostage.et" {
  coords 6958.542 41.122 3938.831
  angles 0 -140.954 0
@@ -102,28 +134,12 @@ $grp GenericEntity : "{BAB1151298AA3916}Prefabs/Props/Industrial/BenchIndustrial
   angles 0 305.247 0
  }
 }
-GenericEntity : "{C094E4DC13131E7C}Prefabs/nogm/MilTable_Open.et" {
- coords 6950.726 41.122 3942.201
- angles 0 126.143 0
- {
-  GameEntity : "{5677EE6E49945412}PrefabsEditable/Auto/Props/Civilian/LampKerosene_01/E_LampKerosene_01_green.et" {
-   coords -1.137 0.947 -0.169
-   angles 0 -89.377 0
-  }
- }
-}
 GenericEntity : "{C5A9091473439963}Prefabs/Structures/BuildingParts/Doors/Door_Bunker_02/DoorSet_Bunker_02_A_LEFT_EXT_ST_B_camo.et" {
  coords 6946.141 41.122 3932.465
  angles 0 35.547 0
  {
   GenericEntity {
    ID "5A68D7E0EEF8D4C4"
-   components {
-    DoorComponent "{221C667A9F7D4B69}" {
-     i_doorLockChance 0
-     b_canLock 0
-    }
-   }
   }
  }
 }
@@ -144,22 +160,4 @@ GenericEntity : "{D2B0F72599E0491B}PrefabsEditable/Auto/Props/Military/Arsenal/E
 GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
  coords 6944.672 41.122 3933.615
  angles 0 35.767 0
-}
-$grp SCR_ChimeraCharacter : "{F90692C108D117A7}Prefabs/Characters/bonz/E_bonz_UnitLoadout.et" {
- {
-  coords 6955.758 41.122 3932.172
-  angles 0 -54.825 0
- }
- {
-  coords 6955.306 41.122 3931.53
-  angles 0 -54.825 0
- }
- {
-  coords 6956.228 41.122 3932.826
-  angles 0 -54.825 0
- }
- {
-  coords 6956.671 41.122 3933.455
-  angles 0 -54.825 0
- }
 }

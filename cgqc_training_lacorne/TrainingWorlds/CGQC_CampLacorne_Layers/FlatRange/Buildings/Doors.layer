@@ -5,19 +5,9 @@ GenericEntity : "{E1E014913F5433DF}Prefabs/Structures/BuildingParts/Doors/DoorSe
  {
   GenericEntity {
    ID "5A2EDE589638AC11"
-   components {
-    DoorComponent "{221C667A9F7D4B69}" {
-     i_doorLockChance 0
-    }
-   }
   }
   GenericEntity {
    ID "5A2EDE589638AC0A"
-   components {
-    DoorComponent "{221C667A9F7D4B69}" {
-     i_doorLockChance 0
-    }
-   }
   }
  }
 }

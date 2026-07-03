@@ -85,8 +85,6 @@ $grp GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB
         Event SOUND_MOVEMENT
        }
       }
-      i_doorLockChance 0
-      b_canLock 0
      }
      NavmeshCustomLinkComponent "{66D512625495B972}" {
       LinkType NavmeshDoorLink "{66D5126255FEA856}" {
@@ -200,8 +198,6 @@ $grp GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB
         Event SOUND_MOVEMENT
        }
       }
-      i_doorLockChance 0
-      b_canLock 0
      }
      NavmeshCustomLinkComponent "{66D512625495B972}" {
       LinkType NavmeshDoorLink "{66D5126255FEA856}" {

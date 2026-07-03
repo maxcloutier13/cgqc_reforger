@@ -1,3 +1,7 @@
+Vehicle Motorbike_US9 {
+ coords 3707.612 2.625 3155.009
+ angles 0 -169.51 0
+}
 Vehicle M151A2_transport8 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 6796.474 14.376 4171.931
  angles 0 -89.836 0
@@ -63,10 +67,6 @@ $grp GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" 
   coords 6515.342 14.375 4598.238
   angles 0 7.838 0
  }
-}
-Vehicle Motorbike_US9 : "{B6CD2660129A6D1C}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_US.et" {
- coords 3707.612 2.625 3155.009
- angles 0 -169.51 0
 }
 $grp GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
  {

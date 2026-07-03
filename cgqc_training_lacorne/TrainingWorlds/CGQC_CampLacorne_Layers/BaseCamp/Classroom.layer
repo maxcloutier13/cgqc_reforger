@@ -261,15 +261,6 @@ GenericEntity : "{9CCDFC3D400F1240}Prefabs/nogm/cheytac_m200_nogm.et" {
  coords 6935.259 42.03 3950.905
  angles 0 -139.135 0
 }
-GenericEntity : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
- coords 6943.843 41.122 3932.737
- angles 0 -54.783 0
-}
-SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
- coords 6943.283 41.122 3936.701
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
- }
-}
 GenericEntity : "{BBBC235B9B053092}Prefabs/Props/Furniture/Armchair_02.et" {
  coords 6938.739 41.122 3951.857
  angles 0 168.899 0
@@ -277,20 +268,6 @@ GenericEntity : "{BBBC235B9B053092}Prefabs/Props/Furniture/Armchair_02.et" {
 GenericEntity : "{BDC0B74B1350B129}Prefabs/BriefingRoom/quadrobranco1.et" {
  coords 6935.692 42.926 3952.284
  angles 0 -53.852 0
-}
-GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
- components {
-  SCR_EditableEntityComponent "{68612E145DE97F2B}" {
-   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Base Camp"
-   }
-  }
-  TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
-   m_sEditorName "Camp de Base"
-  }
- }
- coords 6944.403 41.122 3937.843
- angles 0 -17.156 0
 }
 GenericEntity : "{CF236FAA095EA0C5}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_02.et" {
  coords 6934.127 41.122 3949.262
