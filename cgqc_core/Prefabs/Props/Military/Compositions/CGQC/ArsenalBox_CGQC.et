@@ -31,6 +31,7 @@ GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/A
   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
    m_eSupportedArsenalItemTypes 4194302
    m_eArsenalSaveType NO_RESTRICTIONS
+   m_bAlwaysUseDefaultFaction 1
   }
   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
    "faction affiliation" "CGQC"
