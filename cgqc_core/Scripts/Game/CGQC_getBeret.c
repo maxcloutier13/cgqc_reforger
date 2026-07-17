@@ -5,7 +5,7 @@ class CGQC_getBeret
 	//! - Head slot occupied -> check inventory for any beret, add to inventory if none found
 	//! If the player's unit prefab name contains only "CGQC" (no "Base"):
 	//! - Insert beret into pants storage (falls back to general inventory if no pants/storage)
-	static void SwapBeretIfTraining(IEntity playerEntity, SCR_ECharacterRank rank)
+	static void getBeret(IEntity playerEntity, SCR_ECharacterRank rank)
 	{
 	    if (!playerEntity)
 	        return;
