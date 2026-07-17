@@ -1,9 +1,9 @@
 GameProject {
  ID "cgqcvicsaddons"
  GUID "697B1B6884AC3527"
- TITLE "cgqc_vics_addons"
+ TITLE "cgqc_vics_addons_1.7"
  Dependencies {
-  "58D0FB3206B6F859" "66BEFBF71FC73A14"
+  "58D0FB3206B6F859" "9628DC64B295C4DA" "631C0CCC3F4506CB"
  }
  Configurations {
   GameProjectConfig PC {
