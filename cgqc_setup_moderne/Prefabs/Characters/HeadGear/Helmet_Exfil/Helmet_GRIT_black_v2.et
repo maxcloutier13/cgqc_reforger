@@ -1,0 +1,43 @@
+GameEntity : "{0F610D0687FA5814}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_Exfil_Base.et" {
+ ID "50D485E1435D6C72"
+ components {
+  RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "CGQC GRIT Exfil"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    RHS_LoadoutSlotInfo Goggles {
+     Prefab "{9C030889E9A05770}Prefabs/Characters/Eyewear/npp_strelok/Eyewear_npp_strelok.et"
+    }
+    RHS_LoadoutSlotInfo MeshCover {
+     Prefab "{A2D7EB537120714F}Prefabs/Characters/HeadGear/Helmet_Exfil/Headgear_exfil_cover_MCBlk.et"
+    }
+    RHS_LoadoutSlotInfo NVG {
+     Prefab "{B385064A383A384B}Prefabs/Items/Equipment/Nightvision/PVS14/NVG_PVS14Dual_WP.et"
+    }
+    RHS_LoadoutSlotInfo TopVelcro {
+     Offset 0 0.1963 -0.0024
+     Angles 87.1513 -179.99988 179.99988
+     Prefab "{5F7EF7FEBC39B874}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar.et"
+    }
+    RHS_LoadoutSlotInfo LeftVelcro {
+     Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
+    }
+    RHS_LoadoutSlotInfo RightVelcro {
+     Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{12B3DC912EFD4148}Assets/Characters/HeadGear/Helmet_Exfil/Data/exfil_Blk.emat"
+   }
+   ItemMaterialsOverride {
+    "{12B3DC912EFD4148}Assets/Characters/HeadGear/Helmet_Exfil/Data/exfil_Blk.emat"
+   }
+   DebugWornModel 0
+  }
+ }
+}

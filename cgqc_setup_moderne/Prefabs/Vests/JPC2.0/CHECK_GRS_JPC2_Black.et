@@ -1,0 +1,21 @@
+GenericEntity : "{233196A4E0310FA2}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases.et" {
+ ID "6982202309B37700"
+ components {
+  GRS_ArmorVestStorageComponent "{69822023056A7CAD}" {
+   Attributes SCR_ItemAttributeCollection "{69822023056A7CA3}" {
+    ItemDisplayName UIInfo "{69822023056A7F2B}" {
+     Name "GRS: JPC 2.0 - Black"
+     Description "GRS: JPC 2.0 - Black"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69822023056A76FF}" {
+   WornMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+  }
+ }
+}

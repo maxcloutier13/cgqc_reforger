@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{CB853ACBC49380C1}Assets/Data/ATAK_coyote.edds"
+ NMOMap "{592CA41276B335E5}Assets/Kagwerks/Data/Textures/KagwerksDocklite_normal.edds"
+}

@@ -1,0 +1,166 @@
+GameEntity : "{0B201E22AD2DFA7F}Prefabs/Items/Equipment/Accessories/ClothAttachment_Base.et" {
+ ID "5DB09136945FC6DB"
+ components {
+  ParametricMaterialInstanceComponent "{69CE2731FD2F1E61}" {
+   EmissiveMultiplier 0
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  BaseLightManagerComponent "{69CE2731FD2F1E9C}" {
+   LightSlots {
+    BaseLightSlot "{69CE2731FD2F1E99}" {
+     LightType Head
+     LightPositionInfo EntitySlotInfo pos {
+      Offset 0 -0.0011 0.0268
+     }
+     LightPrefab "{526FF12E7C14EC8A}Prefabs/Items/Equipment/Nightvision/MS2000/MS2000_Point_IR_LightEntity.et"
+     LightPhaseTime 1
+    }
+    BaseLightSlot "{69CE2731FD2F1E85}" {
+     LightType Brake
+     LightPositionInfo EntitySlotInfo pos {
+      Offset 0 -0.0011 0.0268
+     }
+     LightPrefab "{526FF12E7C14EC8A}Prefabs/Items/Equipment/Nightvision/MS2000/MS2000_Point_IR_LightEntity.et"
+     LightPhaseTime 10
+    }
+    BaseLightSlot "{69CE2731FD2F1E83}" {
+     LightType Rear
+     LightPositionInfo EntitySlotInfo "{621B2B962F85DAA4}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{E97314DE440B6E7F}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Green_Point_LightEntity.et"
+    }
+    BaseLightSlot "{69CE2731FD2F1E82}" {
+     LightType Reverse
+     LightPositionInfo EntitySlotInfo "{621B2B962F85DAA4}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{661E3E345F62D4DD}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Red_Point_LightEntity.et"
+    }
+   }
+  }
+  InventoryItemComponent "{5DB09136B1C985CE}" {
+   Attributes SCR_ItemAttributeCollection "{5DB09136B1C985C1}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{5DB09136B1C985EB}" {
+     Name "#RHS-Item_HelstarStrobe_Name"
+     Description "#RHS-Item_HelstarStrobe_Description"
+     m_aItemHints {
+      SCR_InventoryItemHintUIInfo "{61CC8C4C7DC3AE72}" {
+       Name "#RHS-UI_InventoryHint_CanBeattachedToVelcroHelmet"
+       Icon "{B336473966BE23BE}UI/Textures/InventoryIcons/Inspection-gizmo-top-velcro-slot-UI.edds"
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69CE2731FD2F1E8B}" {
+     Weight 0.065
+     SizeSetupStrategy Size
+     ItemDimensions 5 3 10
+     RestingAdditiveRotationLS 90 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5DB09136B1C985C3}" {
+      CameraOrbitAngles 20 25 20
+      CameraDistanceToItem 0.8
+      ItemRenderRotation -14 70 0
+      FOV 10
+      PreviewWornModel 1
+     }
+     RHS_CustomAttributes "{5DB8F5B98D9963BA}" : "{BD5A5AA5EF23AFE9}Prefabs/Items/Core/HelmetStrobeAttachmentAttributes.conf" {
+      m_sShortName "#RHS-Item_HelstarStrobe_Name"
+     }
+    }
+    CommonItemType "NONE"
+   }
+  }
+  MeshObject "{5DB09136B1C985B5}" {
+   Object "{945DF53CCB557FF7}Assets/Items/Equipment/NVG/helstarstrobe/Helstar.xob"
+  }
+  RHS_HelstarComponent "{69CE2731FD2F1EF5}" {
+   m_iAvailableLightTypes {
+    Head Rear Reverse Brake
+   }
+   m_eSelectedLightType Rear
+  }
+  RHS_SGC_RadialMenuComponent "{5DB09136B1C985AD}" {
+   m_sDisplayName "Helstar"
+   m_aRadialPages {
+    RHS_RadialMenuCategory "{69CE2731FD2F1EFF}" {
+     Name "Modes"
+     Description "Operational Modes"
+     m_sId "Modes"
+     m_sDisplayName "Modes"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5DB09136B1C9859A}" {
+   AreaType RHS_LoadoutTopVelcroSlotArea "{69CE2731FD2F1EFC}" {
+   }
+   WornModel "{945DF53CCB557FF7}Assets/Items/Equipment/NVG/helstarstrobe/Helstar.xob"
+   ItemModel "{945DF53CCB557FF7}Assets/Items/Equipment/NVG/helstarstrobe/Helstar.xob"
+   DebugWornModel 0
+  }
+  ActionsManagerComponent "{5DB09136B1C99451}" {
+   additionalActions {
+    RHS_AttachToClothAction "{5DB0A0703A3A47C8}" {
+     m_ClothFromArea LoadoutHeadCoverArea "{5D7F084A60E36DA2}" {
+     }
+    }
+    RHS_DetachFromClothAction "{5D776513222A1BC0}" {
+     m_ClothFromArea LoadoutHeadCoverArea "{5D7F084A60E36DA2}" {
+     }
+    }
+    RHS_LightDevice_Toggle_Power_Action "{69CE2731FD2F1EE6}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69CE2731FD2F1EE4}" {
+      Name "#RHS_Action_TurnON"
+     }
+     m_bIgnoreInRadial 0
+     m_sTurnOffString "#RHS_Action_TurnOFF"
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{69CE2731FD2F1EE3}" {
+     UIInfo UIInfo "{69CE2731FD2F1ED8}" {
+      Name "Mode A1"
+      Description "Green Stable"
+     }
+     "Sort Priority" 1
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Rear
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{69CE2731FD2F1EC6}" {
+     UIInfo UIInfo "{69CE2731FD2F1EC5}" {
+      Name "Mode A2"
+      Description "Red Stable"
+     }
+     "Sort Priority" 2
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Reverse
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{69CE2731FD2F1EC4}" {
+     UIInfo UIInfo "{69CE2731FD2F1EC3}" {
+      Name "Mode B1"
+      Description "IR Stable"
+     }
+     "Sort Priority" 2
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Head
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{69CE2731FD2F1EC2}" {
+     UIInfo UIInfo "{69CE2731FD2F7907}" {
+      Name "Mode B2"
+      Description "IR Flash"
+     }
+     "Sort Priority" 2
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Brake
+    }
+   }
+  }
+ }
+}

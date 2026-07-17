@@ -1,0 +1,143 @@
+GenericEntity {
+ ID "69CD29246C6B764A"
+ components {
+  Persistence "{69CD29246C6B765F}" {
+  }
+  SignalsManagerComponent "{69CD29246C6B7666}" {
+  }
+  SoundComponent "{69CD29246C6B7662}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+  }
+  GRS_BatteryComponent "{69CD29246C6B7660}" {
+  }
+  GRS_DeviceDisplayComponent "{69CD29246C6B766F}" {
+   m_sRTContainerLayout "{E5B8C1EE50A7A496}UI/Layouts/ATAK/GRS_RTContainer.layout"
+   m_fHudRangeMeters 40
+   m_iHudTickMs 33
+   m_fScreenBrightness 0.5
+   m_fTwilightHours 0.75
+  }
+  GRS_DeviceManagerComponent "{69CD29246C6B766D}" {
+  }
+  GRS_EquipmentStorageComponent "{69CD29246C6B766B}" {
+   Attributes SCR_ItemAttributeCollection "{69CD29246C6B7669}" {
+    ItemDisplayName UIInfo "{69CD29246C6B7677}" {
+     Name "CGQC ATAK Coyote"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69CD29246C6B7674}" {
+     Weight 0.1
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 200
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69CD29246C6B7671}" {
+      CameraDistanceToItem 1.4
+      FOV 10
+     }
+     CharacterModifierAttributes "{69CD29246C6B767F}" {
+      ADSSpeedLimit 1
+     }
+    }
+    m_Size SLOT_1x1
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+   InitialStorageSlots {
+    GRS_PatchStorageSlot Rectangle_Patch {
+     Offset 0 -0.024 0.0288
+     Angles 6.7224 0 0
+     Prefab "{E3C476F4C9231E7B}Prefabs/Unit_Patches/unit_hoplite.et"
+     AllowedItemTypes {
+      "GRS_PATCH"
+     }
+    }
+   }
+  }
+  MeshObject "{69CD29246C6B7679}" {
+   Object "{3ACD1F1F1234557D}Assets/CAG.xob"
+   Materials {
+    MaterialAssignClass "{69CD32D585DD5D58}" {
+     SourceMaterial "GRS_KAGWERKS"
+     AssignedMaterial "{B7842D644642B1C3}Assets/Data/CGQC_GRS_KAGWERKS_COY.emat"
+    }
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{69CD29246C6B7589}" {
+   Enabled 1
+   LinearDamping 0.5
+   AngularDamping 0.5
+   AngularSleepingThreashold 1
+   ModelGeometry 1
+  }
+  SCR_FactionAffiliationComponent "{69CD29246C6B7597}" {
+   "faction affiliation" "US"
+  }
+  SCR_SoundDataComponent "{69CD29246C6B7595}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69CD29246C6B7592}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69CD29246C6B7590}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69CD29246C6B759E}" {
+     m_sSoundProject "{CC0E5A1324E761C1}Sounds/Items/_SharedData/Drop/Items_Drop_Generic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69CD29246C6B759C}" {
+   AreaType GL_Vest_Chest_Accessories "{69CD29246C6B759A}" {
+   }
+   WornModel "{3ACD1F1F1234557D}Assets/CAG.xob"
+   WornMaterialsOverride {
+    "{B7842D644642B1C3}Assets/Data/CGQC_GRS_KAGWERKS_COY.emat"
+   }
+   ItemModel "{3ACD1F1F1234557D}Assets/CAG.xob"
+   ItemMaterialsOverride {
+    "{B7842D644642B1C3}Assets/Data/CGQC_GRS_KAGWERKS_COY.emat"
+   }
+  }
+  ActionsManagerComponent "{69CD29246C6B75A7}" {
+   ActionContexts {
+    UserActionContext "{69CD29246C6B75A6}" {
+     ContextName "default"
+     Position PointInfo "{69CD29246C6B75B7}" {
+     }
+     Radius 0.2
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69CD29246C6B75B3}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69CD29246C6B75B2}" {
+      Name "#AR-Inventory_PickUp"
+      m_sIconName "pick-up"
+     }
+    }
+   }
+  }
+  GadgetGamepadEffectsManagerComponent "{69CD29246C6B75BF}" {
+   OwnedEffects {
+    GamepadTriggerEffect "{61E294244C3DAAFF}" : "{7D39CAE0A72D6C51}Prefabs/Weapons/Core/Configs/TriggerEffects/ADS/TriggerEffect_ADSGadget.conf" {
+    }
+    GamepadTriggerEffect "{61E29424EE08E95B}" : "{F518B28F67EC05AD}Prefabs/Weapons/Core/Configs/TriggerEffects/Charged/TriggerEffect_ChargedGadget.conf" {
+    }
+   }
+  }
+  RplComponent "{69CD29246C6B75BC}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69CD29246C6B75B9}" {
+  }
+ }
+}

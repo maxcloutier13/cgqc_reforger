@@ -1,0 +1,488 @@
+GenericEntity {
+ ID "69CE2E21C00D2E9D"
+ components {
+  Persistence "{69CE2E21C00D2EF6}" {
+  }
+  SignalsManagerComponent "{69CE2E21C00D2EE2}" {
+  }
+  GRS_ArmorVestStorageComponent "{69CE2E21C00D2EEF}" {
+   Attributes SCR_ItemAttributeCollection "{69CE2E21C00D2EEC}" {
+    ItemDisplayName UIInfo "{69CE2E21C00D2EEA}" {
+     Name "GRS: JPC 2.0 - GRIT - Rifleman"
+     Description "GRS: JPC 2.0 - GRIT - Rifleman"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69CE2E21C00D2EE8}" {
+     Weight 0.1
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 5000
+     DimensionScaler 5000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69CE2E21C00D2ED3}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 20
+      PreviewWornModel 1
+     }
+    }
+    m_Size SLOT_2x2
+    m_bStackable 0
+   }
+   Priority 99
+   StoragePurpose 0x40 0x1
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 10
+   MaxItemSize 10 10 10
+  }
+  MeshObject "{69CE2E21C00D2EDC}" {
+   Object "{D97FC22968DBEB85}Assets/Vests/JPC2.0/GRS_JPC2.0.xob"
+   Materials {
+    MaterialAssignClass "{69CE2E21EC52E9E7}" {
+     SourceMaterial "JPC2_Bag"
+     AssignedMaterial "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat"
+    }
+    MaterialAssignClass "{69CE2E21EC52E9D9}" {
+     SourceMaterial "JPC2_cbund"
+     AssignedMaterial "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+    }
+   }
+   LODFactors {
+    1 1 1 1
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{69CE2E21C00D2EDA}" {
+   Static 1
+   Kinematic 1
+  }
+  SCR_SoundDataComponent "{69CE2E21C00D2ED8}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69CE2E21C00D2EC3}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69CE2E21C00D2EC0}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69CE2E21C00D2ECF}" {
+     m_sSoundProject "{087200FA6DF8D1D2}Sounds/Items/_SharedData/Drop/Items_Drop_Vest.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69CE2E21C00D2F38}" {
+   AreaType LoadoutArmoredVestSlotArea "{69CE2E21C00D2F25}" {
+   }
+   Slots {
+    LoadoutSlotInfo Front_Plate {
+     Prefab "{B78B5B58CFCB421C}Prefabs/Equipment/Armor_Plates/GRS_Front_Plate_Level_1.et"
+     InheritParentSkeleton 1
+     AreaType GRS_Front_Plate "{69CE2E21C00D2F20}" {
+     }
+    }
+    LoadoutSlotInfo Back_Plate {
+     Prefab "{58BE0FBCD10DB165}Prefabs/Equipment/Armor_Plates/GRS_Back_Plate_Level_1.et"
+     InheritParentSkeleton 1
+     AreaType GRS_Back_Plate "{69CE2E21C00D2F2F}" {
+     }
+    }
+    LoadoutSlotInfo LS_Plate {
+     Enabled 1
+     Prefab "{C861D87A7F00D896}Prefabs/Equipment/Armor_Plates/GRS_Left_Vest_Plate_Level_1.et"
+     InheritParentSkeleton 1
+     AreaType GRS_Left_Plate "{69CE2E21C00D2F2D}" {
+     }
+    }
+    LoadoutSlotInfo RS_Plate {
+     Enabled 1
+     Prefab "{7721B26F70C1BCDE}Prefabs/Equipment/Armor_Plates/GRS_Right_Vest_Plate_Level_1.et"
+     InheritParentSkeleton 1
+     AreaType GRS_Right_Plate "{69CE2E21C00D2F2B}" {
+     }
+    }
+    LoadoutSlotInfo Backpanel {
+     MergePhysics 1
+     Prefab ""
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType JPC2_Backpanel "{69CE2E21C00D2F29}" {
+     }
+    }
+    LoadoutSlotInfo Placards {
+     PivotID "Spine5"
+     Offset -0.0028 0.0103 0.1492
+     Angles -2.1973 -0.4871 0.0854
+     MergePhysics 1
+     Prefab "{31647A424E47A058}Prefabs/Pouches/Black/GRS_Placard_MKV_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Vest_Mag_Placard "{69CE2E21C00D2F17}" {
+     }
+    }
+    LoadoutSlotInfo Front_Option_1 {
+     PivotID "Spine5"
+     Offset 0.0798 -0.009 0.1953
+     Angles -0.8507 4.5659 0.188
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F15}" {
+     }
+    }
+    LoadoutSlotInfo Front_Option_2 {
+     PivotID "Spine5"
+     Offset -0.0116 -0.009 0.2013
+     Angles -2.4561 -0.3347 0.2602
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F14}" {
+     }
+    }
+    LoadoutSlotInfo Front_Option_3 {
+     PivotID "Spine5"
+     Offset -0.101 -0.009 0.1968
+     Angles -1.8262 -5.0471 0.456
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F12}" {
+     }
+    }
+    LoadoutSlotInfo Dangler {
+     PivotID "Spine5"
+     Offset -0.0039 -0.0981 0.1443
+     Angles -4.1073 -0.3077 -0.0981
+     MergePhysics 1
+     Prefab "{46BDACE37E070E60}Prefabs/Pouches/Black/GRS_Belly_Pouch_V5_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_RHS_Belly_Pouch "{69CE2E21C00D2F05}" {
+     }
+    }
+    LoadoutSlotInfo Rear_Dangler {
+     PivotID "Spine5"
+     Offset 0.0014 -0.0791 -0.1623
+     Angles 4.1063 -179.8511 0.1307
+     MergePhysics 1
+     Prefab "{73D69EC806C03A6A}Prefabs/Pouches/Black/GRS_Trauma_Roll_Dangler_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_RHS_Belly_Pouch "{69CE2E21C00D2F04}" {
+     }
+    }
+    GRS_MorphSlotComponent GRS_Patch {
+     PivotID "Spine5"
+     Offset -0.0014 0.1885 0.1541
+     Angles -7.4656 179.6391 0.558
+     MergePhysics 1
+     Prefab "{B2C8078B1B7B5407}Prefabs/Section_Patches/section_grit_clean.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GRS_Vest_Patch "{69CE2E21C00D2F02}" {
+     }
+     m_bEnableMorphing 1
+     m_fMorphValueY -0.239
+     m_fMorphValueX 0
+    }
+    LoadoutSlotInfo Atak {
+     PivotID "Spine5"
+     Offset 0.002 0.2331 0.1496
+     Angles 6.8545 0.9449 0.4768
+     MergePhysics 1
+     Prefab ""
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Vest_Chest_Accessories "{69CE2E21C00D2F00}" {
+     }
+    }
+    LoadoutSlotInfo RS_PTT {
+     PivotID "Spine5"
+     Offset 0.1172 0.1872 0.1525
+     Angles 13.8268 20.9635 5.9195
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GRS_PTT_Right "{69CE2E21C00D2F0E}" {
+     }
+    }
+    LoadoutSlotInfo LS_PTT {
+     PivotID "Spine5"
+     Offset -0.1071 0.1874 0.1542
+     Angles 11.2423 -21.2305 -8.2142
+     MergePhysics 1
+     Prefab "{A805AAA84F05AC20}Prefabs/Accessories/PTT_MPU5_Left.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GRS_PTT_Left "{69CE2E21C00D2F0D}" {
+     }
+    }
+    LoadoutSlotInfo RS_Pouch_1 {
+     PivotID "Spine5"
+     Offset 0.1367 -0.0024 0.1236
+     Angles -2.1991 52.112 -2.431
+     MergePhysics 1
+     Prefab "{11E801409DF53820}Prefabs/Pouches/Black/GRS_ARSingle_Pouch_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F0B}" {
+     }
+    }
+    LoadoutSlotInfo RS_Pouch_2 {
+     PivotID "Spine5"
+     Offset 0.1701 0.0066 0.0532
+     Angles -3.3254 69.0639 -4.289
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F0A}" {
+     }
+    }
+    LoadoutSlotInfo RS_Pouch_3 {
+     PivotID "Spine5"
+     Offset 0.1836 0.0136 -0.0147
+     Angles -2.0986 84.0891 -5.0041
+     MergePhysics 1
+     Prefab "{22850DBB9FF3D973}Prefabs/Pouches/Black/GRS_M67_Filbe_Pouch_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F08}" {
+     }
+    }
+    LoadoutSlotInfo RS_Pouch_4 {
+     PivotID "Spine5"
+     Offset 0.1778 0.0212 -0.085
+     Angles 0.0498 107.3089 -5.4251
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F77}" {
+     }
+    }
+    LoadoutSlotInfo RS_Pouch_5 {
+     PivotID "Spine5"
+     Offset 0.1504 0.0276 -0.1482
+     Angles 3.2774 143.8651 -4.3259
+     MergePhysics 1
+     Prefab "{D33D974484133BB8}Prefabs/Pouches/Black/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F75}" {
+     }
+    }
+    LoadoutSlotInfo LS_Pouch_1 {
+     PivotID "Spine5"
+     Offset -0.1403 -0.0002 0.1109
+     Angles -2.913 -51.7123 5.167
+     MergePhysics 1
+     Prefab "{11E801409DF53820}Prefabs/Pouches/Black/GRS_ARSingle_Pouch_Black.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F74}" {
+     }
+    }
+    LoadoutSlotInfo LS_Pouch_2 {
+     PivotID "Spine5"
+     Offset -0.1737 0.0065 0.0552
+     Angles -0.4527 -76.6838 5.9123
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F72}" {
+     }
+    }
+    LoadoutSlotInfo LS_Pouch_3 {
+     PivotID "Spine5"
+     Offset -0.1815 0.0144 -0.0231
+     Angles 0.549 -86.3429 5.9042
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F71}" {
+     }
+    }
+    LoadoutSlotInfo LS_Pouch_4 {
+     PivotID "Spine5"
+     Offset -0.1815 0.0247 -0.0876
+     Angles 3.7341 -119.9809 4.6093
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F7F}" {
+     }
+    }
+    LoadoutSlotInfo LS_Pouch_5 {
+     PivotID "Spine5"
+     Offset -0.1408 0.0318 -0.1491
+     Angles 4.9387 -137.3531 3.2856
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F7E}" {
+     }
+    }
+    LoadoutSlotInfo RS_Carabiner {
+     PivotID "Spine5"
+     Offset 0.1343 -0.0467 0.1439
+     Angles 5.3042 -142.90939 2.0598
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Large_Carabiner "{69CE2E21C00D2F7C}" {
+     }
+    }
+    LoadoutSlotInfo LS_Carabiner {
+     PivotID "Spine5"
+     Offset -0.1367 -0.0469 0.1552
+     Angles 5.9948 150.49858 -2.0841
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Large_Carabiner "{69CE2E21C00D2F7B}" {
+     }
+    }
+    LoadoutSlotInfo Rear_Carabiner {
+     PivotID "Spine5"
+     Offset -0.1813 0.0418 -0.1189
+     Angles -0.3726 57.3943 -2.3356
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Large_Carabiner "{69CE2E21C00D2F79}" {
+     }
+    }
+    LoadoutSlotInfo Shoulder_Accessory {
+     PivotID "Spine5"
+     Offset 0.0836 0.2619 0.0945
+     Angles 35.6968 11.967 22.9063
+     MergePhysics 1
+     Prefab "{C9A4E563205BAC75}Prefabs/Accessories/GRS_TQ.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Belt_Nade_Slot "{69CE2E21C00D2F78}" {
+     }
+    }
+    LoadoutSlotInfo Pistol_Holster {
+     PivotID "Spine5"
+     Offset -0.0108 0.1932 0.1577
+     Angles -0.1339 -0.8349 -9.1116
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Vest_Holster "{69CE2E21C00D2F66}" {
+     }
+    }
+    LoadoutSlotInfo Shears {
+     PivotID "Spine5"
+     Offset 0.0854 0.1061 0.1576
+     Angles -1.3822 2.8748 13.8798
+     MergePhysics 1
+     Prefab "{DE9FE038C674834D}Prefabs/Accessories/GRS_Scissors.et"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Accessory "{69CE2E21C00D2F65}" {
+     }
+    }
+    LoadoutSlotInfo Knife {
+     PivotID "Spine5"
+     Offset 0.1354 0.0961 0.1034
+     Angles -7.3825 59.2116 -6.2982
+     MergePhysics 1
+     Prefab ""
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     InspectionWidgetOffset 0 -6 0
+     AreaType GL_Accessory "{69CE2E21C00D2F51}" {
+     }
+    }
+   }
+   WornModel "{D97FC22968DBEB85}Assets/Vests/JPC2.0/GRS_JPC2.0.xob"
+   WornMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+   ItemModel "{FED452326EAD1D35}Assets/Vests/JPC-R/GRS_JPC_GROUND.xob"
+   ItemMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+   PhysicsOnWearEnabled 1
+   AnimateCollidersOnWear 1
+   SoundInt 400
+   DepthFront 0.115
+   DepthBack 0.015
+   DepthLeft 0.05
+   DepthRight 0.05
+   AreaOcludders {
+    "ChestLeftTopFront" "ChestRightTopFront" "ChestLeftBottomFront" "ChestRightBottomFront"
+   }
+  }
+  ActionsManagerComponent "{69CE2E21C00D2F5E}" {
+   ActionContexts {
+    UserActionContext "{69CE2E21C00D2F5D}" {
+     ContextName "default"
+     Position PointInfo "{69CE2E21C00D2F59}" {
+      Offset 0 0.05 0
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{69CE2E21C00D2F45}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69CE2E21C00D2F44}" {
+      Name "#AR-Inventory_Equip"
+      m_sIconName "pick-up"
+     }
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{69CE2E21C00D2F42}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69CE2E21C00D2F40}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{69CE2E21C00D2F4D}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69CE2E21C00D2F4B}" {
+  }
+ }
+ coords 0 0 0
+ angles 0.56 -176.72 0.703
+}
