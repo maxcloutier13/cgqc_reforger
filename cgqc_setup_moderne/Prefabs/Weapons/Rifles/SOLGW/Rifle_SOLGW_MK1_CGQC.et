@@ -1,0 +1,306 @@
+GenericEntity : "{51744F43314D37AB}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_URGI_115_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponSoundComponent "{5A8685198A9AEEDD}" {
+   Filenames +{
+   }
+  }
+  CDD_AIAudibleRangeComponent "{69E23DAAE78CFE9A}" {
+   m_fAIAudibleDistance 150
+  }
+  MeshObject "{CFBAA4B701F95D69}" {
+   Object "{6998A013EEF7AC59}Prefabs/Weapons/Rifles/SOLGW/MK1.xob"
+   Materials {
+    MaterialAssignClass "{69E23DAAE78CFEF8}" {
+     SourceMaterial "SOLGW_MK1_MISC_300"
+     AssignedMaterial "{1136F317B8A067AF}Prefabs/Weapons/Rifles/SOLGW/Data/SOLGW_MK1_MISC_556dc.emat"
+    }
+    MaterialAssignClass "{69E23DAAE78CFEE4}" {
+     SourceMaterial "SOLGW_MK1_HG_Hex"
+     AssignedMaterial "{3AE3E680F118A28A}Prefabs/Weapons/Rifles/SOLGW/Data/SOLGW_MK1_HGBK.emat"
+    }
+    MaterialAssignClass "{69E23DAAE78CFEE2}" {
+     SourceMaterial "SOLGW_MK1_RG"
+     AssignedMaterial "{41FA434EC8052936}Prefabs/Weapons/Rifles/SOLGW/Data/SOLGW_MK1_RGBK.emat"
+    }
+   }
+   LODFactors {
+    1 1 1 1 1
+   }
+  }
+  RHS_SGC_RadialMenuComponent "{5E0ED058CD731BC8}" {
+   m_sDisplayName "SOLGW MK1 (11.5\")"
+  }
+  RigidBody "{5E0ED058CD731B32}" {
+   Static 0
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "SOLGW MK1 (5.56)"
+     Description "5.56x45"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{5E0ED058CD731B23}" {
+     Weight 2.64
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5284960E1D29F45C}" {
+     AnimationIKPose "{3F1EDEDA66338607}TXA/p_NSW_Noveske_NoGrip_ik.anm"
+     AnimIKPoseCrouchOverride ""
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0ED05F322AB08B}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot PistolGrip {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA2A35B78B4}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot Buffertube {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA2E5FAA2B6}" {
+     Enabled 1
+     AttachmentSlot InventoryStorageSlot Buttstock {
+      Offset 0 0.0481 -0.2182
+      Enabled 1
+      Prefab "{2ED0570243BFF506}Prefabs/Weapons/Attachments/Stocks/Stock_HK416_M27/Stock_MOETRBK.et"
+     }
+     AttachmentType AttachmentStock "{69E23DAAE78CFED3}" {
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA47E3F452D}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot Handguard {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA5B623AB37}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot Handguard_lower {
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA70372C8BA}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot Barrel {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA7F53DE1B1}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot Upper {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA8BD59EE7D}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot ChargingHandle {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
+     Enabled 1
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
+      Offset 0 0.1085 0.0044
+      Enabled 1
+      Prefab ""
+     }
+     AttachmentType AttachmentStockVz58 "{5EA6791C94177A56}" {
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     Enabled 1
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Offset 0 0.1089 0.3352
+      MergePhysics 0
+      Prefab "{550E8299D9222714}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_MALHUP.et"
+     }
+     AttachmentType AttachmentRIS1913 "{5EA2BE94941B23EB}" {
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE95B630A07A}" {
+     Enabled 1
+     AttachmentSlot InventoryStorageSlot "{5EA2BE95B7F1B3D5}" {
+      Offset -0.024 0.0365 0.2607
+      MergePhysics 0
+      ChildPivotID "snap_weapon"
+      Enabled 1
+      Prefab "{4B69F4D51ABE8F52}Prefabs/Weapons/Attachments/Grips/Noveske/GBRS_Wrap_GripMK12_MC.et"
+      DisablePhysicsInteraction 0
+     }
+    }
+    AttachmentSlotComponent "{609EE5047488AAA1}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot REAR_IRONSIGHT {
+      Offset 0 0.1142 -0.0266
+      Enabled 0
+      Prefab "{57D68B58C4C82E33}Prefabs/Weapons/Attachments/Optics/BUIS_Rear_base.et"
+     }
+    }
+    AttachmentSlotComponent "{609EE504E194D66F}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{61749A66C4BA094E}" {
+     AttachmentSlot InventoryStorageSlot bayonet {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{62F120CA119F8F36}" {
+     Enabled 0
+     AttachmentSlot InventoryStorageSlot GasBlock {
+      Enabled 0
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFEC4}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot LeftRIS {
+      Offset -0.022 0.0751 0.349
+      Angles 0 0 -90
+     }
+     AttachmentType AttachmentRIS1913 "{69E23DAAE78CFECD}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFEC9}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot RightRIS {
+      Offset 0.022 0.0765 0.3498
+      Angles 0 0 90
+      Prefab "{EC04EA6AD910DA2F}Prefabs/Weapons/Attachments/Flashlight/m600v_Modlite.et"
+     }
+     AttachmentType AttachmentRIS1913 "{69E23DAAE78CFF37}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFECB}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot HandguardCovers {
+      Offset 0.0001 -0.0029 0.0982
+      Enabled 1
+      Prefab ""
+     }
+     AttachmentType AttachmentM4A1RailCover "{69E23DAAE78CFECA}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFF36}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot LaserOMM {
+      Offset 0 0.1284 0.1335
+      Enabled 1
+      Prefab ""
+     }
+     AttachmentType AttachmentRIS1913 "{69E23DAAE78CFF35}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFF4A}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Optic {
+      Offset 0 0.1092 0.0571
+      Prefab "{083930626BBB5C4D}Scopes/Sig Sauer Romeo 5/Prefabs/Optic_ROMEO5_MAG3.et"
+     }
+     AttachmentType AttachmentOpticsRIS1913 "{69E23DAAE78CFF49}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFF4E}" {
+     AttachmentSlot InventoryStorageSlot Magwell {
+      Offset 0 -0.0074 0.2566
+      Enabled 1
+      Prefab ""
+      DisablePhysicsInteraction 1
+      InspectionWidgetOffset 0 0.0787 0.1394
+     }
+     AttachmentType AttachmentM4A1RailCover "{69E23DAAE78CFF4C}" {
+     }
+    }
+    AttachmentSlotComponent "{69E23DAAE78CFFB7}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Magnifier {
+      PivotID "slot_optic"
+      Offset 0 0.1085 0.0691
+      MergePhysics 0
+      m_fMaximumPositiveSlideOffset 0.04
+      m_fMaximumNegativeSlideOffset -0.08
+     }
+     AttachmentType AttachmentOpticsRIS1913Short "{69E23DAAE78CFFB5}" {
+     }
+    }
+    SightsComponent "{BB23A637957CFFF8}" {
+     SightsPosition PointInfo "{BB23A63796688E69}" {
+      Offset 0 0.1557 -0.1069
+     }
+     SightsPointRear PointInfo "{5E0ED058CD703F2E}" {
+      Offset 0 0.1353 -0.0374
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626713EF43D3CC9E}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Offset 0 0.0754 0.3858
+        Enabled 1
+        Prefab "{AD9C67EF91CE0CD0}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/DA_HuxWrx556KL_BLK.et"
+       }
+      }
+      CaseEjectingEffectComponent "{5122AAD190FCA21D}" {
+       EffectPosition EntitySlotInfo "{5122BA87B56F471A}" {
+        Offset 0.0115 0.0765 0.092
+       }
+      }
+      SCR_MuzzleEffectComponent "{C9B3271BB22CDB68}" {
+       EffectPosition EntitySlotInfo "{C9B3271BB85B5D32}" {
+        Offset 0 0.0754 0.4038
+       }
+      }
+     }
+     MuzzleEndPositions {
+      PointInfo "{B80A64F4B6CFB9BF}" {
+       Offset 0.0002 0.0751 0.4026
+      }
+     }
+     ProjectileSpawnPositions {
+      PointInfo "{50F64C476EC435CA}" {
+       Offset 0.0002 0.0751 0.0942
+      }
+     }
+     DispersionDiameter 0.324
+     WeaponAimModifiers {
+      RecoilWeaponAimModifier "{5E0ED058CD703F41}" {
+       LinearData RecoilData "{5E0ED058CD703F42}" {
+        "Curve X" {
+         0 0.5 0.034 0.553 0.075 0.792 0.203 0.641 0.301 0.518 1 0.5
+        }
+        "Curve Y" {
+         0 0.5 0.032 0.55 0.045 0.695 0.071 0.65 0.095 0.5 0.261 0.5 1 0.5
+        }
+        "Curve Z" {
+         0 0.5 0.008 0.809 0.029 0.912 0.035 0.859 0.049 0.863 0.081 0.62 0.177 0.512 0.436 0.5 1 0.5
+        }
+        "Base Recoil Scale" 5
+        "Move Recoil Scale" 1
+       }
+      }
+     }
+     MagazinePosition InventoryStorageSlot "{B80A64F4C834E9CB}" {
+      Offset 0 0.0065 0.1043
+      MergePhysics 0
+     }
+     MagazineTemplate "{C2A9897A3FDBF490}Prefabs/Weapons/Magazines/Pmag/CGQC_Mn_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+    }
+    WeaponAnimationComponent "{60B4EA76EB15F6E0}" {
+     AnimGraph "{C10E1E127E210526}Assets/Weapons/Rifles/workspaces/m16.agr"
+     AnimInstance "{45F5075F85030A89}Assets/Weapons/Rifles/workspaces/Noveske_weapon.asi"
+     AnimInjection AnimationAttachmentInfo "{5E0ED058CD703F70}" {
+      AnimGraph "{C10E1E127E210526}Assets/Weapons/Rifles/workspaces/m16.agr"
+      AnimInstance "{FB7EC7CDEFE19664}Assets/Weapons/Rifles/workspaces/Noveske_NoGrip_player.asi"
+     }
+    }
+   }
+   obstructionTestAddedLength -0.1
+   slightObstrWeaponMaxZOffset 0.05
+   UIInfo WeaponUIInfo "{CC3BA6A2C42F09F4}" {
+    Name "SOLGW MK1 (11.5\")"
+    Description "5.56x45"
+   }
+  }
+ }
+ coords 1350.23 37.909 2965.793
+}
