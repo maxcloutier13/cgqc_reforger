@@ -1,0 +1,59 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Medic"
+    IconSetName "EditableEntity_Character_Medic"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{49AB871C4B3750B3}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC_medic.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{4515B3DE8E421A18}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_Medic.et"
+    }
+    LoadoutSlotInfo Back {
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/GRS_Crye_RG_CGQC_medic.et/GRS_StorageComponent/GRS_StorageComponent.et"
+    }
+    ItemsInitConfigurationItem "{69BA366EEA877E1A}" {
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Placards/GRS_Placard_FerroDope.et"
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/LS_Pouch_1/GRS_ARSingle_Pouch.et"
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{69721A015898A517}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Rear_Dangler/GRS_Trauma_Roll_Dangler.et"
+    }
+    ItemsInitConfigurationItem "{69E433108D10F782}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_CGQC_Medic.et/Storage/GRS_BackpackStorage.et"
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et"
+     }
+    }
+   }
+  }
+ }
+}

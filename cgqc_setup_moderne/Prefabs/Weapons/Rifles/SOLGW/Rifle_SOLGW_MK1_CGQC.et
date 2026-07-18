@@ -196,7 +196,7 @@ GenericEntity : "{51744F43314D37AB}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
     AttachmentSlotComponent "{69E23DAAE78CFF4A}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot Optic {
       Offset 0 0.1092 0.0571
-      Prefab "{083930626BBB5C4D}Scopes/Sig Sauer Romeo 5/Prefabs/Optic_ROMEO5_MAG3.et"
+      Prefab "{AB4D42B14034E06D}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Old/Optic_t2_Scalar.et"
      }
      AttachmentType AttachmentOpticsRIS1913 "{69E23DAAE78CFF49}" {
      }
@@ -283,7 +283,7 @@ GenericEntity : "{51744F43314D37AB}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
       Offset 0 0.0065 0.1043
       MergePhysics 0
      }
-     MagazineTemplate "{C2A9897A3FDBF490}Prefabs/Weapons/Magazines/Pmag/CGQC_Mn_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+     MagazineTemplate "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
     }
     WeaponAnimationComponent "{60B4EA76EB15F6E0}" {
      AnimGraph "{C10E1E127E210526}Assets/Weapons/Rifles/workspaces/m16.agr"

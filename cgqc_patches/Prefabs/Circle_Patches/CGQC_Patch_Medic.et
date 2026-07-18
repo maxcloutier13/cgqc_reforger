@@ -13,16 +13,16 @@ GameEntity : "{31B8D047E27D9FF1}Prefabs/Circle_Patches/Patch_Reaper_Base.et" {
    Materials {
     MaterialAssignClass "{694ACC69E70A09F8}" {
      SourceMaterial "Material"
-     AssignedMaterial "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+     AssignedMaterial "{EE84C8E978745058}Assets/Circle_Patches/CGQC_medic.emat"
     }
    }
   }
   BaseLoadoutClothComponent "{657B0C0AEEEB7D3C}" {
    WornMaterialsOverride {
-    "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+    "{EE84C8E978745058}Assets/Circle_Patches/CGQC_medic.emat"
    }
    ItemMaterialsOverride {
-    "{EE84C8E978745058}Assets/Circle_Patches/Data/CGQC_medic.emat"
+    "{EE84C8E978745058}Assets/Circle_Patches/CGQC_medic.emat"
    }
   }
  }

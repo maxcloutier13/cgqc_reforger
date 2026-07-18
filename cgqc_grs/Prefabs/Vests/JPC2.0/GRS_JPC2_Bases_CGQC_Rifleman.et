@@ -95,7 +95,7 @@ GenericEntity {
     }
     LoadoutSlotInfo Backpanel {
      MergePhysics 1
-     Prefab ""
+     Prefab "{D22213024F78B41F}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_JPC2_CGQC.et"
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0

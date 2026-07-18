@@ -9,33 +9,29 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DF1A4F5D50C}" {
-   m_sLoadoutName "TeamLeader"
-   m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TL_Moderne.et"
+   m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
-   m_sLoadoutName "SquadLeader"
-   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SL_Moderne.et"
+   m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
-   m_sLoadoutName "SquadLeader"
-   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SL_Moderne.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
    m_sLoadoutResource "{AF849499F67BAD7F}Prefabs/Characters/Factions/INDFOR/CGQC/Old/Character_CGQC_TeamLeader_Moderne.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TL_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DF07E6889CC}" {
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFFC5F4FA5C}" {
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SL_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DFE15F74B63}" {
    m_sAffiliatedFaction "CGQC_OLD"

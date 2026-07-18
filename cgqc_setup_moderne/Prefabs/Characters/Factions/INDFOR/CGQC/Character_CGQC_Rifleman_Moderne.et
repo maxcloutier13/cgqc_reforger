@@ -22,6 +22,8 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     LoadoutSlotInfo Back {
     }
+    LoadoutSlotInfo Vest {
+    }
     LoadoutSlotInfo HandWear {
      Prefab "{9F0BD0C67E63DF24}Prefabs/Characters/Uniforms/Gloves/Mechanix/Mechanix_Gloves_RG.et"
     }
@@ -39,31 +41,52 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     LoadoutSlotInfo Extra2 {
     }
+    LoadoutSlotInfo GRSWaist {
+     Prefab "{AAE8F0827B1624F6}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_CGQC.et"
+    }
+    LoadoutSlotInfo GRS_Waist {
+     Prefab ""
+    }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{690C232DABEBBC53}" {
     }
+    ItemsInitConfigurationItem "{6949249825AF0522}" {
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/Pistol_Mag_Pouch/GRS_Angled_Pistol_Pouch.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF7046E3B}" {
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/Pistol_Mag_Pouch_2/GRS_Angled_Pistol_Pouch.et"
+    }
     ItemsInitConfigurationItem "{6949249AF756FA10}" {
-     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_CGQC.et/LS_Rear_Pouch/GRS_CryeGP6x6.et"
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/LS_Rear_Pouch/GRS_CryeGP6x6.et"
+    }
+    ItemsInitConfigurationItem "{6949249AF1943048}" {
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/LS_Rear_Pouch/GRS_CryeGP6x6.et"
+    }
+    ItemsInitConfigurationItem "{6949249A0AAABC84}" {
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/LS_Rear_Pouch/GRS_CryeGP6x6.et"
+    }
+    ItemsInitConfigurationItem "{69BA366EEA877E1A}" {
+     TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/Middle_Rear_Pouch/GRS_Blowout_TQS.et"
     }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/Placards/GRS_Placard_FerroDope.et"
      PrefabsToSpawn {
-      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et" "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+      "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D1A6605B2}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
      PrefabsToSpawn {
-      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+      "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D11B56690}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/LS_Pouch_1/GRS_ARSingle_Pouch.et"
      PrefabsToSpawn {
-      "{BD30BE4A3D8B9DAC}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1_last5tracer.et"
+      "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {

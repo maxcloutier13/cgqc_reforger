@@ -13,6 +13,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Jacket {
+     Prefab "{70988D0D74892ECF}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC_TL.et"
     }
     LoadoutSlotInfo ArmoredVest {
      Prefab "{1956850EDEE019EB}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_TL.et"
@@ -33,6 +34,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/GRS_Crye_RG_CGQC_TL.et/GRS_StorageComponent/GRS_StorageComponent.et"
     }
     ItemsInitConfigurationItem "{6949249825AF0522}" {
     }

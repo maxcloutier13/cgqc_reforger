@@ -1,0 +1,12 @@
+GameEntity : "{2980FC239197B0A9}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC.et" {
+ ID "5104869D194C6243"
+ components {
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    GRS_MorphSlotComponent Lower_Right_Patch {
+     Prefab "{8BF8925C84EA3B66}Prefabs/Role_Patches/role_tl.et"
+    }
+   }
+  }
+ }
+}
