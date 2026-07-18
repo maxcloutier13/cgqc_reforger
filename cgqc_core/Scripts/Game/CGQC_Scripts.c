@@ -199,6 +199,7 @@ class CGQC_Scripts
 					GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
 
 				// Rank
+				
 				SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
 				if (!rankComp)
 				{
@@ -207,53 +208,20 @@ class CGQC_Scripts
 				}
 
 				SCR_ECharacterRank desiredRank = entry.m_iRank;
-				rankComp.SetCharacterRank(desiredRank);
-				PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
-				GetGame().GetCallqueue().CallLater(CGQC_getBeret.SwapBeretIfTraining, 2000, false, playerEntity, desiredRank);
-
+				// MAX removed
+				//rankComp.SetCharacterRank(desiredRank);
+				//PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+				
+				
+				// Custom beret
+				GetGame().GetCallqueue().CallLater(CGQC_getBeret.getBeret, 2000, false, playerEntity, desiredRank);
+				
 				return;
 			}
 		}
 
 		Print("[CGQC_InitializePlayer] Player not in CGQC roster, no action taken.");
-	}
-
-
-		/*
-		{"d7e9113c-f075-41c5-a72a-9ee5187dc723", SCR_ECharacterRank.MAJOR}, // Cloutier
-		{"c3fcb72f-2f87-4937-8847-1fb62b39a40c", SCR_ECharacterRank.MAJOR}, // Darkangel898 / Tremblay
-
-		{"6538de9f-32ce-41cc-bc6f-844a6a3b2ce8", SCR_ECharacterRank.CAPTAIN}, // InsanelyCisMale / Lafo
-
-		{"e1c8cdf2-953a-4db0-be45-2cd8e79556f2", SCR_ECharacterRank.LIEUTENANT}, // HellRik / Valiquette
-		{"120786ec-60cd-4a96-9e10-c846578745f2", SCR_ECharacterRank.LIEUTENANT}, // ElButteur / Genest
-		{"e98c24ac-31b8-4647-94f8-c4ffa5bec5fe", SCR_ECharacterRank.LIEUTENANT}, // cluelessCanadian / Trépanier
-
-		{"dce42da0-351f-4d03-821b-e89e46b70002", SCR_ECharacterRank.SERGEANT}, // ServerError / Turcotte
-		{"fdeca5b5-5cba-403a-8e3a-d598325dbccc", SCR_ECharacterRank.SERGEANT}, // Dubaille / Dubé
-		{"789954f6-cdb6-4f69-8095-af635b9a78a1", SCR_ECharacterRank.SERGEANT}, // Lauzon / Lauzon
-		{"c6643f04-50cb-461a-b591-b6e6deb63ed9", SCR_ECharacterRank.SERGEANT}, // psykou / Fournier
-		{"dd7969a6-722f-4ae6-a9e7-898ee9e6fea5", SCR_ECharacterRank.SERGEANT}, // Epicdudejo / Pike
-		{"60e84a60-c12f-4b4a-91ed-c294bab6046e", SCR_ECharacterRank.SERGEANT}, // Pig'sPeels / Comeau
-
-		{"c40d4907-67a4-4a53-b7c0-49ae4f3d3121", SCR_ECharacterRank.PRIVATE}, // poolerPol / JeuneComeau
-		{"daa9fb24-0729-45bb-b41f-324d22ca632b", SCR_ECharacterRank.PRIVATE}, // Technical / Forgues
-		{"f86ee5bc-39bd-4a59-98b7-9caf0ee061b6", SCR_ECharacterRank.PRIVATE}, // P-Hell / Audet
-		{"72c38387-e5fd-46f4-806e-ce1e7c0ce16e", SCR_ECharacterRank.PRIVATE} // Kevin Walker the 7th / Walker
-		*/
-        /* ex:
-		{"", SCR_ECharacterRank.PRIVATE}, // Discord / Actual
-
-		Ranks possibles par défaut:
-			PRIVATE,
-			CORPORAL,
-			SERGEANT,
-			LIEUTENANT,
-			CAPTAIN,
-			MAJOR,
-			COLONEL,
-			GENERAL,
-		*/
+	}		
 
 	// Set player identity (works on both client and server)
 	static void SetPlayerIdentity(IEntity playerEntity, string headPath, string bodyPath)

@@ -8,7 +8,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   WeaponTemplate "{9C97B50CC5DEBE40}Prefabs/Weapons/Rifles/Rifle_AR15_115_base.et"
+   WeaponTemplate "{AB7BB023D5A79F9E}Prefabs/Weapons/Rifles/SOLGW/Rifle_SOLGW_MK1_CGQC.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
