@@ -25,14 +25,19 @@ GenericEntity : "{61C6D75066FC1964}Prefabs/5AB890B71D748750/Weapon_Variants_B/Ri
       Prefab "{0C3372E87C6A2F6E}Prefabs/5AB890B71D748750/UGL/UGL_Ris.et"
      }
     }
+    AttachmentSlotComponent "{60A4B045D1BB26CE}" {
+     AttachmentSlot InventoryStorageSlot Attachment {
+     }
+    }
     AttachmentSlotComponent "{60A4B045D1BBDA79}" {
      AttachmentSlot InventoryStorageSlot Attachment {
-      Prefab ""
+      Offset 0 0 -0.0049
+      Prefab "{550E8299D9222714}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_MALHUP.et"
      }
     }
     AttachmentSlotComponent "{60A4B045D1BBE051}" {
      AttachmentSlot InventoryStorageSlot Attachment {
-      Prefab "{5AE8F3A22BDB534F}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_ANPEQ15_black.et"
+      Prefab "{C32EC74B4B0C8CA1}Prefabs/Weapons/Attachments/Lights/Light_m300c_blk.et"
      }
     }
     AttachmentSlotComponent "{61BAC08C2DEFFBD7}" {
