@@ -71,9 +71,13 @@ class CGQC_getBeret
 	        return;
 	    }
 
-	    Resource beretResource = Resource.Load(beretPrefab);
-	    if (!beretResource || !beretResource.IsValid())
-	        return;
+	    Print("CGQC_getBeret: attempting to load " + beretPrefab, LogLevel.WARNING);
+	Resource beretResource = Resource.Load(beretPrefab);
+	if (!beretResource || !beretResource.IsValid())
+	{
+	    Print("CGQC_getBeret: FAILED to load " + beretPrefab, LogLevel.WARNING);
+	    return;
+	}
 
 	    EntitySpawnParams spawnParams = new EntitySpawnParams();
 	    spawnParams.TransformMode = ETransformMode.WORLD;
@@ -131,7 +135,7 @@ class CGQC_getBeret
 	{
 	    if (!invManager)
 	        return false;
-
+	
 	    array<ResourceName> berets = {
 	        "{4A1C1BF9AB830BA3}Prefabs/Characters/Berets/CGQC_1_yellow.et",
 	        "{2ED3710551B83182}Prefabs/Characters/Berets/CGQC_2_black.et",
@@ -140,23 +144,23 @@ class CGQC_getBeret
 	        "{F8C081F5D0BAF251}Prefabs/Characters/Berets/CGQC_5_Blue.et",
 	        "{4C0D703CEF585E02}Prefabs/Characters/Berets/CGQC_6_Red.et"
 	    };
-
+	
 	    array<IEntity> items = {};
-	    invManager.GetAllItems(items, null);
-
+	    invManager.GetAllItems(items, invManager.GetCharacterStorage());
+	
 	    foreach (IEntity item : items)
 	    {
 	        if (!item)
 	            continue;
-
+	
 	        EntityPrefabData prefabData = item.GetPrefabData();
 	        if (!prefabData)
 	            continue;
-
+	
 	        if (berets.Contains(prefabData.GetPrefabName()))
 	            return true;
 	    }
-
+	
 	    return false;
 	}
 }
