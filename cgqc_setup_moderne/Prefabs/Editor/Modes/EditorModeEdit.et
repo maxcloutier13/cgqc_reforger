@@ -11,6 +11,8 @@ SCR_EditorModeEntity : "{E56F54E533ACE527}Prefabs/Editor/Modes/EditorModeBase.et
     }
     SCR_PlaceableEntitiesRegistry "{696D113CD2C4013D}" : "{7A8CCC73F385DB3D}Configs/Arsenal/GRIT_Registry_Various.conf" {
     }
+    SCR_PlaceableEntitiesRegistry "{69F50DD1BE581B07}" : "{B4BE9B619E103A24}Configs/Arsenal/CGQC_Registry_Arsenals_GRIT.conf" {
+    }
    }
   }
  }

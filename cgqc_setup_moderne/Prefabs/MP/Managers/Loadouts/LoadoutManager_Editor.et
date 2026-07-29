@@ -12,17 +12,18 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutResource "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_LMG_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutName "MAT"
+   m_sLoadoutResource "{089C2D54DD6851C6}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MAT_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
    m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
-   m_sLoadoutResource "{AF849499F67BAD7F}Prefabs/Characters/Factions/INDFOR/CGQC/Old/Character_CGQC_TeamLeader_Moderne.et"
-   m_sAffiliatedFaction "CGQC_OLD"
+   m_sLoadoutName "Marksman"
+   m_sLoadoutResource "{F6CC5534AB298633}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Marksman_Moderne.et"
   }
   SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
    m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TL_Moderne.et"
@@ -51,22 +52,22 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696D113D489F0E7A}" {
-   m_sLoadoutName "Opérateur d'intervention (Rattler)"
+   m_sLoadoutName "Opérateur (Rattler)"
    m_sLoadoutResource "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696E42C02B021C78}" {
-   m_sLoadoutName "Opérateur d'intervention (HoneyBadger)"
+   m_sLoadoutName "Opérateur (HoneyBadger)"
    m_sLoadoutResource "{B6C879A3A976E7FD}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_honeybadger.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696E42C028985C20}" {
-   m_sLoadoutName "Opérateur d'intervention (LVAW)"
+   m_sLoadoutName "Opérateur (LVAW)"
    m_sLoadoutResource "{9E6CD79C95F44322}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_lvaw.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696E42C03D1B0E89}" {
-   m_sLoadoutName "Opérateur Voltigeur (SA-58)"
+   m_sLoadoutName "Voltigeur (SA-58)"
    m_sLoadoutResource "{FAD34F20DB459E89}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_voltigeur_sa58.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }

@@ -11,10 +11,10 @@ GameEntity : "{5DB7E554E938C969}Prefabs/Rectangle_Patches/Rectangle_DemonHunter_
   }
   BaseLoadoutClothComponent "{657C17E446464A39}" {
    WornMaterialsOverride {
-    "{7FEEAEDE9FFD217A}Assets/Rectangle_Patches/Role_dmr.emat"
+    "{7FEEAEDE9FFD217A}Assets/Role_Patches/Role_dmr.emat"
    }
    ItemMaterialsOverride {
-    "{7FEEAEDE9FFD217A}Assets/Rectangle_Patches/Role_dmr.emat"
+    "{7FEEAEDE9FFD217A}Assets/Role_Patches/Role_dmr.emat"
    }
   }
  }
