@@ -13,8 +13,19 @@ SCR_ChimeraCharacter {
      ActionTitle "Inspection"
      VisibilityRange 1
      Duration 1
-     "Sort Priority" 50
+     "Sort Priority" 150
      m_sConfigPath "{B56A3747ACB6F38B}Configs/CGQC/CGQC_InspectionConfig.conf"
+    }
+    CGQC_SilentKillAction "{69EC20F54D6FD8E5}" {
+     ParentContextList {
+      "Head"
+     }
+     UIInfo UIInfo "{69EC20F543B4DB30}" {
+      Name "Achève Silencieusement"
+     }
+     ActionTitle "Achève Silencieusement"
+     Duration 2
+     "Sort Priority" 150
     }
    }
   }

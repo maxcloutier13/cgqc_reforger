@@ -29,11 +29,24 @@ class CGQC_InspectionAction : ScriptedUserAction
 
 	override bool CanBeShownScript(IEntity user)
 	{
-		// Only show on player-controlled characters
 		PlayerManager pm = GetGame().GetPlayerManager();
 		if (!pm)
 			return false;
-		return pm.GetPlayerIdFromControlledEntity(GetOwner()) >= 0;
+	
+		int targetPlayerId = pm.GetPlayerIdFromControlledEntity(GetOwner());
+		if (targetPlayerId <= 0)
+			return false;
+	
+		int checkerPlayerId = pm.GetPlayerIdFromControlledEntity(user);
+		if (checkerPlayerId <= 0)
+			return false;
+	
+		// Self-inspection stays open to everyone
+		if (checkerPlayerId == targetPlayerId)
+			return true;
+	
+		// Inspecting someone else requires GM
+		return pm.HasPlayerRole(checkerPlayerId, EPlayerRole.GAME_MASTER);
 	}
 
 	override bool CanBePerformedScript(IEntity user)
