@@ -1,0 +1,53 @@
+GenericEntity : "{339D9B750F3E203E}Prefabs/Vests/JPC-R/GRS_JPCR_Bases.et" {
+ ID "69822020CDFCEA8C"
+ components {
+  GRS_ArmorVestStorageComponent "{69822020C8AD5435}" {
+   Attributes SCR_ItemAttributeCollection "{69822020C8AD540B}" {
+    ItemDisplayName UIInfo "{69822020C8AD54B4}" {
+     Name "GRS: JPCR - Black GRIT Pliot"
+     Description "GRS: JPCR - Black"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69822020C8AD4E7C}" {
+   Slots {
+    LoadoutSlotInfo LS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo RS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo Placards {
+     Prefab "{CC7A0ADA65C9712F}Prefabs/Pouches/Black/GRS_Spiritus_CCS_Black.et"
+    }
+    LoadoutSlotInfo Dangler {
+    }
+    LoadoutSlotInfo Atak {
+     Prefab "{B8250B4442623178}Prefabs/Kagwerks/GRS_Kagwerks_01_GRIT_Black.et"
+    }
+    LoadoutSlotInfo RS_Pouch_1 {
+    }
+    LoadoutSlotInfo RS_Pouch_2 {
+     Prefab "{59D99E1465001DA4}Prefabs/Pouches/Black/GRS_CryeGP6x6_Black.et"
+    }
+    LoadoutSlotInfo RS_Pouch_4 {
+    }
+    LoadoutSlotInfo LS_Pouch_1 {
+     Prefab "{7AD5176D33770BCB}Prefabs/Pouches/Black/GRS_Radio_MPU5_V2_Pouch_Black.et"
+    }
+    LoadoutSlotInfo LS_Pouch_2 {
+     Prefab "{59D99E1465001DA4}Prefabs/Pouches/Black/GRS_CryeGP6x6_Black.et"
+    }
+    LoadoutSlotInfo LS_Pouch_5 {
+    }
+   }
+   WornMaterialsOverride {
+    "{F554BA6D89767ED7}Assets/Vests/JPC-R/Data/JPCR_vest_Black.emat" "{EB9C67E46A981A1A}Assets/Vests/JPC-R/Data/JPCR_cbund_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{F554BA6D89767ED7}Assets/Vests/JPC-R/Data/JPCR_vest_Black.emat" "{EB9C67E46A981A1A}Assets/Vests/JPC-R/Data/JPCR_cbund_Black.emat"
+   }
+  }
+ }
+ coords -3.852 3.675 5.627
+}

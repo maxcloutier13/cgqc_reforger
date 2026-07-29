@@ -1,0 +1,14 @@
+GenericEntity : "{9064206CBDE9CD95}Prefabs/Weapons/Core/Launcher_Base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{B502E4DC8A9E835E}" {
+     AttachmentSlot InventoryStorageSlot optics {
+      Prefab "{D928BE3F7938F100}Prefabs/Attachments/FCS600/Optic_FLV_HEAT.et"
+     }
+    }
+   }
+  }
+ }
+}

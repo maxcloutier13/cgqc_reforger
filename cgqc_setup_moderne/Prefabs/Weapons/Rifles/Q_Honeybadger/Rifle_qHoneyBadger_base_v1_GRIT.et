@@ -20,7 +20,7 @@ GenericEntity : "{C0C989BF02F86391}Prefabs/Weapons/Rifles/Q_Honeybadger/Rifle_qH
    components {
     AttachmentSlotComponent "{5534745C44D1EF58}" {
      AttachmentSlot LoadoutSlotInfo optics {
-      Prefab "{4BBD741316336894}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Optic_T2_Unity.et"
+      Prefab "{4BBD741316336894}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Old/Optic_T2_Unity.et"
      }
     }
     AttachmentSlotComponent "{56DE9C900611C1AF}" {

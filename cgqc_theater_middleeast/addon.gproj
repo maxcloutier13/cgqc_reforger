@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctheatermiddleeast"
+ GUID "69E4E669839790D9"
+ TITLE "cgqc_theater_middleeast"
+ Dependencies {
+  "58D0FB3206B6F859" "69054D896595F18D" "673957072A2CC77C" "6634DB16381E17A5" "664AF808E006D8D6"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

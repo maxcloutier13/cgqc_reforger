@@ -13,7 +13,7 @@ GenericEntity : "{BF4765264D5F6F8E}Prefabs/Weapons/Rifles/ARY_G3/ARY_G3_MC51/ARY
     AttachmentSlotComponent "{65F73688A412FC01}" {
      AttachmentSlot InventoryStorageSlot "{65F73688A0F87C60}" {
       Offset 0 0.0067 0.0282
-      Prefab "{AB4D42B14034E06D}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Optic_t2_Scalar.et"
+      Prefab "{AB4D42B14034E06D}Prefabs/Weapons/Attachments/Optics/aimpoint_t1/Old/Optic_t2_Scalar.et"
      }
      AttachmentType AttachmentOpticsRIS1913 "{65F73688A2533067}" {
      }

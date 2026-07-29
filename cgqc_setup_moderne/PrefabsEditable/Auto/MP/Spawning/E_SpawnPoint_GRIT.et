@@ -9,7 +9,7 @@ SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
     m_Image "{831012F41EFE085A}UI/Textures/EditorPreviews/Auto/Systems/SpawnPoints/E_SpawnPoint_US.edds"
     m_sFaction "CGQC_GRIT"
     m_aAuthoredLabels {
-     ENTITYTYPE_SYSTEM TRAIT_SPAWNPOINT FACTION_CGQC
+     ENTITYTYPE_SYSTEM TRAIT_SPAWNPOINT FACTION_GRIT
     }
     m_aAutoLabels {
     }
