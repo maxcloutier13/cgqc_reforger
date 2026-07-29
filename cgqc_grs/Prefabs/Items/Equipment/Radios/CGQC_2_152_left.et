@@ -6,7 +6,7 @@ GenericEntity {
   SignalsManagerComponent "{69C21E7761F53FE5}" {
   }
   BaseRadioComponent "{69C21E7761F53FE3}" {
-   "Encryption key" "chickenNuggets"
+   "Encryption key" "poutine"
    "Turned on" 1
    Transceivers {
     RelayTransceiver "{69C21E7761F53FE0}" {
@@ -84,7 +84,6 @@ GenericEntity {
   }
   SCR_RadioComponent "{69C21E7761F53FC0}" {
    m_eAnimVariable ANPRC68
-   m_bIsVisibleEquipped 1
    m_iRadioType ANPRC68
   }
   SCR_SoundDataComponent "{69C21E7761F53FCE}" {
