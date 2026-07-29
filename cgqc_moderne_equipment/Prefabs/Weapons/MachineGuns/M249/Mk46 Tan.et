@@ -1,0 +1,21 @@
+GenericEntity : "{599A1E833BEF3A43}Prefabs/Weapons/MachineGuns/M249/MG_M249_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{61CAD4BDE800A6FE}" {
+     AttachmentSlot InventoryStorageSlot Left_Rail {
+      Offset 0 -0.0038 0.0557
+      Prefab "{A7B90CDB91BBA0E6}Prefabs/Weapons/Attachments/Flashlight/m600v_black.et"
+     }
+    }
+    AttachmentSlotComponent "{61CAD4BDE800A704}" {
+     AttachmentSlot InventoryStorageSlot Right_Rail {
+      Offset 0.0008 -0.0021 0.0581
+      Prefab "{550E8299D9222714}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_MALHUP.et"
+     }
+    }
+   }
+  }
+ }
+}
