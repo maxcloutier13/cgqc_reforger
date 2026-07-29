@@ -1,0 +1,26 @@
+GenericEntity : "{14DDD1566C68E72E}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_JPC2.et" {
+ ID "697F5AF6BB2E7E57"
+ components {
+  ClothNodeStorageComponent "{697F5AF6BB2E7E6E}" {
+   Attributes SCR_ItemAttributeCollection "{697F5AF6BB2E7E69}" {
+    ItemDisplayName UIInfo "{697F5AF6BB2E7E6B}" {
+     Name "GRS: Backpanel - GRIT"
+     Description "GRS: Backpanel - GRIT"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{697F5AF6BB2E7D91}" {
+   Slots {
+    LoadoutSlotInfo Bags {
+     Prefab "{5E20F086F4DDDEC0}Prefabs/Backpanels/Bags/GRS_Crye_Pouch_Medic_Black.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{72E28837540A82F3}Assets/Backpanels/Frame/Data/crye_molle_panel_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{72E28837540A82F3}Assets/Backpanels/Frame/Data/crye_molle_panel_Black.emat"
+   }
+  }
+ }
+}

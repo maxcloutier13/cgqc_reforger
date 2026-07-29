@@ -1,0 +1,45 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{F23098582C9DD82D}Prefabs/Weapons/Rifles/NOVESKE/Rifle_Noveske_300BO.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{5E4BB036BCB01645}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_Black_GRIT_Medic.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{F777CA26FE9CD695}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_Medic.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Medic.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_Medic.et/Storage/GRS_BackpackStorage.et"
+     PrefabsToSpawn + {
+      "{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69CE2E2694108227}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Medic.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED12044529DC56}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Medic.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_Medic.et/Storage/GRS_BackpackStorage.et"
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED12059E803B71}" {
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Medic.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
+    }
+   }
+  }
+ }
+}

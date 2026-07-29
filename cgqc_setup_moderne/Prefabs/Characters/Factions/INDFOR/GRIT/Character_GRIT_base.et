@@ -20,6 +20,9 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     Name "GRIT Opérateur BASE"
     Description "Membre de base de l'Équipe d'Intervention"
     m_sFaction "CGQC_GRIT"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_GRIT
+    }
    }
   }
   CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
@@ -27,9 +30,6 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   CharacterGrenadeSlotComponent "{5A6CDA0CCF43068E}" {
    WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
-  }
-  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
-   WeaponTemplate "{A36EFFA07DA3517A}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
@@ -49,16 +49,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{F177C9417949A7CB}Prefabs/Characters/Uniforms/Footwear/Walking_Boots/WalkingBoots_Black.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{E69E753794A57A60}Prefabs/Backpanels/GRS_Modular_Backpanel_Black_GRIT.et"
     }
     LoadoutSlotInfo HandWear {
      Prefab "{5451EE5DDF933200}Prefabs/Characters/Uniforms/Gloves/Ferro_Gun_Gloves/Ferro_Gun_Gloves_Black.et"
     }
     LoadoutSlotInfo Ears {
-     Prefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
     }
     LoadoutSlotInfo Face {
-     Prefab "{59F9727757DB226B}Prefabs/Characters/HeadGear/Balaclavas/cotton_balaclava_twohole_standalone.et"
     }
     LoadoutSlotInfo Neck {
      Prefab "{651F0CCA02166DB8}Prefabs/Characters/Neckwear/GRS_shemagh_base.et"
@@ -76,16 +73,12 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D112501353972}" {
-     TargetStorage "Jacket/GRS_Crye_Black.et"
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_Black.et"
      PrefabsToSpawn {
       "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
      }
     }
     ItemsInitConfigurationItem "{696D11251E6084B6}" {
-     TargetStorage "Pants/GRS_CryeG3_Bottoms_Black.et"
-     PrefabsToSpawn {
-      "{934F7D4CF484C652}Prefabs/Items/Equipment/Lockpicks/LockPick_Manual.et"
-     }
     }
     ItemsInitConfigurationItem "{696D112D95B95BCC}" {
      TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/Pistol_Mag_Pouch/GRS_Angled_G24_Pouch_Black.et"
@@ -102,19 +95,40 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{696D1129CAA8B751}" {
      TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/LS_Rear_Pouch/GRS_CryeGP6x6_Black.et"
      PrefabsToSpawn {
-      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et" "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et"
+      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{ED97A510AA0A46C5}Prefabs/Weapons/Grenades/Grenade_Stun.et" "{ED97A510AA0A46C5}Prefabs/Weapons/Grenades/Grenade_Stun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et"
      }
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et" "{2384B2E604F9331B}Prefabs/Weapons/Explosives/BreachingCharge/Breaching_Charge.et"
+      "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et"
      }
     }
     ItemsInitConfigurationItem "{69CE2E2694108227}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
      PrefabsToSpawn {
       "{3AAE94CE6ADC37E6}Prefabs/Items/Equipment/Radios/CGQC_1_343.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED12044529DC56}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/Placards/GRS_Placard_MKV_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED120458488427}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/RS_Pouch_1/GRS_ARSingle_Pouch_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED1204588BB518}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/LS_Pouch_1/GRS_ARSingle_Pouch_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED12059E803B71}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/Middle_Rear_Pouch/GRS_Blowout_TQS_Black.et"
+     PrefabsToSpawn {
+      "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
+     PrefabsToSpawn {
+      "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
      }
     }
    }

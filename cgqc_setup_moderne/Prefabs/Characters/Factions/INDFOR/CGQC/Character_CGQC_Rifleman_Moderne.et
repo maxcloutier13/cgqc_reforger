@@ -13,7 +13,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{34D649C57FE847E3}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_GRIT_black_v2.et"
+     Prefab "{BE1C25D7FD4E8E5C}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_CGQC_black_v2.et"
     }
     LoadoutSlotInfo Jacket {
     }
@@ -31,10 +31,8 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{F3672F802360D2E4}Prefabs/Characters/Eyewear/crossbow/Eyewear_ess_crossbow_blk_clr.et"
     }
     LoadoutSlotInfo Ears {
-     Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
     }
     LoadoutSlotInfo Face {
-     Prefab "{198B474EFFDC8E63}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Balaclava/Arcteryx_Balaclava_RG.et"
     }
     LoadoutSlotInfo Neck {
      Prefab "{BE10AB7F2C9B124E}Prefabs/Characters/Neckwear/GRS_shemagh_RG.et"

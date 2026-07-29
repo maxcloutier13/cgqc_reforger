@@ -1,0 +1,88 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Pilote"
+    Description "Pilote d'Hélicoptère"
+    IconSetName "EditableEntity_Character_Helicopter_Pilot"
+    m_aAuthoredLabels +{
+    }
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{C91E9236E5B8F261}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_Rattler.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F642721EEA5F3E1B}Prefabs/Characters/HeadGear/Helmet_Gentex_HGU56P/Helmet_Gentex_HGU56P_base_GRIT.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{25BD17C51F446762}Prefabs/Characters/Uniforms/Clothing/Upper body/Arcteryx_Leaf_Jacket/Arcteryx_Leaf_Jacket_RG_GRIT_Pilot.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{414CB7F3F93E2856}Prefabs/Vests/JPC-R/GRS_JPCR_Black_GRIT_Pilot.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{6C03CC3AE904081F}Prefabs/Characters/Uniforms/Bottoms/GRS_CryeG3_Bottoms/GRS_CryeG3_Bottoms_Coyote.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{62816106E2860D09}Prefabs/Characters/Footwear/JungleBoots_01/Vans_Tan.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{34C98BF7872375FE}Prefabs/Items/Equipment/Backpacks/test/Parachute Bag.et"
+    }
+    LoadoutSlotInfo Vest {
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{9F0BD0C67E63DF24}Prefabs/Characters/Uniforms/Gloves/Mechanix/Mechanix_Gloves_RG.et"
+    }
+    LoadoutSlotInfo Eyes {
+     Prefab "{F5E8C7D6551B7BDE}Prefabs/Characters/Eyewear/GATORZ_Magnum/GATORZ_Magnum_Clear.et"
+    }
+    LoadoutSlotInfo Ears {
+     Prefab "{6DC8778B4223B0C5}Prefabs/Characters/HeadGear/Earpiece/Earpiece_Black.et"
+    }
+    LoadoutSlotInfo Neck {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D112501353972}" {
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_Coyote.et"
+    }
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+     PrefabsToSpawn {
+      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{ED97A510AA0A46C5}Prefabs/Weapons/Grenades/Grenade_Stun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{8FD0DBFBF0AB213B}Prefabs/Characters/HeadGear/Hat_FlatCap_01/S10MASK.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/RS_Pouch_2/GRS_CryeGP6x6_Black.et"
+     PrefabsToSpawn {
+      "{51D9E3AEC8476BA4}Prefabs/Weapons/Flares/FlareStarParachute_M195_green.et" "{51D9E3AEC8476BA4}Prefabs/Weapons/Flares/FlareStarParachute_M195_green.et" "{756231FF84F158A4}Prefabs/Weapons/Flares/FlareStarParachute_M126A1_red.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69CE2E2694108227}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/LS_Pouch_1/GRS_Radio_MPU5_V2_Pouch_Black.et"
+     PrefabsToSpawn {
+      "{133810B5D3B81E17}Prefabs/Items/Equipment/Radios/CGQC_3_163.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED12044529DC56}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/LS_Pouch_2/GRS_CryeGP6x6_Black.et"
+     PrefabsToSpawn {
+      "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{3343A055A83CB30D}Prefabs/Weapons/Grenades/M18/Smoke_M18_Red.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED12059E803B71}" {
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+     }
+    }
+   }
+  }
+ }
+}

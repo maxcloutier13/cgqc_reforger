@@ -1,0 +1,52 @@
+GameEntity : "{A0DEE1F59E5F6A44}Prefabs/Characters/Uniforms/Clothing/Upper body/Arcteryx_Leaf_Jacket/1Arcteryx_Leaf_Jacket_MC.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "KB: Arcteryx Leaf Jacket Ranger Green GRIT"
+     Description "KB: Arcteryx Leaf Jacket Ranger Green"
+    }
+   }
+  }
+  MeshObject "{5104869D194C6262}" {
+   Materials {
+    MaterialAssignClass "{69F911AE73C931F9}" {
+     SourceMaterial "Arcteryx_Gen_1_Combat_Jacket"
+     AssignedMaterial "{539890324E4AEE05}Data/Clothing/Upper Body/Arcteryx_Leaf_Jacket/Arc_Leaf_Jacket_RG.emat"
+    }
+   }
+  }
+  SCR_ItemOutfitFactionComponent "{618AD7BAB29F1EAE}" {
+   m_OutfitDataHolder SCR_OutfitFactionDataHolder "{61A8A841C8FE46FC}" {
+    m_aOutfitFactionData {
+     SCR_OutfitFactionData "{61A8A841CE9490F3}" {
+      m_AffiliatedFactionKey "CGQC_GRIT"
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    GRS_MorphSlotComponent PatchUpperR {
+     Prefab "{B2C8078B1B7B5407}Prefabs/Section_Patches/section_grit_clean.et"
+    }
+    GRS_MorphSlotComponent PatchUpperL {
+     Prefab "{D4CC1D67D3130236}Prefabs/Flag_Patches/flag_qc.et"
+    }
+    GRS_MorphSlotComponent PatchLowerR {
+     Prefab "{EBE54458E31A881A}Prefabs/Unit_Patches/unit_griffon.et"
+    }
+    GRS_MorphSlotComponent PatchLowerL {
+     Prefab "{967320383A43C323}Prefabs/Section_Patches/patch_cgqc_notext.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{539890324E4AEE05}Data/Clothing/Upper Body/Arcteryx_Leaf_Jacket/Arc_Leaf_Jacket_RG.emat"
+   }
+   ItemMaterialsOverride {
+    "{539890324E4AEE05}Data/Clothing/Upper Body/Arcteryx_Leaf_Jacket/Arc_Leaf_Jacket_RG.emat"
+   }
+  }
+ }
+}

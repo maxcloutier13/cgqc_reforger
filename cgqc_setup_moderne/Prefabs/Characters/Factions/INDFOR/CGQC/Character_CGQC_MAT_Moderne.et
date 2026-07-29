@@ -1,0 +1,55 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Medium AT"
+    IconSetName "EditableEntity_Character_Anti_Tank"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{4D02E8D5E58AB005}Prefabs/Weapons/M4_MAAWS/M4_MAAWS.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{8408AD447CD92ED5}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC_MAT.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{8CE970656B2ECF09}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_MAT.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{BB4C9C1BE5B51719}Prefabs/Backpacks/Filbe/GRS_Filbe_MC.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_MAT.et/Placards/GRS_Placard_FerroDope.et"
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_MAT.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_MAT.et/LS_Pouch_1/GRS_ARSingle_Pouch.et"
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_MAT.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_MAT.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{69721A015898A517}" {
+     TargetStorage "Back/GRS_Filbe_MC.et"
+    }
+    ItemsInitConfigurationItem "{69E63C0EDEA7F031}" {
+     TargetStorage "Back/GRS_Filbe_MC.et"
+     PrefabsToSpawn {
+      "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et"
+     }
+    }
+   }
+  }
+ }
+}

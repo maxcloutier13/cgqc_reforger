@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5E4BB036BCB01645}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_Black_GRIT_Medic.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D523AE54708BFC83}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

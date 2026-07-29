@@ -9,16 +9,34 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{A3E3F0DE9B6BD9AB}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_RattlerGBRS.et"
   }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{01EFCB71F675E7D4}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et"
+    }
+   }
+  }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
+    }
+    ItemsInitConfigurationItem "{69CE2E2694108227}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
+    }
     ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
      }
     }
     ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_762x35_PmagWindowed_30rnd_300BO.et"
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
      }
     }
    }

@@ -1,6 +1,17 @@
 SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
  ID "520EC961A090BBD5"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{03810BEF182ADA0B}Prefabs/Items/Equipment/Binoculars/Rangefinder_Vector21.et"
+      }
+     }
+    }
+   }
+  }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "GRIT Voltigeur (SA-58)"
@@ -13,24 +24,42 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo ArmoredVest {
-     Prefab "{C1B90BD72965B89F}Prefabs/Vests/AVS_Custom/GRS_AVS_Black_DMR_GRIT.et"
+     Prefab "{AE5D21E88A6B4FC3}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_TeamLeader.et"
     }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
+    }
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
+     PrefabsToSpawn + {
+      "{B70756E9489B011A}Prefabs/Items/Equipment/WeatherMeter/WeatherMeter_Kestrel4500/WeatherMeter_Kestrel4500.et" "{03C6EB1EBD25AA33}Prefabs/Items/Equipment/BallisticTable/ACE_BallisticTable_Mrads.et" "{33CBDE73AB48172B}Prefabs/Items/Equipment/Tripod/Leupold_Tripod_Deployable.et" "{8FA6C496F2FA3A36}Prefabs/Items/Equipment/Leupold_MK4_Spotting_Scope/Leupold_MK4_Spotting_Scope_Variable.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69CE2E2694108227}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    ItemsInitConfigurationItem "{69ED12044529DC56}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/LS_Pouch_1/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+     PrefabsToSpawn {
+      "{CE6320EE34E29383}Prefabs/Items/Equipment/Radios/CGQC_2_152_left.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
+    }
     ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Black_DMR_GRIT.et/Placards/GRS_Placard_ARC_Marksman_Black.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
       "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
      }
     }
-    ItemsInitConfigurationItem "{696D1129CAA8B751}" {
-     TargetStorage "ArmoredVest/GRS_AVS_Black_DMR_GRIT.et/LS_Rear_Pouch/GRS_Side_Pouch_1_Black.et"
-    }
     ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
+      "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
      }
     }
    }
