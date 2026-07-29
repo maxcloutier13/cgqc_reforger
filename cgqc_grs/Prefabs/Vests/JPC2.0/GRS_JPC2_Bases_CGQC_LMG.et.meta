@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F25E80267135ADC2}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_LMG.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
