@@ -68,13 +68,19 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
     ItemsInitConfigurationItem "{69CE2E2694108227}" {
      TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/LS_Pouch_1/GRS_Radio_MPU5_V2_Pouch_Black.et"
      PrefabsToSpawn {
-      "{133810B5D3B81E17}Prefabs/Items/Equipment/Radios/CGQC_3_163.et"
+      "{65C84CE151E09B35}Prefabs/Items/Equipment/Radios/CGQC_SC4200.et"
      }
     }
     ItemsInitConfigurationItem "{69ED12044529DC56}" {
      TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/LS_Pouch_2/GRS_CryeGP6x6_Black.et"
      PrefabsToSpawn {
       "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{3343A055A83CB30D}Prefabs/Weapons/Grenades/M18/Smoke_M18_Red.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED120458488427}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Black_GRIT_Pilot.et/Placards/GRS_Spiritus_CCS_Black.et"
+     PrefabsToSpawn {
+      "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et" "{143D1D4DABFF2049}Prefabs/Weapons/Magazines/Pmag/Magazine_200gr_PmagWindowed_30rnd_300BO.et"
      }
     }
     ItemsInitConfigurationItem "{69ED12059E803B71}" {
