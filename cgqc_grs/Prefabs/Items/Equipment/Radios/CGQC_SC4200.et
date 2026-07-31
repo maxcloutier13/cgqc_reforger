@@ -6,34 +6,37 @@ GenericEntity {
   SignalsManagerComponent "{69C21E768977976A}" {
   }
   BaseRadioComponent "{69C21E7689779757}" {
-   "Encryption key" "chickenNuggets"
+   "Encryption key" "poutine"
    "Turned on" 1
    Transceivers {
-    RadioTransceiver "{69C21E7689779754}" {
-     ChannelFrequency 35000
-     "Transmitting Range" 50000
-     "Min tunable frequency" 32000
-     "Max tunable frequency" 68000
-    }
-    RadioTransceiver "{69C21E7689779753}" {
-     ChannelFrequency 32000
-     "Transmitting Range" 50000
-     "Min tunable frequency" 32000
-     "Max tunable frequency" 68000
-    }
-    RadioTransceiver "{69C21E7689779751}" {
+    RelayTransceiver "{69C21E7689779754}" {
      ChannelFrequency 38000
+     "Transmitting Range" 1000
+     "Min tunable frequency" 32000
+     "Max tunable frequency" 40000
+     "Frequency resolution" 100
+    }
+    RelayTransceiver "{69C21E7689779753}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 10000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 68000
+     "Frequency resolution" 100
+    }
+    RelayTransceiver "{69C21E7689779751}" {
+     ChannelFrequency 50000
      "Transmitting Range" 50000
      "Min tunable frequency" 32000
-     "Max tunable frequency" 68000
+     "Max tunable frequency" 80000
+     "Frequency resolution" 100
     }
    }
   }
   InventoryItemComponent "{69C21E7689779750}" {
    Attributes SCR_ItemAttributeCollection "{69C21E768977975F}" {
     ItemDisplayName UIInfo "{69C21E768977975E}" {
-     Name "GRS: SC4200 Radio"
-     Description "GRS: SC4200 Radio"
+     Name "CGQC SC4200 Radio"
+     Description "Radio multibandes pour les usages spéciaux"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{69C21E768977975C}" {
      Weight 0.7
