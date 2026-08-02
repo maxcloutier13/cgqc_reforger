@@ -27,7 +27,7 @@ GenericEntity : "{9DE547DE239F120C}Prefabs/Items/Equipment/Accessories/Pouch_ALI
      SlotTemplate EquipmentStorageSlot saline {
       Prefab "{632CAEF08C102091}Prefabs/Items/Medicine/Splint_01/GC_Splint_01_Base.et"
      }
-     NumSlots 1
+     NumSlots 2
     }
    }
   }
