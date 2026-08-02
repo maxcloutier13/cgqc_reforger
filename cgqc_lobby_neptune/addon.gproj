@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqcanimation"
- GUID "697B17B8890D006E"
- TITLE "cgqc_animation_1.7"
+ ID "cgqclobbyneptune"
+ GUID "69FE409580162091"
+ TITLE "cgqc_lobby_neptune"
  Dependencies {
-  "58D0FB3206B6F859" "61ECB5EFAA346151" "5C9758250C8C56F1"
+  "58D0FB3206B6F859" "69A722ED837C0A8B" "69EA43E490A50DBE"
  }
  Configurations {
   GameProjectConfig PC {

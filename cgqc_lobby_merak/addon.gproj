@@ -1,9 +1,9 @@
 GameProject {
- ID "cgqcanimation"
- GUID "697B17B8890D006E"
- TITLE "cgqc_animation_1.7"
+ ID "cgqclobbymerak"
+ GUID "69FF3C349BCBB090"
+ TITLE "cgqc_lobby_merak"
  Dependencies {
-  "58D0FB3206B6F859" "61ECB5EFAA346151" "5C9758250C8C56F1"
+  "58D0FB3206B6F859" "68C628334C58DEFD" "5EAF2B0473DB5A99" "6047000574D60BF9"
  }
  Configurations {
   GameProjectConfig PC {
