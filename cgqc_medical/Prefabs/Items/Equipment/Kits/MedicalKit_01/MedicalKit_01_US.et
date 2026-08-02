@@ -14,7 +14,7 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      NumSlots 25
     }
     MultiSlotConfiguration "{66E81CBA65FAD3C2}" {
-     NumSlots 5
+     NumSlots 9
     }
     MultiSlotConfiguration "{66E83E2AD137C97B}" {
      NumSlots 2
@@ -61,7 +61,14 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      }
      NumSlots 2
     }
+    MultiSlotConfiguration "{6A042C802CF9A3C0}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{632CAEF08C102091}Prefabs/Items/Medicine/Splint_01/GC_Splint_01_Base.et"
+     }
+     NumSlots 4
+    }
    }
+   m_fMaxWeight 20
   }
  }
 }
