@@ -24,6 +24,7 @@ SCR_ChimeraCharacter {
       Name "Achève Silencieusement"
      }
      ActionTitle "Achève Silencieusement"
+     VisibilityRange 1.5
      Duration 2
      "Sort Priority" 150
     }
