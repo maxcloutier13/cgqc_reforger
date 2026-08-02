@@ -1,6 +1,11 @@
 SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
  ID "520EC961A090BBD5"
  components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    IconSetName "EditableEntity_Character_Medic"
+   }
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{F23098582C9DD82D}Prefabs/Weapons/Rifles/NOVESKE/Rifle_Noveske_300BO.et"
   }
@@ -12,12 +17,15 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
     LoadoutSlotInfo ArmoredVest {
      Prefab "{F777CA26FE9CD695}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_Medic.et"
     }
+    LoadoutSlotInfo Back {
+     Prefab "{6E5D956E2314B508}Prefabs/Items/Equipment/Backpacks/Delta/Delta_Backpack_Black.et"
+    }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Medic.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_Medic.et/Storage/GRS_BackpackStorage.et"
+     TargetStorage "Back/Delta_Backpack_Black.et"
      PrefabsToSpawn + {
       "{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et"
      }
