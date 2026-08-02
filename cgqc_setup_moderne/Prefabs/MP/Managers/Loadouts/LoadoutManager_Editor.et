@@ -52,12 +52,37 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{696E42C028985C20}" {
-   m_sLoadoutName "Opérateur (LVAW)"
+   m_sLoadoutName "Opérateur -LVAW 300BLK"
    m_sLoadoutResource "{9E6CD79C95F44322}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_lvaw.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
+  SCR_FactionPlayerLoadout "{6A04508D17019442}" {
+   m_sLoadoutName "Opérateur -Rattler 300BLK"
+   m_sLoadoutResource "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
+  SCR_FactionPlayerLoadout "{6A04508D140295F0}" {
+   m_sLoadoutName "Opérateur -HoneyBadger 300BLK"
+   m_sLoadoutResource "{B6C879A3A976E7FD}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_honeybadger.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
+  SCR_FactionPlayerLoadout "{6A04508D4F66B351}" {
+   m_sLoadoutName "Médic -Mk1 5.56"
+   m_sLoadoutResource "{A0BC381BB9878183}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_Medic.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
+  SCR_FactionPlayerLoadout "{6A04508D153B59FA}" {
+   m_sLoadoutName "Sapeur -12ga"
+   m_sLoadoutResource "{A92BC6C48A25CC6E}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_breacher_shotgun.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
+  SCR_FactionPlayerLoadout "{6A04508D3141DAB4}" {
+   m_sLoadoutName "Voltigeur -SA58 7.62"
+   m_sLoadoutResource "{FAD34F20DB459E89}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_voltigeur_sa58.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
   SCR_FactionPlayerLoadout "{696E42C0389F399F}" {
-   m_sLoadoutName "Team Leader"
+   m_sLoadoutName "TeamLeader -Mk1 5.56"
    m_sLoadoutResource "{3078DDB147CA3CAB}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_teamleader.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
