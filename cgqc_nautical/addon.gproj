@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcnautical"
+ GUID "6A0428A789EBCDCD"
+ TITLE "cgqc_nautical_1.7"
+ Dependencies {
+  "58D0FB3206B6F859" "69C8081D9AF733D9" "5994614FB5AD35C2" "698AE8857281924A"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
