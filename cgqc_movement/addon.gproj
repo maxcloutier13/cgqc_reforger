@@ -3,7 +3,7 @@ GameProject {
  GUID "692458CB6BB8531A"
  TITLE "cgqc_movement_1.7"
  Dependencies {
-  "58D0FB3206B6F859" "68649101601CC93D" "672B02D564E1B772"
+  "58D0FB3206B6F859" "68649101601CC93D"
  }
  Configurations {
   GameProjectConfig PC {
