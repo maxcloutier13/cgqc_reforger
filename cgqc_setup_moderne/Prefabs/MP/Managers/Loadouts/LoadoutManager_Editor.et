@@ -77,7 +77,7 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_GRIT"
   }
   SCR_FactionPlayerLoadout "{6A04508D3141DAB4}" {
-   m_sLoadoutName "Voltigeur -SA58 7.62"
+   m_sLoadoutName "Voltigeur -6mmARC"
    m_sLoadoutResource "{FAD34F20DB459E89}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_voltigeur_sa58.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
