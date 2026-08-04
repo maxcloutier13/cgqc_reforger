@@ -1,3 +1,4 @@
+/*
 modded class SCR_CharacterControllerComponent
 {
     //------------------------------------------------------------------------------------------------
@@ -33,4 +34,4 @@ modded class SCR_CharacterControllerComponent
 
         vonController.ForceEnableVONDirectToggle();
     }
-}
+}*/

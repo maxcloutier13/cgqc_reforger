@@ -1,3 +1,4 @@
+/*
 modded class SCR_PlayerController
 {
     protected bool m_bCGQC_EditorSubscribed = false;
@@ -38,4 +39,4 @@ modded class SCR_PlayerController
 
         vonController.ForceEnableVONDirectToggle();
     }
-}
+}*/

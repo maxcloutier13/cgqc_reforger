@@ -1,3 +1,4 @@
+/*
 modded class SCR_VONController
 {
     protected float m_fCGQC_WatchdogTimer = 0;
@@ -53,3 +54,4 @@ modded class SCR_VONController
             hintManager.ShowCustomHint(message, "VON", 4.0);
     }
 }
+*/
