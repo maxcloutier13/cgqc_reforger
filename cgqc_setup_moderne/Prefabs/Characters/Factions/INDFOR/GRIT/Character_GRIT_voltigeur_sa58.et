@@ -15,7 +15,7 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "GRIT Voltigeur (6mmARC)"
-    IconSetName "EditableEntity_Character_Scout"
+    IconSetName "EditableEntity_Character_Sharpshooter"
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
