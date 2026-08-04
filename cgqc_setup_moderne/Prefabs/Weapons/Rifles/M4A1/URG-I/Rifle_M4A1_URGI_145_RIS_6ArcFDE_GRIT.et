@@ -1,0 +1,156 @@
+GenericEntity : "{79B244D3121AD187}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_URGI_145_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  CDD_AIAudibleRangeComponent "{6A080C5E6E2BE8A7}" {
+   m_fAIAudibleDistance 200
+  }
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{6A080C5E6E2BE942}" {
+     SourceMaterial "LP_LOWER_ASSEMBLY"
+     AssignedMaterial "{8DD9470716E4FC71}Assets/Weapons/Rifles/m4a1/Data/GA_SUPERDUTY/LP_LOWER_ASSEMBLY_DDC.emat"
+    }
+   }
+  }
+  ProcAnimComponent "{5E0ED058CD731B36}" {
+   Enabled 0
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "Geissele GFR 14.5\" | 6 ARC DDC"
+     Description "Geissele GFR 14.5\" | 6 ARC DDC"
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5284960E1D29F45C}" {
+     IkSettings {
+      ItemIKSettings "{5284960E1C7C18A7}" {
+       IkSettingsStand 0x3 0x4
+       IkSettingsCrouch 0x3 0x4
+      }
+      ItemIKSettings "{5284960E1C9F0E31}" {
+       IkSettingsStand 0x3 0x4
+       IkSettingsCrouch 0x3 0x4
+      }
+      ItemIKSettings "{5284960E131A980A}" {
+       IkSettingsStand 0x3 0x4
+      }
+     }
+     ExcludeBonesBlend {
+     }
+     AnimationIKPose "{369DE40FF4B7EFB4}Assets/Weapons/Rifles/m27iar/anims/p_rfl_m4_135_ik_stand_new.anm"
+     AnimIKPoseCrouchOverride ""
+     AnimIkposeBlendDuration 0.025
+    }
+    CustomAttributes {
+     ItemOneHandAnimAttributes "{5E0ED058CD731B2D}" {
+      ErectLinearOffsetLower 0 -0.05 0
+     }
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0ED05F322AB08B}" {
+     AttachmentSlot InventoryStorageSlot PistolGrip {
+      Prefab "{C0F60692C8ECD7F5}Prefabs/Weapons/Attachments/Grips/PistolGrip_AR15_A2/RHS_M4A1_Grip_DDC.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA2A35B78B4}" {
+     AttachmentSlot InventoryStorageSlot Buffertube {
+      Prefab "{0C0479D034AFC873}Prefabs/Weapons/Rifles/M4A1/base_parts/RHS_M4_BufferTube_DDC.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA2E5FAA2B6}" {
+     AttachmentSlot InventoryStorageSlot Buttstock {
+      Offset 0 0.0505 -0.2183
+      Prefab "{E6006C22E4FBF0EF}Prefabs/Weapons/Attachments/Stocks/Stock_HK416_M27/Stock_STR.et"
+     }
+     AttachmentType AttachmentAPS_Stock "{6A080C5E6E2BE9A4}" {
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA47E3F452D}" {
+     AttachmentSlot InventoryStorageSlot Handguard {
+      Prefab "{EE6FAFC1D05647C5}Prefabs/Weapons/Attachments/Handguards/Handguard_AR15_MK16_URGI/RHS_M4A1_MK16_135_QD_DDC.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA7F53DE1B1}" {
+     AttachmentSlot InventoryStorageSlot Upper {
+      Prefab "{A8E1AB76CD90CFF0}Prefabs/Weapons/Rifles/M4A1/base_parts/RHS_M4A1_UpperReceiver_DDC.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
+      Offset 0.001 0 0
+      Prefab "{1BE7B59372185274}Prefabs/Weapons/Attachments/Optics/NF_ATACR_LPVO/Optic_NF_ATACR_LPVO_fde.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Offset -0.0005 0.1115 0.4062
+      Prefab "{550E8299D9222714}Prefabs/Weapons/Attachments/Lasers/anpeq15/Laser_MALHUP.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE95B630A07A}" {
+     Enabled 1
+     AttachmentSlot InventoryStorageSlot "{5EA2BE95B7F1B3D5}" {
+      Offset 0 -0.006 0.2568
+      MergePhysics 0
+      Enabled 1
+      Prefab "{BE51799CE741AB58}Prefabs/Weapons/Attachments/Grips/Noveske/Grip_BCM.et"
+     }
+    }
+    AttachmentSlotComponent "{629ADD528EE856C1}" {
+     Enabled 1
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
+      Offset 0.021 0.0814 0.4136
+      Enabled 1
+      Prefab "{EC04EA6AD910DA2F}Prefabs/Weapons/Attachments/Flashlight/m600v_Modlite.et"
+      InspectionWidgetOffset 0.0301 0.0819 0.4115
+      m_fMaximumPositiveSlideOffset 0.03
+      m_fMaximumNegativeSlideOffset -0.03
+     }
+    }
+    AttachmentSlotComponent "{647D57A4E99CBFA3}" {
+     Enabled 1
+     AttachmentSlot InventoryStorageSlot "{647D57BB184D5F9B}" {
+      Offset -0.0005 0.0636 0.3794
+      Enabled 1
+      Prefab "{23D34FB66BBC8BEE}Prefabs/Weapons/Attachments/Bipods/harris_bipod/rhs_lt706_harris.et"
+     }
+    }
+    AttachmentSlotComponent "{6A080C5E6E2BE993}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot Magnifier {
+      PivotID "slot_optic"
+      Offset 0.001 0 0
+      MergePhysics 0
+      m_fMaximumPositiveSlideOffset 0.04
+      m_fMaximumNegativeSlideOffset -0.08
+     }
+     AttachmentType AttachmentOpticsRIS1913Short "{6A080C5E6E2BE99D}" {
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     components {
+      AttachmentSlotComponent "{626713EF43D3CC9E}" {
+       AttachmentSlot InventoryStorageSlot Muzzle {
+        Offset 0 0 -0.0127
+        Prefab "{E969A9D16E02A208}Prefabs/Weapons/Attachments/Muzzle/SUREFIRE/DA_SandmanK_Tan.et"
+       }
+      }
+     }
+     MagazineWell MagazineWell6mmARC "{5E0ED058CD703F5C}" {
+     }
+     "LEFT HAND TARGET" DeploymentPointInfo lht {
+      Offset 0 0 0
+      Angles 0 0 0
+     }
+     BUTSTOCK_TRANSFORMATION DeploymentPointInfo bt {
+      Offset 0 0.0663 -0.2354
+     }
+     MagazineTemplate "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et"
+    }
+   }
+  }
+ }
+ coords 1348.713 37.886 2965.266
+}

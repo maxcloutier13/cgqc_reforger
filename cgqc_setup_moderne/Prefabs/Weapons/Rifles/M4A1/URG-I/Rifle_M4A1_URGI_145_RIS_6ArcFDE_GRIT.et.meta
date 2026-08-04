@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C5080DA9248A9CB9}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_URGI_145_RIS_6ArcFDE_GRIT.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
