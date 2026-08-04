@@ -1,0 +1,36 @@
+GenericEntity : "{A24D6E22F32299B0}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "25 Rnd 6mm ARC mag"
+     Description "25 Rnd 6mm ARC mag"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.134
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWell6mmARC "{05B3A6C89B25311A}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "25 Rnd 6mm ARC mag"
+    Description "25 Rnd 6mm ARC mag"
+    m_sAmmoCaliber "6mm ARC"
+    m_sAmmoType "6mm ARC"
+    m_eAmmoTypeFlags AP
+   }
+   MaxAmmo 25
+   AmmoConfig "{643D1980EA5C823A}Configs/Weapons/Ammo/Ammo_6mmARC.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{81649C6DDE18B2C4}Prefabs/Weapons/Magazines/PmagUnwindowed/6ARCMag.xob"
+  }
+ }
+ coords 1358.579 38.216 2979.378
+}

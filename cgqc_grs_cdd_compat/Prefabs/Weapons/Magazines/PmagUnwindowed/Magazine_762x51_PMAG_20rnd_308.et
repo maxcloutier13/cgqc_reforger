@@ -1,0 +1,37 @@
+GenericEntity : "{A24D6E22F32299B0}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "20 Rnd PMag .308"
+     Description "20 Rnd PMag .308"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.134
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWellM40 "{05B3A6C89B25311A}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "20 Rnd PMag .308"
+    Description "20 Rnd PMag .308"
+    m_sAmmoCaliber ".308"
+    m_sAmmoType "7.62x51mm"
+    m_eAmmoTypeFlags AP
+   }
+   MaxAmmo 20
+   AmmoConfig "{3B3B3FA41A5AC516}Configs/Weapons/Ammo/Ammo_762x51_M80A1.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{E3D1C90BA51D1D84}Prefabs/Weapons/Magazines/PmagUnwindowed/PMAG20.xob"
+  }
+ }
+ coords 928.611 39.258 2643.365
+ angles 0 -103.483 0
+}

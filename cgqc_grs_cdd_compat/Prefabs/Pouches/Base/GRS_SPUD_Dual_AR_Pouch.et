@@ -1,0 +1,75 @@
+GenericEntity {
+ ID "698EAAFB4CF33B08"
+ components {
+  GRS_EquipmentStorageComponent "{698EAAFB4CF33B61}" {
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot Blk_1 {
+     Offset 0.0285 0.016 0.02
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot Creed_1 {
+     Offset 0.0375 0.0123 0.0197
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell65Creedmore"
+    }
+    GRS_EquipmentStorageSlot ARC_1 {
+     Offset 0.0285 0.016 0.02
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot Blk_2 {
+     Offset 0.0283 0.0157 0.0414
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot ARC_2 {
+     Offset 0.0283 0.0157 0.0414
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot Creed_2 {
+     Offset 0.0408 0.01 0.0411
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell65Creedmore"
+    }
+   }
+  }
+ }
+}

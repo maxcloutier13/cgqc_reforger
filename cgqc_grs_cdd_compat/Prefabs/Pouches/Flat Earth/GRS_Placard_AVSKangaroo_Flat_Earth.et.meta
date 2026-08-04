@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{97B8742B13AFDA93}Prefabs/Pouches/Flat Earth/GRS_Placard_AVSKangaroo_Flat_Earth.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

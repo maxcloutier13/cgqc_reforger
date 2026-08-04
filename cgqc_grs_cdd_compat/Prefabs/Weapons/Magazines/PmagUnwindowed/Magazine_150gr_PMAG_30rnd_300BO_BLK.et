@@ -1,0 +1,60 @@
+GenericEntity : "{A24D6E22F32299B0}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "PMag 300 BO | BLK"
+     Description "Polymer 30 Rnd 300BO Magazine"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.09
+    }
+    CustomAttributes {
+     SCR_ItemOfInterestAttribute "{5556C918268A1683}" {
+     }
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWell300BO "{05B3A6C89B25311A}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "PMAG 300BLK | 150gr HT - Blk"
+    Description "PMAG 300BLK | 150gr HT - Blk"
+    m_sAmmoCaliber "300 Blackout"
+    m_sAmmoType "7.62x35mm"
+    m_eAmmoTypeFlags 2052
+   }
+   MaxAmmo 30
+   AmmoConfig "{5140EAF9912D6CB2}Configs/Weapons/Ammo/Ammo_762x35.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{2549825CB8552216}Prefabs/Weapons/Magazines/PmagUnwindowed/PMag30556.xob"
+   Materials {
+    MaterialAssignClass "{6A0752E33BB9F42C}" {
+     SourceMaterial "L5awmTrans"
+     AssignedMaterial "{F5B4B34E22AB4B90}Prefabs/Weapons/Magazines/PmagUnwindowed/Data/l5awmTrans_Tan.emat"
+    }
+    MaterialAssignClass "{6A0752E33BB9F45B}" {
+     SourceMaterial "Pmag30"
+     AssignedMaterial "{762AC22F602376D4}Prefabs/Weapons/Magazines/PmagUnwindowed/Data/Pmag300BLK.emat"
+    }
+   }
+  }
+  MagazineAnimationComponent "{6A0752E33BB9F447}" {
+   AnimGraph "{D7C6B7D3E3CE0811}Assets/Weapons/Magazines/Workspaces/rhs_pmag.agr"
+   AnimInstance "{C482231C3FE52FA0}Assets/Weapons/Magazines/Workspaces/pmag_magazine.asi"
+   AlwaysActive 1
+   AutoVariablesBind 0
+   AnimatedMesh "{426CB6CE486E1F6D}Prefabs/Weapons/Magazines/PmagUnwindowed/LancerL5AWM.xob"
+   BulletMeshesToHide {
+    "Brass.029" "Brass.028" "Brass.027" "Brass.026" "Brass.025" "Brass.024" "Brass.023" "Brass.022" "Brass.021" "Brass.020" "Brass.019" "Brass.018" "Brass.017" "Brass.016" "Brass.015" "Brass.014" "Brass.013" "Brass.012" "Brass.011" "Brass.010" "Brass.009" "Brass.008" "Brass.007" "Brass.006" "Brass.005" "Brass.004" "Brass.003" "Brass.002" "Brass.001" "Brass"
+   }
+  }
+ }
+ coords 167.966 1 59.188
+}
