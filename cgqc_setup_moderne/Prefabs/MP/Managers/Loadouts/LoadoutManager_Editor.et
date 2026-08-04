@@ -81,6 +81,11 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sLoadoutResource "{FAD34F20DB459E89}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_voltigeur_sa58.et"
    m_sAffiliatedFaction "CGQC_GRIT"
   }
+  SCR_FactionPlayerLoadout "{6A081C141E86F420}" {
+   m_sLoadoutName "DroneOp -Mk1 5.56"
+   m_sLoadoutResource "{4C9280AAA07DF03F}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_droneOp.et"
+   m_sAffiliatedFaction "CGQC_GRIT"
+  }
   SCR_FactionPlayerLoadout "{696E42C0389F399F}" {
    m_sLoadoutName "TeamLeader -Mk1 5.56"
    m_sLoadoutResource "{3078DDB147CA3CAB}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_teamleader.et"
