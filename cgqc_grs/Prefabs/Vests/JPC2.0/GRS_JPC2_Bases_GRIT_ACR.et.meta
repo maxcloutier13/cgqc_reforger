@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0995716A220AE0A0}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_ACR.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
