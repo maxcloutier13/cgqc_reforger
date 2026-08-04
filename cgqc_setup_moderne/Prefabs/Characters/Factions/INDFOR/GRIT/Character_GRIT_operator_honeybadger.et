@@ -13,40 +13,33 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo ArmoredVest {
-     Prefab "{01EFCB71F675E7D4}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et"
     }
    }
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
     }
     ItemsInitConfigurationItem "{69CE2E2694108227}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
     }
     ItemsInitConfigurationItem "{69ED12044529DC56}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
      }
     }
     ItemsInitConfigurationItem "{69ED120458488427}" {
      Enabled 0
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/RS_Pouch_1/GRS_SOFLCS_AR_Pouch_Black.et"
      PrefabsToSpawn {
       "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
      }
     }
     ItemsInitConfigurationItem "{69ED1204588BB518}" {
      Enabled 0
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/LS_Pouch_1/GRS_SOFLCS_AR_Pouch_Black.et"
      PrefabsToSpawn {
       "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
      }
     }
     ItemsInitConfigurationItem "{69ED161E24581CDA}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_Rifleman_hiddenMags.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT.et/Storage/GRS_BackpackStorage.et"
     }
    }
   }
