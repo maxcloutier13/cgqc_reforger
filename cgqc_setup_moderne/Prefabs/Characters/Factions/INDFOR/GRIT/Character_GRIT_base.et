@@ -37,13 +37,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{34D649C57FE847E3}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_GRIT_black_v2.et"
     }
     LoadoutSlotInfo Jacket {
-     Prefab "{74E45FA3D8382984}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_Black.et"
+     Prefab "{ABC0581948204FA5}Prefabs/Characters/Uniforms/Clothing/Upper body/G3_Shirt_Long/G3_Shirt_Long_MCB_GRIT_Base.et"
     }
     LoadoutSlotInfo ArmoredVest {
      Prefab "{B2DED42B1E8C4240}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_Rifleman.et"
     }
     LoadoutSlotInfo Pants {
-     Prefab "{185B132D0AEEAF13}Prefabs/Characters/Uniforms/Bottoms/GRS_CryeG3_Bottoms/GRS_CryeG3_Bottoms_Black.et"
+     Prefab "{0D4807C886AFF628}Prefabs/Characters/Uniforms/Clothing/Lower Body/L9_Patagonia_Pants/L9_Pata_Pants_MCB.et"
     }
     LoadoutSlotInfo Boots {
      Prefab "{F177C9417949A7CB}Prefabs/Characters/Uniforms/Footwear/Walking_Boots/WalkingBoots_Black.et"
@@ -58,10 +58,8 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Face {
     }
     LoadoutSlotInfo Neck {
-     Prefab "{651F0CCA02166DB8}Prefabs/Characters/Neckwear/GRS_shemagh_base.et"
     }
     LoadoutSlotInfo Extra {
-     Prefab "{7DF9CDB82621B14F}Prefabs/Characters/Uniforms/Accessories/Under_Shirt_Sleeves/Under_Shirt_Sleeves_Black.et"
     }
     LoadoutSlotInfo GRSWaist {
      Prefab "{76B13343BA95CF69}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_GRIT.et"
@@ -71,12 +69,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{696D112501353972}" {
-     TargetStorage "Pants/GRS_CryeG3_Bottoms_Black.et"
+     TargetStorage "Pants/L9_Pata_Pants_MCB.et"
      PrefabsToSpawn {
       "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
      }
     }
     ItemsInitConfigurationItem "{696D11251E6084B6}" {
+     TargetStorage "Jacket/G3_Shirt_Long_MCB_GRIT_Base.et"
     }
     ItemsInitConfigurationItem "{696D112D95B95BCC}" {
      TargetStorage "GRSWaist/GRS_Bison_Belt_Base_GRIT.et/Pistol_Mag_Pouch/GRS_Angled_G24_Pouch_Black.et"

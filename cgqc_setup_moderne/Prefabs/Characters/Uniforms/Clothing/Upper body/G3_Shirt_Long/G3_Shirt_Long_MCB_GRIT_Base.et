@@ -1,0 +1,43 @@
+GameEntity : "{D3FC7C6328621CD3}Prefabs/Characters/Uniforms/Clothing/Upper body/G3_Shirt_Long/G3_Shirt_Long_AOR1.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "KB: G3 Shirt Long Multicam Black"
+     Description "KB: G3 Shirt Long Multicam Black"
+    }
+   }
+  }
+  MeshObject "{5104869D194C6262}" {
+   Materials {
+    MaterialAssignClass "{69350AA9040C9C26}" {
+     SourceMaterial "MI_G3_Combat_Shirt"
+     AssignedMaterial "{4355D4590A89B04D}Data/Clothing/Upper Body/G3_Shirt/G3_Shirt_MCB.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    GRS_MorphSlotComponent PatchUpperR {
+     Prefab "{B0D47F45F3C7294C}Prefabs/Section_Patches/section_grit.et"
+    }
+    GRS_MorphSlotComponent PatchUpperL {
+     Prefab "{D4CC1D67D3130236}Prefabs/Flag_Patches/flag_qc.et"
+    }
+    GRS_MorphSlotComponent PatchLowerR {
+     Prefab "{E4482D3A3D423F52}Prefabs/Morale_Patches/patch_morale_blackbeard.et"
+    }
+    GRS_MorphSlotComponent PatchLowerL {
+     Prefab "{B2C8078B1B7B5407}Prefabs/Section_Patches/section_grit_clean.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{4355D4590A89B04D}Data/Clothing/Upper Body/G3_Shirt/G3_Shirt_MCB.emat"
+   }
+   ItemMaterialsOverride {
+    "{4355D4590A89B04D}Data/Clothing/Upper Body/G3_Shirt/G3_Shirt_MCB.emat"
+   }
+  }
+ }
+}
