@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B025DEE1CECCAAE6}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor_left.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
