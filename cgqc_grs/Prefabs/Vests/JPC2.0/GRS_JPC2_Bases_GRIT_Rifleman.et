@@ -200,7 +200,7 @@ GenericEntity {
      Offset 0.002 0.2331 0.1496
      Angles 6.8545 0.9449 0.4768
      MergePhysics 1
-     Prefab "{B8250B4442623178}Prefabs/Kagwerks/GRS_Kagwerks_01_GRIT_Black.et"
+     Prefab "{0A4772BC32BCFDF5}Prefabs/Kagwerks/GRS_Kagwerks_01_CGQC_Black.et"
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0
