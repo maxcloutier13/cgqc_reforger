@@ -21,7 +21,11 @@ GameEntity : "{FB9553B3999131F0}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helme
     RHS_LoadoutSlotInfo TopVelcro {
      Prefab "{5F7EF7FEBC39B874}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar.et"
     }
+    RHS_LoadoutSlotInfo LeftVelcro {
+     Prefab "{B025DEE1CECCAAE6}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor_left.et"
+    }
     RHS_LoadoutSlotInfo RightVelcro {
+     Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
     }
    }
   }

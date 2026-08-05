@@ -8,6 +8,15 @@ GameEntity : "{0F610D0687FA5814}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_
     }
    }
   }
+  SCR_ItemOutfitFactionComponent "{618AD7BB075F1045}" {
+   m_OutfitDataHolder SCR_OutfitFactionDataHolder "{61A8D96650B5696D}" {
+    m_aOutfitFactionData {
+     SCR_OutfitFactionData "{61A8D96650441EDE}" {
+      m_AffiliatedFactionKey "CGQC_GRIT"
+     }
+    }
+   }
+  }
   BaseLoadoutClothComponent "{5112706CD4157AF8}" {
    Slots {
     RHS_LoadoutSlotInfo Goggles {
@@ -31,7 +40,7 @@ GameEntity : "{0F610D0687FA5814}Prefabs/Characters/HeadGear/Helmet_Exfil/Helmet_
      Prefab "{5F7EF7FEBC39B874}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar.et"
     }
     RHS_LoadoutSlotInfo LeftVelcro {
-     Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
+     Prefab "{B025DEE1CECCAAE6}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor_left.et"
     }
     RHS_LoadoutSlotInfo RightVelcro {
      Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
