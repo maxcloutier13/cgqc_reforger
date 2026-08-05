@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{B6EEEE48184C12A7}Configs/EntityCatalog/US/All_Patches.conf"
+ Name "{759BCB273FB8CAC3}Configs/EntityCatalog/CGQC/CGQC_Patches_Roles.conf"
  Configurations {
   CONFResourceClass PC {
   }
