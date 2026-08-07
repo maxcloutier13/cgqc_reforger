@@ -6,6 +6,22 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
     Name "GRIT Opérateur d'Intervention (LVAW)"
     IconSetName "EditableEntity_Character_Rifleman"
    }
+   m_VariantData SCR_EditableEntityVariantData "{6A0E302F9561FA73}" {
+    m_aVariants {
+     SCR_EditableEntityVariant "{6A0E302F9308092A}" {
+      m_sVariantPrefab "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et"
+     }
+     SCR_EditableEntityVariant "{6A0E302F935476B1}" {
+      m_sVariantPrefab "{B6C879A3A976E7FD}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_honeybadger.et"
+     }
+     SCR_EditableEntityVariant "{6A0E36331C9189C1}" {
+      m_sVariantPrefab "{D4D7985F7C000A9A}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_RattlerVariant.et"
+     }
+     SCR_EditableEntityVariant "{6A0E36331CDE3266}" {
+      m_sVariantPrefab "{020DDAA498851B43}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_noveske.et"
+     }
+    }
+   }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{222F9FB27FDD83B6}Prefabs/Weapons/Rifles/MCX/Rifle_MCX_LVAW.et"
