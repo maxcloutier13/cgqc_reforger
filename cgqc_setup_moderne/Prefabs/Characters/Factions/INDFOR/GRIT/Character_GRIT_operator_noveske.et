@@ -1,0 +1,8 @@
+SCR_ChimeraCharacter : "{9E6CD79C95F44322}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_lvaw.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{F23098582C9DD82D}Prefabs/Weapons/Rifles/NOVESKE/Rifle_Noveske_300BO.et"
+  }
+ }
+}
