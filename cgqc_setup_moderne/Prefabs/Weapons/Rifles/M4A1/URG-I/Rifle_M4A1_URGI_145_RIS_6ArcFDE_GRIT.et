@@ -81,7 +81,7 @@ GenericEntity : "{79B244D3121AD187}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
     AttachmentSlotComponent "{5E0EEDB0BD59EE7D}" {
      AttachmentSlot RHS_SlidingInventoryStorageSlot Optics {
       Offset 0.001 0 0
-      Prefab "{1BE7B59372185274}Prefabs/Weapons/Attachments/Optics/NF_ATACR_LPVO/Optic_NF_ATACR_LPVO_fde.et"
+      Prefab "{8E1C7EE198DEEAF5}Prefabs/Weapons/Attachments/Optics/NF_ATACR_LPVO/Optic_NF_LPVO_t1.et"
      }
     }
     AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
