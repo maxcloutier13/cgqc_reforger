@@ -1,0 +1,15 @@
+GenericEntity : "{E01E25A65019AC04}Prefabs/Items/Equipment/Patches/EUD_01.et" {
+ ID "6A0B6A868907EA63"
+ components {
+  SCR_FactionAffiliationComponent "{6A0B6A877DF06D68}" {
+   "faction affiliation" "CGQC"
+  }
+  BaseLoadoutClothComponent "{6A0B6A868907EBA6}" {
+   Slots {
+    RHS_LoadoutSlotInfo Patch {
+     Prefab "{E3C476F4C9231E7B}Prefabs/Unit_Patches/unit_hoplite.et"
+    }
+   }
+  }
+ }
+}

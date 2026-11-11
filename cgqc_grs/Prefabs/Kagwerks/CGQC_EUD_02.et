@@ -1,0 +1,22 @@
+GenericEntity : "{B9C02B7A6D602BF2}Prefabs/Items/Equipment/Patches/EUD_02.et" {
+ ID "6A0B6A84C10B2498"
+ components {
+  ClothNodeStorageComponent "{6A0B6A84C10A80AD}" {
+   Attributes SCR_ItemAttributeCollection "{6A0B6A84C10A80AF}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{6A0B6A84C10A80AE}" {
+     Name "GRIT Chest Mount Black"
+    }
+   }
+  }
+  SCR_FactionAffiliationComponent "{6A0B6A84C10A80BA}" {
+   "faction affiliation" "CGQC"
+  }
+  BaseLoadoutClothComponent "{6A0B6A84C10A80CD}" {
+   Slots {
+    RHS_LoadoutSlotInfo Patch {
+     Prefab "{B2C8078B1B7B5407}Prefabs/Section_Patches/section_grit_clean.et"
+    }
+   }
+  }
+ }
+}

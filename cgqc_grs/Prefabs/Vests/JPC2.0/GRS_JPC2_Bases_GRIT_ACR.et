@@ -78,7 +78,7 @@ GenericEntity {
    }
    Slots {
     LoadoutSlotInfo Front_Plate {
-     Prefab "{B78B5B58CFCB421C}Prefabs/Equipment/Armor_Plates/GRS_Front_Plate_Level_1.et"
+     Prefab "{12630DE6380559FE}Prefabs/Equipment/Armor_Plates/GRS_Front_Plate_Level_1.et"
      InheritParentSkeleton 1
      AreaType GRS_Front_Plate "{6A080C5CEC315DC1}" {
      }
@@ -189,8 +189,6 @@ GenericEntity {
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0
-     AreaType GRS_Vest_Patch "{6A080C5CEC315E2B}" {
-     }
      m_bEnableMorphing 1
      m_fMorphValueY -0.239
      m_fMorphValueX 0
@@ -200,7 +198,7 @@ GenericEntity {
      Offset 0.002 0.2331 0.1496
      Angles 6.8545 0.9449 0.4768
      MergePhysics 1
-     Prefab "{B8250B4442623178}Prefabs/Kagwerks/GRS_Kagwerks_01_GRIT_Black.et"
+     Prefab "{3FA3C05704ABFEB9}Prefabs/Kagwerks/CGQC_EUD_02.et"
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0
