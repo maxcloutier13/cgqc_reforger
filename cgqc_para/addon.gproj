@@ -1,9 +1,9 @@
 GameProject {
  ID "cgqcpara"
  GUID "6964256984EDAEA8"
- TITLE "cgqc_para"
+ TITLE "cgqc_para_1.7"
  Dependencies {
-  "58D0FB3206B6F859" "6952B5DF43C6B720" "6867754CA817D856" "6708A2497129CDEE" "" ""
+  "58D0FB3206B6F859" "6867754CA817D856" "6708A2497129CDEE"
  }
  Configurations {
   GameProjectConfig PC {

@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqccoldwarequipment"
+ GUID "6A31052F821563A6"
+ TITLE "cgqc_coldwar_equipment"
+ Dependencies {
+  "58D0FB3206B6F859" "608694907CE8FBCB" "59EAA899751805DF" "66A946510CC6C1AD" "6614BD0AC038E724"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

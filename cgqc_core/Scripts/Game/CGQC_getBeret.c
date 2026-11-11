@@ -7,6 +7,7 @@ class CGQC_getBeret
 	//! - Insert beret into pants storage (falls back to general inventory if no pants/storage)
 	static void getBeret(IEntity playerEntity, SCR_ECharacterRank rank)
 	{
+		/*
 	    if (!playerEntity)
 	        return;
 
@@ -48,7 +49,7 @@ class CGQC_getBeret
 			CGQC_getBeret.GiveBeretToPants(playerEntity, invManager, loadoutStorage, beretPrefab);
                //CGQC_Scripts.CheckAndGiveItem(playerEntity, beretPrefab);
            }
-       }
+       }*/
 	  
 	}
 

@@ -1,0 +1,24 @@
+GameProject {
+ ID "cgqchalloween"
+ GUID "6A8D4E608651C820"
+ TITLE "cgqc_halloween"
+ Dependencies {
+  "58D0FB3206B6F859" "64D7014B17A79423" "622120A5448725E3" "5EB51D581C99E590" "6206C7238516657B" "66828C7A3D16D82C" "65597D9373FD35B6" "655CA0E30EBDFA09" "64D6B51E4CA6CF65" "4FD4A1BD550793F4"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+  GameProjectConfig Xbox {
+  }
+ }
+}
