@@ -1,0 +1,46 @@
+SCR_ChimeraCharacter : "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "RTO"
+    IconSetName "EditableEntity_Character_Radio_Operator"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{A314981748872A43}Prefabs/Weapons/Rifles/M1 Carbine/BC_Rifle_M1_Carbine.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     Prefab "{1AB00071CC827C99}Prefabs/Items/Equipment/Radios/SCR300_PVE.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{C38C640C0859E73E}Prefabs/Characters/Vests/Airborne/Variants/AB/AB_Webbing_M1_Carbine_Y_Strap.et"
+    }
+    LoadoutSlotInfo SGS_Chest {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69491C3B74495F2C}" {
+     PrefabsToSpawn {
+      "{EC9BDA3D9DDD8795}Prefabs/Weapons/Flares/FlareStarParachute_M127A1_white.et" "{EC9BDA3D9DDD8795}Prefabs/Weapons/Flares/FlareStarParachute_M127A1_white.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et" "{CE1BFF103826C9CA}Prefabs/Items/Equipment/Accessories/IFAK/IFAK_ColdWar.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C3998A0487E}" {
+     TargetStorage "Vest/AB_Webbing_M1_Carbine_Y_Strap.et"
+     PrefabsToSpawn {
+      "{A412C58CD6118681}Prefabs/Weapons/Handguns/M1911a1/Magazine_1143x23_7rnd_Ball_OO.et" "{A412C58CD6118681}Prefabs/Weapons/Handguns/M1911a1/Magazine_1143x23_7rnd_Ball_OO.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{8A2D5C9766FE4375}Prefabs/Weapons/Magazines/M1 Carbine/BC_Magazine_30_Carbine_M1_Carbine_15rnd_Ball.et" "{4C5445AFA3EA7EF9}Prefabs/Weapons/Grenades/Grenade_Mk2.et" "{4C5445AFA3EA7EF9}Prefabs/Weapons/Grenades/Grenade_Mk2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C3999272B43}" {
+     PrefabsToSpawn {
+     }
+    }
+   }
+  }
+ }
+}

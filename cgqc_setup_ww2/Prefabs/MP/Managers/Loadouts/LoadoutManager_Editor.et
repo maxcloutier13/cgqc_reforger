@@ -1,0 +1,49 @@
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ ID "56B2B47708C4F23A"
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
+   m_sLoadoutName "Soldat"
+   m_sLoadoutResource "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A4F5D50C}" {
+   m_sLoadoutName "Medic"
+   m_sLoadoutResource "{E8A2D7A04351EE27}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Medic.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
+   m_sLoadoutName "MG"
+   m_sLoadoutResource "{1C8750E50267B930}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_MG.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
+   m_sLoadoutName "RTO"
+   m_sLoadoutResource "{D3C0C71DE7BC4A5D}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_RTO.et"
+  }
+  SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
+   m_sLoadoutName "SL"
+   m_sLoadoutResource "{23187FE05EAC0FC0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_SL.et"
+  }
+  SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DF07E6889CC}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFC5F4FA5C}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DFE15F74B63}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DF0612CD5CA}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DF07F6BB06B}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+  SCR_FactionPlayerLoadout "{69510DFFB04BDC03}" {
+   m_sAffiliatedFaction "CGQC_old"
+  }
+ }
+}
