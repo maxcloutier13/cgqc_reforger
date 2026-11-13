@@ -1,9 +1,9 @@
 GameProject {
  ID "cgqctopography"
  GUID "68B53542530EA6C6"
- TITLE "cgqc_topography_1.7"
+ TITLE "cgqc_topography"
  Dependencies {
-  "58D0FB3206B6F859" "69A510CE600D1126"
+  "58D0FB3206B6F859" "6A4F3EF9908A604F"
  }
  Configurations {
   GameProjectConfig PC {
