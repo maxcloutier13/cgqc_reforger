@@ -1,0 +1,179 @@
+GenericEntity {
+ ID "6ADF4742D5DDF1AD"
+ components {
+  Persistence "{6ADF4742D5DDF192}" {
+  }
+  SignalsManagerComponent "{6ADF4742D5DDF182}" {
+  }
+  ClothNodeStorageComponent "{6ADF4742D5DDF18B}" {
+   Attributes SCR_ItemAttributeCollection "{6ADF4742D5DDF188}" {
+    ItemDisplayName UIInfo "{6ADF4742D5DDF1F6}" {
+     Name "GRS: JPC 2.0 - MC"
+     Description "GRS: JPC 2.0 - MC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ADF4742D5DDF1F3}" {
+     Weight 0.5
+     SizeSetupStrategy Manual
+     ItemDimensions 25 25 25
+     ItemVolume 8001
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6ADF4742D5DDF1F0}" {
+      CameraPreset Front
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 0.9
+      ItemRenderRotation 0 180 0
+      FOV 60
+      AspectRatio 1
+      PreviewWornModel 1
+      LodModel 0
+     }
+    }
+    m_Size SLOT_2x2
+    m_eQuickSlotSize SLOT_2x2
+    m_bStackable 0
+   }
+   Priority 99
+   StoragePurpose 0x40 0
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 0
+   MaxItemSize 0 0 0
+   UseVirtualInventoryReplication 0
+  }
+  MeshObject "{6ADF4742D5DDF1FC}" {
+   Object "{7FE74A050EEB1D10}Assets/Backpanels/Frame/JPC2.0_Backpanel_Frame.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{6ADF4742D5DDF1FA}" {
+   Enabled 0
+   Mass 5
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{6ADF4742D5DDF1F8}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6ADF4742D5DDF1E1}" {
+     m_sSoundProject "{3D8789E7ACF6EDD3}Sounds/Items/_SharedData/PickUp/Items_PickUp_BackPack.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6ADF4742D5DDF1E0}" {
+     m_sSoundProject "{3D8789E7ACF6EDD3}Sounds/Items/_SharedData/PickUp/Items_PickUp_BackPack.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6ADF4742D5DDF1EE}" {
+     m_sSoundProject "{6D0C4AFA2B734709}Sounds/Items/_SharedData/Drop/Items_Drop_BackPack.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+    SCR_AudioSourceConfiguration "{6ADF4742D5DDF1DB}" {
+     m_sSoundProject "{F01623940EA93645}Sounds/Items/_SharedData/Open/Backpack_ALICE/Items_Backpack_ALICE.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{6ADF4742D5DDF1D9}" {
+     m_sSoundProject "{F01623940EA93645}Sounds/Items/_SharedData/Open/Backpack_ALICE/Items_Backpack_ALICE.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6ADF4742D5DDF1C7}" {
+   AreaType GRSBackpanel "{6ADF4742D5DDF1C6}" {
+   }
+   Slots {
+    LoadoutSlotInfo Bags {
+     PivotID "Spine5"
+     Offset 0.002 0.1312 -0.2886
+     Angles -6.1755 0 0
+     Prefab "{F14A8D931D51BD8C}Prefabs/Backpanels/Bags/GRS_Ferro_Banger.et"
+     AreaType GRS_Backpanel_Bags "{6ADF4742D5DDF1C2}" {
+     }
+    }
+    LoadoutSlotInfo Bolt_Cutters {
+     PivotID "Spine5"
+     Offset 0.0035 -1.2649 -0.0175
+     Angles -2.5789 0 0
+     AreaType GL_Bag_Bolt_Cutters "{6ADF4742D5DDF1CF}" {
+     }
+    }
+    LoadoutSlotInfo Rope {
+     PivotID "Spine5"
+     Offset -0.1063 0.0665 -0.2349
+     Angles 8.4446 -176.7798 -1.2581
+     AreaType GL_Bag_SlotArea_Left "{6ADF4742D5DDF1CE}" {
+     }
+    }
+    LoadoutSlotInfo RS_Antenna {
+     PivotID "Spine5"
+     Offset -0.0597 0.1616 -0.1708
+     Angles -3.4971 0 0
+     AreaType GL_Bag_SlotArea_Antenna "{6ADF4742D5DDF1CC}" {
+     }
+    }
+    LoadoutSlotInfo LS_Antenna {
+     PivotID "Spine5"
+     Offset 0.1266 0.1616 -0.1725
+     Angles -3.4971 0 0
+     AreaType GL_Bag_SlotArea_Antenna "{6ADF4742D5DDF1CB}" {
+     }
+    }
+    LoadoutSlotInfo Storage {
+     Prefab "{1E85BB5661014294}Prefabs/Item/GRS_BackpackStorage.et"
+    }
+   }
+   WornModel "{7FE74A050EEB1D10}Assets/Backpanels/Frame/JPC2.0_Backpanel_Frame.xob"
+   ItemModel "{7FE74A050EEB1D10}Assets/Backpanels/Frame/JPC2.0_Backpanel_Frame.xob"
+   SoundInt 810
+   DepthBack 0
+   OffsetShoulderLeft 0
+   OffsetShoulderRight 0
+  }
+  ActionsManagerComponent "{6ADF4742D5DDF237}" {
+   ActionContexts {
+    UserActionContext "{6ADF4742D5DDF236}" {
+     ContextName "default"
+     Position PointInfo "{6ADF4742D5DDF224}" {
+      Offset 0 0.05 0
+     }
+     Radius 0.5
+     Height 0
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{6ADF4742D5DDF221}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{6ADF4742D5DDF22F}" {
+      Name "#AR-Inventory_OpenStorage"
+     }
+    }
+    SCR_EquipClothAction "{6ADF4742D5DDF22D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{6ADF4742D5DDF22C}" {
+      Name "#AR-Inventory_Equip"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_PickUpItemAction "{6ADF4742D5DDF22A}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6ADF4742D5DDF228}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{6ADF4742D5DDF216}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6ADF4742D5DDF214}" {
+   AutoTransform 0
+  }
+ }
+ coords 0 0 0
+}

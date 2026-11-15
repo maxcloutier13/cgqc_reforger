@@ -93,15 +93,6 @@ GenericEntity {
      AreaType GRS_Right_Plate "{69BAF6EB90E2EEC7}" {
      }
     }
-    LoadoutSlotInfo Backpanel {
-     MergePhysics 1
-     Prefab "{8093E714FCFD4B06}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_JPC2_CGQC_TL.et"
-     DisablePhysicsInteraction 1
-     DeactivatePhysicsOnAtaching 1
-     InspectionWidgetOffset 0 -6 0
-     AreaType JPC2_Backpanel "{69BAF6EB90E2EEC4}" {
-     }
-    }
     LoadoutSlotInfo Placards {
      PivotID "Spine5"
      Offset -0.0028 0.0103 0.1492
