@@ -22,6 +22,10 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Instructeur (Lethal)"
     IconSetName "EditableEntity_Character_Leader_Squad"
+    m_sFaction "CGQC_UPO"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_UPO
+    }
    }
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {

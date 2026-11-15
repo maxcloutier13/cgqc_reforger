@@ -4,6 +4,7 @@ SCR_ChimeraCharacter : "{75957C41408DF242}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "Soldat Training (Simunition)"
+    IconSetName "EditableEntity_Character_Radio_Scout"
    }
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
