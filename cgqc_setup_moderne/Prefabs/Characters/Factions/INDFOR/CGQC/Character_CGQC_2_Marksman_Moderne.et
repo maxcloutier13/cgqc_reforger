@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -26,7 +26,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "Jacket/GRS_Crye_RG_CGQC_marksman.et/GRS_StorageComponent/GRS_StorageComponent.et"
     }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Marksman_6ARC.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_CGQC.et/Storage/GRS_BackpackStorage.et"
+     TargetStorage "GRSBackpanel/GRS_Base_Modular_Backpanel_CGQC_JPC2.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
       "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et" "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et" "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et" "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et" "{A7868B4E44F6362D}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_6ARC_30rnd.et"
      }
@@ -52,7 +52,6 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Marksman_6ARC.et/Dangler/GRS_Belly_Pouch_V5.et"
     }
     ItemsInitConfigurationItem "{69721A015898A517}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Marksman_6ARC.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_CGQC.et/Storage/GRS_BackpackStorage.et"
     }
    }
   }

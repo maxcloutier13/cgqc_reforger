@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -16,6 +16,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{4515B3DE8E421A18}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_Medic.et"
     }
     LoadoutSlotInfo Back {
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab "{8B64C7E8668D242A}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_CGQC_JPC2_Medic.et"
     }
    }
   }
@@ -48,9 +51,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Rear_Dangler/GRS_Trauma_Roll_Dangler.et"
     }
     ItemsInitConfigurationItem "{69E433108D10F782}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Medic.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_CGQC_Medic.et/Storage/GRS_BackpackStorage.et"
+     TargetStorage "GRSBackpanel/GRS_Base_Modular_Backpanel_CGQC_JPC2_Medic.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et"
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et" "{AE578EEA4244D41F}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_US.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et"
      }
     }
    }

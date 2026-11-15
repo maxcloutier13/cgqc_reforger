@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base_Moderne.et" {
+SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_0_Base_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -18,7 +18,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Jacket {
     }
     LoadoutSlotInfo ArmoredVest {
-     Prefab "{3814B8399C2A8BFF}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_Rifleman.et"
+     Prefab "{E8128A523736E073}Prefabs/Vests/JPC2.0/GRS_JPC2_CGQC_Rifleman.et"
     }
     LoadoutSlotInfo Back {
     }
@@ -38,6 +38,9 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{BE10AB7F2C9B124E}Prefabs/Characters/Neckwear/GRS_shemagh_RG.et"
     }
     LoadoutSlotInfo Extra2 {
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab "{61BD2812A8D58FC6}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_CGQC_JPC2.et"
     }
     LoadoutSlotInfo GRSWaist {
      Prefab "{AAE8F0827B1624F6}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_CGQC.et"
@@ -70,37 +73,37 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "GRSWaist/GRS_Bison_Belt_Base_CGQC.et/Middle_Rear_Pouch/GRS_Blowout_TQS.et"
     }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/Placards/GRS_Placard_FerroDope.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/Placards/GRS_Placard_FerroDope.et"
      PrefabsToSpawn {
       "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D1A6605B2}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/RS_Pouch_1/GRS_ARSingle_Pouch.et"
      PrefabsToSpawn {
       "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D11B56690}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/LS_Pouch_1/GRS_ARSingle_Pouch.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/LS_Pouch_1/GRS_ARSingle_Pouch.et"
      PrefabsToSpawn {
       "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
      PrefabsToSpawn {
       "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D5F18B90A}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
      PrefabsToSpawn {
       "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et" "{78C157CDD0F85279}Prefabs/Weapons/Grenades/Chemlight_IR_D3CLS.et" "{BDE45691D3DD8DEB}Prefabs/Weapons/Grenades/Chemlight_Green_D3CLS.et"
      }
     }
     ItemsInitConfigurationItem "{69721A015898A517}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
+     TargetStorage "GRSBackpanel/GRS_Base_Modular_Backpanel_CGQC_JPC2.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
       "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et"
      }

@@ -99,7 +99,7 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "GRSBackpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_base.et/Bags/GRS_Ferro_Banger_Black.et"
+     TargetStorage "GRSBackpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_base.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
       "{8435F7561C0FBB44}Prefabs/Items/Medicine/SalineBag_01/SalineBag_01_base.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
      }

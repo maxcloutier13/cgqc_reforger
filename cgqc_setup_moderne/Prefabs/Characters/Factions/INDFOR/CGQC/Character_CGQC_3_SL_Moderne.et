@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_TL_Moderne.et" {
+SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_TL_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -30,6 +30,9 @@ SCR_ChimeraCharacter : "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Neck {
     }
     LoadoutSlotInfo Extra2 {
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab ""
     }
    }
   }

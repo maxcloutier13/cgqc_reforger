@@ -87,7 +87,7 @@ GenericEntity {
      PivotID "Spine5"
      Offset 0.002 0.1312 -0.2886
      Angles -6.1755 0 0
-     Prefab "{4BBB84829A529130}Prefabs/Backpanels/Bags/GRS_Crye_Pouch_1_MC_cgqc.et"
+     Prefab "{7FFF98B056F7359E}Prefabs/Backpanels/Bags/GRS_Crye_JPC_Zip_On.et"
      AreaType GRS_Backpanel_Bags "{69E4331390A3A1A4}" {
      }
     }

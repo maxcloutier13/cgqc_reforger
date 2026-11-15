@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -27,6 +27,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     LoadoutSlotInfo Extra2 {
      Prefab ""
     }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab "{721D3630C69E9519}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_CGQC_JPC2_banger.et"
+    }
     LoadoutSlotInfo GRS_Waist {
     }
    }
@@ -53,6 +56,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{69BA366EEA877E1A}" {
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+     }
     }
     ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_CGQC_TL.et/Placards/GRS_Placard_FerroDope.et"

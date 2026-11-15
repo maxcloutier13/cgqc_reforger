@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
@@ -19,7 +19,10 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{8CE970656B2ECF09}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_CGQC_MAT.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{BB4C9C1BE5B51719}Prefabs/Backpacks/Filbe/GRS_Filbe_MC.et"
+     Prefab "{A9FA859250418620}Prefabs/Backpacks/MAAWS Pack/GRS_MAAWS_Pack_MC.et"
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab ""
     }
    }
   }
@@ -44,7 +47,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      TargetStorage "Back/GRS_Filbe_MC.et"
     }
     ItemsInitConfigurationItem "{69E63C0EDEA7F031}" {
-     TargetStorage "Back/GRS_Filbe_MC.et"
+     TargetStorage "Back/GRS_MAAWS_Pack_MC.et"
      PrefabsToSpawn {
       "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et" "{5B9BCFE7BBB5B55C}Prefabs/Magazine/Magazine_84mm_HEAT551.et"
      }
