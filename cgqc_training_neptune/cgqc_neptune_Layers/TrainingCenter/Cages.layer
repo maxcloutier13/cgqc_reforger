@@ -1,0 +1,258 @@
+$grp GenericEntity : "{86245E34CF47B537}Prefabs/Props/Military/Arsenal/ArsenalBoxes/Ready_Cage_Arsenal.et" {
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.856 473.441 3064.168
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.632 473.441 3061.678
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.632 473.441 3061.678
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.856 473.441 3064.168
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.178 473.441 3056.635
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.401 473.441 3059.125
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3159.178 473.441 3056.635
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3158.944 473.441 3054.038
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.726 473.441 3064.625
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.502 473.441 3062.135
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.502 473.441 3062.135
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.726 473.441 3064.625
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.048 473.441 3057.093
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.271 473.441 3059.583
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3153.048 473.441 3057.093
+  angles 0 5.144 0
+ }
+ {
+  components {
+   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+    "faction affiliation" "CGQC"
+   }
+   ActionsManagerComponent "{56F2C6D1431ADB12}" {
+    additionalActions {
+     SCR_OpenStorageAction "{58EE8EA3E900BE40}" {
+      "Sort Priority" 8000
+     }
+    }
+   }
+  }
+  coords 3152.814 473.441 3054.496
+  angles 0 5.144 0
+ }
+}
