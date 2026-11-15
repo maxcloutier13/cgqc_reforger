@@ -17,19 +17,25 @@ SCR_ChimeraCharacter : "{75957C41408DF242}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{6969324D670ADAB8}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_UPO.et/Pistol_Mag_Pouch/GRS_Angled_G24_Pouch_Black.et"
      PrefabsToSpawn {
       "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
      }
     }
     ItemsInitConfigurationItem "{6969324D670ADAA6}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_UPO.et/Pistol_Mag_Pouch_2/GRS_Angled_G24_Pouch_Black.et"
      PrefabsToSpawn {
       "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
      }
     }
     ItemsInitConfigurationItem "{6969324D670ADAA3}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_UPO.et/LS_Rear_Pouch/GRS_CryeGP6x6_Black.et"
      PrefabsToSpawn + {
       "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et" "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
      }
+    }
+    ItemsInitConfigurationItem "{6ADF1D381FF1431D}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_UPO.et/Middle_Rear_Pouch/GRS_Blowout_TQS_Black.et"
     }
    }
   }

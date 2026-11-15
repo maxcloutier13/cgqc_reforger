@@ -69,9 +69,9 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{6969324CE5508BB9}" {
-     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_RG.et"
      PrefabsToSpawn {
-      "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{CEB4C2CB3B4858DF}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/GL_Hat_Boonie_OD.et"
+      "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{AE1A89EA4AD53B5C}Prefabs/Characters/HeadGear/Tacticool_Caps/GRS_Tacticool_Cap_Black.et" "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et"
      }
     }
     ItemsInitConfigurationItem "{6969324CE5508BBC}" {
@@ -86,10 +86,16 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
       "{91DAD65550EA9136}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Ball_B.et"
      }
     }
+    ItemsInitConfigurationItem "{6ADF1D38CDD9A343}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/Middle_Rear_Pouch/GRS_Blowout_TQS_Black.et"
+     PrefabsToSpawn {
+      "{25569C2962C8F381}Prefabs/Items/Equipment/Accessories/IFAK/Trauma_IFAK_Tan.et"
+     }
+    }
     ItemsInitConfigurationItem "{6969324CE5508B80}" {
      TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/LS_Rear_Pouch/GRS_CryeGP6x6_Black.et"
      PrefabsToSpawn {
-      "{42232FFE6E7AC415}Prefabs/Items/Core/Item_Base.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et"
+      "{42232FFE6E7AC415}Prefabs/Items/Core/Item_Base.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et"
      }
     }
     ItemsInitConfigurationItem "{6969324CE5508B84}" {

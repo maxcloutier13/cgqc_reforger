@@ -65,13 +65,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{6969324D670ADA1E}" {
-     TargetStorage "Jacket/Vergy_Crye_RG_CGQC_camo.et/GRS_StorageComponent/GRS_StorageComponent.et"
+     TargetStorage "Jacket/1Rugby_Shirt_Short_RG_UPO.et/StorageComp/ClothingStorage1.et"
      PrefabsToSpawn {
       "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{C1279AFE5FE0C3AC}Prefabs/Items/Equipment/Pace_Counter/Pace_counter_01.et"
      }
     }
     ItemsInitConfigurationItem "{6969324D670ADABB}" {
-     TargetStorage "Pants/Vergy_Crye_Trousers_RG.et"
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_RG.et"
      PrefabsToSpawn {
       "{0619993AE6CDBF85}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{A67C987A178477F1}Prefabs/Characters/Uniforms/Headgear/Baseball_Cap/Baseball_Cap_RG.et"
      }
@@ -91,7 +91,13 @@ SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{6969324D670ADAA3}" {
      TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/LS_Rear_Pouch/GRS_CryeGP6x6_Black.et"
      PrefabsToSpawn {
-      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et"
+      "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{E82129A6CC014809}Prefabs/Items/Equipment/Radios Base/CGQC_Radio_3_152.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6ADF1D381FF1431D}" {
+     TargetStorage "GRS_Waist/GRS_Bison_Belt_Base_GRIT.et/Middle_Rear_Pouch/GRS_Blowout_TQS_Black.et"
+     PrefabsToSpawn {
+      "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et"
      }
     }
    }
