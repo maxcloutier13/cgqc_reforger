@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_0_base.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
@@ -24,7 +24,7 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo ArmoredVest {
-     Prefab "{AE5D21E88A6B4FC3}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases_GRIT_TeamLeader.et"
+     Prefab "{8D2E77D496799026}Prefabs/Vests/JPC2.0/GRS_JPC2_Black_GRIT_TL.et"
     }
    }
   }
@@ -34,33 +34,33 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
      TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
     }
     ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
      PrefabsToSpawn {
-      "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et"
+      "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et" "{D581584B5BF6ACD7}Prefabs/Weapons/Grenades/Grenade_MultiStun.et"
      }
     }
     ItemsInitConfigurationItem "{69CE2E2694108227}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Black_GRIT_TL.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2_Black.et"
     }
     ItemsInitConfigurationItem "{69ED12044529DC56}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/LS_Pouch_1/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+     TargetStorage "ArmoredVest/GRS_JPC2_Black_GRIT_TL.et/LS_Pouch_1/GRS_Radio_ANPRC_Pouch_V2_Black.et"
      PrefabsToSpawn {
       "{CE6320EE34E29383}Prefabs/Items/Equipment/Radios/CGQC_2_152_left.et"
      }
     }
-    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Backpanel/GRS_Base_Modular_Backpanel_JPC2_Black_GRIT_bags.et/Storage/GRS_BackpackStorage.et"
+    ItemsInitConfigurationItem "{69ED120458488427}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Black_GRIT_TL.et/RS_Pouch_1/GRS_ARSingle_Pouch_Black.et"
     }
-    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/Placards/GRS_Placard_MKV_Black.et"
-     PrefabsToSpawn {
-      "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et" "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et" "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et"
-     }
-    }
-    ItemsInitConfigurationItem "{696D112DBF91D2E8}" {
-     TargetStorage "ArmoredVest/GRS_JPC2_Bases_GRIT_TeamLeader.et/RS_Pouch_1/GRS_ARSingle_Pouch_Black.et"
+    ItemsInitConfigurationItem "{69ED1204588BB518}" {
      PrefabsToSpawn {
       "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+    }
+    ItemsInitConfigurationItem "{696D11251FBDCD7D}" {
+     TargetStorage "ArmoredVest/GRS_JPC2_Black_GRIT_TL.et/Placards/GRS_Placard_MKV_Black.et"
+     PrefabsToSpawn {
+      "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et" "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et" "{546DA68AC0D47D36}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_M855A1_last5tracer.et"
      }
     }
    }

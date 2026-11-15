@@ -13,7 +13,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{A5B88168F2327681}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_CGQC.et"
+     Prefab "{4ADD18E0DFF91DAC}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_CGQC_v2.et"
     }
     LoadoutSlotInfo Jacket {
     }
