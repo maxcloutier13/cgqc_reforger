@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{4422D33726403B54}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Instructeur_Moderne.et"
+ Name "{119E5A9DD97B3905}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_UPO.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
@@ -12,6 +12,8 @@ MetaFileClass {
   EntityTemplateResourceClass PS5 : PC {
   }
   EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
   }
  }
 }

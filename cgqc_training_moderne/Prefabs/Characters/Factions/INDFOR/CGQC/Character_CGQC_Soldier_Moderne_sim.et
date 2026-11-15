@@ -1,0 +1,36 @@
+SCR_ChimeraCharacter : "{75957C41408DF242}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne_Lethal.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Soldat Training (Simunition)"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{119E5A9DD97B3905}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_UPO.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6969324D670ADAB8}" {
+     PrefabsToSpawn {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6969324D670ADAA6}" {
+     PrefabsToSpawn {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6969324D670ADAA3}" {
+     PrefabsToSpawn + {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et" "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+    }
+   }
+  }
+ }
+}

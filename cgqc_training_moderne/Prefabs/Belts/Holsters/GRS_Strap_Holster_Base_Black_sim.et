@@ -1,0 +1,122 @@
+GenericEntity {
+ ID "6ADE6877946A4C32"
+ components {
+  Persistence "{6ADE6877946A4C24}" {
+  }
+  SignalsManagerComponent "{6ADE6877946A4C13}" {
+  }
+  SoundComponent "{6ADE6877946A4C10}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+  }
+  GRS_EquipmentStorageComponent "{6ADE6877946A4C1D}" {
+   Attributes SCR_ItemAttributeCollection "{6ADE6877946A4C18}" {
+    ItemDisplayName UIInfo "{6ADE6877946A4C05}" {
+     Name "GRS: Strap Holster - Black"
+     Description "GRS: Strap Holster - Black"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ADE6877946A4C02}" {
+     Weight 0.2
+     SizeSetupStrategy Manual
+     ItemVolume 800
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6ADE6877946A4C0F}" {
+      CameraPreset Right
+      CameraOrbitAngles -15 15 0
+      FOV 60
+      AspectRatio 1
+      PreviewWornModel 1
+      PreviewModel ""
+     }
+    }
+    CommonItemType "NONE"
+    m_bDraggable 0
+    m_bVisible 0
+    m_bStackable 0
+   }
+   Priority 100
+   StoragePurpose 0x41 0
+   UseCapacityCoefficient 0
+   CapacityCoefficient 1
+   MaxCumulativeVolume 500
+   MaxItemSize 10 10 10
+   UseVirtualInventoryReplication 0
+   InitialStorageSlots {
+    GRS_HolsterStorageSlot PouchStorage {
+     PivotID "RightLeg"
+     Offset -0.1333 0.0053 0.0312
+     Angles -82.5748 -120.2698 -54.7849
+     Prefab "{5D971D6EC966CF52}Prefabs/Weapons/Handguns/BaconM17/Handgun_BaconM17_B_CGQC_Simunition.et"
+     InheritParentSkeleton 1
+     AllowedItemTypes {
+      "RHS_PISTOL" "" "NONE" "PBK_PISTOL"
+     }
+     m_sAllowedWeaponType "WT_HANDGUN"
+    }
+   }
+  }
+  MeshObject "{6ADE6877946A4C77}" {
+   Object "{94857D4C50CB1332}Assets/Belts/Holsters/holster_strap_test.xob"
+   LODFactors {
+    1 1 1 1 1
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{6ADE6877946A4C73}" {
+   Enabled 0
+   SimState None
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{6ADE6877946A4C71}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6ADE6877946A4C7A}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6ADE6877946A4C78}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6ADE6877946A4C54}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6ADE6877946A4C50}" {
+   AreaType GRS_Holster "{6ADE6877946A4C5F}" {
+   }
+   WornModel "{94857D4C50CB1332}Assets/Belts/Holsters/holster_strap_test.xob"
+   ItemModel "{94857D4C50CB1332}Assets/Belts/Holsters/holster_strap_test.xob"
+  }
+  ActionsManagerComponent "{6ADE6877946A4C5B}" {
+   ActionContexts {
+    UserActionContext "{6ADE6877946A4C5A}" {
+     ContextName "default"
+     Position PointInfo "{6ADE6877946A4C58}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{6ADE6877946A4C45}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6ADE6877946A4C43}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{6ADE6877946A4C40}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6ADE6877946A4C4D}" {
+  }
+ }
+ coords 0.171 -0.118 0.009
+}

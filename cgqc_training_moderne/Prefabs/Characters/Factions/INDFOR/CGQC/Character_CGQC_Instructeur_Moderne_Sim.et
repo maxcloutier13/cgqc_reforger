@@ -1,0 +1,37 @@
+SCR_ChimeraCharacter : "{003313FF82C47D3A}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructeur_Moderne_Lethal.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Instructeur (Simunition)"
+    IconSetName "EditableEntity_Character_Scout"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo GRS_Waist {
+     Prefab "{119E5A9DD97B3905}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Base_UPO.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6969324CE5508BBC}" {
+     PrefabsToSpawn {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6969324CE5508BBD}" {
+     PrefabsToSpawn {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6969324CE5508B80}" {
+     PrefabsToSpawn {
+      "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et" "{9973DFD2F7AF8175}Prefabs/Weapons/Magazines/Magazine_9x19_BaconM17_Simunition.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et" "{CBF9B9942E07B6B8}Prefabs/Items/Equipment/Accessories/ZipCuffs/ACE_Captives_ZipCuffs.et"
+     }
+    }
+   }
+  }
+ }
+}

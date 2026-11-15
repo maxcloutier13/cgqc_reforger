@@ -1,6 +1,15 @@
 SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{69493457571159C7}" {
+   m_sAffiliatedFaction "CGQC_UPO_old"
+  }
+  SCR_FactionPlayerLoadout "{69BCFBB8DF406717}" {
+   m_sAffiliatedFaction "CGQC_UPO_old"
+  }
+  SCR_FactionPlayerLoadout "{694934576D3794E4}" {
+   m_sAffiliatedFaction "CGQC_UPO_old"
+  }
   SCR_PlayerArsenalLoadout "{69493817698F8242}" {
    m_sLoadoutName "UPO Saved Loadout"
    m_sLoadoutResource "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et"
@@ -8,12 +17,12 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   }
   SCR_FactionPlayerLoadout "{6949381779B65AF1}" {
    m_sLoadoutName "Soldat (Simunition)"
-   m_sLoadoutResource "{6FC69726C73FBDFB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Rifleman_Moderne.et"
+   m_sLoadoutResource "{EB06639968078953}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Moderne_sim.et"
    m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{69493817773193EE}" {
    m_sLoadoutName "Instructeur (Simunition)"
-   m_sLoadoutResource "{4422D33726403B54}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Instructeur_Moderne.et"
+   m_sLoadoutResource "{4C5FC131C66777F2}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructeur_Moderne_Sim.et"
    m_sAffiliatedFaction "CGQC_UPO"
   }
   SCR_FactionPlayerLoadout "{6969324BB799AC40}" {

@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{6FC69726C73FBDFB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Training_Rifleman_Moderne.et"
+ Name "{4C5FC131C66777F2}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Instructeur_Moderne_Sim.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
@@ -12,6 +12,8 @@ MetaFileClass {
   EntityTemplateResourceClass PS5 : PC {
   }
   EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
   }
  }
 }
