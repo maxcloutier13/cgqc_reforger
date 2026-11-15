@@ -68,7 +68,7 @@ GenericEntity {
    }
    Slots {
     LoadoutSlotInfo Front_Plate {
-     Prefab "{B78B5B58CFCB421C}Prefabs/Equipment/Armor_Plates/GRS_Front_Plate_Level_1.et"
+     Prefab "{12630DE6380559FE}Prefabs/Equipment/Armor_Plates/GRS_Front_Plate_Level_1.et"
      InheritParentSkeleton 1
      AreaType GRS_Front_Plate "{69BAF6EB90E2EEDC}" {
      }
@@ -180,18 +180,16 @@ GenericEntity {
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0
-     AreaType GRS_Vest_Patch "{69BAF6EB90E2EF3B}" {
-     }
      m_bEnableMorphing 1
      m_fMorphValueY -0.239
      m_fMorphValueX 0
     }
     LoadoutSlotInfo Atak {
      PivotID "Spine5"
-     Offset 0.002 0.2331 0.1496
+     Offset 0.0015 0.1568 0.1588
      Angles 6.8545 0.9449 0.4768
      MergePhysics 1
-     Prefab "{928F80FF0470FFF1}Prefabs/Kagwerks/GRS_Kagwerks_01_CGQC.et"
+     Prefab "{53F7F4B7B86F7197}Prefabs/Kagwerks/CGQC_EUD_01.et"
      DisablePhysicsInteraction 1
      DeactivatePhysicsOnAtaching 1
      InspectionWidgetOffset 0 -6 0

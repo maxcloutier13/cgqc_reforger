@@ -186,7 +186,7 @@ GenericEntity {
     }
     LoadoutSlotInfo Atak {
      PivotID "Spine5"
-     Offset 0.002 0.2331 0.1496
+     Offset 0.0015 0.1592 0.1585
      Angles 6.8545 0.9449 0.4768
      MergePhysics 1
      Prefab "{53F7F4B7B86F7197}Prefabs/Kagwerks/CGQC_EUD_01.et"
