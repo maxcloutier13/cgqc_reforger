@@ -1,9 +1,9 @@
-SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_0_Base_Moderne.et" {
+SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_0_Base_2027.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Soldat (Combat)"
+    Name "Spartan - Rifleman"
     IconSetName "EditableEntity_Character_Rifleman"
    }
   }
@@ -99,7 +99,7 @@ SCR_ChimeraCharacter : "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{6971325D5F18B90A}" {
      TargetStorage "ArmoredVest/GRS_JPC2_CGQC_Rifleman.et/Dangler/GRS_Belly_Pouch_V5.et"
      PrefabsToSpawn {
-      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et" "{78C157CDD0F85279}Prefabs/Weapons/Grenades/Chemlight_IR_D3CLS.et" "{BDE45691D3DD8DEB}Prefabs/Weapons/Grenades/Chemlight_Green_D3CLS.et"
+      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
      }
     }
     ItemsInitConfigurationItem "{69721A015898A517}" {

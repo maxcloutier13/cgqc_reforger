@@ -14,7 +14,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Plongeur"
+    Name "Triton - Diver"
     Description "Plongeur de Combat standard"
     IconSetName "EditableEntity_Character_Special_Forces"
    }
@@ -89,7 +89,10 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      }
     }
     ItemsInitConfigurationItem "{6971325D11B56690}" {
-     Enabled 0
+     TargetStorage "Vest/PRD_ScubaTank_Air_LowVis.et/Pouches/scuba_pouch.et"
+     PrefabsToSpawn {
+      "{49A9C6342243EDF4}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_ScubaHood.et"
+     }
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {
      Enabled 0
