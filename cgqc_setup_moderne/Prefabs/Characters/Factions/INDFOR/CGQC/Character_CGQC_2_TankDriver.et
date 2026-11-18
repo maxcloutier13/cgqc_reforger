@@ -1,0 +1,109 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
+ ID "520EC961A090BBD5"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{8E3E632E7F2B2AD3}Prefabs/Characters/HeadGear/Helmet_CVC_01/Helmet_CVC_Centaure.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{E8A4C8652A9F441C}Prefabs/Characters/Uniforms/Clothing/Upper body/Arcteryx_Leaf_Jacket/Arcteryx_Leaf_Jacket_RG_Centaure.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{2C8690B74E842EFB}Prefabs/Vests/JPC-R/GRS_JPCR_RG_Centaure.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{CDCFC5B6F518FB79}Prefabs/Characters/Uniforms/Clothing/Lower Body/G3_Pants/G3_Pants_UCP.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{ABB779CFC2E11E89}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Covert.et"
+    }
+    LoadoutSlotInfo Eyes {
+     Prefab ""
+    }
+    LoadoutSlotInfo Face {
+     Prefab "{A1DBC01F0065012F}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Half_Balaclava/Arcteryx_Half_Balaclava_RG.et"
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab ""
+    }
+    LoadoutSlotInfo GRSWaist {
+     Prefab "{CF6A0718561CDE9D}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Black.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     Enabled 1
+     TargetStorage "Jacket/Arcteryx_Leaf_Jacket_RG_Centaure.et"
+     PrefabsToSpawn {
+      "{B1798B0F1258B765}Prefabs/Items/Equipment/Navigation/DAGR/DAGR.et" "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{690C232DB4E1E45C}" {
+     Enabled 1
+     TargetStorage "Pants/G3_Pants_UCP.et"
+     PrefabsToSpawn {
+      "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{BCA558897FDF8E2C}Prefabs/Characters/HeadGear/Boonie_Hats/GRS_Tacticool_Boonie_Flat_Earth.et" "{432EE37AE245D182}Prefabs/CTD/VS17/CTD_VS17.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249825AF0522}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Centaure.et/Placards/GRS_Placard_FerroDope_RG.et"
+     PrefabsToSpawn {
+      "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et" "{78C157CDD0F85279}Prefabs/Weapons/Grenades/Chemlight_IR_D3CLS.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF7046E3B}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Centaure.et/Dangler/GRS_Trauma_Roll_Dangler_RG.et"
+     PrefabsToSpawn {
+      "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF756FA10}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Centaure.et/LS_Pouch_1/GRS_Radio_ANPRC_Pouch_V2_Flat_Earth.et"
+     PrefabsToSpawn {
+      "{3AAE94CE6ADC37E6}Prefabs/Items/Equipment/Radios/CGQC_1_343.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF1943048}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Centaure.et/Placards/GRS_Placard_FerroDope_RG.et"
+     PrefabsToSpawn {
+      "{33B2DFDCD0EBA3DB}Prefabs/Items/Equipment/Kits/RepairKit_01/RepairKit_01_wrench.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249A0AAABC84}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{69BA366EEA877E1A}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{69721A015898A517}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+}
