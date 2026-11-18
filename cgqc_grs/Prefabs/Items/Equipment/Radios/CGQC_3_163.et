@@ -19,8 +19,9 @@ GenericEntity {
     RelayTransceiver "{69C21E768C80871E}" {
      ChannelFrequency 50000
      "Transmitting Range" 8000
-     "Min tunable frequency" 41000
+     "Min tunable frequency" 30000
      "Max tunable frequency" 80000
+     "Frequency resolution" 100
     }
    }
   }
