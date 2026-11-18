@@ -1,0 +1,42 @@
+GenericEntity : "{339D9B750F3E203E}Prefabs/Vests/JPC-R/GRS_JPCR_Bases.et" {
+ ID "69822020CDFCEA8C"
+ components {
+  GRS_ArmorVestStorageComponent "{69822020C8AD5435}" {
+   Attributes SCR_ItemAttributeCollection "{69822020C8AD540B}" {
+    ItemDisplayName UIInfo "{69822020C8AD54B4}" {
+     Name "GRS: JPCR - Centaure"
+     Description "GRS: JPCR - Centaure"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69822020C8AD4E7C}" {
+   Slots {
+    LoadoutSlotInfo LS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo RS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo Placards {
+     Prefab "{1A7333876077FCF0}Prefabs/Pouches/Flat Earth/GRS_Placard_FerroDope_RG.et"
+    }
+    LoadoutSlotInfo Dangler {
+     Prefab "{A47D8F09A1F75698}Prefabs/Pouches/Flat Earth/GRS_Trauma_Roll_Dangler_RG.et"
+    }
+    LoadoutSlotInfo Atak {
+     Offset 0.0017 0.1652 0.1656
+     Prefab "{0CE4C775664D9A36}Prefabs/Kagwerks/CGQC_EUD_05.et"
+    }
+    LoadoutSlotInfo LS_Pouch_1 {
+     Prefab "{02A6CD2C18934A1A}Prefabs/Pouches/Flat Earth/GRS_Radio_ANPRC_Pouch_V2_Flat_Earth.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{895DDEDDD4412AA5}Assets/Vests/JPC-R/Data/JPCR_vest_Flat_Earth.emat" "{A9F0D4F5B5E2E215}Assets/Vests/JPC-R/Data/JPCR_cbund_Flat_Earth.emat"
+   }
+   ItemMaterialsOverride {
+    "{895DDEDDD4412AA5}Assets/Vests/JPC-R/Data/JPCR_vest_Flat_Earth.emat" "{A9F0D4F5B5E2E215}Assets/Vests/JPC-R/Data/JPCR_cbund_Flat_Earth.emat"
+   }
+  }
+ }
+}

@@ -1,6 +1,23 @@
 SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
  ID "520EC961A090BBD5"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      NCM_GPSStorageSlot NCM_GPSSlot {
+       Prefab "{BBBFDE74332B7D1D}Prefabs/Items/Equipment/GPS/NCM_GPS_Item.et"
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Tank Driver"
+    IconSetName "EditableEntity_Character_Driver"
+   }
+  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {

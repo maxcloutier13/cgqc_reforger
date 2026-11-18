@@ -10,17 +10,6 @@ GenericEntity {
     "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
    }
   }
-  GRS_BatteryComponent "{69F6394ADC848300}" {
-  }
-  GRS_DeviceDisplayComponent "{69F6394ADC84830F}" {
-   m_sRTContainerLayout "{E5B8C1EE50A7A496}UI/Layouts/ATAK/GRS_RTContainer.layout"
-   m_fHudRangeMeters 40
-   m_iHudTickMs 33
-   m_fScreenBrightness 0.5
-   m_fTwilightHours 0.75
-  }
-  GRS_DeviceManagerComponent "{69F6394ADC84830E}" {
-  }
   GRS_EquipmentStorageComponent "{69F6394ADC84830C}" {
    Attributes SCR_ItemAttributeCollection "{69F6394ADC84830A}" {
     ItemDisplayName UIInfo "{69F6394ADC848308}" {

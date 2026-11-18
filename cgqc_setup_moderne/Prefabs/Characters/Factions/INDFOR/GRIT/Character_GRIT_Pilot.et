@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_0_base.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
