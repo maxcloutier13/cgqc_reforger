@@ -1,0 +1,22 @@
+GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
+ ID "5104869D194C6243"
+ components {
+  InventoryItemComponent "{6AE515EE532F66E3}" {
+   Attributes SCR_ItemAttributeCollection "{6AE515EE63779526}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "PR&D - Wetsuit Pants"
+     Description "Separate scuba clothing item imported from CD_Wetsuit_Skinned. Fit-test version."
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{555292467DA11B7C}" {
+     }
+    }
+    m_Size SLOT_2x2
+    m_SlotType SLOT_LOADOUT_STORAGE
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Enabled 0
+  }
+ }
+}
