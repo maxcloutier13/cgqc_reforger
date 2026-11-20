@@ -31,7 +31,7 @@ SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRI
      Prefab "{62816106E2860D09}Prefabs/Characters/Footwear/JungleBoots_01/Vans_Tan.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{34C98BF7872375FE}Prefabs/Items/Equipment/Backpacks/test/Parachute Bag.et"
+     Prefab "{C47F5D977AC94514}Prefabs/Items/Equipment/Backpacks/6TP_Parachute.et"
     }
     LoadoutSlotInfo Vest {
     }

@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_1_Rifleman_2027.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
@@ -33,7 +33,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
      Prefab "{6C03CC3AE904081F}Prefabs/Characters/Uniforms/Bottoms/GRS_CryeG3_Bottoms/GRS_CryeG3_Bottoms_Coyote.et"
     }
     LoadoutSlotInfo Back {
-     Prefab "{34C98BF7872375FE}Prefabs/Items/Equipment/Backpacks/test/Parachute Bag.et"
+     Prefab "{C47F5D977AC94514}Prefabs/Items/Equipment/Backpacks/6TP_Parachute.et"
     }
     LoadoutSlotInfo Face {
      Prefab "{17B8C9DC7ECABE60}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Half_Balaclava/Arcteryx_Half_Balaclava_Black.et"

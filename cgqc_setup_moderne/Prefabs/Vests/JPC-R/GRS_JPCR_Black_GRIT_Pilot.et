@@ -23,7 +23,8 @@ GenericEntity : "{339D9B750F3E203E}Prefabs/Vests/JPC-R/GRS_JPCR_Bases.et" {
     LoadoutSlotInfo Dangler {
     }
     LoadoutSlotInfo Atak {
-     Prefab "{B8250B4442623178}Prefabs/Kagwerks/GRS_Kagwerks_01_GRIT_Black.et"
+     Offset 0.0013 0.1357 0.1613
+     Prefab "{3FA3C05704ABFEB9}Prefabs/Kagwerks/CGQC_EUD_02.et"
     }
     LoadoutSlotInfo RS_Pouch_1 {
     }
