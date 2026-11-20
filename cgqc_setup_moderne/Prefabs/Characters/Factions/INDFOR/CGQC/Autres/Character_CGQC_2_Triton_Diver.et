@@ -1,4 +1,4 @@
-SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et" {
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_1_Rifleman_2027.et" {
  ID "520EC961A090BBD5"
  components {
   SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
@@ -21,6 +21,9 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{4259F7E98467F9C1}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_Triton.et"
+    }
     LoadoutSlotInfo Jacket {
      Prefab "{A4A36EAAFDA6A5B0}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_WetsuitTop.et"
     }
@@ -91,7 +94,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{6971325D11B56690}" {
      TargetStorage "Vest/PRD_ScubaTank_Air_LowVis.et/Pouches/scuba_pouch.et"
      PrefabsToSpawn {
-      "{49A9C6342243EDF4}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_ScubaHood.et"
+      ""
      }
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {
@@ -100,8 +103,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     ItemsInitConfigurationItem "{6971325D5F18B90A}" {
      TargetStorage "ArmoredVest/GRS_JPC2_Black_Triton.et/Dangler/GRS_Belly_Pouch_V5_Black.et"
-     PrefabsToSpawn {
-      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
+     PrefabsToSpawn +{
      }
     }
     ItemsInitConfigurationItem "{69721A015898A517}" {
