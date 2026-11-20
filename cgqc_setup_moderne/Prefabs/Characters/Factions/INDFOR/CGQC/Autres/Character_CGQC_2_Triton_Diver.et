@@ -22,7 +22,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{4259F7E98467F9C1}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_Triton.et"
+     Prefab "{725B1DA81004523A}Prefabs/Characters/HeadGear/Beanie_Hats/GRS_Tacticool_Beanie_MC_Black.et"
     }
     LoadoutSlotInfo Jacket {
      Prefab "{A4A36EAAFDA6A5B0}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_WetsuitTop.et"
@@ -38,6 +38,12 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     }
     LoadoutSlotInfo Vest {
      Prefab "{3DC0C086478B5308}Prefabs/PRD_Subnautical/Equipment/Scuba/GasVariants/PRD_ScubaTank_Air_LowVis.et"
+    }
+    LoadoutSlotInfo Eyes {
+     Prefab ""
+    }
+    LoadoutSlotInfo Neck {
+     Prefab ""
     }
     LoadoutSlotInfo GRSBackpanel {
      Prefab "{0FE94EEA955B1B6C}Prefabs/Backpanels/JPC2/GRS_Base_Modular_Backpanel_JPC2_Black_Triton_base.et"
@@ -94,7 +100,7 @@ SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQ
     ItemsInitConfigurationItem "{6971325D11B56690}" {
      TargetStorage "Vest/PRD_ScubaTank_Air_LowVis.et/Pouches/scuba_pouch.et"
      PrefabsToSpawn {
-      ""
+      "{4259F7E98467F9C1}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_Triton.et"
      }
     }
     ItemsInitConfigurationItem "{6971325D244E6231}" {
