@@ -12,6 +12,9 @@ GameEntity : "{FB9553B3999131F0}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helme
    Slots {
     RHS_LoadoutSlotInfo Goggles {
     }
+    RHS_LoadoutSlotInfo Masks {
+     Prefab "{40ED520CE1154848}Prefabs/Characters/HeadGear/Balaclavas/LShZ_Balaclava/Balaclava_LShZ_black.et"
+    }
     RHS_LoadoutSlotInfo BackVelcro {
      Prefab "{41EF32019B19EB8D}Prefabs/Items/Equipment/Nightvision/PVS31/PVS_31_BatPack_TAN_MC.et"
     }

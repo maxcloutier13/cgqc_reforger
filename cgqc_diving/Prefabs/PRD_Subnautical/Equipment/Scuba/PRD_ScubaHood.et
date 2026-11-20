@@ -7,6 +7,13 @@ GameEntity : "{17F335BF60DD2550}Prefabs/Characters/Core/Headgear_Base.et" {
      SizeSetupStrategy Manual
      ItemVolume 400
     }
+    CustomAttributes {
+     RHS_CustomAttributes "{6AE835FA795F0BE2}" {
+      m_sCompatibleSlotNames {
+       ""
+      }
+     }
+    }
    }
   }
  }
