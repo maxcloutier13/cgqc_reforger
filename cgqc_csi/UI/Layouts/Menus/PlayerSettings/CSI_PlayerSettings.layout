@@ -1,0 +1,53 @@
+ScaleWidgetClass {
+ {
+  FrameWidgetClass "{66C77442F6F8A5E9}" {
+   Prefab "{66C77442F6F8A5E9}"
+   {
+    VerticalLayoutWidgetClass "{66C774414EE8E30E}" {
+     Prefab "{66C774414EE8E30E}"
+     {
+      OverlayWidgetClass "{66C76B3671544CC3}" {
+       Prefab "{66C76B3671544CC3}"
+       {
+        VerticalLayoutWidgetClass "{66C76B3609B8B145}" {
+         Prefab "{66C76B3609B8B145}"
+         {
+          VerticalLayoutWidgetClass "{66C76B37CB9EA833}" {
+           Prefab "{66C76B37CB9EA833}"
+           {
+            GridLayoutWidgetClass "{66C76B35FF8CBD5F}" {
+             Prefab "{66C76B35FF8CBD5F}"
+             {
+              OverlayWidgetClass "{66C76B351023D875}" {
+               Prefab "{66C76B351023D875}"
+               Slot GridWidgetSlot "{66C76B351023D858}" {
+                Row 1
+                Column 0
+               }
+              }
+              OverlayWidgetClass "{66C76B35111BB24F}" {
+               Prefab "{66C76B35111BB24F}"
+               Slot GridWidgetSlot "{66C76B35111BB2AB}" {
+                Column 1
+               }
+              }
+              OverlayWidgetClass "{66C76B3511FB3AD2}" {
+               Prefab "{66C76B3511FB3AD2}"
+               Slot GridWidgetSlot "{66C76B3511FB3B32}" {
+                Row 0
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
