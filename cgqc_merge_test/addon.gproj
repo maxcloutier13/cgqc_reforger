@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcmergetest"
+ GUID "6AEF18088993EA5A"
+ TITLE "cgqc_merge_test"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
