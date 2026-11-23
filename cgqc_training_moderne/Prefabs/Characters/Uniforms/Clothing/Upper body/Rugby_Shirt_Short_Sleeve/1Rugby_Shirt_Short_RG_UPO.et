@@ -1,0 +1,88 @@
+GameEntity : "{8A5424D1A2AA6595}Prefabs/Characters/Uniforms/Jacket_US_BDU_base.et" {
+ ID "5104869D194C6243"
+ components {
+  ClothNodeStorageComponent "{5222CB01D5B9A306}" {
+   components {
+    SCR_EquipmentStorageComponent "{5888DEA60B26DAB9}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot FlashlightSlot {
+       Enabled 0
+       AnimatedMeshRefference "{8392F190E83AF340}Prefabs/G3_Shirt_Ripped.xob"
+      }
+     }
+    }
+   }
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "KB: Rugby Shirt Short Ranger Green UPO"
+     Description "KB: Rugby Shirt Short Ranger Green"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.1
+     SizeSetupStrategy Manual
+     ItemVolume 200
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{555292467DA11B7C}" {
+      CameraDistanceToItem 4
+      FOV 14
+      PreviewWornModel 1
+      PreviewModel "{8392F190E83AF340}Prefabs/G3_Shirt_Ripped.xob"
+     }
+    }
+    m_Size SLOT_2x2
+    m_SlotType SLOT_LOADOUT_STORAGE
+   }
+   Priority 2
+   MaxCumulativeVolume 1000
+  }
+  MeshObject "{5104869D194C6262}" {
+   Object "{35EC87E4156ABD61}Prefabs/Rugby_Shirt_Short.xob"
+   Materials {
+    MaterialAssignClass "{6ADE70AB8B17C811}" {
+     SourceMaterial "Material"
+     AssignedMaterial "{977352AC7A2E2952}Data/G3_Shirt_Ripped/G3_Shirt_Ripped_Tiger.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    GRS_MorphSlotComponent PatchUpperR {
+     PivotID "RightArm"
+     Offset 0.0368 -0.1412 -0.036
+     Angles -11.5345 136.4729 0.1617
+     Prefab "{D2A5FFAAB8FBF47B}Prefabs/Section_Patches/section_upo.et"
+     AreaType GRS_Patch "{6ADE70AB8B17C802}" {
+     }
+     m_bEnableMorphing 1
+     m_fMorphValueY 0.836
+     m_fMorphValueX -0.069
+    }
+    GRS_MorphSlotComponent PatchUpperL {
+     PivotID "LeftArm"
+     Offset -0.0319 0.1401 0.0401
+     Angles -11.9444 139.90469 -177.2493
+     Prefab "{144F61655BC22A09}Prefabs/Section_Patches/patch_cgqc.et"
+     AreaType GRS_Patch "{6ADE70AB8B17C80E}" {
+     }
+     m_bEnableMorphing 1
+     m_fMorphValueY -1
+     m_fMorphValueX -0.329
+    }
+    LoadoutSlotInfo StorageComp {
+     Prefab "{A7F85C401FFC596D}Storage/ClothingStorage1.et"
+    }
+   }
+   WornModel "{35EC87E4156ABD61}Prefabs/Rugby_Shirt_Short.xob"
+   WornMaterialsOverride {
+    "{38A11279F3812FF9}Data/Clothing/Upper Body/Rugby_Shirt/Rugby_Shirt_RG.emat"
+   }
+   ItemModel "{4FF3DE225E58216F}Prefabs/Ground_Rugby_Shirt_Short.xob"
+   ItemMaterialsOverride {
+    "{38A11279F3812FF9}Data/Clothing/Upper Body/Rugby_Shirt/Rugby_Shirt_RG.emat"
+   }
+   DeflatedModel "{35EC87E4156ABD61}Prefabs/Rugby_Shirt_Short.xob"
+  }
+ }
+ coords 0 0 0
+}

@@ -1,0 +1,27 @@
+GameEntity : "{1608873B6690044C}Prefabs/Characters/HeadGear/Helmet_CVC_01/Helmet_CVC_01.et" {
+ ID "50D485E1435D6C72"
+ components {
+  RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "CGQC CVC Helmet"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    RHS_LoadoutSlotInfo Goggles {
+     Prefab "{FCB7F518B16C9B76}Prefabs/Characters/Eyewear/6b50/Eyewear_6b50.et"
+    }
+    RHS_LoadoutSlotInfo NVG {
+     Offset 0 0.1556 -0.1384
+     Angles 0 180 0
+     Enabled 1
+    }
+   }
+   WornModel "{3EB151067CE3F158}Assets/Characters/HeadGear/Helmet_CVC/Helmet_CVC_01_shroud.xob"
+   ItemModel "{8C2E0D186705EE9A}Assets/Characters/HeadGear/Helmet_CVC/Helmet_CVC_01_shroud_item.xob"
+  }
+ }
+ coords 132.753 1.448 136.963
+}

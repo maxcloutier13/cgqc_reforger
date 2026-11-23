@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{20BE6B95D9984996}Configs/GroupPresets/CGQC/GroupPreset_CGQC_UPO.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

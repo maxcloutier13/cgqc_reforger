@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Color 0.694 0.694 0.694 1
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{C7BCA88E5B302A48}Assets/Characters/Patches/Patch_RHS_Square_CGQC_1.edds"
+ NMOMap "{DC44EA5421EF5D49}Assets/Characters/Patches/Patch_RHS_Square_CGQC_1_nmo.edds"
+}

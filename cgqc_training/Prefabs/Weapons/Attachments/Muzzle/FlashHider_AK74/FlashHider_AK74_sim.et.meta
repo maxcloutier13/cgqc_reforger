@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E5A295A84C9019D4}Prefabs/Weapons/Attachments/Muzzle/FlashHider_AK74/FlashHider_AK74_sim.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

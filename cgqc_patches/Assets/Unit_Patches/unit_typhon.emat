@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{DABACDCD09517F6F}Assets/Unit_Patches/patch_unit_typhon.edds"
+}

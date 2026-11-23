@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5F31920535523A62}Prefabs/Characters/Eyewear/Oakley_Holbrook/Oakley_Holbrook_Sunburst_Mirror_Polarized.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

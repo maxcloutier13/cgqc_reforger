@@ -3,7 +3,7 @@ GameProject {
  GUID "68B53542530EA6C6"
  TITLE "cgqc_topography"
  Dependencies {
-  "58D0FB3206B6F859" "686B4A229ED16D71" ""
+  "58D0FB3206B6F859" "6A4F3EF9908A604F"
  }
  Configurations {
   GameProjectConfig PC {

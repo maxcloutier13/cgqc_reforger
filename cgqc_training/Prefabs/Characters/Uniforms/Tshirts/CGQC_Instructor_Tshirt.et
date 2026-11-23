@@ -72,11 +72,11 @@ GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
    }
    WornModel "{ED69D2E92A3212CF}Data/CHAMPS_TEST_SHIRT.xob"
    WornMaterialsOverride {
-    "{890E50602AE57428}Data/TSHIRT.emat"
+    "{890E50602AE57428}Assets/Characters/Jacket/TSHIRT.emat"
    }
    ItemModel "{ED69D2E92A3212CF}Data/CHAMPS_TEST_SHIRT.xob"
    ItemMaterialsOverride {
-    "{890E50602AE57428}Data/TSHIRT.emat"
+    "{890E50602AE57428}Assets/Characters/Jacket/TSHIRT.emat"
    }
    SoundInt 320
    OverrideMeshesToHide {

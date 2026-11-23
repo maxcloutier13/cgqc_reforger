@@ -1,0 +1,7 @@
+ContactSurface {
+ NoiseSteer 0.4
+ NoiseFrequency 0.2
+ Roughness 0.5
+ FrictionNonTread 0.4
+ FrictionTread 0.6
+}

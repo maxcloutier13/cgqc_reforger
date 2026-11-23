@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqclobbyvanilla"
+ GUID "6A022048855C5BD4"
+ TITLE "cgqc_lobby_vanilla"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "5EAF2B0473DB5A99" "5EAF1CB52EF38F0D"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

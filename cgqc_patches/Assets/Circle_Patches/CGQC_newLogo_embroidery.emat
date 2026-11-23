@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{EC91FB1AFC1D7FC3}Assets/Circle_Patches/Data/Patch_Round_Brighter.edds"
+ NMOMap "{4B00F3784D909084}Assets/Circle_Patches/Data/CGQC_Patch_Round_nmo.edds"
+}

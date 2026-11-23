@@ -10,9 +10,6 @@ GameEntity : "{FE2CED49B0261E64}Prefabs/Characters/Uniforms/Pants_Fisherman_01/P
      Name "GRS: Dark Blue Levys (Slim Fit)"
      Description "GRS: Dark Blue Levys (Slim Fit)"
     }
-    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
-     Weight 0.6
-    }
    }
    MaxCumulativeVolume 800
    MaxItemSize 10 10 10

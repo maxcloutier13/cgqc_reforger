@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmusic2026"
+ GUID "69790811814A7A64"
+ TITLE "cgqc_music_2026_1.7"
+ Dependencies {
+  "58D0FB3206B6F859" "66E3256D49613609"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

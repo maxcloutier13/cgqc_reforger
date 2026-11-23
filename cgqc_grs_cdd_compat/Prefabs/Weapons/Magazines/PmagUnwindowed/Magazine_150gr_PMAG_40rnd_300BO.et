@@ -1,0 +1,36 @@
+GenericEntity : "{A24D6E22F32299B0}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "40 Rnd PMag 300 Blackout"
+     Description "40 Rnd PMag 300 Blackout"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.134
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWell300BO "{05B3A6C89B25311A}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "PMAG 300BLK | 150gr HT - Black 40Rnd"
+    Description "PMAG 300BLK | 150gr HT - Black 40Rnd"
+    m_sAmmoCaliber "300 Blackout"
+    m_sAmmoType "7.62x35mm"
+    m_eAmmoTypeFlags 2052
+   }
+   MaxAmmo 40
+   AmmoConfig "{5140EAF9912D6CB2}Configs/Weapons/Ammo/Ammo_762x35.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{5E019B8CDA06019A}Prefabs/Weapons/Magazines/PmagUnwindowed/PMag40.xob"
+  }
+ }
+ coords 167.865 1 59.188
+}

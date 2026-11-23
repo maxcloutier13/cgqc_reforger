@@ -1,0 +1,90 @@
+$grp Vehicle : "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et" {
+ M1025_armed_M2HB1 {
+  coords 2682.983 8 3000.662
+  angles 0 32.038 0
+ }
+ M1025_armed_M2HB2 {
+  coords 2679.002 8 3003.153
+  angles 0 32.038 0
+ }
+ M1025_armed_M2HB3 {
+  coords 2674.665 8 3005.867
+  angles 0 32.038 0
+ }
+ M1025_armed_M2HB4 {
+  coords 2670.476 8 3008.489
+  angles 0 32.038 0
+ }
+}
+$grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ M151A2_transport1 {
+  coords 2662.255 8 3103.362
+  angles 0 124.036 0
+ }
+ M151A2_transport2 {
+  coords 2664.213 8 3106.261
+  angles 0 124.036 0
+ }
+ M151A2_transport3 {
+  coords 2666.285 8 3109.329
+  angles 0 124.036 0
+ }
+}
+$grp GenericEntity : "{5474FF908D8FC993}Prefabs/Props/Military/Compositions/CGQC/ArsenalBox_CGQC.et" {
+ {
+  coords 2730.957 8.102 3061.143
+  angles 0 -148.01 0
+ }
+ {
+  coords 2731.803 8.102 3055.245
+  angles 0 -60.218 0
+ }
+ {
+  coords 2728.001 8.102 3056.275
+  angles 0 30.023 0
+ }
+ {
+  coords 2733.766 8.102 3058.383
+  angles 0 -57.75 0
+ }
+}
+$grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
+ {
+  coords 2880.907 10 3114.198
+ }
+ {
+  coords 2920.089 10 3088.594
+ }
+}
+$grp Vehicle : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ M923A1_transport_covered1 {
+  coords 2666.635 8 3011.449
+  angles 0 33.099 0
+ }
+ M923A1_transport_covered2 {
+  coords 2662.485 8 3014.155
+  angles 0 33.099 0
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 2731.237 8.102 3085.409
+ angles 0 136.505 0
+}
+Vehicle SP02_GUNSHIP1 : "{CB6215B3B44EA463}Prefabs/Vehicles/Helicopters/UH1H/SP02_GUNSHIP.et" {
+ coords 2664.987 8.026 3063.796
+ angles 0 121.22 0
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ coords 2683.171 8.024 3090.931
+ angles 0 -55.599 0
+}
+$grp GenericEntity : "{E1FD1ACDA98123AE}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Mortar_US.et" {
+ {
+  coords 2917.597 10 3090.248
+  angles 0 120.067 0
+ }
+ {
+  coords 2878.937 10 3116.139
+  angles 0 29.397 0
+ }
+}

@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcmusiccoldwar"
+ GUID "697907B3848A6194"
+ TITLE "cgqc_music_coldwar_1.7"
+ Dependencies {
+  "58D0FB3206B6F859" "66E3256D49613609" "685355CFCA17F2F4"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

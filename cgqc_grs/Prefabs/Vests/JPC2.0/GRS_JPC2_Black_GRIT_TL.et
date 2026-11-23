@@ -1,0 +1,57 @@
+GenericEntity : "{233196A4E0310FA2}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases.et" {
+ ID "6982202309B37700"
+ components {
+  GRS_ArmorVestStorageComponent "{69822023056A7CAD}" {
+   Attributes SCR_ItemAttributeCollection "{69822023056A7CA3}" {
+    ItemDisplayName UIInfo "{69822023056A7F2B}" {
+     Name "GRS: JPC 2.0 - GRIT - TeamLeader"
+     Description "GRS: JPC 2.0 - GRIT - TeamLeader"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69822023056A76FF}" {
+   Slots {
+    LoadoutSlotInfo Placards {
+     Prefab "{31647A424E47A058}Prefabs/Pouches/Black/GRS_Placard_MKV_Black.et"
+    }
+    LoadoutSlotInfo Dangler {
+     Prefab "{46BDACE37E070E60}Prefabs/Pouches/Black/GRS_Belly_Pouch_V5_Black.et"
+    }
+    LoadoutSlotInfo Rear_Dangler {
+     Prefab "{73D69EC806C03A6A}Prefabs/Pouches/Black/GRS_Trauma_Roll_Dangler_Black.et"
+    }
+    LoadoutSlotInfo Atak {
+     Offset 0.0015 0.1488 0.1597
+     Prefab "{3FA3C05704ABFEB9}Prefabs/Kagwerks/CGQC_EUD_02.et"
+    }
+    LoadoutSlotInfo LS_PTT {
+     Prefab "{A805AAA84F05AC20}Prefabs/Accessories/PTT_MPU5_Left.et"
+    }
+    LoadoutSlotInfo RS_Pouch_1 {
+     Prefab "{11E801409DF53820}Prefabs/Pouches/Black/GRS_ARSingle_Pouch_Black.et"
+    }
+    LoadoutSlotInfo RS_Pouch_3 {
+     Prefab "{22850DBB9FF3D973}Prefabs/Pouches/Black/GRS_M67_Filbe_Pouch_Black.et"
+    }
+    LoadoutSlotInfo RS_Pouch_5 {
+     Prefab "{D33D974484133BB8}Prefabs/Pouches/Black/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    LoadoutSlotInfo LS_Pouch_1 {
+     Prefab "{D33D974484133BB8}Prefabs/Pouches/Black/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    LoadoutSlotInfo Shoulder_Accessory {
+     Prefab "{C9A4E563205BAC75}Prefabs/Accessories/GRS_TQ.et"
+    }
+    LoadoutSlotInfo Shears {
+     Prefab "{DE9FE038C674834D}Prefabs/Accessories/GRS_Scissors.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+  }
+ }
+}

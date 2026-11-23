@@ -1,0 +1,17 @@
+SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
+ ID "0000000000000001"
+ components {
+  SCR_AIConfigComponent "{512CC1759AE69D6D}" {
+   m_Skill 0.74
+  }
+ }
+ m_faction "CGQC_GRIT"
+ m_aUnitPrefabSlots {
+  "{3078DDB147CA3CAB}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_teamleader.et" "{9E6CD79C95F44322}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_lvaw.et" "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et" "{B6C879A3A976E7FD}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_honeybadger.et" "{9E6CD79C95F44322}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_lvaw.et" "{CA4695C3926A40CF}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_rattler.et" "{B6C879A3A976E7FD}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_operator_honeybadger.et"
+ }
+ m_fMemberSpawnDelay 10
+ m_iGroupRadioFrequency 38000
+ m_iMaxMembers 0
+ m_sCustomNameSet "Rafale"
+ m_bSetPlayable 1
+}

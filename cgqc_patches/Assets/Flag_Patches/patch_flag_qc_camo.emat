@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{A20B37F8EA9A929A}Assets/Flag_Patches/patch_flag_camo.edds"
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{80A66FCBA55C57C5}Prefabs/PRD_Subnautical/Equipment/Scuba/GasVariants/PRD_ScubaTank_Air.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

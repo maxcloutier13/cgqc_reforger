@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{0EA0AA01FD7384A3}Assets/Unit_Patches/patch_unit_spartan_black.edds"
+}

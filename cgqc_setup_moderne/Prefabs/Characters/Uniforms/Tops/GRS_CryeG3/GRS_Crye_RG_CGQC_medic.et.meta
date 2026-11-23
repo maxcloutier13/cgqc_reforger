@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{49AB871C4B3750B3}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_CGQC_medic.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

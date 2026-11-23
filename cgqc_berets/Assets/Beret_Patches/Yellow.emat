@@ -1,0 +1,8 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ RoughnessScale 5
+ CavityFromAO 1
+ BCRMap "{006224F2C729F199}Assets/Beret_Patches/beret_yellow.edds"
+ NMOMap "{222981D2C93A2CF7}Assets/Data/Beret/Beret Normal - DirectX 1K.edds"
+}

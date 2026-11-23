@@ -6,6 +6,7 @@ GenericEntity : "{BD3B536501CCB540}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
     Name "CGQC Display Snipers"
     Icon "{D5EBF515EE77251A}UI/Textures/Editor/EditableEntities/Systems/EditableEntity_System_Arsenal_Weapons.edds"
     m_Image "{BF3A5E92BEDC4371}UI/Textures/EditorPreviews/Auto/Props/Military/Training/E_ARY_Locker_Large-WeaponWall_UI.edds"
+    m_sFaction "CGQC"
     m_aAuthoredLabels + {
      CONTENT_MODDED ARY_CONTENT_ARMARY ARY_LOCKERS FACTION_CGQC
     }
@@ -22,6 +23,7 @@ GenericEntity : "{BD3B536501CCB540}Prefabs/Compositions/Slotted/ARY_Lockers/ARY_
    components {
     SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
      m_eSupportedArsenalItemTypes SNIPER_RIFLE
+     m_bAlwaysUseDefaultFaction 1
     }
     SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
      "faction affiliation" "CGQC"

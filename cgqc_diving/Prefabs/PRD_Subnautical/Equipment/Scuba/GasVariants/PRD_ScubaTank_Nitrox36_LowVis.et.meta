@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{376CA8F67D42A66A}Prefabs/PRD_Subnautical/Equipment/Scuba/GasVariants/PRD_ScubaTank_Nitrox36_LowVis.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

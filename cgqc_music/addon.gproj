@@ -1,9 +1,9 @@
 GameProject {
  ID "cgqcmusic"
  GUID "66E3256D49613609"
- TITLE "cgqc_music"
+ TITLE "cgqc_music_1.7"
  Dependencies {
-  "58D0FB3206B6F859" "621D3771875C1D3D" "62E354B50264C08F" ""
+  "58D0FB3206B6F859" "621D3771875C1D3D" "62E354B50264C08F" "6945585598A59E2B"
  }
  Configurations {
   GameProjectConfig PC {

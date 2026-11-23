@@ -1,0 +1,8 @@
+GenericEntity : "{0597ADC954852985}Prefabs/CGQC_Targets_Zero.et" {
+ coords 11296.521 24 618.711
+ angles 0 50.244 0
+}
+GenericEntity : "{1571BF54599093AF}PrefabsEditable/Auto/Props/Furniture/E_MeetingTable_01.et" {
+ coords 11373.278 24 681.119
+ angles 0 50.244 0
+}

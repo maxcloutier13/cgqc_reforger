@@ -1,0 +1,47 @@
+SCR_ChimeraCharacter : "{A5FDF23D30D0FEAE}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "GRIT Opérateur d'Intervention (HoneyBadger)"
+    IconSetName "EditableEntity_Character_Rifleman"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3B1624B7DCEE1C76}Prefabs/Weapons/Rifles/Q_Honeybadger/Rifle_qHoneyBadger_base_v1_GRIT.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo ArmoredVest {
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{696D1129EB56B9F8}" {
+    }
+    ItemsInitConfigurationItem "{69CE2E2694108227}" {
+    }
+    ItemsInitConfigurationItem "{69ED12044529DC56}" {
+     PrefabsToSpawn {
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et" "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED120458488427}" {
+     Enabled 0
+     PrefabsToSpawn {
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED1204588BB518}" {
+     Enabled 0
+     PrefabsToSpawn {
+      "{D1EAC9C5E9C95BC9}Prefabs/Weapons/Magazines/300_blkout/Magazine_300blk_30rnd_194_Lehigh_blk.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69ED161E24581CDA}" {
+    }
+   }
+  }
+ }
+}

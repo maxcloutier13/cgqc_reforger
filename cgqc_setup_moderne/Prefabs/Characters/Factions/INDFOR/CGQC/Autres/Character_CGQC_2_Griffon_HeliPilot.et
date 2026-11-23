@@ -1,0 +1,113 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_1_Rifleman_2027.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      NCM_GPSStorageSlot NCM_GPSSlot {
+       Prefab "{BBBFDE74332B7D1D}Prefabs/Items/Equipment/GPS/NCM_GPS_Item.et"
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Griffon - Pilote"
+    IconSetName "EditableEntity_Character_Helicopter_Pilot"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{2A1BB1DF2BDCD584}Prefabs/Characters/HeadGear/Helmet_Gentex_HGU56P/Helmet_Gentex_HGU56P_base_CGQC.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{92BE9B39782EF65C}Prefabs/Characters/Uniforms/Clothing/Upper body/Arcteryx_Leaf_Jacket/Arcteryx_Leaf_Jacket_RG_Griffon.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{E4C6294F2D4C3518}Prefabs/Vests/JPC-R/GRS_JPCR_RG_Griffon.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{6C03CC3AE904081F}Prefabs/Characters/Uniforms/Bottoms/GRS_CryeG3_Bottoms/GRS_CryeG3_Bottoms_Coyote.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{C47F5D977AC94514}Prefabs/Items/Equipment/Backpacks/6TP_Parachute.et"
+    }
+    LoadoutSlotInfo Face {
+     Prefab "{17B8C9DC7ECABE60}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Half_Balaclava/Arcteryx_Half_Balaclava_Black.et"
+    }
+    LoadoutSlotInfo GRSBackpanel {
+     Prefab ""
+    }
+    LoadoutSlotInfo GRSWaist {
+     Prefab "{CF6A0718561CDE9D}Prefabs/Belts/Bison Belts/GRS_Bison_Belt_Black.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     TargetStorage "Jacket/Arcteryx_Leaf_Jacket_RG_Griffon.et/StorageSlot/ClothingStorage1.et"
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{690C232DB4E1E45C}" {
+     TargetStorage "Pants/GRS_CryeG3_Bottoms_Coyote.et"
+     PrefabsToSpawn {
+      "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{BCA558897FDF8E2C}Prefabs/Characters/HeadGear/Boonie_Hats/GRS_Tacticool_Boonie_Flat_Earth.et" "{432EE37AE245D182}Prefabs/CTD/VS17/CTD_VS17.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249825AF0522}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Griffon.et/Placards/GRS_Placard_FerroDope_RG.et"
+     PrefabsToSpawn {
+      "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{D41D22DD1B8E921E}Prefabs/Weapons/Grenades/M18/Smoke_M18_Green.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF7046E3B}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Griffon.et/Dangler/GRS_Trauma_Roll_Dangler_RG.et"
+     PrefabsToSpawn {
+      "{CE262EF537F2E47A}Prefabs/Items/Equipment/Accessories/IFAK/IFAK.et" "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF756FA10}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_RG_Griffon.et/LS_Pouch_1/GRS_Radio_ANPRC_Pouch_V2_Flat_Earth.et"
+     PrefabsToSpawn {
+      "{3AAE94CE6ADC37E6}Prefabs/Items/Equipment/Radios/CGQC_1_343.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6949249AF1943048}" {
+     Enabled 0
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{6949249A0AAABC84}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69BA366EEA877E1A}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69721A015898A517}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+}

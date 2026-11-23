@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EEA17F0C3BBF1036}Assets/Data/GRS_KAGWERKS_CGQC_RG.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

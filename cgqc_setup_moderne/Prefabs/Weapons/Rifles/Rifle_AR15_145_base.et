@@ -53,6 +53,11 @@ GenericEntity : "{CB1705DA13B2FA4A}Prefabs/Weapons/Rifles/M4A1/URG-I/Rifle_M4A1_
       Prefab "{BCA2E16F34C3F9E8}Scopes/Leupold HAMR/Prefabs/Optic_HAMR.et"
      }
     }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Prefab ""
+     }
+    }
     AttachmentSlotComponent "{609EE504E194D66F}" {
      AttachmentSlot InventoryStorageSlot FRONT_IRONSIGHT {
       Offset 0 0.1114 0.3914

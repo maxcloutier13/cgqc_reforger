@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcsaveonquit"
+ GUID "694C40EC8798D45F"
+ TITLE "cgqc_save_onquit"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

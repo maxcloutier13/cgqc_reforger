@@ -1,0 +1,7 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  CGQC_HeadgearSwapComponent "{6A1F28277B3CDA2B}" {
+  }
+ }
+}

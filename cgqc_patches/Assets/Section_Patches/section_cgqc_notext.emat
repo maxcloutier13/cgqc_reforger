@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{20F8AB1F3E4EDD17}Assets/Section_Patches/patch_section_cgqc_notxt.edds"
+}

@@ -1,0 +1,73 @@
+SCR_ChimeraCharacter : "{5A1DADA0E9080B9C}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Base.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab ""
+      }
+     }
+    }
+   }
+  }
+  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
+   WeaponTemplate ""
+  }
+  CharacterGrenadeSlotComponent "{5A6CDA0CCF43068E}" {
+   WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{3194C7A741DA92F8}Prefabs/Weapons/Handguns/M1911a1/Handgun_M1911.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{55649CE32B06526F}Prefabs/Characters/Uniforms/Gi Gear/Tempurate/7th Grade/GI E1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{AF1F0C5E0A2A3385}Prefabs/Characters/Uniforms/Gi Gear/Tempurate/Pants/GI pants leggins.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{7D228ADC7E789CF6}Prefabs/Characters/Footwear/GI Boots/WW2 GI Boots.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{03B618000F9896CD}Prefabs/Characters/Vests/GI Vests/Variants/GI/Done/Pistole Belt.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69794BE9B7561D34}" {
+     TargetStorage "Pants/GI pants leggins.et"
+     PrefabsToSpawn {
+      "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{CE1BFF103826C9CA}Prefabs/Items/Equipment/Accessories/IFAK/IFAK_ColdWar.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D17}" {
+     TargetStorage "Jacket/GI E1.et"
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{C1279AFE5FE0C3AC}Prefabs/Items/Equipment/Pace_Counter/Pace_counter_01.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D16}" {
+     TargetStorage "Vest/Pistole Belt.et/MagPouch2/M1917_M1911_Mag_Pouch.et"
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D10}" {
+     TargetStorage "Vest/Pistole Belt.et"
+     PrefabsToSpawn {
+      "{A412C58CD6118681}Prefabs/Weapons/Handguns/M1911a1/Magazine_1143x23_7rnd_Ball_OO.et" "{A412C58CD6118681}Prefabs/Weapons/Handguns/M1911a1/Magazine_1143x23_7rnd_Ball_OO.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69794BE9B7561D1F}" {
+     TargetStorage "Vest/Pistole Belt.et/FirstAid/M1917_bandage_pouch.et"
+     PrefabsToSpawn {
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,45 @@
+SCR_ChimeraCharacter : "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Sniper"
+    IconSetName "EditableEntity_Character_Sharpshooter"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{F765DED3699B6B4C}Prefabs/Weapons/Rifles/M14/Rifle_M21_ARTII_OliveGreen_Sand_Stripes.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Vest {
+     Prefab "{9CEA24A1A9CC2675}Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_sniper.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69491C3998A0487E}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/Suspenders/Vest_ALICE_suspenders_2.et"
+    }
+    ItemsInitConfigurationItem "{69491C3999272B43}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/MagPouch/Pouch_ALICE_20rnd_M14.et"
+     PrefabsToSpawn {
+      "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et" "{C319540BC96AE9BB}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_M61_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C39A66BD0C4}" {
+     TargetStorage ""
+     PrefabsToSpawn {
+     }
+    }
+    ItemsInitConfigurationItem "{69491C39A2FE901F}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/Bayonet/Scabbard_Bayonet_M9.et"
+    }
+    ItemsInitConfigurationItem "{69491C39C9BD1242}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/Buttpack/Vest_ALICE_buttpack.et"
+    }
+   }
+  }
+ }
+}

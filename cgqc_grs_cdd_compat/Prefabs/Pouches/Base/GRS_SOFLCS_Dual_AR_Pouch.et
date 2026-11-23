@@ -1,0 +1,53 @@
+GenericEntity {
+ ID "697CF639B780F5EB"
+ components {
+  GRS_EquipmentStorageComponent "{697CF639B780F502}" {
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot Blk_1 {
+     Offset 0.0315 0.0194 0.0174
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot Creed_1 {
+     Offset 0.0286 0.0115 0.0175
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot Blk_2 {
+     Offset 0.0314 0.0201 0.0394
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot ARC_2 {
+     Offset 0.0306 0.0142 0.0395
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+   }
+  }
+ }
+}

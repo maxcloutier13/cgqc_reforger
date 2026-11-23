@@ -1,0 +1,4 @@
+Vehicle UAZ452_transport3 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ coords 4649.516 24.5 2657.678
+ angles 0 -89.104 0
+}

@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{C224052C7777FEFC}Assets/Unit_Patches/patch_unit_hades.edds"
+}

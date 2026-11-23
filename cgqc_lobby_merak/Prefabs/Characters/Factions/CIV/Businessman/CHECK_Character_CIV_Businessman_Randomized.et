@@ -1,0 +1,49 @@
+SCR_ChimeraCharacter : "{76EC8248377D0989}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_Base.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Random_Civilian_Businessman_Name"
+    Icon "{C431FD61793AA13F}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Random.edds"
+    m_Image "{E7649DFD37F503A1}UI/Textures/EditorPreviews/Characters/CIV/Character_CIV_Businessman_Randomized.edds"
+    m_aAuthoredLabels {
+     TRAIT_RANDOMIZED GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_CIV TRAIT_UNARMED
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{6A0E302E6C5F7AAF}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{6A0E302E6C5F7ABB}" {
+      m_sVariantPrefab "{E024A74F8A4BC644}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_1.et"
+     }
+     SCR_EditableEntityVariant "{6A0E302E6C5F7ABE}" {
+      m_sVariantPrefab "{A517C72CEF150898}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_2.et"
+     }
+     SCR_EditableEntityVariant "{6A0E302E6C5F7AB0}" {
+      m_sVariantPrefab "{626874113CAE4387}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_3.et"
+     }
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab ""
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{E652D625A46A00FC}Prefabs/Characters/Uniforms/Jacket_Suit_01/Jacket_Suit_01_Grey_V1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{401072A652DD9849}Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_grey_V1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{60DCBCECAC6C6E65}" {
+     TargetStorage "Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_grey_V1.et"
+    }
+   }
+  }
+ }
+}

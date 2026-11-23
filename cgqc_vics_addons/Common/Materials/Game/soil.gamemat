@@ -1,0 +1,3 @@
+GameMaterial : "{1AFE29BCB7B3593D}Common/Materials/Game/Core/loose_base.gamemat" {
+ "Vehicle contact surface" "{4C1EA5D57AF98C71}Common/Materials/Vehicles/soil.vhcsurf"
+}

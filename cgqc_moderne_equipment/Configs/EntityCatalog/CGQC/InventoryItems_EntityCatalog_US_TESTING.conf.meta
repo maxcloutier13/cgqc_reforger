@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2650E036D84CA4AF}Configs/EntityCatalog/US/InventoryItems_EntityCatalog_US_TESTING.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

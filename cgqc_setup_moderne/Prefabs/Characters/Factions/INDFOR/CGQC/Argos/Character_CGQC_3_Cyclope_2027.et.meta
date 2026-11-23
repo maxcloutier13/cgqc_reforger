@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{EF690BC6FDD07352}Prefabs/Characters/Factions/INDFOR/CGQC/Argos/Character_CGQC_3_Cyclope_2027.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
+  }
+ }
+}

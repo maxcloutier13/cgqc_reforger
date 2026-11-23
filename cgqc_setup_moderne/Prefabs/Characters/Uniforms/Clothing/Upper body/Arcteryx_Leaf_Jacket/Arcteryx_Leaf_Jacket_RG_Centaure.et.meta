@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{E8A4C8652A9F441C}Prefabs/Characters/Uniforms/Clothing/Upper body/Arcteryx_Leaf_Jacket/Arcteryx_Leaf_Jacket_RG_Centaure.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
+  }
+ }
+}

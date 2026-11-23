@@ -1,0 +1,53 @@
+GameEntity : "{73DE9EBFF20E5E8A}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Coy.et" {
+ ID "50D485E1435D6C72"
+ components {
+  RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "OPSCORE SF RgrGr CGQC"
+    }
+   }
+  }
+  SCR_ItemOutfitFactionComponent "{618AD7BB075F1045}" {
+   m_OutfitDataHolder SCR_OutfitFactionDataHolder "{61A8D96650B5696D}" {
+    m_aOutfitFactionData {
+     SCR_OutfitFactionData "{61A8D96650441EDE}" {
+      m_AffiliatedFactionKey "CGQC"
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    RHS_LoadoutSlotInfo Masks {
+     Prefab "{A1DBC01F0065012F}Prefabs/Characters/Uniforms/Accessories/Arcteryx_Half_Balaclava/Arcteryx_Half_Balaclava_RG.et"
+    }
+    RHS_LoadoutSlotInfo BackVelcro {
+     Prefab "{F20A13563AFED116}Prefabs/Unit_Patches/spartan_camo.et"
+    }
+    RHS_LoadoutSlotInfo NVG {
+     Prefab "{B385064A383A384B}Prefabs/Items/Equipment/Nightvision/PVS14/NVG_PVS14Dual_WP.et"
+    }
+    RHS_LoadoutSlotInfo Headset {
+     Prefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
+    }
+    RHS_LoadoutSlotInfo TopVelcro {
+     Prefab "{5F7EF7FEBC39B874}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar.et"
+    }
+    RHS_LoadoutSlotInfo LeftVelcro {
+     Prefab "{B025DEE1CECCAAE6}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor_left.et"
+    }
+    RHS_LoadoutSlotInfo RightVelcro {
+     Prefab "{BA5F723AAF06A07C}Prefabs/Items/Equipment/Nightvision/Vlite/vlite_mcolor.et"
+    }
+   }
+   WornMaterialsOverride {
+    "{74F488949C813D17}Assets/Characters/HeadGear/Helmet_OPSCORE/Data/LWstraps_BLK.emat" "{6C569F7A00010439}Assets/Characters/HeadGear/Helmet_OPSCORE_SF/data/opscore_SF_RGR.emat"
+   }
+   ItemMaterialsOverride {
+    "{6C569F7A00010439}Assets/Characters/HeadGear/Helmet_OPSCORE_SF/data/opscore_SF_RGR.emat" ""
+   }
+   DebugWornModel 0
+  }
+ }
+}

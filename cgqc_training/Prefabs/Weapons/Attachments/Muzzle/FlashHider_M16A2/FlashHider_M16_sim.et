@@ -1,0 +1,13 @@
+GenericEntity : "{5FE287F5F7635058}Prefabs/Weapons/Attachments/Muzzle/FlashHider_M16A2/FlashHider_M16_base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  MeshObject "{5C46D45E03D7AD12}" {
+   Materials {
+    MaterialAssignClass "{69BD1C6F970EAF5D}" {
+     SourceMaterial "FlashHider_M16A2"
+     AssignedMaterial "{05880994B1EEFF68}Assets/Weapons/Attachments/Muzzle/FlashHider_M16A2/Data/FlashHider_M16A2_Sim.emat"
+    }
+   }
+  }
+ }
+}

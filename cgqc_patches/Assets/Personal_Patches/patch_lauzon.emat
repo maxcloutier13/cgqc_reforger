@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{8EB16C6C7F4F9EB9}Assets/Personal_Patches/patch_lauzon.edds"
+}

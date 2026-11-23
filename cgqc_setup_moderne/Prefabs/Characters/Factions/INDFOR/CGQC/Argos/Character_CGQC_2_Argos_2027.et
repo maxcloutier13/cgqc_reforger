@@ -1,0 +1,54 @@
+SCR_ChimeraCharacter : "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_1_Rifleman_2027.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Argos - Base"
+    IconSetName "EditableEntity_Character_Scout"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{B9B8DB48336B29E7}Prefabs/Characters/Uniforms/Tops/GRS_CryeG3/GRS_Crye_RG_Argos.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{F6D55086EF2708A4}Prefabs/Vests/JPC-R/GRS_JPCR_Argos.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{690C232DABEBBC53}" {
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{C1279AFE5FE0C3AC}Prefabs/Items/Equipment/Pace_Counter/Pace_counter_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D0F8A1A55}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Argos.et/Placards/GRS_Placard_MKV.et"
+     PrefabsToSpawn + {
+      "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et" "{3DA436D97BD5F711}Prefabs/5AB890B71D748750/Magazines/m4_pmag_window_m995_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6971325D1A6605B2}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D11B56690}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6971325D244E6231}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Argos.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{6971325D5F18B90A}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Argos.et/Dangler/GRS_Belly_Pouch_V5.et"
+    }
+    ItemsInitConfigurationItem "{6AE548482E349904}" {
+     TargetStorage "ArmoredVest/GRS_JPCR_Argos.et/RS_Pouch_5/GRS_Radio_ANPRC_Pouch_V2.et"
+     PrefabsToSpawn {
+      "{133810B5D3B81E17}Prefabs/Items/Equipment/Radios/CGQC_3_163.et"
+     }
+    }
+   }
+  }
+ }
+}

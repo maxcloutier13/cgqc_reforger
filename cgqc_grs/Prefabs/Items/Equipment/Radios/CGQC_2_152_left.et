@@ -1,0 +1,201 @@
+GenericEntity {
+ ID "69C21E7761F53FF4"
+ components {
+  Persistence "{69C21E7761F53FFC}" {
+  }
+  SignalsManagerComponent "{69C21E7761F53FE5}" {
+  }
+  BaseRadioComponent "{69C21E7761F53FE3}" {
+   "Encryption key" "poutine"
+   "Turned on" 1
+   Transceivers {
+    RelayTransceiver "{69C21E7761F53FE0}" {
+     ChannelFrequency 48000
+     "Transmitting Range" 5000
+     "Min tunable frequency" 41000
+     "Max tunable frequency" 68000
+     "Frequency resolution" 100
+    }
+   }
+  }
+  InventoryItemComponent "{69C21E7761F53FEC}" {
+   Attributes SCR_ItemAttributeCollection "{69C21E7761F53FEB}" {
+    ItemDisplayName UIInfo "{69C21E7761F53FEA}" {
+     Name "CGQC AN/PRC 152 - Left"
+     Description "GRS: JTAC Radio - Left"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69C21E7761F53FE8}" {
+     Weight 0.7
+     SizeSetupStrategy Manual
+     ItemVolume 450
+     RestingUP Forward
+     RestingAdditiveOffsetLS 0 0 0.18
+    }
+    CustomAttributes {
+     CharacterModifierAttributes "{69C21E7761F53FD5}" {
+     }
+     PreviewRenderAttributes "{69C21E7761F53FD3}" {
+      CameraOrbitAngles -15 15 0
+      CameraDistanceToItem 0.3
+      CameraOffset 0 0 0
+      FOV 60
+      AspectRatio 1
+      PreviewWornModel 1
+     }
+     SCR_VONPreviewAttributes "{69C21E7761F53FD1}" {
+      CameraOrbitAngles -15 15 0
+      CameraDistanceToItem 0.3
+      FOV 60
+      AspectRatio 1
+     }
+    }
+    CommonItemType "GRS_RADIO"
+    m_Size SLOT_1x1
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+  }
+  MeshObject "{69C21E7761F53FD9}" {
+   Object "{C9177A93CFF09E8D}Assets/Accessories/ANPRC_JTAC_Left.xob"
+   LODFactors {
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{69C21E7761F53FC7}" {
+   Enabled 0
+   Mass 3
+   CenterOfMass 0 0.1 0
+   LinearDamping 0.5
+   AngularDamping 0.5
+   ModelGeometry 1
+   CCDRadius 0.028
+  }
+  ProcAnimComponent "{69C21E7761F53FC4}" {
+   Enabled 0
+   Parameters {
+    ProcAnimParams "{69C21E7761F53FC2}" {
+     ResourceName "{DE57211A364C1700}Assets/Items/Equipment/Radios/Radio_R148/Radio_R148_01.pap"
+     BoneNames {
+      "i_channel01"
+     }
+     SimulationDistance 20
+     SimulateOnDedicatedServer 0
+    }
+   }
+  }
+  SCR_RadioComponent "{69C21E7761F53FC0}" {
+   m_eAnimVariable ANPRC68
+   m_iRadioType ANPRC68
+  }
+  SCR_SoundDataComponent "{69C21E7761F53FCE}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69C21E7761F53FCA}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F53FC9}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F53FC8}" {
+     m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F53036}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_UP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F53035}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_DOWN"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F5303F}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TUNE_ERROR"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F5303E}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_ON"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69C21E7761F5303C}" {
+     m_sSoundProject "{5409F2998421DA59}Sounds/Items/Equipment/Radios/Items_Radio_Inspection_Actions.acp"
+     m_sSoundEventName "SOUND_ITEM_RADIO_TOGGLE_OFF"
+     m_eFlags 0
+    }
+   }
+  }
+  ActionsManagerComponent "{69C21E7761F5303A}" {
+   ActionContexts {
+    UserActionContext "{69C21E7761F53039}" {
+     ContextName "default"
+     Position PointInfo "{69C21E7761F53026}" {
+      Offset 0.0353 0.1059 0.0202
+     }
+     Radius 0.135
+    }
+    UserActionContext "{69C21E7761F53025}" {
+     ContextName "knob_channel"
+     Position PointInfo "{69C21E7761F53023}" {
+      Offset 0.0755 0.1576 -0.0056
+     }
+     Radius 0.3
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69C21E7761F53021}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69C21E7761F53020}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+    SCR_RadioTuningUserAction "{69C21E7761F5302E}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{69C21E7761F5302B}" {
+     }
+    }
+    SCR_RadioTuningUserAction "{69C21E7761F53029}" {
+     ParentContextList {
+      "knob_channel"
+     }
+     UIInfo UIInfo "{69C21E7761F53017}" {
+     }
+     m_bTuneUp 1
+    }
+   }
+  }
+  GadgetGamepadEffectsManagerComponent "{69C21E7761F53014}" {
+   OwnedEffects {
+    GamepadTriggerEffect "{69C21E7761F53012}" {
+     Name "ADS"
+     Priority 30
+     TriggerType Left
+     TriggerEffectCurve {
+      0 0 0.556 0 0.667 0.125 0.778 0
+     }
+    }
+    GamepadTriggerEffect "{69C21E7761F53010}" {
+     Name "Charged"
+     Priority 30
+     TriggerEffectCurve {
+      0.556 0 0.667 0.125 0.778 0
+     }
+    }
+   }
+  }
+  RplComponent "{69C21E7761F5301D}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69C21E7761F53019}" {
+  }
+ }
+ coords 0.105 0.168 0.204
+}

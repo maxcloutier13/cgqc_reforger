@@ -1,0 +1,22 @@
+GenericEntity : "{93690AE7A4BAD926}Prefabs/Characters/Core/Vest_Base.et" {
+ ID "50D8C49B3558F152"
+ components {
+  ClothNodeStorageComponent "{E8D04A931B753301}" {
+   Attributes SCR_ItemAttributeCollection "{E8D04A931B753302}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{6AE425993A2455B7}" {
+     Weight 15
+     SizeSetupStrategy Manual
+     ItemDimensions 100 100 100
+    }
+   }
+   StoragePurpose 0x40 0x1
+  }
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   Slots {
+    LoadoutSlotInfo Pouches {
+     Prefab "{E7456B237827FD14}Prefabs/Items/Equipment/Accessories/Pouch_ALICE_30rnd_STANAG/scuba_pouch.et"
+    }
+   }
+  }
+ }
+}

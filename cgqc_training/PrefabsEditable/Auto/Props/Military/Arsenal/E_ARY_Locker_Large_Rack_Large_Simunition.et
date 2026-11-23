@@ -1,0 +1,32 @@
+GenericEntity : "{E1C6FBFB008B2EA6}PrefabsEditable/Auto/Compositions/Slotted/ARY_Lockers/E_ARY_Locker_Large_Rack_Large_US.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_EditableEntityComponent "{660EA51E64E91031}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "CGQC Rack Simunitions"
+    m_sFaction "CGQC"
+    m_aAuthoredLabels {
+     ENTITYTYPE_COMPOSITION CONTENT_MODDED ARY_CONTENT_ARMARY ARY_LOCKERS FACTION_CGQC
+    }
+   }
+  }
+ }
+ {
+  GenericEntity {
+   ID "660D2CA1D1DCE67A"
+   components {
+    SCR_ArsenalDisplayComponent "{589E95D89A024D21}" {
+     m_eSupportedArsenalItemTypes 1
+     m_eSupportedArsenalItemModes 12
+     m_eEditableAttributeGroups 6
+     m_bGetDefaultIfNoFaction 0
+     m_eArsenalSaveType NO_RESTRICTIONS
+     m_bAlwaysUseDefaultFaction 1
+    }
+    SCR_FactionAffiliationComponent "{5A50E7661D447924}" {
+     "faction affiliation" "CGQC"
+    }
+   }
+  }
+ }
+}

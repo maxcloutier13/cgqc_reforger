@@ -1,0 +1,60 @@
+GenericEntity : "{233196A4E0310FA2}Prefabs/Vests/JPC2.0/GRS_JPC2_Bases.et" {
+ ID "6982202309B37700"
+ components {
+  GRS_ArmorVestStorageComponent "{69822023056A7CAD}" {
+   Attributes SCR_ItemAttributeCollection "{69822023056A7CA3}" {
+    ItemDisplayName UIInfo "{69822023056A7F2B}" {
+     Name "GRS: JPC 2.0 - Plongeur"
+     Description "GRS: JPC 2.0 - Plongeur"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69822023056A76FF}" {
+   Slots {
+    LoadoutSlotInfo LS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo RS_Plate {
+     Prefab ""
+    }
+    LoadoutSlotInfo Placards {
+     Prefab "{65FF8E4890C26862}Prefabs/Pouches/Black/GRS_Placard_AVSKangaroo_Black.et"
+    }
+    LoadoutSlotInfo Dangler {
+     Prefab "{46BDACE37E070E60}Prefabs/Pouches/Black/GRS_Belly_Pouch_V5_Black.et"
+    }
+    LoadoutSlotInfo Rear_Dangler {
+     Prefab "{73D69EC806C03A6A}Prefabs/Pouches/Black/GRS_Trauma_Roll_Dangler_Black.et"
+    }
+    LoadoutSlotInfo Atak {
+     Offset 0.0015 0.1488 0.1597
+     Prefab "{3FA3C05704ABFEB9}Prefabs/Kagwerks/CGQC_EUD_02.et"
+    }
+    LoadoutSlotInfo RS_PTT {
+     Prefab "{58A95F981FE4F495}Prefabs/Accessories/PPT_JTAC_Righ.et"
+    }
+    LoadoutSlotInfo LS_PTT {
+    }
+    LoadoutSlotInfo RS_Pouch_1 {
+    }
+    LoadoutSlotInfo RS_Pouch_3 {
+    }
+    LoadoutSlotInfo RS_Pouch_5 {
+     Prefab "{D33D974484133BB8}Prefabs/Pouches/Black/GRS_Radio_ANPRC_Pouch_V2_Black.et"
+    }
+    LoadoutSlotInfo LS_Pouch_1 {
+    }
+    LoadoutSlotInfo Shoulder_Accessory {
+    }
+    LoadoutSlotInfo Shears {
+    }
+   }
+   WornMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+   ItemMaterialsOverride {
+    "{6C7ACB8579F4F62B}Assets/Vests/JPC2.0/Data/JPC2_Bag_Black.emat" "{CDFAE0BFE787C827}Assets/Vests/JPC2.0/Data/JPC2_cbund_Black.emat"
+   }
+  }
+ }
+}

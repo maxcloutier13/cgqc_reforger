@@ -9,6 +9,7 @@ GenericEntity : "{CCFA1D2A74D3F13E}Prefabs/Props/Military/Arsenal/AmmoBoxes/Ammo
   }
   SCR_ArsenalComponent "{589F01C9C8D4A475}" {
    m_eSupportedArsenalItemTypes 513
+   m_eSupportedArsenalItemModes 254
    m_eArsenalSaveType NO_RESTRICTIONS
   }
   SCR_FactionAffiliationComponent "{5A50E7650A1AE9EC}" {

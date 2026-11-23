@@ -1,6 +1,0 @@
-MatPBRBasic {
- Color 0.766 0.739 0.482 1
- BCRMap "{30D1CAD566CCF6C8}Assets/Characters/Headgears/Beret/Data/Textures/yellow_BCR.edds"
- OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
- NMOMap "{B63408077B3C0EB0}Assets/Characters/Headgears/Beret/Data/Textures/VeloursBeret_NMO.edds"
-}

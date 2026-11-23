@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D0CDBC4E94D098A0}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier_Training.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

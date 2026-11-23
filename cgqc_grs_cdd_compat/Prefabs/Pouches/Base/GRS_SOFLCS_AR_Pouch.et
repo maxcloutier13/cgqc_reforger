@@ -1,0 +1,31 @@
+GenericEntity {
+ ID "697CF639C73B9CDF"
+ components {
+  GRS_EquipmentStorageComponent "{697CF639C73B9CF7}" {
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot Blk_1 {
+     Offset 0.0275 0.023 0.0155
+     Angles 4.674 91.0092 -179.9178
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot ACR_1 {
+     Offset 0.0278 0.017 0.0155
+     Angles 0.9456 91.0039 -179.91811
+     ChildPivotID "snap_weapon"
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+   }
+  }
+ }
+}

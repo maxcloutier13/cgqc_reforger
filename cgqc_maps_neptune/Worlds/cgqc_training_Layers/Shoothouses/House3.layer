@@ -1,0 +1,974 @@
+GenericEntity : "{01F7C1F49FF69E17}Prefabs/Props/Decorations/Paintings/PaintingBig_01_V1.et" {
+ coords 3825.486 504.809 3372.686
+ angles 0 176.643 0
+}
+GenericEntity : "{090B9013CF776866}Prefabs/Props/Furniture/TableLong_01/TableLong_01_base.et" {
+ coords 3820.484 503.12 3360.734
+ angles 0 85.584 0
+}
+GenericEntity : "{0C7319383777A107}Prefabs/Props/Furniture/CabinetMetal_01_grey_V3.et" {
+ coords 3828.122 503.12 3366.428
+ angles 0 87.826 0
+}
+GenericEntity : "{108B2B2A04700231}Prefabs/Props/Furniture/ClockFloor_01.et" {
+ coords 3836.35 503.12 3373.234
+ angles -0.936 176.201 -0.041
+}
+GenericEntity : "{1A08789B13DFBAB5}Prefabs/Props/Civilian/TablePhotoFrame_01/TablePhotoFrame_01_base.et" {
+ coords 3869.131 504 3410.952
+ angles 0 80.531 0
+}
+GenericEntity : "{1CA1A9D19D7C8445}Prefabs/Props/Furniture/Rack_01_Short.et" {
+ coords 3837.207 503.12 3362.344
+ angles 0 -0.713 0
+}
+GenericEntity : "{261F10BDC068BB35}Prefabs/Props/Furniture/ChairOld_01.et" {
+ coords 3828.917 503.12 3364.585
+ angles 0 -93.852 0
+}
+GenericEntity : "{2ED930A7BA4156F5}Prefabs/Props/Furniture/MirrorBathroom_01.et" {
+ coords 3822.43 504.272 3365.837
+ angles 0 87.532 0
+}
+GenericEntity : "{313CC1F195E06A6E}Prefabs/Props/Furniture/TVSet_01.et" {
+ coords 3819.969 504.263 3386.176
+ angles 0 -0.874 0
+}
+GenericEntity : "{31926C95BD16D69C}Prefabs/Props/Furniture/Bookshelf_01/Bookshelf_USSR_01.et" {
+ coords 3827.718 503.12 3369.096
+ angles 0 85.802 0
+ {
+  GenericEntity {
+   ID "660AD2884209448A"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "660AD28842094488"
+   coords 0 0 0
+  }
+ }
+}
+GenericEntity SH10 : "{4895FF6B9212DA15}Prefabs/Structures/BuildingParts/Eletrical/Shoothouse_Controller.et" {
+ components {
+  CN_ShoothouseComponent "{69251DA462181699}" {
+   m_iMaxThreatsPerRoom 3
+   m_iMaxTotalThreats 16
+   m_fSlotSearchRadius 30
+  }
+ }
+ coords 3889.006 503.769 3421.341
+ angles 0 175.902 0
+}
+GenericEntity : "{49012FE1DEF653EE}Prefabs/Props/Furniture/Sink_01.et" {
+ coords 3822.422 503.12 3365.842
+ angles 0 85.924 0
+}
+GenericEntity : "{4A6CAB11852FD31C}Prefabs/Props/Furniture/Chair_01/Chair_01_yellow.et" {
+ coords 3823.609 503.12 3372.064
+ angles 0 177.24 0
+}
+GenericEntity : "{4BF9D2FB26F6B9C2}Prefabs/Props/Civilian/Billiard_01/Billiard_01.et" {
+ coords 3828.601 503.12 3360.602
+ angles 0 -4.024 0
+}
+GenericEntity : "{52A12ECB132C3E1F}Prefabs/Props/Furniture/TableKitchen_02/TableKitchen_02.et" {
+ coords 3837.295 503.12 3360.344
+ angles 0 -2.24 0
+}
+GenericEntity : "{56FB185A7697E02A}Prefabs/Props/Furniture/Carpet_03_base.et" {
+ coords 3822.182 503.12 3357.474
+ angles 0 -5.512 0
+}
+GenericEntity : "{587FF67D8767126C}Prefabs/Props/Furniture/BenchKitchen_01/BenchKitchen_01_corner_Base.et" {
+ coords 3837.777 503.12 3361.046
+ angles 0 -92.398 0
+}
+GenericEntity : "{5E7626D8E78566B4}Prefabs/Props/Furniture/Desk_01_long.et" {
+ coords 3828.074 503.12 3363.571
+ angles 0 86.676 0
+}
+GenericEntity : "{613F68B39D0A4A64}Prefabs/Props/Commercial/CoolingBoxShop_01.et" {
+ coords 3820.587 503.12 3371.75
+ angles 0 175.907 0
+}
+GenericEntity : "{67326F75C36A0760}Prefabs/Props/Furniture/CupboardOld_01/CupboardOld_01_medium.et" {
+ coords 3839.212 503.12 3358.588
+ angles 0 -94.457 0
+}
+GenericEntity : "{6B7B7CCC74AACA67}Prefabs/Props/Furniture/Desk_01_short.et" {
+ coords 3824.801 503.12 3370.935
+ angles 0 -3.984 0
+}
+GenericEntity : "{7333D49764EE9D3E}Prefabs/Props/Furniture/Kitchen_01_blue.et" {
+ coords 3830.226 503.12 3361.065
+ angles 0 86.127 0
+}
+GenericEntity : "{7BB30759D09C70B5}Prefabs/Props/Civilian/StepladderWooden_01.et" {
+ coords 3835.169 503.12 3364.942
+ angles -2.238 -95.38 0
+}
+GenericEntity : "{7D08A4C60A9F1D17}Prefabs/Props/VRTCQBShootHouse/CQB_ShootHouseMedFrame.et" {
+ coords 3838.815 503.12 3365.227
+ angles 0 -93.937 0
+ {
+  GenericEntity {
+   ID "66D51B8534D4E0E2"
+   coords 3.198 0 -0.043
+  }
+  GenericEntity {
+   ID "66D51B8534D4E0E3"
+   coords 3.809 0 0.002
+  }
+  GenericEntity {
+   ID "66E34D365071F2E9"
+   coords 6.109 3.357 17.385
+  }
+  GenericEntity {
+   ID "66E34D36507C23CC"
+   coords 5.979 3.357 4.221
+  }
+  GenericEntity {
+   ID "66E34D36507EB71E"
+   coords -2.062 3.357 17.303
+  }
+  GenericEntity {
+   ID "66E34D36507FF8A4"
+   coords -2.04 3.357 4.221
+  }
+  GenericEntity {
+   ID "66E34D365071F2EE"
+   coords 8.452 0 18.148
+  }
+  GenericEntity {
+   ID "66E34D36507C23CD"
+   coords -8.5 0 2.914
+  }
+  GenericEntity {
+   ID "66E34D36507C405C"
+   coords 8.452 0 12.483
+  }
+  GenericEntity {
+   ID "66E34D36507CDE35"
+   coords -7.611 0 -0.005
+  }
+  GenericEntity {
+   ID "66E34D36507D0A06"
+   coords -8.501 0 6.723
+  }
+  GenericEntity {
+   ID "66E34D36507D0A07"
+   coords -8.505 0 14.34
+  }
+  GenericEntity {
+   ID "66E34D36507D1D44"
+   coords -8.505 0 10.531
+  }
+  GenericEntity {
+   ID "66E34D36507D1D47"
+   coords -3.811 0 -0.002
+  }
+  GenericEntity {
+   ID "66E34D36507D4A28"
+   coords 8.458 0 1.057
+  }
+  GenericEntity {
+   ID "66E34D36507D5B86"
+   coords 8.454 0 8.674
+  }
+  GenericEntity {
+   ID "66E34D36507DE0E2"
+   coords 8.457 0 4.866
+  }
+  GenericEntity {
+   ID "66E34D36507EAA40"
+   coords -7.616 0 19.212
+  }
+  GenericEntity {
+   ID "66E34D36507EAA43"
+   coords 1.857 0 19.214
+  }
+  GenericEntity {
+   ID "66E34D36507EB71F"
+   coords -8.505 0 18.147
+  }
+  GenericEntity {
+   ID "66E34D36507EE84F"
+   coords -1.952 0 19.213
+  }
+  GenericEntity {
+   ID "66E34D36507F2D1D"
+   coords 5.666 0 19.219
+  }
+  GenericEntity {
+   ID "66E34D36507A24E2"
+   coords -6.034 3.357 4.215
+  }
+  GenericEntity {
+   ID "66E34D36507DE0E7"
+   coords -8.086 3.357 4.215
+  }
+  GenericEntity {
+   ID "66E34D36507F2D1C"
+   coords -6.056 3.357 17.297
+  }
+  GenericEntity {
+   ID "66E34D36507FA6A8"
+   coords -8.108 3.357 17.297
+  }
+  GenericEntity {
+   ID "66E34D365071D1E8"
+   coords -10.092 0 2.457
+  }
+  GenericEntity {
+   ID "66E34D365071F2EC"
+   coords 10.116 0 19.149
+  }
+  GenericEntity {
+   ID "66E34D36507D4A17"
+   coords 10.091 0 6.023
+  }
+  GenericEntity {
+   ID "66E34D36507E35D1"
+   coords -10.114 0 15.54
+  }
+  GenericEntity {
+   ID "66E34D36507A64B2"
+   coords 1.979 3.357 4.065
+  }
+  GenericEntity {
+   ID "66E34D36507F9C15"
+   coords 2.031 3.357 17.543
+  }
+  GenericEntity {
+   ID "66E34D365071D1E6"
+   coords 7.622 0 19.22
+  }
+  GenericEntity {
+   ID "66E34D36507A64B1"
+   coords 5.708 0 0.001
+  }
+  GenericEntity {
+   ID "66E34D36507A6BD0"
+   coords 7.61 0 0.001
+  }
+  GenericEntity {
+   ID "66E34D36507A6BD1"
+   coords 1.94 3.357 7.845
+  }
+  GenericEntity {
+   ID "66E34D36507F9C12"
+   coords 1.941 3.357 13.833
+  }
+ }
+}
+$grp GenericEntity : "{7F22801F2D2EE30F}Prefabs/Props/VRTCQBShootHouse/CQB_Wallx2.et" {
+ {
+  coords 3834.978 503.12 3364.74
+  angles 0 85.034 0
+ }
+ {
+  coords 3836.243 503.12 3362.094
+  angles 0 -2.529 0
+ }
+ {
+  coords 3831.927 503.12 3367.437
+  angles 0 -3.227 0
+ }
+ {
+  coords 3831.823 503.12 3369.167
+  angles 0 -3.445 0
+ }
+ {
+  coords 3826.583 503.12 3367.109
+  angles 0 -3.227 0
+ }
+ {
+  coords 3826.482 503.12 3368.814
+  angles 0 -3.445 0
+ }
+ {
+  coords 3823.406 503.12 3362.917
+  angles 0 -3.563 0
+ }
+ {
+  coords 3827.19 503.12 3363.154
+  angles 0 -3.563 0
+ }
+ {
+  coords 3830.769 503.12 3363.376
+  angles 0 -3.563 0
+ }
+ {
+  coords 3832.198 503.12 3363.466
+  angles 0 -3.563 0
+ }
+ {
+  coords 3830.153 503.12 3360.853
+  angles 0 86.425 0
+ }
+ {
+  coords 3830.052 503.12 3362.464
+  angles 0 86.425 0
+ }
+}
+GenericEntity : "{7F7FC9E63EA0E96A}Prefabs/Props/VRTCQBShootHouse/Frame/CQB_WallDoor.et" {
+ coords 3830.373 503.12 3357.081
+ angles 0 87.015 0
+}
+$grp GenericEntity : "{7F7FC9E63EA0E96B}Prefabs/Props/VRTCQBShootHouse/CQB_WallDoor.et" {
+ {
+  coords 3837.718 503.127 3365.9
+  angles 0 -4.806 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    coords -0.608 0 -0.044
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 3834.73 503.118 3368.489
+  angles 0 85.242 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    components {
+     CN_ShoothouseDoorComponent "{694D12902F815E7C}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords -0.61 0 -0.045
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 3830.207 503.124 3369.057
+  angles 0 -4.063 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    components {
+     CN_ShoothouseDoorComponent "{694D12902A88A0CA}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords 0 0 0
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    coords -0.608 0 -0.044
+   }
+  }
+ }
+ {
+  coords 3830.345 503.124 3367.331
+  angles 0 176.079 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    components {
+     CN_ShoothouseDoorComponent "{694D1293D5D808BA}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords -0.61 0 -0.045
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 3824.836 503.124 3368.703
+  angles 0 -4.3 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    components {
+     CN_ShoothouseDoorComponent "{694D1293D03AB95F}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords -0.61 0 -0.045
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 3824.964 503.124 3367.013
+  angles 0 176.221 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    components {
+     CN_ShoothouseDoorComponent "{694D1293DB968DBB}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords -0.61 0 -0.047
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 3838.578 503.151 3369.017
+  angles 0 -93.46 0
+  {
+   GenericEntity {
+    ID "66D51B8534D4E0E2"
+    components {
+     CN_ShoothouseDoorComponent "{694D129024BCD434}" {
+      m_sControllerName "SH3"
+     }
+    }
+    coords -0.61 0 -0.045
+   }
+   GenericEntity {
+    ID "66D51B8534D4E0E3"
+    coords 0 0 0
+   }
+  }
+ }
+}
+GenericEntity : "{8A6DD31A4FF94E48}Prefabs/Props/Furniture/BedDouble_01.et" {
+ coords 3833.548 503.12 3366.302
+ angles 0 86.968 0
+}
+GenericEntity : "{8AC23039E7EC0375}Prefabs/Props/Furniture/TowelRack_01.et" {
+ coords 3823.929 504.765 3393.078
+ angles 0 -3.683 0
+}
+$grp GenericEntity : "{8BE469B1C9144671}Prefabs/Props/Furniture/BunkBed_02/BunkBed_02.et" {
+ {
+  coords 3833.368 503.12 3369.785
+  angles 0 87.566 0
+ }
+ {
+  coords 3833.124 503.12 3372.75
+  angles 0 86.129 0
+ }
+}
+GenericEntity : "{8F05D427252644F8}Prefabs/Props/Civilian/Suitcase_01.et" {
+ coords 3833.981 503.12 3395.297
+ angles 0 -2.397 0
+}
+$grp GenericEntity : "{8FDE24F366C48A9E}shoothouse_slot.et" {
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 0
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3835.259 503.12 3366.088
+  angles 0 38.818 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 0
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3834.962 503.12 3369.854
+  angles 0 88.195 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 0
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3835.011 503.12 3372.738
+  angles 0 147.12 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 0
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3837.733 503.12 3373.164
+  angles 0 175.7 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 1
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3838.351 503.12 3363.217
+  angles 0 0 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 1
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3835.781 503.12 3364.005
+  angles 0 63.827 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 2
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3833.728 503.12 3371.175
+  angles 0 -94.931 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 2
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3827.879 503.12 3372.533
+  angles 0 141.909 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 2
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3831.182 503.12 3372.623
+  angles 0 177.177 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 2
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3831.942 503.12 3369.678
+  angles 0 -92.23 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 3
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3826.889 503.12 3372.542
+  angles 0 -138.522 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 3
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3827.161 503.12 3369.619
+  angles 0 -47.964 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 3
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3824.217 503.12 3372.142
+  angles 0 171.652 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 3
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3822.56 503.12 3368.977
+  angles 0 83.482 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 5
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3834.457 503.12 3364.081
+  angles 0 -65.182 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 5
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3829.31 503.12 3363.724
+  angles 0 7.426 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 5
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3832.008 503.12 3365.349
+  angles 0 -40.567 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 5
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3828.684 503.12 3366.64
+  angles 0 88.448 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 7
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3822.907 503.12 3364.338
+  angles 0 22.21 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 7
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3826.184 503.12 3364.106
+  angles 0 -27.338 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 7
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3827.296 503.12 3366.385
+  angles 0 -95.384 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3820.675 503.12 3371.077
+  angles 0 173.087 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 8
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3820.628 503.12 3355.892
+  angles 0 0 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 9
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3825.571 503.12 3356.509
+  angles 0 -61.554 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 9
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3829.452 503.12 3362.692
+  angles 0 -97.278 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 9
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3829.982 503.12 3359.419
+  angles 0 -75.282 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 9
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3824.766 503.12 3362.502
+  angles 0 -95.861 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 10
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3831.492 503.12 3362.949
+  angles 0 179.682 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 10
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3834.639 503.12 3363.22
+  angles 0 -144.164 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 10
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3838.542 503.12 3358.877
+  angles 0 -94.533 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 10
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3838.193 503.12 3357.142
+  angles 0 -87.024 0
+ }
+ {
+  components {
+   CN_ShoothouseSlotComponent "{69251DA7F1FA7633}" {
+    m_iRoomID 10
+    m_sControllerName "SH3"
+   }
+  }
+  coords 3835.911 503.12 3361.466
+  angles 0 -127.035 0
+ }
+}
+GenericEntity : "{934C28C99D732BDD}Prefabs/Props/Furniture/CabinetMetal_01_olive_V1.et" {
+ coords 3826.41 503.12 3369.131
+ angles 0 -4.63 0
+}
+GenericEntity : "{9585BA25533DB500}Prefabs/Props/Decorations/Paintings/PaintingBig_01_V10.et" {
+ coords 3825.702 505.246 3392.978
+ angles 0 176.579 0
+}
+GenericEntity : "{A0A76057A66049D0}Prefabs/Props/Furniture/Sofa_02/Sofa_02_orange.et" {
+ coords 3821.615 503.12 3358.839
+ angles 0 174.805 0
+}
+$grp GenericEntity : "{A319C11D446D88B3}Prefabs/Props/Furniture/Dresser_01.et" {
+ {
+  coords 3828.937 503.12 3372.877
+  angles 0 175.403 0
+ }
+ {
+  coords 3822.897 503.12 3355.733
+  angles 0 -5.094 0
+ }
+}
+GenericEntity : "{B538C88E57AE853D}Prefabs/Props/Civilian/Stove_02.et" {
+ coords 3832.453 503.12 3363.13
+ angles 0 174.668 0
+}
+GenericEntity : "{BBBC235B9B053092}Prefabs/Props/Furniture/Armchair_02.et" {
+ coords 3836.309 503.12 3366.375
+ angles 0 -1.405 0
+}
+GenericEntity : "{BCE07A58672955B9}Prefabs/Props/Civilian/Bucket_01.et" {
+ coords 3835.989 503.12 3392.587
+}
+GenericEntity : "{BD74E024F375A541}Prefabs/Props/Furniture/Sofa_02/Sofa_02_green.et" {
+ coords 3824.552 503.12 3357.31
+ angles 0 -95.341 0
+}
+GenericEntity : "{CB83AC8C81F20681}Prefabs/Compositions/Misc/SubCompositions/Furniture/Cabinet_Medical_FIA_01.et" {
+ coords 3834.954 503.12 3370.776
+ angles 0 86.038 0
+ {
+  GenericEntity {
+   ID "620EE566B68D5368"
+   coords -0.007 0.902 -0.02
+  }
+ }
+}
+$grp GenericEntity : "{D21DAFB24F46D64C}Prefabs/Props/Furniture/Nightstand_02.et" {
+ {
+  coords 3834.234 503.12 3371.349
+  angles 0 -93.7 0
+ }
+ {
+  coords 3834.619 503.12 3364.836
+  angles 0 -93.273 0
+ }
+ {
+  coords 3824.425 503.12 3358.683
+  angles 0 -96.808 0
+ }
+}
+GenericEntity : "{D2990433DD2D8B43}Prefabs/Props/Furniture/Bathtub_01.et" {
+ coords 3826.791 503.12 3365.411
+ angles 0 177.733 0
+}
+GenericEntity : "{DD07AE4E1B3E5EE2}Prefabs/Props/Furniture/FirstAidBox_01.et" {
+ coords 3823.286 504.442 3366.729
+ angles 0 172.765 0
+}
+GenericEntity : "{DEE73EC3DF43A836}Prefabs/Props/Furniture/Shower_01_addon.et" {
+ coords 3827.149 504.356 3363.327
+}
+GenericEntity : "{E3382F292BA2A27D}Prefabs/Props/Furniture/TableCoffee_01.et" {
+ coords 3821.963 503.12 3357.129
+ angles 0 -3.454 0
+}
+GenericEntity : "{EBBC859CCD94D96D}Prefabs/Props/EmptyStorages/USSR_AmmoBox_empty.et" {
+ coords 3832.869 503.12 3386.704
+ angles 0 0 0
+}
+$grp GenericEntity : "{F23B1DFF99EBF582}Prefabs/Props/VRTCQBShootHouse/CQB_Wall.et" {
+ {
+  coords 3835.864 503.12 3365.763
+  angles 0 -3.083 0
+ }
+ {
+  coords 3834.859 503.12 3366.594
+  angles 0 86.179 0
+ }
+ {
+  coords 3834.593 503.12 3370.375
+  angles 0 86.179 0
+ }
+ {
+  coords 3834.465 503.12 3372.275
+  angles 0 86.179 0
+ }
+ {
+  coords 3827.511 503.12 3369.881
+  angles 0 -93.327 0
+ }
+ {
+  coords 3827.406 503.12 3371.698
+  angles 0 -93.327 0
+ }
+ {
+  coords 3827.394 503.12 3371.894
+  angles 0 -93.327 0
+ }
+ {
+  coords 3827.725 503.12 3366.203
+  angles 0 -93.327 0
+ }
+ {
+  coords 3827.842 503.12 3364.192
+  angles 0 -93.327 0
+ }
+ {
+  coords 3827.737 503.12 3366.008
+  angles 0 -93.327 0
+ }
+ {
+  coords 3822.334 503.12 3365.89
+  angles 0 -93.327 0
+ }
+ {
+  coords 3822.452 503.12 3363.879
+  angles 0 -93.327 0
+ }
+ {
+  coords 3822.347 503.12 3365.694
+  angles 0 -93.327 0
+ }
+ {
+  coords 3823.097 503.12 3368.569
+  angles 0 -4.88 0
+ }
+ {
+  coords 3823.24 503.12 3366.879
+  angles 0 -4.88 0
+ }
+ {
+  coords 3822.016 503.12 3371.374
+  angles 0 -93.327 0
+ }
+ {
+  coords 3822.121 503.12 3369.557
+  angles 0 -93.327 0
+ }
+ {
+  coords 3822.007 503.12 3371.525
+  angles 0 -93.327 0
+ }
+}
+GenericEntity : "{F49E9F098C6069AD}Prefabs/Props/Furniture/Toilet_01.et" {
+ coords 3823.818 503.12 3363.04
+ angles 0 -3.429 0
+}
+GenericEntity : "{F77F7F847CC6455F}Prefabs/Props/Furniture/Bookshelf_01/Bookshelf_01.et" {
+ coords 3825.172 503.12 3362.848
+ angles 0 176.091 0
+ {
+  GenericEntity {
+   ID "6252AE4CB186C862"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "6252AE4CB186C829"
+   coords 0 0 0
+  }
+ }
+}
+StaticModelEntity : "{F874438BBEF851BD}Prefabs/Structures/Walls/Pipe/PipeRailing_01/Dst/PipeRailing_01_3m_01_pole_blue.et" {
+ coords 3840.588 503.045 3370.699
+ angles 0 86.324 0
+}
+GenericEntity : "{FD47FF9699A52E82}Prefabs/Props/Furniture/Wardrobe_01.et" {
+ coords 3832.19 503.12 3367.355
+ angles 0 -93.579 0
+}
+GenericEntity : "{FF8BD8E8A95DB3D2}Prefabs/Props/Furniture/Fridge_01.et" {
+ coords 3830.166 503.12 3360.385
+ angles 0 -1.442 0
+}

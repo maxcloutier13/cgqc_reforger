@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{B217E7EFE9DB2303}Assets/Circle_Patches/Data/Patch_Round_Medic.edds"
+ NMOMap "{E5C7FF59439BCAA6}Assets/Circle_Patches/Data/Patch_Round_Medic_nmo.edds"
+}

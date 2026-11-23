@@ -1,0 +1,7 @@
+GameEntity {
+ ID "685F143872F7988A"
+ components {
+  Persistence "{6942F776D53D1E47}" {
+  }
+ }
+}

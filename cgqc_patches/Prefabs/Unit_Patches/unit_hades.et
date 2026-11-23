@@ -1,0 +1,21 @@
+GameEntity : "{5DB7E554E938C969}Prefabs/Rectangle_Patches/Rectangle_DemonHunter_Patch.et" {
+ ID "657C17E446464A1E"
+ components {
+  InventoryItemComponent "{657C17E446464A0E}" {
+   Attributes SCR_ItemAttributeCollection "{657C17E446464A0D}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{657C17E446464A0A}" {
+     Name "CGQC Hades"
+     Description "Yellow"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{657C17E446464A39}" {
+   WornMaterialsOverride {
+    "{5D33C15C28FE4E13}Assets/Unit_Patches/unit_hades.emat"
+   }
+   ItemMaterialsOverride {
+    "{5D33C15C28FE4E13}Assets/Unit_Patches/unit_hades.emat"
+   }
+  }
+ }
+}

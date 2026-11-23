@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E630A6DF80E46D91}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_Pilot.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

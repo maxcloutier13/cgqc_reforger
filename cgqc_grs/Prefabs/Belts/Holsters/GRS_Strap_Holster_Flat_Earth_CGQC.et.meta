@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{510BC1BFBFBD8F1C}Prefabs/Belts/Holsters/GRS_Strap_Holster_Flat_Earth_CGQC.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

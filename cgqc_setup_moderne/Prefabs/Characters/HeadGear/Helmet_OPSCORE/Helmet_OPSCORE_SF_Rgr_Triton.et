@@ -1,0 +1,22 @@
+GameEntity : "{A5B88168F2327681}Prefabs/Characters/HeadGear/Helmet_OPSCORE/Helmet_OPSCORE_SF_Rgr_CGQC.et" {
+ ID "50D485E1435D6C72"
+ components {
+  RHS_HelmetNodeStorageComponent "{5DB13C5777E6E695}" {
+   Attributes SCR_ItemAttributeCollection "{5DB13C5760610D64}" {
+    ItemDisplayName UIInfo "{5DB13C575E2AFE37}" {
+     Name "OPSCORE SF RgrGr CGQC v2"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    RHS_LoadoutSlotInfo Masks {
+     Prefab "{49A9C6342243EDF4}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_ScubaHood.et"
+    }
+    RHS_LoadoutSlotInfo NVG {
+     Prefab "{5976C6A208FDC4F6}Prefabs/Items/Equipment/HeadGear/Nightvision/GPNVG18_CHIMERA/44th_NVG_GPNVG18_Chimera_Low_WP_Blk.et"
+    }
+   }
+  }
+ }
+}

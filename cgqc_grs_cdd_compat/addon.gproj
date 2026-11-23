@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcgrscddcompat"
+ GUID "6A07527284A483EC"
+ TITLE "cgqc_grs_cdd_compat"
+ Dependencies {
+  "58D0FB3206B6F859" "6518EA4DDEA42E15" "66EA779D6A341108" "595F2BF2F44836FB"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

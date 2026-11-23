@@ -1,0 +1,45 @@
+GenericEntity : "{A24D6E22F32299B0}Prefabs/Weapons/Magazines/PmagUnwindowed/Magazine_556x45_PMAG_30rnd_Base.et" {
+ ID "CA6BE4D6BB2D1077"
+ components {
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    ItemDisplayName UIInfo "{51FEE38527BFEA5B}" {
+     Name "MP7 40rnd Magazine"
+     Description "MP7 40rnd Magazine"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.124
+    }
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWellMP7 "{05B3A6C89B25311A}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "MP7 40rnd Magazine"
+    Description "MP7 40rnd Magazine"
+    m_sAmmoCaliber "4.6x30mm"
+    m_eAmmoTypeFlags AP
+   }
+   MaxAmmo 20
+   AmmoConfig "{975E1AA5460B1EE0}Configs/Weapons/Ammo/Ammo_4.6x30.conf"
+   AmmoMapping {
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{E3530024BCE7092C}Prefabs/Weapons/Magazines/PmagUnwindowed/MP720.xob"
+   Materials {
+    MaterialAssignClass "{6A0752E1FF18B061}" {
+     SourceMaterial "MP7_LP"
+     AssignedMaterial "{D60F027B295DF7D1}Assets/Rifle/HKMP7/HKMP7/Data/MP7_Mag.emat"
+    }
+    MaterialAssignClass "{6A0752E1FF18B055}" {
+     SourceMaterial "MP7_LP"
+     AssignedMaterial "{D60F027B295DF7D1}Assets/Rifle/HKMP7/HKMP7/Data/MP7_Mag.emat"
+    }
+   }
+  }
+ }
+ coords 927.613 39.071 2644.733
+}

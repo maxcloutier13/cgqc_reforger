@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{1537BEBD2E17D39C}Assets/Weapons/Magazines/M9/Data/M9_Mag_Sim.edds"
+ NMOMap "{6F04060FA09546D5}Assets/Weapons/Magazines/M9/Data/M9_Mag_NMO.edds"
+}

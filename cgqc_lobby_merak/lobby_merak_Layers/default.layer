@@ -1,0 +1,13 @@
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 5114.078 32.671 5155.046
+ m_iReconnectTime -1
+ m_bTeamSwitch 1
+ m_bRemoveRedundantUnits 1
+ m_bRemoveSquadMarkers 1
+ m_iFreezeTime 1000
+ m_bDisableGarbageSystem 1
+ m_bHolsterWeapon 1
+}
+SCR_AIGroup : "{69B676593EC1C06B}Prefabs/Groups/INDFOR/Group_GRIT_Assault_Playable.et" {
+ coords 9822.619 13.765 248.185
+}

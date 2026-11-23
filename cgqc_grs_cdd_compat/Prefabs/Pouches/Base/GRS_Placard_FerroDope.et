@@ -1,0 +1,167 @@
+GenericEntity {
+ ID "697CF622FFAE70DE"
+ components {
+  GRS_EquipmentStorageComponent "{697CF622FFAE70CE}" {
+   InitialStorageSlots {
+    GRS_EquipmentStorageSlot GRS_Rifle_Pouch_0 {
+    }
+    GRS_EquipmentStorageSlot BLK_One {
+     Offset -0.0492 0.0145 0.0317
+     Angles 7.0093 83.4296 -178.2709
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot Creedmore_1 {
+     Offset -0.0492 0.0145 0.0317
+     Angles 7.0093 83.4296 -178.2709
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell65Creedmore"
+    }
+    GRS_EquipmentStorageSlot ARC_1 {
+     Offset -0.0492 0.0145 0.0317
+     Angles 7.0093 83.4296 -178.2709
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot M40_1 {
+     Offset -0.0492 0.0145 0.0317
+     Angles 7.0093 83.4296 -178.2709
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWellM40"
+    }
+    GRS_EquipmentStorageSlot BLK_Two {
+     Offset 0.1128 0.0089 0.0218
+     Angles 6.3436 96.1033 -178.8886
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot Creedmore_2 {
+     Offset 0.1128 0.0089 0.0218
+     Angles 6.3436 96.1033 -178.8886
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell65Creedmore"
+    }
+    GRS_EquipmentStorageSlot ARC_2 {
+     Offset 0.1128 0.0089 0.0218
+     Angles 6.3436 96.1033 -178.8886
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot M40_2 {
+     Offset 0.1128 0.0089 0.0218
+     Angles 6.3436 96.1033 -178.8886
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWellM40"
+    }
+    GRS_EquipmentStorageSlot BLK_3 {
+     Offset 0.0321 0.0125 0.0265
+     Angles 5.5522 91.13627 179.4221
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell300BO"
+    }
+    GRS_EquipmentStorageSlot Creedmore_3 {
+     Offset 0.0321 0.0125 0.0265
+     Angles 5.5522 91.13627 179.4221
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell65Creedmore"
+    }
+    GRS_EquipmentStorageSlot ARC_3 {
+     Offset 0.0321 0.0125 0.0265
+     Angles 5.5522 91.13627 179.4221
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWell6mmARC"
+    }
+    GRS_EquipmentStorageSlot M40_3 {
+     Offset 0.0321 0.0125 0.0265
+     Angles 5.5522 91.13627 179.4221
+     ChildPivotID "snap_weapon"
+     DisablePhysicsInteraction 1
+     DeactivatePhysicsOnAtaching 1
+     AllowedItemTypes {
+      "RHS_RIFLE_AMMO" "ARMA_RIFLE_AMMO" "ARMA_MARKSMAN_AMMO"
+     }
+     m_AllowedTypeStrings {
+     }
+     m_sAllowedMagazineWellClass "MagazineWellM40"
+    }
+   }
+  }
+ }
+}

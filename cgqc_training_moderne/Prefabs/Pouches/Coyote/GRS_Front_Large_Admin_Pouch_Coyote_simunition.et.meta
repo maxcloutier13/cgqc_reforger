@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{07E8FD001BE21374}Prefabs/Pouches/Coyote/GRS_Front_Large_Admin_Pouch_Coyote_simunition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

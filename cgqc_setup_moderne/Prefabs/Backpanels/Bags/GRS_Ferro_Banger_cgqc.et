@@ -1,0 +1,116 @@
+GenericEntity {
+ ID "69E4331DEF399975"
+ components {
+  Persistence "{69E4331DEF399965}" {
+  }
+  SignalsManagerComponent "{69E4331DEF399959}" {
+  }
+  SoundComponent "{69E4331DEF399946}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+  }
+  GRS_EquipmentStorageComponent "{69E4331DEF399943}" {
+   Attributes SCR_ItemAttributeCollection "{69E4331DEF39994D}" {
+    ItemDisplayName UIInfo "{69E4331DEF39994A}" {
+     Name "GRS: Ferro Banger - MC"
+     Description "GRS: Ferro Banger - MC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69E4331DEF3999B6}" {
+     Weight 0.001
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 1400
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69E4331DEF3999B0}" {
+      CameraPreset Back
+      CameraOrbitAngles 0 0 180
+      CameraDistanceToItem 0.375
+      FOV 60
+      AspectRatio 1
+      PreviewWornModel 1
+     }
+    }
+    m_bDraggable 0
+    m_bVisible 0
+    m_bStackable 0
+   }
+   Priority 40
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 15000
+   MaxItemSize 20 20 20
+   InitialStorageSlots {
+    GRS_PatchStorageSlot GRS_Patch {
+     Offset -0.0035 -0.0477 -0.0067
+     Angles -11.3466 -1.618 -0.5858
+     Prefab "{1ED6C22A429CC8A9}Prefabs/Flag_Patches/flag_qc_camo.et"
+     AllowedItemTypes {
+      "GRS_PATCH"
+     }
+    }
+   }
+  }
+  MeshObject "{69E4331DEF3999A7}" {
+   Object "{C9F69C3F4A58B1AB}Assets/Backpanels/Bags/GRS_Ferro_Banger.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69E4331DEF3999A3}" {
+   Enabled 0
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69E4331DEF3999A1}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69E4331DEF3999A9}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69E4331DEF399997}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69E4331DEF39998E}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{69E4331DEF39998A}" {
+   AreaType GRS_Backpanel_Bags "{69E4331DEF3999F7}" {
+   }
+   WornModel "{C9F69C3F4A58B1AB}Assets/Backpanels/Bags/GRS_Ferro_Banger.xob"
+   ItemModel "{C9F69C3F4A58B1AB}Assets/Backpanels/Bags/GRS_Ferro_Banger.xob"
+   OffsetShoulderRight 0.095
+  }
+  ActionsManagerComponent "{69E4331DEF3999F5}" {
+   ActionContexts {
+    UserActionContext "{69E4331DEF3999F2}" {
+     ContextName "default"
+     Position PointInfo "{69E4331DEF3999FD}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69E4331DEF3999F9}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{69E4331DEF3999E7}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{69E4331DEF3999E3}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69E4331DEF3999E0}" {
+  }
+ }
+ coords -0.49 0.438 -2.707
+}

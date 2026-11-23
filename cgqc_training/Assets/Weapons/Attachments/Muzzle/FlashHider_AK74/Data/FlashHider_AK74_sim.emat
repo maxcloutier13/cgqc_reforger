@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{B179793F09252881}Assets/Weapons/Attachments/Muzzle/FlashHider_AK74/Data/FlashHider_AK74_Sim.edds"
+ NMOMap "{CB4AC18D87A7BDC8}Assets/Weapons/Attachments/Muzzle/FlashHider_AK74/Data/FlashHider_AK74_NMO.edds"
+}

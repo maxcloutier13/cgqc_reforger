@@ -1,0 +1,73 @@
+SCR_ChimeraCharacter : "{FDBB7219367F1ADB}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_Soldier.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Tank Driver"
+    IconSetName "EditableEntity_Character_Driver"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{92A0764C4EDF7C14}Prefabs/Weapons/Rifles/M16/Variants/Rifle_M16A2_carbine_OliveGreen_Solid.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{C8EAB0985B66824A}Prefabs/Characters/HeadGear/Helmet_DH132_01/Helmet_DH132A_01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{1D99585CF8E34D91}Prefabs/Characters/Uniforms/Suit_Tanker_US_01/Suit_Tanker_US_01.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{F05A35BCC44BE9FC}Prefabs/Characters/Footwear/TankerBoots_US_01/TankerBoots_US_01.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{506EF3B2F0A69D34}Prefabs/Characters/Vests/Vest_NAZ/Vest_NAZ.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{4F71E7468E78DDD2}Prefabs/Characters/Handwear/Gloves_Leather_01/Gloves_Leather_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69491C3B74495F2C}" {
+     TargetStorage "Jacket/Suit_Tanker_US_01.et"
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{6E35D94130954509}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE_FreeRoamBuilding_Gadget.et" "{51D9E3AEC8476BA4}Prefabs/Weapons/Flares/FlareStarParachute_M195_green.et" "{7C008E34CF0CDF1C}Prefabs/Items/Equipment/CigarettePacks/Cowboy_Killers_Cig_Pack.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et" "{14C1A0F061D9DDEE}Prefabs/Weapons/Grenades/M18/Smoke_M18_Violet.et" "{33B2DFDCD0EBA3DB}Prefabs/Items/Equipment/Kits/RepairKit_01/RepairKit_01_wrench.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C3B74D48F55}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+     PrefabsToSpawn {
+      "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C3998A0487E}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+    }
+    ItemsInitConfigurationItem "{69491C3999272B43}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+     PrefabsToSpawn {
+      "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69491C39A66BD0C4}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69491C39A2FE901F}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+    }
+    ItemsInitConfigurationItem "{69491C39C9BD1242}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+     PrefabsToSpawn {
+      "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{8D75122D5BF561FB}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_olive.et"
+     }
+    }
+   }
+  }
+ }
+}

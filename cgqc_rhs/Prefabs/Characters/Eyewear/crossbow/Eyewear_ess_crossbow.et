@@ -1,0 +1,9 @@
+GameEntity : "{916484D0EB7F9923}Prefabs/Characters/Core/AttachableHeadgear_Base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   AreaType ZEL_EyesArea "{5AD4C744691240D1}" {
+   }
+  }
+ }
+}

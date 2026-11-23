@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{75B9A7B67813A2F3}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_HeliPilot.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

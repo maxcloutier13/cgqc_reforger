@@ -1,0 +1,57 @@
+Vehicle UH1H_armed_sharkNose2 : "{00BC1E407D536A34}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_sharkNose.et" {
+ coords 3131.579 472.981 3032.248
+ angles 0 90.58 0
+ {
+  GameEnvironmentProbeEntity {
+   ID "654C8CC81C957F97"
+   coords 0 1.813 1.073
+  }
+  StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+   coords -0.008 -0.079 1.255
+   angles 0 2.426 0
+  }
+ }
+}
+$grp Vehicle : "{94DE32169691AC34}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
+ M151A2_transport_MERDC7 {
+  coords 3184.012 476.12 3076.493
+  angles 0 93.955 0
+ }
+ M151A2_transport_MERDC8 {
+  coords 3183.804 476.12 3073.501
+  angles 0 93.955 0
+ }
+}
+SCR_SpawnPoint : "{A7A28B8C2705583F}Prefabs/MP/Spawning/SpawnPoint_CGQC_UPO.et" {
+ coords 3170.062 473.312 3072.606
+ angles 0 -88.935 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "UPO"
+ }
+}
+GenericEntity MainBase : "{AABC7171EFB47E24}PrefabsEditable/Auto/E_TeleportFlag.et" {
+ coords 3166.773 473.344 3076.048
+ angles 0 3.253 0
+ {
+  GenericEntity : "{CE5AC0FAE1C260AE}PrefabsEditable/Auto/E_TeleportPoint.et" {
+   components {
+    SCR_EditableEntityComponent "{68612E145DE97F2B}" {
+     m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+      Name "Base Camp"
+     }
+    }
+    TELEP_TeleportPointComponent "{68594B4CD5F2732A}" {
+     m_sEditorName "Training Center"
+    }
+   }
+   coords 1.311 0 -2.162
+   angles 0 52.275 0
+  }
+ }
+}
+SCR_SpawnPoint : "{BA34D09C8405E3D5}Prefabs/MP/Spawning/SpawnPoint_CGQC.et" {
+ coords 3170.263 473.312 3074.691
+ angles 0 -88.935 0
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+ }
+}

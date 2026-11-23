@@ -1,0 +1,28 @@
+GameEntity : "{B6CC74F306F54A8D}Prefabs/Items/Equipment/Patches/Patch_Base.et" {
+ ID "5DB09136945FC6DB"
+ components {
+  InventoryItemComponent "{5DB09136B1C985CE}" {
+   Attributes SCR_ItemAttributeCollection "{5DB09136B1C985C1}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{5DB09136B1C985EB}" {
+     Name "Camo QC patch "
+    }
+   }
+  }
+  MeshObject "{5DB09136B1C985B5}" {
+   Materials {
+    MaterialAssignClass "{694AC670DDDF06D1}" {
+     SourceMaterial "patch_us_flag"
+     AssignedMaterial "{C62D65717C6E6471}Assets/Characters/Patches/rhs_qc_camo.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5DB09136B1C9859A}" {
+   WornMaterialsOverride {
+    "{C62D65717C6E6471}Assets/Characters/Patches/rhs_qc_camo.emat"
+   }
+   ItemMaterialsOverride {
+    "{C62D65717C6E6471}Assets/Characters/Patches/rhs_qc_camo.emat"
+   }
+  }
+ }
+}

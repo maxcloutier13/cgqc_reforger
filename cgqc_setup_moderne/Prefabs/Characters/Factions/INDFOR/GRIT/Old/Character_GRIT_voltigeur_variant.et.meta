@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8A5F3A80FBE8F41E}Prefabs/Characters/Factions/INDFOR/GRIT/Character_GRIT_voltigeur_variant.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

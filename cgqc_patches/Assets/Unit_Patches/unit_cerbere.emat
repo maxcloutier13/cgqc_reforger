@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{E293968D4FB8DEAE}Assets/Rectangle_Patches/patch_unit_cerbere.edds"
+}

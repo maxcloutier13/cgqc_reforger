@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqclobbymerak"
+ GUID "69FF3C349BCBB090"
+ TITLE "cgqc_lobby"
+ Dependencies {
+  "58D0FB3206B6F859" "68C628334C58DEFD" "69B892F1624CEEDA"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

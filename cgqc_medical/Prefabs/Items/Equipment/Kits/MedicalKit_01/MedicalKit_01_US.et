@@ -2,6 +2,7 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
  ID "508AB2013EEE1E00"
  components {
   ACE_Medical_MedicalKitInventoryStorageComponent "{5E4E8A7876A50FDC}" {
+   Priority -50
    MultiSlots {
     MultiSlotConfiguration "{66E81CB8294EABB5}" {
      NumSlots 15
@@ -13,7 +14,7 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      NumSlots 25
     }
     MultiSlotConfiguration "{66E81CBA65FAD3C2}" {
-     NumSlots 5
+     NumSlots 9
     }
     MultiSlotConfiguration "{66E83E2AD137C97B}" {
      NumSlots 2
@@ -40,8 +41,34 @@ GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/Me
      SlotTemplate InventoryStorageSlot Morphine {
       Prefab "{79379D4E43B29B88}Prefabs/Items/Medicine/ChestSeal/ACE_Medical_ChestSeal.et"
      }
+     NumSlots 6
+    }
+    MultiSlotConfiguration "{694B362DE590C208}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{D8326FEE52670D2A}Prefabs/Characters/Handwear/Gloves_Blue/Medical_Gloves_Blue_Base.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{694B362D3F683B47}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{395D1185E649EDE2}Prefabs/Characters/Handwear/Gloves_Purple/Medical_Gloves_Purple_Base.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{694B362D3617D986}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{C07A52D13353AB2F}Prefabs/Clothing/ZEL_FaceClothing_Base.et"
+     }
+     NumSlots 2
+    }
+    MultiSlotConfiguration "{6A042C802CF9A3C0}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{632CAEF08C102091}Prefabs/Items/Medicine/Splint_01/GC_Splint_01_Base.et"
+     }
+     NumSlots 4
     }
    }
+   m_fMaxWeight 20
   }
  }
 }

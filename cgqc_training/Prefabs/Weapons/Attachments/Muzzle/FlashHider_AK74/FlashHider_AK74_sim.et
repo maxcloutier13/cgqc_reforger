@@ -1,0 +1,13 @@
+GenericEntity : "{F167E88D33F420C4}Prefabs/Weapons/Attachments/Muzzle/FlashHider_AK74/FlashHider_AK74_base.et" {
+ ID "4BA426CBAED42A14"
+ components {
+  MeshObject "{5C46D45E03D7AD12}" {
+   Materials {
+    MaterialAssignClass "{69BD1C6F31F976F0}" {
+     SourceMaterial "FlashHider_AK74"
+     AssignedMaterial "{D7C2D7DAF6BDB98C}Assets/Weapons/Attachments/Muzzle/FlashHider_AK74/Data/FlashHider_AK74_sim.emat"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqctestinging"
+ GUID "69EB2A488BDE3DF7"
+ TITLE "cgqc_testinging"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "628F720BC527C143"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

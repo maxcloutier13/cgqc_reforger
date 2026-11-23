@@ -1,5 +1,0 @@
-HDREffect {
- BloomUseThreshold 1
- BloomThreshold 2
- BloomSteepness 1.2
-}

@@ -1,0 +1,3 @@
+SubScene {
+ Parent "{EFEDDC42A55801AA}worlds/GameMaster/GameMaster.ent"
+}

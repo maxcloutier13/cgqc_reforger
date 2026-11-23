@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BE471BFC047EC91C}Configs/GroupPresets/CGQC/GroupPreset_CGQC_Pegase.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F8517A07AD72F5FD}Configs/EntityCatalog/CGQC/Characters_EntityCatalog_GRIT.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

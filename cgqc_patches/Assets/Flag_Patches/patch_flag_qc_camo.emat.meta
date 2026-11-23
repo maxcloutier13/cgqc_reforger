@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7BCD17EBCA6FB4D4}Assets/Flag_Patches/patch_flag_qc_camo.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

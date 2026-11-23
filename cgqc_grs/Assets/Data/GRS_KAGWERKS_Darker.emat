@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.474 0.474 0.474 1
+ BCRMap "{13E4FC33CFC19201}Assets/Kagwerks/Data/Textures/KagwerksDocklite_baseColor.edds"
+ NMOMap "{592CA41276B335E5}Assets/Kagwerks/Data/Textures/KagwerksDocklite_normal.edds"
+}

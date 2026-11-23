@@ -1,0 +1,75 @@
+GenericEntity : "{3A49A5DCEDAB7186}Prefabs/Props/PropsHeine/Patriot_AirDefense.et" {
+ coords 6313.599 69.011 4250.231
+}
+Vehicle AUS_UH60_armed2 : "{48F288F5BFF10D8B}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_armed.et" {
+ coords 6642.457 61.679 3923.857
+ angles 0 -2.959 0
+}
+$grp Vehicle : "{521F48CA9E635A54}Vehicles/ATV/ATV2p.et" {
+ ATV2p1 {
+  coords 6929.119 41.122 3938.276
+  angles 0 126.034 0
+ }
+ ATV2p2 {
+  coords 6928.062 41.122 3936.771
+  angles 0 126.034 0
+ }
+}
+Turret : "{54838E573DCDC027}Prefabs/Weapons/Howitzers/M777/M777_Howitzer.et" {
+ coords 5767.193 135.063 3076.083
+ angles 0 -10.792 0
+}
+Vehicle RHIB_Transport1 : "{90FB4A19890F9E5C}Prefabs/Vehicles/Naval/RHIB/RHIB_Transport.et" {
+ coords 7114.169 0 3869.545
+}
+$grp Vehicle : "{A4533B5AC50A57E6}Vehicles/ZAG650/ZAG650132p_ZDF.et" {
+ ZAG650132p_ZDF1 {
+  coords 6956.739 41.122 3928.982
+  angles 0 -175.55 0
+ }
+ ZAG650132p_ZDF2 {
+  coords 6955.426 41.122 3927.938
+  angles 0 -175.55 0
+ }
+}
+Vehicle MH6M1 : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ coords 6893.354 41.094 3949.744
+ angles 0 -171.148 0
+}
+Vehicle RHIB_Gunboat1 : "{DDE009B6A29873EE}Prefabs/Vehicles/Naval/RHIB/RHIB_Gunboat.et" {
+ coords 7118.208 0 3868.174
+}
+$grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+ {
+  coords 6381.785 68.936 4337.175
+  angles 0 -112.199 0
+  {
+   $grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+    {
+     coords 57.771 0.003 1.187
+    }
+    {
+     coords 114.044 0.002 2.196
+    }
+   }
+  }
+ }
+ {
+  coords 6893.369 41.093 3950.441
+  angles 0 9.422 0
+ }
+ {
+  coords 6202.912 68.938 4363.678
+  angles 0 66.898 0
+ }
+ {
+  coords 6784.762 14.376 4172.168
+ }
+ {
+  coords 6942.083 13.406 3678.403
+ }
+}
+SCR_DestructibleBuildingEntity : "{EEEBF095E1B611CF}Prefabs/Structures/Industrial/Sheds/ShedMetal_02/ShedMetal_02_long_base.et" {
+ coords 6875.104 -0.076 3911.354
+ angles 0 -82.204 0
+}

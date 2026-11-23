@@ -14,9 +14,6 @@ GenericEntity : "{C1A2BB91E2E4A8D3}Prefabs/Weapons/Warheads/Warhead_Grenade.et" 
       BaseExplosionDamage "{5D8D1EB3EBB36077}" {
        DamageValue 0
       }
-      ExplosionImpulseEffect "{5E6D1CEE09A33086}" {
-       DamageValue 0
-      }
       ExplosionFragmentationEffect "{567CBC1D7AB652C7}" {
        DamageValue 0
       }

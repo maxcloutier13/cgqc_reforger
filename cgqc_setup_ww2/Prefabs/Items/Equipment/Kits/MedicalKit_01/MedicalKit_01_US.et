@@ -1,0 +1,44 @@
+GenericEntity : "{46FD263F0F368A92}Prefabs/Items/Equipment/Kits/MedicalKit_01/MedicalKit_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  ACE_Medical_MedicalKitInventoryStorageComponent "{5E4E8A7876A50FDC}" {
+   MultiSlots {
+    MultiSlotConfiguration "{66E83E2AC236DEDE}" {
+     SlotTemplate InventoryStorageSlot Phenylephrine {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{66E83E2AE241C25A}" {
+     SlotTemplate InventoryStorageSlot Metoprolol {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{68B353AB20924DAF}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{68FB03BA62A557F3}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{694B362DE590C208}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{694B362D3F683B47}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Enabled 0
+     }
+    }
+    MultiSlotConfiguration "{694B362D3617D986}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Enabled 0
+     }
+    }
+   }
+  }
+ }
+}

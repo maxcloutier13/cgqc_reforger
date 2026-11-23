@@ -1,0 +1,127 @@
+SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab ""
+      }
+      SCR_EquipmentStorageSlot PRD_DiveComputerSlot {
+       Prefab "{53CAAFD5D8F3743B}Prefabs/PRD_Subnautical/Equipment/DiveComputer/PRD_DiveComputer.et"
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Combat Diver"
+    IconSetName "EditableEntity_Character_Rifleman"
+    m_Image "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels {
+     SIZE_M ROLE_RIFLEMAN
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{6AE941184EFD4643}" {
+    m_aVariants {
+     SCR_EditableEntityVariant "{6AE941184EFD4648}" {
+      m_sVariantPrefab "{EA158B6EB6A24B4B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman_Variant_1.et"
+     }
+    }
+   }
+  }
+  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
+   WeaponTemplate "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+   WeaponSlotIndex 0
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponSlotIndex 1
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{9A13426DEF21CEF1}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/ION/Helmet_OPSCORE_SF_BLK_Diving.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A4A36EAAFDA6A5B0}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_WetsuitTop.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{5027BA88F0FB74D6}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_WetsuitPants.et"
+    }
+    SCR_FeetLoadoutSlotInfo Boots {
+     Prefab "{19D73B2078290077}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_DiveBoots.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{914C822A5373C38F}Prefabs/PRD_Subnautical/Equipment/Scuba/GasVariants/PRD_ScubaTank_Nitrox32_LowVis.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{A406465522493B56}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_DiveGloves.et"
+    }
+    LoadoutSlotInfo PRD_Flippers {
+     Prefab "{6558E0C7CDC663BF}Prefabs/PRD_Subnautical/Equipment/Scuba/PRD_DiveFins.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     TargetStorage "Vest/PRD_ScubaTank_Nitrox32_LowVis.et/Pouches/scuba_pouch.et"
+    }
+    ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/Suspenders/Vest_ALICE_suspenders_2.et"
+     TargetPurpose 64
+     PrefabsToSpawn +{
+     }
+    }
+    ItemsInitConfigurationItem "{6AE941184EFD46B8}" {
+     Enabled 0
+     TargetStorage "Vest/PRD_ScubaTank_Nitrox32_LowVis.et/Pouches/scuba_pouch.et"
+     TargetPurpose 64
+     PrefabsToSpawn {
+      "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AE941184EFD46A2}" {
+     Enabled 0
+     TargetStorage "Vest/Vest_ALICE_rifleman.et"
+     TargetPurpose 64
+     PrefabsToSpawn {
+      "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AE941184EFD46DA}" {
+     TargetStorage "Vest/PRD_ScubaTank_Nitrox32_LowVis.et/Pouches/scuba_pouch.et"
+     PrefabsToSpawn {
+      "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AE941184EFD46D8}" {
+     TargetStorage "Vest/PRD_ScubaTank_Nitrox32_LowVis.et/Pouches/scuba_pouch.et"
+     PrefabsToSpawn {
+      "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AE941184EFD46C6}" {
+     TargetStorage "Vest/PRD_ScubaTank_Nitrox32_LowVis.et/Pouches/scuba_pouch.et"
+     PrefabsToSpawn {
+      "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
+     }
+    }
+   }
+  }
+ }
+ coords 0 0 0
+}

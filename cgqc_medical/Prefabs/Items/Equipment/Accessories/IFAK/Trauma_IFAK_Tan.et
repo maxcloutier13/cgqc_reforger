@@ -17,7 +17,7 @@ GenericEntity : "{751107CE717C4C9B}Prefabs/Items/Equipment/Accessories/IFAK/IFAK
      SlotTemplate EquipmentStorageSlot C {
       Prefab "{00E36F41CA310E2A}Prefabs/Items/Medicine/SalineBag_01/SalineBag_US_01.et"
      }
-     NumSlots 2
+     NumSlots 4
     }
     MultiSlotConfiguration "{685043611373DD05}" {
     }
