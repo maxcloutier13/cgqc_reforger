@@ -2,43 +2,43 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{69794BCBF7C72EA4}" {
-   m_sLoadoutResource "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_0_Base_Moderne.et"
+   m_sLoadoutResource "{80AE18B31FA21034}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_0_Base_2027.et"
   }
   SCR_FactionPlayerLoadout "{68B908330A1951D9}" {
    m_sLoadoutName "Soldat"
-   m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_1_Rifleman_Moderne.et"
+   m_sLoadoutResource "{4898FCF4BB705D12}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_1_Rifleman_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A4F5D50C}" {
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A5A62750}" {
-   m_sLoadoutResource "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_LMG_Moderne.et"
+   m_sLoadoutResource "{00ADACA6736212F7}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_2_LMG_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A298AAFC}" {
    m_sLoadoutName "MAT"
-   m_sLoadoutResource "{089C2D54DD6851C6}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_MAT_Moderne.et"
+   m_sLoadoutResource "{089C2D54DD6851C6}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_2_MAT_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF1A3F3D20A}" {
-   m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_Medic_Moderne.et"
+   m_sLoadoutResource "{91181717CEA198E4}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_2_Medic_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{6950ED3463EE58D2}" {
    m_sLoadoutName "Marksman"
-   m_sLoadoutResource "{F6CC5534AB298633}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_Marksman_Moderne.et"
+   m_sLoadoutResource "{F6CC5534AB298633}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_2_Marksman_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFFB3BABCB1}" {
-   m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_2_TL_Moderne.et"
+   m_sLoadoutResource "{D2EC8D808A5CD946}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_2_TL_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DF07E6889CC}" {
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFFC5F4FA5C}" {
-   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Character_CGQC_3_SL_Moderne.et"
+   m_sLoadoutResource "{6C3086AEE87B91B5}Prefabs/Characters/Factions/INDFOR/CGQC/Hoplite/Character_CGQC_3_SL_2027.et"
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFE15F74B63}" {
@@ -51,7 +51,6 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_FactionPlayerLoadout "{69510DFFB04BDC03}" {
-   m_sAffiliatedFaction "CGQC_OLD"
   }
   SCR_PlayerArsenalLoadout "{696D113D358F3EAE}" {
    m_sLoadoutName "GRIT  Saved Loadout"

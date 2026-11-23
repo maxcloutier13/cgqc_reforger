@@ -213,7 +213,7 @@ class CGQC_Scripts
 				//PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
 	
 				// Stash resolved beret on the swap component so F9 knows what to toggle to
-				CGQC_HeadgearSwapComponent swap = CGQC_HeadgearSwapComponent.Cast(playerEntity.FindComponent(CGQC_HeadgearSwapComponent));
+				/* CGQC_HeadgearSwapComponent swap = CGQC_HeadgearSwapComponent.Cast(playerEntity.FindComponent(CGQC_HeadgearSwapComponent));
 				if (swap)
 				{
 					ResourceName assignedBeret = CGQC_getBeret.GetBeretForRank(desiredRank);
@@ -223,7 +223,7 @@ class CGQC_Scripts
 				else
 				{
 					Print("[CGQC] initializePlayer: no CGQC_HeadgearSwapComponent found, F9 toggle will not know this player's beret");
-				}
+				}*/
 	
 				// Custom beret
 				GetGame().GetCallqueue().CallLater(CGQC_getBeret.getBeret, 2000, false, playerEntity, desiredRank);
