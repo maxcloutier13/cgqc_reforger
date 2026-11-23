@@ -18,5 +18,5 @@ cgqc_tvtlobby/test_lobby_Layers/tvtLobby_Logic.layer
 cgqc_tvtlobby/test_lobby_Layers/tvtLobby_Markers.layer
 cgqc_tvtlobby/test_lobby_Layers/tvtLobby_Zones.layer
 cgqc_tvtlobby/test_lobby_Layers/Vehicles_CGQC.layer
-cgqc_testing/addon.gproj
+cgqc_testing/*
 cgqc_testing/UserMaps.desc

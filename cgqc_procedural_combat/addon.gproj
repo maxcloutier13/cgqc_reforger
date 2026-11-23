@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcproceduralcombat"
+ GUID "6AED3D6B85E08B81"
+ TITLE "cgqc_procedural_combat"
+ Dependencies {
+  "58D0FB3206B6F859" "66BB20CA43330BC2" "67352E1E1F06E599"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
