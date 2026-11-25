@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcrouteplanner"
+ GUID "6AF314AD864DF803"
+ TITLE "cgqc_route_planner"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

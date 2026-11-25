@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcfactionmanager"
+ GUID "6AF034F988C6DAAA"
+ TITLE "cgqc_faction_manager"
+ Dependencies {
+  "58D0FB3206B6F859" "6C97295FEFDE9974"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
