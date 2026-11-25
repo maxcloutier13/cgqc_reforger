@@ -42,14 +42,14 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 		}
 		else
 		{
-			Print("[CGQC_ProtectedBackpack] Ruck is currently ON THE GROUND", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Ruck is currently ON THE GROUND");
 		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	override void OnDelete(IEntity owner)
 	{
-		Print("[CGQC_ProtectedBackpack] OnDelete called", LogLevel.NORMAL);
+		CGQC_Log.Dbg("[CGQC_ProtectedBackpack] OnDelete called");
 		
 		InventoryItemComponent itemComp = InventoryItemComponent.Cast(
 			owner.FindComponent(InventoryItemComponent)
@@ -58,7 +58,7 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 		if (itemComp && itemComp.m_OnParentSlotChangedInvoker)
 		{
 			itemComp.m_OnParentSlotChangedInvoker.Remove(OnParentSlotChanged);
-			Print("[CGQC_ProtectedBackpack] Unsubscribed from events", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Unsubscribed from events");
 		}
 		
 		super.OnDelete(owner);
@@ -71,7 +71,7 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 		// If newSlot is null, the item was dropped to the ground
 		if (!newSlot && !m_bIsProtected)
 		{
-			Print("[CGQC_ProtectedBackpack] Ruck has been DROPPED to ground!", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Ruck has been DROPPED to ground!");
 			
 			IEntity owner = GetOwner();
 			if (owner)
@@ -81,31 +81,31 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 		}
 		else if (newSlot)
 		{
-			Print("[CGQC_ProtectedBackpack] Ruck was picked up or moved", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Ruck was picked up or moved");
 		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	protected void ProtectFromGarbage(IEntity owner)
 	{
-		Print("[CGQC_ProtectedBackpack] ProtectFromGarbage called", LogLevel.NORMAL);
+		CGQC_Log.Dbg("[CGQC_ProtectedBackpack] ProtectFromGarbage called");
 		
 		SCR_GarbageSystem garbageSystem = SCR_GarbageSystem.GetByEntityWorld(owner);
 		if (!garbageSystem)
 		{
-			Print("[CGQC_ProtectedBackpack] ERROR: GarbageSystem not found!", LogLevel.ERROR);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] ERROR: GarbageSystem not found!");
 			return;
 		}
 		
 		// Check if already inserted
 		if (garbageSystem.IsInserted(owner))
 		{
-			Print("[CGQC_ProtectedBackpack] Item is ALREADY tracked by garbage system, withdrawing...", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Item is ALREADY tracked by garbage system, withdrawing...");
 			garbageSystem.Withdraw(owner);
 		}
 		else
 		{
-			Print("[CGQC_ProtectedBackpack] Item is NOT tracked by garbage system", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] Item is NOT tracked by garbage system");
 		}
 		
 		// Blacklist permanently
@@ -114,11 +114,11 @@ class CGQC_ProtectedBackpackComponent : ScriptComponent
 		if (success)
 		{
 			m_bIsProtected = true;
-			Print("[CGQC_ProtectedBackpack] SUCCESS! Backpack protected from garbage collection", LogLevel.NORMAL);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] SUCCESS! Backpack protected from garbage collection");
 		}
 		else
 		{
-			Print("[CGQC_ProtectedBackpack] FAILED to blacklist backpack", LogLevel.ERROR);
+			CGQC_Log.Dbg("[CGQC_ProtectedBackpack] FAILED to blacklist backpack");
 		}
 	}
 	

@@ -10,7 +10,7 @@ GameEntity : "{6E8633D9C5802A4A}Prefabs/Characters/HeadGear/Hat_RadiovkaBeret_01
   SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
    Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
     ItemDisplayName UIInfo "{5244E443130B31B9}" {
-     Name "CGQC Beret Gris"
+     Name "CGQC Beret Gris Sous-Officier"
      Description "1LT"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{59DCE0608EB82CD1}" {

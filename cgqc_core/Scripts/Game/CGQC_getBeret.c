@@ -109,11 +109,11 @@ class CGQC_getBeret
 	        case SCR_ECharacterRank.CGQC_SERGENT:
 	            return "{B927727621FBF2CB}Prefabs/Characters/Berets/CGQC_4_Gray.et";
 	        case SCR_ECharacterRank.CGQC_ADJUDENT:
-	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_3_Green.et";
+	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_4_Gray.et";
 	        case SCR_ECharacterRank.CGQC_ADJUDENT_MAITRE:
-	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_3_Green.et";
+	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_4_Gray.et";
 	        case SCR_ECharacterRank.CGQC_ADJUDENT_CHEF:
-	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_3_Green.et";
+	            return "{FF6A3AE2B9F64309}Prefabs/Characters/Berets/CGQC_4_Gray.et";
 	        // Officiers
 	        case SCR_ECharacterRank.CGQC_SOUS_LIEUTENANT:
 	            return "{F8C081F5D0BAF251}Prefabs/Characters/Berets/CGQC_5_Blue.et";
