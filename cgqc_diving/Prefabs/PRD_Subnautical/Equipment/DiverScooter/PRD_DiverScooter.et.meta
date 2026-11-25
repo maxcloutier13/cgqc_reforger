@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{9A13426DEF21CEF1}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/ION/Helmet_OPSCORE_SF_BLK_Diving.et"
+ Name "{6AF6B0F400BB8170}Prefabs/PRD_Subnautical/Equipment/DiverScooter/PRD_DiverScooter.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

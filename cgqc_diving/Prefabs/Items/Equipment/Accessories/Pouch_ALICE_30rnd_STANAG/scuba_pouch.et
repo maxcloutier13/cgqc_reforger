@@ -13,7 +13,7 @@ GenericEntity : "{0B0D67BC8F43A052}Prefabs/Items/Equipment/Accessories/Pouch_ALI
   SCR_UniversalInventoryStorageComponent "{52A09474497068A0}" {
    MaxCumulativeVolume 5000
    MaxItemSize 20 20 50
-   m_fMaxWeight 20
+   m_fMaxWeight 26
   }
   BaseLoadoutClothComponent "{521AC04910AB9954}" {
    WornModel ""
