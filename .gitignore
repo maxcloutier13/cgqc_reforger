@@ -68,3 +68,4 @@ cgqc_route_planner/Scripts/WorkbenchGame/EnfusionMCP/EMCP_WB_Resources.c
 cgqc_route_planner/Scripts/WorkbenchGame/EnfusionMCP/EMCP_WB_ScriptEditor.c
 cgqc_route_planner/Scripts/WorkbenchGame/EnfusionMCP/EMCP_WB_SelectEntity.c
 cgqc_route_planner/Scripts/WorkbenchGame/EnfusionMCP/EMCP_WB_Terrain.c
+cgqc_rhs/.mcp.json

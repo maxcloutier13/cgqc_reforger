@@ -1,0 +1,12 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ Sort translucent
+ AlphaMul 0.836
+ BlendMode AlphaBlend
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ Emissive 1 1 1 0
+ EmissiveLV -2
+ BCRMap "{B02734000E0E7EEB}Assets/Items/Equipment/NVG/helstarstrobe/Data/helstar_BCR.edds"
+ OpacityMap "{31D2BB35CD05007E}Assets/Items/Equipment/NVG/helstarstrobe/Data/helstar_A.edds"
+ NMOMap "{88FF8F92D7792C75}Assets/Items/Equipment/NVG/helstarstrobe/Data/helstar_NMO.edds"
+}

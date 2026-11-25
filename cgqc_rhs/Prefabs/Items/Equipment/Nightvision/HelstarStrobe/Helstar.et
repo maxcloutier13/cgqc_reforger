@@ -1,0 +1,138 @@
+GenericEntity : "{A9EF01A7A6FE60CD}Prefabs/Weapons/Core/Throw_Base.et" {
+ ID "50D485E1435D6C72"
+ components {
+  BaseLightManagerComponent "{5DCC9CAD5E2A21F2}" {
+   LightSlots {
+    BaseLightSlot "{6A634927B387F046}" {
+     LightType SearchLight
+     LightPositionInfo EntitySlotInfo "{6A637D626980054A}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{0AFFDC76BA4DBFE3}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Green_HI_Point_LightEntity.et"
+    }
+    BaseLightSlot "{6A63B6E743AD3C97}" {
+     LightType Dashboard
+     LightPositionInfo EntitySlotInfo "{6A633C618409F3A1}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{0AFFDC76BA4DBFE3}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Green_HI_Point_LightEntity.et"
+    }
+    BaseLightSlot "{6A638B588B687951}" {
+     LightType HiBeam
+     LightPositionInfo EntitySlotInfo "{6A635DEA37DE76F2}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{35A8E4C91AA9E079}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Red_HI_Point_LightEntity.et"
+    }
+    BaseLightSlot "{6A63071567322076}" {
+     LightType Presence
+     LightPositionInfo EntitySlotInfo "{6A63B943A97F8D83}" {
+      Offset 0.0001 -0.001 0.029
+     }
+     LightPrefab "{35A8E4C91AA9E079}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Red_HI_Point_LightEntity.et"
+    }
+   }
+  }
+  MeshObject "{5DB09136B1C985B5}" {
+   Materials {
+    MaterialAssignClass "{6A6366B71CC734A4}" {
+     SourceMaterial "OpacityStrob"
+     AssignedMaterial "{6A63CEFC9ED2ECAF}Assets/Items/Equipment/NVG/helstarstrobe/Data/OpacityStrob_HI.emat"
+    }
+   }
+  }
+  RHS_HelstarComponent "{5DD1588BD52BC7F3}" {
+   m_iAvailableLightTypes {
+    Head Brake Rear SearchLight Dashboard Reverse HiBeam Presence
+   }
+  }
+  ActionsManagerComponent "{6D23670EA6111D9B}" {
+   additionalActions {
+    RHS_LightDevice_ChangeLightTypeAction "{621B2B977E5FFC89}" {
+     UIInfo UIInfo "{621B2B977A1FE152}" {
+      Name "Mode A1"
+      Description "IR Stable"
+     }
+     "Sort Priority" 1
+     m_eLightType Head
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{621B2B97A71C902F}" {
+     UIInfo UIInfo "{621B2B977A1FE152}" {
+      Name "Mode A2"
+      Description "IR Flash"
+     }
+     "Sort Priority" 2
+     m_eLightType Brake
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{621B2B97FA4FF1D4}" {
+     UIInfo UIInfo "{621B2B977A1FE152}" {
+      Name "Mode B1"
+      Description "Green Stable"
+     }
+     "Sort Priority" 3
+     m_eLightType Rear
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{621B2B97F6CEDD68}" {
+     UIInfo UIInfo "{621B2B977A1FE152}" {
+      Name "Mode B2"
+      Description "Green HI Stable"
+     }
+     "Sort Priority" 4
+     m_eLightType SearchLight
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{6A635EF74F0740E6}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A63E312786E4E5E}" {
+      Name "Mode B3"
+      Description "Green HI Flash"
+     }
+     "Sort Priority" 5
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Dashboard
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{6A63E516DCAF6D4F}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A63CAC5607CC9BF}" {
+      Name "Mode C1"
+      Description "Red Stable"
+     }
+     "Sort Priority" 6
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Reverse
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{6A637EAE62D9AA86}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A63942471D386E7}" {
+      Name "Mode C2"
+      Description "Red HI Stable"
+     }
+     "Sort Priority" 7
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType HiBeam
+    }
+    RHS_LightDevice_ChangeLightTypeAction "{6A638BABA78F5DDB}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A63215A2B39AFC9}" {
+      Name "Mode C3"
+      Description "Red HI Flash"
+     }
+     "Sort Priority" 8
+     m_sPageId "Modes"
+     m_bIgnoreInRadial 0
+     m_eLightType Presence
+    }
+   }
+  }
+ }
+}

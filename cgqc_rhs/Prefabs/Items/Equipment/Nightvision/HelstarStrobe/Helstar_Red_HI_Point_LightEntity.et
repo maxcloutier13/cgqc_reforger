@@ -1,0 +1,5 @@
+RHS_LightEntity : "{0AFFDC76BA4DBFE3}Prefabs/Items/Equipment/Nightvision/HelstarStrobe/Helstar_Green_HI_Point_LightEntity.et" {
+ ID "5CFADC1F39A94BCD"
+ Color 1 0.02 0.02 1
+ m_cLightColor 1 0.02 0.02 1
+}

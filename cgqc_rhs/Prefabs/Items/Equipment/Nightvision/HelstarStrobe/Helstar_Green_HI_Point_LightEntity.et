@@ -1,0 +1,17 @@
+RHS_LightEntity : "{BC02D6EE235EC648}Prefabs/Weapons/Attachments/Lasers/anpeq16/ANPEQ16_Iluminator_LightEntity.et" {
+ ID "5CFADC1F39A94BCD"
+ Color 0 1 0.2 1
+ LV -0.5
+ ClipEV -10
+ Type Point
+ Radius 6
+ DistanceAttenuation 2
+ ShowSource 1
+ SourceSize 1
+ LensFlareType Automatic
+ LensFlareScale 0.8
+ m_bCanAdjustLV 0
+ m_bCanAdjustConeAngle 0
+ m_fLV -0.5
+ m_cLightColor 0 1 0.2 1
+}
