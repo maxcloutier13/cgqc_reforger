@@ -13,6 +13,7 @@ jobs:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GH_TOKEN: ${{ github.token }}
           TITLE: ${{ github.event.pull_request.title }}
+          BODY: ${{ github.event.pull_request.body }}
           NUMBER: ${{ github.event.pull_request.number }}
           URL: ${{ github.event.pull_request.html_url }}
           COMMITS_URL: ${{ github.event.pull_request.commits_url }}
@@ -21,9 +22,21 @@ jobs:
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             "$COMMITS_URL?per_page=100" \
-            | jq -r '.[] | "• `\(.sha[0:7])` \(.commit.message | split("\n")[0])"' \
-            | head -c 3800)
-          jq -n --arg title "Merged: #$NUMBER $TITLE" --arg url "$URL" --arg desc "$commits" \
-            '{embeds:[{title:($title|.[0:256]), url:$url, description:$desc, color:5763719}],
-              allowed_mentions:{parse:[]}}' \
+            | jq -r '.[] | "• `\(.sha[0:7])` \(.commit.message | split("\n")[0])"')
+          jq -n \
+            --arg title "Update #$NUMBER - $TITLE" \
+            --arg url "$URL" \
+            --arg body "$BODY" \
+            --arg commits "$commits" '
+            ($body | gsub("\r"; "") | .[0:1500]) as $b
+            | ($commits | .[0:(3900 - ($b | length) - 2)]) as $c
+            | {
+                embeds: [{
+                  title: ($title | .[0:256]),
+                  url: $url,
+                  description: (if $b == "" then $c else $b + "\n\n" + $c end),
+                  color: 5763719
+                }],
+                allowed_mentions: {parse: []}
+              }' \
           | curl -s -H "Content-Type: application/json" -d @- "$WEBHOOK"
