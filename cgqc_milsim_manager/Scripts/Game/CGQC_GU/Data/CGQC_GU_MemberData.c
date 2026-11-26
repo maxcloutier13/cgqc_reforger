@@ -92,6 +92,7 @@ class CGQC_GU_Member : Managed
 	string uid;
 	bool uidLinked;
 	string profileName;
+	string discordName;
 	string lastName;
 	string displayName;
 	string rank = "cdt";
@@ -116,6 +117,7 @@ class CGQC_GU_Member : Managed
 		ctx.WriteValue("uid", uid);
 		ctx.WriteValue("uidLinked", uidLinked);
 		ctx.WriteValue("profileName", profileName);
+		ctx.WriteValue("discordName", discordName);
 		ctx.WriteValue("lastName", lastName);
 		ctx.WriteValue("displayName", displayName);
 		ctx.WriteValue("rank", rank);
@@ -144,6 +146,7 @@ class CGQC_GU_Member : Managed
 
 		ctx.ReadValue("uidLinked", uidLinked);
 		ctx.ReadValue("profileName", profileName);
+		ctx.ReadValue("discordName", discordName);
 		ctx.ReadValue("lastName", lastName);
 		ctx.ReadValue("displayName", displayName);
 		ctx.ReadValue("rank", rank);

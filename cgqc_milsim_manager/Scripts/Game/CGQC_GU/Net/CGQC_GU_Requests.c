@@ -51,9 +51,6 @@ class CGQC_GU_Requests
 				return MemberGet(mgr, caller, payload);	// payload = target uid
 
 			case MEMBER_LIST:
-				if (!CGQC_GU_Permissions.HasRight(mgr.m_Catalogues, caller, CGQC_GU_Rights.MEMBERS_EDIT))
-					return new CGQC_GU_RequestResult(false, "forbidden");
-
 				return MemberList(mgr);
 		}
 
@@ -61,15 +58,12 @@ class CGQC_GU_Requests
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Full dossier: own dossier, or anyone's with members.edit.
+	//! Full dossier, read-only: every member may read every dossier (owner decision 2026-11-26).
 	protected static CGQC_GU_RequestResult MemberGet(CGQC_GU_Manager mgr, CGQC_GU_Member caller, string uid)
 	{
 		CGQC_GU_Member m = mgr.FindMember(uid);
 		if (!m)
 			return new CGQC_GU_RequestResult(false, "not_found");
-
-		if (m != caller && !CGQC_GU_Permissions.HasRight(mgr.m_Catalogues, caller, CGQC_GU_Rights.MEMBERS_EDIT))
-			return new CGQC_GU_RequestResult(false, "forbidden");
 
 		CGQC_GU_JsonStringSaveContext ctx = new CGQC_GU_JsonStringSaveContext();
 		m.WriteTo(ctx);

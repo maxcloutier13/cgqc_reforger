@@ -52,8 +52,7 @@ class CGQC_GU_Manager
 		m_Catalogues.LoadAll(CGQC_GU_Storage.Dir("config"));
 
 		CGQC_GU_Storage.LoadAllMembers(m_mMembers);
-		if (m_mMembers.IsEmpty())
-			SeedMembers();
+		CGQC_GU_SeedRoster.Apply(this);
 
 		m_Situation = CGQC_GU_Storage.LoadSituation();
 		// The phase always starts at TEMPS LIBRE; the change log and unit status are kept.
@@ -99,19 +98,6 @@ class CGQC_GU_Manager
 		foreach (int playerId : players)
 		{
 			TryIdentify(playerId, false);
-		}
-	}
-
-	//------------------------------------------------------------------------------------------------
-	protected void SeedMembers()
-	{
-		array<ref CGQC_GU_Member> seeds = new array<ref CGQC_GU_Member>();
-		CGQC_GU_DefaultCatalogues.SeedMembers(seeds);
-		foreach (CGQC_GU_Member m : seeds)
-		{
-			m_mMembers.Insert(m.uid, m);
-			CGQC_GU_Storage.SaveMember(m);
-			CGQC_GU_Log.Info("Dossier initial créé : " + m.uid);
 		}
 	}
 

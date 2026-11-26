@@ -35,7 +35,10 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
 - **Player connection:** record the UID and profile name. If the UID is unknown, create a **Cadet** dossier and add an ENROLLMENT entry to the Registre.
 - **Permissions:** server-side checks for every action, by access group. Highest group only is used for display.
 - **RPC layer:** request → server check → reply or broadcast, plus replicated "light" state (phase, status, notice).
-- **Seed data:** Maj. Cloutier with UID `d7e9113c-f075-41c5-a72a-9ee5187dc723`, rank Maj., access Commandement, enlisted 2022.
+- **Seed data:** the initial roster import (`CGQC_GU_SeedRoster.c`, 18 members; owner decision 2026-11-26). It runs once per seed version, recorded in `state/seed.json`, and skips dossiers that already exist.
+  - Maj., LCol. and Col. get Commandement; everyone else gets Membre.
+  - Each imported member gets Q-MB on their join date.
+  - Turcotte uses the UID confirmed by the owner (`dce42da0-…`); the cgqc_core conf has a typo. Deslauriers, Xang and Frechette are UID-less `mbr_…` dossiers to link later.
 - **Done when:**
   - A player connecting creates `members/<uid>.json`.
   - A restart keeps all data.
@@ -66,6 +69,7 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
     - Fix: the manager now picks up players already connected when it starts (Game module CRC32 `5c4afbac`).
     - Re-test passed. Workbench returned the real UID `d7e9113c-…`, which bound to the seeded Maj. Cloutier dossier.
     - `profileName` (`silent1`) and `lastSeenAt` were written, and the client received the light state.
+  - [x] Roster import v1 (15:40, CRC32 `f6a523ee`): 17 dossiers added next to the existing one, 18 in total. Ranks match the confs, Majors are Commandement, Turcotte is linked, and Deslauriers, Xang and Frechette are not linked. `state/seed.json` was written.
   - [ ] Still to test with a second player: the path that creates a **new Cadet** dossier and its ENROLLMENT entry. This runs in the 2-client Peer Tool / dedicated-server test.
 
 ## Phase 1 — Pause menu + Dossier (core)
@@ -85,6 +89,83 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
   - **Lier un profil:** type a UID, or merge an auto-created Cadet.
 - Double-press confirmation on every write.
 - **Done when:** Commandement can promote, set access, link a profile and edit any member, online or offline, and a plain member can read their own dossier and edit their personal info.
+
+### Phase 1 — owner decisions (2026-11-26)
+
+1. **Screens:** try `.layout` files first.
+2. **Fonts:** use the closest fonts the game already has for now.
+3. **Images:** I prepare the PNGs; the owner imports them as `.edds`.
+4. **Who sees what:**
+   - **Everyone can read every dossier, read-only.** Editing follows rights.
+   - **Commandement:** everything.
+   - **Instructeur:** starts trainings and gives the qualifications they are authorized for.
+   - **Zeus is a designated access group**, assigned like the others.
+     - It gives the Gestion d'unité entry in the Échap menu (right `unit.menu`), changing the phase, and all operation and deployment functions.
+     - It has **no link to the game's Game Master role.** Players can still vote themselves GM on an empty map, and that must keep working untouched.
+     - So wherever the spec says "GM only", read it as the Zeus group (or Commandement).
+5. **Initial roster:** seed it from the AdminTools spreadsheet (join dates, Discord names) and the `cgqc_core/Configs/CGQC/*.conf` roster files (UIDs).
+   - The conf ranks win over the spreadsheet's.
+   - Members without a UID get a `mbr_…` key and the PROFIL NON LIÉ state.
+   - The cgqc_core rosters stay in use for now; the milsim manager takes over later.
+
+### Phase 1 — detailed breakdown
+
+Each step ends with `wb_validate_scripts` + `wb_reload` and a short Play test before the next step starts.
+
+**Questions to settle before any Phase 1 code**
+
+1. **How screens are built.**
+   - Option A (proposed): `.layout` files, one per screen, created with the enfusion-mcp layout tool. A one-time test layout in step 1b checks that Workbench registers them without a manual step.
+   - Option B, if registration needs a manual step from you each time: build the widgets in script. Nothing to register, but harder to adjust visually.
+2. **Fonts.** The game ships Roboto Condensed (dark screens) but not Tinos or Courier Prime (paper screens).
+   - Option A (proposed): import both into the addon. They are free Google Fonts under the OFL licence. This needs a one-time import in Workbench.
+   - Option B: use the closest fonts the game already has for v1.
+3. **Images.** These need a one-time import in Workbench as `.edds`. I prepare the PNGs at the right sizes; you import them.
+   - The CGQC logo, the UPO and GRIT patches, the round logos and the loading-screen background.
+   - Placeholder rank insignia: simple drawn shapes until real images exist.
+4. **Who sees other dossiers.**
+   - Proposed: the member drop-down and other people's fiches are for holders of `members.edit` (Commandement).
+   - Everyone else sees only their own dossier. That matches the Phase 1 "Done when".
+
+**Steps**
+
+- **1a — Server actions (no UI).** Each action checks rights on the server and writes the member file immediately.
+  - Actions:
+    - Self-edit of personal info.
+    - Set rank: writes a PROMOTION entry and a news item.
+    - Set access groups (`access.manage`).
+    - Display name / use profile name.
+    - Manual status (Actif / Inactif / MIA / KIA / auto).
+    - Manual Registre entry.
+    - + Nouveau dossier: a roster member who hasn't connected yet.
+    - Lier un profil: type a UID, or merge an auto-created Cadet into an existing dossier.
+  - Payloads become small JSON objects. Large replies (the member list) are split into chunks if needed.
+  - **Test:** `#gu` debug calls plus a client request from the log.
+- **1b — UI base.**
+  - A screen base class: open/close as widgets on top of the game, mouse cursor, input focus, and Échap to close.
+  - Dark and paper style helpers.
+  - The double-press button component: red with « APPUYER DE NOUVEAU » on the first press, executes on the second, and resets after a few seconds.
+  - **Test:** an empty test screen opens and closes cleanly in Play, and the game doesn't keep the inputs.
+- **1c — Pause menu.**
+  - `modded PauseMenuUI`, adding widgets the same way the game's own rally pause-menu code does.
+  - The CGQC logo replaces the title.
+  - The overview panel: header (rank and name, players online, phase and status), command notice, unit news, next rank with its criteria, and **OUVRIR MON DOSSIER**.
+  - Seat, role and the operation section stay empty until Phases 4–5.
+  - **Test:** the panel shows the live data; the vanilla buttons still work.
+- **1d — Dossier (paper).**
+  - The fiche: insignia, name, grade, highest access tag, online status, the collapsible personal section, and the footer `QC-<uid>-CGQC`.
+  - Registre tab: list, plus a manual entry for staff.
+  - Grade & accès tab: rank buttons, roles unlocked, next-promotion criteria, access checkboxes, display name, and the Profil Bohemia field with the LIÉ tag.
+  - « Modifier mes infos » for the member.
+  - The member drop-down for staff.
+  - Every save uses the double press.
+  - **Test:** with a member account and a Commandement account.
+- **1e — Unité → Membres (paper).**
+  - Columns available in Phase 1: online, name, rank, access, last connection, status. The instructor-for, seat and last-operation columns arrive with Phases 3–5.
+  - Filters: Tous / En ligne / Actifs / Inactifs / MIA / KIA.
+  - « + Nouveau dossier ».
+  - The PROFIL NON LIÉ tag opens Lier un profil (UID or Cadet merge).
+  - **Test:** the Phase 1 "Done when" on the Peer Tool with 2 clients. This also covers the remaining Phase 0 check, the new Cadet dossier.
 
 ## Phase 2 — Situation, calendar, news (GM)
 

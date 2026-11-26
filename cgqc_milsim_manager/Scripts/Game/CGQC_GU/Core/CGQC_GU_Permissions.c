@@ -14,6 +14,7 @@ class CGQC_GU_Rights
 	static const string NOTICE_EDIT = "notice.edit";
 	static const string SESSIONS_CREATE = "sessions.create";
 	static const string QUALS_EVALUATE_OWN = "quals.evaluate_own";
+	static const string UNIT_MENU = "unit.menu";						// Gestion d'unité entry in the Échap menu
 }
 
 class CGQC_GU_Permissions

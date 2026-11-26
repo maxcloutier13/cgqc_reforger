@@ -133,7 +133,7 @@ class CGQC_GU_DefaultCatalogues
 	static void AccessGroups(array<ref CGQC_GU_AccessGroup> groups)
 	{
 		groups.Insert(Group("commandement", "Commandement", 100, { "*" }));
-		groups.Insert(Group("zeus", "Zeus", 80, { "operations.manage", "deployments.manage", "phase.change", "orbat.assign" }));
+		groups.Insert(Group("zeus", "Zeus", 80, { "unit.menu", "operations.manage", "deployments.manage", "phase.change", "orbat.assign" }));
 		groups.Insert(Group("moderateur", "Modérateur", 60, { "notice.edit", "orbat.assign" }));
 		groups.Insert(Group("instructeur", "Instructeur", 40, { "sessions.create", "quals.evaluate_own" }));
 		groups.Insert(Group("membre", "Membre", 0, new array<string>()));
@@ -499,23 +499,5 @@ class CGQC_GU_DefaultCatalogues
 		grit.patch = "grit";
 		grit.state = "a_venir";
 		units.Insert(grit);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Seed members, written only when the members folder is empty (first boot).
-	static void SeedMembers(array<ref CGQC_GU_Member> members)
-	{
-		CGQC_GU_Member maj = new CGQC_GU_Member();
-		maj.uid = "d7e9113c-f075-41c5-a72a-9ee5187dc723";
-		maj.uidLinked = true;
-		maj.lastName = "Cloutier";
-		maj.displayName = "Cloutier";
-		maj.rank = "maj";
-		maj.accessGroups.Insert("commandement");
-		maj.enlistedOn = "2022";
-		maj.createdAt = CGQC_GU_Time.NowUtc();
-		CGQC_GU_RecordEntry e = maj.AddRecord("enlistment", "systeme");
-		e.on = "2022";
-		members.Insert(maj);
 	}
 }
