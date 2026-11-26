@@ -1,0 +1,8 @@
+GameProject {
+ ID "cgqcmilsimmanager"
+ GUID "6AF4539185C5E416"
+ TITLE "cgqc_milsim_manager"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
