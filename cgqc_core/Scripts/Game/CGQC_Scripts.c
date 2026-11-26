@@ -217,8 +217,13 @@ class CGQC_Scripts
 		if (!entry.m_sPatch.IsEmpty())
 			GetGame().GetCallqueue().CallLater(CGQC_PersonalPatch.ApplyPatch, 1500, false, playerEntity, entry.m_sPatch);
 	
+		// Personal belongings (identity item)
+		SCR_ExtendedCharacterIdentityComponent extIdentity = SCR_ExtendedCharacterIdentityComponent.Cast(playerEntity.FindComponent(SCR_ExtendedCharacterIdentityComponent));
+		if (extIdentity)
+			extIdentity.CGQC_SetRosterBio(entry);
+
 		// Rank
-	
+
 		SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
 		if (!rankComp)
 		{
