@@ -12,7 +12,7 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
    - Proposal: use **script-only `modded class`** extensions instead of editing prefabs or base configs.
      - `PauseMenuUI`: adds the overview panel and the GM-only entry.
      - `SCR_PlayerController`: client→server RPCs. A client can only call the server through an entity it owns.
-     - Game mode start: spawns our **own** manager entity prefab, which lives in this addon.
+     - Game mode start: `modded SCR_BaseGameMode` starts a script-only server manager. **No manager entity prefab** (owner decision 2026-11-26); the light state goes to clients through owner RPCs on `SCR_PlayerController`.
    - Modded classes chain with other mods instead of replacing them, so conflict risk is low. This is the only kind of change made to base-game behaviour.
 2. **How our screens open.**
    - Option A (**chosen**): create our layouts directly as widgets and manage input focus ourselves. This needs no change to `chimeraMenus.conf`.
@@ -47,7 +47,7 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
   - Compiles clean with `wb_validate_scripts` (0 errors) and `wb_reload` (Game module CRC32 `7151ea0a`).
   - **Not yet live-tested.**
 - **Changes from the plan text, to confirm with the owner:**
-  - **No manager entity prefab.** The light state (phase, Qualification, status, notice, players online) is pushed to each client through owner RPCs on `SCR_PlayerController`: on connection, and on every change. Nothing has to be spawned or registered, and there is no prefab or `.meta` to mint. The server-side manager is a script singleton started from `modded SCR_BaseGameMode.OnGameStart`.
+  - **No manager entity prefab** (approved by the owner 2026-11-26). The light state (phase, Qualification, status, notice, players online) is pushed to each client through owner RPCs on `SCR_PlayerController`: on connection, and on every change. Nothing has to be spawned or registered, and there is no prefab or `.meta` to mint. The server-side manager is a script singleton started from `modded SCR_BaseGameMode.OnGameStart`.
   - **No file rename.** The engine has no rename call, so a safe write is: write `x.json.tmp`, check that it parses, keep the old file as `x.json.bak`, then copy the `.tmp` into place. Loading falls back to `.tmp`, then to `.bak`.
   - **Defaults are seeded from script.** On first boot the default catalogues are written to `$profile:CGQC_GestionUnite/config/*.json` from `CGQC_GU_DefaultCatalogues.c`. After that the JSON files are the only source of truth. A broken file is never overwritten; defaults are used in memory and an error is logged.
   - **Request payloads.** RPC requests carry a plain string argument. Replies carry JSON.
@@ -57,10 +57,16 @@ Inputs: `01-Spec-GestionUnite.md` (what to build) and `02-Schema-Donnees.md` (da
 - **Identity:**
   - The UID is taken from `BackendApi` at registration and again at audit success.
   - If no UID arrives after `devUidDelaySeconds`, the dev UID `dev-<nom>` is used. This only happens outside a dedicated server, or when `allowDevUid` is true.
-- **Gates for "Done when":**
-  - [ ] Connecting creates `members/<uid>.json`.
-  - [ ] A restart keeps the data.
-  - [ ] `#gu list` / `show` / `set` work.
+- **Gates for "Done when"** (Workbench Play test, 2026-11-26):
+  - [x] On first boot, the config, state and seed member files are created under `profile/CGQC_GestionUnite/`.
+  - [x] A restart keeps the data. `#gu set Cloutier rank cpl` survived Stop/Play, with a promotion entry in the Registre.
+  - [x] `#gu list` / `show` / `set` / `save` work in chat.
+  - [x] Connecting binds the player to their dossier.
+    - The first test failed: the Workbench host registers before `OnGameStart`, so that event was missed.
+    - Fix: the manager now picks up players already connected when it starts (Game module CRC32 `5c4afbac`).
+    - Re-test passed. Workbench returned the real UID `d7e9113c-…`, which bound to the seeded Maj. Cloutier dossier.
+    - `profileName` (`silent1`) and `lastSeenAt` were written, and the client received the light state.
+  - [ ] Still to test with a second player: the path that creates a **new Cadet** dossier and its ENROLLMENT entry. This runs in the 2-client Peer Tool / dedicated-server test.
 
 ## Phase 1 — Pause menu + Dossier (core)
 

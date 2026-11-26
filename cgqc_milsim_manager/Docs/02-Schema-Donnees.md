@@ -84,7 +84,7 @@ $profile:CGQC_GestionUnite/
 - **Training:** `id`, `type (ftx|training)`, `qual?`, `exercises[]`, `instructor`, `place`, `date`, `status`, `attendance[{uid, present, exercises{code: passed}, result}]`.
 - **Proposal:** `id`, `distinction`, `target{uid|callsign}`, `operationId?`, `proposedBy`, `on`, `reason`, `internalNote`, `status (pending|accepted|refused|returned)`, `decidedBy`, `decidedAt`.
 
-## Adjustments made while building Phase 0 (2026-11-26)
+## Adjustments made while building Phase 0 (2026-11-26, kept by the owner)
 
 - **Renamed fields.** `auto` and `ref` are reserved words in Enforce Script, so `status.auto` became `status.computed` and `record[].ref` became `record[].data`.
 - **No `null` values.** Empty values are `""`. The engine JSON writer can't write `null` for strings.
