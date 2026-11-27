@@ -1,0 +1,36 @@
+OverlayWidgetClass {
+ Name "GU_Field"
+ {
+  ImageWidgetClass "{7A1D3E5F90B2C431}" {
+   Name "Bg"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C432}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   Color 1 1 1 0.2
+  }
+  ImageWidgetClass "{7A1D3E5F90B2C433}" {
+   Name "EdgeB"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C434}" {
+    HorizontalAlign 3
+    VerticalAlign 2
+   }
+   Size 2 2
+  }
+  EditBoxWidgetClass "{7A1D3E5F90B2C435}" {
+   Name "Edit"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C436}" {
+    HorizontalAlign 3
+    VerticalAlign 1
+    Padding 8 6 8 6
+   }
+   Clipping True
+   style blank
+   "Font Size" 18
+   "Use placeholder text" 0
+   FontProperties FontProperties "{7A1D3E5F90B2C437}" {
+    Font "{E2CBA6F76AAA42AF}UI/Fonts/Roboto/Roboto_Regular.fnt"
+   }
+  }
+ }
+}

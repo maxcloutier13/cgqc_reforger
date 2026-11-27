@@ -1,0 +1,69 @@
+ButtonWidgetClass {
+ Name "GU_Button"
+  {
+  OverlayWidgetClass "{6211848E988EAC29}" {
+   Name "Body"
+   Slot ButtonWidgetSlot "{929FFCB89F0E122A}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+    {
+    ImageWidgetClass "{C2C775E7591DAC98}" {
+     Name "Bg"
+     Slot OverlayWidgetSlot "{8ED840C3AB6C86EE}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0.14 0.26 0.61 1
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C461}" {
+     Name "EdgeT"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C462}" {
+      HorizontalAlign 3
+      VerticalAlign 0
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C463}" {
+     Name "EdgeB"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C464}" {
+      HorizontalAlign 3
+      VerticalAlign 2
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C465}" {
+     Name "EdgeL"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C466}" {
+      HorizontalAlign 0
+      VerticalAlign 3
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C467}" {
+     Name "EdgeR"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C468}" {
+      HorizontalAlign 2
+      VerticalAlign 3
+     }
+     Size 1.5 1.5
+    }
+    TextWidgetClass "{909FF11834D3FD9E}" {
+     Name "Label"
+     Slot OverlayWidgetSlot "{44E430055E707CB7}" {
+      Padding 18 10 18 10
+      HorizontalAlign 1
+      VerticalAlign 1
+     }
+     Text "BOUTON"
+     "Font Size" 18
+     "Min Font Size" 18
+     Color 1 1 1 1
+     FontProperties FontProperties "{8A6EF1D7974A136B}" {
+      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     }
+    }
+   }
+  }
+ }
+}

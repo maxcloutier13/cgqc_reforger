@@ -1,0 +1,10 @@
+TextWidgetClass {
+ Name "GU_Text"
+ Text "-"
+ "Font Size" 18
+ "Min Font Size" 12
+ Color 0.02 0.02 0.01 1
+ FontProperties FontProperties "{E50B2F20B53C606C}" {
+  Font "{E2CBA6F76AAA42AF}UI/Fonts/Roboto/Roboto_Regular.fnt"
+ }
+}

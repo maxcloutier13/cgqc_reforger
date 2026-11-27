@@ -164,6 +164,31 @@ class CGQC_Scripts
 		return CGQC_PlayerRosterConfig.Cast(BaseContainerTools.CreateInstanceFromContainer(res.GetResource().ToBaseContainer()));
 	}
 
+	// Keeps the last loaded roster alive while its entries are in use
+	protected static ref CGQC_PlayerRosterConfig s_Roster;
+
+	//! Roster entry of a player, null if they aren't in the roster
+	static CGQC_PlayerEntry FindRosterEntry(string playerIdentityId)
+	{
+		s_Roster = CGQC_Scripts.LoadRosterConfig();
+		if (!s_Roster || !s_Roster.m_aRankRosters || playerIdentityId.IsEmpty())
+			return null;
+
+		foreach (CGQC_RankRosterConfig rankConfig : s_Roster.m_aRankRosters)
+		{
+			if (!rankConfig || !rankConfig.m_aPlayers)
+				continue;
+
+			foreach (CGQC_PlayerEntry entry : rankConfig.m_aPlayers)
+			{
+				if (entry && entry.m_sIdentityId == playerIdentityId)
+					return entry;
+			}
+		}
+
+		return null;
+	}
+
 	static void initializePlayer(IEntity playerEntity, int playerId, string playerIdentityId, bool isInitialised)
 	{
 		Print("[CGQC_InitializePlayer] Starting ->");
@@ -171,66 +196,61 @@ class CGQC_Scripts
 		string playerName = GetPlayerName(playerId);
 		PrintFormat("[CGQC_InitializePlayer] playerId: %1 - playerIdentityId: %2 - playerName: %3", playerId, playerIdentityId, playerName);
 	
-		CGQC_PlayerRosterConfig roster = CGQC_Scripts.LoadRosterConfig();
-		if (!roster || !roster.m_aRankRosters)
+		CGQC_PlayerEntry entry = CGQC_Scripts.FindRosterEntry(playerIdentityId);
+		if (!entry)
 		{
-			Print("[CGQC_InitializePlayer] No valid roster config found, skipping.");
+			Print("[CGQC_InitializePlayer] Player not in roster, skipping.");
 			return;
 		}
 	
-		foreach (CGQC_RankRosterConfig rankConfig : roster.m_aRankRosters)
+		PrintFormat("[CGQC_InitializePlayer] Matched: %1", entry.m_sLabel);
+	
+		// Admin features
+		if (!entry.m_sAdminTag.IsEmpty())
+			GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, entry.m_sAdminTag);
+	
+		// Custom identity
+		if (!entry.m_sHeadPrefab.IsEmpty() && !entry.m_sBodyPrefab.IsEmpty())
+			GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
+	
+		// Personal patch (cgqc_patches)
+		if (!entry.m_sPatch.IsEmpty())
+			GetGame().GetCallqueue().CallLater(CGQC_PersonalPatch.ApplyPatch, 1500, false, playerEntity, entry.m_sPatch);
+	
+		// Personal belongings (identity item)
+		SCR_ExtendedCharacterIdentityComponent extIdentity = SCR_ExtendedCharacterIdentityComponent.Cast(playerEntity.FindComponent(SCR_ExtendedCharacterIdentityComponent));
+		if (extIdentity)
+			extIdentity.CGQC_SetRosterBio(entry);
+
+		// Rank
+
+		SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
+		if (!rankComp)
 		{
-			if (!rankConfig || !rankConfig.m_aPlayers)
-				continue;
-	
-			foreach (CGQC_PlayerEntry entry : rankConfig.m_aPlayers)
-			{
-				if (!entry || entry.m_sIdentityId != playerIdentityId)
-					continue;
-	
-				PrintFormat("[CGQC_InitializePlayer] Matched: %1", entry.m_sLabel);
-	
-				// Admin features
-				if (!entry.m_sAdminTag.IsEmpty())
-					GetGame().GetCallqueue().CallLater(CGQC_Scripts.ActivateAdminFeatures, 5000, false, playerEntity, isInitialised, entry.m_sAdminTag);
-	
-				// Custom identity
-				if (!entry.m_sHeadPrefab.IsEmpty() && !entry.m_sBodyPrefab.IsEmpty())
-					GetGame().GetCallqueue().CallLater(CGQC_Scripts.SetPlayerIdentity, 1000, false, playerEntity, entry.m_sHeadPrefab, entry.m_sBodyPrefab);
-	
-				// Rank
-	
-				SCR_CharacterRankComponent rankComp = SCR_CharacterRankComponent.Cast(playerEntity.FindComponent(SCR_CharacterRankComponent));
-				if (!rankComp)
-				{
-					Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");
-					return;
-				}
-	
-				SCR_ECharacterRank desiredRank = entry.m_iRank;
-				// MAX removed
-				//rankComp.SetCharacterRank(desiredRank);
-				//PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
-	
-				// Stash resolved beret on the swap component so F9 knows what to toggle to
-				/* CGQC_HeadgearSwapComponent swap = CGQC_HeadgearSwapComponent.Cast(playerEntity.FindComponent(CGQC_HeadgearSwapComponent));
-				if (swap)
-				{
-					ResourceName assignedBeret = CGQC_getBeret.GetBeretForRank(desiredRank);
-					swap.SetAssignedBeretPrefab(assignedBeret);
-					PrintFormat("[CGQC] Stashed assigned beret for toggle: %1", assignedBeret);
-				}
-				else
-				{
-					Print("[CGQC] initializePlayer: no CGQC_HeadgearSwapComponent found, F9 toggle will not know this player's beret");
-				}*/
-	
-				// Custom beret
-				GetGame().GetCallqueue().CallLater(CGQC_getBeret.getBeret, 2000, false, playerEntity, desiredRank);
-	
-				return;
-			}
+			Print("[CGQC] AssignRank: No SCR_CharacterRankComponent found on entity");
+			return;
 		}
+	
+		SCR_ECharacterRank desiredRank = entry.m_iRank;
+		// MAX removed
+		//rankComp.SetCharacterRank(desiredRank);
+		//PrintFormat("[CGQC] AssignRank: Set rank %1", desiredRank);
+	
+		// Stash resolved beret on the swap component so F9 knows what to toggle to
+		/* CGQC_HeadgearSwapComponent swap = CGQC_HeadgearSwapComponent.Cast(playerEntity.FindComponent(CGQC_HeadgearSwapComponent));
+		if (swap)
+		{
+			ResourceName assignedBeret = CGQC_getBeret.GetBeretForRank(desiredRank);
+			swap.SetAssignedBeretPrefab(assignedBeret);
+			PrintFormat("[CGQC] Stashed assigned beret for toggle: %1", assignedBeret);
+		}
+		else
+		{
+			Print("[CGQC] initializePlayer: no CGQC_HeadgearSwapComponent found, F9 toggle will not know this player's beret");
+		}*/
+	
+		// Custom beret
+		GetGame().GetCallqueue().CallLater(CGQC_getBeret.getBeret, 2000, false, playerEntity, desiredRank);
 	}	
 
 	// Set player identity (works on both client and server)

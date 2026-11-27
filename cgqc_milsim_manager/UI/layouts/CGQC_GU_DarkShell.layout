@@ -1,0 +1,137 @@
+FrameWidgetClass {
+ Name "GU_DarkRoot"
+ {
+  ImageWidgetClass "{A41C7E2B90D35F01}" {
+   Name "Bg"
+   Slot FrameWidgetSlot "{A41C7E2B90D35F02}" {
+    Anchor 0 0 1 1
+    OffsetLeft 0
+    OffsetTop 0
+    OffsetRight 0
+    OffsetBottom 0
+   }
+   Color 0.1 0.1 0.12 1
+  }
+  ImageWidgetClass "{A41C7E2B90D35F03}" {
+   Name "Veil"
+   Slot FrameWidgetSlot "{A41C7E2B90D35F04}" {
+    Anchor 0 0 1 1
+    OffsetLeft 0
+    OffsetTop 0
+    OffsetRight 0
+    OffsetBottom 0
+   }
+   Color 0 0 0 0.5
+  }
+  OverlayWidgetClass "{A41C7E2B90D35F20}" {
+   Name "Nav"
+   Slot FrameWidgetSlot "{A41C7E2B90D35F21}" {
+    Anchor 0 0 0 1
+    OffsetLeft 40
+    OffsetTop 40
+    OffsetRight -480
+    OffsetBottom 40
+   }
+   {
+    ImageWidgetClass "{A41C7E2B90D35F22}" {
+     Name "NavBg"
+     Slot OverlayWidgetSlot "{A41C7E2B90D35F23}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0.09 0.1 0.12 0.88
+    }
+    VerticalLayoutWidgetClass "{A41C7E2B90D35F24}" {
+     Name "NavStack"
+     Slot OverlayWidgetSlot "{A41C7E2B90D35F25}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 26 22 26 22
+     }
+     {
+      HorizontalLayoutWidgetClass "{A41C7E2B90D35F07}" {
+       Name "Header"
+       Slot LayoutSlot "{A41C7E2B90D35F08}" {
+        Padding 0 0 0 14
+       }
+       {
+        ImageWidgetClass "{A41C7E2B90D35F09}" {
+         Name "Logo"
+         Slot LayoutSlot "{A41C7E2B90D35F0A}" {
+          VerticalAlign 1
+          Padding 0 0 16 0
+         }
+         Size 72 72
+        }
+        VerticalLayoutWidgetClass "{A41C7E2B90D35F0B}" {
+         Name "Titles"
+         Slot LayoutSlot "{A41C7E2B90D35F0C}" {
+          VerticalAlign 1
+         }
+         {
+          TextWidgetClass "{A41C7E2B90D35F10}" {
+           Name "Title"
+           Text "CGQC"
+           "Font Size" 34
+           "Min Font Size" 34
+           Color 0.93 0.93 0.93 1
+           FontProperties FontProperties "{A41C7E2B90D35F11}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+          TextWidgetClass "{A41C7E2B90D35F0D}" {
+           Name "Cap"
+           Text "GESTION D'UNITÉ"
+           "Font Size" 20
+           "Min Font Size" 20
+           Color 0.56 0.67 0.94 1
+           FontProperties FontProperties "{A41C7E2B90D35F0F}" {
+            Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+           }
+          }
+         }
+        }
+       }
+      }
+      ImageWidgetClass "{A41C7E2B90D35F12}" {
+       Name "Rule"
+       Slot LayoutSlot "{A41C7E2B90D35F13}" {
+        HorizontalAlign 3
+        Padding 0 0 0 6
+       }
+       Size 8 1
+       Color 0.29 0.31 0.31 1
+      }
+      VerticalLayoutWidgetClass "{A41C7E2B90D35F26}" {
+       Name "NavItems"
+       Slot LayoutSlot "{A41C7E2B90D35F27}" {
+       }
+      }
+      FrameWidgetClass "{A41C7E2B90D35F28}" {
+       Name "NavSpacer"
+       Slot LayoutSlot "{A41C7E2B90D35F29}" {
+        SizeMode Fill
+        FillWeight 1
+       }
+      }
+      VerticalLayoutWidgetClass "{A41C7E2B90D35F2A}" {
+       Name "NavBottom"
+       Slot LayoutSlot "{A41C7E2B90D35F2B}" {
+       }
+      }
+     }
+    }
+   }
+  }
+  VerticalLayoutWidgetClass "{A41C7E2B90D35F16}" {
+   Name "ContentStack"
+   Slot FrameWidgetSlot "{A41C7E2B90D35F17}" {
+    Anchor 0 0 1 1
+    OffsetLeft 520
+    OffsetTop 40
+    OffsetRight 40
+    OffsetBottom 40
+   }
+  }
+ }
+}

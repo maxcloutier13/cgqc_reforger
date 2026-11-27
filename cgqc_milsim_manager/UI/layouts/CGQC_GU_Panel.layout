@@ -1,0 +1,53 @@
+OverlayWidgetClass {
+ Name "GU_Panel"
+ {
+  ImageWidgetClass "{7A1D3E5F90B2C421}" {
+   Name "Bg"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C422}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   Color 0 0 0 0
+  }
+  ImageWidgetClass "{7A1D3E5F90B2C423}" {
+   Name "EdgeT"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C424}" {
+    HorizontalAlign 3
+    VerticalAlign 0
+   }
+   Size 2 2
+  }
+  ImageWidgetClass "{7A1D3E5F90B2C425}" {
+   Name "EdgeB"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C426}" {
+    HorizontalAlign 3
+    VerticalAlign 2
+   }
+   Size 2 2
+  }
+  ImageWidgetClass "{7A1D3E5F90B2C427}" {
+   Name "EdgeL"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C428}" {
+    HorizontalAlign 0
+    VerticalAlign 3
+   }
+   Size 2 2
+  }
+  ImageWidgetClass "{7A1D3E5F90B2C429}" {
+   Name "EdgeR"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C42A}" {
+    HorizontalAlign 2
+    VerticalAlign 3
+   }
+   Size 2 2
+  }
+  VerticalLayoutWidgetClass "{7A1D3E5F90B2C42B}" {
+   Name "Inner"
+   Slot OverlayWidgetSlot "{7A1D3E5F90B2C42C}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+    Padding 18 14 18 14
+   }
+  }
+ }
+}

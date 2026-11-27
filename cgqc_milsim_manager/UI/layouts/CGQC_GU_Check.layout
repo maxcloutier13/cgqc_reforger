@@ -1,0 +1,61 @@
+ButtonWidgetClass {
+ Name "GU_Check"
+ Color 0 0 0 0
+ {
+  HorizontalLayoutWidgetClass "{7A1D3E5F90B2C451}" {
+   Name "Row"
+   Slot ButtonWidgetSlot "{7A1D3E5F90B2C452}" {
+    HorizontalAlign 0
+    VerticalAlign 1
+    Padding 0 4 8 4
+   }
+   {
+    OverlayWidgetClass "{7A1D3E5F90B2C453}" {
+     Name "Box"
+     Slot LayoutSlot "{7A1D3E5F90B2C454}" {
+      VerticalAlign 1
+      Padding 0 0 10 0
+     }
+     {
+      ImageWidgetClass "{7A1D3E5F90B2C455}" {
+       Name "Outer"
+       Slot OverlayWidgetSlot "{7A1D3E5F90B2C456}" {
+        HorizontalAlign 1
+        VerticalAlign 1
+       }
+       Size 22 22
+      }
+      ImageWidgetClass "{7A1D3E5F90B2C457}" {
+       Name "Inner"
+       Slot OverlayWidgetSlot "{7A1D3E5F90B2C458}" {
+        HorizontalAlign 1
+        VerticalAlign 1
+       }
+       Size 18 18
+      }
+      ImageWidgetClass "{7A1D3E5F90B2C459}" {
+       Name "Tick"
+       Slot OverlayWidgetSlot "{7A1D3E5F90B2C45A}" {
+        HorizontalAlign 1
+        VerticalAlign 1
+       }
+       Size 12 12
+      }
+     }
+    }
+    TextWidgetClass "{7A1D3E5F90B2C45B}" {
+     Name "Label"
+     Slot LayoutSlot "{7A1D3E5F90B2C45C}" {
+      VerticalAlign 1
+     }
+     Text "-"
+     "Font Size" 18
+     "Min Font Size" 18
+     FontProperties FontProperties "{7A1D3E5F90B2C45D}" {
+      Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+     }
+    }
+   }
+  }
+ }
+}

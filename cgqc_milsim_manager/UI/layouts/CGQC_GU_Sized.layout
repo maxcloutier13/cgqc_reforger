@@ -1,0 +1,12 @@
+SizeLayoutWidgetClass {
+ Name "GU_Sized"
+ {
+  VerticalLayoutWidgetClass "{7A1D3E5F90B2C401}" {
+   Name "Inner"
+   Slot AlignableSlot "{7A1D3E5F90B2C402}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+  }
+ }
+}

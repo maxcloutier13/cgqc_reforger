@@ -1,0 +1,22 @@
+GameProject {
+ ID "cgqcroutectg"
+ GUID "6AF441ED8979FE20"
+ TITLE "cgqc_route_ctg"
+ Dependencies {
+  "58D0FB3206B6F859" "6AF314AD864DF803" "6A4F3EF9908A604F"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
