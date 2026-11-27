@@ -580,6 +580,33 @@ Each step ends with `wb_validate_scripts` + `wb_reload`, the new `Module: Game` 
     - `training.finish` (question 4).
   - Calendar: `CGQC_GU_CalendarBuilder.CollectMonth` adds PLANIFIÉE / TERMINÉE sessions as kind `training`, and they count for « PROCHAIN AU CALENDRIER ».
   - **Test:** create, plan and finish a Q-MB session through `#gu as`. The dossiers, Registre, news and calendar update, and a restart keeps the session.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded with `wb_reload` (22:47:09, compile CRC32 `45596451`, 5758 files). The reload reported the known leaked « PacejkaPlotTool » plugin error; the `Module: Game` line is clean. **Not yet live-tested.**
+    - **New files:**
+      - `Data/CGQC_GU_TrainingData.c` (`CGQC_GU_Training`, `CGQC_GU_AttendanceRow`);
+      - `Net/CGQC_GU_TrainingRequests.c`;
+      - storage `Save/Delete/LoadAllTrainings`, loaded by the manager at start (`m_mTrainings`). The schema doc is updated.
+    - **Requests:**
+      - `training.list` and `training.get` (`id`; empty = the next planned session, else the newest), with « < > » neighbours (`prevId` / `nextId`), the qualifications the viewer may link, and the possible instructors.
+      - `training.save` (creates when `id` is empty), `training.status` (draft ↔ planned), `training.delete` (archived first) and `training.finish`.
+    - **Rights:**
+      - Everyone reads PLANIFIÉE / TERMINÉE sessions. A BROUILLON is seen only by its instructor, its author and Commandement.
+      - Writing needs `sessions.create`, and the session's instructor or author, or Commandement. A TERMINÉE session is read-only.
+      - Linking a qualification needs the caller **and** the session's instructor to be allowed to teach it (`instructor_not_authorized` otherwise).
+    - **Attendance payload** `att`: `membre|présent(1/0)|position|code:passed,code:failed|résultat;…`. Members may be given by UID or name, for the console.
+      - Grades are dropped when no qualification is linked, and on the instructor's own row.
+    - **Finishing:**
+      - The session is closed first, so a second press cannot write twice. A session with nobody present is refused.
+      - Each member present gets a SÉANCE / FTX Registre entry (« ENTRAÎNEMENT : titre · Position : Élève ») and +1 session.
+      - In a qualification session, the exercises passed go into the progress, then RÉUSSI / ÉCHOUÉ is recorded through the 3a path: news, automatic promotion and students evaluated, signed by the session's instructor. Members who already hold the qualification are left ungraded.
+    - **Calendar:** PLANIFIÉE and TERMINÉE sessions appear as kind `training` (« FTX · … » for an FTX), with the place as the note, and count for « PROCHAIN AU CALENDRIER ». BROUILLON does not appear.
+    - **Dossier:**
+      - `sessionLines` feeds the Séances / FTX tab.
+      - Insignes reads EN COURS for a member on a PLANIFIÉE session linking the qualification.
+    - **Console:** `#gu seances` lists every session with its id, status, date, type, title and attendance count.
+    - **Owner test (22:52–22:56):** steps 1–5 and 7–9 work: refusal, BROUILLON hidden from the calendar, PLANIFIÉE shown, `already_done`, the FTX delete, and the restart.
+      - Step 6 gave Recrue2 the SÉANCE entry but no QUALIFICATION. The cause was not the code: **game chat cuts long command lines**, so the server got `…Q-MB-E3:passed|pas`. The result « pas » was rejected and the Lauzon row was lost.
+      - The exercises passed were still merged into the progress (Q-MB EN COURS with E2, E3), as designed.
+      - Fix: the attendance parser accepts the short forms `ok` / `ko` for passed / failed. Compile CRC32 `2499984c` (22:57:27).
 - **3c — Paper rail + Unité › Liste des qualifications + Liste des exercices.**
   - The full rail (question 10) on Dossier, Membres and the new screens.
   - **Catalogue-Qualifs:** header UNITÉ · RÉFÉRENCE COMMUNE / QUALIFICATIONS with search, the PP1 / PP2 / PP3 groups with their colour bar and promotion note, and the detail panel: description, exercises with REQUIS, criteria, À la réussite, full text, and qualified instructors with an online dot and student count. A qualification with no content reads « à venir ».

@@ -99,4 +99,14 @@ $profile:CGQC_GestionUnite/
   - Dates and times are **Eastern time as entered**, display only, not UTC.
   - Manual entries are basic events only. Operations, trainings and deployments come from their own files.
   - Enlistment anniversaries and birthdays are computed from the dossiers and never stored.
+- **Trainings (Phase 3b).** `trainings/<id>.json` (`trn_…`) = `{schemaVersion, id, type (training|ftx), title, qual ("" = attendance only), exercises[], instructor, place, date "AAAA-MM-JJ", time "HH:MM" or "", status (draft|planned|done), attendance[], createdBy, createdAt, updatedBy, updatedAt, doneBy, doneAt}`.
+  - Each attendance row is `{uid, present, position, exercises {code: passed|failed}, result (passed|failed|"")}`. Exercise grades and the result exist only when a qualification is linked, and never on the instructor's own row.
+  - Date and time are Eastern time as entered, like the calendar.
+  - SUPPRIMER copies the file to `archive/` before removing it.
+  - **Finishing** writes, for each member present: a `session` Registre entry (`data` {sessionId, type, qual, position}) and `stats.sessions` +1. In a qualification session, the test exercises passed go into `progress[]`, then RÉUSSI / ÉCHOUÉ goes into `qualifications[]` with `sessionId`. On a pass, the progress exercises move to `exercises[]`.
+- **Qualification records (Phase 3a).**
+  - `qualifications[].on` is a UTC timestamp; imported entries keep their date only.
+  - `exercises[]` holds only exercises passed as a test of a qualification that was then passed.
+  - `instructorFor[].on` is the Eastern date.
+  - Instructor authorizations and removals add a `note` Registre entry with `data` {instructorFor, action (authorize|revoke)}.
 - **Dev UIDs.** These are `dev-<profile name>` and are created only when the backend gives no UID: always outside a dedicated server, and on a dedicated server only if `settings.json` has `allowDevUid: true`.

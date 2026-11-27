@@ -106,6 +106,64 @@ class CGQC_GU_Quals
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! May run a session linked to that qualification (and grade it): Commandement, or an authorized instructor.
+	static bool CanTeach(CGQC_GU_Manager mgr, CGQC_GU_Member m, string qual)
+	{
+		if (!m)
+			return false;
+
+		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
+		if (CGQC_GU_Permissions.HasRight(cat, m, CGQC_GU_Rights.INSTRUCTORS_MANAGE))
+			return true;
+
+		return CGQC_GU_Permissions.HasRight(cat, m, CGQC_GU_Rights.QUALS_EVALUATE_OWN) && IsInstructorFor(m, qual);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Insignia state including PLANIFIÉE sessions: a member on the attendance of a planned session that
+	//! links the qualification reads EN COURS (owner answer 6).
+	static string InsigniaStateFull(CGQC_GU_Manager mgr, CGQC_GU_Member m, string qual)
+	{
+		string state = InsigniaState(m, qual);
+		if (state != STATE_TODO)
+			return state;
+
+		foreach (string id, CGQC_GU_Training t : mgr.m_mTrainings)
+		{
+			if (t.status == CGQC_GU_Training.STATUS_PLANNED && t.qual == qual && t.FindRow(m.uid))
+				return STATE_RUNNING;
+		}
+
+		return state;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Merges test exercises passed in a session into the open progress (kept with their first date).
+	static void MergeSessionExercises(CGQC_GU_Member m, string qual, array<string> codes, string by)
+	{
+		if (codes.IsEmpty())
+			return;
+
+		CGQC_GU_Progress p = FindProgress(m, qual);
+		if (!p)
+		{
+			p = new CGQC_GU_Progress();
+			p.qual = qual;
+			m.progress.Insert(p);
+		}
+
+		string today = CGQC_GU_Time.TodayEastern();
+		foreach (string code : codes)
+		{
+			if (!p.exercises.Contains(code))
+				p.exercises.Set(code, today);
+		}
+
+		p.savedBy = by;
+		p.savedAt = CGQC_GU_Time.NowUtc();
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Qualification codes the viewer may evaluate on that dossier (display only).
 	static void EvaluableBy(CGQC_GU_Manager mgr, CGQC_GU_Member viewer, CGQC_GU_Member target, notnull array<string> outCodes)
 	{

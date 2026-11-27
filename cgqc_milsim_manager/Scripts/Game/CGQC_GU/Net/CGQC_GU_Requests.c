@@ -177,6 +177,10 @@ class CGQC_GU_Requests
 		if (qualResult)
 			return qualResult;
 
+		CGQC_GU_RequestResult trainingResult = CGQC_GU_TrainingRequests.Handle(mgr, caller, action, p);
+		if (trainingResult)
+			return trainingResult;
+
 		return Fail("unknown_action");
 	}
 

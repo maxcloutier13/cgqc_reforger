@@ -12,6 +12,7 @@ class CGQC_GU_Manager
 	ref CGQC_GU_News m_News;
 	ref CGQC_GU_Calendar m_Calendar;
 	ref CGQC_GU_OrbatLive m_OrbatLive;
+	ref map<string, ref CGQC_GU_Training> m_mTrainings = new map<string, ref CGQC_GU_Training>();
 
 	protected ref map<int, string> m_mPlayerToUid = new map<int, string>();
 	protected ref set<string> m_sDirtyMembers = new set<string>();
@@ -68,6 +69,7 @@ class CGQC_GU_Manager
 		m_Notice = CGQC_GU_Storage.LoadNotice();
 		m_News = CGQC_GU_Storage.LoadNews();
 		m_Calendar = CGQC_GU_Storage.LoadCalendar();
+		CGQC_GU_Storage.LoadAllTrainings(m_mTrainings);
 
 		m_OrbatLive = CGQC_GU_Storage.LoadOrbatLive();
 		if (!m_OrbatLive)
@@ -91,7 +93,7 @@ class CGQC_GU_Manager
 			autosave = 30;
 
 		GetGame().GetCallqueue().CallLater(Autosave, autosave * 1000, true);
-		CGQC_GU_Log.Info(string.Format("Démarré : %1 dossiers chargés depuis %2.", m_mMembers.Count(), CGQC_GU_Storage.ROOT));
+		CGQC_GU_Log.Info(string.Format("Démarré : %1 dossiers et %2 séances chargés depuis %3.", m_mMembers.Count(), m_mTrainings.Count(), CGQC_GU_Storage.ROOT));
 
 		// Players registered before the game started (the Workbench / listen host) missed
 		// OnPlayerRegistered while the manager did not exist yet: pick them up now.

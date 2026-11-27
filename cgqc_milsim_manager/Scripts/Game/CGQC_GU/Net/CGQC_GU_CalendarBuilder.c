@@ -135,6 +135,24 @@ class CGQC_GU_CalendarBuilder
 			items.Insert(it);
 		}
 
+		// Training sessions and FTX (Phase 3b): PLANIFIÉE and TERMINÉE only; a BROUILLON is not on the calendar.
+		foreach (string tid, CGQC_GU_Training t : mgr.m_mTrainings)
+		{
+			if (t.status == CGQC_GU_Training.STATUS_DRAFT || !t.date.StartsWith(prefix))
+				continue;
+
+			CGQC_GU_CalItem ti = new CGQC_GU_CalItem();
+			ti.date = t.date;
+			ti.kind = "training";
+			ti.title = t.title;
+			if (t.type == "ftx")
+				ti.title = "FTX · " + t.title;
+
+			ti.time = t.time;
+			ti.note = t.place;
+			items.Insert(ti);
+		}
+
 		// Anniversaries, computed from the dossiers (owner decision 4). KIA members are left out.
 		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
 		foreach (string uid, CGQC_GU_Member mem : mgr.m_mMembers)

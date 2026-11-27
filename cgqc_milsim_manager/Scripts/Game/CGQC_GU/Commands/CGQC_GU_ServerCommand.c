@@ -109,6 +109,9 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 					return Reply("Usage : #gu as <uid|nom> <action> clé=valeur ...", false);
 
 				return As(mgr, argv);
+
+			case "seances":
+				return Trainings(mgr);
 		}
 
 		return Reply("Sous-commande inconnue : " + sub, false);
@@ -163,6 +166,20 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 		}
 
 		return Reply(string.Format("%1 %2 (%3) par %4, %5 octets", action, ok, result.m_sCode, caller.displayName, result.m_sPayload.Length()), result.m_bOk);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Every session with its id (for #gu as … id=…).
+	protected ScrServerCmdResult Trainings(CGQC_GU_Manager mgr)
+	{
+		string text = string.Format("%1 séance(s) :", mgr.m_mTrainings.Count());
+		foreach (string id, CGQC_GU_Training t : mgr.m_mTrainings)
+		{
+			text += string.Format("\n%1 | %2 | %3 %4 | %5 | %6 | %7 présent(s)", t.id, CGQC_GU_TrainingRequests.StatusLabel(t.status), t.date, t.time,
+				CGQC_GU_TrainingRequests.TypeLabel(t.type), t.title, t.attendance.Count());
+		}
+
+		return Reply(text);
 	}
 
 	//------------------------------------------------------------------------------------------------

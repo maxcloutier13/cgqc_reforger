@@ -77,6 +77,20 @@ class CGQC_GU_DossierLadderItem : Managed
 	string teachers;		// "Capt. Roy, Lt. Gagnon" or ""
 }
 
+//! Dossier › Séances / FTX: finished sessions the member attended.
+class CGQC_GU_DossierSessionLine : Managed
+{
+	string id;
+	string title;
+	string sub;			// "Position : élève · réussi"
+	string kind;		// ftx | training (filter)
+	string type;		// FTX / ENTR.
+	string date;		// YYMMDD
+	string qual;		// "Q-MB" or "—"
+	string exercises;	// "Q-MB-E2 · Q-MB-E3" or "—"
+	string instructor;
+}
+
 //! Dossier › Instructeur: qualifications this member may teach.
 class CGQC_GU_DossierTeachLine : Managed
 {
@@ -136,6 +150,7 @@ class CGQC_GU_DossierDto : Managed
 	ref array<ref CGQC_GU_DossierExerciseLine> exercisesDone = new array<ref CGQC_GU_DossierExerciseLine>();
 	ref array<ref CGQC_GU_DossierLadderItem> ladder = new array<ref CGQC_GU_DossierLadderItem>();
 	ref array<ref CGQC_GU_DossierTeachLine> teach = new array<ref CGQC_GU_DossierTeachLine>();
+	ref array<ref CGQC_GU_DossierSessionLine> sessionLines = new array<ref CGQC_GU_DossierSessionLine>();
 	string insignes;		// codes obtained, for the fiche ("Q-MB · Q-SI")
 	int formationsCount;	// qualifications this member may teach
 	bool promotionPossible;	// only sent true to promotion.view holders
@@ -373,7 +388,7 @@ class CGQC_GU_DossierBuilder
 			}
 
 			item.aVenir = lq.state != "actif";
-			item.state = CGQC_GU_Quals.InsigniaState(m, lq.code);
+			item.state = CGQC_GU_Quals.InsigniaStateFull(mgr, m, lq.code);
 			CGQC_GU_QualResult lr2 = CGQC_GU_Quals.LatestResult(m, lq.code);
 			if (lr2)
 				item.stateDate = DisplayDate(lr2.on);
@@ -448,6 +463,69 @@ class CGQC_GU_DossierBuilder
 		}
 
 		d.formationsCount = m.instructorFor.Count();
+		Sessions(mgr, m, d);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! TERMINÉE sessions where the member was present, newest first.
+	protected static void Sessions(CGQC_GU_Manager mgr, CGQC_GU_Member m, CGQC_GU_DossierDto d)
+	{
+		array<CGQC_GU_Training> done = new array<CGQC_GU_Training>();
+		foreach (string id, CGQC_GU_Training t : mgr.m_mTrainings)
+		{
+			if (t.status != CGQC_GU_Training.STATUS_DONE)
+				continue;
+
+			CGQC_GU_AttendanceRow row = t.FindRow(m.uid);
+			if (!row || !row.present)
+				continue;
+
+			int at = done.Count();
+			for (int i = 0; i < done.Count(); i++)
+			{
+				if (t.SortKey().Compare(done[i].SortKey()) > 0)
+				{
+					at = i;
+					break;
+				}
+			}
+
+			done.InsertAt(t, at);
+		}
+
+		foreach (CGQC_GU_Training s : done)
+		{
+			CGQC_GU_AttendanceRow r = s.FindRow(m.uid);
+			CGQC_GU_DossierSessionLine line = new CGQC_GU_DossierSessionLine();
+			line.id = s.id;
+			line.title = s.title;
+			line.kind = s.type;
+			line.type = "ENTR.";
+			if (s.type == "ftx")
+				line.type = "FTX";
+
+			string sub = "Position : —";
+			if (!r.position.IsEmpty())
+				sub = "Position : " + r.position;
+
+			if (r.result == CGQC_GU_Quals.RESULT_PASSED)
+				sub += " · réussi";
+			else if (r.result == CGQC_GU_Quals.RESULT_FAILED)
+				sub += " · échoué";
+
+			line.sub = sub;
+			line.date = DisplayDate(s.date);
+			line.qual = "—";
+			if (!s.qual.IsEmpty())
+				line.qual = s.qual;
+
+			line.exercises = "—";
+			if (!s.exercises.IsEmpty())
+				line.exercises = CGQC_GU_Str.Join(s.exercises, " · ");
+
+			line.instructor = SignerOrDash(mgr, s.instructor);
+			d.sessionLines.Insert(line);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -503,6 +581,23 @@ class CGQC_GU_DossierBuilder
 						else
 							text = string.Format("Promu %1 (%2)", r.label, r.abbr);
 					}
+
+					break;
+				}
+
+				case "session":
+				{
+					string sid, sposition;
+					e.data.Find("sessionId", sid);
+					e.data.Find("position", sposition);
+					CGQC_GU_Training st = mgr.m_mTrainings.Get(sid);
+					if (st)
+						text = CGQC_GU_TrainingRequests.TypeLabel(st.type) + " : " + st.title;
+					else
+						text = "Séance";
+
+					if (!sposition.IsEmpty())
+						text += " · Position : " + sposition;
 
 					break;
 				}

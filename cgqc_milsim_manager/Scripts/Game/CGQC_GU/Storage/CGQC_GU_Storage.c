@@ -133,6 +133,86 @@ class CGQC_GU_Storage
 	}
 
 	//------------------------------------------------------------------------------------------------
+	// Trainings (Phase 3b): trainings/<id>.json
+	//------------------------------------------------------------------------------------------------
+	static string TrainingPath(string id)
+	{
+		return Dir("trainings") + "/" + CGQC_GU_Str.FileSafe(id) + ".json";
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static bool SaveTraining(CGQC_GU_Training t)
+	{
+		if (!t || t.id.IsEmpty())
+			return false;
+
+		t.schemaVersion = CGQC_GU_Training.SCHEMA_VERSION;
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		t.WriteTo(ctx);
+		return CGQC_GU_Json.SafeSave(ctx, TrainingPath(t.id));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! SUPPRIMER: a copy goes to archive/ first, then the file and its .bak / .tmp are removed.
+	static bool DeleteTraining(CGQC_GU_Training t)
+	{
+		string stamp = CGQC_GU_Time.NowUtc();
+		stamp.Replace(":", "-");
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		t.WriteTo(ctx);
+		if (!CGQC_GU_Json.SafeSave(ctx, Dir("archive") + "/" + CGQC_GU_Str.FileSafe(t.id) + "_" + stamp + ".json"))
+			return false;
+
+		string path = TrainingPath(t.id);
+		array<string> files = { path, path + ".bak", path + ".tmp" };
+		foreach (string f : files)
+		{
+			if (FileIO.FileExists(f))
+				FileIO.DeleteFile(f);
+		}
+
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static void LoadAllTrainings(map<string, ref CGQC_GU_Training> into)
+	{
+		string dir = Dir("trainings");
+		array<string> files = SCR_FileIOHelper.FindFiles(dir, ".json");
+		if (!files)
+			return;
+
+		foreach (string file : files)
+		{
+			string path = file;
+			if (!path.Contains("/") && !path.Contains("\\"))
+				path = dir + "/" + file;
+
+			if (!path.EndsWith(".json"))
+				continue;
+
+			JsonLoadContext ctx = CGQC_GU_Json.Open(path);
+			if (!ctx)
+				continue;
+
+			CGQC_GU_Training t = new CGQC_GU_Training();
+			if (!t.ReadFrom(ctx))
+			{
+				CGQC_GU_Log.Error("Séance sans id, ignorée : " + path);
+				continue;
+			}
+
+			if (into.Contains(t.id))
+			{
+				CGQC_GU_Log.Warn("Séance en double, fichier ignoré : " + path);
+				continue;
+			}
+
+			into.Insert(t.id, t);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
 	// Unit state
 	//------------------------------------------------------------------------------------------------
 	static bool SaveSituation(CGQC_GU_Situation s)
