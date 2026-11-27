@@ -14,11 +14,19 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	protected Widget m_wRoot;
 	protected ImageWidget m_wBg;
 	protected TextWidget m_wLabel;
+	protected ref array<Widget> m_aEdges = new array<Widget>();
+	protected bool m_bSelected;
+	protected ref Color m_TextColor;
+	protected bool m_bTextColor;
 	protected string m_sText;
+	protected string m_sConfirmText = CGQC_GU_Style.CONFIRM_TEXT;
 	protected CGQC_GU_EButtonKind m_eKind;
 	protected bool m_bConfirm;
 	protected bool m_bArmed;
 	protected bool m_bEnabled = true;
+
+	// Only one confirm button may be armed at a time: arming another one disarms the previous.
+	protected static CGQC_GU_Button s_Armed;
 
 	protected ref ScriptInvokerVoid m_OnActivated = new ScriptInvokerVoid();
 
@@ -44,6 +52,14 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 		m_wRoot = root;
 		m_wBg = ImageWidget.Cast(root.FindAnyWidget("Bg"));
 		m_wLabel = TextWidget.Cast(root.FindAnyWidget("Label"));
+		array<string> edges = { "EdgeT", "EdgeB", "EdgeL", "EdgeR" };
+		foreach (string edge : edges)
+		{
+			Widget e = root.FindAnyWidget(edge);
+			if (e)
+				m_aEdges.Insert(e);
+		}
+
 		m_sText = text;
 		m_eKind = kind;
 		m_bConfirm = confirm;
@@ -81,6 +97,46 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Shorter armed label for narrow buttons (default « APPUYER DE NOUVEAU »).
+	void SetConfirmText(string text)
+	{
+		m_sConfirmText = text;
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Label colour of a plain button at rest (status colour code). Armed and selected keep theirs.
+	void SetTextColor(Color color)
+	{
+		m_TextColor = color;
+		m_bTextColor = true;
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Selected tab / current choice: drawn in CGQC blue.
+	void SetSelected(bool selected)
+	{
+		m_bSelected = selected;
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Button inside page content: smaller label and padding, sized to its text instead of the full width.
+	//! The parent must be a layout (vertical or horizontal).
+	void SetCompact()
+	{
+		if (m_wLabel)
+		{
+			m_wLabel.SetExactFontSize(15);
+			AlignableSlot.SetPadding(m_wLabel, 12, 5, 12, 5);
+		}
+
+		if (m_wRoot)
+			LayoutSlot.SetHorizontalAlign(m_wRoot, LayoutHorizontalAlign.Left);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
 		if (!m_bEnabled)
@@ -94,6 +150,10 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 
 		if (!m_bArmed)
 		{
+			if (s_Armed && s_Armed != this)
+				s_Armed.Disarm();
+
+			s_Armed = this;
 			m_bArmed = true;
 			Refresh();
 			GetGame().GetCallqueue().Remove(Disarm);
@@ -110,6 +170,9 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	void Disarm()
 	{
 		GetGame().GetCallqueue().Remove(Disarm);
+		if (s_Armed == this)
+			s_Armed = null;
+
 		if (!m_bArmed)
 			return;
 
@@ -125,12 +188,13 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 
 		Color bg;
 		Color fg;
+		bool outline;
 		if (m_bArmed)
 		{
 			bg = CGQC_GU_Style.ConfirmRed();
 			fg = CGQC_GU_Style.PaperText();
 		}
-		else if (m_eKind == CGQC_GU_EButtonKind.PRIMARY)
+		else if (m_bSelected || m_eKind == CGQC_GU_EButtonKind.PRIMARY)
 		{
 			bg = CGQC_GU_Style.Blue();
 			fg = CGQC_GU_Style.PaperText();
@@ -142,18 +206,29 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 		}
 		else
 		{
-			bg = CGQC_GU_Style.PaperButton();
+			// Plain button on paper: transparent with a thin ruled outline (owner's 1d visual fix).
+			bg = CGQC_GU_Style.Clear();
 			fg = CGQC_GU_Style.InkSoft();
+			if (m_bTextColor)
+				fg = m_TextColor;
+			outline = true;
 		}
 
 		if (m_wBg)
 			m_wBg.SetColor(bg);
 
+		foreach (Widget edge : m_aEdges)
+		{
+			edge.SetVisible(outline);
+			if (outline)
+				edge.SetColor(CGQC_GU_Style.Rule());
+		}
+
 		if (m_wLabel)
 		{
 			m_wLabel.SetColor(fg);
 			if (m_bArmed)
-				m_wLabel.SetText(CGQC_GU_Style.CONFIRM_TEXT);
+				m_wLabel.SetText(m_sConfirmText);
 			else
 				m_wLabel.SetText(m_sText);
 		}
@@ -168,6 +243,9 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	void Destroy()
 	{
 		GetGame().GetCallqueue().Remove(Disarm);
+		if (s_Armed == this)
+			s_Armed = null;
+
 		if (m_wRoot)
 		{
 			m_wRoot.RemoveHandler(this);

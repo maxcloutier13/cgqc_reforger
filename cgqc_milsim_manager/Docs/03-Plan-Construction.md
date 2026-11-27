@@ -179,12 +179,91 @@ Each step ends with `wb_validate_scripts` + `wb_reload` and a short Play test be
   - The member drop-down for staff.
   - Every save uses the double press.
   - **Test:** with a member account and a Commandement account.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, and loaded in Workbench (20:49, compile CRC32 `e4b081cd`). **Not yet live-tested.**
+    - **New read action `dossier`** (`uid` optional, defaults to the caller), built on the server in `Net/CGQC_GU_Dossier.c`.
+      - It returns display-ready fiche values, the Registre newest first, every rank with the current one flagged, the roles unlocked, the next-rank criteria with met / not met, and the access groups with held / not held.
+      - It also returns viewer flags: `isSelf`, `canEdit` (members.edit) and `canAccess` (access.manage). These only decide which controls are shown; every write is still checked by its own action.
+    - **Shared code:**
+      - The next-rank criteria logic moved to `CGQC_GU_OverviewBuilder.BuildCriteria`, shared with the pause-menu panel. The panel text is unchanged.
+      - `member.list` now also sends `rankAbbr` and `rankOrder`, and is sorted most senior rank first, then by name.
+    - **Screen:**
+      - Fiche on the left: drawn insignia, name, grade, access tag, presence dot, status, the collapsible section, and the footer.
+      - Rail tabs REGISTRE and GRADE & ACCÈS.
+      - Member selector (« MEMBRE ») at the top right, with search, online dots and pages of 10. Everyone can open it, since every member may read every dossier.
+      - The Registre has pages of 10 and a « NOUVELLE INSCRIPTION » form for staff (type, optional date, text).
+      - Grade & accès shows:
+        - rank buttons with mini insignia;
+        - roles unlocked;
+        - next-rank criteria;
+        - access checkboxes with ENREGISTRER LES ACCÈS;
+        - displayed name and last name;
+        - UTILISER LE NOM DU PROFIL;
+        - Profil Bohemia with LIÉ / NON LIÉ, plus UID + LIER LE PROFIL when not linked.
+      - Every save is a double press. After a save the dossier is read again, and refusals show as a red line.
+    - **Owner's visual fixes:** PLAIN buttons are transparent with a thin ruled outline. Buttons inside the content use `SetCompact()`: a smaller label, sized to the text.
+    - **Rank insignia** are drawn from rectangles (`CGQC_GU_Insignia`) using the `insignia` key in `ranks.json`. They are placeholders until real images exist.
+    - **New layouts,** registered through `wb_resources`: `CGQC_GU_VBox`, `HBox`, `Sized`, `Canvas`, `Rect`, `Panel`, `Field`, `FieldMulti` and `Check`. `CGQC_GU_Button` gained 4 edge images for the outline.
+    - **No scroll widget:** long lists use pages.
+    - **First look by the owner (20:52), and the fixes made:**
+      - The edit fields showed as small squares, and the insignia did not draw.
+        - Cause: inside a SizeLayout, the child slot must be `AlignableSlot`, not `SizeLayoutSlot`.
+        - Fixed in the `Sized`, `Canvas` and `FieldMulti` layouts. Fixed-width boxes are now left-aligned, so their width applies.
+      - **The Modérateur access group is removed** (owner's request).
+        - It is gone from the defaults and from the live `config/access_groups.json`, whose old copy is kept in the session scratchpad. The spec is updated too.
+        - Dossiers that still list `moderateur` (Comeau) ignore it, and the next access save drops it.
+        - The Modérateur *roles* unlocked by SLt./Lt./Capt. are separate and unchanged.
+      - **Date display, owner's format:** short dates are MM-DD (pause-menu news), and full dates are YYMMDD (Registre, enlistment, last seen). Input fields still take AAAA-MM-JJ.
+      - **Insignia simplified** to plain bars and squares, with no rotation. The owner will make real rank patches and distinctions with an external tool.
+      - Compile CRC32 `7ab942a7` (20:56). The fixes have not been seen live yet.
+    - **Second look by the owner (21:00), and the fixes made:**
+      - Two rank buttons could be armed at once, and their red labels overlapped.
+        - Rank buttons now only *pick* a rank, one at a time; picking another moves the selection.
+        - A single double-press button, « ATTRIBUER LE GRADE : <abbr> », applies the pick. It is disabled while the pick is the current rank.
+        - Throughout the UI, only one confirm button can be armed at a time: arming one disarms the previous.
+      - **The Discord moderation roles are removed** (Modérateur; Modérateur et Instructeur; Modérateur et Instructeur en chef). They exist only on Discord, not in game.
+        - They are gone from the defaults, the live `config/roles.json` and the spec table. Zeus, Admin and Pouet stay.
+      - Compile CRC32 `2063fe67` (21:01). Not seen live yet.
+    - **Third look by the owner (21:04), and the fixes made:**
+      - **Rank buttons are back to a plain double press.** Click a rank and it turns red with « CONFIRMER », a short label so it fits the cell; click it again to apply. The separate « ATTRIBUER LE GRADE » button is removed.
+        - The global "one armed button at a time" rule stays.
+        - Buttons can now set their own armed label (`SetConfirmText`). The default is still « APPUYER DE NOUVEAU ».
+      - **The pause menu's own buttons still reacted behind the paper screen;** a click reached « Redémarrer ».
+        - Fix: while a screen is open, `CGQC_GU_Ui` hides every other child of the pause menu root (vanilla buttons and the overview panel) and clears the keyboard focus. Hidden widgets take no input. They are shown again when the screen closes.
+      - Compile CRC32 `83d964e9` (21:05).
+    - **1d PASSED** (2026-11-26, 21:08): the owner approved the Dossier after testing in Play. Next is 1e (Unité → Membres), waiting for the owner's go-ahead.
 - **1e — Unité → Membres (paper).**
   - Columns available in Phase 1: online, name, rank, access, last connection, status. The instructor-for, seat and last-operation columns arrive with Phases 3–5.
   - Filters: Tous / En ligne / Actifs / Inactifs / MIA / KIA.
   - « + Nouveau dossier ».
   - The PROFIL NON LIÉ tag opens Lier un profil (UID or Cadet merge).
   - **Test:** the Phase 1 "Done when" on the Peer Tool with 2 clients. This also covers the remaining Phase 0 check, the new Cadet dossier.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, and loaded in Workbench (21:12, compile CRC32 `342f1834`). **Not yet live-tested.**
+    - **Server, `member.list`:** each summary now also sends `accessLabel`, `lastSeen` (YYMMDD), `statusBy` (who set a manual status) and `autoCreated`. The reply also carries the rank list for pickers, the entry rank, and the viewer flag `canEdit` (members.edit). The flag only decides what the screen offers; every write is still checked by its own action.
+      - `autoCreated` means a linked dossier whose ENRÔLEMENT is signed by the system with no note, i.e. made on first connection. Imported dossiers have the note « Import initial ».
+    - **Screen `UI/CGQC_GU_MembersScreen.c`** (header UNITÉ / MEMBRES, rail MEMBRES and MON DOSSIER):
+      - Filters with counts: Tous / En ligne / Actifs / Inactifs / MIA / KIA, plus a search field.
+      - Table in pages of 12: online dot, name, grade, access, last connection (EN LIGNE or YYMMDD), status, profile. The name button opens that member's Dossier.
+      - Staff only (`canEdit`):
+        - « + NOUVEAU DOSSIER »: last name, Discord name, enlistment date (AAAA-MM-JJ), rank buttons (default Cadet), then CRÉER LE DOSSIER (double press).
+        - The status cell is a button that opens STATUT: AUTOMATIQUE / ACTIF / INACTIF / MIA / KIA, each a double press (« CONFIRMER »). A manual status shows who set it.
+        - The red PROFIL NON LIÉ tag opens LIER UN PROFIL: a Bohemia UID field with LIER LE PROFIL, or a list of auto-created Cadet dossiers, each with FUSIONNER (double press).
+      - Plain members see the table read-only. PROFIL NON LIÉ is plain red text for them.
+      - An open panel replaces the table, as the member selector does in the Dossier. ANNULER closes it.
+    - **Entry point (temporary, until the Phase 2 menu):** a MEMBRES rail entry in the Dossier, shown only when the viewer has members.edit.
+    - Screen switches go through `CGQC_GU_Ui.OpenNextFrame`, so the pressed button is not destroyed during its own click.
+    - **First look by the owner (21:15), and the fixes made:**
+      - **The rail stays the same on every paper screen:** REGISTRE, GRADE & ACCÈS, MEMBRES, FERMER. From Membres, REGISTRE and GRADE & ACCÈS open the viewer's own dossier on that tab.
+      - **The status cell shows the status only** (« KIA »), never who set it.
+      - **Each status change writes a Registre entry** of the new type `status` (STATUT). It records the signer and date, with `data` {status, from, effective}.
+        - The text reads « Statut fixé : KIA » or « Statut automatique rétabli : ACTIF ».
+        - Setting the status the member already has writes nothing.
+        - STATUT is system-only: it is not in the manual entry types.
+      - Compile CRC32 `517b8ab1` (21:18). Not seen live yet.
+    - **Second look by the owner (21:21), and the fix made:**
+      - **Status colour code:** ACTIF green, INACTIF yellow (dark, readable on parchment), MIA red, KIA black. It applies in the Membres status cell and the fiche's STATUT (`CGQC_GU_Style.StatusColor`, `CGQC_GU_Button.SetTextColor`).
+      - The owner will reset all the data before the tool goes into use.
+      - Compile CRC32 `01a42713` (21:22). The colours have not been seen live.
+    - **1e PASSED** (2026-11-26, 21:22): the owner approved Membres and asked for the next step, given the colour code. Next is Phase 2.
 
 ## Phase 2 — Situation, calendar, news (GM)
 

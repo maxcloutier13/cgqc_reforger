@@ -25,10 +25,25 @@ class CGQC_GU_MemberSummary : Managed
 	string displayName;
 	string lastName;
 	string rank;
+	string rankAbbr;
+	int rankOrder;
 	string access;		// highest group only
 	string status;
 	bool online;
 	string lastSeenAt;
+	// Unité → Membres (1e): display values built on the server
+	string accessLabel;
+	string lastSeen;	// YYMMDD, "" if never connected
+	string statusBy;	// who set a manual status, "" when automatic
+	bool autoCreated;	// linked dossier made on first connection (merge candidate)
+}
+
+//! A rank for pickers (« + Nouveau dossier »).
+class CGQC_GU_RankChoice : Managed
+{
+	string id;
+	string abbr;
+	string label;
 }
 
 class CGQC_GU_Requests
@@ -39,6 +54,7 @@ class CGQC_GU_Requests
 	static const string MEMBER_GET = "member.get";				// uid
 	static const string MEMBER_LIST = "member.list";
 	static const string OVERVIEW = "overview";					// pause menu panel for the caller
+	static const string DOSSIER = "dossier";					// uid (optional: own dossier), display-ready
 	// Write
 	static const string PERSONAL_SET = "member.personal.set";	// uid, birthDate, birthPlace, bloodType, bio
 	static const string RANK_SET = "member.rank.set";			// uid, rank
@@ -77,7 +93,19 @@ class CGQC_GU_Requests
 			}
 
 			case MEMBER_LIST:
-				return MemberList(mgr);
+				return MemberList(mgr, caller);
+
+			case DOSSIER:
+			{
+				CGQC_GU_Member target = caller;
+				if (!p.Get("uid").IsEmpty())
+					target = mgr.FindMember(p.Get("uid"));
+
+				if (!target)
+					return Fail("not_found");
+
+				return Ok("ok", CGQC_GU_DossierBuilder.Build(mgr, caller, target));
+			}
 
 			case OVERVIEW:
 				return Ok("ok", CGQC_GU_OverviewBuilder.Build(mgr, caller));
@@ -152,7 +180,7 @@ class CGQC_GU_Requests
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static CGQC_GU_RequestResult MemberList(CGQC_GU_Manager mgr)
+	protected static CGQC_GU_RequestResult MemberList(CGQC_GU_Manager mgr, CGQC_GU_Member caller)
 	{
 		array<ref CGQC_GU_MemberSummary> list = new array<ref CGQC_GU_MemberSummary>();
 		foreach (string uid, CGQC_GU_Member m : mgr.m_mMembers)
@@ -163,6 +191,13 @@ class CGQC_GU_Requests
 			s.displayName = m.displayName;
 			s.lastName = m.lastName;
 			s.rank = m.rank;
+			CGQC_GU_Rank r = mgr.m_Catalogues.FindRank(m.rank);
+			if (r)
+			{
+				s.rankAbbr = r.abbr;
+				s.rankOrder = r.order;
+			}
+
 			CGQC_GU_AccessGroup g = CGQC_GU_Permissions.GetHighestGroup(mgr.m_Catalogues, m);
 			if (g)
 				s.access = g.id;
@@ -170,12 +205,110 @@ class CGQC_GU_Requests
 			s.status = m.GetEffectiveStatus();
 			s.online = mgr.IsOnline(m.uid);
 			s.lastSeenAt = m.lastSeenAt;
-			list.Insert(s);
+			s.lastSeen = CGQC_GU_DossierBuilder.DisplayDate(m.lastSeenAt);
+			if (g)
+				s.accessLabel = g.label;
+
+			if (!m.status.manual.IsEmpty())
+				s.statusBy = CGQC_GU_DossierBuilder.SignerName(mgr, m.status.manualBy);
+
+			s.autoCreated = IsAutoCreated(m);
+
+			// Sorted by rank (most senior first), then by name.
+			int at = list.Count();
+			for (int i = 0; i < list.Count(); i++)
+			{
+				if (SortsBefore(s, list[i]))
+				{
+					at = i;
+					break;
+				}
+			}
+
+			list.InsertAt(s, at);
 		}
+
+		// Ranks for « + Nouveau dossier », most senior first (honorary last).
+		array<CGQC_GU_Rank> sorted = new array<CGQC_GU_Rank>();
+		foreach (CGQC_GU_Rank rank : mgr.m_Catalogues.m_aRanks)
+		{
+			int pos = sorted.Count();
+			for (int j = 0; j < sorted.Count(); j++)
+			{
+				if (RankBefore(rank, sorted[j]))
+				{
+					pos = j;
+					break;
+				}
+			}
+
+			sorted.InsertAt(rank, pos);
+		}
+
+		array<ref CGQC_GU_RankChoice> ranks = new array<ref CGQC_GU_RankChoice>();
+		foreach (CGQC_GU_Rank sr : sorted)
+		{
+			CGQC_GU_RankChoice rc = new CGQC_GU_RankChoice();
+			rc.id = sr.id;
+			rc.abbr = sr.abbr;
+			rc.label = sr.label;
+			ranks.Insert(rc);
+		}
+
+		// Viewer flag: only decides what the screen offers; every write is checked by its own action.
+		bool canEdit = Can(mgr, caller, CGQC_GU_Rights.MEMBERS_EDIT);
+		string entryRank = mgr.m_Catalogues.GetEntryRank();
 
 		CGQC_GU_JsonStringSaveContext ctx = new CGQC_GU_JsonStringSaveContext();
 		ctx.WriteValue("members", list);
+		ctx.WriteValue("ranks", ranks);
+		ctx.WriteValue("canEdit", canEdit);
+		ctx.WriteValue("entryRank", entryRank);
 		return Ok("ok", ctx.Export());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static bool RankBefore(CGQC_GU_Rank a, CGQC_GU_Rank b)
+	{
+		if (a.honorary != b.honorary)
+			return !a.honorary;
+
+		return a.order > b.order;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Dossier made by the system on a player's first connection: linked, ENRÔLEMENT signed by the
+	//! system with no note. Imported dossiers carry a note, hand-made ones a staff signer.
+	static bool IsAutoCreated(CGQC_GU_Member m)
+	{
+		if (!m.uidLinked)
+			return false;
+
+		foreach (CGQC_GU_RecordEntry e : m.record)
+		{
+			if (e.type == "enlistment")
+				return e.by == "systeme" && e.note.IsEmpty();
+		}
+
+		return false;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static bool SortsBefore(CGQC_GU_MemberSummary a, CGQC_GU_MemberSummary b)
+	{
+		if (a.rankOrder != b.rankOrder)
+			return a.rankOrder > b.rankOrder;
+
+		return SortName(a).Compare(SortName(b), false) < 0;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static string SortName(CGQC_GU_MemberSummary s)
+	{
+		if (!s.lastName.IsEmpty())
+			return s.lastName;
+
+		return s.displayName;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -302,6 +435,15 @@ class CGQC_GU_Requests
 			return Fail("not_found");
 
 		string s = CGQC_GU_Str.Lower(p.Get("status"));
+		string before = m.status.manual;
+		if (before.IsEmpty())
+			before = "auto";
+
+		// Nothing changes: no Registre entry.
+		if (s == before)
+			return MemberJson(m);
+
+		string fromStatus = m.GetEffectiveStatus();
 		if (s == "auto")
 		{
 			m.status.manual = string.Empty;
@@ -319,6 +461,11 @@ class CGQC_GU_Requests
 			return Fail("bad_status");
 		}
 
+		// Registre: STATUT entry with the signer and the date (codes only; text built on display).
+		CGQC_GU_RecordEntry e = m.AddRecord("status", caller.uid);
+		e.data.Set("status", s);
+		e.data.Set("from", fromStatus);
+		e.data.Set("effective", m.GetEffectiveStatus());
 		return Saved(mgr, m);
 	}
 

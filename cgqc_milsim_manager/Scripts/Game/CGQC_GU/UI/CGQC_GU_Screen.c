@@ -7,6 +7,8 @@ class CGQC_GU_Ui
 {
 	protected static Widget s_wHostRoot;
 	protected static ref CGQC_GU_Screen s_Current;
+	protected static ref CGQC_GU_Screen s_Pending;
+	protected static ref array<Widget> s_aHidden = new array<Widget>();
 
 	//------------------------------------------------------------------------------------------------
 	static void OnHostOpened(Widget hostRoot)
@@ -17,6 +19,7 @@ class CGQC_GU_Ui
 	//------------------------------------------------------------------------------------------------
 	static void OnHostClosed()
 	{
+		s_Pending = null;
 		CloseCurrent();
 		s_wHostRoot = null;
 	}
@@ -34,8 +37,27 @@ class CGQC_GU_Ui
 			return;
 
 		CloseCurrent();
+		HidePauseMenu();
 		s_Current = screen;
 		screen.Build(s_wHostRoot);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Switch screens from a button of the current screen: the switch runs on the next frame, so the
+	//! pressed button is not destroyed while its own click is still being handled.
+	static void OpenNextFrame(CGQC_GU_Screen screen)
+	{
+		s_Pending = screen;
+		GetGame().GetCallqueue().Remove(OpenPending);
+		GetGame().GetCallqueue().CallLater(OpenPending, 0, false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static void OpenPending()
+	{
+		CGQC_GU_Screen screen = s_Pending;
+		s_Pending = null;
+		Open(screen);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -48,6 +70,42 @@ class CGQC_GU_Ui
 		CGQC_GU_Screen screen = s_Current;
 		s_Current = null;
 		screen.Teardown();
+		RestorePauseMenu();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! While a screen is open, the pause menu's own widgets (vanilla buttons, overview panel) are hidden:
+	//! hidden widgets take no clicks and no keyboard focus, so nothing reacts behind the paper.
+	protected static void HidePauseMenu()
+	{
+		if (!s_wHostRoot)
+			return;
+
+		Widget child = s_wHostRoot.GetChildren();
+		while (child)
+		{
+			if (child.IsVisible())
+			{
+				child.SetVisible(false);
+				s_aHidden.Insert(child);
+			}
+
+			child = child.GetSibling();
+		}
+
+		GetGame().GetWorkspace().SetFocusedWidget(null);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static void RestorePauseMenu()
+	{
+		foreach (Widget w : s_aHidden)
+		{
+			if (w)
+				w.SetVisible(true);
+		}
+
+		s_aHidden.Clear();
 	}
 }
 

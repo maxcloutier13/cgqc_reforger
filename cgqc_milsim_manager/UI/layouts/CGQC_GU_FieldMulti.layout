@@ -1,0 +1,46 @@
+SizeLayoutWidgetClass {
+ Name "GU_FieldMulti"
+ HeightOverride 120
+ {
+  OverlayWidgetClass "{7A1D3E5F90B2C441}" {
+   Name "Body"
+   Slot AlignableSlot "{7A1D3E5F90B2C442}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   {
+    ImageWidgetClass "{7A1D3E5F90B2C443}" {
+     Name "Bg"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C444}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 1 1 1 0.2
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C445}" {
+     Name "EdgeB"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C446}" {
+      HorizontalAlign 3
+      VerticalAlign 2
+     }
+     Size 2 2
+    }
+    MultilineEditBoxWidgetClass "{7A1D3E5F90B2C447}" {
+     Name "Edit"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C448}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 8 6 8 6
+     }
+     Text ""
+     "Font Size" 17
+     "Min Font Size" 17
+     FontProperties FontProperties "{7A1D3E5F90B2C449}" {
+      Font "{E2CBA6F76AAA42AF}UI/Fonts/Roboto/Roboto_Regular.fnt"
+     }
+     "Line Spacing" 4
+    }
+   }
+  }
+ }
+}

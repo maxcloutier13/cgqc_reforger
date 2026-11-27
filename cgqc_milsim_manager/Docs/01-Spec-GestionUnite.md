@@ -69,9 +69,9 @@ Status: **mockup approved 2026-11-26**. This file records every decision taken w
 | | Adjudant (Adju.) | TL, JTAC, Pilote |
 | | Adjudant-maître (AdjuM.) | SL |
 | | Adjudant-chef (AdjuC.) | Instructeurs |
-| Officiers | Sous-lieutenant (SLt.) | Modérateur, Zeus en apprentissage |
-| | Lieutenant (Lt.) | Modérateur et Instructeur, Zeus confirmé |
-| | Capitaine (Capt.) | Modérateur et Instructeur en chef, Zeus en chef |
+| Officiers | Sous-lieutenant (SLt.) | Zeus en apprentissage |
+| | Lieutenant (Lt.) | Zeus confirmé |
+| | Capitaine (Capt.) | Zeus en chef |
 | État-major | Major (Maj.) | Admin |
 | | Lieutenant-colonel (LCol.) | Admin |
 | | Colonel (Col.) | "Pouet" |
@@ -91,14 +91,13 @@ Status: **mockup approved 2026-11-26**. This file records every decision taken w
 | Sgt. → Adju. | QL-TL + one QSP2 + officers' decision |
 | Adju. → AdjuM. | QL-SL + officers' decision |
 
-- **Access groups.** Assignable in combination, but **only the highest is shown** as a tag. Order: Commandement > Zeus > Modérateur > Instructeur > Membre.
+- **Access groups.** Assignable in combination, but **only the highest is shown** as a tag. Order: Commandement > Zeus > Instructeur > Membre. (Modérateur removed by the owner, 2026-11-26.)
 
 | Group | Rights |
 |---|---|
 | Commandement | Everything, for everyone, including managing access groups. "Admin" is merged in here. |
 | Zeus | Create operations and deployments, change the phase, assign ORBAT seats |
 | Instructeur | Create sessions; evaluate their own qualifications |
-| Modérateur | Command notice; ORBAT seats |
 | Membre | Default |
 
 - **"Promotion possible"** (all criteria met except the officers' decision) is visible to Commandement only.
@@ -108,7 +107,7 @@ Status: **mockup approved 2026-11-26**. This file records every decision taken w
 - **Pause menu.** The CGQC logo replaces the "ARMA REFORGER" title. Entries: Continuer, **Gestion d'unité** (GM only), Réapparaître, Redémarrer, Game Master, Menu des groupes, Paramètres, Sauvegarder et quitter.
 - **Overview panel** (shown to everyone):
   - Header: rank and name in large type, seat and role, team leader, phase and status, number of players online.
-  - Command notice (editable by Commandement or Modérateur).
+  - Command notice (editable by Commandement).
   - **Opération en cours.** The middle section scrolls; the header and the OPORD link stay fixed. In order:
     1. Mission (highlighted).
     2. Forces ennemies | Forces alliées.

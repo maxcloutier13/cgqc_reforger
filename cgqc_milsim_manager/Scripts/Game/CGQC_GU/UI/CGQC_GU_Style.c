@@ -6,6 +6,15 @@ class CGQC_GU_Style
 	static const ResourceName LAYOUT_BUTTON = "{4B7C7538BC40D683}UI/layouts/CGQC_GU_Button.layout";
 	static const ResourceName LAYOUT_PAPER_SHELL = "{1CC44738E0579BA8}UI/layouts/CGQC_GU_PaperShell.layout";
 	static const ResourceName LAYOUT_TEXT = "{BA879D12B15AC857}UI/layouts/CGQC_GU_Text.layout";
+	static const ResourceName LAYOUT_VBOX = "{3F2645D4E313E40A}UI/layouts/CGQC_GU_VBox.layout";
+	static const ResourceName LAYOUT_HBOX = "{78BFD66710562FBF}UI/layouts/CGQC_GU_HBox.layout";
+	static const ResourceName LAYOUT_SIZED = "{19FAFB32D5A0F210}UI/layouts/CGQC_GU_Sized.layout";
+	static const ResourceName LAYOUT_CANVAS = "{58401A6B0C8EF961}UI/layouts/CGQC_GU_Canvas.layout";
+	static const ResourceName LAYOUT_RECT = "{9023B45C8EC97503}UI/layouts/CGQC_GU_Rect.layout";
+	static const ResourceName LAYOUT_PANEL = "{9EB86D476345F06B}UI/layouts/CGQC_GU_Panel.layout";
+	static const ResourceName LAYOUT_FIELD = "{124F7C180CFF788E}UI/layouts/CGQC_GU_Field.layout";
+	static const ResourceName LAYOUT_FIELD_MULTI = "{850ECED9FE9A92B5}UI/layouts/CGQC_GU_FieldMulti.layout";
+	static const ResourceName LAYOUT_CHECK = "{4291E7CFA9DE912F}UI/layouts/CGQC_GU_Check.layout";
 
 	// Fonts available in the base game (owner decision: closest fonts for now).
 	static const ResourceName FONT_TITLE = "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt";
@@ -31,6 +40,29 @@ class CGQC_GU_Style
 	static Color Rule()			{ return Color.FromSRGBA(0x3A, 0x31, 0x23, 255); }	// ruled boxes #3A3123
 	static Color PaperButton()	{ return Translucent(0x3A, 0x31, 0x23, 0.16); }	// plain button on paper
 	static Color PaperText()	{ return Color.FromSRGBA(0xF4, 0xED, 0xD9, 255); }	// text on blue / red
+	static Color Field()		{ return Color.FromSRGBA(0xF3, 0xEB, 0xD3, 255); }	// edit field on paper
+	static Color Clear()		{ Color c = Color.FromSRGBA(0, 0, 0, 255); c.SetA(0); return c; }
+	static Color StatusYellow()	{ return Color.FromSRGBA(0xB0, 0x86, 0x0E, 255); }	// INACTIF, dark enough for parchment
+
+	//! Member status colour code (owner): ACTIF green, INACTIF yellow, MIA red, KIA black.
+	static Color StatusColor(string status)
+	{
+		switch (status)
+		{
+			case "actif":	return Online();
+			case "inactif":	return StatusYellow();
+			case "mia":		return Red();
+			case "kia":		return Ink();
+		}
+
+		return InkSoft();
+	}
+
+	static Color Online()		{ return Color.FromSRGBA(0x3E, 0x7B, 0x3A, 255); }	// online dot / LIÉ
+	static Color Offline()		{ return Color.FromSRGBA(0x9A, 0x8F, 0x7A, 255); }
+	static Color Slip()			{ return Color.FromSRGBA(0x44, 0x47, 0x33, 255); }	// rank slip-on (olive)
+	static Color SlipMark()		{ return Color.FromSRGBA(0xD9, 0xCB, 0x94, 255); }	// embroidery on the slip-on
+	static Color Gorget()		{ return Color.FromSRGBA(0xB0, 0x22, 0x22, 255); }	// colonel's scarlet
 
 	// Dark
 	static Color DarkPanel()	{ return Translucent(0x16, 0x19, 0x1D, 0.65); }	// mockup .55, a bit more for bright terrain

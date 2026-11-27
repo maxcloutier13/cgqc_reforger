@@ -117,6 +117,14 @@ class CGQC_GU_Str
 	}
 
 	//------------------------------------------------------------------------------------------------
+	static string Upper(string s)
+	{
+		string c = s;
+		c.ToUpper();
+		return c;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static string Join(array<string> items, string sep)
 	{
 		string res;

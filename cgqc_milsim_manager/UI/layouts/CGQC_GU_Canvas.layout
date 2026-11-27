@@ -1,0 +1,12 @@
+SizeLayoutWidgetClass {
+ Name "GU_Canvas"
+ {
+  FrameWidgetClass "{7A1D3E5F90B2C411}" {
+   Name "Canvas"
+   Slot AlignableSlot "{7A1D3E5F90B2C412}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+  }
+ }
+}

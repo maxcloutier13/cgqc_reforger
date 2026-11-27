@@ -16,6 +16,38 @@ ButtonWidgetClass {
      }
      Color 0.14 0.26 0.61 1
     }
+    ImageWidgetClass "{7A1D3E5F90B2C461}" {
+     Name "EdgeT"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C462}" {
+      HorizontalAlign 3
+      VerticalAlign 0
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C463}" {
+     Name "EdgeB"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C464}" {
+      HorizontalAlign 3
+      VerticalAlign 2
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C465}" {
+     Name "EdgeL"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C466}" {
+      HorizontalAlign 0
+      VerticalAlign 3
+     }
+     Size 1.5 1.5
+    }
+    ImageWidgetClass "{7A1D3E5F90B2C467}" {
+     Name "EdgeR"
+     Slot OverlayWidgetSlot "{7A1D3E5F90B2C468}" {
+      HorizontalAlign 2
+      VerticalAlign 3
+     }
+     Size 1.5 1.5
+    }
     TextWidgetClass "{909FF11834D3FD9E}" {
      Name "Label"
      Slot OverlayWidgetSlot "{44E430055E707CB7}" {

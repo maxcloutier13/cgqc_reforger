@@ -1,0 +1,4 @@
+ImageWidgetClass {
+ Name "GU_Rect"
+ Color 1 1 1 1
+}

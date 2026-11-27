@@ -73,7 +73,8 @@ $profile:CGQC_GestionUnite/
 }
 ```
 
-- `record.type` is one of: `enlistment, promotion, operation, deployment, session, qualification, distinction, task, note`.
+- `record.type` is one of: `enlistment, promotion, operation, deployment, session, qualification, distinction, task, note, status`.
+  - `status` (added in 1e) is written by the system on every manual status change. Its `data` is `{status, from, effective}`; staff can't add it by hand.
 - `stats` values are derived and can be recomputed from the event files at any time.
 - **Distinction devices are never stored.** Leaves, bars and clasps are computed from the award list plus the rules in `distinctions.json`. The long-service clasps are computed from `enlistedOn` and the thresholds in `settings.json` → `longService { firstAtYears: 1, bronzeEvery: 1, silverAt: 5, goldAt: 10 }`.
 

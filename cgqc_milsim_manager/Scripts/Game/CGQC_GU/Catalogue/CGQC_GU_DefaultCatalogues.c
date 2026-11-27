@@ -103,13 +103,10 @@ class CGQC_GU_DefaultCatalogues
 
 		roles.Insert(Role("instructeur", "Instructeurs", "adjuc"));
 
-		roles.Insert(Role("moderateur", "Modérateur", "slt"));
 		roles.Insert(Role("zeus_apprenti", "Zeus en apprentissage", "slt"));
 
-		roles.Insert(Role("moderateur_instructeur", "Modérateur et Instructeur", "lt"));
 		roles.Insert(Role("zeus_confirme", "Zeus confirmé", "lt"));
 
-		roles.Insert(Role("moderateur_instructeur_chef", "Modérateur et Instructeur en chef", "capt"));
 		roles.Insert(Role("zeus_chef", "Zeus en chef", "capt"));
 
 		roles.Insert(Role("admin", "Admin", "maj"));
@@ -134,7 +131,6 @@ class CGQC_GU_DefaultCatalogues
 	{
 		groups.Insert(Group("commandement", "Commandement", 100, { "*" }));
 		groups.Insert(Group("zeus", "Zeus", 80, { "unit.menu", "operations.manage", "deployments.manage", "phase.change", "orbat.assign" }));
-		groups.Insert(Group("moderateur", "Modérateur", 60, { "notice.edit", "orbat.assign" }));
 		groups.Insert(Group("instructeur", "Instructeur", 40, { "sessions.create", "quals.evaluate_own" }));
 		groups.Insert(Group("membre", "Membre", 0, new array<string>()));
 	}

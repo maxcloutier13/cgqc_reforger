@@ -3,8 +3,14 @@
 
 class CGQC_GU_NewsLine : Managed
 {
-	string date;	// dd-mm
+	string date;	// MM-DD
 	string text;
+}
+
+class CGQC_GU_CriterionLine : Managed
+{
+	string text;	// "Q-SI obtenue", "2 mois au grade (1/2)"
+	bool met;
 }
 
 class CGQC_GU_OverviewDto : Managed
@@ -81,10 +87,36 @@ class CGQC_GU_OverviewBuilder
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Next rank and its criteria, from promotions.json. Officers' decision and other checks are
-	//! listed but never marked met here (they are decided by people, not data).
+	//! Next rank and its criteria, from promotions.json (shared with the Dossier's Grade & accès tab).
 	protected static void NextRank(CGQC_GU_Catalogues cat, CGQC_GU_Member me, CGQC_GU_OverviewDto dto)
 	{
+		array<ref CGQC_GU_CriterionLine> lines = new array<ref CGQC_GU_CriterionLine>();
+		bool automatic;
+		string next = BuildCriteria(cat, me, lines, automatic);
+		if (next.IsEmpty())
+			return;
+
+		dto.nextRank = next;
+
+		array<string> parts = new array<string>();
+		foreach (CGQC_GU_CriterionLine line : lines)
+		{
+			parts.Insert(line.text);
+		}
+
+		string criteria = CGQC_GU_Str.Join(parts, " · ");
+		if (automatic)
+			criteria = "Automatique : " + criteria;
+
+		dto.nextCriteria = criteria;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Fills the criteria lines for the member's next rank and returns "Caporal-chef (CplC.)", or "" when
+	//! there is none. Officers' decision and other checks are never marked met: people decide those.
+	static string BuildCriteria(CGQC_GU_Catalogues cat, CGQC_GU_Member me, notnull array<ref CGQC_GU_CriterionLine> lines, out bool automatic)
+	{
+		automatic = false;
 		CGQC_GU_Promotion p;
 		foreach (CGQC_GU_Promotion candidate : cat.m_aPromotions)
 		{
@@ -96,18 +128,18 @@ class CGQC_GU_OverviewBuilder
 		}
 
 		if (!p)
-			return;
+			return string.Empty;
 
 		CGQC_GU_Rank to = cat.FindRank(p.to);
 		if (!to)
-			return;
+			return string.Empty;
 
-		dto.nextRank = string.Format("%1 (%2)", to.label, to.abbr);
+		automatic = p.automatic;
 
-		array<string> parts = new array<string>();
 		foreach (string code : p.requiredQuals)
 		{
-			parts.Insert(code + " " + QualState(me, code));
+			string state = QualState(me, code);
+			AddLine(lines, code + " " + state, state == "obtenue");
 		}
 
 		foreach (CGQC_GU_AnyOf any : p.anyOf)
@@ -119,33 +151,37 @@ class CGQC_GU_OverviewBuilder
 					have++;
 			}
 
-			string group = AnyOfGroupName(any);
-			string state = "à faire";
+			string anyState = "à faire";
 			if (have >= any.count)
-				state = "obtenue";
+				anyState = "obtenue";
 
-			parts.Insert(string.Format("%1 %2 (%3/%4)", group, state, have, any.count));
+			AddLine(lines, string.Format("%1 %2 (%3/%4)", AnyOfGroupName(any), anyState, have, any.count), have >= any.count);
 		}
 
 		if (p.minMonthsInRank > 0)
 		{
 			int months = CGQC_GU_Time.MonthsSince(MonthsInRankStart(me));
-			parts.Insert(string.Format("%1 mois au grade (%2/%1)", p.minMonthsInRank, Math.Min(months, p.minMonthsInRank)));
+			AddLine(lines, string.Format("%1 mois au grade (%2/%1)", p.minMonthsInRank, Math.Min(months, p.minMonthsInRank)), months >= p.minMonthsInRank);
 		}
 
 		foreach (CGQC_GU_LabelItem check : p.otherChecks)
 		{
-			parts.Insert(CGQC_GU_Str.Lower(check.label));
+			AddLine(lines, CGQC_GU_Str.Lower(check.label), false);
 		}
 
 		if (p.officerDecision)
-			parts.Insert("décision des officiers");
+			AddLine(lines, "décision des officiers", false);
 
-		string criteria = CGQC_GU_Str.Join(parts, " · ");
-		if (p.automatic)
-			criteria = "Automatique : " + criteria;
+		return string.Format("%1 (%2)", to.label, to.abbr);
+	}
 
-		dto.nextCriteria = criteria;
+	//------------------------------------------------------------------------------------------------
+	protected static void AddLine(array<ref CGQC_GU_CriterionLine> lines, string text, bool met)
+	{
+		CGQC_GU_CriterionLine line = new CGQC_GU_CriterionLine();
+		line.text = text;
+		line.met = met;
+		lines.Insert(line);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -198,7 +234,7 @@ class CGQC_GU_OverviewBuilder
 
 	//------------------------------------------------------------------------------------------------
 	//! Date the current rank started: the last PROMOTION entry to that rank, else the enlistment date.
-	protected static string MonthsInRankStart(CGQC_GU_Member m)
+	static string MonthsInRankStart(CGQC_GU_Member m)
 	{
 		for (int i = m.record.Count() - 1; i >= 0; i--)
 		{
@@ -265,12 +301,12 @@ class CGQC_GU_OverviewBuilder
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! "2026-11-25T..." -> "25-11"
-	protected static string ShortDate(string iso)
+	//! "2026-11-25T..." -> "11-25" (MM-DD, owner's format)
+	static string ShortDate(string iso)
 	{
 		if (iso.Length() < 10)
 			return iso;
 
-		return iso.Substring(8, 2) + "-" + iso.Substring(5, 2);
+		return iso.Substring(5, 2) + "-" + iso.Substring(8, 2);
 	}
 }
