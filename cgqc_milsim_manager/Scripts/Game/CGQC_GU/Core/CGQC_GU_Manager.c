@@ -722,7 +722,10 @@ class CGQC_GU_Manager
 		pc.CGQC_GU_SendReply(requestId, result.m_bOk, result.m_sCode, result.m_sPayload);
 
 		// Rights may have moved: refresh everyone's light flags (menu entry, notice edit button).
-		if (result.m_bOk && (action == CGQC_GU_Requests.ACCESS_SET || action == CGQC_GU_Requests.MEMBER_LINK || action == CGQC_GU_Requests.MEMBER_MERGE))
+		// An instructor authorization may add the Instructeur group; an evaluation adds news (and maybe a
+		// promotion), and the pause panels re-read the overview on every light-state change.
+		if (result.m_bOk && (action == CGQC_GU_Requests.ACCESS_SET || action == CGQC_GU_Requests.MEMBER_LINK || action == CGQC_GU_Requests.MEMBER_MERGE
+			|| action == CGQC_GU_QualRequests.INSTRUCTOR_SET || action == CGQC_GU_QualRequests.QUAL_EVALUATE))
 			BroadcastLightState();
 	}
 }

@@ -253,7 +253,7 @@ class CGQC_GU_OverviewBuilder
 
 	//------------------------------------------------------------------------------------------------
 	//! Every news line is composed here, by type (Phase 2f). Unit-level types first; member types need
-	//! the member's dossier. Reserved for later phases: qualification (3), operation and deployment (5),
+	//! the member's dossier. qualification: Phase 3 (passes only). Reserved: operation and deployment (5),
 	//! distinction (6). Until their text exists here, such items are simply not shown.
 	static string NewsText(CGQC_GU_Manager mgr, CGQC_GU_NewsItem item)
 	{
@@ -295,6 +295,21 @@ class CGQC_GU_OverviewBuilder
 					return string.Format("%1 %2 rétrogradé %3", r.abbr, m.displayName, r.label);
 
 				return string.Format("%1 %2 promu %3", r.abbr, m.displayName, r.label);
+			}
+
+			case "qualification":
+			{
+				// The rank held when the qualification was obtained ("Cdt. Nadeau a obtenu la Q-MB"),
+				// even if it promoted them at once.
+				string qual, rankAt;
+				item.data.Find("qual", qual);
+				item.data.Find("rank", rankAt);
+				CGQC_GU_Rank held = cat.FindRank(rankAt);
+				string who = NameOf(cat, m);
+				if (held)
+					who = held.abbr + " " + m.displayName;
+
+				return string.Format("%1 a obtenu la %2", who, qual);
 			}
 		}
 

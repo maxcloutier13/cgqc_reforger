@@ -156,7 +156,11 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 		CGQC_GU_RequestResult result = CGQC_GU_Requests.Handle(mgr, caller, action, p.ToJson());
 		string ok = "REFUSÉ";
 		if (result.m_bOk)
+		{
 			ok = "OK";
+			// Like a real client request: open pause panels re-read their data (news, rights).
+			mgr.BroadcastLightState();
+		}
 
 		return Reply(string.Format("%1 %2 (%3) par %4, %5 octets", action, ok, result.m_sCode, caller.displayName, result.m_sPayload.Length()), result.m_bOk);
 	}

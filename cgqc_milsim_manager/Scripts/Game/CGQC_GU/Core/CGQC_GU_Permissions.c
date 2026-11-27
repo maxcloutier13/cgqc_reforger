@@ -16,6 +16,7 @@ class CGQC_GU_Rights
 	static const string QUALS_EVALUATE_OWN = "quals.evaluate_own";
 	static const string UNIT_MENU = "unit.menu";						// Gestion d'unité entry in the Échap menu
 	static const string CALENDAR_EDIT = "calendar.edit";				// manual calendar events (Phase 2)
+	static const string INSTRUCTORS_MANAGE = "instructors.manage";	// authorize instructors per qualification (Phase 3)
 }
 
 class CGQC_GU_Permissions

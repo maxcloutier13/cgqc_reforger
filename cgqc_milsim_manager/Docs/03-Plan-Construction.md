@@ -473,6 +473,147 @@ All steps 2a–2f PASSED.
 - **Entraînement editor:** FTX or training, optional qualification, exercises covered, attendance with per-exercise results, and finishing the session into the records.
 - **Promotion engine:** automatic Cdt. → Sdt. on Q-MB, and the "Promotion possible" flag (Commandement only). Everything is driven by `promotions.json`.
 
+### Phase 3 — owner answers (2026-11-26)
+
+1. **Exercises are reference material.** In a session with no qualification, the exercises covered are listed only and nobody is graded on them. In a **qualification** session, the instructor picks the exercises that serve as the test, and each one is RÉUSSI / ÉCHOUÉ per student. The Dossier's « Exercices réussis » lists only exercises passed as part of a qualification.
+2. Approved. Commandement authorizes instructors per qualification (`instructors.manage`). « Instructor qualifications » come later; for now authorization is given by command only. An instructor does not evaluate themselves.
+3. **Automatic Instructeur group:** the first teaching authorization adds the Instructeur access group. Removing the last authorization leaves the group as it is.
+4. **Nothing is written without a click.** Quitting the game, closing the screen or a disconnect registers nothing. Only the instructor's or Zeus's own ENREGISTRER / TERMINER button (double press) writes, on the session or the qualification itself.
+5. Approved: « 2 mois » counts from the newest PROMOTION entry, or from the enlistment date.
+6. Approved: the « Devenir instructeur » box is left out.
+7. **Paper rail:** the full mockup list, in its ÉVÉNEMENTS / DOSSIER / UNITÉ groups, on every paper screen. Tabs of later phases are greyed out until they exist.
+
+Where the breakdown below differs from these answers, the answers win.
+
+### Phase 3 — detailed breakdown (answers recorded 2026-11-26; waiting for the go-ahead on 3a)
+
+Each step ends with `wb_validate_scripts` + `wb_reload`, the new `Module: Game` CRC in the newest `script.log`, and a Play test by the owner. Screens follow the mockup artboards named in each step.
+
+**What already exists (Phases 0–2)**
+- **Catalogues:** `qualifications.json` (15 qualifications: Q-MB with content, the others `a_venir`), `exercises.json` (Q-MB-E1 to E3), `promotions.json` (Cdt. › Sdt. automatic on Q-MB, the rest with quals / anyOf / months / officers' decision).
+- **Member fields,** stored but unused: `instructorFor[]`, `qualifications[]`, `progress[]`, `exercises[]`, `stats.sessions` / `studentsEvaluated`. Every imported member already holds Q-MB on their join date.
+- **Rights:** the Instructeur group holds `sessions.create` and `quals.evaluate_own`. Commandement holds everything (`*`).
+- **Hooks:** calendar kind `training` (colour and legend), news type `qualification` (reserved), and the dimmed ENTRAÎNEMENTS / QUALIFICATIONS / EXERCICES entries in the dark navigation.
+
+**What the gitbook has today** (read 2026-11-26)
+- **Q-MB only:** description, the 8 criteria, E1–E3 with description, format, place, steps and learning goals. On success: automatic promotion to Soldat. On failure: « reprise à une date ultérieure ».
+- **No content** for Q-SI, Q-SB, Q-EF, Q-NT, QL-2iC, QSP1-x, QL-TL, QSP2-x or QL-SL. The Soldat pages are empty templates, and PP2 and PP3 read « WIP ». These stay « à venir ».
+- The instructor pages say **exercises are not graded one by one**: pass / fail belongs to the qualification, and exercises are practice toward its criteria. See question 1.
+
+**Questions to settle before any Phase 3 code**
+
+1. **Exercises: done, or passed?** The gitbook says exercises are not graded; the mockup ticks each exercise per student.
+   - Proposed: an exercise tick means **« complété »**, a record that the student did it with that instructor that day. Pass / fail exists only on the qualification. The Dossier table reads « EXERCICES COMPLÉTÉS » instead of « Exercices réussis ».
+   - Alternative: keep « réussi » per exercise, as in the mockup.
+2. **Who may do what.**
+   - **Run a session** (Entraînement): `sessions.create` (Instructeur, Commandement). An FTX or a session with no qualification is open to any instructor.
+   - **Link a qualification, tick its exercises and give RÉUSSI / ÉCHOUÉ:** an instructor authorized for that qualification (`instructorFor`), or Commandement. The same applies to Progression's partial save and Réussir / Échouer.
+   - **Authorize an instructor** (« Autoriser à enseigner » / « Retirer l'autorisation »): a new right `instructors.manage`, Commandement only.
+   - **Read:** everyone reads every dossier tab, both lists, and every PLANIFIÉE / TERMINÉE session. BROUILLON sessions are seen by their instructor and Commandement only.
+   - Can an instructor evaluate themselves? Proposed: **no**.
+3. **Instructeur access group.** Proposed: authorizing a member for their first qualification also gives them the Instructeur group, so they get `sessions.create`. Removing their last authorization leaves the group alone, since Commandement may have given it by hand.
+4. **Finishing a session** (« Terminer et ajouter aux dossiers », double press). Proposed, for each member ticked present:
+   - a Registre entry SÉANCE-FTX (type, title, position, instructor) and `stats.sessions` +1;
+   - each ticked exercise goes into `exercises[]`, and into the open `progress` for that qualification;
+   - RÉUSSI or ÉCHOUÉ goes into `qualifications[]` with a Registre entry QUALIFICATION; « — » writes nothing. A pass clears that qualification's `progress`;
+   - the instructor gets `stats.studentsEvaluated` +1 for each RÉUSSI / ÉCHOUÉ;
+   - the session becomes TERMINÉE and read-only. There is no reopening.
+5. **Promotion engine** (all from `promotions.json`).
+   - **Automatic:** a pass on a qualification that fully meets an `automatic` rule (today Cdt. › Sdt. on Q-MB) promotes at once: Registre PROMOTION signed by the evaluator, plus a news line.
+   - **« Promotion possible »:** every criterion met except the officers' decision and the « vibe check ». Shown to `promotion.view` holders only, as a « ▲ PROMOTION POSSIBLE » tag on the Grade & accès tab and the Membres filter « ▲ Promotion possible ».
+   - **« 2 mois »** counts from the newest PROMOTION entry in the Registre, or from `enlistedOn` if there is none.
+6. **Insignes, four states.** OBTENU = latest result RÉUSSI. REPRISE = latest result ÉCHEC. EN COURS = a saved progress or a PLANIFIÉE session that links it. À VENIR = everything else. QSP1 / QSP2 show each specialty as its own badge (MED, MG, DMR, ENG; SNI, UAV, CENT, GRIF, JTAC). The fiche's INSIGNES line lists the OBTENU codes.
+7. **Session fields.**
+   - Type FTX or ENTRAÎNEMENT; title; date (AAAA-MM-JJ); start in HE (HH:MM); instructor (picked from authorized members, default the creator); place; linked qualification (optional, « Aucune — présence seulement »); exercises covered.
+   - Attendance: members added from the roster (online first), each with a free-text position (« Élève », « T1-1 · Fusilier »). The ORBAT fills positions in Phase 4.
+   - Statuses BROUILLON › PLANIFIÉE › TERMINÉE. SUPPRIMER (double press) exists only before TERMINÉE. « Publier sur Discord » is dimmed until Phase 7.
+   - PLANIFIÉE and TERMINÉE sessions appear on the calendar (kind `training`) at their date and time HE. BROUILLON does not.
+8. **News.** One line per RÉUSSI: « Cdt. Nadeau a obtenu la Q-MB ». ÉCHEC makes no news. An automatic promotion adds its own PROMOTION line.
+9. **Catalogue content.**
+   - The Q-MB texts are refreshed from the gitbook (description, E1–E3 description and full text, success steps). Everything else stays « à venir »; nothing is invented.
+   - Catalogues are edited in the JSON files, as today. There is no in-game catalogue editor in Phase 3.
+10. **Paper rail.** It grows to the mockup's full rail, the same on every paper screen:
+    - ÉVÉNEMENTS: Opérations, Déploiements, Entraînements;
+    - DOSSIER: Registre, Grade & accès, Qualifications, Séances / FTX, Progression, Instructeur, Insignes, Distinctions;
+    - UNITÉ: Membres, ORBAT, Liste des qualifications, Liste des exercices, Liste des distinctions;
+    - FERMER.
+    - Entries of later phases are dimmed, as in the dark navigation. MEMBRES keeps its current visibility rule.
+
+**Steps**
+
+- **3a — Server: qualifications, instructors, progress, promotion engine (no UI).**
+  - Q-MB catalogue refresh (question 9). It is written to the live `config/*.json` only where the file still holds the Phase 0 defaults; a file the owner changed is left alone and a log line says so.
+  - New right `instructors.manage` (Commandement via `*`).
+  - Reads:
+    - `quals.catalogue`: the qualifications grouped by PP, with exercises, criteria, texts, and their qualified instructors (online, students evaluated);
+    - `exercises.catalogue`;
+    - `instructors`: everyone authorized and what they teach.
+  - Writes:
+    - `instructor.set` / `instructor.remove` (question 3);
+    - `progress.save`: ticked exercises, criteria, notes, signer and date;
+    - `qual.evaluate`: RÉUSSI / ÉCHEC outside a session, from Progression.
+  - Promotion engine `CGQC_GU_Promotions`: automatic promotion and the « promotion possible » check (question 5), plus the `qualification` news line (question 8).
+  - `dossier` gains the qualifications, completed exercises, sessions, progress, instructor rights, insignia states and `promotionPossible`. The fiche gains its counts: qualifications obtained, Séances / FTX, Formations disponibles (qualifications they may teach), Élèves évalués.
+  - **Test:** `#gu as cloutier instructor.set uid=<X> qual=Q-MB`, then `#gu as <X> qual.evaluate uid=<Cdt.> qual=Q-MB result=passed` promotes the Cdt. to Sdt., with Registre entries and the news line in the pause panel. The same evaluation by an unauthorized Sdt. is refused.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded with `wb_reload` (22:36:35, compile CRC32 `fc74455f`, 5756 files). **Not yet live-tested.**
+    - **New files:**
+      - `Core/CGQC_GU_Quals.c`: evaluation rights (`CanEvaluate`), results, insignia states, instructor authorization, and the promotion engine (`CheckAutomaticPromotion`, `PromotionPossible`).
+      - `Net/CGQC_GU_QualRequests.c`: the requests below, dispatched from `CGQC_GU_Requests.Handle`.
+    - **Reads (every member):** `quals.catalogue`, `exercises.catalogue`, `instructors`.
+    - **Writes:**
+      - `instructor.set` / `instructor.remove` (`instructors.manage`, Commandement through `*`). The first authorization adds the Instructeur group. Each one writes a Registre NOTE: « Autorisé à enseigner : Q-MB » / « Autorisation d'enseigner retirée : Q-MB ».
+      - `progress.save` and `qual.evaluate`: allowed for Commandement, or an Instructeur authorized for that qualification. Refused on one's own dossier (`self_evaluation`) and on a qualification already passed (`already_passed`).
+      - `qual.evaluate` saves the panel's ticks first, then writes the result, a Registre QUALIFICATION entry (« Q-MB réussie » / « Q-MB : échec ») and +1 to the evaluator's students evaluated.
+      - On a pass, the ticked test exercises go into « Exercices réussis », the progress is cleared, the news line « Cdt. X a obtenu la Q-MB » is added, and the automatic promotion runs (Cdt. › Sdt. on Q-MB: PROMOTION entry and news, signed by the evaluator).
+      - A fail keeps the progress for the retake and makes no news.
+    - **Catalogue refresh (owner answer 9):** at server start, only *empty* fields of existing Q-MB entries are filled from the gitbook text (Q-MB full text; E1–E3 full text). The file is rewritten only when something was filled, and a log line says how many fields. Nothing else changes.
+    - **`dossier` reply** gains: `quals` (latest state of each qualification), `exercisesDone`, `ladder` (every qualification with its state, test exercises and criteria ticks, notes, « Progression enregistrée le … par … », teachers), `teach` (Instructeur tab), `insignes`, `formationsCount`, `promotionPossible` (sent only to `promotion.view` holders), and the viewer flags `canInstruct`, `canPromotion` and `evaluable`.
+    - `#gu as …` now re-sends the light state after a successful request, so the pause panel shows the new news line at once.
+    - **3a PASSED** (2026-11-26): the owner ran the console test in Play and every step worked: Cadet created, instructor authorized, both refusals, partial progress, pass with the automatic promotion to Sdt., Registre entries and news lines.
+- **3b — Server: sessions (no UI).**
+  - `trainings/<id>.json` (`trn_…`), loaded at start and saved on every change. Schema doc updated.
+  - Reads `training.list` (newest first, with a « < > » order) and `training.get`.
+  - Writes:
+    - `training.save`: create or update a BROUILLON / PLANIFIÉE session;
+    - `training.status`: BROUILLON ↔ PLANIFIÉE;
+    - `training.delete`;
+    - `training.finish` (question 4).
+  - Calendar: `CGQC_GU_CalendarBuilder.CollectMonth` adds PLANIFIÉE / TERMINÉE sessions as kind `training`, and they count for « PROCHAIN AU CALENDRIER ».
+  - **Test:** create, plan and finish a Q-MB session through `#gu as`. The dossiers, Registre, news and calendar update, and a restart keeps the session.
+- **3c — Paper rail + Unité › Liste des qualifications + Liste des exercices.**
+  - The full rail (question 10) on Dossier, Membres and the new screens.
+  - **Catalogue-Qualifs:** header UNITÉ · RÉFÉRENCE COMMUNE / QUALIFICATIONS with search, the PP1 / PP2 / PP3 groups with their colour bar and promotion note, and the detail panel: description, exercises with REQUIS, criteria, À la réussite, full text, and qualified instructors with an online dot and student count. A qualification with no content reads « à venir ».
+  - **Catalogue-Exercices:** a qualification filter, a table (code, exercise, qualification, description, Requis), and the chosen exercise's full text. Placeholder rows « [à venir] » for qualifications without exercises.
+  - The dark navigation's QUALIFICATIONS and EXERCICES open them.
+  - **Test:** browse both lists as a plain member and as Commandement. Q-MB shows the gitbook text; the others show « à venir ».
+- **3d — Dossier › Qualifications, Séances / FTX, Insignes.**
+  - **Dossier-Qualifs:** the qualifications table (code, qualification, level, result tag, date YYMMDD, evaluator) and the exercises table (question 1 decides its title).
+  - **Dossier-Seances:** the TOUT / FTX / ENTRAÎNEMENT filter and a table with the session, its position line under it, type, date, qualification, exercises and instructor, in pages.
+  - **Dossier-Insignes:** the legend, the badge grid in four states (question 6), and the selected badge's detail: title, state tag with date, level and PP, « Enseignée par ». VOIR LA PROGRESSION and VOIR LA QUALIFICATION open those screens.
+  - The fiche's INSIGNES line and its counts.
+  - **Test:** a member with RÉUSSI, ÉCHEC and in-progress qualifications shows the right tags and badges.
+- **3e — Dossier › Progression + Instructeur + Liste des instructeurs.**
+  - **Dossier-Prochains** (PROGRESSION): the next-promotion box, the PP ladder with each qualification's state, and the chosen qualification's panel: exercises with REQUIS, criteria, notes, « Progression enregistrée le … par … », ENREGISTRER LA PROGRESSION, RÉUSSIR and ÉCHOUER (double press). Controls show only to an authorized evaluator; everyone else sees it read-only.
+  - **Dossier-Instructeur:** the table (qualification, authorization, authorized by, students) and AUTORISER À ENSEIGNER / RETIRER L'AUTORISATION for `instructors.manage`, with a qualification picker. The mockup's « Devenir instructeur » box is explanatory text, so it is left out (in-world rule) unless the owner wants it.
+  - **Instructeurs** (the dialog from LISTE DES INSTRUCTEURS): instructor, grade, qualifications taught as tags, students evaluated, with a qualification filter.
+  - **Test:** authorize a member, save a partial progress, pass Q-MB from Progression; the Cdt. becomes Sdt.
+- **3f — Événements › Entraînement (paper).**
+  - After the `Entrainement` artboard. The header has INSTRUCTION / ENTRAÎNEMENT, < title >, NOUVELLE SÉANCE and « n / n au dossier ».
+  - **Fiche de la séance** on the left: title, type and linked qualification, BROUILLON › PLANIFIÉE › TERMINÉE, date, start HE, instructor, place, present count.
+  - **On the right:**
+    - FTX / ENTRAÎNEMENT;
+    - linked qualification and exercises covered (tags with ✕, + EXERCICE);
+    - the attendance table: present tick, member, position, then, **for a qualification session only**, one RÉUSSI / ÉCHOUÉ column per test exercise and RÉSULTAT RÉUSSI / ÉCHOUÉ / —. A session with no qualification lists its exercises covered but grades nothing (owner answer 1);
+    - + AJOUTER UN MEMBRE.
+  - **Buttons:** ENREGISTRER LE BROUILLON, PLANIFIER, SUPPRIMER, PUBLIER SUR DISCORD (dimmed), and TERMINER ET AJOUTER AUX DOSSIERS, all double press.
+  - A TERMINÉE session is read-only.
+  - The rail and the dark navigation's ENTRAÎNEMENTS open it.
+  - **Test:** the full loop: plan a Q-MB session for next week (it shows on the calendar), take attendance with a second client, finish. Dossiers, Insignes, Registre, news and the automatic promotion all update.
+- **3g — Promotion possible + Membres columns.**
+  - Membres: the « ▲ Promotion possible » filter (`promotion.view` only) and the « Instructeur pour » column.
+  - Grade & accès: the « ▲ PROMOTION POSSIBLE » tag next to the next-rank criteria, and the criteria now show real qualification status.
+  - **Test:** a Sdt. with Q-SI, Q-SB and 2 months in rank shows in the filter for Commandement and not for a plain member.
+
 ## Phase 4 — ORBAT
 
 - CGQC / UPO tabs (GRIT left as a placeholder) with patches.

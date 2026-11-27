@@ -216,6 +216,7 @@ class CGQC_GU_DefaultCatalogues
 			"Nom changé sur Discord et ajout au groupe Soldats"
 		});
 		qmb.onFailure = "Reprise à une date ultérieure, une fois les critères remplis.";
+		qmb.text = "La Q-MB est la qualification d'entrée du CGQC. Elle confirme que le setup du joueur est fonctionnel, qu'il peut communiquer avec son équipe et qu'il maîtrise les bases de survie sur le terrain. En cas d'échec, elle est reprise à une date ultérieure, une fois les critères remplis. Si le micro ou le jeu du joueur ne fonctionne pas, l'instructeur l'aide au dépannage.";
 		quals.Insert(qmb);
 
 		quals.Insert(Qual("Q-SI", "Soldat individuel", 1, "sdt"));
@@ -256,12 +257,20 @@ class CGQC_GU_DefaultCatalogues
 	//! Q-MB exercises from the gitbook; all REQUIS for now (spec §8).
 	static void Exercises(array<ref CGQC_GU_Exercise> exercises)
 	{
-		exercises.Insert(Exercise("Q-MB-E1", "Soins individuels", "Q-MB", "Solo / Binôme", "Map de training",
-			"Gérer ses propres blessures selon le niveau de menace, en priorisant rapidement."));
-		exercises.Insert(Exercise("Q-MB-E2", "Secours au blessé", "Q-MB", "Solo / Binôme", "Map de training, Medical Training",
-			"Évaluer et stabiliser un camarade au sol : sécurité d'abord, MARCH de base, position du blessé."));
-		exercises.Insert(Exercise("Q-MB-E3", "Communication", "Q-MB", "Binôme", "Map de training",
-			"Utiliser le vive-voix et la 343 selon la situation, avec une information pertinente sur le bon canal."));
+		CGQC_GU_Exercise e = Exercise("Q-MB-E1", "Soins individuels", "Q-MB", "Solo / Binôme", "Map de training",
+			"Gérer ses propres blessures selon le niveau de menace, en priorisant rapidement.");
+		e.text = "Trois scénarios. 1) Contact direct létal : continuer le combat et ignorer la blessure. 2) Contact avec couverture : poser rapidement un tourniquet et retourner au combat (Ctrl+H pour le menu médical). 3) Contact indirect : soin complet, soit tourniquet, bandage, Check Injury, puis confirmer l'arrêt du saignement. Objectifs : comprendre que se soigner n'est pas toujours la priorité, poser un tourniquet vite, le remplacer par un bandage quand la situation le permet, utiliser Ctrl+H plutôt que la hotbar, lire un Check Injury et communiquer son état au binôme et au TL. Requis : un 2e joueur pour blesser l'élève, un IFAK de base (tourniquets, bandages, chest seals).";
+		exercises.Insert(e);
+
+		e = Exercise("Q-MB-E2", "Secours au blessé", "Q-MB", "Solo / Binôme", "Map de training, Medical Training",
+			"Évaluer et stabiliser un camarade au sol : sécurité d'abord, MARCH de base, position du blessé.");
+		e.text = "Une victime est générée. Sécuriser avant d'approcher, faire un Check Injury pour trouver toutes les blessures, puis traiter dans l'ordre MARCH (hémorragies, voies respiratoires, respiration) avec tourniquet, bandage et chest seal selon les blessures. Placer le blessé en position latérale de sécurité, avertir le TL et appeler le médic. Varier les blessures (membre, torse avec PTX). Requis : un IFAK, disponible dans la caisse médicale.";
+		exercises.Insert(e);
+
+		e = Exercise("Q-MB-E3", "Communication", "Q-MB", "Binôme", "Map de training",
+			"Utiliser le vive-voix et la 343 selon la situation, avec une information pertinente sur le bon canal.");
+		e.text = "Deux canaux : le vive-voix et la 343. Vive-voix : signaler un contact, coordonner un mouvement, annoncer une grenade, couper et réactiver le micro avec T. 343 : ouvrir le menu radio avec G, choisir le canal, passer un message court et clair. Puis une situation mixte où l'élève choisit le canal ; l'instructeur corrige ensuite. Requis : une 343 dans le loadout, réglée sur le bon canal, et un interlocuteur.";
+		exercises.Insert(e);
 	}
 
 	//------------------------------------------------------------------------------------------------

@@ -172,6 +172,11 @@ class CGQC_GU_Requests
 				return CalendarRemove(mgr, caller, p);
 		}
 
+		// Phase 3: qualifications, instructors, progress.
+		CGQC_GU_RequestResult qualResult = CGQC_GU_QualRequests.Handle(mgr, caller, action, p);
+		if (qualResult)
+			return qualResult;
+
 		return Fail("unknown_action");
 	}
 

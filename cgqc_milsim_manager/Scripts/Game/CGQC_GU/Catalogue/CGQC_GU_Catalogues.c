@@ -30,6 +30,7 @@ class CGQC_GU_Catalogues
 		LoadPromotions(configDir + "/promotions.json");
 		LoadQualifications(configDir + "/qualifications.json");
 		LoadExercises(configDir + "/exercises.json");
+		FillQualContent(configDir);
 		LoadDistinctions(configDir + "/distinctions.json");
 		LoadUnits(configDir + "/units.json");
 
@@ -135,6 +136,91 @@ class CGQC_GU_Catalogues
 		}
 
 		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	CGQC_GU_Exercise FindExercise(string code)
+	{
+		foreach (CGQC_GU_Exercise e : m_aExercises)
+		{
+			if (e.code == code)
+				return e;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Exercises of one qualification, in file order.
+	void ExercisesOf(string qual, notnull array<CGQC_GU_Exercise> outList)
+	{
+		foreach (CGQC_GU_Exercise e : m_aExercises)
+		{
+			if (e.qual == qual)
+				outList.Insert(e);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Phase 3: gitbook content added to the defaults after the live files were written. Only EMPTY
+	//! fields of entries that still exist are filled; anything the owner wrote is kept as it is.
+	protected void FillQualContent(string configDir)
+	{
+		array<ref CGQC_GU_Qualification> defQuals = new array<ref CGQC_GU_Qualification>();
+		CGQC_GU_DefaultCatalogues.Qualifications(defQuals);
+		int qualFills;
+		foreach (CGQC_GU_Qualification d : defQuals)
+		{
+			CGQC_GU_Qualification q = FindQualification(d.code);
+			if (!q)
+				continue;
+
+			if (q.description.IsEmpty() && !d.description.IsEmpty()) { q.description = d.description; qualFills++; }
+			if (q.text.IsEmpty() && !d.text.IsEmpty()) { q.text = d.text; qualFills++; }
+			if (q.onFailure.IsEmpty() && !d.onFailure.IsEmpty()) { q.onFailure = d.onFailure; qualFills++; }
+			if (q.onSuccess.IsEmpty() && !d.onSuccess.IsEmpty()) { q.onSuccess.Copy(d.onSuccess); qualFills++; }
+			if (q.exercises.IsEmpty() && !d.exercises.IsEmpty()) { q.exercises.Copy(d.exercises); qualFills++; }
+			if (q.criteria.IsEmpty() && !d.criteria.IsEmpty())
+			{
+				foreach (CGQC_GU_LabelItem c : d.criteria)
+				{
+					q.criteria.Insert(c);
+				}
+
+				qualFills++;
+			}
+		}
+
+		array<ref CGQC_GU_Exercise> defEx = new array<ref CGQC_GU_Exercise>();
+		CGQC_GU_DefaultCatalogues.Exercises(defEx);
+		int exFills;
+		foreach (CGQC_GU_Exercise de : defEx)
+		{
+			CGQC_GU_Exercise e = FindExercise(de.code);
+			if (!e)
+				continue;
+
+			if (e.description.IsEmpty() && !de.description.IsEmpty()) { e.description = de.description; exFills++; }
+			if (e.text.IsEmpty() && !de.text.IsEmpty()) { e.text = de.text; exFills++; }
+			if (e.format.IsEmpty() && !de.format.IsEmpty()) { e.format = de.format; exFills++; }
+			if (e.place.IsEmpty() && !de.place.IsEmpty()) { e.place = de.place; exFills++; }
+		}
+
+		if (qualFills > 0)
+		{
+			CGQC_GU_PrettyJsonSaveContext save = NewFile();
+			save.WriteValue("qualifications", m_aQualifications);
+			if (CGQC_GU_Json.SafeSave(save, configDir + "/qualifications.json"))
+				CGQC_GU_Log.Info(string.Format("qualifications.json : %1 champ(s) vide(s) complété(s) depuis la documentation.", qualFills));
+		}
+
+		if (exFills > 0)
+		{
+			CGQC_GU_PrettyJsonSaveContext saveEx = NewFile();
+			saveEx.WriteValue("exercises", m_aExercises);
+			if (CGQC_GU_Json.SafeSave(saveEx, configDir + "/exercises.json"))
+				CGQC_GU_Log.Info(string.Format("exercises.json : %1 champ(s) vide(s) complété(s) depuis la documentation.", exFills));
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------

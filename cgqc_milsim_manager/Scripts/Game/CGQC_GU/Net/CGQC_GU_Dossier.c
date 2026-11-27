@@ -27,6 +27,66 @@ class CGQC_GU_DossierGroup : Managed
 	bool held;
 }
 
+//! Dossier › Qualifications: the latest state of each qualification.
+class CGQC_GU_DossierQualLine : Managed
+{
+	string code;
+	string title;
+	string level;		// "Caporal"
+	string result;		// RÉUSSI / ÉCHEC / EN COURS
+	string kind;		// ok | ko | cur (tag colour)
+	string date;		// YYMMDD or "—"
+	string evaluator;	// "Adju. Pelletier" or "—"
+}
+
+//! Dossier › Qualifications › Exercices réussis (test exercises of a passed qualification).
+class CGQC_GU_DossierExerciseLine : Managed
+{
+	string code;
+	string title;
+	string qual;
+	string date;
+	string instructor;
+}
+
+//! A tick in the Progression panel: a test exercise (id = code) or a criterion (id = c1…).
+class CGQC_GU_DossierCheck : Managed
+{
+	string id;
+	string text;
+	bool required;
+	bool met;
+}
+
+//! Progression ladder / Insignes: one entry per qualification in the catalogue.
+class CGQC_GU_DossierLadderItem : Managed
+{
+	string code;
+	string title;
+	int pp;
+	string ppLabel;
+	string levelAbbr;
+	string levelLabel;
+	bool aVenir;			// no content in the documentation yet
+	string state;			// obtenu | en_cours | reprise | a_venir
+	string stateDate;		// YYMMDD of the latest result, or ""
+	ref array<ref CGQC_GU_DossierCheck> exercises = new array<ref CGQC_GU_DossierCheck>();
+	ref array<ref CGQC_GU_DossierCheck> criteria = new array<ref CGQC_GU_DossierCheck>();
+	string notes;
+	string saved;			// "Progression enregistrée le 261124 par Lt. Gagnon" or ""
+	string teachers;		// "Capt. Roy, Lt. Gagnon" or ""
+}
+
+//! Dossier › Instructeur: qualifications this member may teach.
+class CGQC_GU_DossierTeachLine : Managed
+{
+	string qual;
+	string title;
+	string by;
+	string on;
+	int students;
+}
+
 class CGQC_GU_DossierDto : Managed
 {
 	// Identity
@@ -71,10 +131,22 @@ class CGQC_GU_DossierDto : Managed
 	ref array<ref CGQC_GU_CriterionLine> criteria = new array<ref CGQC_GU_CriterionLine>();
 	ref array<ref CGQC_GU_DossierGroup> groups = new array<ref CGQC_GU_DossierGroup>();
 
+	// Phase 3: Qualifications, Progression, Instructeur, Insignes
+	ref array<ref CGQC_GU_DossierQualLine> quals = new array<ref CGQC_GU_DossierQualLine>();
+	ref array<ref CGQC_GU_DossierExerciseLine> exercisesDone = new array<ref CGQC_GU_DossierExerciseLine>();
+	ref array<ref CGQC_GU_DossierLadderItem> ladder = new array<ref CGQC_GU_DossierLadderItem>();
+	ref array<ref CGQC_GU_DossierTeachLine> teach = new array<ref CGQC_GU_DossierTeachLine>();
+	string insignes;		// codes obtained, for the fiche ("Q-MB · Q-SI")
+	int formationsCount;	// qualifications this member may teach
+	bool promotionPossible;	// only sent true to promotion.view holders
+
 	// Viewer
 	bool isSelf;
 	bool canEdit;			// members.edit
 	bool canAccess;			// access.manage
+	bool canInstruct;		// instructors.manage
+	bool canPromotion;		// promotion.view
+	ref array<string> evaluable = new array<string>();	// qualification codes the viewer may evaluate here
 }
 
 class CGQC_GU_DossierBuilder
@@ -167,10 +239,236 @@ class CGQC_GU_DossierBuilder
 		d.isSelf = viewer == m;
 		d.canEdit = CGQC_GU_Permissions.HasRight(cat, viewer, CGQC_GU_Rights.MEMBERS_EDIT);
 		d.canAccess = CGQC_GU_Permissions.HasRight(cat, viewer, CGQC_GU_Rights.ACCESS_MANAGE);
+		d.canInstruct = CGQC_GU_Permissions.HasRight(cat, viewer, CGQC_GU_Rights.INSTRUCTORS_MANAGE);
+		d.canPromotion = CGQC_GU_Permissions.HasRight(cat, viewer, CGQC_GU_Rights.PROMOTION_POSSIBLE);
+		if (d.canPromotion)
+			d.promotionPossible = CGQC_GU_Quals.PromotionPossible(cat, m);
+
+		CGQC_GU_Quals.EvaluableBy(mgr, viewer, m, d.evaluable);
+		Training(mgr, m, d);
 
 		CGQC_GU_JsonStringSaveContext ctx = new CGQC_GU_JsonStringSaveContext();
 		ctx.WriteValue("d", d);
 		return ctx.Export();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Phase 3 tabs: Qualifications, Exercices réussis, Progression ladder / Insignes, Instructeur.
+	protected static void Training(CGQC_GU_Manager mgr, CGQC_GU_Member m, CGQC_GU_DossierDto d)
+	{
+		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
+		array<string> obtained = new array<string>();
+
+		// Qualifications table: in-progress first, then the latest result of each, newest first.
+		array<ref CGQC_GU_DossierQualLine> done = new array<ref CGQC_GU_DossierQualLine>();
+		array<string> doneDates = new array<string>();
+		foreach (CGQC_GU_Qualification q : cat.m_aQualifications)
+		{
+			string level;
+			CGQC_GU_Rank lr = cat.FindRank(q.levelRank);
+			if (lr)
+				level = lr.label;
+
+			CGQC_GU_QualResult last = CGQC_GU_Quals.LatestResult(m, q.code);
+			bool passed = CGQC_GU_Quals.HasPassed(m, q.code);
+			if (passed)
+				obtained.Insert(q.code);
+
+			if (!last && !CGQC_GU_Quals.FindProgress(m, q.code))
+				continue;
+
+			CGQC_GU_DossierQualLine line = new CGQC_GU_DossierQualLine();
+			line.code = q.code;
+			line.title = q.title;
+			line.level = level;
+			if (passed || last)
+			{
+				// A pass stays the shown result even if a later line exists.
+				CGQC_GU_QualResult shown = last;
+				if (passed)
+				{
+					foreach (CGQC_GU_QualResult r : m.qualifications)
+					{
+						if (r.qual == q.code && r.result == CGQC_GU_Quals.RESULT_PASSED)
+							shown = r;
+					}
+				}
+
+				line.result = CGQC_GU_Quals.ResultLabel(shown.result);
+				line.kind = "ko";
+				if (shown.result == CGQC_GU_Quals.RESULT_PASSED)
+					line.kind = "ok";
+
+				line.date = DisplayDate(shown.on);
+				line.evaluator = SignerOrDash(mgr, shown.evaluator);
+
+				// A failed qualification with a new progress reads EN COURS again.
+				if (!passed && CGQC_GU_Quals.FindProgress(m, q.code))
+				{
+					line.result = CGQC_GU_Quals.ResultLabel("");
+					line.kind = "cur";
+				}
+
+				int at = done.Count();
+				for (int i = 0; i < done.Count(); i++)
+				{
+					if (shown.on.Compare(doneDates[i]) > 0)
+					{
+						at = i;
+						break;
+					}
+				}
+
+				done.InsertAt(line, at);
+				doneDates.InsertAt(shown.on, at);
+			}
+			else
+			{
+				line.result = CGQC_GU_Quals.ResultLabel("");
+				line.kind = "cur";
+				line.date = "—";
+				line.evaluator = "—";
+				d.quals.Insert(line);
+			}
+		}
+
+		foreach (CGQC_GU_DossierQualLine dl : done)
+		{
+			d.quals.Insert(dl);
+		}
+
+		d.insignes = CGQC_GU_Str.Join(obtained, " · ");
+
+		// Exercices réussis, newest first.
+		for (int x = m.exercises.Count() - 1; x >= 0; x--)
+		{
+			CGQC_GU_ExerciseDone ex = m.exercises[x];
+			CGQC_GU_DossierExerciseLine el = new CGQC_GU_DossierExerciseLine();
+			el.code = ex.code;
+			CGQC_GU_Exercise ce = cat.FindExercise(ex.code);
+			if (ce)
+			{
+				el.title = ce.title;
+				el.qual = ce.qual;
+			}
+
+			el.date = DisplayDate(ex.on);
+			el.instructor = SignerOrDash(mgr, ex.instructor);
+			d.exercisesDone.Insert(el);
+		}
+
+		// Ladder: every qualification with its state, test exercises, criteria and teachers.
+		foreach (CGQC_GU_Qualification lq : cat.m_aQualifications)
+		{
+			CGQC_GU_DossierLadderItem item = new CGQC_GU_DossierLadderItem();
+			item.code = lq.code;
+			item.title = lq.title;
+			item.pp = lq.pp;
+			item.ppLabel = CGQC_GU_Quals.PpLabel(lq.pp);
+			CGQC_GU_Rank rr = cat.FindRank(lq.levelRank);
+			if (rr)
+			{
+				item.levelAbbr = rr.abbr;
+				item.levelLabel = rr.label;
+			}
+
+			item.aVenir = lq.state != "actif";
+			item.state = CGQC_GU_Quals.InsigniaState(m, lq.code);
+			CGQC_GU_QualResult lr2 = CGQC_GU_Quals.LatestResult(m, lq.code);
+			if (lr2)
+				item.stateDate = DisplayDate(lr2.on);
+
+			CGQC_GU_Progress pr = CGQC_GU_Quals.FindProgress(m, lq.code);
+			array<CGQC_GU_Exercise> exs = new array<CGQC_GU_Exercise>();
+			cat.ExercisesOf(lq.code, exs);
+			foreach (CGQC_GU_Exercise e : exs)
+			{
+				CGQC_GU_DossierCheck c = new CGQC_GU_DossierCheck();
+				c.id = e.code;
+				c.text = e.title;
+				c.required = e.required;
+				if (pr)
+					c.met = pr.exercises.Contains(e.code);
+				else if (item.state == CGQC_GU_Quals.STATE_OBTAINED)
+					c.met = HasExercise(m, e.code);
+
+				item.exercises.Insert(c);
+			}
+
+			foreach (CGQC_GU_LabelItem crit : lq.criteria)
+			{
+				CGQC_GU_DossierCheck cc = new CGQC_GU_DossierCheck();
+				cc.id = crit.id;
+				cc.text = crit.label;
+				cc.required = true;
+				if (pr)
+				{
+					bool met;
+					pr.criteria.Find(crit.id, met);
+					cc.met = met;
+				}
+				else if (item.state == CGQC_GU_Quals.STATE_OBTAINED)
+				{
+					cc.met = true;
+				}
+
+				item.criteria.Insert(cc);
+			}
+
+			if (pr)
+			{
+				item.notes = pr.notes;
+				item.saved = string.Format("Progression enregistrée le %1 par %2", DisplayDate(pr.savedAt), SignerName(mgr, pr.savedBy));
+			}
+
+			array<string> teachers = new array<string>();
+			foreach (string tuid, CGQC_GU_Member t : mgr.m_mMembers)
+			{
+				if (CGQC_GU_Quals.IsInstructorFor(t, lq.code))
+					teachers.Insert(CGQC_GU_OverviewBuilder.NameOf(cat, t));
+			}
+
+			item.teachers = CGQC_GU_Str.Join(teachers, ", ");
+			d.ladder.Insert(item);
+		}
+
+		// Instructeur tab.
+		foreach (CGQC_GU_InstructorAuth auth : m.instructorFor)
+		{
+			CGQC_GU_DossierTeachLine tl = new CGQC_GU_DossierTeachLine();
+			tl.qual = auth.qual;
+			CGQC_GU_Qualification tq = cat.FindQualification(auth.qual);
+			if (tq)
+				tl.title = tq.title;
+
+			tl.by = SignerName(mgr, auth.authorizedBy);
+			tl.on = DisplayDate(auth.on);
+			tl.students = CGQC_GU_Quals.StudentsFor(mgr, m.uid, auth.qual);
+			d.teach.Insert(tl);
+		}
+
+		d.formationsCount = m.instructorFor.Count();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static bool HasExercise(CGQC_GU_Member m, string code)
+	{
+		foreach (CGQC_GU_ExerciseDone e : m.exercises)
+		{
+			if (e.code == code)
+				return true;
+		}
+
+		return false;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static string SignerOrDash(CGQC_GU_Manager mgr, string by)
+	{
+		if (by.IsEmpty())
+			return "—";
+
+		return SignerName(mgr, by);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -204,6 +502,36 @@ class CGQC_GU_DossierBuilder
 							text = string.Format("Rétrogradé %1 (%2)", r.label, r.abbr);
 						else
 							text = string.Format("Promu %1 (%2)", r.label, r.abbr);
+					}
+
+					break;
+				}
+
+				case "qualification":
+				{
+					string qual, result;
+					e.data.Find("qual", qual);
+					e.data.Find("result", result);
+					if (result == CGQC_GU_Quals.RESULT_PASSED)
+						text = qual + " réussie";
+					else if (result == CGQC_GU_Quals.RESULT_FAILED)
+						text = qual + " : échec";
+					else
+						text = qual;
+
+					break;
+				}
+
+				case "note":
+				{
+					string teach, action;
+					if (e.data.Find("instructorFor", teach))
+					{
+						e.data.Find("action", action);
+						if (action == "revoke")
+							text = "Autorisation d'enseigner retirée : " + teach;
+						else
+							text = "Autorisé à enseigner : " + teach;
 					}
 
 					break;
