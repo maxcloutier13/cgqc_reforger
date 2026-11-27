@@ -176,7 +176,86 @@ class CGQC_GU_QualRequests
 
 		CGQC_GU_JsonStringSaveContext ctx = new CGQC_GU_JsonStringSaveContext();
 		ctx.WriteValue("quals", list);
+		ctx.WriteValue("ppNotes", PpNotes(cat));
 		return ctx.Export();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! The note under each PP group: what the promotions of that level ask for besides the qualifications
+	//! (promotions.json). Automatic promotions with nothing else are left out. id = the PP number.
+	protected static array<ref CGQC_GU_LabelItem> PpNotes(CGQC_GU_Catalogues cat)
+	{
+		array<ref CGQC_GU_LabelItem> notes = new array<ref CGQC_GU_LabelItem>();
+		for (int pp = 1; pp <= 3; pp++)
+		{
+			array<string> lines = new array<string>();
+			int officersOnly = 0;
+			foreach (CGQC_GU_Promotion p : cat.m_aPromotions)
+			{
+				if (p.requiredQuals.IsEmpty())
+					continue;
+
+				CGQC_GU_Qualification first = cat.FindQualification(p.requiredQuals[0]);
+				if (!first || first.pp != pp)
+					continue;
+
+				array<string> extras = new array<string>();
+				if (p.minMonthsInRank > 0)
+					extras.Insert(string.Format("%1 mois", p.minMonthsInRank));
+
+				foreach (CGQC_GU_LabelItem check : p.otherChecks)
+				{
+					extras.Insert(CGQC_GU_Str.Lower(check.label));
+				}
+
+				if (p.officerDecision)
+					extras.Insert("décision des officiers");
+
+				if (extras.IsEmpty())
+					continue;
+
+				CGQC_GU_Rank from = cat.FindRank(p.from);
+				CGQC_GU_Rank to = cat.FindRank(p.to);
+				if (!from || !to)
+					continue;
+
+				string what;
+				if (extras.Count() == 1 && p.officerDecision)
+				{
+					what = "décision des officiers";
+					officersOnly++;
+				}
+				else
+				{
+					string last = extras[extras.Count() - 1];
+					extras.Remove(extras.Count() - 1);
+					if (extras.IsEmpty())
+						what = "aussi " + last;
+					else
+						what = "aussi " + CGQC_GU_Str.Join(extras, ", ") + " et " + last;
+				}
+
+				lines.Insert(string.Format("%1 › %2 : %3.", from.label, to.label, what));
+			}
+
+			if (lines.IsEmpty())
+				continue;
+
+			CGQC_GU_LabelItem note = new CGQC_GU_LabelItem();
+			note.id = pp.ToString();
+			note.label = CGQC_GU_Str.Join(lines, " ");
+			if (officersOnly == lines.Count())
+			{
+				if (officersOnly == 1)
+					note.label = "Décision des officiers.";
+				else
+					note.label = "Chaque promotion : décision des officiers.";
+			}
+
+			notes.Insert(note);
+		}
+
+		return notes;
 	}
 
 	//------------------------------------------------------------------------------------------------

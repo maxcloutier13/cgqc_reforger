@@ -33,6 +33,7 @@ class CGQC_GU_Region
 	Widget m_wRoot;
 	ref array<ref CGQC_GU_Button> m_aButtons = new array<ref CGQC_GU_Button>();
 	ref array<ref CGQC_GU_Check> m_aChecks = new array<ref CGQC_GU_Check>();
+	ref array<ref CGQC_GU_ClickRow> m_aRows = new array<ref CGQC_GU_ClickRow>();
 	ref array<ref Managed> m_aKeep = new array<ref Managed>();
 
 	//------------------------------------------------------------------------------------------------
@@ -48,8 +49,14 @@ class CGQC_GU_Region
 			c.Destroy();
 		}
 
+		foreach (CGQC_GU_ClickRow row : m_aRows)
+		{
+			row.Destroy();
+		}
+
 		m_aButtons.Clear();
 		m_aChecks.Clear();
+		m_aRows.Clear();
 		m_aKeep.Clear();
 		CGQC_GU_W.Clear(m_wRoot);
 	}
@@ -57,9 +64,6 @@ class CGQC_GU_Region
 
 class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 {
-	static const int TAB_REGISTRE = 0;
-	static const int TAB_GRADE = 1;
-	static const int TAB_MEMBERS = 2;	// opens the Membres screen
 	static const int RECORD_PAGE = 10;
 	static const int MEMBER_PAGE = 10;
 	static const float FICHE_WIDTH = 420;
@@ -75,7 +79,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected int m_iListReq;
 	protected int m_iWriteReq;
 
-	protected int m_iTab = TAB_REGISTRE;
+	protected CGQC_GU_ERailTab m_eTab;
 	protected int m_iRecordPage;
 	protected int m_iMemberPage;
 	protected int m_iManualType;
@@ -88,8 +92,6 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected ref CGQC_GU_Region m_Body = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_MemberList = new CGQC_GU_Region();
 	protected TextWidget m_wMessage;
-	protected ref array<CGQC_GU_Button> m_aRail = new array<CGQC_GU_Button>();
-	protected CGQC_GU_Button m_RailMembers;
 	protected ref CGQC_GU_FieldWatch m_SearchWatch;
 
 	// Edit fields of the open forms
@@ -105,10 +107,10 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected EditBoxWidget m_wSearch;
 
 	//------------------------------------------------------------------------------------------------
-	void CGQC_GU_DossierScreen(string uid = "", int tab = TAB_REGISTRE)
+	void CGQC_GU_DossierScreen(string uid = "", CGQC_GU_ERailTab tab = CGQC_GU_ERailTab.REGISTRY)
 	{
 		m_sUid = uid;
-		m_iTab = tab;
+		m_eTab = tab;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -150,18 +152,6 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				LayoutSlot.SetHorizontalAlign(m_Body.m_wRoot, LayoutHorizontalAlign.Stretch);
 		}
 
-		CGQC_GU_Button reg = AddRailEntry("REGISTRE", TAB_REGISTRE);
-		CGQC_GU_Button grade = AddRailEntry("GRADE & ACCÈS", TAB_GRADE);
-		m_aRail.Insert(reg);
-		m_aRail.Insert(grade);
-		RefreshRail();
-
-		// Unité → Membres, staff only until the Gestion d'unité menu (Phase 2). Shown once the dossier
-		// reply says the viewer has members.edit.
-		m_RailMembers = AddRailEntry("MEMBRES", TAB_MEMBERS);
-		if (m_RailMembers)
-			m_RailMembers.GetRootWidget().SetVisible(false);
-
 		CGQC_GU_Client.GetOnReply().Insert(OnReply);
 		RequestDossier();
 	}
@@ -180,29 +170,26 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override void OnRailSelected(int index)
+	override protected CGQC_GU_ERailTab GetRailTab()
 	{
-		if (index == TAB_MEMBERS)
-		{
-			CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_MembersScreen());
-			return;
-		}
-
-		m_iTab = index;
-		m_bSelectorOpen = false;
-		RefreshRail();
-		BuildSelector();
-		BuildBody();
+		return m_eTab;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected void RefreshRail()
+	//! The Dossier tabs switch in place, on the member being shown.
+	override void OnRailSelected(CGQC_GU_ERailTab tab)
 	{
-		for (int i = 0; i < m_aRail.Count(); i++)
+		if (tab != CGQC_GU_ERailTab.REGISTRY && tab != CGQC_GU_ERailTab.GRADE)
 		{
-			if (m_aRail[i])
-				m_aRail[i].SetSelected(i == m_iTab);
+			super.OnRailSelected(tab);
+			return;
 		}
+
+		m_eTab = tab;
+		m_bSelectorOpen = false;
+		SelectRailTab();
+		BuildSelector();
+		BuildBody();
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -253,9 +240,6 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 
 			m_Dto = dto;
 			m_sUid = dto.uid;
-			if (m_RailMembers)
-				m_RailMembers.GetRootWidget().SetVisible(dto.canEdit);
-
 			SetHeader("DOSSIER DU PERSONNEL", dto.displayName);
 			BuildFiche();
 			BuildSelector();
@@ -333,6 +317,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			case "bad_title":		return "Titre vide ou trop long.";
 			case "bad_time":		return "Heure invalide (HH:MM).";
 			case "write_failed":	return "Échec de l'écriture sur le serveur.";
+			case "not_ready":		return "Serveur pas encore prêt.";
 		}
 
 		return "Erreur : " + code;
@@ -886,7 +871,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		if (!m_Body.m_wRoot || !m_Dto || m_bSelectorOpen)
 			return;
 
-		if (m_iTab == TAB_GRADE)
+		if (m_eTab == CGQC_GU_ERailTab.GRADE)
 			BuildGrade(m_Body.m_wRoot);
 		else
 			BuildRegistre(m_Body.m_wRoot);

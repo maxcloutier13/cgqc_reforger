@@ -15,6 +15,7 @@ class CGQC_GU_Style
 	static const ResourceName LAYOUT_FIELD = "{124F7C180CFF788E}UI/layouts/CGQC_GU_Field.layout";
 	static const ResourceName LAYOUT_FIELD_MULTI = "{850ECED9FE9A92B5}UI/layouts/CGQC_GU_FieldMulti.layout";
 	static const ResourceName LAYOUT_CHECK = "{4291E7CFA9DE912F}UI/layouts/CGQC_GU_Check.layout";
+	static const ResourceName LAYOUT_SCROLL = "{2DEC8C574D490DD4}UI/layouts/CGQC_GU_Scroll.layout";
 
 	// Fonts available in the base game (owner decision: closest fonts for now).
 	static const ResourceName FONT_TITLE = "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt";
@@ -43,6 +44,22 @@ class CGQC_GU_Style
 	static Color Field()		{ return Color.FromSRGBA(0xD9, 0xD1, 0xBC, 255); }	// edit field on paper (was #F3EBD3)
 	static Color Clear()		{ Color c = Color.FromSRGBA(0, 0, 0, 255); c.SetA(0); return c; }
 	static Color StatusYellow()	{ return Color.FromSRGBA(0xB0, 0x86, 0x0E, 255); }	// INACTIF, dark enough for parchment
+
+	// Catalogue lists (mockup)
+	static Color RowEdge()		{ return Color.FromSRGBA(0x8B, 0x7B, 0x5A, 255); }	// table and list rows #8B7B5A
+	static Color RowSelected()	{ return Translucent(0x23, 0x43, 0x9C, 0.15); }	// chosen row
+	static Color PaperLight()	{ return Translucent(0xFF, 0xFA, 0xEB, 0.35); }	// detail box
+
+	static Color PpColor(int pp)
+	{
+		switch (pp)
+		{
+			case 1: return Color.FromSRGBA(0x2F, 0x7A, 0x55, 255);	// PP1 #2F7A55
+			case 2: return Color.FromSRGBA(0x5B, 0x4F, 0xA8, 255);	// PP2 #5B4FA8
+		}
+
+		return Color.FromSRGBA(0xB5, 0x70, 0x1D, 255);	// PP3 #B5701D
+	}
 
 	//! Member status colour code (owner): ACTIF green, INACTIF yellow, MIA red, KIA black.
 	static Color StatusColor(string status)

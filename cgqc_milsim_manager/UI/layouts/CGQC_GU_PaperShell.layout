@@ -22,30 +22,53 @@ FrameWidgetClass {
     OffsetBottom 32
    }
     {
-    TextWidgetClass "{359C4A9ED4B84AD0}" {
-     Name "Cap"
-     Slot LayoutSlot "{8839D88FC4239E57}" {
-      Padding 0 0 0 2
-     }
-     Text "DOSSIER"
-     "Font Size" 15
-     "Min Font Size" 15
-     Color 0.08 0.06 0.04 1
-     FontProperties FontProperties "{38E3A3CEEAE79589}" {
-      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
-     }
-    }
-    TextWidgetClass "{1A89FBFB28D53BE7}" {
-     Name "Title"
-     Slot LayoutSlot "{E88B640F988EE676}" {
+    HorizontalLayoutWidgetClass "{6C1E2F0A3B4D5E71}" {
+     Name "Header"
+     Slot LayoutSlot "{6C1E2F0A3B4D5E72}" {
+      HorizontalAlign 3
       Padding 0 0 0 8
      }
-     Text "TITRE"
-     "Font Size" 40
-     "Min Font Size" 40
-     Color 0.01 0.01 0.005 1
-     FontProperties FontProperties "{D88C86FA1298D6C6}" {
-      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     {
+      VerticalLayoutWidgetClass "{6C1E2F0A3B4D5E73}" {
+       Name "HeaderTitles"
+       Slot LayoutSlot "{6C1E2F0A3B4D5E74}" {
+        SizeMode Fill
+        FillWeight 1
+       }
+       {
+        TextWidgetClass "{359C4A9ED4B84AD0}" {
+         Name "Cap"
+         Slot LayoutSlot "{8839D88FC4239E57}" {
+          Padding 0 0 0 2
+         }
+         Text "DOSSIER"
+         "Font Size" 15
+         "Min Font Size" 15
+         Color 0.08 0.06 0.04 1
+         FontProperties FontProperties "{38E3A3CEEAE79589}" {
+          Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+         }
+        }
+        TextWidgetClass "{1A89FBFB28D53BE7}" {
+         Name "Title"
+         Slot LayoutSlot "{E88B640F988EE676}" {
+         }
+         Text "TITRE"
+         "Font Size" 40
+         "Min Font Size" 40
+         Color 0.01 0.01 0.005 1
+         FontProperties FontProperties "{D88C86FA1298D6C6}" {
+          Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+         }
+        }
+       }
+      }
+      HorizontalLayoutWidgetClass "{6C1E2F0A3B4D5E75}" {
+       Name "HeaderTools"
+       Slot LayoutSlot "{6C1E2F0A3B4D5E76}" {
+        VerticalAlign 2
+       }
+      }
      }
     }
     ImageWidgetClass "{647F75DF1E4CAF02}" {

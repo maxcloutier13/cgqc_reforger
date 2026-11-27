@@ -230,6 +230,21 @@ class CGQC_GU_Str
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Upper case for French headings: ToUpper leaves accented letters as they are.
+	static string UpperFr(string s)
+	{
+		string c = Upper(s);
+		array<string> low = { "à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "û", "ù" };
+		array<string> up = { "À", "Â", "Ç", "É", "È", "Ê", "Ë", "Î", "Ï", "Ô", "Û", "Ù" };
+		for (int i = 0; i < low.Count(); i++)
+		{
+			c.Replace(low[i], up[i]);
+		}
+
+		return c;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static string Join(array<string> items, string sep)
 	{
 		string res;

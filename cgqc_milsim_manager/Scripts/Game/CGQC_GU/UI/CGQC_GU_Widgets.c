@@ -54,6 +54,55 @@ class CGQC_GU_W
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Vertical scroll area filling what is left of the parent stack. Returns its inner vertical stack.
+	static Widget Scroll(Widget parent)
+	{
+		Widget s = Create(CGQC_GU_Style.LAYOUT_SCROLL, parent);
+		if (!s)
+			return null;
+
+		LayoutSlot.SetSizeMode(s, LayoutSizeMode.Fill);
+		LayoutSlot.SetHorizontalAlign(s, LayoutHorizontalAlign.Stretch);
+		return s.FindAnyWidget("Inner");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Wrapped paragraph across the parent stack.
+	static TextWidget Para(Widget parent, string text, ResourceName font, int size, Color color, float padTop = 0)
+	{
+		TextWidget t = Text(parent, text, font, size, color, true);
+		if (!t)
+			return null;
+
+		LayoutSlot.SetHorizontalAlign(t, LayoutHorizontalAlign.Stretch);
+		LayoutSlot.SetPadding(t, 0, padTop, 0, 0);
+		return t;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Small boxed tag (« REQUIS »), outline and text in the same colour.
+	static void Tag(Widget parent, string text, Color color)
+	{
+		Widget inner = Panel(parent);
+		if (!inner)
+			return;
+
+		Widget box = inner.GetParent();
+		LayoutSlot.SetHorizontalAlign(box, LayoutHorizontalAlign.Left);
+		LayoutSlot.SetVerticalAlign(box, LayoutVerticalAlign.Center);
+		AlignableSlot.SetPadding(inner, 8, 2, 8, 2);
+		array<string> edges = { "EdgeT", "EdgeB", "EdgeL", "EdgeR" };
+		foreach (string edge : edges)
+		{
+			Widget e = box.FindAnyWidget(edge);
+			if (e)
+				e.SetColor(color);
+		}
+
+		Text(inner, text, CGQC_GU_Style.FONT_TITLE, 12, color);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Ruled box on paper. Returns its inner vertical stack.
 	static Widget Panel(Widget parent, bool tinted = false)
 	{

@@ -27,6 +27,8 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 	static const int NAV_CALENDAR = 2;
 	static const int NAV_DOSSIER = 3;
 	static const int NAV_MEMBERS = 4;
+	static const int NAV_QUALS = 5;
+	static const int NAV_EXERCISES = 6;
 
 	protected Widget m_wContent;
 	protected Widget m_wNavItems;
@@ -114,8 +116,8 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 			NavItem("MON DOSSIER", NAV_DOSSIER, "DOSSIER");
 			NavItem("MEMBRES", NAV_MEMBERS, "UNITÉ");
 			NavItem("ORBAT", NAV_NONE, string.Empty);
-			NavItem("QUALIFICATIONS", NAV_NONE, string.Empty);
-			NavItem("EXERCICES", NAV_NONE, string.Empty);
+			NavItem("QUALIFICATIONS", NAV_QUALS, string.Empty);
+			NavItem("EXERCICES", NAV_EXERCISES, string.Empty);
 			NavItem("DISTINCTIONS", NAV_NONE, string.Empty);
 		}
 
@@ -239,6 +241,14 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 
 			case NAV_MEMBERS:
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_MembersScreen());
+				break;
+
+			case NAV_QUALS:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_QualCatalogueScreen());
+				break;
+
+			case NAV_EXERCISES:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_ExerciseCatalogueScreen());
 				break;
 		}
 	}

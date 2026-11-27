@@ -225,34 +225,62 @@ class CGQC_GU_Screen
 	}
 }
 
-//! Rail entry: a side tab that tells its screen which index was pressed.
+//! Tabs of the paper rail, in the mockup's order. Tabs of later steps and phases are greyed out.
+enum CGQC_GU_ERailTab
+{
+	NONE,
+	// Événements
+	OPERATIONS,
+	DEPLOYMENTS,
+	TRAININGS,
+	// Dossier
+	REGISTRY,
+	GRADE,
+	QUALS,
+	SESSIONS,
+	PROGRESSION,
+	INSTRUCTOR,
+	BADGES,
+	AWARDS,
+	// Unité
+	MEMBERS,
+	ORBAT,
+	CAT_QUALS,
+	CAT_EXERCISES,
+	CAT_AWARDS
+}
+
+//! Rail entry: a side tab that tells its screen which tab was pressed.
 class CGQC_GU_RailEntry
 {
 	protected CGQC_GU_PaperScreen m_Screen;
-	protected int m_iIndex;
+	protected CGQC_GU_ERailTab m_eTab;
 
 	//------------------------------------------------------------------------------------------------
-	void CGQC_GU_RailEntry(CGQC_GU_PaperScreen screen, int index)
+	void CGQC_GU_RailEntry(CGQC_GU_PaperScreen screen, CGQC_GU_ERailTab tab)
 	{
 		m_Screen = screen;
-		m_iIndex = index;
+		m_eTab = tab;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	void OnActivated()
 	{
 		if (m_Screen)
-			m_Screen.OnRailSelected(m_iIndex);
+			m_Screen.OnRailSelected(m_eTab);
 	}
 }
 
-//! Paper screens (Dossier, Unité, Événements): parchment shell with a header, a content stack and a right rail.
+//! Paper screens (Dossier, Unité, Événements): parchment shell with a header, a content stack and the
+//! right rail, which is the same on every paper screen.
 class CGQC_GU_PaperScreen : CGQC_GU_Screen
 {
 	protected TextWidget m_wCap;
 	protected TextWidget m_wTitle;
+	protected Widget m_wHeaderTools;	// right side of the header (search)
 	protected Widget m_wContent;
 	protected Widget m_wRail;
+	protected ref map<int, CGQC_GU_Button> m_mRail = new map<int, CGQC_GU_Button>();
 
 	//------------------------------------------------------------------------------------------------
 	override protected ResourceName GetLayout()
@@ -273,6 +301,7 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 
 		m_wCap = TextWidget.Cast(Find("Cap"));
 		m_wTitle = TextWidget.Cast(Find("Title"));
+		m_wHeaderTools = Find("HeaderTools");
 		m_wContent = Find("ContentStack");
 		m_wRail = Find("Rail");
 
@@ -283,17 +312,47 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 			m_wTitle.SetColor(CGQC_GU_Style.Ink());
 
 		OnBuildPaper();
-
-		CGQC_GU_Button close = AddButton(m_wRail, "FERMER", CGQC_GU_EButtonKind.PLAIN);
-		if (close)
-			close.GetOnActivated().Insert(CGQC_GU_Ui.Back);
+		BuildRail();
 	}
 
 	//------------------------------------------------------------------------------------------------
 	protected void OnBuildPaper();
 
 	//------------------------------------------------------------------------------------------------
-	void OnRailSelected(int index);
+	//! Which rail tab is shown by this screen (drawn as the active one).
+	protected CGQC_GU_ERailTab GetRailTab()
+	{
+		return CGQC_GU_ERailTab.NONE;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! A rail tab was pressed. Screens override this to switch in place; the default opens the tab's screen.
+	void OnRailSelected(CGQC_GU_ERailTab tab)
+	{
+		if (tab == GetRailTab())
+			return;
+
+		switch (tab)
+		{
+			// The Dossier tabs open one's own dossier.
+			case CGQC_GU_ERailTab.REGISTRY:
+			case CGQC_GU_ERailTab.GRADE:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_DossierScreen("", tab));
+				break;
+
+			case CGQC_GU_ERailTab.MEMBERS:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_MembersScreen());
+				break;
+
+			case CGQC_GU_ERailTab.CAT_QUALS:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_QualCatalogueScreen());
+				break;
+
+			case CGQC_GU_ERailTab.CAT_EXERCISES:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_ExerciseCatalogueScreen());
+				break;
+		}
+	}
 
 	//------------------------------------------------------------------------------------------------
 	protected void SetHeader(string cap, string title)
@@ -306,15 +365,83 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected CGQC_GU_Button AddRailEntry(string text, int index)
+	//! The mockup's full rail: Événements / Dossier / Unité, then FERMER at the bottom.
+	protected void BuildRail()
+	{
+		if (!m_wRail)
+			return;
+
+		RailSection("ÉVÉNEMENTS", 0);
+		RailTab("OPÉRATIONS", CGQC_GU_ERailTab.OPERATIONS);
+		RailTab("DÉPLOIEMENTS", CGQC_GU_ERailTab.DEPLOYMENTS);
+		RailTab("ENTRAÎNEMENTS", CGQC_GU_ERailTab.TRAININGS);
+
+		RailSection("DOSSIER");
+		RailTab("REGISTRE", CGQC_GU_ERailTab.REGISTRY, true);
+		RailTab("GRADE & ACCÈS", CGQC_GU_ERailTab.GRADE, true);
+		RailTab("QUALIFICATIONS", CGQC_GU_ERailTab.QUALS);
+		RailTab("SÉANCES / FTX", CGQC_GU_ERailTab.SESSIONS);
+		RailTab("PROGRESSION", CGQC_GU_ERailTab.PROGRESSION);
+		RailTab("INSTRUCTEUR", CGQC_GU_ERailTab.INSTRUCTOR);
+		RailTab("INSIGNES", CGQC_GU_ERailTab.BADGES);
+		RailTab("DISTINCTIONS", CGQC_GU_ERailTab.AWARDS);
+
+		RailSection("UNITÉ");
+		// Everyone reads the member list; the screen offers the edits to members.edit holders only.
+		RailTab("MEMBRES", CGQC_GU_ERailTab.MEMBERS, true);
+		RailTab("ORBAT", CGQC_GU_ERailTab.ORBAT);
+		RailTab("LISTE DES QUALIFICATIONS", CGQC_GU_ERailTab.CAT_QUALS, true);
+		RailTab("LISTE DES EXERCICES", CGQC_GU_ERailTab.CAT_EXERCISES, true);
+		RailTab("LISTE DES DISTINCTIONS", CGQC_GU_ERailTab.CAT_AWARDS);
+
+		Widget spacer = CGQC_GU_W.VBox(m_wRail);
+		if (spacer)
+			LayoutSlot.SetSizeMode(spacer, LayoutSizeMode.Fill);
+
+		CGQC_GU_Button close = AddButton(m_wRail, "FERMER", CGQC_GU_EButtonKind.PLAIN);
+		if (close)
+		{
+			close.SetRail();
+			close.GetOnActivated().Insert(CGQC_GU_Ui.Back);
+		}
+
+		SelectRailTab();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void RailSection(string title, float padTop = 10)
+	{
+		TextWidget t = CGQC_GU_W.Text(m_wRail, title, CGQC_GU_Style.FONT_TITLE, 13, CGQC_GU_Style.InkMuted());
+		if (t)
+			LayoutSlot.SetPadding(t, 4, padTop, 0, 0);
+
+		CGQC_GU_W.Rule(m_wRail, 2, 6);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! built = false: the tab is greyed out until its screen exists.
+	protected void RailTab(string text, CGQC_GU_ERailTab tab, bool built = false)
 	{
 		CGQC_GU_Button b = AddButton(m_wRail, text, CGQC_GU_EButtonKind.PLAIN);
 		if (!b)
-			return null;
+			return;
 
-		CGQC_GU_RailEntry entry = new CGQC_GU_RailEntry(this, index);
+		b.SetRail();
+		b.SetEnabled(built);
+		CGQC_GU_RailEntry entry = new CGQC_GU_RailEntry(this, tab);
 		m_aKeepAlive.Insert(entry);
 		b.GetOnActivated().Insert(entry.OnActivated);
-		return b;
+		m_mRail.Set(tab, b);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void SelectRailTab()
+	{
+		CGQC_GU_ERailTab current = GetRailTab();
+		foreach (int tab, CGQC_GU_Button b : m_mRail)
+		{
+			if (b)
+				b.SetSelected(tab == current);
+		}
 	}
 }

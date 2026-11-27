@@ -1,0 +1,14 @@
+ScrollLayoutWidgetClass {
+ Name "GU_Scroll"
+ style Small
+ {
+  VerticalLayoutWidgetClass "{7A1D3E5F90B2C701}" {
+   Name "Inner"
+   Slot AlignableSlot "{7A1D3E5F90B2C702}" {
+    HorizontalAlign 3
+    VerticalAlign 0
+    Padding 0 0 14 0
+   }
+  }
+ }
+}

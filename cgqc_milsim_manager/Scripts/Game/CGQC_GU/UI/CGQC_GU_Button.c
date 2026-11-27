@@ -138,6 +138,23 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Tab of the paper rail: full width, tighter than a plain button so the whole rail fits the screen.
+	void SetRail()
+	{
+		if (m_wLabel)
+		{
+			m_wLabel.SetExactFontSize(15);
+			AlignableSlot.SetPadding(m_wLabel, 6, 9, 6, 9);
+		}
+
+		if (m_wRoot)
+		{
+			LayoutSlot.SetHorizontalAlign(m_wRoot, LayoutHorizontalAlign.Stretch);
+			LayoutSlot.SetPadding(m_wRoot, 0, 0, 0, 5);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Button inside page content: smaller label and padding, sized to its text instead of the full width.
 	//! The parent must be a layout (vertical or horizontal).
 	void SetCompact()

@@ -68,7 +68,6 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	protected ref CGQC_GU_Region m_Panel = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_List = new CGQC_GU_Region();
 	protected TextWidget m_wMessage;
-	protected CGQC_GU_Button m_RailMembers;
 	protected ref CGQC_GU_FieldWatch m_SearchWatch;
 
 	protected EditBoxWidget m_wSearch;
@@ -136,13 +135,6 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		if (m_List.m_wRoot)
 			LayoutSlot.SetHorizontalAlign(m_List.m_wRoot, LayoutHorizontalAlign.Stretch);
 
-		// Same rail as the Dossier: REGISTRE and GRADE & ACCÈS open the own dossier on that tab.
-		AddRailEntry("REGISTRE", CGQC_GU_DossierScreen.TAB_REGISTRE);
-		AddRailEntry("GRADE & ACCÈS", CGQC_GU_DossierScreen.TAB_GRADE);
-		m_RailMembers = AddRailEntry("MEMBRES", CGQC_GU_DossierScreen.TAB_MEMBERS);
-		if (m_RailMembers)
-			m_RailMembers.SetSelected(true);
-
 		CGQC_GU_Client.GetOnReply().Insert(OnReply);
 		RequestList();
 		BuildAll();
@@ -162,11 +154,17 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	override void OnRailSelected(int index)
+	override protected CGQC_GU_ERailTab GetRailTab()
 	{
-		if (index != CGQC_GU_DossierScreen.TAB_MEMBERS)
+		return CGQC_GU_ERailTab.MEMBERS;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override void OnRailSelected(CGQC_GU_ERailTab tab)
+	{
+		if (tab != CGQC_GU_ERailTab.MEMBERS)
 		{
-			CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_DossierScreen("", index));
+			super.OnRailSelected(tab);
 			return;
 		}
 
