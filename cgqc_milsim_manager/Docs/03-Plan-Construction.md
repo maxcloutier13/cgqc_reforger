@@ -130,6 +130,9 @@ Each step ends with `wb_validate_scripts` + `wb_reload` and a short Play test be
 **Steps**
 
 - **1a — Server actions (no UI).** Each action checks rights on the server and writes the member file immediately.
+  - *Build status 2026-11-26:* written and passes `wb_validate_scripts`. Actions: `member.personal.set`, `.rank.set`, `.access.set`, `.name.set`, `.status.set`, `.record.add`, `member.create`, `member.link`, `member.merge`. Payload `{"p":{...}}`; merged dossiers are copied to `archive/` first; Commandement cannot remove its own Commandement. Test harness: `#gu as <membre> <action> clé=valeur`.
+  - [x] Live test (16:01–16:02): create ×2, rank refused for a Sdt. and accepted for Commandement, own personal info OK, another member's personal info refused, KIA status, manual entry, link, and merge (Testeur into Cible: UID taken over, Registre merged, archive written, old file removed).
+  - Fix after the test: a merge now also copies the auto dossier's personal info into the target's empty fields. Passes validation; not live-tested.
   - Actions:
     - Self-edit of personal info.
     - Set rank: writes a PROMOTION entry and a news item.
@@ -146,12 +149,28 @@ Each step ends with `wb_validate_scripts` + `wb_reload` and a short Play test be
   - Dark and paper style helpers.
   - The double-press button component: red with « APPUYER DE NOUVEAU » on the first press, executes on the second, and resets after a few seconds.
   - **Test:** an empty test screen opens and closes cleanly in Play, and the game doesn't keep the inputs.
+  - *Build status 2026-11-26:* [x] live test passed (CRC32 `99ffd7ea`). The shell fills the screen, the buttons click, the double press arms and resets, the server reply arrived (16:15), and Fermer and Échap close cleanly. First attempt was squashed in the corner: the layout root needs `FrameSlot` anchors 0,0–1,1, now set in `CGQC_GU_Screen.Build`.
+    - **Screens live inside the pause menu** as widgets (`CGQC_GU_Ui` host + `CGQC_GU_Screen` / `CGQC_GU_PaperScreen`). The pause menu already provides the cursor and input blocking, so no input context and no menu registration are needed.
+    - **Layouts:** `UI/layouts/CGQC_GU_Button`, `CGQC_GU_PaperShell` and `CGQC_GU_Text`. Their GUIDs were minted by Workbench through `wb_resources register`: the call reports "false" but writes the `.meta`.
+    - **Fonts (owner decision: closest available):** Roboto Condensed Bold / Regular for titles and labels, Roboto Regular for values. The game ships no serif or monospace font that can be used.
+    - **Temporary:** a pause button « ESSAI GESTION D'UNITÉ » opens `CGQC_GU_TestScreen`. Both are removed in 1c.
 - **1c — Pause menu.**
   - `modded PauseMenuUI`, adding widgets the same way the game's own rally pause-menu code does.
   - The CGQC logo replaces the title.
   - The overview panel: header (rank and name, players online, phase and status), command notice, unit news, next rank with its criteria, and **OUVRIR MON DOSSIER**.
   - Seat, role and the operation section stay empty until Phases 4–5.
   - **Test:** the panel shows the live data; the vanilla buttons still work.
+  - *Build status 2026-11-26:* **passed its live test** (see below).
+    - New layout `CGQC_GU_Overview` and the logo `UI/Textures/CGQC_GU/CGQC_GU_Logo.edds`, imported by Workbench from the 512 px PNG of `cgqc_testing/CGQC_Logo_Shield2.png`.
+    - New request `overview`, built on the server: name with rank, highest access, phase and status, players online, notice, next rank with criteria from `promotions.json`, and the last 6 news items. Display text is composed in the reply, never stored.
+    - The notice bar is hidden when there is no notice. The operation panel reads « AUCUNE OPÉRATION EN COURS » until Phase 5.
+    - OUVRIR MON DOSSIER opens `CGQC_GU_DossierScreen`, which shows the name only until 1d. The 1b test button and test screen are removed.
+    - First Play test (17:16): the logo, the layout, the light state and the dossier button worked. The overview reply was ignored, and the dark panels rendered pale.
+      - Cause of the ignored reply: in Workbench the reply arrived synchronously, inside `Request()`, before the caller stored its request id. Fix: local replies are now delivered on the next frame.
+      - Panel colours are now set from script.
+    - Second Play test (20:27, compile CRC bc5f4896): name and rank, access group, phase, players online and 4 news lines all show. The logo is now the round 128 px CGQC logo with transparency, sent by the owner, shown at 150 px.
+      - The panels were still too faint: `Color.FromSRGBA` also linearises the alpha. Fix: `CGQC_GU_Style.Translucent` sets the opacity directly. Panels are now 0.72, raised from 0.55 for bright terrain.
+      - Third test (20:30): the logo is fixed. The owner reimported it with Import Settings › Color Space = ToSRGB, which UI textures need. The panels were still pale: the UI blends in linear space, so a translucent dark veil darkens less than the mockup did. Fix: `Translucent` now converts the opacity, `1 - (1 - a)^2.2`. Panels are 0.65 in mockup terms; confirmed in the fourth test (20:34). The panel then moved left, starting 360 units from the left edge instead of 520, to close the gap next to the menu. **1c PASSED** (20:36): the owner approved the panel. The Dossier title showing the name was confirmed live (20:38).
 - **1d — Dossier (paper).**
   - The fiche: insignia, name, grade, highest access tag, online status, the collapsible personal section, and the footer `QC-<uid>-CGQC`.
   - Registre tab: list, plus a manual entry for staff.

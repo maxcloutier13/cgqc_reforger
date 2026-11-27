@@ -1,0 +1,37 @@
+ButtonWidgetClass {
+ Name "GU_Button"
+  {
+  OverlayWidgetClass "{6211848E988EAC29}" {
+   Name "Body"
+   Slot ButtonWidgetSlot "{929FFCB89F0E122A}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+    {
+    ImageWidgetClass "{C2C775E7591DAC98}" {
+     Name "Bg"
+     Slot OverlayWidgetSlot "{8ED840C3AB6C86EE}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0.14 0.26 0.61 1
+    }
+    TextWidgetClass "{909FF11834D3FD9E}" {
+     Name "Label"
+     Slot OverlayWidgetSlot "{44E430055E707CB7}" {
+      Padding 18 10 18 10
+      HorizontalAlign 1
+      VerticalAlign 1
+     }
+     Text "BOUTON"
+     "Font Size" 18
+     "Min Font Size" 18
+     Color 1 1 1 1
+     FontProperties FontProperties "{8A6EF1D7974A136B}" {
+      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     }
+    }
+   }
+  }
+ }
+}

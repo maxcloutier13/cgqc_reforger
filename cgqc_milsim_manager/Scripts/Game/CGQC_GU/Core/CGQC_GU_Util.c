@@ -39,6 +39,33 @@ class CGQC_GU_Time
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Whole months from an ISO date ("2022", "2022-04" or "2022-04-04[T…]") to today (UTC). 0 if unknown.
+	static int MonthsSince(string iso)
+	{
+		if (iso.Length() < 4)
+			return 0;
+
+		int fromYear = iso.Substring(0, 4).ToInt();
+		int fromMonth = 1;
+		int fromDay = 1;
+		if (iso.Length() >= 7)
+			fromMonth = iso.Substring(5, 2).ToInt();
+		if (iso.Length() >= 10)
+			fromDay = iso.Substring(8, 2).ToInt();
+
+		int y, m, d;
+		System.GetYearMonthDayUTC(y, m, d);
+		int months = (y - fromYear) * 12 + (m - fromMonth);
+		if (d < fromDay)
+			months--;
+
+		if (months < 0)
+			return 0;
+
+		return months;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! ISO 8601 timestamp, UTC: 2026-11-28T01:00:00Z
 	static string NowUtc()
 	{

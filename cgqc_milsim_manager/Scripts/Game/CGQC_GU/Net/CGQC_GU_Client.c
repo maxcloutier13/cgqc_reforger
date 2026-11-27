@@ -55,6 +55,12 @@ class CGQC_GU_Client
 	}
 
 	//------------------------------------------------------------------------------------------------
+	static int RequestWith(string action, CGQC_GU_Payload payload)
+	{
+		return Request(action, payload.ToJson());
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static void OnReply(int requestId, bool ok, string code, string payload)
 	{
 		CGQC_GU_Log.Info(string.Format("Réponse %1 : %2 (%3), %4 octets", requestId, ok, code, payload.Length()));

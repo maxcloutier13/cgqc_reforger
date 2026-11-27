@@ -252,6 +252,147 @@ class CGQC_GU_Manager
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! "+ Nouveau dossier": roster member without a UID yet (mbr_ key, PROFIL NON LIÉ).
+	CGQC_GU_Member CreateUnlinkedMember(string lastName, string rank, string enlistedOn, string discordName, string by)
+	{
+		CGQC_GU_Member m = new CGQC_GU_Member();
+		m.uid = CGQC_GU_Ids.New("mbr");
+		m.uidLinked = false;
+		m.lastName = lastName;
+		m.displayName = lastName;
+		m.discordName = discordName;
+		m.rank = rank;
+		string defaultGroup = m_Catalogues.GetDefaultAccessGroup();
+		if (!defaultGroup.IsEmpty())
+			m.accessGroups.Insert(defaultGroup);
+
+		m.enlistedOn = enlistedOn;
+		m.createdAt = CGQC_GU_Time.NowUtc();
+		CGQC_GU_RecordEntry e = m.AddRecord("enlistment", by);
+		if (!enlistedOn.IsEmpty())
+			e.on = enlistedOn;
+
+		m_mMembers.Insert(m.uid, m);
+		CGQC_GU_Log.Info(string.Format("Nouveau dossier non lié : %1 (%2)", lastName, m.uid));
+		return m;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Rank change with its PROMOTION entry and a news item (codes only; labels come from ranks.json).
+	void ChangeRank(CGQC_GU_Member m, string newRank, string by)
+	{
+		string oldRank = m.rank;
+		m.rank = newRank;
+
+		CGQC_GU_RecordEntry e = m.AddRecord("promotion", by);
+		e.data.Set("rank", newRank);
+		e.data.Set("from", oldRank);
+
+		map<string, string> news = new map<string, string>();
+		news.Set("rank", newRank);
+		news.Set("from", oldRank);
+		AddNews("promotion", m.uid, news);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Moves a dossier to a new key (its Bohemia UID): new file written first, old file archived after.
+	bool RekeyMember(CGQC_GU_Member m, string newUid)
+	{
+		if (m_mMembers.Contains(newUid))
+			return false;
+
+		string oldUid = m.uid;
+		m.uid = newUid;
+		m.uidLinked = true;
+		if (!CGQC_GU_Storage.SaveMember(m))
+		{
+			m.uid = oldUid;
+			m.uidLinked = false;
+			return false;
+		}
+
+		m_mMembers.Remove(oldUid);
+		m_mMembers.Insert(newUid, m);
+		CGQC_GU_Storage.RemoveMemberFiles(oldUid);
+
+		array<int> players = new array<int>();
+		foreach (int playerId, string boundUid : m_mPlayerToUid)
+		{
+			if (boundUid == oldUid)
+				players.Insert(playerId);
+		}
+
+		foreach (int playerId : players)
+		{
+			m_mPlayerToUid.Set(playerId, newUid);
+		}
+
+		// Keep unit news pointing at the dossier.
+		bool newsChanged;
+		foreach (CGQC_GU_NewsItem item : m_News.items)
+		{
+			string itemUid;
+			if (item.data.Find("uid", itemUid) && itemUid == oldUid)
+			{
+				item.data.Set("uid", newUid);
+				newsChanged = true;
+			}
+		}
+
+		if (newsChanged)
+			CGQC_GU_Storage.SaveNews(m_News);
+
+		CGQC_GU_Log.Info(string.Format("Dossier %1 lié au profil %2", oldUid, newUid));
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Merge an auto-created dossier into an unlinked one. The target keeps its own data, takes the
+	//! source's UID, profile name and Registre entries; the source file is archived, never just deleted.
+	bool MergeMembers(CGQC_GU_Member source, CGQC_GU_Member target, string by)
+	{
+		string sourceUid = source.uid;
+		if (!CGQC_GU_Storage.ArchiveMember(source))
+			return false;
+
+		m_mMembers.Remove(sourceUid);
+		CGQC_GU_Storage.RemoveMemberFiles(sourceUid);
+
+		foreach (CGQC_GU_RecordEntry e : source.record)
+		{
+			target.record.Insert(e);
+		}
+
+		if (target.profileName.IsEmpty())
+			target.profileName = source.profileName;
+
+		// Personal info the player filled in on the auto-created dossier fills the target's empty fields.
+		if (target.personal.birthDate.IsEmpty()) target.personal.birthDate = source.personal.birthDate;
+		if (target.personal.birthPlace.IsEmpty()) target.personal.birthPlace = source.personal.birthPlace;
+		if (target.personal.bloodType.IsEmpty()) target.personal.bloodType = source.personal.bloodType;
+		if (target.personal.bio.IsEmpty()) target.personal.bio = source.personal.bio;
+
+		// The auto-created dossier is the one the player has actually been using.
+		if (!source.lastSeenAt.IsEmpty())
+			target.lastSeenAt = source.lastSeenAt;
+
+		string oldTargetUid = target.uid;
+		// RekeyMember refuses a key that is in the map; the source was removed above.
+		if (!RekeyMember(target, sourceUid))
+		{
+			CGQC_GU_Log.Error(string.Format("Fusion %1 -> %2 : échec de l'écriture ; le dossier source est dans archive/.", sourceUid, oldTargetUid));
+			return false;
+		}
+
+		CGQC_GU_RecordEntry note = target.AddRecord("note", by, "Fusion du dossier créé automatiquement.");
+		note.data.Set("mergedFrom", sourceUid);
+		note.data.Set("previousKey", oldTargetUid);
+		SaveMemberNow(target);
+		CGQC_GU_Log.Info(string.Format("Fusion : dossier auto %1 fusionné dans %2 (%3)", sourceUid, oldTargetUid, target.lastName));
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Automatic status from missed OPORD operations; thresholds come from settings.json.
 	void RecomputeStatus(CGQC_GU_Member m)
 	{

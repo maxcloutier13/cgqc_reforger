@@ -49,7 +49,8 @@ modded class SCR_PlayerController
 	{
 		if (CGQC_GU_IsLocalOwner())
 		{
-			CGQC_GU_RpcDo_Reply(requestId, ok, code, payload);
+			// Next frame, as over the network: the caller must get its request id back before the reply lands.
+			GetGame().GetCallqueue().CallLater(CGQC_GU_RpcDo_Reply, 0, false, requestId, ok, code, payload);
 			return;
 		}
 

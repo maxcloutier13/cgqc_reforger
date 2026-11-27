@@ -1,0 +1,92 @@
+FrameWidgetClass {
+ Name "GU_PaperRoot"
+  {
+  ImageWidgetClass "{3F29A06E29571C52}" {
+   Name "Bg"
+   Slot FrameWidgetSlot "{72AA7D14DC30AE60}" {
+    Anchor 0 0 1 1
+    OffsetLeft 0
+    OffsetTop 0
+    OffsetRight 0
+    OffsetBottom 0
+   }
+   Color 0.79 0.71 0.49 1
+  }
+  VerticalLayoutWidgetClass "{F5F7AC4F2DD3511E}" {
+   Name "Main"
+   Slot FrameWidgetSlot "{48C6CCC4052812D9}" {
+    Anchor 0 0 1 1
+    OffsetLeft 40
+    OffsetTop 32
+    OffsetRight 280
+    OffsetBottom 32
+   }
+    {
+    TextWidgetClass "{359C4A9ED4B84AD0}" {
+     Name "Cap"
+     Slot LayoutSlot "{8839D88FC4239E57}" {
+      Padding 0 0 0 2
+     }
+     Text "DOSSIER"
+     "Font Size" 15
+     "Min Font Size" 15
+     Color 0.08 0.06 0.04 1
+     FontProperties FontProperties "{38E3A3CEEAE79589}" {
+      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     }
+    }
+    TextWidgetClass "{1A89FBFB28D53BE7}" {
+     Name "Title"
+     Slot LayoutSlot "{E88B640F988EE676}" {
+      Padding 0 0 0 8
+     }
+     Text "TITRE"
+     "Font Size" 40
+     "Min Font Size" 40
+     Color 0.01 0.01 0.005 1
+     FontProperties FontProperties "{D88C86FA1298D6C6}" {
+      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     }
+    }
+    ImageWidgetClass "{647F75DF1E4CAF02}" {
+     Name "Rule"
+     Slot LayoutSlot "{BA7F882FD179768A}" {
+      HorizontalAlign 3
+      Padding 0 0 0 16
+     }
+     Size 8 3
+     Color 0.04 0.03 0.02 1
+    }
+    FrameWidgetClass "{852D2A501351ABF4}" {
+     Name "Content"
+     Slot LayoutSlot "{4BCEA2B7F10C0D6C}" {
+      SizeMode Fill
+      FillWeight 1
+     }
+     {
+      VerticalLayoutWidgetClass "{6C1E2F0A3B4D5E61}" {
+       Name "ContentStack"
+       Slot FrameWidgetSlot "{6C1E2F0A3B4D5E62}" {
+        Anchor 0 0 1 1
+        OffsetLeft 0
+        OffsetTop 0
+        OffsetRight 0
+        OffsetBottom 0
+       }
+      }
+     }
+    }
+   }
+  }
+  VerticalLayoutWidgetClass "{DCDE4403797855C8}" {
+   Name "Rail"
+   Slot FrameWidgetSlot "{E0CA19BE25093788}" {
+    Anchor 1 0 1 1
+    OffsetLeft -240
+    OffsetTop 32
+    OffsetRight 24
+    OffsetBottom 32
+   }
+  }
+ }
+}

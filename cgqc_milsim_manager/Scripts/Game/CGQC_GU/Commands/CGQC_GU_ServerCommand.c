@@ -9,6 +9,7 @@
 //   #gu set <uid|nom> status <actif|inactif|mia|kia|auto>
 //   #gu set <uid|nom> enlisted <AAAA[-MM[-JJ]]>
 //   #gu save
+//   #gu as <uid|nom> <action> clé=valeur ...   (test: runs a client request as that member)
 
 class CGQC_GU_ServerCommand : ScrServerCommand
 {
@@ -102,9 +103,62 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 			case "save":
 				mgr.SaveAll();
 				return Reply("Sauvegarde complète effectuée.");
+
+			case "as":
+				if (argv.Count() < 4)
+					return Reply("Usage : #gu as <uid|nom> <action> clé=valeur ...", false);
+
+				return As(mgr, argv);
 		}
 
 		return Reply("Sous-commande inconnue : " + sub, false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Test harness: runs a client request as if <who> sent it, with the same server-side checks.
+	//! Values may contain spaces: a word without '=' continues the previous value.
+	//! uid / source / target accept a name too (resolved like #gu show).
+	protected ScrServerCmdResult As(CGQC_GU_Manager mgr, array<string> argv)
+	{
+		CGQC_GU_Member caller = mgr.FindMemberLoose(argv[2]);
+		if (!caller)
+			return Reply("Dossier introuvable : " + argv[2], false);
+
+		string action = argv[3];
+		CGQC_GU_Payload p = new CGQC_GU_Payload();
+		string key;
+		for (int i = 4; i < argv.Count(); i++)
+		{
+			string token = argv[i];
+			int eq = token.IndexOf("=");
+			if (eq > 0)
+			{
+				key = token.Substring(0, eq);
+				p.Set(key, token.Substring(eq + 1, token.Length() - eq - 1));
+			}
+			else if (!key.IsEmpty())
+			{
+				p.Set(key, p.Get(key) + " " + token);
+			}
+		}
+
+		array<string> memberKeys = { "uid", "source", "target" };
+		foreach (string k : memberKeys)
+		{
+			if (!p.Has(k))
+				continue;
+
+			CGQC_GU_Member target = mgr.FindMemberLoose(p.Get(k));
+			if (target)
+				p.Set(k, target.uid);
+		}
+
+		CGQC_GU_RequestResult result = CGQC_GU_Requests.Handle(mgr, caller, action, p.ToJson());
+		string ok = "REFUSÉ";
+		if (result.m_bOk)
+			ok = "OK";
+
+		return Reply(string.Format("%1 %2 (%3) par %4, %5 octets", action, ok, result.m_sCode, caller.displayName, result.m_sPayload.Length()), result.m_bOk);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -179,12 +233,7 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 				if (r.id == m.rank)
 					return Reply("Grade inchangé.");
 
-				m.rank = r.id;
-				CGQC_GU_RecordEntry e = m.AddRecord("promotion", by);
-				e.data.Set("rank", r.id);
-				map<string, string> news = new map<string, string>();
-				news.Set("rank", r.id);
-				mgr.AddNews("promotion", m.uid, news);
+				mgr.ChangeRank(m, r.id, by);
 				break;
 			}
 

@@ -22,6 +22,30 @@ class CGQC_GU_Storage
 		CGQC_GU_Json.EnsureDirectory(Dir("trainings"));
 		CGQC_GU_Json.EnsureDirectory(Dir("proposals"));
 		CGQC_GU_Json.EnsureDirectory(Dir("state"));
+		CGQC_GU_Json.EnsureDirectory(Dir("archive"));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Copy of a dossier in archive/<uid>_<timestamp>.json before it is merged away.
+	static bool ArchiveMember(CGQC_GU_Member m)
+	{
+		string stamp = CGQC_GU_Time.NowUtc();
+		stamp.Replace(":", "-");
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		m.WriteTo(ctx);
+		return CGQC_GU_Json.SafeSave(ctx, Dir("archive") + "/" + CGQC_GU_Str.FileSafe(m.uid) + "_" + stamp + ".json");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static void RemoveMemberFiles(string uid)
+	{
+		string path = MemberPath(uid);
+		array<string> files = { path, path + ".bak", path + ".tmp" };
+		foreach (string f : files)
+		{
+			if (FileIO.FileExists(f))
+				FileIO.DeleteFile(f);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------

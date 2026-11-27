@@ -1,0 +1,353 @@
+FrameWidgetClass {
+ Name "GU_Overview"
+  {
+  VerticalLayoutWidgetClass "{9CE56366F5B9E112}" {
+   Name "Stack"
+   Slot FrameWidgetSlot "{A5BA2FE5E5532373}" {
+    Anchor 0 0 1 1
+    OffsetLeft 0
+    OffsetTop 0
+    OffsetRight 0
+    OffsetBottom 0
+   }
+    {
+    OverlayWidgetClass "{7D4DC3AC548F3063}" {
+     Name "Header"
+     Slot LayoutSlot "{42F04A9D97F17177}" {
+      Padding 0 0 0 10
+      HorizontalAlign 3
+     }
+      {
+      ImageWidgetClass "{EC00A83BC4DA8CE8}" {
+       Name "HeaderBg"
+       Slot OverlayWidgetSlot "{B47089B684023272}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.008 0.01 0.013 0.55
+      }
+      HorizontalLayoutWidgetClass "{BC42776A517A823E}" {
+       Name "HeaderRow"
+       Slot OverlayWidgetSlot "{716D30049CF90430}" {
+        Padding 26 14 26 14
+        HorizontalAlign 3
+        VerticalAlign 1
+       }
+        {
+        VerticalLayoutWidgetClass "{401F64CCAAC09138}" {
+         Name "Who"
+         Slot LayoutSlot "{6E0B095380F5AD65}" {
+          VerticalAlign 1
+          SizeMode Fill
+          FillWeight 1
+         }
+          {
+          TextWidgetClass "{7940481404E02794}" {
+           Name "Name"
+           Text "-"
+           "Font Size" 38
+           "Min Font Size" 38
+           Color 0.84 0.84 0.85 1
+           FontProperties FontProperties "{528044C0038B501C}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+          TextWidgetClass "{CD5789F5ADBA0F55}" {
+           Name "Sub"
+           Text ""
+           "Font Size" 18
+           "Min Font Size" 18
+           Color 0.58 0.59 0.6 1
+           FontProperties FontProperties "{B454026AEA40123B}" {
+            Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+           }
+          }
+         }
+        }
+        OverlayWidgetClass "{83E774F8F2EAA5E4}" {
+         Name "PhaseTag"
+         Slot LayoutSlot "{A8EF6B95E58CAA85}" {
+          Padding 0 0 26 0
+          VerticalAlign 1
+         }
+          {
+          ImageWidgetClass "{4BF60E3F3DB11B51}" {
+           Name "PhaseBg"
+           Slot OverlayWidgetSlot "{92CFA3B839D965FD}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Color 0.046 0.068 0.105 0.8
+          }
+          TextWidgetClass "{040D1F757C2CB3AB}" {
+           Name "Phase"
+           Slot OverlayWidgetSlot "{67025681228CDD23}" {
+            Padding 14 8 14 8
+           }
+           Text "TEMPS LIBRE · GARNISON"
+           "Font Size" 15
+           "Min Font Size" 15
+           Color 0.84 0.84 0.85 1
+           FontProperties FontProperties "{B0D417774AB0D2F8}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+         }
+        }
+        TextWidgetClass "{4A0544BB7968766D}" {
+         Name "Online"
+         Slot LayoutSlot "{9486C32743CB3533}" {
+          VerticalAlign 1
+         }
+         Text ""
+         "Font Size" 22
+         "Min Font Size" 22
+         Color 0.84 0.84 0.85 1
+         FontProperties FontProperties "{5FFEE3E96D43BBFC}" {
+          Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+         }
+        }
+       }
+      }
+     }
+    }
+    OverlayWidgetClass "{CE6DE850568FA48B}" {
+     Name "Notice"
+     Slot LayoutSlot "{71B216B70DE39776}" {
+      Padding 0 0 0 10
+      HorizontalAlign 3
+     }
+      {
+      ImageWidgetClass "{B08AB08756ACF5FA}" {
+       Name "NoticeBg"
+       Slot OverlayWidgetSlot "{8C1A52185C0FD7FB}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.105 0.223 0.745 0.92
+      }
+      HorizontalLayoutWidgetClass "{12742C07994F3DFB}" {
+       Name "NoticeRow"
+       Slot OverlayWidgetSlot "{69C7D858B77E9306}" {
+        Padding 26 14 26 14
+        HorizontalAlign 3
+        VerticalAlign 1
+       }
+        {
+        TextWidgetClass "{0BD92403D5F260E5}" {
+         Name "NoticeCap"
+         Slot LayoutSlot "{67368B7CF4055A91}" {
+          Padding 0 0 28 0
+          VerticalAlign 1
+         }
+         Text "AVIS DU COMMANDEMENT"
+         "Font Size" 13
+         "Min Font Size" 13
+         Color 0.013 0.013 0.013 1
+         FontProperties FontProperties "{0C91DCC33D70B932}" {
+          Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+         }
+        }
+        TextWidgetClass "{469FAE8AB958168D}" {
+         Name "NoticeText"
+         Slot LayoutSlot "{A46B17F94E0B4F66}" {
+          VerticalAlign 1
+          SizeMode Fill
+          FillWeight 1
+         }
+         Text ""
+         "Font Size" 21
+         "Min Font Size" 21
+         Color 0.013 0.013 0.013 1
+         FontProperties FontProperties "{8B78EC061B67F2E9}" {
+          Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+         }
+        }
+       }
+      }
+     }
+    }
+    HorizontalLayoutWidgetClass "{59A67477E9479833}" {
+     Name "Columns"
+     Slot LayoutSlot "{365A1B8A1392537C}" {
+      HorizontalAlign 3
+      SizeMode Fill
+      FillWeight 1
+     }
+      {
+      OverlayWidgetClass "{640C0E31C19738A8}" {
+       Name "OpPanel"
+       Slot LayoutSlot "{FDC3F6D9BC839F4D}" {
+        Padding 0 0 10 0
+        VerticalAlign 3
+        SizeMode Fill
+        FillWeight 1.55
+       }
+        {
+        ImageWidgetClass "{4E9CFF177878FD72}" {
+         Name "OpBg"
+         Slot OverlayWidgetSlot "{2F64ABD1D97C230E}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Color 0.008 0.01 0.013 0.55
+        }
+        VerticalLayoutWidgetClass "{674A5FFBE3514244}" {
+         Name "OpStack"
+         Slot OverlayWidgetSlot "{92AF289AC976258B}" {
+          Padding 26 18 26 18
+          HorizontalAlign 3
+          VerticalAlign 0
+         }
+          {
+          TextWidgetClass "{C94F6DFE0E540F6F}" {
+           Name "OpCap"
+           Text "OPÉRATION EN COURS"
+           "Font Size" 13
+           "Min Font Size" 13
+           Color 0.37 0.38 0.4 1
+           FontProperties FontProperties "{E8F80C5EEF5C31BA}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+          TextWidgetClass "{069D7FCECE518A12}" {
+           Name "OpTitle"
+           Text "AUCUNE OPÉRATION EN COURS"
+           "Font Size" 30
+           "Min Font Size" 30
+           Color 0.58 0.59 0.6 1
+           FontProperties FontProperties "{A9498BF0A8FB0DE6}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+         }
+        }
+       }
+      }
+      VerticalLayoutWidgetClass "{34921A3808D37588}" {
+       Name "Right"
+       Slot LayoutSlot "{FE2F9DBFD33F252A}" {
+        VerticalAlign 3
+        SizeMode Fill
+        FillWeight 1
+       }
+        {
+        OverlayWidgetClass "{11D9E1064555437E}" {
+         Name "NewsPanel"
+         Slot LayoutSlot "{011841028CE252F3}" {
+          Padding 0 0 0 10
+          HorizontalAlign 3
+          SizeMode Fill
+          FillWeight 1
+         }
+          {
+          ImageWidgetClass "{4337910ED915221B}" {
+           Name "NewsBg"
+           Slot OverlayWidgetSlot "{5E9C456156EE5188}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Color 0.008 0.01 0.013 0.55
+          }
+          VerticalLayoutWidgetClass "{68DD6FC7D943EFF0}" {
+           Name "NewsStack"
+           Slot OverlayWidgetSlot "{CABA305F9FAA585C}" {
+            Padding 22 16 22 16
+            HorizontalAlign 3
+            VerticalAlign 0
+           }
+            {
+            TextWidgetClass "{B13F178A65335C8B}" {
+             Name "NewsCap"
+             Slot LayoutSlot "{85B9ABB75C6C77A0}" {
+              Padding 0 0 0 8
+             }
+             Text "NOUVELLES DE L'UNITÉ"
+             "Font Size" 13
+             "Min Font Size" 13
+             Color 0.27 0.4 0.87 1
+             FontProperties FontProperties "{AF94B80FFFAB808A}" {
+              Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+             }
+            }
+            VerticalLayoutWidgetClass "{FC18DAA42845014E}" {
+             Name "NewsList"
+            }
+           }
+          }
+         }
+        }
+        OverlayWidgetClass "{7F5ADDC80D3151C7}" {
+         Name "NextPanel"
+         Slot LayoutSlot "{C4A710F9ACD6598D}" {
+          Padding 0 0 0 10
+          HorizontalAlign 3
+         }
+          {
+          ImageWidgetClass "{F7ABC568D558A97F}" {
+           Name "NextBg"
+           Slot OverlayWidgetSlot "{8DFACBCDCA88A5DD}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Color 0.008 0.01 0.013 0.55
+          }
+          VerticalLayoutWidgetClass "{C0BC1E2B9571FE25}" {
+           Name "NextStack"
+           Slot OverlayWidgetSlot "{23BB681FCFA24845}" {
+            Padding 22 16 22 16
+            HorizontalAlign 3
+            VerticalAlign 0
+           }
+            {
+            TextWidgetClass "{17524E7A81E50D4A}" {
+             Name "NextCap"
+             Text "VOTRE PROCHAIN GRADE"
+             "Font Size" 13
+             "Min Font Size" 13
+             Color 0.37 0.38 0.4 1
+             FontProperties FontProperties "{C63A834863136A8E}" {
+              Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+             }
+            }
+            TextWidgetClass "{388CB9D4AF2B70BA}" {
+             Name "NextRank"
+             Text ""
+             "Font Size" 24
+             "Min Font Size" 24
+             Color 0.84 0.84 0.85 1
+             FontProperties FontProperties "{FE521DA63EC066B5}" {
+              Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+             }
+            }
+            TextWidgetClass "{35FAFA46CA878167}" {
+             Name "NextCriteria"
+             Slot LayoutSlot "{3642AB6DD41BD65D}" {
+              HorizontalAlign 3
+             }
+             Text ""
+             "Font Size" 16
+             "Min Font Size" 16
+             Color 0.58 0.59 0.6 1
+             FontProperties FontProperties "{76CF979D7D07D945}" {
+              Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+             }
+            }
+           }
+          }
+         }
+        }
+        VerticalLayoutWidgetClass "{13556C6294B1009D}" {
+         Name "DossierSlot"
+         Slot LayoutSlot "{8A5F6D7BAA584A54}" {
+          HorizontalAlign 3
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
