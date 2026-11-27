@@ -214,6 +214,30 @@ class CGQC_GU_Storage
 	}
 
 	//------------------------------------------------------------------------------------------------
+	static bool SaveCalendar(CGQC_GU_Calendar c)
+	{
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		ctx.WriteValue("schemaVersion", CGQC_GU_Calendar.SCHEMA_VERSION);
+		ctx.WriteValue("events", c.events);
+		return CGQC_GU_Json.SafeSave(ctx, Dir("state") + "/calendar.json");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static CGQC_GU_Calendar LoadCalendar()
+	{
+		CGQC_GU_Calendar c = new CGQC_GU_Calendar();
+		JsonLoadContext ctx = CGQC_GU_Json.Open(Dir("state") + "/calendar.json");
+		if (!ctx)
+			return c;
+
+		ctx.ReadValue("events", c.events);
+		if (!c.events)
+			c.events = new array<ref CGQC_GU_CalendarEvent>();
+
+		return c;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static bool SaveOrbatLive(CGQC_GU_OrbatLive o)
 	{
 		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();

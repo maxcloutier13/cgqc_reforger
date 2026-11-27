@@ -44,6 +44,7 @@ $profile:CGQC_GestionUnite/
     notice.json            command notice
     news.json              unit news feed
     orbat_live.json        active sections, section renames, seat assignments (incl. offline)
+    calendar.json          manual calendar events (Phase 2d)
 ```
 
 ## Member file
@@ -94,4 +95,8 @@ $profile:CGQC_GestionUnite/
 - **Ranks don't list their roles.** `ranks.json` no longer holds the roles each rank unlocks. They come from `roles.json` (`minRank`), so each fact lives in one place only.
 - **Settings keys:** `inactiveAfterMissedOps`, `miaAfterMissedOps`, `autosaveSeconds`, `allowDevUid`, `devUidDelaySeconds`, `longService`.
 - **Access groups** carry a `level`; the highest held is the one displayed. Each group's `rights` is a list of right names, and `"*"` means every right. The right names code checks for are `members.edit`, `access.manage`, `promotion.view`, `operations.manage`, `deployments.manage`, `phase.change`, `orbat.assign`, `notice.edit`, `sessions.create` and `quals.evaluate_own`.
+- **Calendar (Phase 2d).** `state/calendar.json` = `{schemaVersion, events[]}`. Each event is `{id "evt_…", title, date "AAAA-MM-JJ", time "HH:MM" or "", note, yearly, createdBy, createdAt}`.
+  - Dates and times are **Eastern time as entered**, display only, not UTC.
+  - Manual entries are basic events only. Operations, trainings and deployments come from their own files.
+  - Enlistment anniversaries and birthdays are computed from the dossiers and never stored.
 - **Dev UIDs.** These are `dev-<profile name>` and are created only when the backend gives no UID: always outside a dedicated server, and on a dedicated server only if `settings.json` has `allowDevUid: true`.

@@ -255,6 +255,9 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 					if (!m.accessGroups.Contains(id))
 						m.accessGroups.Insert(id);
 				}
+
+				// Rights moved: refresh everyone's menu entry and edit buttons.
+				mgr.BroadcastLightState();
 				break;
 			}
 

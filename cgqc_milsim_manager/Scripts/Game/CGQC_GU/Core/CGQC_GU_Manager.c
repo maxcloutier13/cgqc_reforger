@@ -10,6 +10,7 @@ class CGQC_GU_Manager
 	ref CGQC_GU_Situation m_Situation;
 	ref CGQC_GU_Notice m_Notice;
 	ref CGQC_GU_News m_News;
+	ref CGQC_GU_Calendar m_Calendar;
 	ref CGQC_GU_OrbatLive m_OrbatLive;
 
 	protected ref map<int, string> m_mPlayerToUid = new map<int, string>();
@@ -66,6 +67,7 @@ class CGQC_GU_Manager
 
 		m_Notice = CGQC_GU_Storage.LoadNotice();
 		m_News = CGQC_GU_Storage.LoadNews();
+		m_Calendar = CGQC_GU_Storage.LoadCalendar();
 
 		m_OrbatLive = CGQC_GU_Storage.LoadOrbatLive();
 		if (!m_OrbatLive)
@@ -168,6 +170,7 @@ class CGQC_GU_Manager
 		if (m_Situation) CGQC_GU_Storage.SaveSituation(m_Situation);
 		if (m_Notice) CGQC_GU_Storage.SaveNotice(m_Notice);
 		if (m_News) CGQC_GU_Storage.SaveNews(m_News);
+		if (m_Calendar) CGQC_GU_Storage.SaveCalendar(m_Calendar);
 		if (m_OrbatLive) CGQC_GU_Storage.SaveOrbatLive(m_OrbatLive);
 		CGQC_GU_Log.Info(string.Format("Sauvegarde complète : %1 dossiers.", m_mMembers.Count()));
 	}
@@ -438,8 +441,15 @@ class CGQC_GU_Manager
 		}
 
 		m_News.items.Insert(item);
+		while (m_News.items.Count() > NEWS_MAX)
+		{
+			m_News.items.RemoveOrdered(0);
+		}
+
 		CGQC_GU_Storage.SaveNews(m_News);
 	}
+
+	static const int NEWS_MAX = 200;	// news.json keeps the newest items only
 
 	//------------------------------------------------------------------------------------------------
 	protected void LogSituationChange(string by, string field, string from, string to)
@@ -451,6 +461,85 @@ class CGQC_GU_Manager
 		e.from = from;
 		e.to = to;
 		m_Situation.log.Insert(e);
+
+		while (m_Situation.log.Count() > SITUATION_LOG_MAX)
+		{
+			m_Situation.log.RemoveOrdered(0);
+		}
+	}
+
+	static const int SITUATION_LOG_MAX = 500;
+
+	//------------------------------------------------------------------------------------------------
+	//! Situation change (Phase 2). Empty values are left as they are. Each changed field is logged; nothing
+	//! is written when nothing changes. Qualification only exists with ENTRAÎNEMENT. Returns the number of changes.
+	int ApplySituation(string by, string phase, string qualification, string unitStatus)
+	{
+		int changes;
+		string newPhase = m_Situation.phase;
+		if (!phase.IsEmpty())
+			newPhase = phase;
+
+		if (newPhase != m_Situation.phase)
+		{
+			LogSituationChange(by, "phase", m_Situation.phase, newPhase);
+			m_Situation.phase = newPhase;
+			changes++;
+		}
+
+		bool newQual = m_Situation.qualification;
+		if (!qualification.IsEmpty())
+			newQual = qualification == "1";
+
+		if (m_Situation.phase != "entrainement")
+			newQual = false;
+
+		if (newQual != m_Situation.qualification)
+		{
+			LogSituationChange(by, "qualification", BoolCode(m_Situation.qualification), BoolCode(newQual));
+			m_Situation.qualification = newQual;
+			changes++;
+		}
+
+		if (!unitStatus.IsEmpty() && unitStatus != m_Situation.unitStatus)
+		{
+			LogSituationChange(by, "unitStatus", m_Situation.unitStatus, unitStatus);
+			m_Situation.unitStatus = unitStatus;
+			changes++;
+
+			// DÉPLOYÉ / GARNISON makes unit news (owner decision 6); phase changes do not.
+			map<string, string> news = new map<string, string>();
+			news.Set("status", unitStatus);
+			AddNews("unit_status", by, news);
+		}
+
+		if (changes == 0)
+			return 0;
+
+		CGQC_GU_Storage.SaveSituation(m_Situation);
+		BroadcastLightState();
+		return changes;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static string BoolCode(bool v)
+	{
+		if (v)
+			return "1";
+
+		return "0";
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Command notice. Empty text clears it. Returns false if the file could not be written.
+	bool SetNotice(string text, string by)
+	{
+		m_Notice.text = text;
+		m_Notice.by = by;
+		m_Notice.at = CGQC_GU_Time.NowUtc();
+		bool saved = CGQC_GU_Storage.SaveNotice(m_Notice);
+		BroadcastLightState();
+		return saved;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -580,7 +669,28 @@ class CGQC_GU_Manager
 		if (!pc)
 			return;
 
-		pc.CGQC_GU_SendLightState(m_iLightSerial, m_Situation.phase, m_Situation.qualification, m_Situation.unitStatus, m_Notice.text, GetOnlineCount());
+		pc.CGQC_GU_SendLightState(m_iLightSerial, m_Situation.phase, m_Situation.qualification, m_Situation.unitStatus, m_Notice.text, GetOnlineCount(), LightFlagsFor(playerId));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! What this player's UI may offer (display only; every action is checked again on the server).
+	protected int LightFlagsFor(int playerId)
+	{
+		CGQC_GU_Member m = GetMemberForPlayer(playerId);
+		if (!m)
+			return 0;
+
+		int flags;
+		if (CGQC_GU_Permissions.HasRight(m_Catalogues, m, CGQC_GU_Rights.UNIT_MENU))
+			flags |= CGQC_GU_LightState.CAN_MENU;
+		if (CGQC_GU_Permissions.HasRight(m_Catalogues, m, CGQC_GU_Rights.NOTICE_EDIT))
+			flags |= CGQC_GU_LightState.CAN_NOTICE;
+		if (CGQC_GU_Permissions.HasRight(m_Catalogues, m, CGQC_GU_Rights.PHASE_CHANGE))
+			flags |= CGQC_GU_LightState.CAN_PHASE;
+		if (CGQC_GU_Permissions.HasRight(m_Catalogues, m, CGQC_GU_Rights.CALENDAR_EDIT))
+			flags |= CGQC_GU_LightState.CAN_CALENDAR;
+
+		return flags;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -610,5 +720,9 @@ class CGQC_GU_Manager
 
 		CGQC_GU_RequestResult result = CGQC_GU_Requests.Handle(this, caller, action, payload);
 		pc.CGQC_GU_SendReply(requestId, result.m_bOk, result.m_sCode, result.m_sPayload);
+
+		// Rights may have moved: refresh everyone's light flags (menu entry, notice edit button).
+		if (result.m_bOk && (action == CGQC_GU_Requests.ACCESS_SET || action == CGQC_GU_Requests.MEMBER_LINK || action == CGQC_GU_Requests.MEMBER_MERGE))
+			BroadcastLightState();
 	}
 }

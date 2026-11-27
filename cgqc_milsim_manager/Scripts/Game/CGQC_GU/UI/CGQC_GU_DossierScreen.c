@@ -329,6 +329,9 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			case "same_member":		return "Un dossier ne peut pas être fusionné avec lui-même.";
 			case "source_not_linked":	return "Le dossier à fusionner n'a pas de profil Bohemia.";
 			case "bad_status":		return "Statut inconnu.";
+			case "bad_phase":		return "Phase inconnue.";
+			case "bad_title":		return "Titre vide ou trop long.";
+			case "bad_time":		return "Heure invalide (HH:MM).";
 			case "write_failed":	return "Échec de l'écriture sur le serveur.";
 		}
 
@@ -1078,7 +1081,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			if (m_Dto.canEdit && !r.current)
 				kind = "rank.set";
 
-			CGQC_GU_Button b = Btn(m_Body, cell, r.abbr, kind, r.id, true);
+			// The current rank, or any rank for a viewer without members.edit, is never armed (owner, 2b test).
+			CGQC_GU_Button b = Btn(m_Body, cell, r.abbr, kind, r.id, !kind.IsEmpty());
 			if (b)
 			{
 				LayoutSlot.SetHorizontalAlign(b.GetRootWidget(), LayoutHorizontalAlign.Center);

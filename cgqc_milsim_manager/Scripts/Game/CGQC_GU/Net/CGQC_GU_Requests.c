@@ -65,6 +65,17 @@ class CGQC_GU_Requests
 	static const string MEMBER_CREATE = "member.create";		// lastName, rank, enlistedOn, discordName
 	static const string MEMBER_LINK = "member.link";			// uid (unlinked dossier), bohemiaUid
 	static const string MEMBER_MERGE = "member.merge";			// source (auto-created dossier), target (unlinked dossier)
+	// Phase 2
+	static const string SITUATION = "situation";				// read (unit.menu)
+	static const string SITUATION_SET = "situation.set";		// phase, qualification (0|1), unitStatus — any of them
+	static const string NOTICE_SET = "notice.set";				// text ("" clears)
+	static const string CALENDAR = "calendar";					// month (AAAA-MM, optional) — every member
+	static const string CALENDAR_ADD = "calendar.add";			// title, date, time (HH:MM, optional), note, yearly (0|1)
+	static const string CALENDAR_REMOVE = "calendar.remove";	// id
+
+	static const int MAX_NOTICE = 300;
+	static const int MAX_EVENT_TITLE = 60;
+	static const int MAX_EVENT_NOTE = 300;
 
 	static const int MAX_SHORT = 48;
 	static const int MAX_NOTE = 500;
@@ -136,9 +147,150 @@ class CGQC_GU_Requests
 
 			case MEMBER_MERGE:
 				return MemberMerge(mgr, caller, p);
+
+			case SITUATION:
+			{
+				if (!Can(mgr, caller, CGQC_GU_Rights.UNIT_MENU))
+					return Fail("forbidden");
+
+				return Ok("ok", CGQC_GU_SituationBuilder.Build(mgr, caller));
+			}
+
+			case SITUATION_SET:
+				return SituationSet(mgr, caller, p);
+
+			case NOTICE_SET:
+				return NoticeSet(mgr, caller, p);
+
+			case CALENDAR:
+				return Ok("ok", CGQC_GU_CalendarBuilder.Build(mgr, caller, p.Get("month")));
+
+			case CALENDAR_ADD:
+				return CalendarAdd(mgr, caller, p);
+
+			case CALENDAR_REMOVE:
+				return CalendarRemove(mgr, caller, p);
 		}
 
 		return Fail("unknown_action");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static CGQC_GU_RequestResult SituationSet(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
+	{
+		if (!Can(mgr, caller, CGQC_GU_Rights.PHASE_CHANGE))
+			return Fail("forbidden");
+
+		string phase = CGQC_GU_Str.Lower(p.Get("phase").Trim());
+		if (!phase.IsEmpty() && !CGQC_GU_SituationBuilder.IsPhase(phase))
+			return Fail("bad_phase");
+
+		string status = CGQC_GU_Str.Lower(p.Get("unitStatus").Trim());
+		if (!status.IsEmpty() && !CGQC_GU_SituationBuilder.IsUnitStatus(status))
+			return Fail("bad_status");
+
+		string qual;
+		if (p.Has("qualification"))
+		{
+			qual = "0";
+			if (p.GetBool("qualification"))
+				qual = "1";
+		}
+
+		int changes = mgr.ApplySituation(caller.uid, phase, qual, status);
+		CGQC_GU_Log.Info(string.Format("Situation : %1 changement(s) par %2", changes, caller.uid));
+		return Ok("ok", CGQC_GU_SituationBuilder.Build(mgr, caller));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Manual calendar event. Replies with the calendar of the event's month.
+	protected static CGQC_GU_RequestResult CalendarAdd(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
+	{
+		if (!Can(mgr, caller, CGQC_GU_Rights.CALENDAR_EDIT))
+			return Fail("forbidden");
+
+		string title = p.Get("title").Trim();
+		if (title.IsEmpty() || title.Length() > MAX_EVENT_TITLE)
+			return Fail("bad_title");
+
+		string date = p.Get("date").Trim();
+		if (date.Length() != 10 || !CGQC_GU_Validate.IsIsoDateOrEmpty(date))
+			return Fail("bad_date");
+
+		int y = date.Substring(0, 4).ToInt();
+		int m = date.Substring(5, 2).ToInt();
+		if (date.Substring(8, 2).ToInt() > CGQC_GU_Time.DaysInMonth(y, m))
+			return Fail("bad_date");
+
+		string time = p.Get("time").Trim();
+		if (!CGQC_GU_Validate.IsTimeOrEmpty(time))
+			return Fail("bad_time");
+
+		string note = p.Get("note").Trim();
+		if (note.Length() > MAX_EVENT_NOTE)
+			return Fail("too_long");
+
+		CGQC_GU_CalendarEvent e = new CGQC_GU_CalendarEvent();
+		e.id = CGQC_GU_Ids.New("evt");
+		e.title = title;
+		e.date = date;
+		e.time = time;
+		e.note = note;
+		e.yearly = p.GetBool("yearly");
+		e.createdBy = caller.uid;
+		e.createdAt = CGQC_GU_Time.NowUtc();
+		mgr.m_Calendar.events.Insert(e);
+		if (!CGQC_GU_Storage.SaveCalendar(mgr.m_Calendar))
+			return Fail("write_failed");
+
+		// The pause panel's « PROCHAIN AU CALENDRIER » may have changed.
+		mgr.BroadcastLightState();
+		return Ok("ok", CGQC_GU_CalendarBuilder.Build(mgr, caller, date.Substring(0, 7)));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static CGQC_GU_RequestResult CalendarRemove(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
+	{
+		if (!Can(mgr, caller, CGQC_GU_Rights.CALENDAR_EDIT))
+			return Fail("forbidden");
+
+		string id = p.Get("id");
+		array<ref CGQC_GU_CalendarEvent> events = mgr.m_Calendar.events;
+		for (int i = 0; i < events.Count(); i++)
+		{
+			if (events[i].id != id)
+				continue;
+
+			string month = events[i].date.Substring(0, 7);
+			events.RemoveOrdered(i);
+			if (!CGQC_GU_Storage.SaveCalendar(mgr.m_Calendar))
+				return Fail("write_failed");
+
+			mgr.BroadcastLightState();
+			string shown = p.Get("month");
+			if (shown.IsEmpty())
+				shown = month;
+
+			return Ok("ok", CGQC_GU_CalendarBuilder.Build(mgr, caller, shown));
+		}
+
+		return Fail("not_found");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static CGQC_GU_RequestResult NoticeSet(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
+	{
+		if (!Can(mgr, caller, CGQC_GU_Rights.NOTICE_EDIT))
+			return Fail("forbidden");
+
+		string text = p.Get("text").Trim();
+		if (text.Length() > MAX_NOTICE)
+			return Fail("too_long");
+
+		if (!mgr.SetNotice(text, caller.uid))
+			return Fail("write_failed");
+
+		return Ok("ok");
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -600,6 +752,19 @@ class CGQC_GU_Validate
 		}
 
 		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! "" or "HH:MM" (24 h).
+	static bool IsTimeOrEmpty(string s)
+	{
+		if (s.IsEmpty())
+			return true;
+
+		if (s.Length() != 5 || s.Get(2) != ":" || !AllDigits(s.Substring(0, 2)) || !AllDigits(s.Substring(3, 2)))
+			return false;
+
+		return s.Substring(0, 2).ToInt() <= 23 && s.Substring(3, 2).ToInt() <= 59;
 	}
 
 	//------------------------------------------------------------------------------------------------

@@ -33,14 +33,14 @@ class CGQC_GU_Style
 	static Color ConfirmRed()	{ return Color.FromSRGBA(0x9E, 0x2A, 0x26, 255); }	// armed double-press
 
 	// Paper
-	static Color Parchment()	{ return Color.FromSRGBA(0xE8, 0xDC, 0xBB, 255); }	// #E8DCBB
+	static Color Parchment()	{ return Color.FromSRGBA(0xC9, 0xBF, 0xA6, 255); }	// toned down from the mockup #E8DCBB (owner, end of Phase 2: too bright)
 	static Color Ink()			{ return Color.FromSRGBA(0x1C, 0x17, 0x0D, 255); }	// titles
 	static Color InkSoft()		{ return Color.FromSRGBA(0x2A, 0x24, 0x18, 255); }	// body
 	static Color InkMuted()		{ return Color.FromSRGBA(0x52, 0x48, 0x3A, 255); }	// captions
 	static Color Rule()			{ return Color.FromSRGBA(0x3A, 0x31, 0x23, 255); }	// ruled boxes #3A3123
 	static Color PaperButton()	{ return Translucent(0x3A, 0x31, 0x23, 0.16); }	// plain button on paper
 	static Color PaperText()	{ return Color.FromSRGBA(0xF4, 0xED, 0xD9, 255); }	// text on blue / red
-	static Color Field()		{ return Color.FromSRGBA(0xF3, 0xEB, 0xD3, 255); }	// edit field on paper
+	static Color Field()		{ return Color.FromSRGBA(0xD9, 0xD1, 0xBC, 255); }	// edit field on paper (was #F3EBD3)
 	static Color Clear()		{ Color c = Color.FromSRGBA(0, 0, 0, 255); c.SetA(0); return c; }
 	static Color StatusYellow()	{ return Color.FromSRGBA(0xB0, 0x86, 0x0E, 255); }	// INACTIF, dark enough for parchment
 
@@ -83,4 +83,21 @@ class CGQC_GU_Style
 	}
 
 	static const ResourceName LOGO = "{CCB8D746EACD6C7F}UI/Textures/CGQC_GU/CGQC_GU_Logo.edds";
+	static const ResourceName BACKGROUND = "{3394876F197C7A18}UI/Textures/CGQC_GU/CGQC_GU_Background.edds";	// owner's 1920×1080
+	static const ResourceName LAYOUT_DARK_SHELL = "{B0C2202C98D29830}UI/layouts/CGQC_GU_DarkShell.layout";
+
+	// Dark screens (Gestion d'unité menu, Situation, Calendrier)
+	// Values from the approved mockup (NavGU, Situation, Calendrier).
+	// Opacities lowered twice on the owner's request (2c, then 2e: "more transparency all around").
+	static Color DarkVeil()			{ return Translucent(0x0A, 0x0D, 0x12, 0.55); }	// mockup gradient .45 → .8
+	static Color DarkNav()			{ return Translucent(0x18, 0x1B, 0x1F, 0.66); }	// mockup .88
+	static Color DarkCard()			{ return Translucent(0x1A, 0x1D, 0x21, 0.45); }	// mockup .86
+	static Color DarkTile()			{ return Translucent(0x2C, 0x30, 0x35, 0.5); }	// mockup .85
+	static Color DarkActiveCard()	{ return Translucent(0x1E, 0x2A, 0x4A, 0.65); }	// current phase / today
+	static Color DarkButton()		{ return Color.FromSRGBA(0x3A, 0x3E, 0x40, 255); }	// #3A3E40
+	static Color DarkOnBlue()		{ return Color.FromSRGBA(0x1E, 0x1E, 0x1E, 255); }	// text on #5B82E0
+	static Color DarkLine()			{ return Color.FromSRGBA(0x4A, 0x4E, 0x50, 255); }	// separators #4A4E50
+	static Color DarkSoft()			{ return Color.FromSRGBA(0xC9, 0xCB, 0xCD, 255); }	// body text #C9CBCD
+	static Color DarkDim()			{ return Color.FromSRGBA(0x6C, 0x70, 0x74, 255); }	// entries of later phases
+	static Color Training()			{ return Color.FromSRGBA(0x4E, 0x7A, 0x3A, 255); }	// calendar: training / FTX
 }

@@ -65,21 +65,21 @@ modded class SCR_PlayerController
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void CGQC_GU_SendLightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online)
+	void CGQC_GU_SendLightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online, int flags)
 	{
 		if (CGQC_GU_IsLocalOwner())
 		{
-			CGQC_GU_RpcDo_LightState(serial, phase, qualification, unitStatus, notice, online);
+			CGQC_GU_RpcDo_LightState(serial, phase, qualification, unitStatus, notice, online, flags);
 			return;
 		}
 
-		Rpc(CGQC_GU_RpcDo_LightState, serial, phase, qualification, unitStatus, notice, online);
+		Rpc(CGQC_GU_RpcDo_LightState, serial, phase, qualification, unitStatus, notice, online, flags);
 	}
 
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
-	protected void CGQC_GU_RpcDo_LightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online)
+	protected void CGQC_GU_RpcDo_LightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online, int flags)
 	{
-		CGQC_GU_Client.OnLightState(serial, phase, qualification, unitStatus, notice, online);
+		CGQC_GU_Client.OnLightState(serial, phase, qualification, unitStatus, notice, online, flags);
 	}
 }

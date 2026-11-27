@@ -272,6 +272,200 @@ Each step ends with `wb_validate_scripts` + `wb_reload` and a short Play test be
 - **Calendrier:** display only. It is built from operations, trainings and deployments once those exist; until then it uses manual entries.
 - The unit news feed is generated automatically from promotions, qualifications, operations and the like.
 
+### Phase 2 — owner decisions (2026-11-26)
+
+1. **Background:** imported by the owner as `UI/Textures/CGQC_GU/CGQC_GU_Background.edds`.
+2. **Pause entry:** « GESTION D'UNITÉ » under « Continuer », Zeus / Commandement only. Approved.
+3. **Situation** is Zeus / Commandement only. **The Calendrier is for everyone:** a « CALENDRIER » button sits next to OUVRIR MON DOSSIER in the pause panel.
+4. **Calendar content:**
+   - Operations and trainings appear automatically once they exist in their own menus (Phases 3 and 5).
+   - Manual entries are basic events only, such as the jour du Souvenir: title, date, optional time, note, and « chaque année ».
+   - **Anniversaries are shown** too, computed from the dossiers: enlistment anniversaries (« 3 ans au CGQC ») and birthdays (day only, no age, only when the member filled in a birth date). *My reading; to confirm at the 2e test.*
+5. **Command notice:** edited from a small edit button right next to the notice in the pause panel, visible to Zeus and Commandement only. So Zeus gets `notice.edit` too. The notice is no longer edited from Situation.
+6. **News:** DÉPLOYÉ / GARNISON lines approved.
+7. **FERMER:** returns to the Gestion d'unité menu when the screen was opened from it. Approved.
+
+The steps below are approved with these changes; where they differ, the decisions above win.
+
+### Phase 2 — detailed breakdown (approved 2026-11-26 with the decisions above)
+
+"GM only" means holders of the right `unit.menu`: the Zeus access group and Commandement (`*`). It never touches the game's Game Master role. Each step ends with `wb_validate_scripts` + `wb_reload`, the new `Module: Game` CRC in `script.log`, and a Play test by the owner.
+
+**What already exists (Phase 0)**
+- `state/situation.json` (`CGQC_GU_Situation`): phase, `qualification`, `unitStatus` and the change log (`at`, `by`, `field`, `from`, `to`). The phase goes back to TEMPS LIBRE on every server start and that reset is logged as « systeme ».
+- The light state (phase, Qualification, status, notice, players online) is pushed to every client on change; the pause-menu panel already redraws on it.
+- `state/notice.json` and `state/news.json`. News items exist for ENRÔLEMENT and PROMOTION only. There is no request yet to change the phase, the status or the notice.
+- Rights: Zeus has `unit.menu` and `phase.change`; `notice.edit` is Commandement only (through `*`).
+
+**Questions to settle before any Phase 2 code**
+
+1. **Dark-screen background** (Gestion d'unité menu, Situation, Calendrier).
+   - Option A (proposed): the owner supplies the CGQC loading-screen image as a PNG, **1920 × 1080** (16:9, no transparency, not pre-darkened), imported as `UI/Textures/CGQC_GU/CGQC_GU_Background.edds` with Color Space = ToSRGB. The script darkens it and lays the translucent dark panels on top. Until it is imported, the screen falls back to option B.
+   - Option B: no image, only a dark veil over the game world.
+2. **Pause-menu entry.** « GESTION D'UNITÉ » right under « Continuer », as in the spec, in the vanilla button style. Shown only to `unit.menu` holders; the server still checks every action.
+3. **Who sees Situation and Calendrier.**
+   - Proposed: both screens are reached only from the Gestion d'unité menu (GM). Everyone keeps the phase and status in the pause-menu header and gains a « PROCHAIN AU CALENDRIER » line in the right column.
+   - Alternative: every member can open the Calendrier read-only from the pause menu.
+4. **Manual calendar entries** (until Phases 3 and 5 feed the calendar).
+   - Proposed fields: type (OPÉRATION / ENTRAÎNEMENT / FTX / DÉPLOIEMENT / AUTRE), date (AAAA-MM-JJ), time in HE (HH:MM, optional), end date for a deployment (optional), title, note. Each type has its own colour.
+   - Added and removed (double press) by `unit.menu` holders through a new right `calendar.edit`, given to Zeus in the data.
+   - Manual entries stay after Phases 3/5; real operations and trainings are then added automatically next to them.
+5. **Command notice.** Edited from the Situation screen, Commandement only (`notice.edit`), with ENREGISTRER and EFFACER (double press). The pause-menu notice bar updates live for everyone.
+6. **News generated in Phase 2.** Proposed: also a news line when the unit goes DÉPLOYÉ or back to GARNISON. Phase changes do not make news (too frequent); they stay in the Situation change log. Qualifications, operations and deployments add their own lines in Phases 3 and 5.
+7. **FERMER on a screen opened from the Gestion d'unité menu.** Proposed: it goes back to the Gestion d'unité menu; from there, FERMER returns to the pause menu. Screens opened from the pause menu (OUVRIR MON DOSSIER) still return to the pause menu.
+
+**Steps**
+
+- **2a — Server actions: Situation and notice (no UI).**
+  - Read `situation`: phase, Qualification, status, and the change log newest first, with display-ready signer names and dates (YYMMDD + HH:MM HE). Viewer flags `canPhase` and `canNotice` (display only).
+  - Write `situation.set` (`phase.change`): any of `phase`, `qualification`, `unitStatus`. Each changed field adds one log entry; an unchanged value writes nothing. Qualification is cleared when the phase leaves ENTRAÎNEMENT. Then the light state is broadcast.
+  - Write `notice.set` (`notice.edit`): text up to 300 characters; empty clears it. Saves signer and date, then broadcasts.
+  - The light state gains a per-player flag `canMenu` (`unit.menu`) so the pause menu knows whether to show the entry.
+  - Eastern-time helper `CGQC_GU_Time.ToEastern` (UTC −5, −4 in daylight time from the 2nd Sunday of March to the 1st Sunday of November), used for every HE display.
+  - **Test:** `#gu as cloutier situation.set phase=briefing` changes the pause-menu header live; the same call as a Sdt. is refused; `#gu as cloutier notice.set text=…` shows and clears the notice bar.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded with `wb_reload` (21:34:27, compile CRC32 `31ad7464`, 5750 files). **Not yet live-tested.**
+    - New file `Net/CGQC_GU_Situation.c` (DTO + builder, phase / status names, log text « Phase : BRIEFING → OPÉRATION »). The `situation` read needs `unit.menu`; it sends the newest 100 log entries with date YYMMDD and time HE.
+    - `CGQC_GU_Manager.ApplySituation` / `SetNotice`; the change log is capped at 500 entries.
+    - The light state now carries per-player flags: `CAN_MENU`, `CAN_NOTICE`, `CAN_PHASE`, `CAN_CALENDAR` (`CGQC_GU_LightState.Can`). They are re-sent to everyone after an access change, a link or a merge.
+    - New right `calendar.edit`. **Zeus gains `notice.edit` and `calendar.edit`** in the defaults and in the live `config/access_groups.json` (read at server start).
+    - `CGQC_GU_Time.ToEastern` / `TodayEastern` (UTC−5, UTC−4 in daylight time), plus `DayOfWeek` and `DaysInMonth` for the calendar.
+    - Not checked yet: whether Roboto Condensed draws the « → » arrow (seen in 2c).
+    - **Owner test (21:40):** the phase, status, refusal and notice tests work. Fix asked: when the Qualification box is ticked, the header reads « QUALIFICATION » alone, not « ENTRAÎNEMENT · QUALIFICATION ». It is still one phase with a checkbox, not a separate button. Fixed in `CGQC_GU_OverviewBuilder.PhaseLabel`.
+    - **2a PASSED** (2026-11-26, 21:40).
+- **2b — Dark-screen base, Gestion d'unité menu and the pause entry.**
+  - `CGQC_GU_DarkScreen`: background (question 1), large logo in the header, translucent panels, Roboto Condensed, FERMER (question 7).
+  - Menu screen in the spec's groups: Situation; ÉVÉNEMENTS (Opérations, Déploiements, Entraînements, Calendrier); DOSSIER (Mon dossier); UNITÉ (Membres, ORBAT, Qualifications, Exercices, Distinctions). Entries from later phases are shown dimmed and do nothing.
+  - Mon dossier and Membres open the existing paper screens. The MEMBRES rail entry of the paper screens stays as it is.
+  - « GESTION D'UNITÉ » pause button (question 2), shown or hidden live from `canMenu`.
+  - **Test:** Commandement and a Zeus-only member see the entry and the menu; a plain member does not; the vanilla buttons and the Game Master entry still work.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded with `wb_reload` (21:40:45, compile CRC32 `19637a38`, 5751 files). This build also carries the 2a « QUALIFICATION » fix. **Not yet live-tested.**
+    - New layout `UI/layouts/CGQC_GU_DarkShell.layout`, registered (GUID `{B0C2202C98D29830}`). It has the background, a veil, a header with the logo and titles, a content stack, and the right rail.
+    - `CGQC_GU_DarkScreen` (in `UI/CGQC_GU_Screen.c`): the owner's background (`{3394876F197C7A18}`) tinted darker under a translucent veil; plain dark if the texture can't load. FERMER sits in the rail.
+    - `CGQC_GU_Button.SetDark()`: plain buttons on dark screens get a translucent dark fill with a light outline. `CGQC_GU_W.DarkPanel` is the translucent panel.
+    - `UI/CGQC_GU_UnitMenuScreen.c`: four panels.
+      - SITUATION, with the current phase and status under it, updated live.
+      - ÉVÉNEMENTS: Opérations, Déploiements, Entraînements, Calendrier.
+      - DOSSIER: Mon dossier.
+      - UNITÉ: Membres, ORBAT, Qualifications, Exercices, Distinctions.
+      - Mon dossier and Membres work. The others are dimmed until their step or phase; Situation opens in 2c and Calendrier in 2e.
+    - **Menu session:** `CGQC_GU_Ui.OpenUnitMenu` / `Back`. FERMER on a screen reached from the menu (including rail switches between Dossier and Membres) returns to the menu; FERMER on the menu returns to the pause menu. Screens opened from the pause panel close straight back to it.
+    - Pause button « GESTION D'UNITÉ » inserted after « Continue », same method as the game's rally button. It is shown only when the light state has `CAN_MENU`, and updates live.
+    - **Owner test (21:45):** the entry, the background and the FERMER paths (tests 3–4) work. Fixes asked:
+      - **The look had lost the mockup's style.** The mockup (`NavGU`, `Situation`, `Calendrier` artboards) has no separate menu page: the Gestion d'unité navigation is a **left panel on every dark screen**, and the entry lands on **Situation**.
+      - **The pause button reads « Gestion d'unité »**, not all caps.
+      - With `#gu set Cloutier access membre`, the entry stayed visible: the console command did not re-send the light state.
+      - On the Grade & accès tab, a member's own current rank could be armed (« CONFIRMER ») though nothing happens.
+    - **Rework, compile CRC32 `a09868c9` (21:49:55, 5752 files). Not seen live yet.**
+      - `CGQC_GU_DarkShell.layout` rewritten after the mockup. The background sits under a 62 % veil. The left navigation (440 px, rgba(24,27,31,.88)) has the logo with « CGQC / GESTION D'UNITÉ », section captions with a rule, solid 46 px entries (#3A3E40; the active one #5B82E0 with dark text), and RETOUR at the bottom. The content is on the right.
+      - `UI/CGQC_GU_DarkScreen.c` replaces the 4-panel menu screen. Entries of later phases are dimmed.
+      - `CGQC_GU_Button.SetDark` and `CGQC_GU_Check.SetDark` now use the mockup colours (`CGQC_GU_Style` dark values).
+      - The entry opens **Situation (2c)**. 2c is built in the same pass, since the landing screen is Situation (see 2c).
+      - FERMER on Mon dossier / Membres reached from the navigation returns to Situation. RETOUR returns to the pause menu.
+      - The `#gu set … access` console command now re-sends the light state.
+      - A rank button is only a double press when it can really be applied.
+- **2c — Situation screen (dark).**
+  - The 5 phases as cards, the active one highlighted, each with ACTIVER (double press). A « Qualification » checkbox on ENTRAÎNEMENT, unchecked by default.
+  - Unit status GARNISON / DÉPLOYÉ (double press).
+  - Command notice field with ENREGISTRER / EFFACER for Commandement (question 5).
+  - Change log in pages of 10: date and time HE, signer, « Phase : BRIEFING → OPÉRATION ».
+  - The screen redraws when the light state changes, so a change by another GM appears live.
+  - **Test:** two clients on the Peer Tool: a phase change on one shows on the other's pause panel and Situation screen at once.
+  - *Build status 2026-11-26:* built together with the 2b rework (compile CRC32 `a09868c9`). **Not yet live-tested.** `UI/CGQC_GU_SituationScreen.c`, after the mockup:
+    - **Header:** SITUATION, the phase in 44 px (« QUALIFICATION » when ticked), and « Depuis 19 h 32 · changé par … » from the newest phase / Qualification entry (with MM-DD when it is not today, in HE). Tiles for STATUT and EN LIGNE. The mockup's ÉQUIPES tile waits for the ORBAT (Phase 4).
+    - **PHASES:** 5 cards with the mockup's descriptions. The current card is blue (#1E2A4A) with « EN COURS »; the others have ACTIVER (double press, « CONFIRMER »).
+      - The Qualification box sits on ENTRAÎNEMENT. ACTIVER on ENTRAÎNEMENT sends the box's value.
+      - While ENTRAÎNEMENT runs, changing the box turns EN COURS into APPLIQUER (double press). It is not a separate button.
+    - **STATUT DE L'UNITÉ:** GARNISON / DÉPLOYÉ with the current one blue; the other is a double press. The mockup's description sits under them.
+    - **JOURNAL DES CHANGEMENTS:** « 11-26 19:32  Phase → BRIEFING · Maj. Cloutier ». Pages of 9 with < >, from the newest 60 entries.
+    - Refusals show in the header in red.
+    - The screen reads again on every light-state change, so another Zeus's change shows live.
+    - The `situation` reply was reshaped for this (`since`, `online`, `phaseTexts`, `log[].when/text`).
+    - **Owner test (21:52):** it mostly works; the screenshot matches the mockup's layout. Fixes made (compile CRC32 `16b1d81f`, 21:54:30; not seen live yet):
+      - **VM exception « NULL pointer… Variable 'color' » in `CGQC_GU_W.DarkPanel`.** Assigning a new `Color` to the defaulted parameter left it null. A local now holds it, and the callers pass the colour explicitly. The exception had also left the header and the two bottom panels without their dark background.
+      - **Qualification:** while ENTRAÎNEMENT runs, ticking or unticking the box switches to / from QUALIFICATION at once (owner's request; no APPLIQUER). Otherwise the box is the value ACTIVER sends.
+      - **The « → » arrow is not in the game font** (it showed as a gap). The journal now reads « Phase : BRIEFING · Maj. Cloutier ».
+    - **Owner test (21:58):** the fixes work (the screenshot shows the dark panels, the journal and its pages). Last request: the content panels are partly see-through too, like the navigation. Panels went to 62 % (mockup 86 %), tiles to 66 %, and the current-phase card to 80 %; this went into the 2d build. The owner said "do that and go to next step".
+    - **2b and 2c PASSED** (2026-11-26, 21:58).
+- **2d — Calendar data and server actions.**
+  - New file `state/calendar.json` (schema doc updated): entries `{id, type, date, time, endDate, title, note, createdBy, createdAt}`. Times are entered and stored in HE as typed, with the zone in settings; display only.
+  - Read `calendar` (one month, plus the next entry from today); writes `calendar.add` / `calendar.remove` (`calendar.edit`, question 4). New right added to Zeus in the defaults and the live `access_groups.json`.
+  - The `overview` reply gains the next calendar entry.
+  - **Test:** `#gu as` add / remove; refused for a Sdt.; restart keeps the entries.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded (21:59:02, compile CRC32 `f56cb246`). Tested through the 2e screen. **Not yet live-tested.**
+    - Data: `CGQC_GU_CalendarEvent` / `CGQC_GU_Calendar` and `Storage.Save/LoadCalendar`, loaded by the manager. Schema doc updated.
+    - `Net/CGQC_GU_CalendarBuilder.c` builds one month:
+      - manual events, with « chaque année » repeating on the same day;
+      - **enlistment anniversaries** (« Cpl. Roussel · 3 ans au CGQC », full dates only);
+      - **birthdays** (« Anniversaire · … », the day only, never the age);
+      - KIA members are left out.
+    - It also sends « À VENIR » (the next 6 over 3 months) and the grid data: first weekday and days in month.
+    - `NextLine` gives the « PROCHAIN AU CALENDRIER » line. It skips anniversaries, so a birthday never hides the next operation or event.
+    - Requests:
+      - `calendar` (every member; `month` = AAAA-MM).
+      - `calendar.add` (`calendar.edit`): title ≤ 60, a real date, HH:MM or empty, note ≤ 300, `yearly`.
+      - `calendar.remove` (`calendar.edit`).
+      - Writes re-send the light state so the pause panels refresh their next line.
+    - `overview` and `situation` gain `nextEvent`.
+- **2e — Calendrier screen (dark) and the pause-menu line.**
+  - Month grid with previous / next month and today marked. Each day shows coloured marks by type; a deployment spans its days.
+  - Selecting a day lists its entries with time HE, title and note; GM gets AJOUTER (form) and RETIRER (double press).
+  - Pause panel: « PROCHAIN AU CALENDRIER » with MM-DD, time HE and title (question 3).
+  - **Test:** add an entry for next week; it shows in the grid and in the pause panel of a second client.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded (22:02:44, compile CRC32 `47dd7737`, 5754 files). **Not yet live-tested.**
+    - `UI/CGQC_GU_CalendarScreen.c` (dark, after the mockup):
+      - **Header:** CALENDRIER, the month, < > AUJOURD'HUI, and « Aujourd'hui JEU 26 NOV · heure de l'Est (HE) ».
+      - **Grid:** 6 weeks with DIM…SAM. Today is blue; the selected day has a blue outline. Each day shows up to 2 marks, then « +N ».
+      - **Legend:** Événement (amber), Anniversaire (slate), Opération (blue), Entraînement / FTX (green).
+      - **JOUR CHOISI:** the day's cards (kind, title, time HE, note, RETIRER as a double press for editors), then AJOUTER UN ÉVÉNEMENT for editors.
+      - **The form:** title, date pre-filled with the selected day, time HE, note, « Chaque année », ENREGISTRER (double press), ANNULER.
+      - **À VENIR:** the next items.
+      - The mockup's RSVP Discord block is left out (later phase).
+    - **Navigation:** CALENDRIER is active for Zeus / Commandement. A player without `unit.menu` sees the dark screen with only the logo, « PROCHAIN AU CALENDRIER » and RETOUR. The « PROCHAIN AU CALENDRIER » box now sits at the bottom of the navigation, as in the mockup, on Situation too.
+    - **Pause panel:**
+      - **CALENDRIER** button beside OUVRIR MON DOSSIER (owner decision 3), for everyone.
+      - **PROCHAIN AU CALENDRIER** panel at the top of the right column, hidden when nothing is coming.
+    - **Command notice (owner decision 5):** a MODIFIER button next to the notice for `notice.edit` holders (Zeus, Commandement).
+      - For them the bar shows even when empty.
+      - MODIFIER opens a field with ENREGISTRER / EFFACER (double press) and ANNULER, right in the bar.
+      - Plain members see no button, and no bar when the notice is empty.
+    - **Owner test (22:05):** "Calendar is nice." Only fix asked: **more transparency all around** on the dark screens. The changes, in the 2f build (CRC32 `d86f1ddb`):
+
+      | Element | Before | Now |
+      |---|---|---|
+      | Veil | 62 % | 55 % |
+      | Navigation | 88 % | 66 % |
+      | Panels | 62 % | 45 % |
+      | Tiles and day cells | 66 % | 50 % |
+      | Current card | 80 % | 65 % |
+      | Days outside the month | 45 % | 30 % |
+
+      Not seen live yet.
+    - **2d and 2e PASSED** (2026-11-26, 22:05). The owner said "good to go otherwise, fix that and next".
+- **2f — News feed.**
+  - One place builds every news line by type (`CGQC_GU_OverviewBuilder.NewsText`), with the types of Phases 3 and 5 reserved.
+  - DÉPLOYÉ / GARNISON news (question 6). The feed keeps the last 200 items in `news.json`.
+  - **Test:** switch to DÉPLOYÉ; the news line shows in the pause panel for everyone.
+  - *Build status 2026-11-26:* written, passes `wb_validate_scripts`, loaded (22:10:23, compile CRC32 `d86f1ddb`; Workbench had restarted, so the log is `logs_2026-11-26_22-04-51`). **Not yet live-tested.**
+    - `CGQC_GU_OverviewBuilder.NewsText` is the one place that writes every news line. Unit-level types are handled before member types.
+    - **New type `unit_status`:** « L'unité est déployée » / « L'unité est de retour en garnison ». It is written by `ApplySituation` on a real GARNISON ↔ DÉPLOYÉ change only; phase changes make no news.
+    - **Reserved types** (no text yet, so not shown): qualification (Phase 3), operation and deployment (Phase 5), distinction (Phase 6).
+    - `news.json` keeps the newest 200 items (`CGQC_GU_Manager.NEWS_MAX`).
+    - The pause panel reads the overview again on every light-state change, so the new line shows live for everyone.
+    - **Calendrier corner (owner remark during the 2f build):** « heure de l'Est (HE) » named a time zone while no time was shown. The corner now shows a live clock in Eastern time: « Aujourd'hui JEU 26 NOV · 22:10 », updated every 5 s from the client's UTC clock. Compile CRC32 `7ae97951` (22:11:44).
+    - **2f PASSED** (2026-11-26, 22:15): "Good good."
+    - **Last owner request:** the parchment of the paper screens (Dossier, Registre, Membres) was far too bright.
+      - `CGQC_GU_Style.Parchment` went from #E8DCBB to **#C9BFA6**, a muted khaki paper.
+      - The edit fields went from #F3EBD3 to **#D9D1BC**.
+      - Passes `wb_validate_scripts`. `wb_reload` was refused while Workbench was busy, so the owner reloads it (Stop → Compile and Reload Scripts). Not seen live yet.
+
+### Phase 2 — done (2026-11-26)
+
+All steps 2a–2f PASSED.
+- **Last confirmed compile:** CRC32 `7ae97951`. The parchment tone change since then passes validation only.
+- **For later phases:**
+  - Operations, trainings and deployments plug into `CGQC_GU_CalendarBuilder.CollectMonth` (kinds `operation`, `training`, `deployment`) and `NewsText` (reserved types).
+  - Their navigation entries are in `CGQC_GU_DarkScreen.BuildNav` / `OpenTarget`.
+
 ## Phase 3 — Training and progression
 
 - **Unité:** Liste des qualifications (with qualified instructors) and Liste des exercices.

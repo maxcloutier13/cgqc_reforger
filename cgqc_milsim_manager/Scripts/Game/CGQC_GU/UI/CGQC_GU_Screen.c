@@ -9,6 +9,31 @@ class CGQC_GU_Ui
 	protected static ref CGQC_GU_Screen s_Current;
 	protected static ref CGQC_GU_Screen s_Pending;
 	protected static ref array<Widget> s_aHidden = new array<Widget>();
+	// True while the player is inside Gestion d'unité: FERMER on a paper screen goes back to it.
+	protected static bool s_bMenuSession;
+
+	//------------------------------------------------------------------------------------------------
+	//! Opens the Gestion d'unité menu and starts a menu session.
+	static void OpenUnitMenu()
+	{
+		s_bMenuSession = true;
+		OpenNextFrame(new CGQC_GU_SituationScreen());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! FERMER on a paper screen reached from the Gestion d'unité navigation: back to Situation.
+	//! RETOUR on a dark screen, or FERMER outside the menu: back to the pause menu.
+	static void Back()
+	{
+		if (s_bMenuSession && !CGQC_GU_DarkScreen.Cast(s_Current))
+		{
+			OpenNextFrame(new CGQC_GU_SituationScreen());
+			return;
+		}
+
+		s_bMenuSession = false;
+		CloseCurrent();
+	}
 
 	//------------------------------------------------------------------------------------------------
 	static void OnHostOpened(Widget hostRoot)
@@ -20,6 +45,7 @@ class CGQC_GU_Ui
 	static void OnHostClosed()
 	{
 		s_Pending = null;
+		s_bMenuSession = false;
 		CloseCurrent();
 		s_wHostRoot = null;
 	}
@@ -260,7 +286,7 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 
 		CGQC_GU_Button close = AddButton(m_wRail, "FERMER", CGQC_GU_EButtonKind.PLAIN);
 		if (close)
-			close.GetOnActivated().Insert(CGQC_GU_Ui.CloseCurrent);
+			close.GetOnActivated().Insert(CGQC_GU_Ui.Back);
 	}
 
 	//------------------------------------------------------------------------------------------------

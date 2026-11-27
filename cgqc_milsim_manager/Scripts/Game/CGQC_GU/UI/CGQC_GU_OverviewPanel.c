@@ -23,6 +23,16 @@ class CGQC_GU_OverviewPanel
 	protected TextWidget m_wNextCriteria;
 	protected Widget m_wNextPanel;
 	protected ref CGQC_GU_Button m_DossierButton;
+	protected ref CGQC_GU_Button m_CalendarButton;
+	protected ref CGQC_GU_Button m_NoticeEdit;
+	protected ref array<ref CGQC_GU_Button> m_aNoticeButtons = new array<ref CGQC_GU_Button>();
+	protected Widget m_wNextEvent;
+	protected TextWidget m_wNextEventText;
+	protected Widget m_wNoticeEditor;
+	protected EditBoxWidget m_wNoticeField;
+	protected bool m_bEditingNotice;
+	protected string m_sNotice;
+	protected int m_iNoticeReq;
 	protected int m_iRequestId;
 
 	//------------------------------------------------------------------------------------------------
@@ -77,13 +87,30 @@ class CGQC_GU_OverviewPanel
 		if (m_wNextCriteria)
 			m_wNextCriteria.SetTextWrapping(true);
 
+		// OUVRIR MON DOSSIER, with CALENDRIER beside it (owner decision 3, Phase 2e).
 		Widget dossierSlot = m_wRoot.FindAnyWidget("DossierSlot");
 		if (dossierSlot)
 		{
-			m_DossierButton = CGQC_GU_Button.Create(dossierSlot, "OUVRIR MON DOSSIER", CGQC_GU_EButtonKind.PRIMARY);
+			Widget buttons = CGQC_GU_W.HBox(dossierSlot);
+			m_DossierButton = CGQC_GU_Button.Create(buttons, "OUVRIR MON DOSSIER", CGQC_GU_EButtonKind.PRIMARY);
 			if (m_DossierButton)
+			{
 				m_DossierButton.GetOnActivated().Insert(OnOpenDossier);
+				LayoutSlot.SetSizeMode(m_DossierButton.GetRootWidget(), LayoutSizeMode.Fill);
+				LayoutSlot.SetFillWeight(m_DossierButton.GetRootWidget(), 1);
+			}
+
+			m_CalendarButton = CGQC_GU_Button.Create(buttons, "CALENDRIER", CGQC_GU_EButtonKind.PLAIN);
+			if (m_CalendarButton)
+			{
+				m_CalendarButton.SetDark();
+				m_CalendarButton.GetOnActivated().Insert(OnOpenCalendar);
+				LayoutSlot.SetPadding(m_CalendarButton.GetRootWidget(), 10, 0, 0, 0);
+			}
 		}
+
+		BuildNextEvent();
+		BuildNoticeEditor();
 
 		ApplyLightState();
 		CGQC_GU_Client.GetOnLightState().Insert(ApplyLightState);
@@ -94,6 +121,7 @@ class CGQC_GU_OverviewPanel
 	//------------------------------------------------------------------------------------------------
 	void Destroy()
 	{
+		GetGame().GetCallqueue().Remove(RefreshNotice);
 		CGQC_GU_Client.GetOnLightState().Remove(ApplyLightState);
 		CGQC_GU_Client.GetOnReply().Remove(OnReply);
 		if (m_DossierButton)
@@ -101,6 +129,20 @@ class CGQC_GU_OverviewPanel
 			m_DossierButton.Destroy();
 			m_DossierButton = null;
 		}
+
+		if (m_CalendarButton)
+		{
+			m_CalendarButton.Destroy();
+			m_CalendarButton = null;
+		}
+
+		if (m_NoticeEdit)
+		{
+			m_NoticeEdit.Destroy();
+			m_NoticeEdit = null;
+		}
+
+		ClearNoticeButtons();
 
 		if (m_wRoot)
 		{
@@ -116,6 +158,135 @@ class CGQC_GU_OverviewPanel
 	}
 
 	//------------------------------------------------------------------------------------------------
+	protected void OnOpenCalendar()
+	{
+		CGQC_GU_Ui.Open(new CGQC_GU_CalendarScreen());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! « PROCHAIN AU CALENDRIER » panel, put at the top of the right column (spec §4). Hidden when empty.
+	protected void BuildNextEvent()
+	{
+		Widget right = m_wRoot.FindAnyWidget("Right");
+		if (!right)
+			return;
+
+		m_wNextEvent = CGQC_GU_W.DarkPanel(right, CGQC_GU_Style.DarkPanel(), 22, 16);
+		if (!m_wNextEvent)
+			return;
+
+		Widget panel = m_wNextEvent.GetParent();
+		LayoutSlot.SetPadding(panel, 0, 0, 0, 10);
+
+		// First in the column: renumber the others after it.
+		array<ref Widget> children = {};
+		SCR_WidgetHelper.GetAllChildren(right, children);
+		int order = 1;
+		foreach (Widget w : children)
+		{
+			if (w == panel)
+				continue;
+
+			w.SetZOrder(order);
+			order++;
+		}
+
+		panel.SetZOrder(0);
+		CGQC_GU_W.Text(m_wNextEvent, "PROCHAIN AU CALENDRIER", CGQC_GU_Style.FONT_TITLE, 13, CGQC_GU_Style.DarkMuted());
+		m_wNextEventText = CGQC_GU_W.Text(m_wNextEvent, string.Empty, CGQC_GU_Style.FONT_LABEL, 19, CGQC_GU_Style.DarkText(), true);
+		panel.SetVisible(false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void SetNextEvent(string text)
+	{
+		if (!m_wNextEvent)
+			return;
+
+		if (m_wNextEventText)
+			m_wNextEventText.SetText(text);
+
+		m_wNextEvent.GetParent().SetVisible(!text.IsEmpty());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Notice edit button and inline editor (owner decision 5): next to the notice, for notice.edit only.
+	protected void BuildNoticeEditor()
+	{
+		Widget row = m_wRoot.FindAnyWidget("NoticeRow");
+		if (!row)
+			return;
+
+		m_NoticeEdit = CGQC_GU_Button.Create(row, "MODIFIER", CGQC_GU_EButtonKind.PLAIN);
+		if (m_NoticeEdit)
+		{
+			m_NoticeEdit.SetDark();
+			m_NoticeEdit.SetCompact();
+			LayoutSlot.SetPadding(m_NoticeEdit.GetRootWidget(), 16, 0, 0, 0);
+			LayoutSlot.SetVerticalAlign(m_NoticeEdit.GetRootWidget(), LayoutVerticalAlign.Center);
+			m_NoticeEdit.GetOnActivated().Insert(OnNoticeEdit);
+		}
+
+		m_wNoticeEditor = CGQC_GU_W.HBox(row);
+		if (m_wNoticeEditor)
+		{
+			LayoutSlot.SetSizeMode(m_wNoticeEditor, LayoutSizeMode.Fill);
+			LayoutSlot.SetFillWeight(m_wNoticeEditor, 1);
+			LayoutSlot.SetVerticalAlign(m_wNoticeEditor, LayoutVerticalAlign.Center);
+			m_wNoticeEditor.SetVisible(false);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ClearNoticeButtons()
+	{
+		foreach (CGQC_GU_Button b : m_aNoticeButtons)
+		{
+			b.Destroy();
+		}
+
+		m_aNoticeButtons.Clear();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void OnNoticeEdit()
+	{
+		m_bEditingNotice = true;
+		GetGame().GetCallqueue().CallLater(RefreshNotice, 0, false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void OnNoticeCancel()
+	{
+		m_bEditingNotice = false;
+		GetGame().GetCallqueue().CallLater(RefreshNotice, 0, false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void OnNoticeSave()
+	{
+		string text;
+		if (m_wNoticeField)
+			text = m_wNoticeField.GetText();
+
+		SendNotice(text);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void OnNoticeClear()
+	{
+		SendNotice(string.Empty);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void SendNotice(string text)
+	{
+		CGQC_GU_Payload p = new CGQC_GU_Payload();
+		p.Set("text", text);
+		m_iNoticeReq = CGQC_GU_Client.RequestWith(CGQC_GU_Requests.NOTICE_SET, p);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Live values pushed by the server (phase, status, notice, players online).
 	protected void ApplyLightState()
 	{
@@ -127,23 +298,95 @@ class CGQC_GU_OverviewPanel
 			m_wOnline.SetText(string.Format("%1 en ligne", s.m_iOnline));
 
 		SetNotice(s.m_sNotice);
+
+		// A calendar change also re-sends the light state: read the panel again for the next event.
+		m_iRequestId = CGQC_GU_Client.Request(CGQC_GU_Requests.OVERVIEW);
 	}
 
 	//------------------------------------------------------------------------------------------------
 	protected void SetNotice(string text)
 	{
-		if (m_wNotice)
-			m_wNotice.SetText(text);
+		m_sNotice = text;
+		RefreshNotice();
+	}
 
-		// No notice: the bar is not shown at all.
+	//------------------------------------------------------------------------------------------------
+	//! Notice bar: hidden when empty, except for editors, who always see it with MODIFIER.
+	protected void RefreshNotice()
+	{
+		if (!m_wRoot)
+			return;
+
+		bool canEdit = CGQC_GU_Client.GetLightState().Can(CGQC_GU_LightState.CAN_NOTICE);
+		if (!canEdit)
+			m_bEditingNotice = false;
+
+		if (m_wNotice)
+		{
+			m_wNotice.SetText(m_sNotice);
+			m_wNotice.SetVisible(!m_bEditingNotice);
+		}
+
 		if (m_wNoticeBar)
-			m_wNoticeBar.SetVisible(!text.IsEmpty());
+			m_wNoticeBar.SetVisible(!m_sNotice.IsEmpty() || canEdit);
+
+		if (m_NoticeEdit && m_NoticeEdit.GetRootWidget())
+			m_NoticeEdit.GetRootWidget().SetVisible(canEdit && !m_bEditingNotice);
+
+		if (!m_wNoticeEditor)
+			return;
+
+		// Already in the right state: keep what is being typed.
+		if (m_bEditingNotice == (m_wNoticeField != null))
+			return;
+
+		ClearNoticeButtons();
+		CGQC_GU_W.Clear(m_wNoticeEditor);
+		m_wNoticeField = null;
+		m_wNoticeEditor.SetVisible(m_bEditingNotice);
+		if (!m_bEditingNotice)
+			return;
+
+		m_wNoticeField = CGQC_GU_W.Field(m_wNoticeEditor, m_sNotice, 620);
+		NoticeButton("ENREGISTRER", true, CGQC_GU_EButtonKind.PRIMARY).GetOnActivated().Insert(OnNoticeSave);
+		NoticeButton("EFFACER", true, CGQC_GU_EButtonKind.PLAIN).GetOnActivated().Insert(OnNoticeClear);
+		NoticeButton("ANNULER", false, CGQC_GU_EButtonKind.PLAIN).GetOnActivated().Insert(OnNoticeCancel);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected CGQC_GU_Button NoticeButton(string text, bool confirm, CGQC_GU_EButtonKind kind)
+	{
+		CGQC_GU_Button b = CGQC_GU_Button.Create(m_wNoticeEditor, text, kind, confirm);
+		m_aNoticeButtons.Insert(b);
+		if (kind == CGQC_GU_EButtonKind.PLAIN)
+			b.SetDark();
+
+		b.SetCompact();
+		b.SetConfirmText("CONFIRMER");
+		LayoutSlot.SetPadding(b.GetRootWidget(), 10, 0, 0, 0);
+		LayoutSlot.SetVerticalAlign(b.GetRootWidget(), LayoutVerticalAlign.Center);
+		return b;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	protected void OnReply(int requestId, bool ok, string code, string payload)
 	{
-		if (requestId != m_iRequestId || !m_wRoot)
+		if (!m_wRoot)
+			return;
+
+		// Notice saved or cleared: the light state brings the new text; leave the editor.
+		if (requestId == m_iNoticeReq)
+		{
+			if (ok)
+			{
+				m_bEditingNotice = false;
+				GetGame().GetCallqueue().CallLater(RefreshNotice, 0, false);
+			}
+
+			return;
+		}
+
+		if (requestId != m_iRequestId)
 			return;
 
 		if (!ok)
@@ -168,6 +411,7 @@ class CGQC_GU_OverviewPanel
 		if (m_wNextPanel)
 			m_wNextPanel.SetVisible(!dto.nextRank.IsEmpty());
 
+		SetNextEvent(dto.nextEvent);
 		if (m_wNextRank) m_wNextRank.SetText(dto.nextRank);
 		if (m_wNextCriteria) m_wNextCriteria.SetText(dto.nextCriteria);
 

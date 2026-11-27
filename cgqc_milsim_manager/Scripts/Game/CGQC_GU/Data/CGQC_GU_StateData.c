@@ -69,3 +69,26 @@ class CGQC_GU_OrbatLive : Managed
 	ref map<string, string> renames = new map<string, string>();
 	ref array<ref CGQC_GU_SeatAssignment> assignments = new array<ref CGQC_GU_SeatAssignment>();
 }
+
+//! A manual calendar event (Phase 2d): basic events only, such as the jour du Souvenir. Operations,
+//! trainings and deployments come from their own files (Phases 3 and 5); anniversaries are computed.
+class CGQC_GU_CalendarEvent : Managed
+{
+	string id;
+	string title;
+	string date;		// AAAA-MM-JJ, Eastern time
+	string time;		// HH:MM HE, "" for all day
+	string note;
+	bool yearly;		// repeats every year on the same month and day
+	string createdBy;
+	string createdAt;
+}
+
+//! state/calendar.json
+class CGQC_GU_Calendar : Managed
+{
+	static const int SCHEMA_VERSION = 1;
+
+	int schemaVersion = SCHEMA_VERSION;
+	ref array<ref CGQC_GU_CalendarEvent> events = new array<ref CGQC_GU_CalendarEvent>();
+}

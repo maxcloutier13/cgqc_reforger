@@ -13,6 +13,18 @@ class CGQC_GU_LightState
 	string m_sUnitStatus;
 	string m_sNotice;
 	int m_iOnline;
+	int m_iFlags;	// what this player's UI may offer; the server checks every action again
+
+	static const int CAN_MENU = 1;		// unit.menu: Gestion d'unité entry
+	static const int CAN_NOTICE = 2;	// notice.edit
+	static const int CAN_PHASE = 4;		// phase.change
+	static const int CAN_CALENDAR = 8;	// calendar.edit
+
+	//------------------------------------------------------------------------------------------------
+	bool Can(int flag)
+	{
+		return (m_iFlags & flag) != 0;
+	}
 }
 
 class CGQC_GU_Client
@@ -68,7 +80,7 @@ class CGQC_GU_Client
 	}
 
 	//------------------------------------------------------------------------------------------------
-	static void OnLightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online)
+	static void OnLightState(int serial, string phase, bool qualification, string unitStatus, string notice, int online, int flags)
 	{
 		s_LightState.m_iSerial = serial;
 		s_LightState.m_sPhase = phase;
@@ -76,7 +88,8 @@ class CGQC_GU_Client
 		s_LightState.m_sUnitStatus = unitStatus;
 		s_LightState.m_sNotice = notice;
 		s_LightState.m_iOnline = online;
-		CGQC_GU_Log.Info(string.Format("État reçu #%1 : phase=%2 qualif=%3 statut=%4 en ligne=%5", serial, phase, qualification, unitStatus, online));
+		s_LightState.m_iFlags = flags;
+		CGQC_GU_Log.Info(string.Format("État reçu #%1 : phase=%2 qualif=%3 statut=%4 en ligne=%5 droits=%6", serial, phase, qualification, unitStatus, online, flags));
 		s_OnLightState.Invoke();
 	}
 }

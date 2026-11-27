@@ -22,6 +22,7 @@ class CGQC_GU_OverviewDto : Managed
 	string notice;
 	string nextRank;		// "Caporal-chef (CplC.)" or ""
 	string nextCriteria;	// "Q-EF en cours · Q-NT à faire · décision des officiers"
+	string nextEvent;		// « PROCHAIN AU CALENDRIER »: "12-02 · 19 h 30 · Jour du Souvenir" (2d)
 	ref array<ref CGQC_GU_NewsLine> news = new array<ref CGQC_GU_NewsLine>();
 }
 
@@ -46,6 +47,7 @@ class CGQC_GU_OverviewBuilder
 
 		NextRank(cat, me, dto);
 		News(mgr, dto);
+		dto.nextEvent = CGQC_GU_CalendarBuilder.NextLine(mgr);
 
 		CGQC_GU_JsonStringSaveContext ctx = new CGQC_GU_JsonStringSaveContext();
 		ctx.WriteValue("o", dto);
@@ -65,25 +67,8 @@ class CGQC_GU_OverviewBuilder
 	//------------------------------------------------------------------------------------------------
 	static string PhaseLabel(CGQC_GU_Situation s)
 	{
-		string phase;
-		switch (s.phase)
-		{
-			case "temps_libre":		phase = "TEMPS LIBRE"; break;
-			case "entrainement":	phase = "ENTRAÎNEMENT"; break;
-			case "briefing":		phase = "BRIEFING"; break;
-			case "operation":		phase = "OPÉRATION"; break;
-			case "aar":				phase = "AAR"; break;
-			default:				phase = s.phase;
-		}
-
-		if (s.phase == "entrainement" && s.qualification)
-			phase += " · QUALIFICATION";
-
-		string status = "GARNISON";
-		if (s.unitStatus == "deploye")
-			status = "DÉPLOYÉ";
-
-		return phase + " · " + status;
+		// A training with the Qualification box ticked reads QUALIFICATION alone (owner, 2026-11-26).
+		return CGQC_GU_SituationBuilder.DisplayPhase(s.phase, s.qualification) + " · " + CGQC_GU_SituationBuilder.UnitStatusName(s.unitStatus);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -267,8 +252,24 @@ class CGQC_GU_OverviewBuilder
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static string NewsText(CGQC_GU_Manager mgr, CGQC_GU_NewsItem item)
+	//! Every news line is composed here, by type (Phase 2f). Unit-level types first; member types need
+	//! the member's dossier. Reserved for later phases: qualification (3), operation and deployment (5),
+	//! distinction (6). Until their text exists here, such items are simply not shown.
+	static string NewsText(CGQC_GU_Manager mgr, CGQC_GU_NewsItem item)
 	{
+		switch (item.type)
+		{
+			case "unit_status":
+			{
+				string status;
+				item.data.Find("status", status);
+				if (status == "deploye")
+					return "L'unité est déployée";
+
+				return "L'unité est de retour en garnison";
+			}
+		}
+
 		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
 		string uid;
 		item.data.Find("uid", uid);

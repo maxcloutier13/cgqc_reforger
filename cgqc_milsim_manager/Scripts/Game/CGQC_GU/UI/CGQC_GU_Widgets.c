@@ -82,6 +82,39 @@ class CGQC_GU_W
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Translucent dark panel for the dark screens (no outline). Returns its inner vertical stack.
+	static Widget DarkPanel(Widget parent, Color color = null, float padX = 28, float padY = 22)
+	{
+		Widget p = Create(CGQC_GU_Style.LAYOUT_PANEL, parent);
+		if (!p)
+			return null;
+
+		// A Color created here must be held by a local: assigning a new one to the parameter
+		// left it null at SetColor (VM exception, 2c test).
+		Color fill = color;
+		if (!fill)
+			fill = CGQC_GU_Style.DarkCard();
+
+		Widget bg = p.FindAnyWidget("Bg");
+		if (bg)
+			bg.SetColor(fill);
+
+		Widget innerStack = p.FindAnyWidget("Inner");
+		if (innerStack)
+			AlignableSlot.SetPadding(innerStack, padX, padY, padX, padY);
+
+		array<string> edges = { "EdgeT", "EdgeB", "EdgeL", "EdgeR" };
+		foreach (string edge : edges)
+		{
+			Widget e = p.FindAnyWidget(edge);
+			if (e)
+				e.SetVisible(false);
+		}
+
+		return p.FindAnyWidget("Inner");
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static TextWidget Text(Widget parent, string text, ResourceName font, int size, Color color, bool wrap = false)
 	{
 		TextWidget t = TextWidget.Cast(Create(CGQC_GU_Style.LAYOUT_TEXT, parent));
@@ -259,6 +292,44 @@ class CGQC_GU_Check : ScriptedWidgetEventHandler
 
 		LayoutSlot.SetHorizontalAlign(root, LayoutHorizontalAlign.Left);
 		root.AddHandler(this);
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Checkbox on a dark screen (mockup: light square, blue tick, light label).
+	void SetDark(int fontSize = 17)
+	{
+		if (!m_wRoot)
+			return;
+
+		Widget outer = m_wRoot.FindAnyWidget("Outer");
+		if (outer)
+			outer.SetColor(CGQC_GU_Style.DarkSoft());
+
+		Widget inner = m_wRoot.FindAnyWidget("Inner");
+		if (inner)
+			inner.SetColor(CGQC_GU_Style.DarkButton());
+
+		if (m_wTick)
+			m_wTick.SetColor(CGQC_GU_Style.BlueLight());
+
+		if (m_wLabel)
+		{
+			m_wLabel.SetColor(CGQC_GU_Style.DarkText());
+			m_wLabel.SetExactFontSize(fontSize);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	Widget GetRootWidget()
+	{
+		return m_wRoot;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	void SetChecked(bool checked)
+	{
+		m_bChecked = checked;
 		Refresh();
 	}
 

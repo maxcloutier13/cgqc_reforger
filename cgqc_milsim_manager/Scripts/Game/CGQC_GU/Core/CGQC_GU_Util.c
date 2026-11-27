@@ -66,6 +66,111 @@ class CGQC_GU_Time
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! 0 = Sunday … 6 = Saturday (Sakamoto).
+	static int DayOfWeek(int y, int m, int d)
+	{
+		array<int> t = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
+		if (m < 3)
+			y--;
+
+		return (y + y / 4 - y / 100 + y / 400 + t[m - 1] + d) % 7;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static bool IsLeapYear(int y)
+	{
+		return (y % 4 == 0 && y % 100 != 0) || y % 400 == 0;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static int DaysInMonth(int y, int m)
+	{
+		if (m == 2)
+		{
+			if (IsLeapYear(y))
+				return 29;
+
+			return 28;
+		}
+
+		if (m == 4 || m == 6 || m == 9 || m == 11)
+			return 30;
+
+		return 31;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Day of the month of the n-th Sunday (n >= 1).
+	static int NthSunday(int y, int m, int n)
+	{
+		int first = 1 + (7 - DayOfWeek(y, m, 1)) % 7;
+		return first + 7 * (n - 1);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Eastern time (HE, America/Toronto): UTC−4 from the 2nd Sunday of March 02:00 local (07:00 UTC)
+	//! to the 1st Sunday of November 02:00 local (06:00 UTC), UTC−5 otherwise.
+	static int EasternOffsetHours(int y, int m, int d, int h)
+	{
+		int key = (m * 32 + d) * 24 + h;
+		int start = (3 * 32 + NthSunday(y, 3, 2)) * 24 + 7;
+		int end = (11 * 32 + NthSunday(y, 11, 1)) * 24 + 6;
+		if (key >= start && key < end)
+			return 4;
+
+		return 5;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! "2026-11-28T01:30:00Z" (UTC) -> date "2026-11-27" and time "20:30" in Eastern time. False if unreadable.
+	static bool ToEastern(string iso, out string date, out string hhmm)
+	{
+		if (iso.Length() < 16)
+		{
+			date = iso;
+			hhmm = string.Empty;
+			return false;
+		}
+
+		int y = iso.Substring(0, 4).ToInt();
+		int mo = iso.Substring(5, 2).ToInt();
+		int d = iso.Substring(8, 2).ToInt();
+		int h = iso.Substring(11, 2).ToInt();
+		int mi = iso.Substring(14, 2).ToInt();
+
+		h -= EasternOffsetHours(y, mo, d, h);
+		if (h < 0)
+		{
+			h += 24;
+			d--;
+			if (d < 1)
+			{
+				mo--;
+				if (mo < 1)
+				{
+					mo = 12;
+					y--;
+				}
+
+				d = DaysInMonth(y, mo);
+			}
+		}
+
+		date = string.Format("%1-%2-%3", y, Pad2(mo), Pad2(d));
+		hhmm = Pad2(h) + ":" + Pad2(mi);
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Today's date in Eastern time (AAAA-MM-JJ).
+	static string TodayEastern()
+	{
+		string date, hhmm;
+		ToEastern(NowUtc(), date, hhmm);
+		return date;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! ISO 8601 timestamp, UTC: 2026-11-28T01:00:00Z
 	static string NowUtc()
 	{

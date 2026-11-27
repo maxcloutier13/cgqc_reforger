@@ -130,7 +130,7 @@ class CGQC_GU_DefaultCatalogues
 	static void AccessGroups(array<ref CGQC_GU_AccessGroup> groups)
 	{
 		groups.Insert(Group("commandement", "Commandement", 100, { "*" }));
-		groups.Insert(Group("zeus", "Zeus", 80, { "unit.menu", "operations.manage", "deployments.manage", "phase.change", "orbat.assign" }));
+		groups.Insert(Group("zeus", "Zeus", 80, { "unit.menu", "operations.manage", "deployments.manage", "phase.change", "orbat.assign", "notice.edit", "calendar.edit" }));
 		groups.Insert(Group("instructeur", "Instructeur", 40, { "sessions.create", "quals.evaluate_own" }));
 		groups.Insert(Group("membre", "Membre", 0, new array<string>()));
 	}

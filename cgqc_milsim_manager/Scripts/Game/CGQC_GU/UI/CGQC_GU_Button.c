@@ -24,6 +24,7 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	protected bool m_bConfirm;
 	protected bool m_bArmed;
 	protected bool m_bEnabled = true;
+	protected bool m_bDark;
 
 	// Only one confirm button may be armed at a time: arming another one disarms the previous.
 	protected static CGQC_GU_Button s_Armed;
@@ -114,6 +115,21 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Plain button on a dark screen: translucent dark fill, light outline and label.
+	void SetDark()
+	{
+		m_bDark = true;
+		if (m_wLabel)
+		{
+			// Mockup: 46 px tall entries, 17 px label.
+			m_wLabel.SetExactFontSize(17);
+			AlignableSlot.SetPadding(m_wLabel, 18, 13, 18, 13);
+		}
+
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Selected tab / current choice: drawn in CGQC blue.
 	void SetSelected(bool selected)
 	{
@@ -194,6 +210,12 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 			bg = CGQC_GU_Style.ConfirmRed();
 			fg = CGQC_GU_Style.PaperText();
 		}
+		else if (m_bDark && m_bSelected)
+		{
+			// Mockup: the active entry is #5B82E0 with dark text.
+			bg = CGQC_GU_Style.BlueLight();
+			fg = CGQC_GU_Style.DarkOnBlue();
+		}
 		else if (m_bSelected || m_eKind == CGQC_GU_EButtonKind.PRIMARY)
 		{
 			bg = CGQC_GU_Style.Blue();
@@ -203,6 +225,14 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 		{
 			bg = CGQC_GU_Style.Red();
 			fg = CGQC_GU_Style.White();
+		}
+		else if (m_bDark)
+		{
+			// Mockup: solid #3A3E40, no outline.
+			bg = CGQC_GU_Style.DarkButton();
+			fg = CGQC_GU_Style.DarkText();
+			if (m_bTextColor)
+				fg = m_TextColor;
 		}
 		else
 		{

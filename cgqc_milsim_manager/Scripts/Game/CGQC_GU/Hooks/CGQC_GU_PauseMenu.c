@@ -4,6 +4,7 @@
 modded class PauseMenuUI
 {
 	protected ref CGQC_GU_OverviewPanel m_CGQC_GU_Overview;
+	protected SCR_ButtonTextComponent m_CGQC_GU_MenuButton;
 
 	protected static const ResourceName CGQC_GU_PAUSE_BUTTON = "{9ECCD201BCF07E95}UI/layouts/Menus/PauseMenu/PauseMenuButton.layout";
 	protected static const float CGQC_GU_LOGO_SIZE = 150;	// source is 128 px; kept close to native to stay sharp
@@ -18,11 +19,39 @@ modded class PauseMenuUI
 
 		m_CGQC_GU_Overview = new CGQC_GU_OverviewPanel();
 		m_CGQC_GU_Overview.Create(m_wRoot);
+
+		// « Gestion d'unité » under « Continuer », for unit.menu holders only (Zeus, Commandement).
+		// It is not the game's Game Master entry, which stays untouched.
+		m_CGQC_GU_MenuButton = CGQC_GU_AddButtonAfter("Continue", "Gestion d'unité");
+		if (m_CGQC_GU_MenuButton)
+		{
+			m_CGQC_GU_MenuButton.m_OnClicked.Insert(CGQC_GU_OnUnitMenu);
+			CGQC_GU_ApplyMenuRight();
+			CGQC_GU_Client.GetOnLightState().Insert(CGQC_GU_ApplyMenuRight);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void CGQC_GU_ApplyMenuRight()
+	{
+		if (!m_CGQC_GU_MenuButton || !m_CGQC_GU_MenuButton.GetRootWidget())
+			return;
+
+		m_CGQC_GU_MenuButton.GetRootWidget().SetVisible(CGQC_GU_Client.GetLightState().Can(CGQC_GU_LightState.CAN_MENU));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void CGQC_GU_OnUnitMenu()
+	{
+		CGQC_GU_Ui.OpenUnitMenu();
 	}
 
 	//------------------------------------------------------------------------------------------------
 	override protected void OnMenuClose()
 	{
+		CGQC_GU_Client.GetOnLightState().Remove(CGQC_GU_ApplyMenuRight);
+		m_CGQC_GU_MenuButton = null;
+
 		if (m_CGQC_GU_Overview)
 		{
 			m_CGQC_GU_Overview.Destroy();
