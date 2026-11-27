@@ -1,5 +1,6 @@
-// Gestion d'unité - Dossier → Qualifications, Séances / FTX and Insignes (paper), Phase 3d, after the
-// approved mockup (Dossier-Qualifs, Dossier-Seances, Dossier-Insignes). Read-only: everything shown comes
+// Gestion d'unité - Dossier → Qualifications and Séances / FTX (paper), Phase 3d, after the approved
+// mockup (Dossier-Qualifs, Dossier-Seances, Dossier-Insignes). The badges are on the Qualifications page,
+// above the tables, and the whole page scrolls (owner, 3f test). Read-only: everything shown comes
 // from the server's "dossier" reply. The tabs draw into the body region of the Dossier screen.
 
 class CGQC_GU_DossierTabs
@@ -69,7 +70,13 @@ class CGQC_GU_DossierTabs
 			return;
 
 		m_Screen.Section(list, "QUALIFICATIONS");
+		Badges(list, dto);
+
 		array<float> widths = { 120, 0, 130, 150, 100, 200 };
+		Widget gap = CGQC_GU_W.Rule(list, 24, 12);
+		if (gap)
+			gap.SetOpacity(0.5);
+
 		CGQC_GU_Table.Head(m_Region, list, { "CODE", "QUALIFICATION", "NIVEAU", "RÉSULTAT", "DATE", "ÉVALUÉ PAR" }, widths);
 		foreach (CGQC_GU_DossierQualLine q : dto.quals)
 		{
@@ -196,12 +203,10 @@ class CGQC_GU_DossierTabs
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// Insignes
+	// Insignes (top of the Qualifications page)
 	//------------------------------------------------------------------------------------------------
-	void BuildBadges(Widget body, CGQC_GU_DossierDto dto)
+	protected void Badges(Widget body, CGQC_GU_DossierDto dto)
 	{
-		m_Screen.Section(body, "INSIGNES");
-
 		Widget legend = CGQC_GU_W.HBox(body);
 		if (legend)
 		{
@@ -243,19 +248,12 @@ class CGQC_GU_DossierTabs
 
 		BadgeDetail(body, chosen);
 
-		// The two buttons stay at the bottom of the page.
-		Widget spacer = CGQC_GU_W.VBox(body);
-		if (spacer)
-			LayoutSlot.SetSizeMode(spacer, LayoutSizeMode.Fill);
-
 		Widget buttons = CGQC_GU_W.HBox(body);
 		if (!buttons)
 			return;
 
-		// The Progression screen comes with step 3e.
-		CGQC_GU_Button progress = m_Screen.Btn(m_Region, buttons, "VOIR LA PROGRESSION", "", "", false, CGQC_GU_EButtonKind.PRIMARY);
-		if (progress)
-			progress.SetEnabled(false);
+		LayoutSlot.SetPadding(buttons, 0, 12, 0, 0);
+		m_Screen.Btn(m_Region, buttons, "VOIR LA PROGRESSION", "badge.progress", chosen.code, false, CGQC_GU_EButtonKind.PRIMARY);
 
 		CGQC_GU_Button qual = m_Screen.Btn(m_Region, buttons, "VOIR LA QUALIFICATION", "badge.qual", chosen.code);
 		if (qual)
@@ -287,7 +285,7 @@ class CGQC_GU_DossierTabs
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static string StateLabel(string state)
+	static string StateLabel(string state)
 	{
 		if (state == CGQC_GU_Quals.STATE_OBTAINED)
 			return "OBTENU";

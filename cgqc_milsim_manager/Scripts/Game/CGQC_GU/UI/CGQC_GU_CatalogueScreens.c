@@ -640,7 +640,8 @@ class CGQC_GU_QualCatalogueScreen : CGQC_GU_CatalogueScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Who may teach it, with the online dot and the students evaluated.
+	//! Who may teach it, with the online dot. Sent by the server with the most students evaluated first;
+	//! the count itself is not shown (owner, 3e test).
 	protected void BuildInstructors(Widget d, CGQC_GU_QualDto q)
 	{
 		Section(d, string.Format("INSTRUCTEURS QUALIFIÉS · %1", q.instructors.Count()));
@@ -687,17 +688,6 @@ class CGQC_GU_QualCatalogueScreen : CGQC_GU_CatalogueScreen
 			LayoutSlot.SetPadding(d, 0, 0, 8, 0);
 
 		CGQC_GU_W.Text(line, chip.name, CGQC_GU_Style.FONT_TITLE, 15, CGQC_GU_Style.Ink());
-
-		string students = string.Format("%1 élèves", chip.students);
-		if (chip.students == 1)
-			students = "1 élève";
-
-		TextWidget t = CGQC_GU_W.Text(line, students, CGQC_GU_Style.FONT_LABEL, 13, CGQC_GU_Style.InkMuted());
-		if (t)
-		{
-			LayoutSlot.SetPadding(t, 8, 0, 0, 0);
-			LayoutSlot.SetVerticalAlign(t, LayoutVerticalAlign.Center);
-		}
 	}
 }
 

@@ -73,7 +73,7 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	protected EditBoxWidget m_wSearch;
 	protected EditBoxWidget m_wLastName;
 	protected EditBoxWidget m_wDiscord;
-	protected EditBoxWidget m_wEnlisted;
+	protected CGQC_GU_DateField m_Enlisted;
 	protected EditBoxWidget m_wLinkUid;
 
 	//------------------------------------------------------------------------------------------------
@@ -427,7 +427,7 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	{
 		if (m_wLastName) m_sCreateLastName = m_wLastName.GetText();
 		if (m_wDiscord) m_sCreateDiscord = m_wDiscord.GetText();
-		if (m_wEnlisted) m_sCreateEnlisted = m_wEnlisted.GetText();
+		if (m_Enlisted) m_sCreateEnlisted = m_Enlisted.GetValue();
 		if (m_wLinkUid) m_sLinkUid = m_wLinkUid.GetText();
 	}
 
@@ -525,7 +525,7 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		m_Panel.Reset();
 		m_wLastName = null;
 		m_wDiscord = null;
-		m_wEnlisted = null;
+		m_Enlisted = null;
 		m_wLinkUid = null;
 
 		if (!m_Panel.m_wRoot || m_iPanel == PANEL_NONE || !m_aMembers)
@@ -591,8 +591,8 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 			Widget d = CGQC_GU_W.VBox(row);
 			if (d)
 				LayoutSlot.SetPadding(d, 20, 0, 0, 0);
-			CGQC_GU_W.Caption(d, "ENRÔLÉ LE (AAAA-MM-JJ)");
-			m_wEnlisted = CGQC_GU_W.Field(d, m_sCreateEnlisted, 200);
+			CGQC_GU_W.Caption(d, "ENRÔLÉ LE");
+			m_Enlisted = CGQC_GU_DateField.Create(m_Panel, d, m_sCreateEnlisted, true);
 		}
 
 		CGQC_GU_W.Caption(panel, "GRADE", 14);

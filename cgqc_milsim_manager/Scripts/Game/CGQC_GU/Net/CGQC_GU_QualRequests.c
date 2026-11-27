@@ -397,7 +397,7 @@ class CGQC_GU_QualRequests
 		if (!mgr.m_Catalogues.FindQualification(qual))
 			return "bad_qual";
 
-		if (m == caller)
+		if (m == caller && !CGQC_GU_Quals.IsCommand(caller))
 			return "self_evaluation";
 
 		if (!CGQC_GU_Quals.CanEvaluate(mgr, caller, m, qual))

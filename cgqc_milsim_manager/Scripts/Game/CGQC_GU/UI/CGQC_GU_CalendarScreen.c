@@ -112,7 +112,7 @@ class CGQC_GU_CalendarScreen : CGQC_GU_DarkScreen
 	protected string m_sSelected;		// AAAA-MM-JJ
 	protected bool m_bForm;				// « AJOUTER UN ÉVÉNEMENT » form open
 	protected EditBoxWidget m_wTitle;
-	protected EditBoxWidget m_wDate;
+	protected CGQC_GU_DateField m_Date;
 	protected EditBoxWidget m_wTime;
 	protected MultilineEditBoxWidget m_wNote;
 	protected CGQC_GU_Check m_Yearly;
@@ -228,7 +228,7 @@ class CGQC_GU_CalendarScreen : CGQC_GU_DarkScreen
 			{
 				CGQC_GU_Payload p = new CGQC_GU_Payload();
 				if (m_wTitle) p.Set("title", m_wTitle.GetText());
-				if (m_wDate) p.Set("date", m_wDate.GetText());
+				if (m_Date) p.Set("date", m_Date.GetValue());
 				if (m_wTime) p.Set("time", m_wTime.GetText());
 				if (m_wNote) p.Set("note", m_wNote.GetText());
 				if (m_Yearly && m_Yearly.IsChecked())
@@ -262,7 +262,7 @@ class CGQC_GU_CalendarScreen : CGQC_GU_DarkScreen
 		m_aCells.Clear();
 		m_Body.Reset();
 		m_wTitle = null;
-		m_wDate = null;
+		m_Date = null;
 		m_wTime = null;
 		m_wNote = null;
 		m_Yearly = null;
@@ -715,7 +715,7 @@ class CGQC_GU_CalendarScreen : CGQC_GU_DarkScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! « AJOUTER UN ÉVÉNEMENT »: title, date (AAAA-MM-JJ), time HE (optional), note, every year.
+	//! « AJOUTER UN ÉVÉNEMENT »: title, date (calendar), time HE (optional), note, every year.
 	protected void BuildForm(Widget aside)
 	{
 		Caption(aside, "AJOUTER UN ÉVÉNEMENT");
@@ -724,8 +724,8 @@ class CGQC_GU_CalendarScreen : CGQC_GU_DarkScreen
 		FormLabel(aside, "TITRE");
 		m_wTitle = CGQC_GU_W.Field(aside, string.Empty, width);
 
-		FormLabel(aside, "DATE (AAAA-MM-JJ)");
-		m_wDate = CGQC_GU_W.Field(aside, m_sSelected, 160);
+		FormLabel(aside, "DATE");
+		m_Date = CGQC_GU_DateField.Create(m_Body, aside, m_sSelected, false, true);
 
 		FormLabel(aside, "HEURE HE (HH:MM, FACULTATIVE)");
 		m_wTime = CGQC_GU_W.Field(aside, string.Empty, 100);

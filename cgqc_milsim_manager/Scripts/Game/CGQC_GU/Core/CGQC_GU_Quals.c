@@ -14,6 +14,7 @@ class CGQC_GU_Quals
 	static const string STATE_TODO = "a_venir";
 
 	static const string INSTRUCTOR_GROUP = "instructeur";
+	static const string COMMAND_GROUP = "commandement";
 
 	//------------------------------------------------------------------------------------------------
 	// Reads on one member
@@ -91,11 +92,21 @@ class CGQC_GU_Quals
 	//------------------------------------------------------------------------------------------------
 	// Rights
 	//------------------------------------------------------------------------------------------------
+	//! The Commandement access group: the only one that may evaluate itself (owner, 3e test).
+	static bool IsCommand(CGQC_GU_Member m)
+	{
+		return m && m.accessGroups.Contains(COMMAND_GROUP);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Commandement (instructors.manage) evaluates every qualification; an instructor only those they are
-	//! authorized for. Nobody evaluates themselves (owner answer 2).
+	//! authorized for. Nobody but Commandement evaluates themselves.
 	static bool CanEvaluate(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Member target, string qual)
 	{
-		if (!caller || !target || caller == target)
+		if (!caller || !target)
+			return false;
+
+		if (caller == target && !IsCommand(caller))
 			return false;
 
 		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
@@ -130,7 +141,12 @@ class CGQC_GU_Quals
 
 		foreach (string id, CGQC_GU_Training t : mgr.m_mTrainings)
 		{
-			if (t.status == CGQC_GU_Training.STATUS_PLANNED && t.qual == qual && t.FindRow(m.uid))
+			if (t.status != CGQC_GU_Training.STATUS_PLANNED || t.qual != qual)
+				continue;
+
+			// Assistants are on the list to help, not to take the qualification.
+			CGQC_GU_AttendanceRow row = t.FindRow(m.uid);
+			if (row && !CGQC_GU_TrainingRequests.IsInstructorPosition(row.position))
 				return STATE_RUNNING;
 		}
 
@@ -252,7 +268,8 @@ class CGQC_GU_Quals
 			e.data.Set("sessionId", sessionId);
 
 		CGQC_GU_Member ev = mgr.FindMember(evaluator);
-		if (ev)
+		// One's own evaluation is not a student.
+		if (ev && ev != m)
 		{
 			ev.stats.studentsEvaluated++;
 			mgr.SaveMemberNow(ev);
@@ -421,7 +438,7 @@ class CGQC_GU_Quals
 		{
 			foreach (CGQC_GU_QualResult r : m.qualifications)
 			{
-				if (r.evaluator == instructorUid && r.qual == qual)
+				if (r.evaluator == instructorUid && r.qual == qual && uid != instructorUid)
 					n++;
 			}
 		}

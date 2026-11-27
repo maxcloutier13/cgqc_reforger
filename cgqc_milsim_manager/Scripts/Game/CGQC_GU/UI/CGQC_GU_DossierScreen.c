@@ -35,10 +35,17 @@ class CGQC_GU_Region
 	ref array<ref CGQC_GU_Check> m_aChecks = new array<ref CGQC_GU_Check>();
 	ref array<ref CGQC_GU_ClickRow> m_aRows = new array<ref CGQC_GU_ClickRow>();
 	ref array<ref Managed> m_aKeep = new array<ref Managed>();
+	ref array<ref CGQC_GU_DateField> m_aDates = new array<ref CGQC_GU_DateField>();
 
 	//------------------------------------------------------------------------------------------------
 	void Reset()
 	{
+		foreach (CGQC_GU_DateField date : m_aDates)
+		{
+			date.Destroy();
+		}
+
+		m_aDates.Clear();
 		foreach (CGQC_GU_Button b : m_aButtons)
 		{
 			b.Destroy();
@@ -93,16 +100,17 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected ref CGQC_GU_Region m_Selector = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_Body = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_MemberList = new CGQC_GU_Region();
-	protected ref CGQC_GU_DossierTabs m_Tabs;	// Qualifications, Séances / FTX, Insignes
+	protected ref CGQC_GU_DossierTabs m_Tabs;	// Qualifications, Séances / FTX
+	protected ref CGQC_GU_ProgressTabs m_Progress;	// Progression, Instructeur
 	protected TextWidget m_wMessage;
 	protected ref CGQC_GU_FieldWatch m_SearchWatch;
 
 	// Edit fields of the open forms
-	protected EditBoxWidget m_wBirthDate;
+	protected CGQC_GU_DateField m_BirthDate;
 	protected EditBoxWidget m_wBirthPlace;
 	protected EditBoxWidget m_wBloodType;
 	protected MultilineEditBoxWidget m_wBio;
-	protected EditBoxWidget m_wRecordDate;
+	protected CGQC_GU_DateField m_RecordDate;
 	protected EditBoxWidget m_wRecordNote;
 	protected EditBoxWidget m_wDisplayName;
 	protected EditBoxWidget m_wLastName;
@@ -159,7 +167,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			}
 		}
 
-		m_Tabs = new CGQC_GU_DossierTabs(this, m_Body);	// Qualifications, Séances / FTX, Insignes
+		m_Tabs = new CGQC_GU_DossierTabs(this, m_Body);	// Qualifications, Séances / FTX
+		m_Progress = new CGQC_GU_ProgressTabs(this, m_Body);
 		CGQC_GU_Client.GetOnReply().Insert(OnReply);
 		RequestDossier();
 	}
@@ -188,7 +197,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	override void OnRailSelected(CGQC_GU_ERailTab tab)
 	{
 		if (tab != CGQC_GU_ERailTab.REGISTRY && tab != CGQC_GU_ERailTab.GRADE && tab != CGQC_GU_ERailTab.QUALS
-			&& tab != CGQC_GU_ERailTab.SESSIONS && tab != CGQC_GU_ERailTab.BADGES)
+			&& tab != CGQC_GU_ERailTab.SESSIONS
+			&& tab != CGQC_GU_ERailTab.PROGRESSION && tab != CGQC_GU_ERailTab.INSTRUCTOR)
 		{
 			super.OnRailSelected(tab);
 			return;
@@ -214,14 +224,14 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected void Write(string action, CGQC_GU_Payload p)
+	void Write(string action, CGQC_GU_Payload p)
 	{
 		SetMessage("", false);
 		m_iWriteReq = CGQC_GU_Client.RequestWith(action, p);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected CGQC_GU_Payload ForThisMember()
+	CGQC_GU_Payload ForThisMember()
 	{
 		CGQC_GU_Payload p = new CGQC_GU_Payload();
 		p.Set("uid", m_Dto.uid);
@@ -325,6 +335,17 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			case "bad_phase":		return "Phase inconnue.";
 			case "bad_title":		return "Titre vide ou trop long.";
 			case "bad_time":		return "Heure invalide (HH:MM).";
+			case "bad_qual":		return "Qualification inconnue.";
+			case "bad_result":		return "Résultat invalide.";
+			case "self_evaluation":	return "Vous ne pouvez pas vous évaluer vous-même.";
+			case "already_passed":	return "Qualification déjà obtenue.";
+			case "bad_instructor":	return "Instructeur chef invalide.";
+			case "instructor_not_authorized":	return "L'instructeur chef n'est pas autorisé à enseigner cette qualification.";
+			case "bad_exercise":	return "Exercice invalide pour cette séance.";
+			case "too_many":		return "Trop de membres dans la séance.";
+			case "bad_member":		return "Membre inconnu.";
+			case "already_done":	return "Séance déjà terminée.";
+			case "no_attendance":	return "Aucun membre présent.";
 			case "write_failed":	return "Échec de l'écriture sur le serveur.";
 			case "not_ready":		return "Serveur pas encore prêt.";
 		}
@@ -404,6 +425,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				m_bEditingPersonal = false;
 				m_iRecordPage = 0;
 				m_Tabs.Reset();
+				m_Progress.Reset();
 				m_sUid = value;
 				SetMessage("", false);
 				RequestDossier();
@@ -454,8 +476,13 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				break;
 			}
 
+			case "badge.progress":
+				m_Progress.Choose(value);
+				OnRailSelected(CGQC_GU_ERailTab.PROGRESSION);
+				break;
+
 			default:
-				if (m_Tabs.OnAction(kind, value))
+				if (m_Tabs.OnAction(kind, value) || m_Progress.OnAction(kind, value))
 					BuildBody();
 		}
 	}
@@ -464,7 +491,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected void SavePersonal()
 	{
 		CGQC_GU_Payload p = ForThisMember();
-		if (m_wBirthDate) p.Set("birthDate", m_wBirthDate.GetText());
+		if (m_BirthDate) p.Set("birthDate", m_BirthDate.GetValue());
 		if (m_wBirthPlace) p.Set("birthPlace", m_wBirthPlace.GetText());
 		if (m_wBloodType) p.Set("bloodType", m_wBloodType.GetText());
 		if (m_wBio) p.Set("bio", m_wBio.GetText());
@@ -476,7 +503,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	{
 		CGQC_GU_Payload p = ForThisMember();
 		p.Set("type", m_aManualTypes[m_iManualType]);
-		if (m_wRecordDate) p.Set("on", m_wRecordDate.GetText());
+		if (m_RecordDate) p.Set("on", m_RecordDate.GetValue());
 		if (m_wRecordNote) p.Set("note", m_wRecordNote.GetText());
 		m_iRecordPage = 0;
 		Write(CGQC_GU_Requests.RECORD_ADD, p);
@@ -518,7 +545,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected void BuildFiche()
 	{
 		m_Fiche.Reset();
-		m_wBirthDate = null;
+		m_BirthDate = null;
 		m_wBirthPlace = null;
 		m_wBloodType = null;
 		m_wBio = null;
@@ -727,8 +754,9 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		LayoutSlot.SetPadding(box, 0, 4, 0, 0);
 		float w = FICHE_WIDTH - 36;
 
-		CGQC_GU_W.Caption(box, "DATE DE NAISSANCE (AAAA-MM-JJ)");
-		m_wBirthDate = CGQC_GU_W.Field(box, m_Dto.birthDate, 200);
+		CGQC_GU_W.Caption(box, "DATE DE NAISSANCE");
+		m_BirthDate = CGQC_GU_DateField.Create(m_Fiche, box, m_Dto.birthDate, true, false, true);
+
 		CGQC_GU_W.Caption(box, "LIEU DE NAISSANCE");
 		m_wBirthPlace = CGQC_GU_W.Field(box, m_Dto.birthPlace, w);
 		CGQC_GU_W.Caption(box, "TYPE SANGUIN");
@@ -923,7 +951,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected void BuildBody()
 	{
 		m_Body.Reset();
-		m_wRecordDate = null;
+		m_RecordDate = null;
 		m_wRecordNote = null;
 		m_wDisplayName = null;
 		m_wLastName = null;
@@ -946,8 +974,12 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				m_Tabs.BuildSessions(m_Body.m_wRoot, m_Dto);
 				break;
 
-			case CGQC_GU_ERailTab.BADGES:
-				m_Tabs.BuildBadges(m_Body.m_wRoot, m_Dto);
+			case CGQC_GU_ERailTab.PROGRESSION:
+				m_Progress.BuildProgress(m_Body.m_wRoot, m_Dto);
+				break;
+
+			case CGQC_GU_ERailTab.INSTRUCTOR:
+				m_Progress.BuildInstructor(m_Body.m_wRoot, m_Dto);
 				break;
 
 			default:
@@ -1017,8 +1049,9 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		if (dateCol)
 			LayoutSlot.SetPadding(dateCol, 16, 0, 0, 0);
 
-		CGQC_GU_W.Caption(dateCol, "DATE (AAAA-MM-JJ)");
-		m_wRecordDate = CGQC_GU_W.Field(dateCol, "", 170);
+		CGQC_GU_W.Caption(dateCol, "DATE");
+		m_RecordDate = CGQC_GU_DateField.Create(m_Body, dateCol, "", true);
+
 
 		Widget noteCol = CGQC_GU_W.VBox(row);
 		if (noteCol)

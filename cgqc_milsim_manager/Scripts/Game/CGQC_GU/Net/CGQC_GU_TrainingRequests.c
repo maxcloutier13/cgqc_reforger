@@ -24,7 +24,7 @@ class CGQC_GU_TrainingRowDto : Managed
 	bool online;
 	bool present;
 	string position;
-	bool isInstructor;
+	bool noGrade;		// the instructor's own row, unless they are Commandement
 	ref map<string, string> exercises = new map<string, string>();	// code -> passed | failed
 	string result;
 }
@@ -54,6 +54,10 @@ class CGQC_GU_TrainingDto : Managed
 	// Viewer (display only; every write is checked again)
 	bool canEdit;
 	bool canCreate;
+	string viewer;			// uid, the default instructor of a new session
+	int index;				// place of this session among the visible ones, from 1
+	int total;
+	ref array<string> commandUids = new array<string>();	// instructor choices graded even on their own session
 	ref array<ref CGQC_GU_LabelItem> qualChoices = new array<ref CGQC_GU_LabelItem>();
 	ref array<ref CGQC_GU_LabelItem> instructorChoices = new array<ref CGQC_GU_LabelItem>();
 }
@@ -63,7 +67,7 @@ class CGQC_GU_TrainingRequests
 	static const string LIST = "training.list";
 	static const string GET = "training.get";			// id ("" = the next planned, else the newest)
 	static const string SAVE = "training.save";			// id ("" = new), type, title, date, time, place, qual, exercises, instructor, att
-	static const string STATUS = "training.status";		// id, status (draft | planned)
+	static const string STATUS = "training.status";		// id, status (draft | planned) [+ the same fields as save]
 	static const string DELETE = "training.delete";		// id
 	static const string FINISH = "training.finish";		// id [+ the same fields as save]
 
@@ -71,6 +75,19 @@ class CGQC_GU_TrainingRequests
 	static const int MAX_PLACE = 60;
 	static const int MAX_POSITION = 40;
 	static const int MAX_ROWS = 60;
+
+	// Positions offered on the screen. The instructor in charge is the session's « instructeur chef »;
+	// « Instructeur » marks an assistant, listed with the members.
+	static const string POSITION_STUDENT = "Élève";
+	static const string POSITION_ASSISTANT = "Instructeur";
+	static const string POSITION_CHIEF = "Instructeur chef";
+
+	//------------------------------------------------------------------------------------------------
+	//! Assistants and the instructor chef's automatic line are not graded.
+	static bool IsInstructorPosition(string position)
+	{
+		return position == POSITION_ASSISTANT || position == POSITION_CHIEF;
+	}
 
 	//------------------------------------------------------------------------------------------------
 	static CGQC_GU_RequestResult Handle(CGQC_GU_Manager mgr, CGQC_GU_Member caller, string action, CGQC_GU_Payload p)
@@ -263,6 +280,10 @@ class CGQC_GU_TrainingRequests
 		CGQC_GU_TrainingDto d = new CGQC_GU_TrainingDto();
 		d.canCreate = CGQC_GU_Permissions.HasRight(cat, viewer, CGQC_GU_Rights.SESSIONS_CREATE);
 
+		d.viewer = viewer.uid;
+		if (visible)
+			d.total = visible.Count();
+
 		foreach (CGQC_GU_Qualification q : cat.m_aQualifications)
 		{
 			if (CGQC_GU_Quals.CanTeach(mgr, viewer, q.code))
@@ -271,8 +292,12 @@ class CGQC_GU_TrainingRequests
 
 		foreach (string uid, CGQC_GU_Member m : mgr.m_mMembers)
 		{
-			if (CGQC_GU_Permissions.HasRight(cat, m, CGQC_GU_Rights.SESSIONS_CREATE))
-				d.instructorChoices.Insert(Label(m.uid, CGQC_GU_OverviewBuilder.NameOf(cat, m)));
+			if (!CGQC_GU_Permissions.HasRight(cat, m, CGQC_GU_Rights.SESSIONS_CREATE))
+				continue;
+
+			d.instructorChoices.Insert(Label(m.uid, CGQC_GU_OverviewBuilder.NameOf(cat, m)));
+			if (CGQC_GU_Quals.IsCommand(m))
+				d.commandUids.Insert(m.uid);
 		}
 
 		if (t)
@@ -323,7 +348,7 @@ class CGQC_GU_TrainingRequests
 				r.online = mgr.IsOnline(row.uid);
 				r.present = row.present;
 				r.position = row.position;
-				r.isInstructor = row.uid == t.instructor;
+				r.noGrade = row.uid == t.instructor && !CGQC_GU_Quals.IsCommand(rm);
 				foreach (string ek, string ev : row.exercises)
 				{
 					r.exercises.Set(ek, ev);
@@ -343,6 +368,8 @@ class CGQC_GU_TrainingRequests
 				Visible(mgr, viewer, order);
 
 			int idx = order.Find(t);
+			d.index = idx + 1;
+			d.total = order.Count();
 			if (idx > 0)
 				d.prevId = order[idx - 1].id;
 
@@ -505,8 +532,9 @@ class CGQC_GU_TrainingRequests
 			if (row.position.Length() > MAX_POSITION)
 				return "too_long";
 
-			// Grades exist only in a qualification session, and never for the instructor (no self-evaluation).
-			bool graded = !qual.IsEmpty() && rm.uid != instructorUid;
+			// Grades exist only in a qualification session, never for an assistant. The instructor chef's own
+			// row is graded only when they are Commandement (no self-evaluation for anyone else).
+			bool graded = !qual.IsEmpty() && !IsInstructorPosition(row.position) && (rm.uid != instructorUid || CGQC_GU_Quals.IsCommand(rm));
 			if (graded && f.Count() >= 4)
 			{
 				array<string> grades = new array<string>();
@@ -558,8 +586,9 @@ class CGQC_GU_TrainingRequests
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! ENREGISTRER LE BROUILLON: creates (id "") or updates a session before TERMINÉE.
-	protected static CGQC_GU_RequestResult Save(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
+	//! ENREGISTRER: creates (id "") or updates a session before TERMINÉE. status: "" keeps the current one
+	//! (PLANIFIER / REMETTRE EN BROUILLON pass the new one, so the form and the status are one write).
+	protected static CGQC_GU_RequestResult Save(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p, string status = "")
 	{
 		if (!CGQC_GU_Permissions.HasRight(mgr.m_Catalogues, caller, CGQC_GU_Rights.SESSIONS_CREATE))
 			return Fail("forbidden");
@@ -593,11 +622,16 @@ class CGQC_GU_TrainingRequests
 		if (!err.IsEmpty())
 			return Fail(err);
 
+		// Read before the store changes: leaving PLANIFIÉE also changes the calendar.
+		bool wasPlanned = t.status == CGQC_GU_Training.STATUS_PLANNED;
+		if (!status.IsEmpty())
+			work.status = status;
+
 		if (!CGQC_GU_Storage.SaveTraining(work))
 			return Fail("write_failed");
 
 		mgr.m_mTrainings.Set(work.id, work);
-		if (work.status == CGQC_GU_Training.STATUS_PLANNED)
+		if (wasPlanned || work.status == CGQC_GU_Training.STATUS_PLANNED)
 			mgr.BroadcastLightState();
 
 		CGQC_GU_Log.Info(string.Format("Séance %1 enregistrée par %2", work.id, caller.uid));
@@ -618,9 +652,17 @@ class CGQC_GU_TrainingRequests
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! BROUILLON <-> PLANIFIÉE. TERMINÉE only comes from training.finish.
+	//! BROUILLON <-> PLANIFIÉE. TERMINÉE only comes from training.finish. When the form on screen is sent,
+	//! it is saved with the new status (a new session may be planned at once).
 	protected static CGQC_GU_RequestResult SetStatus(CGQC_GU_Manager mgr, CGQC_GU_Member caller, CGQC_GU_Payload p)
 	{
+		string status = CGQC_GU_Str.Lower(p.Get("status").Trim());
+		if (status != CGQC_GU_Training.STATUS_DRAFT && status != CGQC_GU_Training.STATUS_PLANNED)
+			return Fail("bad_status");
+
+		if (p.Has("title"))
+			return Save(mgr, caller, p, status);
+
 		CGQC_GU_Training t = mgr.m_mTrainings.Get(p.Get("id"));
 		if (!t)
 			return Fail("not_found");
@@ -630,10 +672,6 @@ class CGQC_GU_TrainingRequests
 
 		if (!CanEdit(mgr, caller, t))
 			return Fail("forbidden");
-
-		string status = CGQC_GU_Str.Lower(p.Get("status").Trim());
-		if (status != CGQC_GU_Training.STATUS_DRAFT && status != CGQC_GU_Training.STATUS_PLANNED)
-			return Fail("bad_status");
 
 		if (status != t.status)
 		{
@@ -707,6 +745,15 @@ class CGQC_GU_TrainingRequests
 		if (PresentCount(work) == 0)
 			return Fail("no_attendance");
 
+		// The instructor chef ran the session: they get their line even when not listed with the members.
+		if (!work.FindRow(work.instructor))
+		{
+			CGQC_GU_AttendanceRow chief = new CGQC_GU_AttendanceRow();
+			chief.uid = work.instructor;
+			chief.position = POSITION_CHIEF;
+			work.attendance.InsertAt(chief, 0);
+		}
+
 		// The session is closed first, so a second press can never write the dossiers twice.
 		work.status = CGQC_GU_Training.STATUS_DONE;
 		work.doneBy = caller.uid;
@@ -736,7 +783,8 @@ class CGQC_GU_TrainingRequests
 
 			m.stats.sessions++;
 
-			bool graded = !work.qual.IsEmpty() && m.uid != work.instructor && !CGQC_GU_Quals.HasPassed(m, work.qual);
+			bool graded = !work.qual.IsEmpty() && !IsInstructorPosition(row.position)
+				&& (m.uid != work.instructor || CGQC_GU_Quals.IsCommand(m)) && !CGQC_GU_Quals.HasPassed(m, work.qual);
 			if (graded)
 			{
 				array<string> passedEx = new array<string>();

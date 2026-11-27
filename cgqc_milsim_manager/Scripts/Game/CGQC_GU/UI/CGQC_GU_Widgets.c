@@ -298,6 +298,7 @@ class CGQC_GU_Check : ScriptedWidgetEventHandler
 	protected TextWidget m_wLabel;
 	protected bool m_bChecked;
 	protected bool m_bEnabled = true;
+	protected bool m_bReadOnly;
 	protected string m_sId;
 
 	protected ref ScriptInvokerVoid m_OnChanged = new ScriptInvokerVoid();
@@ -409,9 +410,38 @@ class CGQC_GU_Check : ScriptedWidgetEventHandler
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Shows a state without taking clicks, at full strength (read-only panels).
+	void SetReadOnly()
+	{
+		m_bReadOnly = true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Paper panels: another label font; wrap = the label wraps across the parent stack.
+	void SetPanelStyle(ResourceName font, int size, bool wrap)
+	{
+		if (m_wLabel)
+		{
+			m_wLabel.SetFont(font);
+			m_wLabel.SetExactFontSize(size);
+		}
+
+		if (!wrap || !m_wRoot || !m_wLabel)
+			return;
+
+		LayoutSlot.SetHorizontalAlign(m_wRoot, LayoutHorizontalAlign.Stretch);
+		Widget row = m_wRoot.FindAnyWidget("Row");
+		if (row)
+			AlignableSlot.SetHorizontalAlign(row, LayoutHorizontalAlign.Stretch);
+
+		LayoutSlot.SetSizeMode(m_wLabel, LayoutSizeMode.Fill);
+		m_wLabel.SetTextWrapping(true);
+	}
+
+	//------------------------------------------------------------------------------------------------
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-		if (!m_bEnabled)
+		if (!m_bEnabled || m_bReadOnly)
 			return true;
 
 		m_bChecked = !m_bChecked;

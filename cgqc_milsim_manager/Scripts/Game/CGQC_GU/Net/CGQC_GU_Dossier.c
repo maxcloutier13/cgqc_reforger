@@ -67,6 +67,7 @@ class CGQC_GU_DossierLadderItem : Managed
 	string ppLabel;
 	string levelAbbr;
 	string levelLabel;
+	string group;			// "QSP1" or ""
 	bool aVenir;			// no content in the documentation yet
 	string state;			// obtenu | en_cours | reprise | a_venir
 	string stateDate;		// YYMMDD of the latest result, or ""
@@ -387,6 +388,7 @@ class CGQC_GU_DossierBuilder
 				item.levelLabel = rr.label;
 			}
 
+			item.group = lq.group;
 			item.aVenir = lq.state != "actif";
 			item.state = CGQC_GU_Quals.InsigniaStateFull(mgr, m, lq.code);
 			CGQC_GU_QualResult lr2 = CGQC_GU_Quals.LatestResult(m, lq.code);

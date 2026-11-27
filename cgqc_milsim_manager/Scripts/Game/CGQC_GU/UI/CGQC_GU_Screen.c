@@ -57,6 +57,16 @@ class CGQC_GU_Ui
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Root widget of the screen shown (a frame), for what opens over it (date picker).
+	static Widget CurrentRoot()
+	{
+		if (!s_Current)
+			return null;
+
+		return s_Current.GetRootWidget();
+	}
+
+	//------------------------------------------------------------------------------------------------
 	static void Open(CGQC_GU_Screen screen)
 	{
 		if (!s_wHostRoot || !screen)
@@ -174,6 +184,12 @@ class CGQC_GU_Screen
 	}
 
 	//------------------------------------------------------------------------------------------------
+	Widget GetRootWidget()
+	{
+		return m_wRoot;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	void Teardown()
 	{
 		OnTeardown();
@@ -240,7 +256,6 @@ enum CGQC_GU_ERailTab
 	SESSIONS,
 	PROGRESSION,
 	INSTRUCTOR,
-	BADGES,
 	AWARDS,
 	// Unité
 	MEMBERS,
@@ -334,12 +349,17 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 
 		switch (tab)
 		{
+			case CGQC_GU_ERailTab.TRAININGS:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_TrainingScreen());
+				break;
+
 			// The Dossier tabs open one's own dossier.
 			case CGQC_GU_ERailTab.REGISTRY:
 			case CGQC_GU_ERailTab.GRADE:
 			case CGQC_GU_ERailTab.QUALS:
 			case CGQC_GU_ERailTab.SESSIONS:
-			case CGQC_GU_ERailTab.BADGES:
+			case CGQC_GU_ERailTab.PROGRESSION:
+			case CGQC_GU_ERailTab.INSTRUCTOR:
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_DossierScreen("", tab));
 				break;
 
@@ -377,16 +397,15 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 		RailSection("ÉVÉNEMENTS", 0);
 		RailTab("OPÉRATIONS", CGQC_GU_ERailTab.OPERATIONS);
 		RailTab("DÉPLOIEMENTS", CGQC_GU_ERailTab.DEPLOYMENTS);
-		RailTab("ENTRAÎNEMENTS", CGQC_GU_ERailTab.TRAININGS);
+		RailTab("ENTRAÎNEMENTS", CGQC_GU_ERailTab.TRAININGS, true);
 
 		RailSection("DOSSIER");
 		RailTab("REGISTRE", CGQC_GU_ERailTab.REGISTRY, true);
 		RailTab("GRADE & ACCÈS", CGQC_GU_ERailTab.GRADE, true);
 		RailTab("QUALIFICATIONS", CGQC_GU_ERailTab.QUALS, true);
 		RailTab("SÉANCES / FTX", CGQC_GU_ERailTab.SESSIONS, true);
-		RailTab("PROGRESSION", CGQC_GU_ERailTab.PROGRESSION);
-		RailTab("INSTRUCTEUR", CGQC_GU_ERailTab.INSTRUCTOR);
-		RailTab("INSIGNES", CGQC_GU_ERailTab.BADGES, true);
+		RailTab("PROGRESSION", CGQC_GU_ERailTab.PROGRESSION, true);
+		RailTab("INSTRUCTEUR", CGQC_GU_ERailTab.INSTRUCTOR, true);
 		RailTab("DISTINCTIONS", CGQC_GU_ERailTab.AWARDS);
 
 		RailSection("UNITÉ");
