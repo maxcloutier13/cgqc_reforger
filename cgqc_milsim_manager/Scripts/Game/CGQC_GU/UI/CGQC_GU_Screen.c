@@ -337,6 +337,9 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 			// The Dossier tabs open one's own dossier.
 			case CGQC_GU_ERailTab.REGISTRY:
 			case CGQC_GU_ERailTab.GRADE:
+			case CGQC_GU_ERailTab.QUALS:
+			case CGQC_GU_ERailTab.SESSIONS:
+			case CGQC_GU_ERailTab.BADGES:
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_DossierScreen("", tab));
 				break;
 
@@ -379,11 +382,11 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 		RailSection("DOSSIER");
 		RailTab("REGISTRE", CGQC_GU_ERailTab.REGISTRY, true);
 		RailTab("GRADE & ACCÈS", CGQC_GU_ERailTab.GRADE, true);
-		RailTab("QUALIFICATIONS", CGQC_GU_ERailTab.QUALS);
-		RailTab("SÉANCES / FTX", CGQC_GU_ERailTab.SESSIONS);
+		RailTab("QUALIFICATIONS", CGQC_GU_ERailTab.QUALS, true);
+		RailTab("SÉANCES / FTX", CGQC_GU_ERailTab.SESSIONS, true);
 		RailTab("PROGRESSION", CGQC_GU_ERailTab.PROGRESSION);
 		RailTab("INSTRUCTEUR", CGQC_GU_ERailTab.INSTRUCTOR);
-		RailTab("INSIGNES", CGQC_GU_ERailTab.BADGES);
+		RailTab("INSIGNES", CGQC_GU_ERailTab.BADGES, true);
 		RailTab("DISTINCTIONS", CGQC_GU_ERailTab.AWARDS);
 
 		RailSection("UNITÉ");

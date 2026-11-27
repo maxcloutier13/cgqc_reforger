@@ -5,7 +5,7 @@
 // again on the server. After a save the dossier is read again, so the screen always shows the file.
 
 //! Binds a button to a named action of the screen, with an optional value (rank id, member uid, page...).
-class CGQC_GU_DossierAction
+class CGQC_GU_DossierAction : CGQC_GU_Action
 {
 	protected CGQC_GU_DossierScreen m_Screen;
 	protected string m_sKind;
@@ -20,7 +20,7 @@ class CGQC_GU_DossierAction
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void Fire()
+	override void Fire()
 	{
 		if (m_Screen)
 			m_Screen.OnAction(m_sKind, m_sValue);
@@ -67,6 +67,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	static const int RECORD_PAGE = 10;
 	static const int MEMBER_PAGE = 10;
 	static const float FICHE_WIDTH = 420;
+	static const float LINE_LABEL_WIDTH = 195;
+	static const int BADGE_TAGS_PER_ROW = 4;
 
 	// Record types staff may add by hand (enlistment is written by the system only).
 	protected ref array<string> m_aManualTypes = { "note", "task", "operation", "deployment", "session", "qualification", "distinction" };
@@ -91,6 +93,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	protected ref CGQC_GU_Region m_Selector = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_Body = new CGQC_GU_Region();
 	protected ref CGQC_GU_Region m_MemberList = new CGQC_GU_Region();
+	protected ref CGQC_GU_DossierTabs m_Tabs;	// Qualifications, Séances / FTX, Insignes
 	protected TextWidget m_wMessage;
 	protected ref CGQC_GU_FieldWatch m_SearchWatch;
 
@@ -139,6 +142,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		{
 			LayoutSlot.SetSizeMode(right, LayoutSizeMode.Fill);
 			LayoutSlot.SetPadding(right, 32, 0, 0, 0);
+			LayoutSlot.SetVerticalAlign(right, LayoutVerticalAlign.Stretch);
 			m_Selector.m_wRoot = CGQC_GU_W.VBox(right);
 			if (m_Selector.m_wRoot)
 				LayoutSlot.SetHorizontalAlign(m_Selector.m_wRoot, LayoutHorizontalAlign.Stretch);
@@ -149,9 +153,13 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 
 			m_Body.m_wRoot = CGQC_GU_W.VBox(right);
 			if (m_Body.m_wRoot)
+			{
+				LayoutSlot.SetSizeMode(m_Body.m_wRoot, LayoutSizeMode.Fill);
 				LayoutSlot.SetHorizontalAlign(m_Body.m_wRoot, LayoutHorizontalAlign.Stretch);
+			}
 		}
 
+		m_Tabs = new CGQC_GU_DossierTabs(this, m_Body);	// Qualifications, Séances / FTX, Insignes
 		CGQC_GU_Client.GetOnReply().Insert(OnReply);
 		RequestDossier();
 	}
@@ -179,7 +187,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	//! The Dossier tabs switch in place, on the member being shown.
 	override void OnRailSelected(CGQC_GU_ERailTab tab)
 	{
-		if (tab != CGQC_GU_ERailTab.REGISTRY && tab != CGQC_GU_ERailTab.GRADE)
+		if (tab != CGQC_GU_ERailTab.REGISTRY && tab != CGQC_GU_ERailTab.GRADE && tab != CGQC_GU_ERailTab.QUALS
+			&& tab != CGQC_GU_ERailTab.SESSIONS && tab != CGQC_GU_ERailTab.BADGES)
 		{
 			super.OnRailSelected(tab);
 			return;
@@ -326,7 +335,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	//------------------------------------------------------------------------------------------------
 	// Actions
 	//------------------------------------------------------------------------------------------------
-	protected CGQC_GU_Button Btn(CGQC_GU_Region region, Widget parent, string text, string kind, string value = "", bool confirm = false, CGQC_GU_EButtonKind look = CGQC_GU_EButtonKind.PLAIN, bool compact = true)
+	CGQC_GU_Button Btn(CGQC_GU_Region region, Widget parent, string text, string kind, string value = "", bool confirm = false, CGQC_GU_EButtonKind look = CGQC_GU_EButtonKind.PLAIN, bool compact = true)
 	{
 		CGQC_GU_Button b = CGQC_GU_Button.Create(parent, text, look, confirm);
 		if (!b)
@@ -394,6 +403,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				m_bPersonalOpen = false;
 				m_bEditingPersonal = false;
 				m_iRecordPage = 0;
+				m_Tabs.Reset();
 				m_sUid = value;
 				SetMessage("", false);
 				RequestDossier();
@@ -443,6 +453,10 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				Write(CGQC_GU_Requests.MEMBER_LINK, lp);
 				break;
 			}
+
+			default:
+				if (m_Tabs.OnAction(kind, value))
+					BuildBody();
 		}
 	}
 
@@ -566,10 +580,57 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				BuildPersonalView(f);
 		}
 
+		BuildBadgeLine(f);
+
 		CGQC_GU_W.Rule(f, 14, 6);
 		TextWidget footer = CGQC_GU_W.Text(f, m_Dto.footer, CGQC_GU_Style.FONT_VALUE, 13, CGQC_GU_Style.InkMuted());
 		if (footer)
 			LayoutSlot.SetHorizontalAlign(footer, LayoutHorizontalAlign.Center);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! INSIGNES: one blue tag for each qualification obtained.
+	protected void BuildBadgeLine(Widget f)
+	{
+		CGQC_GU_W.Rule(f, 14, 0);
+		CGQC_GU_W.Caption(f, "INSIGNES");
+
+		Widget row;
+		int count;
+		foreach (CGQC_GU_DossierLadderItem item : m_Dto.ladder)
+		{
+			if (item.state != CGQC_GU_Quals.STATE_OBTAINED)
+				continue;
+
+			if (count % BADGE_TAGS_PER_ROW == 0)
+			{
+				row = CGQC_GU_W.HBox(f);
+				if (row)
+					LayoutSlot.SetPadding(row, 0, 3, 0, 3);
+			}
+
+			Widget tag = CGQC_GU_W.Tag(row, item.code, CGQC_GU_Style.Blue(), 13);
+			if (tag)
+				LayoutSlot.SetPadding(tag, 0, 0, 8, 0);
+
+			count++;
+		}
+
+		if (count == 0)
+			CGQC_GU_W.Text(f, "Aucun", CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.InkMuted());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected int ObtainedCount()
+	{
+		int count;
+		foreach (CGQC_GU_DossierLadderItem item : m_Dto.ladder)
+		{
+			if (item.state == CGQC_GU_Quals.STATE_OBTAINED)
+				count++;
+		}
+
+		return count;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -593,13 +654,13 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			return;
 
 		LayoutSlot.SetPadding(row, 0, 3, 0, 3);
-		Widget lbl = CGQC_GU_W.Sized(row, 170);
+		Widget lbl = CGQC_GU_W.Sized(row, LINE_LABEL_WIDTH);
 		CGQC_GU_W.Text(lbl, label, CGQC_GU_Style.FONT_TITLE, 14, CGQC_GU_Style.InkMuted());
 
 		if (value.IsEmpty())
 			value = "—";
 
-		Widget val = CGQC_GU_W.Sized(row, FICHE_WIDTH - 36 - 170);
+		Widget val = CGQC_GU_W.Sized(row, FICHE_WIDTH - 36 - LINE_LABEL_WIDTH);
 		TextWidget t = CGQC_GU_W.Text(val, value, CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.InkSoft(), true);
 		if (t)
 			LayoutSlot.SetHorizontalAlign(t, LayoutHorizontalAlign.Stretch);
@@ -631,9 +692,9 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		Line(box, "OPÉRATIONS", m_Dto.operations.ToString());
 		Line(box, "DÉPLOIEMENTS", m_Dto.deployments.ToString());
 		Line(box, "DISTINCTIONS", m_Dto.distinctions.ToString());
-		Line(box, "QUALIFICATIONS", m_Dto.qualsObtained);
+		Line(box, "QUALIFICATIONS OBTENUES", ObtainedCount().ToString());
 		Line(box, "SÉANCES / FTX", m_Dto.sessions.ToString());
-		Line(box, "FORMATIONS DISPONIBLES", m_Dto.formations);
+		Line(box, "FORMATIONS DISPONIBLES", m_Dto.formationsCount.ToString());
 		Line(box, "ÉLÈVES ÉVALUÉS", m_Dto.studentsEvaluated.ToString());
 
 		CGQC_GU_W.Caption(box, "BIO", 8);
@@ -830,7 +891,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected void Pager(CGQC_GU_Region region, Widget parent, int page, int pages, string kind)
+	void Pager(CGQC_GU_Region region, Widget parent, int page, int pages, string kind)
 	{
 		if (pages <= 1)
 			return;
@@ -871,14 +932,31 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		if (!m_Body.m_wRoot || !m_Dto || m_bSelectorOpen)
 			return;
 
-		if (m_eTab == CGQC_GU_ERailTab.GRADE)
-			BuildGrade(m_Body.m_wRoot);
-		else
-			BuildRegistre(m_Body.m_wRoot);
+		switch (m_eTab)
+		{
+			case CGQC_GU_ERailTab.GRADE:
+				BuildGrade(m_Body.m_wRoot);
+				break;
+
+			case CGQC_GU_ERailTab.QUALS:
+				m_Tabs.BuildQuals(m_Body.m_wRoot, m_Dto);
+				break;
+
+			case CGQC_GU_ERailTab.SESSIONS:
+				m_Tabs.BuildSessions(m_Body.m_wRoot, m_Dto);
+				break;
+
+			case CGQC_GU_ERailTab.BADGES:
+				m_Tabs.BuildBadges(m_Body.m_wRoot, m_Dto);
+				break;
+
+			default:
+				BuildRegistre(m_Body.m_wRoot);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected Widget Section(Widget parent, string title)
+	Widget Section(Widget parent, string title)
 	{
 		TextWidget t = CGQC_GU_W.Text(parent, title, CGQC_GU_Style.FONT_TITLE, 22, CGQC_GU_Style.Ink());
 		if (t)

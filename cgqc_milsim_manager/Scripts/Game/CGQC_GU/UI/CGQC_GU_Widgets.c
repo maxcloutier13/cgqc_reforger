@@ -80,12 +80,12 @@ class CGQC_GU_W
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Small boxed tag (« REQUIS »), outline and text in the same colour.
-	static void Tag(Widget parent, string text, Color color)
+	//! Small boxed tag (« REQUIS »), outline and text in the same colour. Returns the box.
+	static Widget Tag(Widget parent, string text, Color color, int size = 12)
 	{
 		Widget inner = Panel(parent);
 		if (!inner)
-			return;
+			return null;
 
 		Widget box = inner.GetParent();
 		LayoutSlot.SetHorizontalAlign(box, LayoutHorizontalAlign.Left);
@@ -99,7 +99,8 @@ class CGQC_GU_W
 				e.SetColor(color);
 		}
 
-		Text(inner, text, CGQC_GU_Style.FONT_TITLE, 12, color);
+		Text(inner, text, CGQC_GU_Style.FONT_TITLE, size, color);
+		return box;
 	}
 
 	//------------------------------------------------------------------------------------------------

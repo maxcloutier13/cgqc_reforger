@@ -3,7 +3,7 @@
 // comes from the server's "quals.catalogue" and "exercises.catalogue" replies.
 
 //! Binds a row or a button to a named action of a catalogue screen, with a value (code).
-class CGQC_GU_CatalogueAction
+class CGQC_GU_CatalogueAction : CGQC_GU_Action
 {
 	protected CGQC_GU_CatalogueScreen m_Screen;
 	protected string m_sKind;
@@ -18,96 +18,10 @@ class CGQC_GU_CatalogueAction
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void Fire()
+	override void Fire()
 	{
 		if (m_Screen)
 			m_Screen.OnAction(m_sKind, m_sValue);
-	}
-}
-
-//! A row that can be pressed over its whole width: the button layout without its label; the cells go into
-//! GetCells(). The action runs on the next frame, because it rebuilds the row's own list.
-class CGQC_GU_ClickRow : ScriptedWidgetEventHandler
-{
-	protected Widget m_wRoot;
-	protected Widget m_wCells;
-	protected ref CGQC_GU_CatalogueAction m_Action;
-
-	//------------------------------------------------------------------------------------------------
-	//! action may be null (a row that only shows). edges: names of the outline sides to draw.
-	static CGQC_GU_ClickRow Create(Widget parent, CGQC_GU_CatalogueAction action, Color fill, Color edge, array<string> edges)
-	{
-		Widget root = CGQC_GU_W.Create(CGQC_GU_Style.LAYOUT_BUTTON, parent);
-		if (!root)
-			return null;
-
-		CGQC_GU_ClickRow row = new CGQC_GU_ClickRow();
-		row.m_wRoot = root;
-		row.m_Action = action;
-		LayoutSlot.SetHorizontalAlign(root, LayoutHorizontalAlign.Stretch);
-
-		Widget bg = root.FindAnyWidget("Bg");
-		if (bg)
-			bg.SetColor(fill);
-
-		array<string> sides = { "EdgeT", "EdgeB", "EdgeL", "EdgeR" };
-		foreach (string side : sides)
-		{
-			Widget e = root.FindAnyWidget(side);
-			if (!e)
-				continue;
-
-			e.SetVisible(edges.Contains(side));
-			e.SetColor(edge);
-		}
-
-		Widget label = root.FindAnyWidget("Label");
-		if (label)
-			label.SetVisible(false);
-
-		row.m_wCells = CGQC_GU_W.HBox(root.FindAnyWidget("Body"));
-		if (row.m_wCells)
-		{
-			AlignableSlot.SetHorizontalAlign(row.m_wCells, LayoutHorizontalAlign.Stretch);
-			AlignableSlot.SetVerticalAlign(row.m_wCells, LayoutVerticalAlign.Stretch);
-		}
-
-		root.AddHandler(row);
-		return row;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	Widget GetRootWidget()
-	{
-		return m_wRoot;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	Widget GetCells()
-	{
-		return m_wCells;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	override bool OnClick(Widget w, int x, int y, int button)
-	{
-		if (m_Action)
-			GetGame().GetCallqueue().CallLater(m_Action.Fire, 0, false);
-
-		return true;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Detaches the row while its widget is alive, then removes it. Never do this from a destructor: the
-	//! widget releases its handlers while it is being destroyed, and removing one then crashes the game.
-	void Destroy()
-	{
-		if (!m_wRoot)
-			return;
-
-		m_wRoot.RemoveHandler(this);
-		m_wRoot.RemoveFromHierarchy();
-		m_wRoot = null;
 	}
 }
 
@@ -336,6 +250,13 @@ class CGQC_GU_QualCatalogueScreen : CGQC_GU_CatalogueScreen
 	protected ref array<ref CGQC_GU_QualDto> m_aQuals;
 	protected ref array<ref CGQC_GU_LabelItem> m_aNotes;
 	protected string m_sSelected;
+
+	//------------------------------------------------------------------------------------------------
+	//! selected: the qualification to show first ("" = the first of the list).
+	void CGQC_GU_QualCatalogueScreen(string selected = "")
+	{
+		m_sSelected = selected;
+	}
 
 	//------------------------------------------------------------------------------------------------
 	override protected CGQC_GU_ERailTab GetRailTab()
@@ -1076,7 +997,7 @@ class CGQC_GU_ExerciseCatalogueScreen : CGQC_GU_CatalogueScreen
 		for (int i = 0; i < widths.Count(); i++)
 		{
 			if (i > 0)
-				Separator(cells);
+				CGQC_GU_Table.Separator(cells);
 
 			ResourceName font = CGQC_GU_Style.FONT_VALUE;
 			int size = 16;
@@ -1111,18 +1032,6 @@ class CGQC_GU_ExerciseCatalogueScreen : CGQC_GU_CatalogueScreen
 
 			Cell(cells, texts[i], widths[i], font, size, color, 10, 8);
 		}
-	}
-
-	//------------------------------------------------------------------------------------------------
-	protected void Separator(Widget row)
-	{
-		ImageWidget line = ImageWidget.Cast(CGQC_GU_W.Create(CGQC_GU_Style.LAYOUT_RECT, row));
-		if (!line)
-			return;
-
-		line.SetSize(1, 2);
-		line.SetColor(CGQC_GU_Style.RowEdge());
-		LayoutSlot.SetVerticalAlign(line, LayoutVerticalAlign.Stretch);
 	}
 
 	//------------------------------------------------------------------------------------------------

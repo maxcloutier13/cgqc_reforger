@@ -49,6 +49,7 @@ class CGQC_GU_Style
 	static Color RowEdge()		{ return Color.FromSRGBA(0x8B, 0x7B, 0x5A, 255); }	// table and list rows #8B7B5A
 	static Color RowSelected()	{ return Translucent(0x23, 0x43, 0x9C, 0.15); }	// chosen row
 	static Color PaperLight()	{ return Translucent(0xFF, 0xFA, 0xEB, 0.35); }	// detail box
+	static Color BadgeDim()		{ return Color.FromSRGBA(0x7A, 0x6E, 0x55, 255); }	// badge « à venir » #7A6E55
 
 	static Color PpColor(int pp)
 	{
