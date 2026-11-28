@@ -30,6 +30,7 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 	static const int NAV_QUALS = 5;
 	static const int NAV_EXERCISES = 6;
 	static const int NAV_TRAININGS = 7;
+	static const int NAV_ORBAT = 8;
 
 	protected Widget m_wContent;
 	protected Widget m_wNavItems;
@@ -116,7 +117,7 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 			NavItem("CALENDRIER", NAV_CALENDAR, string.Empty);
 			NavItem("MON DOSSIER", NAV_DOSSIER, "DOSSIER");
 			NavItem("MEMBRES", NAV_MEMBERS, "UNITÉ");
-			NavItem("ORBAT", NAV_NONE, string.Empty);
+			NavItem("ORBAT", NAV_ORBAT, string.Empty);
 			NavItem("QUALIFICATIONS", NAV_QUALS, string.Empty);
 			NavItem("EXERCICES", NAV_EXERCISES, string.Empty);
 			NavItem("DISTINCTIONS", NAV_NONE, string.Empty);
@@ -246,6 +247,10 @@ class CGQC_GU_DarkScreen : CGQC_GU_Screen
 
 			case NAV_TRAININGS:
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_TrainingScreen());
+				break;
+
+			case NAV_ORBAT:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_OrbatScreen());
 				break;
 
 			case NAV_QUALS:

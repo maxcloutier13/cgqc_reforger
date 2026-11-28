@@ -13,6 +13,8 @@ class CGQC_GU_ClickRow : ScriptedWidgetEventHandler
 	protected Widget m_wRoot;
 	protected Widget m_wCells;
 	protected ref CGQC_GU_Action m_Action;
+	protected ref CGQC_GU_Action m_DoubleAction;
+	protected ref CGQC_GU_Action m_RightAction;
 
 	//------------------------------------------------------------------------------------------------
 	//! action may be null (a row that only shows). edges: names of the outline sides to draw.
@@ -70,11 +72,42 @@ class CGQC_GU_ClickRow : ScriptedWidgetEventHandler
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! Optional: a double click (after the click's own action) and a right click (instead of it).
+	void SetExtraActions(CGQC_GU_Action doubleAction, CGQC_GU_Action rightAction)
+	{
+		m_DoubleAction = doubleAction;
+		m_RightAction = rightAction;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
+		if (m_RightAction && button != 0)
+			return true;
+
 		if (m_Action)
 			GetGame().GetCallqueue().CallLater(Activate, 0, false);
 
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override bool OnDoubleClick(Widget w, int x, int y, int button)
+	{
+		if (!m_DoubleAction || button != 0)
+			return false;
+
+		GetGame().GetCallqueue().CallLater(ActivateDouble, 0, false);
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override bool OnMouseButtonDown(Widget w, int x, int y, int button)
+	{
+		if (!m_RightAction || button != 1)
+			return false;
+
+		GetGame().GetCallqueue().CallLater(ActivateRight, 0, false);
 		return true;
 	}
 
@@ -83,6 +116,20 @@ class CGQC_GU_ClickRow : ScriptedWidgetEventHandler
 	{
 		if (m_Action)
 			m_Action.Fire();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ActivateDouble()
+	{
+		if (m_DoubleAction)
+			m_DoubleAction.Fire();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ActivateRight()
+	{
+		if (m_RightAction)
+			m_RightAction.Fire();
 	}
 
 	//------------------------------------------------------------------------------------------------

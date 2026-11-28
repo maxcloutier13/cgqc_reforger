@@ -1,6 +1,6 @@
 // Gestion d'unité - pause menu overview panel (spec §4), Phase 1 content: header, command notice,
 // unit news, next rank and OUVRIR MON DOSSIER. The operation section stays empty until Phase 5;
-// seat / role / team leader arrive with the ORBAT (Phase 4).
+// seat · role · section and the team leader come from the ORBAT (4f).
 
 class CGQC_GU_OverviewPanel
 {
@@ -14,6 +14,8 @@ class CGQC_GU_OverviewPanel
 	protected Widget m_wRoot;
 	protected TextWidget m_wName;
 	protected TextWidget m_wSub;
+	protected TextWidget m_wLeaderLabel;	// « CHEF D'ÉQUIPE » (4f)
+	protected TextWidget m_wLeaderName;		// « S1-0 Adju. Tremblay »
 	protected TextWidget m_wPhase;
 	protected TextWidget m_wOnline;
 	protected TextWidget m_wNotice;
@@ -51,6 +53,8 @@ class CGQC_GU_OverviewPanel
 
 		m_wName = TextWidget.Cast(m_wRoot.FindAnyWidget("Name"));
 		m_wSub = TextWidget.Cast(m_wRoot.FindAnyWidget("Sub"));
+		m_wLeaderLabel = TextWidget.Cast(m_wRoot.FindAnyWidget("LeaderLabel"));
+		m_wLeaderName = TextWidget.Cast(m_wRoot.FindAnyWidget("LeaderName"));
 		m_wPhase = TextWidget.Cast(m_wRoot.FindAnyWidget("Phase"));
 		m_wOnline = TextWidget.Cast(m_wRoot.FindAnyWidget("Online"));
 		m_wNotice = TextWidget.Cast(m_wRoot.FindAnyWidget("NoticeText"));
@@ -115,7 +119,16 @@ class CGQC_GU_OverviewPanel
 		ApplyLightState();
 		CGQC_GU_Client.GetOnLightState().Insert(ApplyLightState);
 		CGQC_GU_Client.GetOnReply().Insert(OnReply);
+		CGQC_GU_Ui.GetOnBackToPause().Insert(Refresh);
 		m_iRequestId = CGQC_GU_Client.Request(CGQC_GU_Requests.OVERVIEW);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Back from a Gestion d'unité screen: the seat or the leader may have changed there (4f).
+	void Refresh()
+	{
+		if (m_wRoot)
+			m_iRequestId = CGQC_GU_Client.Request(CGQC_GU_Requests.OVERVIEW);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -124,6 +137,7 @@ class CGQC_GU_OverviewPanel
 		GetGame().GetCallqueue().Remove(RefreshNotice);
 		CGQC_GU_Client.GetOnLightState().Remove(ApplyLightState);
 		CGQC_GU_Client.GetOnReply().Remove(OnReply);
+		CGQC_GU_Ui.GetOnBackToPause().Remove(Refresh);
 		if (m_DossierButton)
 		{
 			m_DossierButton.Destroy();
@@ -404,6 +418,10 @@ class CGQC_GU_OverviewPanel
 
 		if (m_wName) m_wName.SetText(dto.name);
 		if (m_wSub) m_wSub.SetText(dto.sub);
+		if (m_wLeaderLabel) m_wLeaderLabel.SetText(dto.leaderLabel);
+		if (m_wLeaderName) m_wLeaderName.SetText(dto.leader);
+		if (m_wLeaderLabel) m_wLeaderLabel.SetVisible(!dto.leaderLabel.IsEmpty());
+		if (m_wLeaderName) m_wLeaderName.SetVisible(!dto.leaderLabel.IsEmpty());
 		if (m_wPhase) m_wPhase.SetText(dto.phase);
 		if (m_wOnline) m_wOnline.SetText(string.Format("%1 en ligne", dto.online));
 		SetNotice(dto.notice);

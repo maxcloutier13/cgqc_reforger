@@ -17,6 +17,7 @@ class CGQC_GU_Catalogues
 	ref array<ref CGQC_GU_LabelItem> m_aDistinctionCategories = new array<ref CGQC_GU_LabelItem>();
 	ref array<ref CGQC_GU_Distinction> m_aDistinctions = new array<ref CGQC_GU_Distinction>();
 	ref array<ref CGQC_GU_Unit> m_aUnits = new array<ref CGQC_GU_Unit>();
+	ref array<ref CGQC_GU_SeatRole> m_aSeatRoles = new array<ref CGQC_GU_SeatRole>();
 
 	//------------------------------------------------------------------------------------------------
 	void LoadAll(string configDir)
@@ -434,8 +435,10 @@ class CGQC_GU_Catalogues
 	{
 		if (!FileIO.FileExists(path))
 		{
+			CGQC_GU_DefaultCatalogues.SeatRoles(m_aSeatRoles);
 			CGQC_GU_DefaultCatalogues.Units(m_aUnits);
 			CGQC_GU_PrettyJsonSaveContext save = NewFile();
+			save.WriteValue("seatRoles", m_aSeatRoles);
 			save.WriteValue("units", m_aUnits);
 			WriteNew(save, path);
 			return;
@@ -443,11 +446,197 @@ class CGQC_GU_Catalogues
 
 		JsonLoadContext ctx = OpenChecked(path);
 		if (ctx && ctx.ReadValue("units", m_aUnits) && m_aUnits)
+		{
+			ctx.ReadValue("seatRoles", m_aSeatRoles);
+			if (!m_aSeatRoles)
+				m_aSeatRoles = new array<ref CGQC_GU_SeatRole>();
+
+			UpgradeUnits(path);
 			return;
+		}
 
 		FallbackError(path);
+		m_aSeatRoles = new array<ref CGQC_GU_SeatRole>();
 		m_aUnits = new array<ref CGQC_GU_Unit>();
+		CGQC_GU_DefaultCatalogues.SeatRoles(m_aSeatRoles);
 		CGQC_GU_DefaultCatalogues.Units(m_aUnits);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Phase 4a: a units.json written before 4a gets the mockup wording, the seat roles with their
+	//! minimum rank and the faction keys. Only values that still hold the old defaults are changed;
+	//! anything the owner wrote is kept. Each change is counted and logged.
+	protected void UpgradeUnits(string path)
+	{
+		int changes;
+		if (m_aSeatRoles.IsEmpty())
+		{
+			CGQC_GU_DefaultCatalogues.SeatRoles(m_aSeatRoles);
+			changes += m_aSeatRoles.Count();
+		}
+
+		array<ref CGQC_GU_Unit> defs = new array<ref CGQC_GU_Unit>();
+		CGQC_GU_DefaultCatalogues.Units(defs);
+		foreach (CGQC_GU_Unit du : defs)
+		{
+			CGQC_GU_Unit u = FindUnit(du.id);
+			if (!u)
+				continue;
+
+			// No faction key yet = a file from before 4a: the new unit fields come from the defaults.
+			if (u.faction.IsEmpty() && !du.faction.IsEmpty())
+			{
+				u.faction = du.faction;
+				u.noRankCheck = du.noRankCheck;
+				changes++;
+			}
+
+			foreach (CGQC_GU_Section ds : du.sections)
+			{
+				CGQC_GU_Section s = FindSectionIn(u, ds.id);
+				if (!s)
+					continue;
+
+				if (s.kind != ds.kind && s.kind == CGQC_GU_DefaultCatalogues.LegacyKind(ds.id))
+				{
+					s.kind = ds.kind;
+					changes++;
+				}
+
+				// 4e: UPO seats become live seats (I-0 / I-1, E-1 to E-16), if the old default layout is
+				// still there (no elements, or the single « I » element with I-1 to I-4).
+				bool oldLayout = s.elements.IsEmpty() || (s.elements.Count() == 1 && s.elements[0].id == ds.letter);
+				if (ds.liveSeats && !s.liveSeats && oldLayout)
+				{
+					s.liveSeats = true;
+					s.seatRole = ds.seatRole;
+					s.defaultSeats = ds.defaultSeats;
+					s.firstNumber = ds.firstNumber;
+					s.elements.Clear();
+					changes++;
+				}
+
+				foreach (CGQC_GU_Element de : ds.elements)
+				{
+					CGQC_GU_Element e = FindElementIn(s, de.id);
+					if (!e)
+						continue;
+
+					// The Hoplite elements were labelled with their own id ("S0").
+					if (e.label == e.id && de.label != de.id)
+					{
+						e.label = de.label;
+						changes++;
+					}
+
+					foreach (CGQC_GU_Seat dseat : de.seats)
+					{
+						CGQC_GU_Seat seat = FindSeatIn(e, dseat.callsign);
+						if (!seat || seat.role == dseat.role)
+							continue;
+
+						CGQC_GU_SeatRole dr = FindSeatRole(dseat.role);
+						bool oldDefault = CGQC_GU_DefaultCatalogues.LegacyRoleId(seat.role) == dseat.role;
+						if (dr && seat.role == dr.label)
+							oldDefault = true;
+
+						if (oldDefault)
+						{
+							seat.role = dseat.role;
+							changes++;
+						}
+					}
+				}
+			}
+		}
+
+		if (changes == 0)
+			return;
+
+		CGQC_GU_PrettyJsonSaveContext save = NewFile();
+		save.WriteValue("seatRoles", m_aSeatRoles);
+		save.WriteValue("units", m_aUnits);
+		if (CGQC_GU_Json.SafeSave(save, path))
+			CGQC_GU_Log.Info(string.Format("units.json : %1 valeur(s) par défaut mise(s) à jour (libellés de la maquette, rôles des places et grade minimum, factions, places UPO).", changes));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// Units lookups (Phase 4)
+	//------------------------------------------------------------------------------------------------
+	CGQC_GU_Unit FindUnit(string id)
+	{
+		foreach (CGQC_GU_Unit u : m_aUnits)
+		{
+			if (u.id == id)
+				return u;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static CGQC_GU_Section FindSectionIn(CGQC_GU_Unit u, string id)
+	{
+		foreach (CGQC_GU_Section s : u.sections)
+		{
+			if (s.id == id)
+				return s;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static CGQC_GU_Element FindElementIn(CGQC_GU_Section s, string id)
+	{
+		foreach (CGQC_GU_Element e : s.elements)
+		{
+			if (e.id == id)
+				return e;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static CGQC_GU_Seat FindSeatIn(CGQC_GU_Element e, string callsign)
+	{
+		foreach (CGQC_GU_Seat seat : e.seats)
+		{
+			if (seat.callsign == callsign)
+				return seat;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! By id, then by label (a role written by hand as « Fusilier »). null for free text.
+	CGQC_GU_SeatRole FindSeatRole(string role)
+	{
+		foreach (CGQC_GU_SeatRole r : m_aSeatRoles)
+		{
+			if (r.id == role)
+				return r;
+		}
+
+		foreach (CGQC_GU_SeatRole r2 : m_aSeatRoles)
+		{
+			if (r2.label == role)
+				return r2;
+		}
+
+		return null;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	string SeatRoleLabel(string role)
+	{
+		CGQC_GU_SeatRole r = FindSeatRole(role);
+		if (r)
+			return r.label;
+
+		return role;
 	}
 
 	//------------------------------------------------------------------------------------------------

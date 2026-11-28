@@ -213,6 +213,89 @@ class CGQC_GU_Storage
 	}
 
 	//------------------------------------------------------------------------------------------------
+	// Operations (Phase 5a): operations/<id>.json
+	//------------------------------------------------------------------------------------------------
+	static string OperationPath(string id)
+	{
+		return Dir("operations") + "/" + CGQC_GU_Str.FileSafe(id) + ".json";
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static bool SaveOperation(CGQC_GU_Operation o)
+	{
+		if (!o || o.id.IsEmpty())
+			return false;
+
+		o.schemaVersion = CGQC_GU_Operation.SCHEMA_VERSION;
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		o.WriteTo(ctx);
+		return CGQC_GU_Json.SafeSave(ctx, OperationPath(o.id));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! SUPPRIMER: a copy goes to archive/ first, then the file and its .bak / .tmp are removed.
+	static bool DeleteOperation(CGQC_GU_Operation o)
+	{
+		string stamp = CGQC_GU_Time.NowUtc();
+		stamp.Replace(":", "-");
+		CGQC_GU_PrettyJsonSaveContext ctx = new CGQC_GU_PrettyJsonSaveContext();
+		o.WriteTo(ctx);
+		if (!CGQC_GU_Json.SafeSave(ctx, Dir("archive") + "/" + CGQC_GU_Str.FileSafe(o.id) + "_" + stamp + ".json"))
+			return false;
+
+		string path = OperationPath(o.id);
+		array<string> files = { path, path + ".bak", path + ".tmp" };
+		foreach (string f : files)
+		{
+			if (FileIO.FileExists(f))
+				FileIO.DeleteFile(f);
+		}
+
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static void LoadAllOperations(map<string, ref CGQC_GU_Operation> into)
+	{
+		string dir = Dir("operations");
+		array<string> files = SCR_FileIOHelper.FindFiles(dir, ".json");
+		if (!files)
+			return;
+
+		foreach (string file : files)
+		{
+			string path = file;
+			if (!path.Contains("/") && !path.Contains("\\"))
+				path = dir + "/" + file;
+
+			if (!path.EndsWith(".json"))
+				continue;
+
+			JsonLoadContext ctx = CGQC_GU_Json.Open(path);
+			if (!ctx)
+				continue;
+
+			CGQC_GU_Operation o = new CGQC_GU_Operation();
+			if (!o.ReadFrom(ctx))
+			{
+				CGQC_GU_Log.Error("Ordre sans id, ignoré : " + path);
+				continue;
+			}
+
+			if (o.schemaVersion > CGQC_GU_Operation.SCHEMA_VERSION)
+				CGQC_GU_Log.Warn(string.Format("%1 : schemaVersion %2 plus récent que ce mod.", path, o.schemaVersion));
+
+			if (into.Contains(o.id))
+			{
+				CGQC_GU_Log.Warn("Ordre en double, fichier ignoré : " + path);
+				continue;
+			}
+
+			into.Insert(o.id, o);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
 	// Unit state
 	//------------------------------------------------------------------------------------------------
 	static bool SaveSituation(CGQC_GU_Situation s)
@@ -324,7 +407,9 @@ class CGQC_GU_Storage
 		ctx.WriteValue("schemaVersion", CGQC_GU_OrbatLive.SCHEMA_VERSION);
 		ctx.WriteValue("activeSections", o.activeSections);
 		ctx.WriteValue("renames", o.renames);
+		ctx.WriteValue("roles", o.roles);
 		ctx.WriteValue("assignments", o.assignments);
+		ctx.WriteValue("liveSeats", o.liveSeats);	// written for reading only: rebuilt at every start (4e)
 		return CGQC_GU_Json.SafeSave(ctx, Dir("state") + "/orbat_live.json");
 	}
 
@@ -338,9 +423,11 @@ class CGQC_GU_Storage
 
 		ctx.ReadValue("activeSections", o.activeSections);
 		ctx.ReadValue("renames", o.renames);
+		ctx.ReadValue("roles", o.roles);
 		ctx.ReadValue("assignments", o.assignments);
 		if (!o.activeSections) o.activeSections = new array<string>();
 		if (!o.renames) o.renames = new map<string, string>();
+		if (!o.roles) o.roles = new map<string, string>();
 		if (!o.assignments) o.assignments = new array<ref CGQC_GU_SeatAssignment>();
 		return o;
 	}

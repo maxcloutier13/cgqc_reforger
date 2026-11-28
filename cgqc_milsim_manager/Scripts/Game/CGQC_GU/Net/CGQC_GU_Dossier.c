@@ -119,6 +119,8 @@ class CGQC_GU_DossierDto : Managed
 	bool online;
 	string presence;		// "EN LIGNE" / "Vu le 261125"
 	string status;			// "ACTIF"
+	string callsign;		// ORBAT seat this game (4f): "S1-1", "Zeus", "—"
+	string tonight;			// "Ce soir : S1-1 · Fusilier (Spartan)", "Ce soir : sans place"
 
 	// Renseignements et états de service
 	string birthDate;		// raw ISO, for editing
@@ -203,6 +205,13 @@ class CGQC_GU_DossierBuilder
 
 		d.status = StatusLabel(m.GetEffectiveStatus());
 
+		CGQC_GU_SeatInfo seat = CGQC_GU_OrbatRequests.SeatInfo(mgr, m.uid);
+		d.callsign = seat.callsign;
+		if (d.callsign.IsEmpty())
+			d.callsign = "—";
+
+		d.tonight = seat.Tonight();
+
 		// Renseignements
 		d.birthDate = m.personal.birthDate;
 		d.birthPlace = m.personal.birthPlace;
@@ -240,7 +249,7 @@ class CGQC_GU_DossierBuilder
 		Roles(cat, m, d);
 
 		bool automatic;
-		d.nextRank = CGQC_GU_OverviewBuilder.BuildCriteria(cat, m, d.criteria, automatic);
+		d.nextRank = CGQC_GU_OverviewBuilder.BuildCriteria(mgr, m, d.criteria, automatic);
 		d.nextAutomatic = automatic;
 
 		foreach (CGQC_GU_AccessGroup group : cat.m_aAccessGroups)

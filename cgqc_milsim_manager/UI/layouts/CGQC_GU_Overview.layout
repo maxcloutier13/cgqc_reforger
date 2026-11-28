@@ -38,8 +38,6 @@ FrameWidgetClass {
          Name "Who"
          Slot LayoutSlot "{6E0B095380F5AD65}" {
           VerticalAlign 1
-          SizeMode Fill
-          FillWeight 1
          }
           {
           TextWidgetClass "{7940481404E02794}" {
@@ -59,6 +57,37 @@ FrameWidgetClass {
            "Min Font Size" 18
            Color 0.58 0.59 0.6 1
            FontProperties FontProperties "{B454026AEA40123B}" {
+            Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+           }
+          }
+         }
+        }
+        VerticalLayoutWidgetClass "{6F1C2A9D4B7E3051}" {
+         Name "Leader"
+         Slot LayoutSlot "{6F1C2A9D4B7E3052}" {
+          Padding 56 0 0 0
+          VerticalAlign 1
+          SizeMode Fill
+          FillWeight 1
+         }
+          {
+          TextWidgetClass "{6F1C2A9D4B7E3053}" {
+           Name "LeaderLabel"
+           Text ""
+           "Font Size" 13
+           "Min Font Size" 13
+           Color 0.37 0.39 0.4 1
+           FontProperties FontProperties "{6F1C2A9D4B7E3054}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+          TextWidgetClass "{6F1C2A9D4B7E3055}" {
+           Name "LeaderName"
+           Text ""
+           "Font Size" 22
+           "Min Font Size" 22
+           Color 0.84 0.84 0.85 1
+           FontProperties FontProperties "{6F1C2A9D4B7E3056}" {
             Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
            }
           }

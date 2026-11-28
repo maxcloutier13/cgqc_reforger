@@ -36,6 +36,12 @@ class CGQC_GU_MemberSummary : Managed
 	string lastSeen;	// YYMMDD, "" if never connected
 	string statusBy;	// who set a manual status, "" when automatic
 	bool autoCreated;	// linked dossier made on first connection (merge candidate)
+	// Phase 3g
+	string instructorFor;	// "Q-MB, Q-SI", "7 qualifs", or "" when none
+	bool promotionPossible;	// only sent true to promotion.view holders
+	string promotionRank;	// "Cpl." with promotionPossible, else ""
+	// Phase 4f
+	string tonight;			// « Ce soir »: "S1-1", "Zeus", or "" when no seat
 }
 
 //! A rank for pickers (« + Nouveau dossier »).
@@ -80,6 +86,8 @@ class CGQC_GU_Requests
 	static const int MAX_SHORT = 48;
 	static const int MAX_NOTE = 500;
 	static const int MAX_BIO = 1500;
+
+	static const int MAX_LISTED_QUALS = 4;
 
 	//------------------------------------------------------------------------------------------------
 	static CGQC_GU_RequestResult Handle(CGQC_GU_Manager mgr, CGQC_GU_Member caller, string action, string payloadJson)
@@ -180,6 +188,16 @@ class CGQC_GU_Requests
 		CGQC_GU_RequestResult trainingResult = CGQC_GU_TrainingRequests.Handle(mgr, caller, action, p);
 		if (trainingResult)
 			return trainingResult;
+
+		// Phase 4: ORBAT.
+		CGQC_GU_RequestResult orbatResult = CGQC_GU_OrbatRequests.Handle(mgr, caller, action, p);
+		if (orbatResult)
+			return orbatResult;
+
+		// Phase 5: operations.
+		CGQC_GU_RequestResult opsResult = CGQC_GU_OperationRequests.Handle(mgr, caller, action, p);
+		if (opsResult)
+			return opsResult;
 
 		return Fail("unknown_action");
 	}
@@ -344,6 +362,7 @@ class CGQC_GU_Requests
 	protected static CGQC_GU_RequestResult MemberList(CGQC_GU_Manager mgr, CGQC_GU_Member caller)
 	{
 		array<ref CGQC_GU_MemberSummary> list = new array<ref CGQC_GU_MemberSummary>();
+		bool canPromotion = Can(mgr, caller, CGQC_GU_Rights.PROMOTION_POSSIBLE);
 		foreach (string uid, CGQC_GU_Member m : mgr.m_mMembers)
 		{
 			CGQC_GU_MemberSummary s = new CGQC_GU_MemberSummary();
@@ -374,6 +393,15 @@ class CGQC_GU_Requests
 				s.statusBy = CGQC_GU_DossierBuilder.SignerName(mgr, m.status.manualBy);
 
 			s.autoCreated = IsAutoCreated(m);
+			s.instructorFor = InstructorLabel(mgr.m_Catalogues, m);
+			s.tonight = CGQC_GU_OrbatRequests.SeatInfo(mgr, m.uid).callsign;
+
+			if (canPromotion && CGQC_GU_Quals.PromotionPossible(mgr.m_Catalogues, m))
+			{
+				s.promotionPossible = true;
+				CGQC_GU_Rank next = mgr.m_Catalogues.FindRank(CGQC_GU_Quals.NextPromotion(mgr.m_Catalogues, m).to);
+				s.promotionRank = next.abbr;
+			}
 
 			// Sorted by rank (most senior first), then by name.
 			int at = list.Count();
@@ -425,7 +453,25 @@ class CGQC_GU_Requests
 		ctx.WriteValue("ranks", ranks);
 		ctx.WriteValue("canEdit", canEdit);
 		ctx.WriteValue("entryRank", entryRank);
+		ctx.WriteValue("canPromotion", canPromotion);
 		return Ok("ok", ctx.Export());
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! « Instructeur pour »: the codes in catalogue order, counted when there are too many for the column.
+	protected static string InstructorLabel(CGQC_GU_Catalogues cat, CGQC_GU_Member m)
+	{
+		array<string> codes = new array<string>();
+		foreach (CGQC_GU_Qualification q : cat.m_aQualifications)
+		{
+			if (CGQC_GU_Quals.IsInstructorFor(m, q.code))
+				codes.Insert(q.code);
+		}
+
+		if (codes.Count() > MAX_LISTED_QUALS)
+			return string.Format("%1 qualifs", codes.Count());
+
+		return CGQC_GU_Str.Join(codes, ", ");
 	}
 
 	//------------------------------------------------------------------------------------------------

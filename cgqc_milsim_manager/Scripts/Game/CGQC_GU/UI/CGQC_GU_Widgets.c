@@ -91,6 +91,11 @@ class CGQC_GU_W
 		LayoutSlot.SetHorizontalAlign(box, LayoutHorizontalAlign.Left);
 		LayoutSlot.SetVerticalAlign(box, LayoutVerticalAlign.Center);
 		AlignableSlot.SetPadding(inner, 8, 2, 8, 2);
+		// The panel's background has the default image size, taller than a tag: let the text set the height.
+		ImageWidget fill = ImageWidget.Cast(box.FindAnyWidget("Bg"));
+		if (fill)
+			fill.SetSize(1, 1);
+
 		array<string> edges = { "EdgeT", "EdgeB", "EdgeL", "EdgeR" };
 		foreach (string edge : edges)
 		{
@@ -101,6 +106,53 @@ class CGQC_GU_W
 
 		Text(inner, text, CGQC_GU_Style.FONT_TITLE, size, color);
 		return box;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Tag with a drawn « up » triangle before its text. Returns the box.
+	static Widget TriangleTag(Widget parent, string text, Color color, int size = 12)
+	{
+		Widget box = Tag(parent, "", color, size);
+		if (!box)
+			return null;
+
+		Widget inner = box.FindAnyWidget("Inner");
+		Clear(inner);
+		Widget row = HBox(inner);
+		if (!row)
+			return box;
+
+		Widget mark = Triangle(row, color);
+		if (mark)
+			LayoutSlot.SetPadding(mark, 0, 0, 6, 0);
+
+		TextWidget t = Text(row, text, CGQC_GU_Style.FONT_TITLE, size, color);
+		if (t)
+			LayoutSlot.SetVerticalAlign(t, LayoutVerticalAlign.Center);
+
+		return box;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Small « up » triangle, drawn with bars: the game fonts have no ▲ glyph.
+	static Widget Triangle(Widget parent, Color color)
+	{
+		Widget stack = VBox(parent);
+		if (!stack)
+			return null;
+
+		LayoutSlot.SetVerticalAlign(stack, LayoutVerticalAlign.Center);
+		for (int i = 0; i < 5; i++)
+		{
+			ImageWidget bar = Dot(stack, 2, color);
+			if (!bar)
+				continue;
+
+			bar.SetSize(2 + 2 * i, 1.8);
+			LayoutSlot.SetHorizontalAlign(bar, LayoutHorizontalAlign.Center);
+		}
+
+		return stack;
 	}
 
 	//------------------------------------------------------------------------------------------------

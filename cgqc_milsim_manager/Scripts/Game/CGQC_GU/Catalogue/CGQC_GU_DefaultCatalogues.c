@@ -377,36 +377,120 @@ class CGQC_GU_DefaultCatalogues
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! A live-seat section (UPO): active, no elements, `count` seats « letter-n » from `first` at start.
+	static CGQC_GU_Section LiveSection(string id, string label, string letter, string kind, string role, int count, int first)
+	{
+		CGQC_GU_Section s = Section(id, label, letter, kind, true);
+		s.liveSeats = true;
+		s.seatRole = role;
+		s.defaultSeats = count;
+		s.firstNumber = first;
+		return s;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Hoplite layout (Spartan, Typhon), spec §6, with binôme colours.
 	protected static CGQC_GU_Section Hoplite(string id, string label, string letter, string kind, bool active)
 	{
 		CGQC_GU_Section s = Section(id, label, letter, kind, active);
 
-		CGQC_GU_Element e = Element(letter + "0", letter + "0");
-		e.seats.Insert(Seat(letter + "0-0", "SL", "white"));
-		e.seats.Insert(Seat(letter + "0-1", "Médic", "white"));
-		e.seats.Insert(Seat(letter + "0-2", "Ingénieur", "white"));
+		CGQC_GU_Element e = Element(letter + "0", "Élément SL");
+		e.seats.Insert(Seat(letter + "0-0", "chef_section", "white"));
+		e.seats.Insert(Seat(letter + "0-1", "medic", "white"));
+		e.seats.Insert(Seat(letter + "0-2", "ingenieur", "white"));
 		s.elements.Insert(e);
 
-		e = Element(letter + "1", letter + "1");
-		e.seats.Insert(Seat(letter + "1-0", "TL", "red"));
-		e.seats.Insert(Seat(letter + "1-1", "Fusilier", "red"));
-		e.seats.Insert(Seat(letter + "1-2", "MG", "green"));
-		e.seats.Insert(Seat(letter + "1-3", "Fusilier", "green"));
+		e = Element(letter + "1", "Équipe 1");
+		e.seats.Insert(Seat(letter + "1-0", "chef_equipe", "red"));
+		e.seats.Insert(Seat(letter + "1-1", "fusilier", "red"));
+		e.seats.Insert(Seat(letter + "1-2", "mitrailleur", "green"));
+		e.seats.Insert(Seat(letter + "1-3", "fusilier", "green"));
 		s.elements.Insert(e);
 
-		e = Element(letter + "2", letter + "2");
-		e.seats.Insert(Seat(letter + "2-0", "TL", "blue"));
-		e.seats.Insert(Seat(letter + "2-1", "Fusilier", "blue"));
-		e.seats.Insert(Seat(letter + "2-2", "MG", "yellow"));
-		e.seats.Insert(Seat(letter + "2-3", "Fusilier", "yellow"));
+		e = Element(letter + "2", "Équipe 2");
+		e.seats.Insert(Seat(letter + "2-0", "chef_equipe", "blue"));
+		e.seats.Insert(Seat(letter + "2-1", "fusilier", "blue"));
+		e.seats.Insert(Seat(letter + "2-2", "mitrailleur", "yellow"));
+		e.seats.Insert(Seat(letter + "2-3", "fusilier", "yellow"));
 		s.elements.Insert(e);
 
 		return s;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Units, sections and seats, spec §6.
+	protected static CGQC_GU_SeatRole SeatRole(string id, string label, string minRank)
+	{
+		CGQC_GU_SeatRole r = new CGQC_GU_SeatRole();
+		r.id = id;
+		r.label = label;
+		r.minRank = minRank;
+		return r;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Seat roles and their minimum rank (Phase 4, question 9). Mockup wording. Arès and Titan each
+	//! have their own Tireur and Commandant (Cpl. / Sgt.).
+	static void SeatRoles(array<ref CGQC_GU_SeatRole> roles)
+	{
+		roles.Insert(SeatRole("chef_section", "Chef de section", "adjum"));
+		roles.Insert(SeatRole("medic", "Médic", "cplc"));
+		roles.Insert(SeatRole("ingenieur", "Ingénieur", "cplc"));
+		roles.Insert(SeatRole("chef_equipe", "Chef d'équipe", "adju"));
+		roles.Insert(SeatRole("fusilier", "Fusilier", "sdt"));
+		roles.Insert(SeatRole("mitrailleur", "Mitrailleur", "cplc"));
+		roles.Insert(SeatRole("sniper", "Sniper", "sgt"));
+		roles.Insert(SeatRole("spotter", "Spotter", "sgt"));
+		roles.Insert(SeatRole("jtac", "JTAC", "adju"));
+		roles.Insert(SeatRole("drone_senior", "Drone (senior)", "sgt"));
+		roles.Insert(SeatRole("drone_junior", "Drone (junior)", "sgt"));
+		roles.Insert(SeatRole("antichar", "Antichar", "cpl"));
+		roles.Insert(SeatRole("assistant", "Assistant", "sdt"));
+		roles.Insert(SeatRole("tireur", "Tireur", "cpl"));
+		roles.Insert(SeatRole("commandant", "Commandant", "cpl"));
+		roles.Insert(SeatRole("conducteur", "Conducteur", "sgt"));
+		roles.Insert(SeatRole("tireur_blinde", "Tireur", "sgt"));
+		roles.Insert(SeatRole("commandant_blinde", "Commandant", "sgt"));
+		roles.Insert(SeatRole("pilote", "Pilote", "adju"));
+		roles.Insert(SeatRole("equipage", "Équipage", "cpl"));
+		roles.Insert(SeatRole("instructeur", "Instructeur", ""));
+		roles.Insert(SeatRole("eleve", "Élève", ""));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Seat role words of the first units.json (before Phase 4a) that are not the label of the new id.
+	static string LegacyRoleId(string oldRole)
+	{
+		switch (oldRole)
+		{
+			case "SL": return "chef_section";
+			case "TL": return "chef_equipe";
+			case "MG": return "mitrailleur";
+		}
+
+		return string.Empty;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Section kinds and element labels of the first units.json (before Phase 4a): replaced by the mockup
+	//! wording only while the file still holds them.
+	static string LegacyKind(string sectionId)
+	{
+		switch (sectionId)
+		{
+			case "zeus": return "Haut commandement";
+			case "spartan": return "Hoplite, 1re section";
+			case "typhon": return "Hoplite, 2e section";
+			case "argos": return "Recon";
+			case "titan": return "Blindés";
+			case "phoenix": return "Air";
+			case "upo_instructeurs": return "Instruction";
+		}
+
+		return string.Empty;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Units, sections and seats, spec §6, with the mockup wording (Phase 4a).
 	static void Units(array<ref CGQC_GU_Unit> units)
 	{
 		CGQC_GU_Unit cgqc = new CGQC_GU_Unit();
@@ -414,87 +498,83 @@ class CGQC_GU_DefaultCatalogues
 		cgqc.label = "CGQC";
 		cgqc.fullName = "Corps de Garde du Québec";
 		cgqc.patch = "cgqc";
+		cgqc.faction = "CGQC";
 
-		CGQC_GU_Section zeus = Section("zeus", "Zeus", "Z", "Haut commandement");
+		CGQC_GU_Section zeus = Section("zeus", "Zeus", "Z", "Haut commandement · conçoit la mission, joue l'état-major et l'ennemi");
 		zeus.command = true;
 		cgqc.sections.Insert(zeus);
 
-		cgqc.sections.Insert(Hoplite("spartan", "Spartan", "S", "Hoplite, 1re section", true));
-		cgqc.sections.Insert(Hoplite("typhon", "Typhon", "T", "Hoplite, 2e section", false));
+		cgqc.sections.Insert(Hoplite("spartan", "Spartan", "S", "Hoplite · 1re section, section de pointe", true));
+		cgqc.sections.Insert(Hoplite("typhon", "Typhon", "T", "Hoplite · 2e section, appui et flancs", false));
 
-		CGQC_GU_Section s = Section("argos", "Argos", "R", "Recon");
+		CGQC_GU_Section s = Section("argos", "Argos", "R", "Reconnaissance");
 		CGQC_GU_Element e = Element("R1", "Orion");
-		e.seats.Insert(Seat("R1-1", "Sniper"));
-		e.seats.Insert(Seat("R1-2", "Spotter"));
+		e.seats.Insert(Seat("R1-1", "sniper"));
+		e.seats.Insert(Seat("R1-2", "spotter"));
 		s.elements.Insert(e);
 		e = Element("R2", "Hades");
-		e.seats.Insert(Seat("R2-1", "JTAC"));
+		e.seats.Insert(Seat("R2-1", "jtac"));
 		s.elements.Insert(e);
 		e = Element("R3", "Cyclope");
-		e.seats.Insert(Seat("R3-1", "Drone (senior)"));
-		e.seats.Insert(Seat("R3-2", "Drone (junior)"));
+		e.seats.Insert(Seat("R3-1", "drone_senior"));
+		e.seats.Insert(Seat("R3-2", "drone_junior"));
 		s.elements.Insert(e);
 		cgqc.sections.Insert(s);
 
 		s = Section("ares", "Arès", "A", "Armes lourdes");
 		e = Element("A1", "Atlas");
-		e.seats.Insert(Seat("A1-1", "Antichar"));
-		e.seats.Insert(Seat("A1-2", "Assistant"));
+		e.seats.Insert(Seat("A1-1", "antichar"));
+		e.seats.Insert(Seat("A1-2", "assistant"));
 		s.elements.Insert(e);
 		e = Element("A2", "Achille");
-		e.seats.Insert(Seat("A2-1", "Mitrailleur"));
-		e.seats.Insert(Seat("A2-2", "Assistant"));
+		e.seats.Insert(Seat("A2-1", "mitrailleur"));
+		e.seats.Insert(Seat("A2-2", "assistant"));
 		s.elements.Insert(e);
 		e = Element("A3", "Kronos");
-		e.seats.Insert(Seat("A3-1", "Tireur"));
-		e.seats.Insert(Seat("A3-2", "Commandant"));
+		e.seats.Insert(Seat("A3-1", "tireur"));
+		e.seats.Insert(Seat("A3-2", "commandant"));
 		s.elements.Insert(e);
 		cgqc.sections.Insert(s);
 
-		s = Section("titan", "Titan", "B", "Blindés");
+		s = Section("titan", "Titan", "B", "Véhicules blindés");
 		e = Element("B1", "Cerbère");
-		e.seats.Insert(Seat("B1-1", "Conducteur"));
-		e.seats.Insert(Seat("B1-2", "Tireur"));
-		e.seats.Insert(Seat("B1-3", "Commandant"));
+		e.seats.Insert(Seat("B1-1", "conducteur"));
+		e.seats.Insert(Seat("B1-2", "tireur_blinde"));
+		e.seats.Insert(Seat("B1-3", "commandant_blinde"));
 		s.elements.Insert(e);
 		e = Element("B2", "Centaure");
-		e.seats.Insert(Seat("B2-1", "Conducteur"));
-		e.seats.Insert(Seat("B2-2", "Tireur"));
-		e.seats.Insert(Seat("B2-3", "Commandant"));
+		e.seats.Insert(Seat("B2-1", "conducteur"));
+		e.seats.Insert(Seat("B2-2", "tireur_blinde"));
+		e.seats.Insert(Seat("B2-3", "commandant_blinde"));
 		s.elements.Insert(e);
 		cgqc.sections.Insert(s);
 
-		s = Section("phoenix", "Phoenix", "P", "Air");
+		s = Section("phoenix", "Phoenix", "P", "Aérien");
 		e = Element("P1", "Griffon");
-		e.seats.Insert(Seat("P1-1", "Pilote"));
-		e.seats.Insert(Seat("P1-2", "Équipage"));
-		e.seats.Insert(Seat("P1-3", "Équipage"));
+		e.seats.Insert(Seat("P1-1", "pilote"));
+		e.seats.Insert(Seat("P1-2", "equipage"));
+		e.seats.Insert(Seat("P1-3", "equipage"));
 		s.elements.Insert(e);
 		e = Element("P2", "Pégase");
-		e.seats.Insert(Seat("P2-1", "Pilote"));
-		e.seats.Insert(Seat("P2-2", "Équipage"));
-		e.seats.Insert(Seat("P2-3", "Équipage"));
+		e.seats.Insert(Seat("P2-1", "pilote"));
+		e.seats.Insert(Seat("P2-2", "equipage"));
+		e.seats.Insert(Seat("P2-3", "equipage"));
 		s.elements.Insert(e);
 		cgqc.sections.Insert(s);
 
 		units.Insert(cgqc);
 
-		// UPO: instructor seats I-1..I-4; student seats E-x have no fixed count and are created on assignment.
+		// UPO (owner, 4e test): live seats, added and removed during the game. Instructors I-0 (the teacher,
+		// group leader) and I-1; students E-1 to E-16.
 		CGQC_GU_Unit upo = new CGQC_GU_Unit();
 		upo.id = "upo";
 		upo.label = "UPO";
 		upo.fullName = "Unité de Préparation Opérationnelle";
 		upo.patch = "upo";
-		s = Section("upo_instructeurs", "Instructeurs", "I", "Instruction", true);
-		e = Element("I", "Instructeurs");
-		e.seats.Insert(Seat("I-1", "Instructeur"));
-		e.seats.Insert(Seat("I-2", "Instructeur"));
-		e.seats.Insert(Seat("I-3", "Instructeur"));
-		e.seats.Insert(Seat("I-4", "Instructeur"));
-		s.elements.Insert(e);
-		upo.sections.Insert(s);
-		s = Section("upo_eleves", "Élèves", "E", "Instruction", true);
-		upo.sections.Insert(s);
+		upo.faction = "CGQC_UPO";
+		upo.noRankCheck = true;
+		upo.sections.Insert(LiveSection("upo_instructeurs", "Instructeurs", "I", "Encadrement de la séance", "instructeur", 2, 0));
+		upo.sections.Insert(LiveSection("upo_eleves", "Élèves", "E", "Instruction", "eleve", 16, 1));
 		units.Insert(upo);
 
 		CGQC_GU_Unit grit = new CGQC_GU_Unit();
@@ -502,6 +582,7 @@ class CGQC_GU_DefaultCatalogues
 		grit.label = "GRIT";
 		grit.fullName = "Groupe de Réaction et d'Intervention Tactique";
 		grit.patch = "grit";
+		grit.faction = "CGQC_GRIT";
 		grit.state = "a_venir";
 		units.Insert(grit);
 	}

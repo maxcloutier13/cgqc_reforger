@@ -132,10 +132,18 @@ class CGQC_GU_Distinction : Managed
 
 //------------------------------------------------------------------------------------------------
 // units.json
+//! A seat role (« Rôle de la place »). minRank "" = no minimum (never HORS GRADE).
+class CGQC_GU_SeatRole : Managed
+{
+	string id;
+	string label;
+	string minRank;
+}
+
 class CGQC_GU_Seat : Managed
 {
 	string callsign;
-	string role;
+	string role;		// a seatRoles id ("fusilier"); a label or free text also works, with no minimum rank
 	string binome;		// white | red | green | blue | yellow | "" (Spartan and Typhon only)
 }
 
@@ -154,6 +162,12 @@ class CGQC_GU_Section : Managed
 	string kind;			// e.g. "Hoplite, 1re section"
 	bool activeByDefault;
 	bool command;			// Zeus / high command: shown apart, not in the field chain
+	// Live seats (UPO, 4e): no fixed elements; « letter-n » seats are added and removed during the game,
+	// reset to defaultSeats at every server start. firstNumber 0 = « I-0 », the leader (teacher).
+	bool liveSeats;
+	int defaultSeats;
+	int firstNumber;
+	string seatRole;
 	ref array<ref CGQC_GU_Element> elements = new array<ref CGQC_GU_Element>();
 }
 
@@ -164,5 +178,7 @@ class CGQC_GU_Unit : Managed
 	string fullName;
 	string patch;
 	string state = "actif";	// actif | a_venir
+	string faction;			// game faction key: CGQC | CGQC_UPO | CGQC_GRIT (groups, Phase 4b)
+	bool noRankCheck;		// true for UPO: no minimum rank, never HORS GRADE
 	ref array<ref CGQC_GU_Section> sections = new array<ref CGQC_GU_Section>();
 }

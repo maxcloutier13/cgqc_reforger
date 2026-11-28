@@ -11,6 +11,7 @@ class CGQC_GU_Ui
 	protected static ref array<Widget> s_aHidden = new array<Widget>();
 	// True while the player is inside Gestion d'unité: FERMER on a paper screen goes back to it.
 	protected static bool s_bMenuSession;
+	protected static ref ScriptInvoker s_OnBackToPause = new ScriptInvoker();
 
 	//------------------------------------------------------------------------------------------------
 	//! Opens the Gestion d'unité menu and starts a menu session.
@@ -33,6 +34,14 @@ class CGQC_GU_Ui
 
 		s_bMenuSession = false;
 		CloseCurrent();
+		s_OnBackToPause.Invoke();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Back on the pause menu from a screen: the overview panel asks the server again (4f: seat, leader).
+	static ScriptInvoker GetOnBackToPause()
+	{
+		return s_OnBackToPause;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -367,6 +376,10 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_MembersScreen());
 				break;
 
+			case CGQC_GU_ERailTab.ORBAT:
+				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_OrbatScreen());
+				break;
+
 			case CGQC_GU_ERailTab.CAT_QUALS:
 				CGQC_GU_Ui.OpenNextFrame(new CGQC_GU_QualCatalogueScreen());
 				break;
@@ -411,7 +424,7 @@ class CGQC_GU_PaperScreen : CGQC_GU_Screen
 		RailSection("UNITÉ");
 		// Everyone reads the member list; the screen offers the edits to members.edit holders only.
 		RailTab("MEMBRES", CGQC_GU_ERailTab.MEMBERS, true);
-		RailTab("ORBAT", CGQC_GU_ERailTab.ORBAT);
+		RailTab("ORBAT", CGQC_GU_ERailTab.ORBAT, true);
 		RailTab("LISTE DES QUALIFICATIONS", CGQC_GU_ERailTab.CAT_QUALS, true);
 		RailTab("LISTE DES EXERCICES", CGQC_GU_ERailTab.CAT_EXERCISES, true);
 		RailTab("LISTE DES DISTINCTIONS", CGQC_GU_ERailTab.CAT_AWARDS);

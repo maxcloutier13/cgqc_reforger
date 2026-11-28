@@ -12,7 +12,9 @@ class CGQC_GU_Manager
 	ref CGQC_GU_News m_News;
 	ref CGQC_GU_Calendar m_Calendar;
 	ref CGQC_GU_OrbatLive m_OrbatLive;
+	ref CGQC_GU_OrbatGroups m_Groups = new CGQC_GU_OrbatGroups();
 	ref map<string, ref CGQC_GU_Training> m_mTrainings = new map<string, ref CGQC_GU_Training>();
+	ref map<string, ref CGQC_GU_Operation> m_mOperations = new map<string, ref CGQC_GU_Operation>();
 
 	protected ref map<int, string> m_mPlayerToUid = new map<int, string>();
 	protected ref set<string> m_sDirtyMembers = new set<string>();
@@ -43,6 +45,7 @@ class CGQC_GU_Manager
 			return;
 
 		s_Instance.SaveAll();
+		s_Instance.m_Groups.Stop();
 		GetGame().GetCallqueue().Remove(s_Instance.Autosave);
 		s_Instance = null;
 	}
@@ -70,6 +73,7 @@ class CGQC_GU_Manager
 		m_News = CGQC_GU_Storage.LoadNews();
 		m_Calendar = CGQC_GU_Storage.LoadCalendar();
 		CGQC_GU_Storage.LoadAllTrainings(m_mTrainings);
+		CGQC_GU_Storage.LoadAllOperations(m_mOperations);
 
 		m_OrbatLive = CGQC_GU_Storage.LoadOrbatLive();
 		if (!m_OrbatLive)
@@ -85,6 +89,21 @@ class CGQC_GU_Manager
 			}
 			CGQC_GU_Storage.SaveOrbatLive(m_OrbatLive);
 		}
+		else
+		{
+			// Seats change from game to game: seats, role choices and locks go; sections and renames stay.
+			int seats = m_OrbatLive.assignments.Count();
+			int roles = m_OrbatLive.roles.Count();
+			m_OrbatLive.assignments.Clear();
+			m_OrbatLive.roles.Clear();
+			CGQC_GU_Storage.SaveOrbatLive(m_OrbatLive);
+			if (seats > 0 || roles > 0)
+				CGQC_GU_Log.Info(string.Format("ORBAT : %1 place(s) et %2 rôle(s) choisi(s) effacés au démarrage ; %3 section(s) active(s) conservée(s).", seats, roles, m_OrbatLive.activeSections.Count()));
+		}
+
+		// UPO live seats (4e): back to the catalogue's default count at every start.
+		CGQC_GU_OrbatRequests.ResetLiveSeats(this);
+		CGQC_GU_Storage.SaveOrbatLive(m_OrbatLive);
 
 		RecomputeAllStatuses();
 
@@ -93,14 +112,16 @@ class CGQC_GU_Manager
 			autosave = 30;
 
 		GetGame().GetCallqueue().CallLater(Autosave, autosave * 1000, true);
-		CGQC_GU_Log.Info(string.Format("Démarré : %1 dossiers et %2 séances chargés depuis %3.", m_mMembers.Count(), m_mTrainings.Count(), CGQC_GU_Storage.ROOT));
+		CGQC_GU_Log.Info(string.Format("Démarré : %1 dossiers, %2 séances et %3 ordres chargés depuis %4.", m_mMembers.Count(), m_mTrainings.Count(), m_mOperations.Count(), CGQC_GU_Storage.ROOT));
 
 		// Players registered before the game started (the Workbench / listen host) missed
 		// OnPlayerRegistered while the manager did not exist yet: pick them up now.
 		array<int> players = new array<int>();
+		m_Groups.Init();
 		GetGame().GetPlayerManager().GetPlayers(players);
 		foreach (int playerId : players)
 		{
+			m_Groups.OnPlayerRegistered(playerId);
 			TryIdentify(playerId, false);
 		}
 	}
@@ -211,6 +232,19 @@ class CGQC_GU_Manager
 			return null;
 
 		return FindMember(uid);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! 0 when the member is offline.
+	int GetPlayerIdForUid(string uid)
+	{
+		foreach (int playerId, string boundUid : m_mPlayerToUid)
+		{
+			if (boundUid == uid)
+				return playerId;
+		}
+
+		return 0;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -549,6 +583,7 @@ class CGQC_GU_Manager
 	//------------------------------------------------------------------------------------------------
 	void OnPlayerRegistered(int playerId)
 	{
+		m_Groups.OnPlayerRegistered(playerId);
 		TryIdentify(playerId, false);
 	}
 
@@ -563,6 +598,11 @@ class CGQC_GU_Manager
 	{
 		m_sAwaitingUid.RemoveItem(playerId);
 		CGQC_GU_Member m = GetMemberForPlayer(playerId);
+		string goneUid;
+		if (m)
+			goneUid = m.uid;
+
+		m_Groups.OnPlayerDisconnected(this, playerId, goneUid);
 		m_mPlayerToUid.Remove(playerId);
 		if (m)
 		{
@@ -660,6 +700,7 @@ class CGQC_GU_Manager
 		CGQC_GU_Log.Info(string.Format("Connecté : %1 -> dossier %2", profileName, uid));
 		SendLightState(playerId);
 		BroadcastLightState();
+		m_Groups.OnPlayerBound(playerId);
 	}
 
 	//------------------------------------------------------------------------------------------------

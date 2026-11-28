@@ -515,7 +515,8 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		array<string> groups = new array<string>();
 		foreach (CGQC_GU_Check c : m_Body.m_aChecks)
 		{
-			if (c.IsChecked())
+			// The promotion criteria are read-only boxes with no id.
+			if (c.IsChecked() && !c.GetId().IsEmpty())
 				groups.Insert(c.GetId());
 		}
 
@@ -565,6 +566,7 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 				LayoutSlot.SetPadding(who, 18, 0, 0, 0);
 				LayoutSlot.SetVerticalAlign(who, LayoutVerticalAlign.Center);
 				CGQC_GU_W.Text(who, m_Dto.rankAbbr + " " + m_Dto.displayName, CGQC_GU_Style.FONT_TITLE, 30, CGQC_GU_Style.Ink());
+				CGQC_GU_W.Text(who, m_Dto.callsign, CGQC_GU_Style.FONT_VALUE, 20, CGQC_GU_Style.Ink());
 				CGQC_GU_W.Text(who, m_Dto.rankLabel, CGQC_GU_Style.FONT_LABEL, 19, CGQC_GU_Style.InkSoft());
 			}
 		}
@@ -586,6 +588,10 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 			if (pt)
 				LayoutSlot.SetPadding(pt, 8, 0, 0, 0);
 		}
+
+		TextWidget tonight = CGQC_GU_W.Text(f, m_Dto.tonight, CGQC_GU_Style.FONT_LABEL, 17, CGQC_GU_Style.InkSoft());
+		if (tonight)
+			LayoutSlot.SetPadding(tonight, 0, 4, 0, 0);
 
 		CGQC_GU_W.Caption(f, "STATUT");
 		CGQC_GU_W.Text(f, m_Dto.status, CGQC_GU_Style.FONT_TITLE, 17, CGQC_GU_Style.StatusColor(CGQC_GU_Str.Lower(m_Dto.status)));
@@ -1200,30 +1206,86 @@ class CGQC_GU_DossierScreen : CGQC_GU_PaperScreen
 		if (rt)
 			LayoutSlot.SetHorizontalAlign(rt, LayoutHorizontalAlign.Stretch);
 
+		BuildNextPromotion(col);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! « Prochaine promotion » box: a read-only box and a state tag per criterion, and the
+	//! « Promotion possible » tag (the server only sends it to promotion.view holders).
+	protected void BuildNextPromotion(Widget col)
+	{
 		if (m_Dto.nextRank.IsEmpty())
 			return;
 
-		string next = "PROCHAIN GRADE : " + CGQC_GU_Str.Upper(m_Dto.nextRank);
-		if (m_Dto.nextAutomatic)
-			next = next + " · AUTOMATIQUE";
+		Widget box = CGQC_GU_W.Panel(col);
+		if (!box)
+			return;
 
-		CGQC_GU_W.Caption(col, next, 16);
+		LayoutSlot.SetHorizontalAlign(box.GetParent(), LayoutHorizontalAlign.Stretch);
+		LayoutSlot.SetPadding(box.GetParent(), 0, 14, 0, 0);
+		AlignableSlot.SetPadding(box, 14, 10, 14, 10);
+
+		Widget head = CGQC_GU_W.HBox(box);
+		if (!head)
+			return;
+
+		LayoutSlot.SetHorizontalAlign(head, LayoutHorizontalAlign.Stretch);
+		LayoutSlot.SetPadding(head, 0, 0, 0, 6);
+
+		string title = "PROCHAINE PROMOTION — " + CGQC_GU_Str.UpperFr(m_Dto.nextRank);
+		if (m_Dto.nextAutomatic)
+			title = title + " · AUTOMATIQUE";
+
+		TextWidget t = CGQC_GU_W.Text(head, title, CGQC_GU_Style.FONT_TITLE, 15, CGQC_GU_Style.Ink(), true);
+		if (t)
+		{
+			LayoutSlot.SetSizeMode(t, LayoutSizeMode.Fill);
+			LayoutSlot.SetVerticalAlign(t, LayoutVerticalAlign.Center);
+		}
+
+		if (m_Dto.promotionPossible)
+		{
+			Widget flag = CGQC_GU_W.TriangleTag(head, "PROMOTION POSSIBLE", CGQC_GU_Style.Blue(), 13);
+			if (flag)
+				LayoutSlot.SetPadding(flag, 10, 0, 0, 0);
+		}
+
 		foreach (CGQC_GU_CriterionLine c : m_Dto.criteria)
 		{
-			Widget line = CGQC_GU_W.HBox(col);
+			Widget line = CGQC_GU_W.HBox(box);
 			if (!line)
 				continue;
 
-			LayoutSlot.SetPadding(line, 0, 2, 0, 2);
-			Color dot = CGQC_GU_Style.Offline();
-			if (c.met)
-				dot = CGQC_GU_Style.Online();
+			LayoutSlot.SetHorizontalAlign(line, LayoutHorizontalAlign.Stretch);
+			LayoutSlot.SetPadding(line, 0, 3, 0, 3);
 
-			CGQC_GU_W.Dot(line, 9, dot);
-			TextWidget t = CGQC_GU_W.Text(line, c.text, CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.InkSoft());
-			if (t)
-				LayoutSlot.SetPadding(t, 10, 0, 0, 0);
+			CGQC_GU_Check check = CGQC_GU_Check.Create(line, "", c.label, c.met);
+			if (check)
+			{
+				check.SetReadOnly();
+				check.SetPanelStyle(CGQC_GU_Style.FONT_VALUE, 16, true);
+				LayoutSlot.SetSizeMode(check.GetRootWidget(), LayoutSizeMode.Fill);
+				LayoutSlot.SetVerticalAlign(check.GetRootWidget(), LayoutVerticalAlign.Center);
+				m_Body.m_aChecks.Insert(check);
+			}
+
+			Widget tag = CGQC_GU_W.Tag(line, c.state, CriterionColor(c.kind));
+			if (tag)
+				LayoutSlot.SetPadding(tag, 10, 0, 0, 0);
 		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static Color CriterionColor(string kind)
+	{
+		switch (kind)
+		{
+			case "ok":	return CGQC_GU_Style.Blue();
+			case "ko":	return CGQC_GU_Style.Red();
+			case "cur":	return CGQC_GU_Style.InkSoft();
+		}
+
+		return CGQC_GU_Style.BadgeDim();
 	}
 
 	//------------------------------------------------------------------------------------------------

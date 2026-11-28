@@ -25,6 +25,8 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	protected bool m_bArmed;
 	protected bool m_bEnabled = true;
 	protected bool m_bDark;
+	protected Widget m_wMark;		// drawn « up » triangle before the label
+	protected ref Color m_EdgeColor;	// outline of a plain paper button, Rule when null
 
 	// Only one confirm button may be armed at a time: arming another one disarms the previous.
 	protected static CGQC_GU_Button s_Armed;
@@ -111,6 +113,33 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 	{
 		m_TextColor = color;
 		m_bTextColor = true;
+		Refresh();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Compact paper button with a drawn « up » triangle, outline and label in one accent colour
+	//! (« Promotion possible »). Call after SetCompact.
+	void SetTriangleAccent(Color color)
+	{
+		m_EdgeColor = color;
+		m_TextColor = color;
+		m_bTextColor = true;
+
+		if (m_wRoot)
+		{
+			Widget body = m_wRoot.FindAnyWidget("Body");
+			m_wMark = CGQC_GU_W.Triangle(body, color);
+		}
+
+		if (m_wMark)
+		{
+			AlignableSlot.SetHorizontalAlign(m_wMark, LayoutHorizontalAlign.Left);
+			AlignableSlot.SetVerticalAlign(m_wMark, LayoutVerticalAlign.Center);
+			AlignableSlot.SetPadding(m_wMark, 12, 0, 0, 0);
+			if (m_wLabel)
+				AlignableSlot.SetPadding(m_wLabel, 29, 5, 12, 5);
+		}
+
 		Refresh();
 	}
 
@@ -267,8 +296,23 @@ class CGQC_GU_Button : ScriptedWidgetEventHandler
 		foreach (Widget edge : m_aEdges)
 		{
 			edge.SetVisible(outline);
-			if (outline)
+			if (!outline)
+				continue;
+
+			if (m_EdgeColor)
+				edge.SetColor(m_EdgeColor);
+			else
 				edge.SetColor(CGQC_GU_Style.Rule());
+		}
+
+		if (m_wMark)
+		{
+			Widget bar = m_wMark.GetChildren();
+			while (bar)
+			{
+				bar.SetColor(fg);
+				bar = bar.GetSibling();
+			}
 		}
 
 		if (m_wLabel)

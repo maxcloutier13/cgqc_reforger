@@ -1,6 +1,6 @@
 // Gestion d'unité - Unité → Membres (paper), spec §5 "Unité (paper)", Phase 1e.
-// The member table (online, name, rank, access, last connection, status, profile), the filters,
-// « + Nouveau dossier », the manual status and « Lier un profil » (typed UID or merge of an auto-created
+// The member table (online, name, rank, access, « Instructeur pour », last connection, status,
+// profile), the filters (« Promotion possible » for promotion.view holders), « + Nouveau dossier », the manual status and « Lier un profil » (typed UID or merge of an auto-created
 // Cadet dossier). Everything shown comes from the server's "member.list" reply; every write is a double
 // press and is checked again on the server. After a write the list is read again.
 
@@ -32,6 +32,16 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	static const int ROW_PAGE = 12;
 	static const int MERGE_PAGE = 8;
 
+	// Table column widths (the online dot and the gaps between columns come on top).
+	static const int W_NAME = 260;
+	static const int W_RANK = 90;
+	static const int W_ACCESS = 180;
+	static const int W_TEACH = 250;
+	static const int W_TONIGHT = 80;
+	static const int W_SEEN = 190;
+	static const int W_STATUS = 230;
+	static const int W_PROFILE = 180;
+
 	static const int PANEL_NONE = 0;
 	static const int PANEL_CREATE = 1;
 	static const int PANEL_LINK = 2;
@@ -45,6 +55,7 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 	protected ref array<ref CGQC_GU_MemberSummary> m_aMembers;
 	protected ref array<ref CGQC_GU_RankChoice> m_aRanks;
 	protected bool m_bCanEdit;
+	protected bool m_bCanPromotion;
 	protected string m_sEntryRank;
 
 	protected int m_iListReq;
@@ -214,8 +225,14 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 			ctx.ReadValue("canEdit", canEdit);
 			string entryRank;
 			ctx.ReadValue("entryRank", entryRank);
+			bool canPromotion;
+			ctx.ReadValue("canPromotion", canPromotion);
 
 			m_aMembers = members;
+			m_bCanPromotion = canPromotion;
+			if (!m_bCanPromotion && m_sFilter == "promo")
+				m_sFilter = "tous";
+
 			m_aRanks = ranks;
 			m_bCanEdit = canEdit;
 			m_sEntryRank = entryRank;
@@ -469,6 +486,7 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		{
 			case "tous":	return true;
 			case "enligne":	return m.online;
+			case "promo":	return m.promotionPossible;
 		}
 
 		return m.status == filter;
@@ -484,27 +502,43 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 
 		for (int i = 0; i < m_aFilters.Count(); i++)
 		{
-			string label = m_aFilterLabels[i];
-			if (m_aMembers)
-			{
-				int n = 0;
-				foreach (CGQC_GU_MemberSummary m : m_aMembers)
-				{
-					if (Matches(m, m_aFilters[i]))
-						n++;
-				}
-
-				label = string.Format("%1 (%2)", label, n);
-			}
-
-			CGQC_GU_Button b = Btn(m_Filters, row, label, "filter", m_aFilters[i]);
-			if (!b)
-				continue;
-
-			b.SetSelected(m_aFilters[i] == m_sFilter);
-			if (i > 0)
+			CGQC_GU_Button b = FilterButton(row, m_aFilterLabels[i], m_aFilters[i]);
+			if (b && i > 0)
 				LayoutSlot.SetPadding(b.GetRootWidget(), 8, 0, 0, 0);
 		}
+
+		if (!m_bCanPromotion)
+			return;
+
+		CGQC_GU_Button promo = FilterButton(row, "PROMOTION POSSIBLE", "promo");
+		if (!promo)
+			return;
+
+		promo.SetTriangleAccent(CGQC_GU_Style.Blue());
+		LayoutSlot.SetPadding(promo.GetRootWidget(), 8, 0, 0, 0);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! A filter with its member count.
+	protected CGQC_GU_Button FilterButton(Widget row, string label, string filter)
+	{
+		if (m_aMembers)
+		{
+			int n = 0;
+			foreach (CGQC_GU_MemberSummary m : m_aMembers)
+			{
+				if (Matches(m, filter))
+					n++;
+			}
+
+			label = string.Format("%1 (%2)", label, n);
+		}
+
+		CGQC_GU_Button b = Btn(m_Filters, row, label, "filter", filter);
+		if (b)
+			b.SetSelected(filter == m_sFilter);
+
+		return b;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -812,12 +846,14 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		ResourceName f = CGQC_GU_Style.FONT_TITLE;
 		Color c = CGQC_GU_Style.InkMuted();
 		Cell(row, "", 26, f, 14, c);
-		Cell(row, "NOM", 340, f, 14, c);
-		Cell(row, "GRADE", 110, f, 14, c);
-		Cell(row, "ACCÈS", 180, f, 14, c);
-		Cell(row, "DERNIÈRE CONNEXION", 200, f, 14, c);
-		Cell(row, "STATUT", 300, f, 14, c);
-		Cell(row, "PROFIL", 220, f, 14, c);
+		Cell(row, "NOM", W_NAME, f, 14, c);
+		Cell(row, "GRADE", W_RANK, f, 14, c);
+		Cell(row, "ACCÈS", W_ACCESS, f, 14, c);
+		Cell(row, "INSTRUCTEUR POUR", W_TEACH, f, 14, c);
+		Cell(row, "CE SOIR", W_TONIGHT, f, 14, c);
+		Cell(row, "DERNIÈRE CONNEXION", W_SEEN, f, 14, c);
+		Cell(row, "STATUT", W_STATUS, f, 14, c);
+		Cell(row, "PROFIL", W_PROFILE, f, 14, c);
 		CGQC_GU_W.Rule(list, 0, 2);
 	}
 
@@ -838,12 +874,31 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 			OnlineDot(dotBox, m.online);
 		}
 
-		// Name: opens the dossier
-		Widget nameBox = CellBox(row, 340);
-		Btn(m_List, nameBox, m.displayName, "open", m.uid);
+		// Name: opens the dossier. « ▲ Cpl. » when a promotion is possible.
+		Widget nameBox = CellBox(row, W_NAME);
+		Widget nameRow = CGQC_GU_W.HBox(nameBox);
+		Btn(m_List, nameRow, m.displayName, "open", m.uid);
+		if (m.promotionPossible)
+		{
+			Widget flag = CGQC_GU_W.TriangleTag(nameRow, m.promotionRank, CGQC_GU_Style.Blue());
+			if (flag)
+				LayoutSlot.SetPadding(flag, 10, 0, 0, 0);
+		}
 
-		CellText(row, m.rankAbbr, 110, CGQC_GU_Style.FONT_TITLE, 16, CGQC_GU_Style.Ink());
-		CellText(row, CGQC_GU_Str.Upper(m.accessLabel), 180, CGQC_GU_Style.FONT_LABEL, 16, CGQC_GU_Style.InkSoft());
+		CellText(row, m.rankAbbr, W_RANK, CGQC_GU_Style.FONT_TITLE, 16, CGQC_GU_Style.Ink());
+		CellText(row, CGQC_GU_Str.Upper(m.accessLabel), W_ACCESS, CGQC_GU_Style.FONT_LABEL, 16, CGQC_GU_Style.InkSoft());
+
+		string teach = m.instructorFor;
+		if (teach.IsEmpty())
+			teach = "—";
+
+		CellText(row, teach, W_TEACH, CGQC_GU_Style.FONT_VALUE, 15, CGQC_GU_Style.InkSoft());
+
+		string tonight = m.tonight;
+		if (tonight.IsEmpty())
+			tonight = "—";
+
+		CellText(row, tonight, W_TONIGHT, CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.Ink());
 
 		string seen = "—";
 		if (m.online)
@@ -851,20 +906,20 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		else if (!m.lastSeen.IsEmpty())
 			seen = m.lastSeen;
 
-		CellText(row, seen, 200, CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.InkSoft());
+		CellText(row, seen, W_SEEN, CGQC_GU_Style.FONT_VALUE, 16, CGQC_GU_Style.InkSoft());
 
 		// Status: staff change it here (manual override, KIA included)
 		Color statusColor = CGQC_GU_Style.StatusColor(m.status);
 		if (m_bCanEdit)
 		{
-			Widget statusBox = CellBox(row, 300);
+			Widget statusBox = CellBox(row, W_STATUS);
 			CGQC_GU_Button sb = Btn(m_List, statusBox, StatusText(m), "status.open", m.uid);
 			if (sb)
 				sb.SetTextColor(statusColor);
 		}
 		else
 		{
-			CellText(row, StatusText(m), 300, CGQC_GU_Style.FONT_TITLE, 15, statusColor);
+			CellText(row, StatusText(m), W_STATUS, CGQC_GU_Style.FONT_TITLE, 15, statusColor);
 		}
 
 		// Profile: PROFIL NON LIÉ opens « Lier un profil » (staff)
@@ -872,12 +927,12 @@ class CGQC_GU_MembersScreen : CGQC_GU_PaperScreen
 		{
 			if (m_bCanEdit)
 			{
-				Widget linkBox = CellBox(row, 220);
+				Widget linkBox = CellBox(row, W_PROFILE);
 				Btn(m_List, linkBox, "PROFIL NON LIÉ", "link.open", m.uid, false, CGQC_GU_EButtonKind.DANGER);
 			}
 			else
 			{
-				CellText(row, "PROFIL NON LIÉ", 220, CGQC_GU_Style.FONT_TITLE, 15, CGQC_GU_Style.Red());
+				CellText(row, "PROFIL NON LIÉ", W_PROFILE, CGQC_GU_Style.FONT_TITLE, 15, CGQC_GU_Style.Red());
 			}
 		}
 

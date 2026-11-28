@@ -10,6 +10,14 @@
 //   #gu set <uid|nom> enlisted <AAAA[-MM[-JJ]]>
 //   #gu save
 //   #gu as <uid|nom> <action> clé=valeur ...   (test: runs a client request as that member)
+//   #gu orbat [cgqc|upo]                       (seats of the active sections)
+//   #gu as <qui> assign S1-1 [uid=<nom>] [lock=1] · free [S1-1] · lock S1-1 [on=0] · role S1-1 role=medic
+//   #gu as <qui> activate section=typhon on=1 · rename section=typhon name=Hydra · assign E (élève)
+//   #gu op [list] · #gu op <id|n°> [header|situation|execution|support|cmdt|points|signals]
+//   #gu op max [save] <qui>                    (size test: an order with every field at its maximum)
+//   #gu as <qui> ops.save [id|n°] section=header name=Faucon Noir date=2026-11-28 launch=20:00 …
+//   #gu as <qui> ops.status <id|n°> status=published|draft · ops.delete <id|n°> · ops.get [id|n°]
+//   #gu fetch <action> [id|n°] clé=valeur …   (client side: real request from this client, reply size and read check)
 
 class CGQC_GU_ServerCommand : ScrServerCommand
 {
@@ -46,7 +54,49 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 	//------------------------------------------------------------------------------------------------
 	override ref ScrServerCmdResult OnChatClientExecution(array<string> argv, int playerId)
 	{
+		// « #gu fetch … » runs on the client: it sends a real request through the player controller, the
+		// same path the screens use (over the network on a dedicated server).
+		if (argv.Count() >= 3 && CGQC_GU_Str.Lower(argv[1]) == "fetch")
+		{
+			CGQC_GU_Payload p = ParseArgs(argv, 3, "id");
+			int requestId = CGQC_GU_ReplyProbe.Send(argv[2], p);
+			if (requestId == 0)
+				return ScrServerCmdResult("Demande impossible (pas de contrôleur).", EServerCmdResultType.ERR);
+
+			return ScrServerCmdResult(string.Format("Demande %1 envoyée : %2", requestId, argv[2]), EServerCmdResultType.OK);
+		}
+
 		return ScrServerCmdResult(string.Empty, EServerCmdResultType.OK);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! « clé=valeur » words from argv[from]; a word without '=' continues the previous value, and the
+	//! first bare word goes to firstKey ("" = ignored).
+	static CGQC_GU_Payload ParseArgs(array<string> argv, int from, string firstKey)
+	{
+		CGQC_GU_Payload p = new CGQC_GU_Payload();
+		string key;
+		for (int i = from; i < argv.Count(); i++)
+		{
+			string token = argv[i];
+			int eq = token.IndexOf("=");
+			if (eq > 0)
+			{
+				key = token.Substring(0, eq);
+				p.Set(key, token.Substring(eq + 1, token.Length() - eq - 1));
+			}
+			else if (!key.IsEmpty())
+			{
+				p.Set(key, p.Get(key) + " " + token);
+			}
+			else if (!firstKey.IsEmpty())
+			{
+				key = firstKey;
+				p.Set(key, token);
+			}
+		}
+
+		return p;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -112,6 +162,22 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 
 			case "seances":
 				return Trainings(mgr);
+
+			case "orbat":
+			{
+				string unitFilter;
+				if (argv.Count() > 2)
+					unitFilter = argv[2];
+
+				return Reply(CGQC_GU_OrbatRequests.Describe(mgr, unitFilter));
+			}
+
+			case "op":
+				return Operation(mgr, argv);
+
+			case "fetch":
+				// Handled on the client (OnChatClientExecution); nothing to do here.
+				return ScrServerCmdResult(string.Empty, EServerCmdResultType.OK);
 		}
 
 		return Reply("Sous-commande inconnue : " + sub, false);
@@ -127,7 +193,8 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 		if (!caller)
 			return Reply("Dossier introuvable : " + argv[2], false);
 
-		string action = argv[3];
+		// Short ORBAT names (« assign » = orbat.assign); a first word without '=' is the seat.
+		string action = CGQC_GU_OrbatRequests.FullAction(argv[3]);
 		CGQC_GU_Payload p = new CGQC_GU_Payload();
 		string key;
 		for (int i = 4; i < argv.Count(); i++)
@@ -142,6 +209,16 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 			else if (!key.IsEmpty())
 			{
 				p.Set(key, p.Get(key) + " " + token);
+			}
+			else if (action.StartsWith("orbat."))
+			{
+				key = "seat";
+				p.Set(key, token);
+			}
+			else if (action.StartsWith("ops."))
+			{
+				key = "id";
+				p.Set(key, token);
 			}
 		}
 
@@ -166,6 +243,75 @@ class CGQC_GU_ServerCommand : ScrServerCommand
 		}
 
 		return Reply(string.Format("%1 %2 (%3) par %4, %5 octets", action, ok, result.m_sCode, caller.displayName, result.m_sPayload.Length()), result.m_bOk);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! #gu op [list] · #gu op <id|n°> [section] · #gu op max [save] <qui>
+	protected ScrServerCmdResult Operation(CGQC_GU_Manager mgr, array<string> argv)
+	{
+		if (argv.Count() < 3 || CGQC_GU_Str.Lower(argv[2]) == "list")
+			return Reply(CGQC_GU_OperationRequests.DescribeList(mgr));
+
+		if (CGQC_GU_Str.Lower(argv[2]) == "max")
+			return OperationMax(mgr, argv);
+
+		CGQC_GU_Operation o = CGQC_GU_OperationRequests.Find(mgr, argv[2]);
+		if (!o)
+			return Reply("Ordre introuvable : " + argv[2], false);
+
+		string section;
+		if (argv.Count() > 3)
+			section = CGQC_GU_Str.Lower(argv[3]);
+
+		return Reply(CGQC_GU_OperationRequests.Describe(mgr, o, section));
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Size test: an order with every field and row at its maximum. The reply size is the one this
+	//! member would get from ops.get. « save » keeps it as a BROUILLON, to fetch it from a client.
+	protected ScrServerCmdResult OperationMax(CGQC_GU_Manager mgr, array<string> argv)
+	{
+		bool save = argv.Count() > 3 && CGQC_GU_Str.Lower(argv[3]) == "save";
+		int whoAt = 3;
+		if (save)
+			whoAt = 4;
+
+		if (argv.Count() <= whoAt)
+			return Reply("Usage : #gu op max [save] <uid|nom>", false);
+
+		CGQC_GU_Member who = mgr.FindMemberLoose(argv[whoAt]);
+		if (!who)
+			return Reply("Dossier introuvable : " + argv[whoAt], false);
+
+		CGQC_GU_Operation o = CGQC_GU_OperationRequests.BuildMax(mgr, who);
+		CGQC_GU_JsonStringSaveContext file = new CGQC_GU_JsonStringSaveContext();
+		o.WriteTo(file);
+		int fileBytes = file.Export().Length();
+
+		// Measured as if stored, so « < > » and the choices are counted too.
+		mgr.m_mOperations.Set(o.id, o);
+		string reply = CGQC_GU_OperationRequests.Detail(mgr, who, o);
+		if (!save)
+			mgr.m_mOperations.Remove(o.id);
+
+		// The reply must read back the way a client reads it.
+		JsonLoadContext load = new JsonLoadContext();
+		CGQC_GU_Operation back = new CGQC_GU_Operation();
+		bool readOk = load.LoadFromString(reply) && load.ReadValue("o", back) && back.command.callsigns.Count() == o.command.callsigns.Count();
+
+		string text = string.Format("Taille max : fichier %1 octets, réponse ops.get %2 octets, relue : %3", fileBytes, reply.Length(), readOk);
+		if (save)
+		{
+			if (!CGQC_GU_Storage.SaveOperation(o))
+			{
+				mgr.m_mOperations.Remove(o.id);
+				return Reply(text + " · écriture impossible", false);
+			}
+
+			text += string.Format(" · enregistré %1 (%2), BROUILLON", o.number, o.id);
+		}
+
+		return Reply(text);
 	}
 
 	//------------------------------------------------------------------------------------------------

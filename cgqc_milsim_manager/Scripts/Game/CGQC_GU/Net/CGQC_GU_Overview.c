@@ -11,12 +11,18 @@ class CGQC_GU_CriterionLine : Managed
 {
 	string text;	// "Q-SI obtenue", "2 mois au grade (1/2)"
 	bool met;
+	// Grade & accès box (3g)
+	string label;	// "Q-SI — title", "2 mois au grade"
+	string state;	// OBTENUE / EN COURS / REPRISE / À VENIR / EN ATTENTE
+	string kind;	// ok | ko | cur | dim (tag colour)
 }
 
 class CGQC_GU_OverviewDto : Managed
 {
 	string name;			// "Maj. Cloutier"
-	string sub;				// seat · role · section (Phase 4); access group until then
+	string sub;				// "S1-1 · Fusilier · Spartan", "Zeus"; access group when no seat
+	string leaderLabel;		// "CHEF D'ÉQUIPE" (4f); "" = no block
+	string leader;			// "S1-0 Adju. Tremblay"
 	string phase;			// "TEMPS LIBRE · GARNISON"
 	int online;
 	string notice;
@@ -41,11 +47,18 @@ class CGQC_GU_OverviewBuilder
 		if (g)
 			dto.sub = g.label;
 
+		CGQC_GU_SeatInfo seat = CGQC_GU_OrbatRequests.SeatInfo(mgr, me.uid);
+		if (!seat.callsign.IsEmpty())
+			dto.sub = seat.Line();
+
+		dto.leaderLabel = seat.leaderLabel;
+		dto.leader = seat.leader;
+
 		dto.phase = PhaseLabel(mgr.m_Situation);
 		dto.online = mgr.GetOnlineCount();
 		dto.notice = mgr.m_Notice.text;
 
-		NextRank(cat, me, dto);
+		NextRank(mgr, me, dto);
 		News(mgr, dto);
 		dto.nextEvent = CGQC_GU_CalendarBuilder.NextLine(mgr);
 
@@ -73,11 +86,11 @@ class CGQC_GU_OverviewBuilder
 
 	//------------------------------------------------------------------------------------------------
 	//! Next rank and its criteria, from promotions.json (shared with the Dossier's Grade & accès tab).
-	protected static void NextRank(CGQC_GU_Catalogues cat, CGQC_GU_Member me, CGQC_GU_OverviewDto dto)
+	protected static void NextRank(CGQC_GU_Manager mgr, CGQC_GU_Member me, CGQC_GU_OverviewDto dto)
 	{
 		array<ref CGQC_GU_CriterionLine> lines = new array<ref CGQC_GU_CriterionLine>();
 		bool automatic;
-		string next = BuildCriteria(cat, me, lines, automatic);
+		string next = BuildCriteria(mgr, me, lines, automatic);
 		if (next.IsEmpty())
 			return;
 
@@ -99,19 +112,12 @@ class CGQC_GU_OverviewBuilder
 	//------------------------------------------------------------------------------------------------
 	//! Fills the criteria lines for the member's next rank and returns "Caporal-chef (CplC.)", or "" when
 	//! there is none. Officers' decision and other checks are never marked met: people decide those.
-	static string BuildCriteria(CGQC_GU_Catalogues cat, CGQC_GU_Member me, notnull array<ref CGQC_GU_CriterionLine> lines, out bool automatic)
+	//! Each qualification reads its real state, as on the Insignes (a planned session counts as en cours).
+	static string BuildCriteria(CGQC_GU_Manager mgr, CGQC_GU_Member me, notnull array<ref CGQC_GU_CriterionLine> lines, out bool automatic)
 	{
 		automatic = false;
-		CGQC_GU_Promotion p;
-		foreach (CGQC_GU_Promotion candidate : cat.m_aPromotions)
-		{
-			if (candidate.from == me.rank)
-			{
-				p = candidate;
-				break;
-			}
-		}
-
+		CGQC_GU_Catalogues cat = mgr.m_Catalogues;
+		CGQC_GU_Promotion p = CGQC_GU_Quals.NextPromotion(cat, me);
 		if (!p)
 			return string.Empty;
 
@@ -123,50 +129,122 @@ class CGQC_GU_OverviewBuilder
 
 		foreach (string code : p.requiredQuals)
 		{
-			string state = QualState(me, code);
-			AddLine(lines, code + " " + state, state == "obtenue");
+			string state = CGQC_GU_Quals.InsigniaStateFull(mgr, me, code);
+			string label = code;
+			CGQC_GU_Qualification qual = cat.FindQualification(code);
+			if (qual)
+				label = code + " — " + qual.title;
+
+			CGQC_GU_CriterionLine line = AddLine(lines, code + " " + StateWords(state), state == CGQC_GU_Quals.STATE_OBTAINED, label);
+			SetState(line, state);
 		}
 
 		foreach (CGQC_GU_AnyOf any : p.anyOf)
 		{
-			int have;
+			int have = 0;
+			string best = CGQC_GU_Quals.STATE_TODO;
 			foreach (string q : any.quals)
 			{
-				if (HasPassed(me, q))
+				string s = CGQC_GU_Quals.InsigniaStateFull(mgr, me, q);
+				if (s == CGQC_GU_Quals.STATE_OBTAINED)
 					have++;
+				else if (s == CGQC_GU_Quals.STATE_RUNNING)
+					best = s;
+				else if (s == CGQC_GU_Quals.STATE_RETAKE && best == CGQC_GU_Quals.STATE_TODO)
+					best = s;
 			}
 
-			string anyState = "à faire";
 			if (have >= any.count)
-				anyState = "obtenue";
+				best = CGQC_GU_Quals.STATE_OBTAINED;
 
-			AddLine(lines, string.Format("%1 %2 (%3/%4)", AnyOfGroupName(any), anyState, have, any.count), have >= any.count);
+			string group = AnyOfGroupName(any);
+			string anyLabel = group + " — une spécialité";
+			if (any.count > 1)
+				anyLabel = string.Format("%1 — %2 spécialités (%3/%2)", group, any.count, Math.Min(have, any.count));
+
+			string anyText = "à faire";
+			if (have >= any.count)
+				anyText = "obtenue";
+
+			CGQC_GU_CriterionLine anyLine = AddLine(lines, string.Format("%1 %2 (%3/%4)", group, anyText, have, any.count), have >= any.count, anyLabel);
+			SetState(anyLine, best);
 		}
 
 		if (p.minMonthsInRank > 0)
 		{
 			int months = CGQC_GU_Time.MonthsSince(MonthsInRankStart(me));
-			AddLine(lines, string.Format("%1 mois au grade (%2/%1)", p.minMonthsInRank, Math.Min(months, p.minMonthsInRank)), months >= p.minMonthsInRank);
+			bool enough = months >= p.minMonthsInRank;
+			CGQC_GU_CriterionLine monthLine = AddLine(lines, string.Format("%1 mois au grade (%2/%1)", p.minMonthsInRank, Math.Min(months, p.minMonthsInRank)),
+				enough, string.Format("%1 mois au grade", p.minMonthsInRank));
+			if (enough)
+			{
+				monthLine.state = "COMPLÉTÉ";
+				monthLine.kind = "ok";
+			}
+			else
+			{
+				monthLine.state = string.Format("%1 / %2 MOIS", Math.Max(months, 0), p.minMonthsInRank);
+				monthLine.kind = "dim";
+			}
 		}
 
 		foreach (CGQC_GU_LabelItem check : p.otherChecks)
 		{
-			AddLine(lines, CGQC_GU_Str.Lower(check.label), false);
+			CGQC_GU_CriterionLine checkLine = AddLine(lines, CGQC_GU_Str.Lower(check.label), false, check.label);
+			SetWaiting(checkLine);
 		}
 
 		if (p.officerDecision)
-			AddLine(lines, "décision des officiers", false);
+		{
+			CGQC_GU_CriterionLine officers = AddLine(lines, "décision des officiers", false, "Décision des officiers");
+			SetWaiting(officers);
+		}
 
 		return string.Format("%1 (%2)", to.label, to.abbr);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static void AddLine(array<ref CGQC_GU_CriterionLine> lines, string text, bool met)
+	protected static CGQC_GU_CriterionLine AddLine(array<ref CGQC_GU_CriterionLine> lines, string text, bool met, string label)
 	{
 		CGQC_GU_CriterionLine line = new CGQC_GU_CriterionLine();
 		line.text = text;
 		line.met = met;
+		line.label = label;
 		lines.Insert(line);
+		return line;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Tag of a qualification criterion, from its insignia state.
+	protected static void SetState(CGQC_GU_CriterionLine line, string state)
+	{
+		if (state == CGQC_GU_Quals.STATE_OBTAINED)
+		{
+			line.state = "OBTENUE";
+			line.kind = "ok";
+		}
+		else if (state == CGQC_GU_Quals.STATE_RUNNING)
+		{
+			line.state = "EN COURS";
+			line.kind = "cur";
+		}
+		else if (state == CGQC_GU_Quals.STATE_RETAKE)
+		{
+			line.state = "REPRISE";
+			line.kind = "ko";
+		}
+		else
+		{
+			line.state = "À VENIR";
+			line.kind = "dim";
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static void SetWaiting(CGQC_GU_CriterionLine line)
+	{
+		line.state = "EN ATTENTE";
+		line.kind = "dim";
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -185,34 +263,17 @@ class CGQC_GU_OverviewBuilder
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static bool HasPassed(CGQC_GU_Member m, string code)
+	//! A qualification state inside the pause panel's criteria sentence.
+	protected static string StateWords(string state)
 	{
-		foreach (CGQC_GU_QualResult r : m.qualifications)
-		{
-			if (r.qual == code && r.result == "passed")
-				return true;
-		}
-
-		return false;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	protected static string QualState(CGQC_GU_Member m, string code)
-	{
-		if (HasPassed(m, code))
+		if (state == CGQC_GU_Quals.STATE_OBTAINED)
 			return "obtenue";
 
-		foreach (CGQC_GU_QualResult r : m.qualifications)
-		{
-			if (r.qual == code && r.result == "failed")
-				return "à reprendre";
-		}
+		if (state == CGQC_GU_Quals.STATE_RUNNING)
+			return "en cours";
 
-		foreach (CGQC_GU_Progress pr : m.progress)
-		{
-			if (pr.qual == code)
-				return "en cours";
-		}
+		if (state == CGQC_GU_Quals.STATE_RETAKE)
+			return "à reprendre";
 
 		return "à faire";
 	}
